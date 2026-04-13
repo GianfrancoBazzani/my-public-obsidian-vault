@@ -28,9 +28,10 @@ by: Kian Katanforoosh
 > Needle in a Haystack Problem: attention mechanisms struggle to focus on very specific facts buried in the middle of a large corpus.
 
 ## Two dimensions of LLM enhancement
-> **Model Enhancement:** Foundation model improvements gpt-3.5 ->  gpt-4 -> gpt-4o
 
-> Context and Prompts Enhancement: Maximize the performance keeping the same foundation model. Better prompts -> RAG -> Agentic workflows 
+- **Model Enhancement:** Foundation model improvements gpt-3.5 ->  gpt-4 -> gpt-4o
+
+- **Context and Prompts Enhancement:** Maximize the performance keeping the same foundation model. Better prompts, RAG, Agentic workflows 
 
 ![](Attachments/Dimensions-of-LLM-Enhance.png)
 
