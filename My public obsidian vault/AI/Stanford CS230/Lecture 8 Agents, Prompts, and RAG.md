@@ -21,7 +21,7 @@ by: Kian Katanforoosh
 - Models are trained on clean, high-quality data, but real-world data is much messier.
 
 ## Context Windows Limitations
-![[Leading-LLMs-by-Context-Window-q1-2026.png]]
+![](Attachments/Leading-LLMs-by-Context-Window-q1-2026.png)
 > 200k tokens are roughly two books. 
 
 > Needle in a Haystack Problem: attention mechanisms struggle to focus on very specific facts buried in the middle of a large corpus.
@@ -31,7 +31,7 @@ by: Kian Katanforoosh
 
 > Context and Prompts Enhancement: Maximize the performance keeping the same foundation model. Better prompts -> RAG -> Agentic workflows 
 
-![[Dimensions-of-LLM-Enhance.png]]
+![](Attachments/Dimensions-of-LLM-Enhance.png)
 
 ## The Jagged AI Frontier
 
@@ -48,7 +48,7 @@ Two principal patterns have been observed in how professionals interact with AI 
 # Prompt Engineering: The First Line of Optimization
 ## Basic Prompt Design Principles
 
-![[Basic-Prompt-Design-Principles.png]]
+![](Attachments/Basic-Prompt-Design-Principles.png)
 > **Chain of Thought** encourages the model to act following a clear structure and act step by step. It is very popular to control LLMs. Think step by step, step 1, step 2, step 3, do not skip any step.
 
 
@@ -56,7 +56,7 @@ Two principal patterns have been observed in how professionals interact with AI 
 Prompt templates can be encoded in the code and be scaled for many user requests. Prompt templates can also be used to sanitize user inputs and ensure the structure of the final prompt before passing it to the model.
 
 ## Zero Shot vs Few Shot Prompting
-![[Zero-Shot-vs-Few-Shot-Prompting.png]]
+![](Attachments/Zero-Shot-vs-Few-Shot-Prompting.png)
 
 ## Chain Complex Prompts for Improved Performance
 Instead of building a single big complex prompt, split it into multiple prompts with chained LLM calls; this will allow a higher level of control of the LLM.
@@ -66,19 +66,19 @@ Instead of building a single big complex prompt, split it into multiple prompts 
 > This technique can be problematic as it adds latency.
 
 **Complex Prompt (single step)**
-![[Complex-Prompts-1.png]]
+![](Attachments/Complex-Prompts-1.png)
 
 **Complex Prompt (multiple step)**
-![[Complex-Prompts-2.png]]
+![](Attachments/Complex-Prompts-2.png)
 
 ## Testing Your Prompts
 **Manual approach**: Score outputs of different prompts using manual review.
-![[Manual-Testing.png]]
+![](Attachments/Manual-Testing.png)
 
 **External Platforms:** Use platforms like [promptfoo](https://www.promptfoo.dev/docs/configuration/parameters/) to automate the review process. It allows you to run the same prompt with different LLMs and list the outputs in an easy way that makes it easy for a human to grade.
 
 **LLM as Judges:** Use LLMs to automatically compare and grade results.
-![[LLM-as-judge.png]]
+![](Attachments/LLM-as-judge.png)
 
 # Fine-Tuning: Proceed with Caution
 You have exhausted all the changes to get better results with prompting and you need to actually touch the weights of the model.
@@ -99,10 +99,10 @@ How:
 - Integrates with external knowledge sources (e.g. databases, documents, APIs)
 - Ensures answers are more accurate, up-to-date, and grounded.
 - More developer control. Allows for targeted customization without retraining the model.
-![[RAG-overview.png]]
+![](Attachments/RAG-overview.png)
 
 RAG research tree
-![[RAG-research-tree.png]]
+![](Attachments/RAG-research-tree.png)
 # Agentic AI Workflows: Towards Autonomous and Specialized Systems
 
 An agentic AI workflow is a process where an LLM-based application executes multiple steps to complete a task.
@@ -110,12 +110,12 @@ An agentic AI workflow is a process where an LLM-based application executes mult
 ## The AI Paradigm Shift 
 Software engineering as a discipline is sort of shifting from a deterministic mindset to a fuzzy mindset, and a balance between the two whenever it is required to design a software solution.
 
-![[The-AI-Paradigm-Shift.png]]
+![](Attachments/The-AI-Paradigm-Shift.png)
 
 > Find a balance between the fuzzy tasks and deterministic tasks
 ## Enterprise Workflows are Likely to Change
 
-![[Enterprise-Workflows.png]]
+![](Attachments/Enterprise-Workflows.png)
 
 > You are not changing the humans in the process only adding GenAI and reducing the time to get the output and increasing the overall quality of the job.
 
@@ -130,19 +130,19 @@ Software engineering as a discipline is sort of shifting from a deterministic mi
 - **More autonomous:** Agent decides the steps and can create tools.
 
 ## API vs MCP
-![[Agent-vs-mcp.png]]
+![](Attachments/Agent-vs-mcp.png)
 
 ## Travel Agency Agent Example
-![[Travel-Agency-Agent-Example.png]]
+![](Attachments/Travel-Agency-Agent-Example.png)
 # Evals
 LLM evals are tests to check if an Agentic workflow works and how to improve each step of it.
 
 > To debug an LLM system you need to have LLM traces
 
-![[llm-evals.png]]
+![](Attachments/llm-evals.png)
 # Multi-Agent Workflows
 ## Multi-Agent Systems Topologies
-![[Multi-Agent-Systems-Topologies.png]]
+![](Attachments/Multi-Agent-Systems-Topologies.png)
 ## Multi-Agent vs Single Agent
-![[Multi-Agent-vs-Single-Agent.png]]
+![](Attachments/Multi-Agent-vs-Single-Agent.png)
 
