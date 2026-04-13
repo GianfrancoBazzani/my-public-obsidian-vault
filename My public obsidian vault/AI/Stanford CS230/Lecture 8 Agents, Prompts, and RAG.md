@@ -1,6 +1,13 @@
-TODO Create Table of contents
+- [[#Augmenting LLMs: Challenges and Opportunities|Augmenting LLMs: Challenges and Opportunities]]
+- [[#Prompt Engineering: The First Line of Optimization|Prompt Engineering: The First Line of Optimization]]
+- [[#Fine-Tuning: Proceed with Caution|Fine-Tuning: Proceed with Caution]]
+- [[#Retrieval-Augmented Generation: Enhancing Model Utility|Retrieval-Augmented Generation: Enhancing Model Utility]]
+- [[#Agentic AI Workflows: Towards Autonomous and Specialized Systems|Agentic AI Workflows: Towards Autonomous and Specialized Systems]]
+- [[#Evals|Evals]]
+- [[#Multi-Agent Workflows|Multi-Agent Workflows]]
 
 Lecture link: https://www.youtube.com/watch?v=k1njvbBmfsw&list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X&index=7
+
 by: Kian Katanforoosh
 # Augmenting LLMs: Challenges and Opportunities
 
