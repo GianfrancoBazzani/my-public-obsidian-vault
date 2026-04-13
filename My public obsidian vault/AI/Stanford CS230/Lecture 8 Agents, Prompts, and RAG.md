@@ -1,10 +1,11 @@
-- [[#Augmenting LLMs: Challenges and Opportunities|Augmenting LLMs: Challenges and Opportunities]]
-- [[#Prompt Engineering: The First Line of Optimization|Prompt Engineering: The First Line of Optimization]]
-- [[#Fine-Tuning: Proceed with Caution|Fine-Tuning: Proceed with Caution]]
-- [[#Retrieval-Augmented Generation: Enhancing Model Utility|Retrieval-Augmented Generation: Enhancing Model Utility]]
-- [[#Agentic AI Workflows: Towards Autonomous and Specialized Systems|Agentic AI Workflows: Towards Autonomous and Specialized Systems]]
-- [[#Evals|Evals]]
-- [[#Multi-Agent Workflows|Multi-Agent Workflows]]
+## Table of Contents
+- [Augmenting LLMs: Challenges and Opportunities](#augmenting-llms-challenges-and-opportunities)
+- [Prompt Engineering: The First Line of Optimization](#prompt-engineering-the-first-line-of-optimization)
+- [Fine-Tuning: Proceed with Caution](#fine-tuning-proceed-with-caution)
+- [Retrieval-Augmented Generation: Enhancing Model Utility](#retrieval-augmented-generation-enhancing-model-utility)
+- [Agentic AI Workflows: Towards Autonomous and Specialized Systems](#agentic-ai-workflows-towards-autonomous-and-specialized-systems)
+- [Evals](#evals)
+- [Multi-Agent Workflows](#multi-agent-workflows)
 
 Lecture link: https://www.youtube.com/watch?v=k1njvbBmfsw&list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X&index=7
 
