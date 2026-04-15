@@ -1,6 +1,6 @@
 # my-public-obsidian-vault
 
-Hi, I'm Gianfranco — [gianfranc.co](https://gianfranc.co).
+Hi, I'm Gianfranco — [gianfran.co](https://gianfranc.co).
 
 This is my public Obsidian vault, where I share notes, lecture summaries, and bits of research I find worth keeping around. Feel free to look around.
 
