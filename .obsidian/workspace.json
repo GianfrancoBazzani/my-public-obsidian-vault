@@ -11,14 +11,12 @@
             "id": "867e52014696fa43",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
-                "mode": "source",
-                "source": false
+                "file": "AI/Research Articles/Design Patterns for Securing LLM Agents against Prompt Injections.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Lecture 8 Agents, Prompts, and RAG"
+              "icon": "lucide-file-text",
+              "title": "Design Patterns for Securing LLM Agents against Prompt Injections"
             }
           }
         ]
@@ -183,12 +181,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "867e52014696fa43",
+  "active": "d6b8aaff14e2da95",
   "lastOpenFiles": [
+    "AI/Resources to Read.md",
+    "AI/Research Articles/Design Patterns for Securing LLM Agents against Prompt Injections.pdf",
+    "AI/Research Articles/Knowdit-Agentic-Smart-Contract-Vulnerability-Detection-with-Auditing-Knowledge-Summarization.pdf",
+    "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
+    "README.md",
+    "CLAUDE.md",
+    "AI/Claude Code Cheat Sheet.md",
     "AI/Stanford CS230/Attachments/Zero-Shot-vs-Few-Shot-Prompting.png",
     "AI/Stanford CS230/Attachments/Multi-Agent-vs-Single-Agent.png",
     "AI/Stanford CS230/Attachments/Multi-Agent-Systems-Topologies.png",
-    "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
     "AI/Stanford CS230/Attachments/Manual-Testing.png",
     "AI/Stanford CS230/Attachments/llm-evals.png",
     "AI/Stanford CS230/Attachments/Travel-Agency-Agent-Example.png",
@@ -198,7 +202,6 @@
     "AI/Stanford CS230/Attachments/The-AI-Paradigm-Shift.png",
     "AI/Stanford CS230/Attachments",
     "AI/Research Articles/MODEL-CONTEXT-CONTRACTS.pdf",
-    "AI/Research Articles/Knowdit-Agentic-Smart-Contract-Vulnerability-Detection-with-Auditing-Knowledge-Summarization.pdf",
     "AI/Research Articles",
     "AI/Stanford CS230",
     "Untitled",
