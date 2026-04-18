@@ -14,6 +14,7 @@
 - How we made Trail of Bits AI-native (so far): https://blog.trailofbits.com/2026/03/31/how-we-made-trail-of-bits-ai-native-so-far/
 - What it means to be an AI-first organization: https://www.workera.ai/blog/what-it-means-to-be-an-ai-first-organization
 - Why Every Employee Will Need to Use AI in 2025: https://www.informationweek.com/machine-learning-ai/why-every-employee-will-need-to-use-ai-in-2025
+- From Hierarchy to Intelligence (Jack Dorsey, Block): https://block.xyz/inside/from-hierarchy-to-intelligence
 
 ## Career & Roadmaps
 
