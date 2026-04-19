@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/Resources to Read.md",
+                "file": "AI/Resources.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Resources to Read"
+              "title": "Resources"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "9670a7b2344f5d0f",
@@ -185,12 +186,12 @@
   },
   "active": "867e52014696fa43",
   "lastOpenFiles": [
-    "README.md",
-    "AI/Resources to Read.md",
     "AI/Claude Code Cheat Sheet.md",
+    "AI/Resources.md",
+    "README.md",
+    "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
     "AI/Research Articles/Design Patterns for Securing LLM Agents against Prompt Injections.pdf",
     "AI/Research Articles/Knowdit-Agentic-Smart-Contract-Vulnerability-Detection-with-Auditing-Knowledge-Summarization.pdf",
-    "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
     "CLAUDE.md",
     "AI/Stanford CS230/Attachments/Zero-Shot-vs-Few-Shot-Prompting.png",
     "AI/Stanford CS230/Attachments/Multi-Agent-vs-Single-Agent.png",

@@ -9,6 +9,13 @@
 - Best Practices for Claude Code: https://code.claude.com/docs/en/best-practices
 - Master Claude Code in a Weekend: https://github.com/luongnv89/claude-howto#master-claude-code-in-a-weekend
 
+## Open Source Agent Repos
+
+- goose, an open source, extensible AI agent that goes beyond code suggestions: install, execute, edit, and test with any LLM: https://github.com/aaif-goose/goose
+- zeroclaw, fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM: https://github.com/zeroclaw-labs/zeroclaw
+- multica, the open-source managed agents platform; turn coding agents into real teammates — assign tasks, track progress, compound skills: https://github.com/multica-ai/multica
+- paperclip, open-source orchestration for zero-human companies: https://github.com/paperclipai/paperclip
+
 ## AI-Native Companies
 
 - How we made Trail of Bits AI-native (so far): https://blog.trailofbits.com/2026/03/31/how-we-made-trail-of-bits-ai-native-so-far/
