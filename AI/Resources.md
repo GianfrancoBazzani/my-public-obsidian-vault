@@ -16,6 +16,12 @@
 - multica, the open-source managed agents platform; turn coding agents into real teammates — assign tasks, track progress, compound skills: https://github.com/multica-ai/multica
 - paperclip, open-source orchestration for zero-human companies: https://github.com/paperclipai/paperclip
 
+## Open Source Knowledge Base Indexing Repos
+
+- agentset, the open-source RAG platform: built-in citations, deep research, 22+ file formats, partitions, MCP server, and more: https://github.com/agentset-ai/agentset
+- qmd, mini CLI search engine for your docs, knowledge bases, meeting notes — tracks current SOTA approaches while staying fully local: https://github.com/tobi/qmd
+- gbrain, Garry's opinionated OpenClaw/Hermes agent brain: https://github.com/garrytan/gbrain
+
 ## AI-Native Companies
 
 - How we made Trail of Bits AI-native (so far): https://blog.trailofbits.com/2026/03/31/how-we-made-trail-of-bits-ai-native-so-far/
@@ -33,6 +39,7 @@
 - OpenAI Harmony Response Format: https://developers.openai.com/cookbook/articles/openai-harmony
 - LLM Wiki (Karpathy): https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - The lethal trifecta for AI agents (Simon Willison): https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
+- Cheatsheet: A Practical Guide for Securely Using Third-Party MCP Servers (OWASP GenAI): https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/
 
 ## Standards
-- iso42001: https://www.gsc-co.com/wp-content/uploads/2024/08/SCAN-ISO-420012023_-Web.pdfººº
+- iso42001: https://www.gsc-co.com/wp-content/uploads/2024/08/SCAN-ISO-420012023_-Web.pdf
