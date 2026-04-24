@@ -3,6 +3,7 @@
 
 - Your harness, your memory: https://x.com/hwchase17/status/2042978500567609738?s=46
 - Theo - t3.gg - How to build a harness: https://x.com/theo/status/2043611205856837680?s=20
+- Trae AI on harness design: https://x.com/trae_ai/status/2047145274200768969?s=12
 
 ## Claude Code User Guides
 
