@@ -41,6 +41,7 @@
 - LLM Wiki (Karpathy): https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - The lethal trifecta for AI agents (Simon Willison): https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
 - Cheatsheet: A Practical Guide for Securely Using Third-Party MCP Servers (OWASP GenAI): https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/
+- Evolving OAuth Client Registration in the Model Context Protocol: https://blog.modelcontextprotocol.io/posts/client_registration/
 
 ## Standards
 - iso42001: https://www.gsc-co.com/wp-content/uploads/2024/08/SCAN-ISO-420012023_-Web.pdf
