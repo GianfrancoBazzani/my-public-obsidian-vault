@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/Resources.md",
+                "file": "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Resources"
+              "title": "Lecture 8 Agents, Prompts, and RAG"
             }
           }
         ]
@@ -183,12 +183,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "d6b8aaff14e2da95",
+  "active": "867e52014696fa43",
   "lastOpenFiles": [
     "AI/Claude Code Cheat Sheet.md",
+    "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
     "AI/Resources.md",
     "README.md",
-    "AI/Stanford CS230/Lecture 8 Agents, Prompts, and RAG.md",
     "AI/Research Articles/Design Patterns for Securing LLM Agents against Prompt Injections.pdf",
     "AI/Research Articles/Knowdit-Agentic-Smart-Contract-Vulnerability-Detection-with-Auditing-Knowledge-Summarization.pdf",
     "CLAUDE.md",
