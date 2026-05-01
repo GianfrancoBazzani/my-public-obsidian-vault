@@ -5,6 +5,11 @@
 - Theo - t3.gg - How to build a harness: https://x.com/theo/status/2043611205856837680?s=20
 - Trae AI on harness design: https://x.com/trae_ai/status/2047145274200768969?s=12
 
+## Agents & Agentic Systems
+
+- how to build a production grade ai agent: https://x.com/rohit4verse/status/2022709729450201391?s=46
+
+
 ## Claude Code User Guides
 
 - Best Practices for Claude Code: https://code.claude.com/docs/en/best-practices
