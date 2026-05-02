@@ -21,6 +21,7 @@
 - zeroclaw, fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM: https://github.com/zeroclaw-labs/zeroclaw
 - multica, the open-source managed agents platform; turn coding agents into real teammates — assign tasks, track progress, compound skills: https://github.com/multica-ai/multica
 - paperclip, open-source orchestration for zero-human companies: https://github.com/paperclipai/paperclip
+- flue, the agent harness framework — TypeScript framework for building Claude Code-like autonomous agents that run fully headless and programmable: https://github.com/withastro/flue
 
 ## Open Source Knowledge Base Indexing Repos
 
