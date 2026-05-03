@@ -22,6 +22,8 @@
 - multica, the open-source managed agents platform; turn coding agents into real teammates — assign tasks, track progress, compound skills: https://github.com/multica-ai/multica
 - paperclip, open-source orchestration for zero-human companies: https://github.com/paperclipai/paperclip
 - flue, the agent harness framework — TypeScript framework for building Claude Code-like autonomous agents that run fully headless and programmable: https://github.com/withastro/flue
+- openclaw, a personal AI assistant you run on your own devices, connecting to WhatsApp/Telegram/Slack/Discord with local-first control via a Gateway system: https://github.com/openclaw/openclaw
+- hermes-agent, Nous Research's self-improving AI agent framework with a closed learning loop, multi-platform messaging, and skill creation from experience: https://github.com/nousresearch/hermes-agent
 
 ## Open Source Knowledge Base Indexing Repos
 
