@@ -25,6 +25,7 @@
 - openclaw, a personal AI assistant you run on your own devices, connecting to WhatsApp/Telegram/Slack/Discord with local-first control via a Gateway system: https://github.com/openclaw/openclaw
 - hermes-agent, Nous Research's self-improving AI agent framework with a closed learning loop, multi-platform messaging, and skill creation from experience: https://github.com/nousresearch/hermes-agent
 - pi coding-agent, a minimal terminal coding harness — extensible CLI for code generation and editing with any LLM: https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent
+- open-swe, LangChain's open-source asynchronous coding agent: https://github.com/langchain-ai/open-swe
 
 ## Open Source Knowledge Base Indexing Repos
 
