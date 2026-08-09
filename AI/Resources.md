@@ -26,6 +26,10 @@
 - hermes-agent, Nous Research's self-improving AI agent framework with a closed learning loop, multi-platform messaging, and skill creation from experience: https://github.com/nousresearch/hermes-agent
 - pi coding-agent, a minimal terminal coding harness — extensible CLI for code generation and editing with any LLM: https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent
 - open-swe, LangChain's open-source asynchronous coding agent: https://github.com/langchain-ai/open-swe
+- qm, Y Combinator's multiplayer agent harness for work — isolated per-person workspaces that collaborate through Slack and the web, across multiple models and harnesses: https://github.com/yc-software/qm
+- buzz, Block's hive mind communication platform — a self-hosted workspace built on a Nostr relay where human teams and AI agents share one event log for channels, code review, workflows, and project memory: https://github.com/block/buzz
+- eve, Vercel's filesystem-first framework for durable AI agents — instructions, tools, skills, channels, and schedules live in conventional directories for easy inspection and extension: https://github.com/vercel/eve
+- centaur, Paradigm's multiplayer, self-hosted, secure agents — shared team agents running in isolated Kubernetes sandboxes, reachable from Slack or an API, with credential isolation and audit trails: https://github.com/paradigmxyz/centaur
 
 ## Open Source Knowledge Base Indexing Repos
 
