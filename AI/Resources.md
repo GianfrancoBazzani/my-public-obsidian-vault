@@ -43,6 +43,7 @@
 - What it means to be an AI-first organization: https://www.workera.ai/blog/what-it-means-to-be-an-ai-first-organization
 - Why Every Employee Will Need to Use AI in 2025: https://www.informationweek.com/machine-learning-ai/why-every-employee-will-need-to-use-ai-in-2025
 - From Hierarchy to Intelligence (Jack Dorsey, Block): https://block.xyz/inside/from-hierarchy-to-intelligence
+- You just hired a million bad employees — AI was supposed to replace human labor; it did the opposite (@gsivulka): https://x.com/gsivulka/status/2077070925154161101
 
 ## Career & Roadmaps
 
