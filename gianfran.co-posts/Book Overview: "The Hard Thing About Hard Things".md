@@ -82,7 +82,7 @@ All mental energy used to elaborate misery would be far better used trying to fi
 As organizations grow large, important work can go unnoticed, the hardest workers can get passed over by the best politicians, and bureaucratic processes can choke out the creativity and remove all the joy. If a company is a good place to work it may live long enough to find the glory.
 In good organizations people can focus on work and trust that doing it well brings good outcomes; in bad ones they fight boundaries, infighting, and broken processes while management ignores problems.
 When things go well, many reasons keep people (career, résumé, money); when things go poorly, the only thing keeping a good employee is that she likes her job. Things always go wrong, no company has a monotonically rising stock price; in tech, employee flight triggers a value/talent death spiral that is very hard to reverse.
-Being a good company is an end in itself.
+**Being a good company is an end in itself.**
 
 ### Startups Should Train Their People
 
