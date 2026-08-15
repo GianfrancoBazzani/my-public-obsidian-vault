@@ -212,6 +212,8 @@ A good quality assurance organization cannot build a high-quality product, but i
 - Do employees stay a long time or do they quit faster than normal?
 - Why do employees quit?
 
+### What Does a Great Head of HR Look Like?
+
 In order to comprehensively and continuously understand the quality of the management team, the company should look for a person with the following key requirements:
 - **World-class process design skills.** Much like the head of quality assurance, the head of HR must be a masterful process designer.
 - **A true diplomat.** Nobody likes a tattletale and there is no way for an HR organization to be effective if the management team doesn't implicitly trust it. Managers must believe that HR is there to help them improve rather than police them. It will work directly with the managers to get quality up and only escalate to the CEO when necessary.
