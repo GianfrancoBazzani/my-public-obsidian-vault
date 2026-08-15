@@ -384,9 +384,9 @@ With this in mind, below are the basic steps of organizational design:
 The purpose of process is communication. If there are five people in a company, it doesn't need process, because everyone can just talk to each other. With four thousand people, communication becomes more difficult. Ad hoc, point-to-point communication no longer works. A process is a formal, well-structured communication vehicle.
 When communication in an organization spans organizational boundaries, processes will help ensure that the communication happens and that it happens with quality.
 Who should design a process? The people who are already doing the work in an ad hoc manner. They should formalize what they are doing to make it easy to onboard new people.
-Focus on the output first. What should the process produce?
-Figure out how to know whether it is producing what is wanted at each step.
-Engineer accountability into the system.
+- Focus on the output first. What should the process produce?
+- Figure out how to know whether it is producing what is wanted at each step.
+- Engineer accountability into the system.
 
 Different sizes of company impose different requirements on the company's architecture. It's good to anticipate growth, but it's bad to overanticipate growth.
 
