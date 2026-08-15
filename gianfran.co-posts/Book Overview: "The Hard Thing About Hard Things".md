@@ -334,9 +334,9 @@ In the end, the most important thing is that the best ideas, the biggest problem
 The primary thing that any technology startup must do is to build a product that's at least ten times better at doing something than the current prevailing way of doing that thing. Two or three times better will not be good enough to get people to switch to the new thing fast enough, or in large enough volume, to matter. The second thing that any technology startup must do is to take the market.
 Very few products are ten times better than the competition's, so unseating the new incumbent is much more difficult than unseating the old one.
 If a company fails to do both of those things, its culture won't matter one bit. The world is full of bankrupt companies with world-class cultures. Culture does not make a company. So why bother with culture at all?
-It matters to the extent that it can help a company achieve the above goals.
-As a company grows, culture can help preserve its key values, make it a better place to work, and help it perform better in the future.
-Perhaps most important, after a founder and her people go through the inhuman amount of work it takes to build a successful company, it will be an epic tragedy if the culture is such that even she doesn't want to work there.
+1. It matters to the extent that it can help a company achieve the above goals.
+2. As a company grows, culture can help preserve its key values, make it a better place to work, and help it perform better in the future.
+3. Perhaps most important, after a founder and her people go through the inhuman amount of work it takes to build a successful company, it will be an epic tragedy if the culture is such that even she doesn't want to work there.
 
 A CEO should design a way of working that will:
 - Distinguish the company from its competitors.
