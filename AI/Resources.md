@@ -30,6 +30,7 @@
 - buzz, Block's hive mind communication platform — a self-hosted workspace built on a Nostr relay where human teams and AI agents share one event log for channels, code review, workflows, and project memory: https://github.com/block/buzz
 - eve, Vercel's filesystem-first framework for durable AI agents — instructions, tools, skills, channels, and schedules live in conventional directories for easy inspection and extension: https://github.com/vercel/eve
 - centaur, Paradigm's multiplayer, self-hosted, secure agents — shared team agents running in isolated Kubernetes sandboxes, reachable from Slack or an API, with credential isolation and audit trails: https://github.com/paradigmxyz/centaur
+- strands agents, AWS's open-source, model-driven SDK for building AI agents with a few lines of code: https://strandsagents.com/
 
 ## Open Source Knowledge Base Indexing Repos
 
@@ -45,10 +46,6 @@
 - From Hierarchy to Intelligence (Jack Dorsey, Block): https://block.xyz/inside/from-hierarchy-to-intelligence
 - You just hired a million bad employees — AI was supposed to replace human labor; it did the opposite (@gsivulka): https://x.com/gsivulka/status/2077070925154161101
 
-## Career & Roadmaps
-
-- A Complete 2026 Roadmap From Software Engineer to AI Engineer: https://shop.beacons.ai/lamhotsiagian/f807a66c-90c5-4c64-a94b-f522956c45eb
-
 ## Technical References
 
 - Demystifying evals for AI agents: https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
@@ -57,6 +54,7 @@
 - The lethal trifecta for AI agents (Simon Willison): https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
 - Cheatsheet: A Practical Guide for Securely Using Third-Party MCP Servers (OWASP GenAI): https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/
 - Evolving OAuth Client Registration in the Model Context Protocol: https://blog.modelcontextprotocol.io/posts/client_registration/
+- Graph Engineering explained by a Chinese AI engineer (video, via @kirillk_web3): https://x.com/kirillk_web3/status/2088682533278077382?s=20
 
 ## Standards
 - iso42001: https://www.gsc-co.com/wp-content/uploads/2024/08/SCAN-ISO-420012023_-Web.pdf
