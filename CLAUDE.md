@@ -26,3 +26,31 @@ Two styles coexist in history:
 - `.obsidian/workspace.json` is tracked and changes on nearly every Obsidian session (pane layout, last-opened file). Seeing it `M` in `git status` is normal noise — do not stage it unless the user explicitly wants UI state committed.
 - The user syncs via Obsidian, so commits may arrive from the app in between CLI sessions. Pull/check `git log` before assuming local state is authoritative.
 - When moving notes between folders, move their referenced attachments too and update relative paths in the markdown.
+
+## Knowledge Base Rules
+
+This repo is an Obsidian vault. The rules below apply regardless of how that structure evolves.
+
+### `index.md` — The Catalog
+
+`index.md` (at the vault root) is the authoritative index of everything in the knowledge base. It is content-oriented, not structural — its purpose is to tell the agent (and any human reader) what exists and where to find it, not to mirror the folder tree.
+
+- **Keep it current.** Every time you add, update, rename, or delete a note, you MUST update `index.md` in the same operation. Never leave the index stale.
+- **Read the index first.** When answering any query that might draw on the knowledge base, read `index.md` first to identify relevant pages, then drill into those pages. Do not scan the vault blindly.
+
+### Enforced format
+
+`index.md` must be a flat bullet list — no headings, no nesting. Each entry follows this exact pattern:
+
+```
+- [Display Name](URL%20Encoded%20Path.ext) — One-line summary.
+```
+
+Rules:
+
+- **Display name:** for root-level files use the bare note title; for files inside a subfolder use `Subfolder / Note Title` (slash-separated, matching the folder path, e.g. `AI / Stanford CS230 / Lecture 1`).
+- **Link target:** URL-encode spaces as `%20`; the path is relative to `index.md` (e.g. `AI%20Glossary.md` or `AI/Stanford%20CS230/Lecture%201.md`). This is compatible with Obsidian `useMarkdownLinks: true`.
+- **Summary:** a single sentence that always ends with a period.
+- **Ordering:** entries are sorted alphabetically within each subfolder group; root-level entries come first, then each subfolder group in alphabetical order.
+- **Grouping:** entries in the same subfolder are kept contiguous; separate subfolder groups with a blank line.
+- **Scope:** index every knowledge item — markdown notes and standalone documents such as the PDFs in `Research Articles/` folders. Use the file name without extension as the display name and keep the real extension (`.md`, `.pdf`) in the link target. Do not index files in `Attachments/` directories (they are referenced by notes, not standalone), `README.md`, `CLAUDE.md`, or `index.md` itself.
