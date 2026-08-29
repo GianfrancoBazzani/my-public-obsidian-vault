@@ -4,7 +4,7 @@
 
 ### Capitalization
 
-The capitalization is the process where an investor invests an initial capital with the goal to generate interest in the future. An investor gives an initial capital $C_0$ at the present time. The investor receives a larger capital $C_t$ at a future time $t$. The difference $I = C_t - C_0$ is the interest. The interest is the price of the use of the money during the term $t$.
+The capitalization is the process where an investor invests an initial capital with the goal of generating interest in the future. An investor gives an initial capital $C_0$ at the present time. The investor receives a larger capital $C_t$ at a future time $t$. The difference $I = C_t - C_0$ is the interest. The interest is the price of the use of the money during the term $t$.
 
 ![](Attachments/capitalization-discount.svg)
 
@@ -26,7 +26,7 @@ The discount is the inverse process of the capitalization. It determines the pre
 
 ## Simple Capitalization
 
-In the simple capitalization we always compute the interests over the initial capital, the generated interest is not re-invested.
+In the simple capitalization, we always compute the interest over the initial capital. The generated interest is not reinvested.
 
 The formula of simple capitalization:
 
@@ -54,7 +54,7 @@ $C_0 = \frac{C_t}{(1 + \frac{r_c}{m})^{mt}}$
 
 ### Compound Capitalization Proof
 
-In compound capitalization, at the end of each period, the capital receives interest equal to $\frac{r_c}{m}$ times the current capital. If we define the compound capitalization as $f(mt)$, where $t$ is the time in years and $m$ is the number of compoundings per year (the unit of $m$ is years$^{-1}$), we observe a recursive behavior:
+In compound capitalization, at the end of each period, the capital receives interest equal to $\frac{r_c}{m}$ times the current capital. If we define the compound capitalization as $f(mt)$, where $t$ is the time in years and $m$ is the number of compounding periods per year (the unit of $m$ is year$^{-1}$), we observe a recursive behavior:
 
 $f(mt)|_{t=0} = C_0$
 
@@ -64,7 +64,7 @@ $f(mt)|_{t=\frac{2}{m}} = C_0 +  C_0 \frac{r_c}{m} + (C_0 +  C_0 \frac{r_c}{m})\
 
 $\vdots$
 
-Let $n = mt$, where $n$ is the number of compoundings in the period of capitalization (years times the number of compoundings per year). By definition, for $n \in \mathbb{N}$, $n \geq 1$:
+Let $n = mt$, where $n$ is the number of compounding periods in the term (years times the number of compounding periods per year). By definition, for $n \in \mathbb{N}$, $n \geq 1$:
 
 $f(mt) = f(m(t - \frac{1}{m})) + f(m(t - \frac{1}{m})) \frac{r_c}{m} = f(m(t - \frac{1}{m})) (1 + \frac{r_c}{m})$
 
@@ -80,7 +80,7 @@ Then:
 
 $f(n) = f(n-1)(1 + \frac{r_c}{m}) = C_0(1 + \frac{r_c}{m})^{n-1}(1 + \frac{r_c}{m}) = C_0(1 + \frac{r_c}{m})^n$.
 
-With $f(0) = C_0$ as base case, the formula holds for all $n \in \mathbb{N}$ by induction.
+With $f(0) = C_0$ as the base case, the formula holds for all $n \in \mathbb{N}$ by induction.
 
 Therefore, for all $t \geq 0$ such that $mt \in \mathbb{N}$:
 
@@ -96,7 +96,7 @@ The formula of continuous discount:
 
 $C_0 = C_t e^{-rt}$
 
-### Derivation of the growth factor $e^{rt}$
+### Derivation of the Growth Factor $e^{rt}$
 
 The derivation uses the definition of the number $e$:
 
@@ -115,3 +115,35 @@ $C_t = C_0 \left[\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{n}\right]^{rt
 **Intuition.** In each period, the capital grows by a small fraction $r/m$. When $m$ grows, the periods become shorter and the fraction per period becomes smaller. There are more periods, but each one adds less. These two effects do not cancel exactly: the reinvested interest is a little larger with more periods. The total growth increases with $m$, but it converges to $e^{rt}$.
 
 Reference: [Continuous compounding explained (where e comes from?)](https://www.youtube.com/watch?v=pg827uDPFqA)
+
+## Applications of Each Capitalization Type
+
+Simple capitalization is commonly used in short-term deposits and interbank swaps, which quote a simple interest rate. It is also used to build the very short end of the yield curve. In general, this capitalization type is used when the reinvestment of the interest is not relevant.
+
+Compound capitalization is the most common type in the market for medium-term and long-term operations. Bonds, loans, and interest rate swaps use compound rates. Over a long term, the reinvestment of the interest is relevant, so the simple formula understates the growth of the capital.
+
+Continuous capitalization is a theoretical construct, but most mathematical models in finance use it. It appears especially in models for the valuation of derivatives and, in general, in models that use differential calculus, such as the Black-Scholes framework. The exponential $e^{rt}$ is easy to differentiate and to integrate, so it simplifies the formulas of these models.
+
+## Interest Rates Equivalence
+
+Two interest rates are equivalent when they produce the same future capital $C_t$ from the same initial capital $C_0$ over the same term $t$, each one under its own capitalization type. The equivalence lets us compare rates that use different capitalization types, or replace one type with another, without altering the future capital.
+
+> It answers the following question: "Given a rate under one capitalization type, which rate must I apply under another capitalization type to obtain the same capital $C_t$ after a term $t$?"
+
+To find the equivalent rate, set the two capitalization formulas equal and solve for the unknown rate. The initial capital $C_0$ cancels, so the equivalence does not depend on the amount invested.
+
+### 1. Between two compound interest rates
+
+$C_0 \left(1 + \frac{r_{c1}}{m_1}\right)^{m_1 t} = C_0 \left(1 + \frac{r_{c2}}{m_2}\right)^{m_2 t} \rightarrow r_{c2} = m_2 \left[ \left(1 + \frac{r_{c1}}{m_1}\right)^{\frac{m_1}{m_2}} - 1 \right]$
+
+### 2. Between compound and continuous
+
+$C_0 \left(1 + \frac{r_c}{m}\right)^{m t} = C_0 e^{rt} \rightarrow r = m \ln\left(1 + \frac{r_c}{m}\right) \Leftrightarrow r_c = m \left(e^{\frac{r}{m}} - 1\right)$
+
+### 3. Between simple and compound
+
+$C_0 (1 + r_s t) = C_0 \left(1 + \frac{r_c}{m}\right)^{m t} \rightarrow r_s = \frac{1}{t}  \left[ (1 + \frac{r_c}{m} )^{mt} - 1 \right] \Leftrightarrow r_c = m  \left[ (1 + r_s t)^{\frac{1}{mt}} - 1 \right]$
+
+### 4. Between simple and continuous
+
+$C_0 (1 + r_s t) = C_0 e^{rt} \rightarrow r_s = \frac{e^{rt} - 1}{t} \Leftrightarrow r = \frac{1}{t} \ln (1 + r_s t)$
