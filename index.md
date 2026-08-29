@@ -12,7 +12,7 @@
 - [Blockchain / CCSS / CCSSA-v9.0-Exam-Scenario-E](Blockchain/CCSS/CCSSA-v9.0-Exam-Scenario-E.md) — CCSSA v9.0 exam scenario E describing a hybrid-custody firm for institutional investors with HSM cold storage and a 2-of-3 multi-signer hot wallet.
 - [Blockchain / CCSS / CCSSA-v9.0-Exam-Scenario-F](Blockchain/CCSS/CCSSA-v9.0-Exam-Scenario-F.md) — CCSSA v9.0 exam scenario F describing an ISO/IEC 27001 certified exchange with tiered custody pools and a 4-of-7 MPC threshold wallet.
 
-- [Finance / quantitative-finance-fundamentals / 01-capitalization-process](Finance/quantitative-finance-fundamentals/01-capitalization-process.md) — Empty placeholder note for the capitalization process in quantitative finance; content not yet written.
+- [Finance / quantitative-finance-fundamentals / 01-capitalization-process](Finance/quantitative-finance-fundamentals/01-capitalization-process.md) — Definitions of the capitalization and discount processes, with a diagram and the notation for capital, time and interest rates.
 
 - [Finance / Research Articles / Everything You Always Wanted to Know About Multiple Interest Rate Curve Bootstrapping But Were Afraid To Ask](Finance/Research%20Articles/Everything%20You%20Always%20Wanted%20to%20Know%20About%20Multiple%20Interest%20Rate%20Curve%20Bootstrapping%20But%20Were%20Afraid%20To%20Ask.pdf) — Paper by Ametrano and Bianchetti (2013) on single-currency multiple-curve bootstrapping of discounting and FRA yield curves, with an open-source QuantLib implementation.
 

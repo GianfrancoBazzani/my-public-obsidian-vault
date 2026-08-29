@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" font-family="Helvetica, Arial, sans-serif" font-size="20">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+  <!-- time axis -->
+  <line x1="60" y1="160" x2="680" y2="160" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="60" cy="160" r="4" fill="#444"/>
+  <line x1="640" y1="145" x2="640" y2="175" stroke="#444" stroke-width="2"/>
+  <circle cx="600" cy="145" r="9" fill="#e53935" opacity="0.85"/>
+  <text x="40" y="195" text-anchor="middle">C<tspan baseline-shift="sub" font-size="14">0</tspan></text>
+  <text x="640" y="195" text-anchor="middle">C<tspan baseline-shift="sub" font-size="14">t</tspan></text>
+  <!-- capitalize arc -->
+  <path d="M60,150 Q350,20 640,138" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="350" y="40" text-anchor="middle" font-size="22">Capitalize</text>
+  <text x="350" y="80" text-anchor="middle">r<tspan baseline-shift="sub" font-size="14">s</tspan>, r<tspan baseline-shift="sub" font-size="14">c</tspan>, r</text>
+  <!-- discount arc -->
+  <path d="M640,182 Q350,300 60,175" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="350" y="255" text-anchor="middle">r<tspan baseline-shift="sub" font-size="14">s</tspan>, r<tspan baseline-shift="sub" font-size="14">c</tspan>, r</text>
+  <text x="350" y="300" text-anchor="middle" font-size="22">Discount</text>
+</svg>
