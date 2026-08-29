@@ -85,3 +85,33 @@ With $f(0) = C_0$ as base case, the formula holds for all $n \in \mathbb{N}$ by 
 Therefore, for all $t \geq 0$ such that $mt \in \mathbb{N}$:
 
 $C_t = f(mt) = C_0 (1 + \frac{r_c}{m})^{mt}$
+
+## Continuous Capitalization
+
+Continuous capitalization is the limit case of the compound capitalization when $m$ tends to infinity ($m \to \infty$). The capitalization happens an infinite number of times during the term $t$. The length of each period $1/m$ tends to zero, so the capital is compounded continuously: at every instant, the interest is reinvested and it becomes part of the capital. There is no waiting time between one capitalization and the next one.
+
+$C_t = \lim_{m \to \infty} C_0 (1 + \frac{r}{m})^{mt} = C_0 e^{r t}$
+
+The formula of continuous discount:
+
+$C_0 = C_t e^{-rt}$
+
+### Derivation of the growth factor $e^{rt}$
+
+The derivation uses the definition of the number $e$:
+
+$e = \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{n} \approx 2.71828$
+
+The growth factor $(1 + \frac{r}{m})^{mt}$ has the same shape.
+
+**Step 1: substitute $n = \frac{m}{r}$ in the limit.** This step needs $r > 0$. If $r > 0$, then $n \to \infty$ when $m \to \infty$. With this substitution, $\frac{r}{m} = \frac{1}{n}$ and $mt = nrt$.
+
+$C_t = \lim_{m \to \infty} C_0 (1 + \frac{r}{m})^{mt} = C_0 \lim_{n \to \infty} \left[\left(1 + \frac{1}{n}\right)^{n}\right]^{rt}$
+
+**Step 2: replace the limit with the definition of $e$.** The function $x^{rt}$ is continuous for $x > 0$, so the limit moves inside the brackets. The part inside the brackets is the definition of $e$. The exponent $rt$ does not depend on $n$, so it stays.
+
+$C_t = C_0 \left[\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{n}\right]^{rt} = C_0 \, e^{rt}$
+
+**Intuition.** In each period, the capital grows by a small fraction $r/m$. When $m$ grows, the periods become shorter and the fraction per period becomes smaller. There are more periods, but each one adds less. These two effects do not cancel exactly: the reinvested interest is a little larger with more periods. The total growth increases with $m$, but it converges to $e^{rt}$.
+
+Reference: [Continuous compounding explained (where e comes from?)](https://www.youtube.com/watch?v=pg827uDPFqA)
