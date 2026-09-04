@@ -141,14 +141,48 @@ x + i &= 1 \cdot 2 \cdot 3 \cdots (n+1) + (2 + i) \\
 \end{aligned}
 $$
 
-Since $0 \leq i \leq n-1$, we have $i + 2 \leq n + 1$. Therefore, $i + 2$ is one of the factors of (n+1)! and x +i can be written as a product of two integers 
+Since $0 \leq i \leq n-1$, we have $2 \leq i + 2 \leq n + 1$. Therefore $i + 2$ is one of the factors of $(n+1)!$, and $x + i$ can be written as a product of two integers:
 
 $$
 \begin{aligned}
-x + i &= (i + 2)(\frac{(n+1)!}{(i+2)}+1)
+x + i &= (i + 2)\left(\frac{(n+1)!}{i+2} + 1\right)
 \end{aligned}
 $$
 
-Note that since i+2 is a factor of (n+1)! the quotient is an integer.
+Note that the quotient $\frac{(n+1)!}{i+2}$ is an integer, because $i + 2$ is a factor of $(n+1)!$.
+
+Both factors are larger than 1, because $i + 2 \geq 2$ and $\frac{(n+1)!}{i+2} + 1 \geq 2$. Thus both factors are smaller than $x + i$, so $x + i$ is composite.
 
 Therefore the list $x, x+1, \ldots, x+(n-1)$ contains $n$ consecutive positive integers and none of them is prime.
+
+## Twin Primes
+
+Two prime numbers that differ by 2 are **twin primes**.
+
+Examples: $(3, 5)$, $(5, 7)$, $(11, 13)$, $(29, 31)$.
+
+> [!note] Twin Primes Conjecture
+> There are infinitely many pairs of twin primes.
+
+This conjecture is not proved and not disproved. It is one of the famous open problems in number theory.
+
+## Exercises
+
+6) The sequence 3, 5, 7 is a list of three prime numbers such that each pair of adjacent numbers in the list differ by two. Are there any more such "triplet primes"?
+
+> [!note] Triplet Primes Conjecture
+> The sequence $3, 5, 7$ is the only sequence of three primes in which each pair of adjacent numbers differs by two.
+
+**Proof.** Consider a sequence $n$, $n+2$, $n+4$ where the three numbers are prime.
+
+First, examine the small cases. If $n = 1$ or $n = 2$, the sequence contains a number that is not prime (1 or 4). If $n = 3$, the sequence is $3, 5, 7$, and all three numbers are prime.
+
+Now suppose $n > 3$. Divide $n$ by 3 to get $n = 3q + r$, where $r \in \{0, 1, 2\}$.
+
+- If $r = 0$, then $n = 3q$, so 3 divides $n$.
+- If $r = 1$, then $n + 2 = 3q + 3 = 3(q + 1)$, so 3 divides $n + 2$.
+- If $r = 2$, then $n + 4 = 3q + 6 = 3(q + 2)$, so 3 divides $n + 4$.
+
+In each case, one number of the sequence is a multiple of 3. Since $n > 3$, that number is larger than 3, so it is a product of 3 and a smaller integer larger than 1. Thus that number is composite, and the sequence does not contain three primes.
+
+Therefore $3, 5, 7$ is the only triplet of primes, and the conjecture is a theorem.
