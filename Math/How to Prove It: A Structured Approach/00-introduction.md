@@ -79,9 +79,9 @@ The assumption that there are finitely many prime numbers gives a contradiction 
 
 A prime of the form $2^n - 1$ is a **Mersenne prime**.
 
-Theorem 2 shows that $2^n - 1$ is not prime when $n$ is not prime. 
+Conjecture 2 (now a theorem) shows that $2^n - 1$ is not prime when $n$ is not prime. 
 
-The counterexample of Conjecture 1 shows that if $n$ is prime, then $2^n - 1$ is either prime or composite.
+The counterexample to Conjecture 1 shows that if $n$ is prime, then $2^n - 1$ can be prime or composite.
 
 Theorem 3 gives infinitely many prime exponents, so there are infinitely many candidates. Nonetheless, this does not prove that the quantity of Mersenne primes is infinite. Although many Mersenne prime numbers have been found, it is still not known if there are infinitely many of them.
 
@@ -104,3 +104,51 @@ Euler (1707-1783) proved that every even perfect number arises in this way.
 Because it is not known if there are infinitely many Mersenne primes, it is not known if there are infinitely many even perfect numbers.
 
 
+> [!note] Theorem 4
+> For every positive integer $n$, there is a sequence of $n$ consecutive positive integers that contains no primes.
+
+**Proof.** Suppose $n$ is a positive integer.
+
+Let $x = (n+1)! + 2$.
+
+Consider the list $x, x+1, x+2, \ldots, x+(n-1)$.
+
+Note that:
+
+$$
+\begin{aligned}
+x &= 1 \cdot 2 \cdot 3 \cdots (n+1) + 2 \\
+  &= 2\left(1 \cdot 3 \cdot 4 \cdots (n+1) + 1\right)
+\end{aligned}
+$$
+
+Thus $x$ is composite, because $x$ is a product of two smaller positive integers.
+
+Similarly:
+
+$$
+\begin{aligned}
+x + 1 &= 1 \cdot 2 \cdot 3 \cdots (n+1) + 3 \\
+      &= 3\left(1 \cdot 2 \cdot 4 \cdots (n+1) + 1\right)
+\end{aligned}
+$$
+
+Consider any $x+i$ where $0 \leq i \leq n-1$. Then:
+
+$$
+\begin{aligned}
+x + i &= 1 \cdot 2 \cdot 3 \cdots (n+1) + (2 + i) \\
+\end{aligned}
+$$
+
+Since $0 \leq i \leq n-1$, we have $i + 2 \leq n + 1$. Therefore, $i + 2$ is one of the factors of (n+1)! and x +i can be written as a product of two integers 
+
+$$
+\begin{aligned}
+x + i &= (i + 2)(\frac{(n+1)!}{(i+2)}+1)
+\end{aligned}
+$$
+
+Note that since i+2 is a factor of (n+1)! the quotient is an integer.
+
+Therefore the list $x, x+1, \ldots, x+(n-1)$ contains $n$ consecutive positive integers and none of them is prime.
