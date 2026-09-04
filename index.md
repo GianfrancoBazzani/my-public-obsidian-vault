@@ -17,3 +17,5 @@
 - [Finance / Research Articles / Everything You Always Wanted to Know About Multiple Interest Rate Curve Bootstrapping But Were Afraid To Ask](Finance/Research%20Articles/Everything%20You%20Always%20Wanted%20to%20Know%20About%20Multiple%20Interest%20Rate%20Curve%20Bootstrapping%20But%20Were%20Afraid%20To%20Ask.pdf) — Paper by Ametrano and Bianchetti (2013) on single-currency multiple-curve bootstrapping of discounting and FRA yield curves, with an open-source QuantLib implementation.
 
 - [gianfran.co-posts / Book Overview: "The Hard Thing About Hard Things"](gianfran.co-posts/Book%20Overview:%20%22The%20Hard%20Thing%20About%20Hard%C2%A0Things%22.md) — Practical notes from Ben Horowitz's book on leading a startup through the Struggle, managing people, layoffs, and the skills of a CEO.
+
+- [Math / How to Prove It: A Structured Approach / 00-introduction](Math/How%20to%20Prove%20It:%20A%20Structured%20Approach/00-introduction.md) — Notes on the Introduction of Velleman's book: primes, composites, and the proof that 2^n - 1 is not prime when n is not prime.
