@@ -19,3 +19,4 @@
 - [gianfran.co-posts / Book Overview: "The Hard Thing About Hard Things"](gianfran.co-posts/Book%20Overview:%20%22The%20Hard%20Thing%20About%20Hard%C2%A0Things%22.md) — Practical notes from Ben Horowitz's book on leading a startup through the Struggle, managing people, layoffs, and the skills of a CEO.
 
 - [Math / How to Prove It: A Structured Approach / 00-introduction](Math/How%20to%20Prove%20It:%20A%20Structured%20Approach/00-introduction.md) — Notes on the Introduction of Velleman's book: primes, Mersenne primes, perfect numbers, twin primes, Theorems 2-4 with proofs, and a proof that 3, 5, 7 is the only prime triplet.
+- [Math / How to Prove It: A Structured Approach / 01-sentential-logic](Math/How%20to%20Prove%20It:%20A%20Structured%20Approach/01-sentential-logic.md) — Notes on Chapter 1 of Velleman's book: deductive reasoning, premises, and conclusions.
