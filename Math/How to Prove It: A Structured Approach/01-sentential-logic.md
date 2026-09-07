@@ -287,3 +287,108 @@ $$\neg(\text{a tautology}) \text{ is a contradiction}$$
 $$P \land (\text{a contradiction}) \text{ is a contradiction}$$
 $$P \lor (\text{a contradiction}) \equiv P$$
 $$\neg(\text{a contradiction}) \text{ is a tautology}$$
+
+### Exercises
+
+**3\.** In this exercise we will use the symbol $+$ to mean **exclusive or** (XOR). In other words, $P + Q$ means "$P$ or $Q$, but not both."
+
+**a)** Make a truth table for $P + Q$.
+
+| $P$ | $Q$ | $P + Q$ |
+| --- | --- | ------- |
+| F   | F   | F       |
+| F   | T   | T       |
+| T   | F   | T       |
+| T   | T   | F       |
+
+**b)** Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent to $P + Q$. Justify your answer with a truth table.
+
+$$(P \lor Q) \land \neg(P \land Q)$$
+
+| $P$ | $Q$ | $(P \lor Q) \land \neg(P \land Q)$ |
+| --- | --- | ---------------------------------- |
+| F   | F   | F                                  |
+| F   | T   | T                                  |
+| T   | F   | T                                  |
+| T   | T   | F                                  |
+
+**5\.** Some mathematicians use the symbol $\downarrow$ to mean **nor**. In other words, $P \downarrow Q$ means "neither $P$ nor $Q$."
+
+**a)** Make a truth table for $P \downarrow Q$.
+
+| $P$ | $Q$ | $P \downarrow Q$ |
+| --- | --- | ---------------- |
+| F   | F   | T                |
+| F   | T   | F                |
+| T   | F   | F                |
+| T   | T   | F                |
+
+**b)** Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent to $P \downarrow Q$.
+
+$$ \neg (P \lor Q) \equiv \neg P \land \neg Q$$
+
+**c)** Find formulas using only the connective $\downarrow$ that are equivalent to $\neg P$, $P \lor Q$, and $P \land Q$.
+
+$$ \neg P \equiv P \downarrow P$$
+
+$$ P \lor Q \equiv \neg ( P \downarrow Q) \equiv (P \downarrow Q) \downarrow (P \downarrow Q)$$
+
+$$ P \land Q \equiv \neg(\neg P \lor \neg Q) \equiv \neg P \downarrow \neg Q \equiv ( P \downarrow P) \downarrow ( Q \downarrow Q)$$
+
+**6\.** Some mathematicians write $P | Q$ to mean "$P$ and $Q$ are not both true." (This connective is called **nand**, and is used in the study of circuits in computer science.)
+
+**a)** Make a truth table for $P | Q$.
+
+| $P$ | $Q$ | $P \| Q$ |
+| --- | --- | -------- |
+| F   | F   | T        |
+| F   | T   | T        |
+| T   | F   | T        |
+| T   | T   | F        |
+
+**b)** Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent to $P | Q$.
+
+$$ \neg ( P \land Q) \equiv \neg P \lor \neg Q$$
+
+**c)** Find formulas using only the connective $|$ that are equivalent to $\neg P$, $P \lor Q$, and $P \land Q$.
+
+$$ \neg P \equiv P | P$$
+
+$$ P \lor Q \equiv \neg(\neg P \land \neg Q) \equiv \neg P | \neg Q \equiv (P | P) | (Q | Q)$$
+
+$$ P \land Q \equiv \neg (P | Q) \equiv (P | Q) | (P | Q)$$
+
+**13\.** Use the first De Morgan's law and the double negation law to determine the second De Morgan's law.
+
+**1st De Morgan's law**
+
+$$\neg(P \land Q) \equiv \neg P \lor \neg Q$$
+
+**Double negation law**
+
+$$\neg\neg P \equiv P$$
+
+If we apply the 1st De Morgan's law and the double negation law to the following formula:
+
+$$\neg (\neg P \land \neg Q ) \equiv \neg \neg P \lor \neg \neg Q  \equiv P \lor Q$$
+
+Then we negate both sides and apply the double negation law again:
+
+$$\neg P \land \neg Q \equiv \neg\neg(\neg P \land \neg Q) \equiv \neg(P \lor Q)$$
+
+We obtain the 2nd De Morgan's law:
+
+$$\neg(P \lor Q) \equiv \neg P \land \neg Q$$
+
+
+**18\.** Suppose the conclusion of an argument is a tautology. What can you conclude about the validity of the argument? What if the conclusion is a contradiction? What if one of the premises is either a tautology or a contradiction?
+
+> [!NOTE]
+> An argument is valid if the premises cannot all be true without the conclusion being true as well. To determine the validity with a truth table, find the lines in which all the premises are true. If the conclusion is true in all of those lines, the argument is valid. If the conclusion is false in at least one of those lines, the argument is invalid.
+
+If the conclusion of an argument is a tautology, it means that its formula always evaluates to true independently of the evaluation of any of its premises. Therefore the argument is valid, because the case where all the premises are true and the conclusion is false can never occur.
+
+If the conclusion of an argument is a contradiction, it means that its formula always evaluates to false independently of the values of its premises. Nonetheless, the argument can still be valid, as what determines the validity is that the premises cannot all be true without the conclusion being true as well.
+
+If any of the premises is a tautology, that premise can be simplified out of the argument as the validity of the argument will always depend on the other premises. If any of the premises is a contradiction, the argument is always valid, as the premises can never all be true.
+
