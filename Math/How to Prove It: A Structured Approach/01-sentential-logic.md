@@ -32,77 +32,77 @@ The symbols ∧ and ∨ can only be used between two statements, to form their c
 
 ### Exercises
 
-5) Which of the following expressions are well-formed formulas?
+**5\.** Which of the following expressions are well-formed formulas?
 
-   a) $\neg(\neg P \lor \neg\neg R)$ — ✅ Well-formed formula.
+**a)** $\neg(\neg P \lor \neg\neg R)$ — ✅ Well-formed formula.
 
-   b) $\neg(P, Q, \land R)$ — ❌ Invalid formula.
+**b)** $\neg(P, Q, \land R)$ — ❌ Invalid formula.
 
-   c) $P \land \neg P$ — ✅ Well-formed formula.
-   
-   d) $(P \land Q)(P \lor R)$ — ❌ Invalid formula.
+**c)** $P \land \neg P$ — ✅ Well-formed formula.
 
-6) Identify the premises and conclusions of the following deductive arguments and analyze their logical forms. Do you think the reasoning is valid?
+**d)** $(P \land Q)(P \lor R)$ — ❌ Invalid formula.
 
-    a) Jane and Pete won't both win the math prize. Pete will win either the math prize or the chemistry prize. Jane will win the math prize. Therefore, Pete will win the chemistry prize.
-    
-    <u>**Premises**</u>
+**6\.** Identify the premises and conclusions of the following deductive arguments and analyze their logical forms. Do you think the reasoning is valid?
 
-    $\neg(J_m \land P_m)$
+**a)** Jane and Pete won't both win the math prize. Pete will win either the math prize or the chemistry prize. Jane will win the math prize. Therefore, Pete will win the chemistry prize.
 
-    $P_m \lor P_c$
+<u>**Premises**</u>
 
-    $J_m$
+$\neg(J_m \land P_m)$
 
-    <u>**Conclusion**</u>
+$P_m \lor P_c$
 
-    Pete will win the chemistry prize. $P_c$
+$J_m$
 
-    The reasoning is valid, and the conclusion holds true. Jane won the math prize, which implies that Pete did not. So if Pete did not win the math prize, he won the chemistry prize.
-    
-    b) The main course will be either beef or fish. The vegetable will be either peas or corn. We will not have both fish as a main course and corn as a vegetable. Therefore, we will not have both beef as a main course and peas as a vegetable.
+<u>**Conclusion**</u>
 
-    <u>**Premises**</u>
+Pete will win the chemistry prize. $P_c$
 
-    $B \lor F$
+The reasoning is valid, and the conclusion holds true. Jane won the math prize, which implies that Pete did not. So if Pete did not win the math prize, he won the chemistry prize.
 
-    $P \lor C$
+**b)** The main course will be either beef or fish. The vegetable will be either peas or corn. We will not have both fish as a main course and corn as a vegetable. Therefore, we will not have both beef as a main course and peas as a vegetable.
 
-    $\neg (F \land C)$
+<u>**Premises**</u>
 
-    <u>**Conclusion**</u>
+$B \lor F$
 
-    We will not have both beef as a main course and peas as a vegetable. $\neg (B \land P)$
-    
-    The reasoning is invalid and the conclusion does not hold, as none of the premises enforces that if we have beef as a main course we cannot have peas as a vegetable, we can have either peas or corn.
+$P \lor C$
 
-    c) Either John or Bill is telling the truth. Either Sam or Bill is lying. Therefore, either John is telling the truth or Sam is lying.
+$\neg (F \land C)$
 
-    <u>**Premises**</u>
-    
-    $J \lor B$
-    
-    $\neg S \lor \neg B$
+<u>**Conclusion**</u>
 
-    <u>**Conclusion**</u>
+We will not have both beef as a main course and peas as a vegetable. $\neg (B \land P)$
 
-    $J \lor \neg S$
+The reasoning is invalid and the conclusion does not hold, as none of the premises enforces that if we have beef as a main course we cannot have peas as a vegetable, we can have either peas or corn.
 
-    Either John is telling the truth or Sam is lying $J \lor \neg S$
-    
-    The reasoning is valid, and the conclusion holds true as if John tells the truth it means that Bill is lying, and if Bill lies Sam cannot lie.
+**c)** Either John or Bill is telling the truth. Either Sam or Bill is lying. Therefore, either John is telling the truth or Sam is lying.
 
-    d) Either sales will go up and teh boss will be happy, or expenses will go up and the boss won't be happy. Therefore, sales and expenses will not both go up.
+<u>**Premises**</u>
 
-    <u>**Premises**</u>
-    
-    $(S \land B) \lor (E \land \neg B)$
+$J \lor B$
 
-    <u>**Conclusion**</u>
-    
-    Sales and expenses will not both go up $\neg (S \land E)$ 
-    
-    The reasoning is invalid and the conclusion does not hold, as the premises allow both sales and expenses to go up, they only constrain whether the boss is happy or not in that situation.
+$\neg S \lor \neg B$
+
+<u>**Conclusion**</u>
+
+$J \lor \neg S$
+
+Either John is telling the truth or Sam is lying $J \lor \neg S$
+
+The reasoning is valid, and the conclusion holds true as if John tells the truth it means that Bill is lying, and if Bill lies Sam cannot lie.
+
+**d)** Either sales will go up and the boss will be happy, or expenses will go up and the boss won't be happy. Therefore, sales and expenses will not both go up.
+
+<u>**Premises**</u>
+
+$(S \land B) \lor (E \land \neg B)$
+
+<u>**Conclusion**</u>
+
+Sales and expenses will not both go up $\neg (S \land E)$
+
+The reasoning is invalid and the conclusion does not hold, as the premises allow both sales and expenses to go up, they only constrain whether the boss is happy or not in that situation.
 
 ## 1.2 Truth Tables
 
