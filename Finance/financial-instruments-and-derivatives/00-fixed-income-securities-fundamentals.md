@@ -68,7 +68,7 @@ $$D_{Mac}=3.73$$
 
 ## Modified Duration
 
-The Modified Duration measures the sensibility of the price of the security when there are changes in the interest rates. When the yield rises, the price of a fixed-income security falls. The modified duration measures how much: it is the percentage change in price for a change of 1 unit (100%) in the yield. It is the Macaulay duration divided by $(1 + y)$:
+The Modified Duration measures the sensitivity of the price of the security when there are changes in the interest rates. When the yield rises, the price of a fixed-income security falls. The modified duration measures how much: it is the percentage change in price for a change of 1 unit (100%) in the yield. It is the Macaulay duration divided by $(1 + y)$:
 
 $$D_{Mod}=\frac{D_{Mac}}{1+y}$$
 
@@ -95,7 +95,7 @@ To derive the modified duration, we start from the price of the security discoun
 
 $$P = \sum_{t=1}^{n} \frac{CF_t}{(1+y)^t}$$
 
-We then differentiate with respect to the interest rate:
+We then differentiate with respect to the yield to maturity $y$:
 
 
 $$\frac{\mathrm{d} P }{\mathrm{d} y} = \frac{\mathrm{d}}{\mathrm{d} y} \sum_{t=1}^{n} \frac{CF_t}{(1+y)^t} = \frac{\mathrm{d}}{\mathrm{d} y} \sum_{t=1}^{n} CF_t (1+y)^{-t} $$
@@ -108,7 +108,7 @@ With $u = 1 + y$:
 
 $$\frac{\mathrm{d}}{\mathrm{d} y} \sum_{t=1}^{n} CF_t (1+y)^{-t} = \left[\frac{\mathrm{d}}{\mathrm{d} u} \sum_{t=1}^{n} CF_t u^{-t}\right] \frac{\mathrm{d} u}{\mathrm{d} y}$$
 
-Applying the derivative of a sum, the constant multiple and the derivative of a constant rules, we get:
+We use the derivative of a sum rule, the constant multiple rule, the derivative of a constant rule, and the derivative of the variable rule:
 
 $$\frac{\mathrm{d} (f(x) + g(x))}{\mathrm{d} x} = \frac{\mathrm{d} f(x)}{\mathrm{d} x} + \frac{\mathrm{d} g(x)}{\mathrm{d} x}$$
 
@@ -116,16 +116,18 @@ $$\frac{\mathrm{d}C}{\mathrm{d} x} = 0$$
 
 $$\frac{\mathrm{d}x}{\mathrm{d} x} = 1$$
 
+With these rules, the derivative of $u$ with respect to $y$ is 1, so the chain rule factor disappears:
+
 $$\frac{\mathrm{d} u}{\mathrm{d} y} = \frac{\mathrm{d} 1}{\mathrm{d} y} + \frac{\mathrm{d} y}{\mathrm{d} y} = 1$$
 
 $$\left[\frac{\mathrm{d}}{\mathrm{d} u} \sum_{t=1}^{n} CF_t u^{-t}\right] \frac{\mathrm{d} u}{\mathrm{d} y} = \frac{\mathrm{d}}{\mathrm{d} u} \sum_{t=1}^{n} CF_t u^{-t}$$
 
 Applying the power rule:
 
-$$\frac{\mathrm{d} x^n}{\mathrm{d} y} = n x ^{n-1}$$
+$$\frac{\mathrm{d} x^n}{\mathrm{d} x} = n x ^{n-1}$$
 
 $$\frac{\mathrm{d}}{\mathrm{d} u} \sum_{t=1}^{n} CF_t u^{-t} = \sum_{t=1}^{n} - t CF_t u^{-t - 1} = \sum_{t=1}^{n} -t \frac{CF_t}{u^{t + 1}} =  \sum_{t=1}^{n} -t \frac{CF_t}{(1+y)^{t + 1}} = - \frac{1}{1 + y} \sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t}$$
 
 Therefore:
 
-$$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = - \frac{1}{1 + y} \frac{1}{P} \sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t} = - \frac{D_{Mac}}{1+y}$$
+$$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = - \frac{1}{1 + y} \frac{1}{P} \sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t} = - \frac{D_{Mac}}{1+y} = -D_{Mod}$$
