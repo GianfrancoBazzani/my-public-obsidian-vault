@@ -83,6 +83,9 @@ $$\frac{\Delta P}{P}\approx -D_{Mod}\times\Delta y$$
 - $\Delta P / P$ is the percentage change in the price.
 - The minus sign shows that the price moves in the opposite direction to the yield.
 
+> [!note] Why is this an approximation?
+> The derivation below gives an exact result, but only for an infinitely small change in yield: $\frac{1}{P}\frac{\mathrm{d}P}{\mathrm{d}y} = -D_{Mod}$. This is the slope of the price curve at the current yield. The formula above replaces the infinitely small change $\mathrm{d}y$ with a finite change $\Delta y$, so it follows the straight line with that slope instead of the curve. The price curve is convex (it bends upwards), and the line is below the curve everywhere except at the current yield. For a small $\Delta y$ the gap is negligible. For a large $\Delta y$ the gap grows, and the true fall in price is smaller than the formula predicts. In Taylor expansion terms, the formula keeps only the first-order term and drops the convexity term, which is proportional to $(\Delta y)^2$.
+
 The two durations measure different things. The Macaulay duration is a time, in years. The modified duration is a sensitivity of the price to the yield. The division by $(1 + y)$ converts the time into the sensitivity.
 
 **Example**
