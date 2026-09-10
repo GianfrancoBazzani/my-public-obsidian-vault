@@ -179,7 +179,34 @@ The linear term grows in proportion to $\Delta y$. The convexity term grows in p
 
 **Derivation**
 
-TODO: Derivate 
+The second derivative is the derivative of the first derivative that we computed above:
+
+$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2}=\frac{\mathrm{d}}{\mathrm{d}y}\sum_{t=1}^{n} -t \frac{CF_t}{(1+y)^{t + 1}}$$
+
+We use the same substitution $u = 1 + y$. The first derivative in terms of $u$ is:
+
+$$\frac{\mathrm{d}P}{\mathrm{d}y} = \sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)}$$
+
+By the chain rule, and because $\frac{\mathrm{d}u}{\mathrm{d}y}=1$:
+
+$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \left[\frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)}\right]\frac{\mathrm{d}u}{\mathrm{d}y} = \frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)}$$
+
+Applying the power rule:
+
+$$\frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)} = \sum_{t=1}^{n} (-t)\,CF_t \,\big(-(t+1)\big)\, u^{-(t+2)} = \sum_{t=1}^{n} t(t+1)\, CF_t \, u^{-(t+2)}$$
+
+Substituting back $u = 1 + y$:
+
+$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \sum_{t=1}^{n} \frac{t(t+1)\, CF_t}{(1+y)^{t+2}}$$
+
+Therefore:
+
+$$C = \frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1)\, CF_t}{(1+y)^{t+2}}$$
+
+Every term of the sum is positive, because $t$, $CF_t$, and $(1+y)$ are positive. This is the reason why the convexity of a bond with fixed positive cash flows is always positive.
+
+TODO Explain also how taylor applies here
+
 
 ## Practical Interpretation of Durations and Convexity
 
