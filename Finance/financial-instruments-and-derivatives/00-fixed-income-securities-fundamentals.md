@@ -181,7 +181,7 @@ The linear term grows in proportion to $\Delta y$. The convexity term grows in p
 
 TODO: Derivate 
 
-## Practical Intuition
+## Practical Interpretation of Durations and Convexity
 
 The modified duration and the convexity are widely used to evaluate the profit and loss (PnL) of a portfolio of fixed-income securities against changes in the interest rates. They approximate how the price of the portfolio changes when the interest rates move. The duration and the convexity of the portfolio are the value-weighted averages of the durations and convexities of its assets. With these two numbers, the two-term formula gives the change in the price of the whole portfolio, without the need to recompute the discounted value of all the cash flows of all the assets. The result is an approximation, and it assumes that all yields move by the same amount (a parallel shift of the yield curve).
 
@@ -193,3 +193,126 @@ Three characteristics of a bond determine how sensitive its price is to changes 
 - **Coupon:** a lower coupon gives a more sensitive price. A larger part of the price comes from the final payment, so the duration is longer. A zero-coupon bond is the most sensitive for a given maturity.
 - **Yield:** a lower yield gives a more sensitive price. At a low yield, the discount factors decrease more slowly with time, so the late cash flows carry more weight.
 
+## Key Rate Duration
+
+The duration and the convexity give us a way to estimate the sensitivity of our fixed-income securities to a change in the interest rates. However, we did not define which interest rate changes. The interest rates are not a single number: they form a curve, with one rate for each maturity (the yield curve). The rates at different points of this curve can move in different ways. For example, the rate at 10 years can rise while the rate at 1 year falls. The duration and the convexity assume a parallel shift, where all the rates move by the same amount. The key rate duration removes this assumption.
+
+The key rate duration measures the sensitivity of the price of a fixed-income security to a change in the rate at one specific maturity, while all the other rates of the curve stay constant. This is a theoretical construction: in the market, the rates at nearby maturities rarely move in isolation.
+
+**Calculation**
+
+The key rate duration for the maturity $i$ is:
+
+$$KRD_i=-\frac{\Delta P/P}{\Delta y_i}$$
+
+- $\Delta y_i$ is the change in the rate at the maturity $i$, while all the other rates of the curve stay constant.
+- $\Delta P/P$ is the percentage change in the price of the security that this change in the rate produces.
+
+The key rate durations of a security add up to its modified duration. If all the rates move by the same amount $\Delta y$, the sum of the effects of each key rate is the effect of a parallel shift:
+
+$$\sum_{i} KRD_i = D_{Mod}$$
+
+> [!note] Why the key rate durations add up to the duration
+> The equality is approximate for two reasons. First, each key rate duration is computed with a finite shift, so the second-order terms (convexity) do not cancel exactly. Second, the key rate durations measure shifts of the spot curve, while the modified duration measures a shift of the yield to maturity of the bond. The sum is therefore the effective duration for a parallel shift. For a plain bond, this number is very close to the modified duration, and most texts treat them as equal.
+
+
+**Why it is important**
+
+- **Non-parallel curve:** the yields do not move by the same amount at all maturities. The curve can steepen, flatten, or twist. The modified duration cannot capture these movements.
+- **Specific risk:** the key rate durations show the exposure of the portfolio by segment of the curve. A manager can see, for example, that the portfolio is exposed to the 10-year rate but not to the 2-year rate.
+- **Precise hedging:** with the exposure by segment, a manager can hedge each segment with an instrument of the same maturity. The hedge is more effective than a hedge based on the total duration only.
+
+
+**Example**
+
+A 10-year bond has the following key rate durations, computed at three points of the yield curve:
+
+| Maturity | $KRD_i$ |
+| :------: | :-----: |
+| 2 years  |   0.3   |
+| 5 years  |   2.1   |
+| 10 years |   5.2   |
+
+The bond is most sensitive to changes in the 10-year rate ($KRD=5.2$) and moderately sensitive to changes in the 5-year rate ($KRD=2.1$). It is almost insensitive to the 2-year rate ($KRD=0.3$). The sum of the three key rate durations, 7.6, is the modified duration of the bond.
+
+If the 10-year rate rises by 0.5% ($\Delta y_{10}=0.005$) and the other rates stay constant, the price falls by approximately:
+
+$$\frac{\Delta P}{P}\approx -KRD_{10}\cdot\Delta y_{10} = -5.2\times0.005 = -2.6\%$$
+
+For a non-parallel movement, we add the effect of each key rate. If the 2-year rate rises by 1%, the 5-year rate rises by 0.5%, and the 10-year rate falls by 0.2%, the price changes by approximately:
+
+$$\frac{\Delta P}{P}\approx -(0.3\times0.01) - (2.1\times0.005) - (5.2\times(-0.002)) = -0.30\% - 1.05\% + 1.04\% = -0.31\%$$
+
+The modified duration alone cannot compute this result, because the rates did not move by the same amount.
+
+## Asset Swaps
+
+An asset swap is a strategy that combines the purchase of a fixed-coupon bond with the entry into an Interest Rate Swap (IRS). The investor pays the fixed coupons to the swap counterparty and receives floating payments in exchange. The swap transforms the fixed cash flows of the bond into floating cash flows. 
+
+When we buy a bond, this bond usually has a fixed coupon (e.g. 5% every year). Sometimes, instead of a fixed coupon rate, we want exposure to the floating interest rate paid at that moment.
+
+Asset swaps are widely used in fixed income trading strategies to hedge interest rate risk. The swap removes most of the sensitivity of the position to changes in interest rates, but the investor keeps the credit risk of the bond issuer. For this reason, the asset swap spread is a common measure of the credit risk of a bond.
+
+### Mechanics of the Asset Swap
+
+1. **Purchase of the bond:** the investor pays the market price of the bond.
+2. **Entry into the IRS:**
+   - Pays: the fixed rate of the swap.
+   - Receives: the floating rate (EURIBOR/SOFR + spread).
+3. **Net cash flows:** pure floating exposure.
+
+### Asset Swap Spread
+
+$$\text{ASW Spread} = (\text{Bond Coupon} - \text{Swap Rate}) \times \frac{100}{\text{Bond Price}}$$
+
+**Interpretation:** the ASW spread is the additional spread over the floating reference rate that the investor receives for the credit risk.
+
+
+**Example**
+
+Corporate bond XYZ:
+
+- Coupon: 6.5% per year.
+- Price: 104.
+- Maturity: 5 years.
+
+Market:
+
+- 5-year swap rate: 4.2%.
+- 5-year government bond yield: 3.8%.
+
+ASW spread calculation:
+
+$$\text{ASW} = (6.5\% - 4.2\%) \times \frac{100}{104} = 2.3\% \times 0.962 = 2.21\%$$
+
+Comparison:
+
+- Credit spread over the government bond: $6.5\% - 3.8\% = 2.7\%$.
+- ASW spread: 2.21%.
+- Difference: 49 bp, because the bond price is above par.
+
+### Asset Swap Applications
+
+**Why this is interesting**
+
+A fixed-rate bond packages two risks: interest rate risk and credit risk. The asset swap separates them. The investor keeps the credit risk of the issuer and passes the interest rate risk to the swap counterparty. The position behaves like a floating-rate note issued by XYZ.
+
+- **Pure credit view.** If the investor thinks the credit of XYZ is cheap, the asset swap pays only for that view. A rate move does not change the result.
+- **Comparable numbers.** The ASW spread puts every bond on one scale: spread over the swap curve. A 3-year bond at 98 and a 7-year bond at 105 become directly comparable.
+- **Access to fixed-rate supply.** Most corporate bonds are fixed-rate, but many investors need floating cash flows. The asset swap converts the available supply into the required form.
+- **Floating-rate funding.** A bank funds itself at a floating rate. It buys the bond, swaps it, and locks the margin between "floating + ASW spread" and its floating funding cost.
+- **Relative value.** If the ASW spread is wider than the CDS spread of the same issuer, the investor can buy the bond, swap it, and buy protection. This is the CDS-bond basis trade.
+
+**When this is not interesting**
+
+- **The investor wants duration.** If the investor expects rates to fall, the swap removes the price gain that the investor wants.
+- **Costs are high relative to the spread.** The swap bid-offer, the collateral requirements, and the counterparty risk can consume a small ASW spread.
+- **The bond has embedded options.** A callable or puttable bond does not have certain fixed cash flows. A standard asset swap does not hedge it well.
+- **Rates are stable.** The value of the duration hedge is low when rate uncertainty is low. The swap then adds cost with little benefit.
+
+**Practical applications**
+
+- **Relative value analysis.** Compare the ASW spreads of different issuers with the same maturity. A wider spread means more compensation per unit of credit risk.
+- **Bond vs. CDS arbitrage.** If the ASW spread is greater than the CDS spread of the same issuer, buy the bond, swap it, and buy protection. The position earns the difference with little net credit risk.
+- **Sector rotation.** Compare the average ASW spread of each sector against its history. Identify sectors that are cheap or expensive relative to their usual level.
+- **Portfolio construction.** Use asset-swapped bonds as the base of a credit-neutral portfolio. The portfolio then has credit exposure only, with no duration exposure.
