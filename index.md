@@ -12,7 +12,7 @@
 - [Blockchain / CCSS / CCSSA-v9.0-Exam-Scenario-E](Blockchain/CCSS/CCSSA-v9.0-Exam-Scenario-E.md) — CCSSA v9.0 exam scenario E describing a hybrid-custody firm for institutional investors with HSM cold storage and a 2-of-3 multi-signer hot wallet.
 - [Blockchain / CCSS / CCSSA-v9.0-Exam-Scenario-F](Blockchain/CCSS/CCSSA-v9.0-Exam-Scenario-F.md) — CCSSA v9.0 exam scenario F describing an ISO/IEC 27001 certified exchange with tiered custody pools and a 4-of-7 MPC threshold wallet.
 
-- [Finance / financial-instruments-and-derivatives / 00-fixed-income-securities-fundamentals](Finance/financial-instruments-and-derivatives/00-fixed-income-securities-fundamentals.md) — Fixed-income securities fundamentals: bonds (maturity, coupons, principal, secondary-market trading), with sections for notes, bills, certificates of deposit, and the Macaulay duration formula with an exercise.
+- [Finance / financial-instruments-and-derivatives / 00-fixed-income-securities-fundamentals](Finance/financial-instruments-and-derivatives/00-fixed-income-securities-fundamentals.md) — Fixed-income securities fundamentals: bonds (maturity, coupons, principal, secondary-market trading), with sections for notes, bills, certificates of deposit, the Macaulay duration, the modified duration, and the convexity, each with a derivation and a worked example on the same bond.
 
 - [Finance / quantitative-finance-fundamentals / 01-capitalization-process](Finance/quantitative-finance-fundamentals/01-capitalization-process.md) — Capitalization and discount processes: definitions, notation, the simple, compound and continuous (infinite compounding) formulas with proofs, the applications of each type, and the equivalence between interest types.
 

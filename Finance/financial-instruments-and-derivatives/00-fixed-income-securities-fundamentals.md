@@ -135,3 +135,61 @@ Therefore:
 
 $$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = - \frac{1}{1 + y} \frac{1}{P} \sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t} = - \frac{D_{Mac}}{1+y} = -D_{Mod}$$
 
+## Convexity
+
+As we saw, the modified duration is a linear approximation. If the change in the yield is large, this approximation becomes unreliable, because the price curve is convex, not a straight line. Convexity is the second-order term that corrects this error.
+
+The convexity measures the curvature of the price-yield curve. It improves the approximation by adding a second-order term to the formula. The convexity is the second derivative of the price with respect to the yield, divided by the price:
+
+$$C=\frac{1}{P}\frac{d^2P}{dy^2}=\frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1) \cdot CF_t}{(1+y)^{t+2}}$$
+
+With this term, the second-order approximation of the price change is:
+
+$$\frac{\Delta P}{P} \approx -D_{Mod} \cdot \Delta y + \frac{1}{2} C \cdot (\Delta y)^2$$
+
+> [!note]
+> This formula is a second-order Taylor polynomial of the price around the current yield. The first-order term is the duration. The second-order term is the convexity. The formula ignores the terms of order three and higher, so it is still an approximation.
+
+In most cases the convexity is positive. A positive convexity always gives a better result than the simpler linear approximation, whatever the interest rates do. If the interest rates rise, the convexity term reduces the fall in price that the linear approximation computes. If the interest rates fall, the convexity term increases the rise in price that the linear approximation computes.
+
+The effect of the convexity is small for small changes in the interest rates. It becomes important for large changes, for example when a long period of time has passed and the interest rates have moved far from their initial level.
+
+**Example**
+
+We continue with the bond above: $D_{Mod}=3.59$ and $y=4\%$. We take a convexity of $C=70$ to make the effect visible.
+
+For a small change, $\Delta y=0.002$:
+
+$$\text{Linear: } -D_{Mod}\cdot\Delta y = -3.59\times0.002 = -0.718\%$$
+$$\text{Convexity term: } \tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.002^2 = +0.014\%$$
+$$\text{Second order: } -0.718\% + 0.014\% = -0.704\%$$
+
+For a large change, $\Delta y=0.02$:
+
+$$\text{Linear: } -D_{Mod}\cdot\Delta y = -3.59\times0.02 = -7.18\%$$
+$$\text{Convexity term: } \tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.02^2 = +1.40\%$$
+$$\text{Second order: } -7.18\% + 1.40\% = -5.78\%$$
+
+| Change in yield | Linear approximation | Convexity term | Second-order approximation |
+| :-------------: | :------------------: | :------------: | :------------------------: |
+|     +0.2%       |       -0.718%        |    +0.014%     |          -0.704%           |
+|     +2%         |       -7.18%         |    +1.40%      |          -5.78%            |
+
+The linear term grows in proportion to $\Delta y$. The convexity term grows in proportion to $(\Delta y)^2$. The change in yield is 10 times larger, so the linear term is 10 times larger, but the convexity term is 100 times larger. For the small change, the correction is 0.014% on a fall of 0.718%, about 2% of the linear result, and the two approximations are almost equal. For the large change, the correction is 1.40% on a fall of 7.18%, about 20% of the linear result. The linear approximation overstates the fall in price by almost a quarter of the true fall. This is the reason why the convexity can be ignored for small changes but not for large ones.
+
+**Derivation**
+
+TODO: Derivate 
+
+## Practical Intuition
+
+The modified duration and the convexity are widely used to evaluate the profit and loss (PnL) of a portfolio of fixed-income securities against changes in the interest rates. They approximate how the price of the portfolio changes when the interest rates move. The duration and the convexity of the portfolio are the value-weighted averages of the durations and convexities of its assets. With these two numbers, the two-term formula gives the change in the price of the whole portfolio, without the need to recompute the discounted value of all the cash flows of all the assets. The result is an approximation, and it assumes that all yields move by the same amount (a parallel shift of the yield curve).
+
+**Sensitivity factors**
+
+Three characteristics of a bond determine how sensitive its price is to changes in the interest rates:
+
+- **Maturity:** a longer maturity gives a more sensitive price. The cash flows are further away, so a change in the yield discounts them more.
+- **Coupon:** a lower coupon gives a more sensitive price. A larger part of the price comes from the final payment, so the duration is longer. A zero-coupon bond is the most sensitive for a given maturity.
+- **Yield:** a lower yield gives a more sensitive price. At a low yield, the discount factors decrease more slowly with time, so the late cash flows carry more weight.
+
