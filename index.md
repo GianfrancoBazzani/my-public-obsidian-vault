@@ -13,6 +13,7 @@
 - [Blockchain / CCSS / CCSSA-v9.0-Exam-Scenario-F](Blockchain/CCSS/CCSSA-v9.0-Exam-Scenario-F.md) — CCSSA v9.0 exam scenario F describing an ISO/IEC 27001 certified exchange with tiered custody pools and a 4-of-7 MPC threshold wallet.
 
 - [Finance / financial-instruments-and-derivatives / 00-fixed-income-securities-fundamentals](Finance/financial-instruments-and-derivatives/00-fixed-income-securities-fundamentals.md) — Fixed-income securities fundamentals: bonds (maturity, coupons, principal, secondary-market trading), with sections for notes, bills, certificates of deposit, the Macaulay duration, the modified duration, the convexity, and the asset swap spread (with its use cases and limits), each with a derivation and a worked example.
+- [Finance / financial-instruments-and-derivatives / 01-interest-rates-curves-fundamentals](Finance/financial-instruments-and-derivatives/01-interest-rates-curves-fundamentals.md) — Interest rate curves fundamentals: the term structure of interest rates, the relation between tenor and rate, and the fundamental components (zero rates, forward rates, par rates, discount factors).
 
 - [Finance / quantitative-finance-fundamentals / 01-capitalization-process](Finance/quantitative-finance-fundamentals/01-capitalization-process.md) — Capitalization and discount processes: definitions, notation, the simple, compound and continuous (infinite compounding) formulas with proofs, the applications of each type, and the equivalence between interest types.
 
