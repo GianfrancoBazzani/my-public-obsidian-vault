@@ -341,3 +341,41 @@ A fixed-rate bond packages two risks: interest rate risk and credit risk. The as
 - **Bond vs. CDS arbitrage.** If the ASW spread is greater than the CDS spread of the same issuer, buy the bond, swap it, and buy protection. The position earns the difference with little net credit risk.
 - **Sector rotation.** Compare the average ASW spread of each sector against its history. Identify sectors that are cheap or expensive relative to their usual level.
 - **Portfolio construction.** Use asset-swapped bonds as the base of a credit-neutral portfolio. The portfolio then has credit exposure only, with no duration exposure.
+
+## Appendix 1: Taylor Polynomial and the Relative Price Change
+
+A Taylor polynomial replaces a complicated function with a simple polynomial that behaves like the function near one chosen point. At that point, the polynomial has the same value, the same slope, the same curvature, and so on, up to the degree that we choose. The more derivatives that match, the further from the point the polynomial stays close to the function.
+
+**Why we need it for the price of a fixed-income security**
+
+The price of any fixed-income security with fixed cash flows is $P(y)=\sum_{t} CF_t\,(1+y)^{-t}$. The formula can be computed exactly for any yield. The difficulty is the price change. Note that the derivates gives us infinitesimal changes nonetheless, the exact relative change for a finite yield move needs two points of the price curve: the current price at $y_0$ and the new price at $y_0+\Delta y$. Therfore the relative price variation for a specific yield variation is expressed as:
+
+$$\frac{\Delta P}{P} = \frac{\sum_{t} CF_t\,(1+y_0+\Delta y)^{-t}}{\sum_{t} CF_t\,(1+y_0)^{-t}} - 1$$
+
+This expression has three problems. It is a ratio of two sums of powers, so it does not simplify to a closed form in $\Delta y$. It depends on every cash flow, so it must be recomputed from scratch for each security and each $\Delta y$. It is not additive: the change of a portfolio cannot be built from the changes of its securities without a full repricing. The differential $\mathrm{d}P = P'(y)\,\mathrm{d}y$ is exact and simple, but only for an infinitely small $\mathrm{d}y$. The Taylor polynomial bridges the two. It expresses the finite change with a few numbers ($D_{Mod}$, $C$) that are computed once at the current yield, are simple functions of $\Delta y$, and aggregate across a portfolio as weighted averages.
+
+The $n$-th degree Taylor polynomial of a function $f(x)$ centered at $x=a$ is:
+
+$$P_{n}(x)=\sum _{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^{k}$$
+
+The factor $1/k!$ appears because the $k$-th derivative of $(x-a)^k$ is $k!$. It cancels, so the $k$-th derivative of $P_n$ at $a$ equals $f^{(k)}(a)$. If we stop at degree $n$, the error is proportional to $(x-a)^{n+1}$, which is small when $x$ is close to $a$.
+
+**Application to the price of a fixed-income security**
+
+Here the function is the price $P(y)$ of the security, the point is the current yield $y_0$, and the distance from the point is the yield change $\Delta y = y - y_0$. The second-degree Taylor polynomial gives:
+
+$$P(y_0+\Delta y) \approx P(y_0) + P'(y_0)\,\Delta y + \frac{1}{2}P''(y_0)\,(\Delta y)^2$$
+
+We want the relative variation of the price, not the new price. We move $P(y_0)$ to the left side and divide by $P(y_0)$:
+
+$$\frac{\Delta P}{P} \approx \frac{P'(y_0)}{P(y_0)}\,\Delta y + \frac{1}{2}\,\frac{P''(y_0)}{P(y_0)}\,(\Delta y)^2$$
+
+The two ratios are the modified duration and the convexity:
+
+$$D_{Mod} = -\frac{P'(y_0)}{P(y_0)} \qquad C = \frac{P''(y_0)}{P(y_0)}$$
+
+So the relative price change is:
+
+$$\frac{\Delta P}{P} \approx -D_{Mod}\,\Delta y + \frac{1}{2}\,C\,(\Delta y)^2$$
+
+The [Modified Duration](#modified-duration) formula keeps only the first-degree term. It follows the tangent line. The [Convexity](#convexity) formula adds the second-degree term. It follows a parabola that bends like the price curve. The dropped terms are proportional to $(\Delta y)^3$ and higher. For a yield move of 100 bp, $(\Delta y)^3 = 10^{-6}$, so two terms are enough for normal market moves.
