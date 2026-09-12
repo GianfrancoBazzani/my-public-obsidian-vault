@@ -348,11 +348,30 @@ A Taylor polynomial replaces a complicated function with a simple polynomial tha
 
 **Why we need it for the price of a fixed-income security**
 
-The price of any fixed-income security with fixed cash flows is $P(y)=\sum_{t} CF_t\,(1+y)^{-t}$. The formula can be computed exactly for any yield. The difficulty is the price change. Note that the derivates gives us infinitesimal changes nonetheless, the exact relative change for a finite yield move needs two points of the price curve: the current price at $y_0$ and the new price at $y_0+\Delta y$. Therfore the relative price variation for a specific yield variation is expressed as:
+The price of any fixed-income security with fixed cash flows is $P(y)=\sum_{t} CF_t\,(1+y)^{-t}$. The formula can be computed exactly for any yield. The difficulty is the price change. Note that the derivatives give us infinitesimal changes. Nonetheless, the exact relative change for a finite yield move needs two points of the price curve: the current price at $y_0$ and the new price at $y_0+\Delta y$. Therefore, the relative price variation for a specific yield variation is expressed as:
 
-$$\frac{\Delta P}{P} = \frac{\sum_{t} CF_t\,(1+y_0+\Delta y)^{-t}}{\sum_{t} CF_t\,(1+y_0)^{-t}} - 1$$
+$$
+\begin{aligned}
+\frac{\Delta P}{P}
+&= \frac{P(y_1)-P(y_0)}{P(y_0)} \\
+&= \frac{\displaystyle\sum_{t} CF_t\,(1+y_1)^{-t} - \displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} \\[6pt]
+&= \frac{\displaystyle\sum_{t} CF_t\,(1+y_1)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} - 1
+\end{aligned}
+$$
 
-This expression has three problems. It is a ratio of two sums of powers, so it does not simplify to a closed form in $\Delta y$. It depends on every cash flow, so it must be recomputed from scratch for each security and each $\Delta y$. It is not additive: the change of a portfolio cannot be built from the changes of its securities without a full repricing. The differential $\mathrm{d}P = P'(y)\,\mathrm{d}y$ is exact and simple, but only for an infinitely small $\mathrm{d}y$. The Taylor polynomial bridges the two. It expresses the finite change with a few numbers ($D_{Mod}$, $C$) that are computed once at the current yield, are simple functions of $\Delta y$, and aggregate across a portfolio as weighted averages.
+The yield change is $\Delta y = y_1 - y_0$, then $y_1 = y_0 + \Delta y$ and:
+
+$$
+\frac{\Delta P}{P} = \frac{\displaystyle\sum_{t} CF_t\,(1+y_0+\Delta y)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} - 1
+$$
+
+This expression is exact, but it has three practical problems:
+
+- **No simple form in $\Delta y$.** The numerator is a sum of $T$ terms, each with a different power of $(1+y_0+\Delta y)$. No factorization removes the sum, so the expression does not reduce to a short polynomial like $a + b\,\Delta y + c\,\Delta y^2$. The denominator is also a sum of powers, but it does not contain $\Delta y$: it is the current price $P(y_0)$, a single constant.
+- **No separation between the security and the shock.** The cash flows $CF_t$, the yield $y_0$, and the shock $\Delta y$ are mixed inside the same powers. It is not possible to compute a number that describes the security once, and then apply any $\Delta y$ to it later. Each new $\Delta y$ requires a full repricing of every cash flow.
+- **No portfolio summary.** The change of a portfolio is the sum of the changes of its securities, so it is additive. But there is no single number that describes the sensitivity of the whole portfolio. Each security must be repriced on its own, and the results added.
+
+The differential $\mathrm{d}P = P'(y)\,\mathrm{d}y$ is exact and simple, but only for an infinitely small $\mathrm{d}y$. The Taylor polynomial connects the two. The expansion point is the current yield $y_0$, so the polynomial is built around the price $P(y_0)$ before the interest rate changes. It expresses the finite change with a few numbers ($D_{Mod}$, $C$) that are computed once at the current yield, are simple functions of $\Delta y$, and aggregate across a portfolio as weighted averages.
 
 The $n$-th degree Taylor polynomial of a function $f(x)$ centered at $x=a$ is:
 
@@ -364,11 +383,11 @@ The factor $1/k!$ appears because the $k$-th derivative of $(x-a)^k$ is $k!$. It
 
 Here the function is the price $P(y)$ of the security, the point is the current yield $y_0$, and the distance from the point is the yield change $\Delta y = y - y_0$. The second-degree Taylor polynomial gives:
 
-$$P(y_0+\Delta y) \approx P(y_0) + P'(y_0)\,\Delta y + \frac{1}{2}P''(y_0)\,(\Delta y)^2$$
+$$P(y_0+\Delta y) = P(y_1) \approx P(y_0) + P'(y_0)\,\Delta y + \frac{1}{2}P''(y_0)\,(\Delta y)^2$$
 
 We want the relative variation of the price, not the new price. We move $P(y_0)$ to the left side and divide by $P(y_0)$:
 
-$$\frac{\Delta P}{P} \approx \frac{P'(y_0)}{P(y_0)}\,\Delta y + \frac{1}{2}\,\frac{P''(y_0)}{P(y_0)}\,(\Delta y)^2$$
+$$\frac{\Delta P}{P} = \frac{P(y_1)-P(y_0)}{P(y_0)} \approx \frac{P'(y_0)}{P(y_0)}\,\Delta y + \frac{1}{2}\,\frac{P''(y_0)}{P(y_0)}\,(\Delta y)^2$$
 
 The two ratios are the modified duration and the convexity:
 
