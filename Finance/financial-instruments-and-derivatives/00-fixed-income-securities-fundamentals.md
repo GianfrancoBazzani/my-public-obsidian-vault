@@ -57,18 +57,18 @@ A bond has a face value of 100 and a maturity of 4 years. It pays an annual coup
 
 | Year ($t$) | Cash flow ($CF_t$) | Present value of the cash flow ($PV_t$) | $t \times PV_t$ |
 | :--------: | :----------------: | :-------------------------------------: | :--------------: |
-|     1      |         5          |                  4.80                   |       4.80       |
-|     2      |         5          |                  4.622                  |      9.244       |
-|     3      |         5          |                  4.444                  |      13.332      |
-|     4      |        105         |                  89.75                  |       359        |
-| **Total**  |                    |                 103.616                 |     386.376      |
+|     1      |         5          |                  4.808                  |      4.808       |
+|     2      |         5          |                  4.623                  |      9.246       |
+|     3      |         5          |                  4.445                  |      13.335      |
+|     4      |        105         |                 89.754                  |     359.016      |
+| **Total**  |                    |                 103.630                 |     386.405      |
 
 $$D_{Mac}=3.73$$
 
 
 ## Modified Duration
 
-The Modified Duration measures the sensitivity of the price of the security when there are changes in the interest rates. When the yield rises, the price of a fixed-income security falls. The modified duration measures how much: it is the percentage change in price for a change of 1 unit (100%) in the yield. It is the Macaulay duration divided by $(1 + y)$:
+The Modified Duration measures the sensitivity of the price of the security when there are changes in the interest rates. When the yield rises, the price of a fixed-income security falls. The modified duration measures how much: a modified duration of 3.59 means that the price falls by approximately 3.59% when the yield rises by 1 percentage point (e.g. from 4% to 5%). It is the Macaulay duration divided by $(1 + y)$:
 
 $$D_{Mod}=\frac{D_{Mac}}{1+y}$$
 
@@ -354,7 +354,7 @@ $$
 \begin{aligned}
 \frac{\Delta P}{P}
 &= \frac{P(y_1)-P(y_0)}{P(y_0)} \\
-&= \frac{\displaystyle\sum_{t} CF_t\,(1+y_1)^{-t} - \displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} \\[6pt]
+&= \frac{\displaystyle\sum_{t} CF_t\,(1+y_1)^{-t} - \displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} \\
 &= \frac{\displaystyle\sum_{t} CF_t\,(1+y_1)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} - 1
 \end{aligned}
 $$
@@ -367,7 +367,7 @@ $$
 
 This expression is exact, but it has three practical problems:
 
-- **No simple form in $\Delta y$.** The numerator is a sum of $T$ terms, each with a different power of $(1+y_0+\Delta y)$. No factorization removes the sum, so the expression does not reduce to a short polynomial like $a + b\,\Delta y + c\,\Delta y^2$. The denominator is also a sum of powers, but it does not contain $\Delta y$: it is the current price $P(y_0)$, a single constant.
+- **No simple form in $\Delta y$.** The numerator is a sum of $n$ terms, each with a different power of $(1+y_0+\Delta y)$. No factorization removes the sum, so the expression does not reduce to a short polynomial like $a + b\,\Delta y + c\,\Delta y^2$. The denominator is also a sum of powers, but it does not contain $\Delta y$: it is the current price $P(y_0)$, a single constant.
 - **No separation between the security and the shock.** The cash flows $CF_t$, the yield $y_0$, and the shock $\Delta y$ are mixed inside the same powers. It is not possible to compute a number that describes the security once, and then apply any $\Delta y$ to it later. Each new $\Delta y$ requires a full repricing of every cash flow.
 - **No portfolio summary.** The change of a portfolio is the sum of the changes of its securities, so it is additive. But there is no single number that describes the sensitivity of the whole portfolio. Each security must be repriced on its own, and the results added.
 
