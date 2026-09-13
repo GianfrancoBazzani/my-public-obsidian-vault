@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="310" viewBox="0 0 700 310" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect width="700" height="310" fill="white"/>
+
+<text x="190" y="24" text-anchor="middle" font-weight="bold">Zero rates</text>
+<line x1="60" y1="250.00" x2="320" y2="250.00" stroke="#ddd"/>
+<text x="52" y="254.00" text-anchor="end">4.0 %</text>
+<line x1="60" y1="180.00" x2="320" y2="180.00" stroke="#ddd"/>
+<text x="52" y="184.00" text-anchor="end">4.5 %</text>
+<line x1="60" y1="110.00" x2="320" y2="110.00" stroke="#ddd"/>
+<text x="52" y="114.00" text-anchor="end">5.0 %</text>
+<line x1="60" y1="40.00" x2="320" y2="40.00" stroke="#ddd"/>
+<text x="52" y="44.00" text-anchor="end">5.5 %</text>
+<line x1="60.00" y1="40" x2="60.00" y2="250" stroke="#ddd"/>
+<text x="60.00" y="268" text-anchor="middle">0</text>
+<line x1="146.67" y1="40" x2="146.67" y2="250" stroke="#ddd"/>
+<text x="146.67" y="268" text-anchor="middle">2</text>
+<line x1="233.33" y1="40" x2="233.33" y2="250" stroke="#ddd"/>
+<text x="233.33" y="268" text-anchor="middle">4</text>
+<line x1="320.00" y1="40" x2="320.00" y2="250" stroke="#ddd"/>
+<text x="320.00" y="268" text-anchor="middle">6</text>
+<rect x="60" y="40" width="260" height="210" fill="none" stroke="#333"/>
+<path d="M146.67,180.00 L276.67,82.00" stroke="#888" stroke-width="1.5" stroke-dasharray="5 4" fill="none"/>
+<circle cx="146.67" cy="180.00" r="4.5" fill="#1f4fd8"/>
+<circle cx="276.67" cy="82.00" r="4.5" fill="#d81f1f"/>
+<text x="154" y="174" fill="#1f4fd8">r(2) = 4.5 %</text>
+<text x="270" y="74" text-anchor="end" fill="#d81f1f">r(5) = 5.2 %</text>
+<text x="190" y="292" text-anchor="middle">Maturity (years)</text>
+<text transform="translate(16,145) rotate(-90)" text-anchor="middle">Zero rate</text>
+
+<text x="550" y="24" text-anchor="middle" font-weight="bold">Discount factors</text>
+<line x1="420" y1="250.00" x2="680" y2="250.00" stroke="#ddd"/>
+<text x="412" y="254.00" text-anchor="end">0.75</text>
+<line x1="420" y1="208.00" x2="680" y2="208.00" stroke="#ddd"/>
+<text x="412" y="212.00" text-anchor="end">0.80</text>
+<line x1="420" y1="166.00" x2="680" y2="166.00" stroke="#ddd"/>
+<text x="412" y="170.00" text-anchor="end">0.85</text>
+<line x1="420" y1="124.00" x2="680" y2="124.00" stroke="#ddd"/>
+<text x="412" y="128.00" text-anchor="end">0.90</text>
+<line x1="420" y1="82.00" x2="680" y2="82.00" stroke="#ddd"/>
+<text x="412" y="86.00" text-anchor="end">0.95</text>
+<line x1="420" y1="40.00" x2="680" y2="40.00" stroke="#ddd"/>
+<text x="412" y="44.00" text-anchor="end">1.00</text>
+<line x1="420.00" y1="40" x2="420.00" y2="250" stroke="#ddd"/>
+<text x="420.00" y="268" text-anchor="middle">0</text>
+<line x1="506.67" y1="40" x2="506.67" y2="250" stroke="#ddd"/>
+<text x="506.67" y="268" text-anchor="middle">2</text>
+<line x1="593.33" y1="40" x2="593.33" y2="250" stroke="#ddd"/>
+<text x="593.33" y="268" text-anchor="middle">4</text>
+<line x1="680.00" y1="40" x2="680.00" y2="250" stroke="#ddd"/>
+<text x="680.00" y="268" text-anchor="middle">6</text>
+<rect x="420" y="40" width="260" height="210" fill="none" stroke="#333"/>
+<path d="M420.00,40.00 L506.67,110.81 L636.67,228.08" stroke="#888" stroke-width="1.5" stroke-dasharray="5 4" fill="none"/>
+<circle cx="420.00" cy="40.00" r="4.5" fill="#333"/>
+<circle cx="506.67" cy="110.81" r="4.5" fill="#1f4fd8"/>
+<circle cx="636.67" cy="228.08" r="4.5" fill="#d81f1f"/>
+<text x="428" y="56" fill="#333">DF(0) = 1</text>
+<text x="514" y="105" fill="#1f4fd8">DF(2) = 0.9157</text>
+<text x="630" y="222" text-anchor="end" fill="#d81f1f">DF(5) = 0.7761</text>
+<text x="550" y="292" text-anchor="middle">Maturity (years)</text>
+<text transform="translate(376,145) rotate(-90)" text-anchor="middle">Discount factor</text>
+</svg>

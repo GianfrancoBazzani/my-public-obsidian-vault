@@ -26,7 +26,29 @@ The yield curve has two limits:
 
 For these two reasons you cannot use a yield to discount one single cash flow. To discount cash flows you must use the zero curve of the next section. The **bootstrap** procedure extracts the zero curve from the market instruments.
 
-TODO
+## Spot rates/Zero rates
+
+The zero rate for maturity $T$ is the interest rate of a zero-coupon bond that matures at $T$. The bond pays no coupon, the only cash flow is the principal at maturity. There is one zero rate for each maturity, and together they form the zero curve.
+
+**Example**
+
+Zero rates:
+
+- Zero rate at 2 years: $r(2) = 4.5\,\%$
+- Zero rate at 5 years: $r(5) = 5.2\,\%$
+
+Discount factors:
+
+- $DF(2) = \frac{1}{(1.045)^2} = 0.9157$
+- $DF(5) = \frac{1}{(1.052)^5} = 0.7761$
+
+The chart shows the two points of the example. The left panel gives the zero rates. The right panel gives the discount factors.
+
+![Zero rates and discount factors of the example](Attachments/example-zero-rates-discount-factors.svg)
+
+Usually the zero rate grows with the maturity, but the discount factor falls.
+
+
 
 ## Forward Rates
 
