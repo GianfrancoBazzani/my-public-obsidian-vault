@@ -48,7 +48,17 @@ The chart shows the two points of the example. The left panel gives the zero rat
 
 Usually the zero rate grows with the maturity, but the discount factor falls.
 
+## Par Rates
 
+A par rate curve is a curve that measures the yield of fixed income instruments quoted at par price. Each rate in the curve is the rate that an instrument needs to have to be quoted at par price. When we say that an instrument is quoted at par, we say that the instrument is quoted at its nominal or issue value. Usually, in bonds, the par price is 100.
+
+**Example**
+
+Consider a bond with a face value of 100, annual coupons $C$, and a maturity of 3 years. The bond is quoted at par when the present value of its cash flows, discounted with the zero rates, is equal to 100:
+
+$$\frac{C}{1 + r(1)} + \frac{C}{(1 + r(2))^2} + \frac{C + 100}{(1 + r(3))^3} = 100$$
+
+The coupon $C$ that solves this equation, divided by the face value, is the 3-year par rate.
 
 ## Forward Rates
 
