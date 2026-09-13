@@ -100,7 +100,53 @@ We can isolate $f(t_1,t_2)$:
 
 $$f(t_1,t_2) = \left [ \frac{(1+r(t_2))^{t_2}}{(1+r(t_1))^{t_1}} \right ]^{\frac{1}{t_2-t_1}} - 1$$
 
-## Par Rates
+## Bootstrapping 
+
+In the market we cannot observe directly the interest rates curves, what we see are different fixed income instruments that are quoted in the market at different prices. Bootstrapping is the process of building a zero curve from the market prices of such instruments. 
+
+The method is sequential. You sort the instruments by maturity, from the shortest to the longest. For each instrument, you use the zero rates that you already know to solve for the one unknown zero rate at its maturity. A coupon bond with maturity $T$ gives the zero rate at $T$, because the zero rates of its earlier coupon dates are already known.
+
+The no-arbitrage condition requires that the theoretical price equals the market price. For an instrument with price $P$ and cash flows $C_i$ at times $t_i$:
+
+$$P = \sum_{i=1}^{n} \frac{C_i}{(1 + r(t_i))^{t_i}}$$
+
+Only $r(t_n)$ is unknown in this equation. The procedure is:
+
+1. **Shortest maturity:** Compute the zero rate directly from the instrument that pays $C_1 + P_1$ at $t_1$ and costs $P_0$ today:
+
+   $$r(t_1) = \frac{C_1 + P_1}{P_0} - 1$$
+
+2. **Next maturities:** Write the price equation of the next instrument with the known zero rates.
+3. **Iteration:** Solve the price equation for the unknown $r(T)$ and repeat for the next maturity.
+4. **Verification:** Check that the zero curve reproduces the market prices of all the instruments.
+
+**Example**
+
+The market quotes three instruments. The deposit gives the first zero rate directly. The two swaps are quoted at par, so the price of each swap equals its notional.
+
+| Instrument | Maturity | Coupon | Price | Zero Rate |
+| ---------- | -------- | ------ | ----- | --------- |
+| Deposit    | 1Y       | -      | -     | 3.00 %    |
+| Bond 1     | 2Y       | 4.20 % | par   | ?         |
+| Bond 2     | 3Y       | 4.60 % | par   | ?         |
+
+- For the Deposit we already know the Zero Rate
+
+- For the Bond 1 we have to compute the YTM for the instrument quoted at par (100$):
+
+$$100\$ = \frac{4.2\$}{(1+0.03)} + \frac{104.2\$}{(1+r(2Y))^2}$$
+
+  We isolate $r(2Y)$:
+
+$$(1+r(2Y))^2 = \frac{104.2\$}{100\$ - \frac{4.2\$}{1.03}} \quad \Rightarrow \quad r(2Y) = \sqrt{\frac{104.2}{100 - \frac{4.2}{1.03}}} - 1 \approx 0.042255 = 4.21 \%$$
+
+- For the Bond 2 we have to compute the YTM for the instrument quoted at par (100$):
+
+$$100\$ = \frac{4.6\$}{(1+0.03)} + \frac{4.6\$}{(1+0.0421)^2} + \frac{104.6\$}{(1+r(3Y))^3}$$
+
+  We isolate $r(3Y)$:
+
+$$(1+r(3Y))^3 = \frac{104.6\$}{100\$ - \frac{4.6\$}{1.03} - \frac{4.6\$}{(1.0421)^2}} \quad \Rightarrow \quad r(3Y) = \sqrt[3]{\frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}}} - 1 \approx 0.046381 = 4.64 \%$$
 
 TODO
 
