@@ -188,23 +188,23 @@ $$\frac{\mathrm{d}^2P}{\mathrm{d}y^2}=\frac{\mathrm{d}}{\mathrm{d}y}\sum_{t=1}^{
 
 We use the same substitution $u = 1 + y$. The first derivative in terms of $u$ is:
 
-$$\frac{\mathrm{d}P}{\mathrm{d}y} = \sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)}$$
+$$\frac{\mathrm{d}P}{\mathrm{d}y} = \sum_{t=1}^{n} -t  CF_t  u^{-(t+1)}$$
 
 By the chain rule, and because $\frac{\mathrm{d}u}{\mathrm{d}y}=1$:
 
-$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \left[\frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)}\right]\frac{\mathrm{d}u}{\mathrm{d}y} = \frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)}$$
+$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \left[\frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t  CF_t  u^{-(t+1)}\right]\frac{\mathrm{d}u}{\mathrm{d}y} = \frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t  CF_t  u^{-(t+1)}$$
 
 Applying the power rule:
 
-$$\frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t \, CF_t \, u^{-(t+1)} = \sum_{t=1}^{n} (-t)\,CF_t \,\big(-(t+1)\big)\, u^{-(t+2)} = \sum_{t=1}^{n} t(t+1)\, CF_t \, u^{-(t+2)}$$
+$$\frac{\mathrm{d}}{\mathrm{d}u}\sum_{t=1}^{n} -t  CF_t  u^{-(t+1)} = \sum_{t=1}^{n} (-t) CF_t  \big(-(t+1)\big) u^{-(t+2)} = \sum_{t=1}^{n} t(t+1) CF_t  u^{-(t+2)}$$
 
 Substituting back $u = 1 + y$:
 
-$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \sum_{t=1}^{n} \frac{t(t+1)\, CF_t}{(1+y)^{t+2}}$$
+$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \sum_{t=1}^{n} \frac{t(t+1) CF_t}{(1+y)^{t+2}}$$
 
 Therefore:
 
-$$C = \frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1)\, CF_t}{(1+y)^{t+2}}$$
+$$C = \frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1) CF_t}{(1+y)^{t+2}}$$
 
 Every term of the sum is positive, because $t$, $CF_t$, and $(1+y)$ are positive. This is the reason why the convexity of a bond with fixed positive cash flows is always positive.
 
@@ -352,30 +352,30 @@ A Taylor polynomial replaces a complicated function with a simple polynomial tha
 
 **Why we need it for the price of a fixed-income security**
 
-The price of any fixed-income security with fixed cash flows is $P(y)=\sum_{t} CF_t\,(1+y)^{-t}$. The formula can be computed exactly for any yield. The difficulty is the price change. Note that the derivatives give us infinitesimal changes. Nonetheless, the exact relative change for a finite yield move needs two points of the price curve: the current price at $y_0$ and the new price at $y_0+\Delta y$. Therefore, the relative price variation for a specific yield variation is expressed as:
+The price of any fixed-income security with fixed cash flows is $P(y)=\sum_{t} CF_t (1+y)^{-t}$. The formula can be computed exactly for any yield. The difficulty is the price change. Note that the derivatives give us infinitesimal changes. Nonetheless, the exact relative change for a finite yield move needs two points of the price curve: the current price at $y_0$ and the new price at $y_0+\Delta y$. Therefore, the relative price variation for a specific yield variation is expressed as:
 
 $$
 \begin{aligned}
 \frac{\Delta P}{P}
 &= \frac{P(y_1)-P(y_0)}{P(y_0)} \\
-&= \frac{\displaystyle\sum_{t} CF_t\,(1+y_1)^{-t} - \displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} \\
-&= \frac{\displaystyle\sum_{t} CF_t\,(1+y_1)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} - 1
+&= \frac{\displaystyle\sum_{t} CF_t (1+y_1)^{-t} - \displaystyle\sum_{t} CF_t (1+y_0)^{-t}}{\displaystyle\sum_{t} CF_t (1+y_0)^{-t}} \\
+&= \frac{\displaystyle\sum_{t} CF_t (1+y_1)^{-t}}{\displaystyle\sum_{t} CF_t (1+y_0)^{-t}} - 1
 \end{aligned}
 $$
 
 The yield change is $\Delta y = y_1 - y_0$, then $y_1 = y_0 + \Delta y$ and:
 
 $$
-\frac{\Delta P}{P} = \frac{\displaystyle\sum_{t} CF_t\,(1+y_0+\Delta y)^{-t}}{\displaystyle\sum_{t} CF_t\,(1+y_0)^{-t}} - 1
+\frac{\Delta P}{P} = \frac{\displaystyle\sum_{t} CF_t (1+y_0+\Delta y)^{-t}}{\displaystyle\sum_{t} CF_t (1+y_0)^{-t}} - 1
 $$
 
 This expression is exact, but it has three practical problems:
 
-- **No simple form in $\Delta y$.** The numerator is a sum of $n$ terms, each with a different power of $(1+y_0+\Delta y)$. No factorization removes the sum, so the expression does not reduce to a short polynomial like $a + b\,\Delta y + c\,\Delta y^2$. The denominator is also a sum of powers, but it does not contain $\Delta y$: it is the current price $P(y_0)$, a single constant.
+- **No simple form in $\Delta y$.** The numerator is a sum of $n$ terms, each with a different power of $(1+y_0+\Delta y)$. No factorization removes the sum, so the expression does not reduce to a short polynomial like $a + b \Delta y + c \Delta y^2$. The denominator is also a sum of powers, but it does not contain $\Delta y$: it is the current price $P(y_0)$, a single constant.
 - **No separation between the security and the shock.** The cash flows $CF_t$, the yield $y_0$, and the shock $\Delta y$ are mixed inside the same powers. It is not possible to compute a number that describes the security once, and then apply any $\Delta y$ to it later. Each new $\Delta y$ requires a full repricing of every cash flow.
 - **No portfolio summary.** The change of a portfolio is the sum of the changes of its securities, so it is additive. But there is no single number that describes the sensitivity of the whole portfolio. Each security must be repriced on its own, and the results added.
 
-The differential $\mathrm{d}P = P'(y)\,\mathrm{d}y$ is exact and simple, but only for an infinitely small $\mathrm{d}y$. The Taylor polynomial connects the two. The expansion point is the current yield $y_0$, so the polynomial is built around the price $P(y_0)$ before the interest rate changes. It expresses the finite change with a few numbers ($D_{Mod}$, $C$) that are computed once at the current yield, are simple functions of $\Delta y$, and aggregate across a portfolio as weighted averages.
+The differential $\mathrm{d}P = P'(y) \mathrm{d}y$ is exact and simple, but only for an infinitely small $\mathrm{d}y$. The Taylor polynomial connects the two. The expansion point is the current yield $y_0$, so the polynomial is built around the price $P(y_0)$ before the interest rate changes. It expresses the finite change with a few numbers ($D_{Mod}$, $C$) that are computed once at the current yield, are simple functions of $\Delta y$, and aggregate across a portfolio as weighted averages.
 
 The $n$-th degree Taylor polynomial of a function $f(x)$ centered at $x=a$ is:
 
@@ -387,11 +387,11 @@ The factor $1/k!$ appears because the $k$-th derivative of $(x-a)^k$ is $k!$. It
 
 Here the function is the price $P(y)$ of the security, the point is the current yield $y_0$, and the distance from the point is the yield change $\Delta y = y - y_0$. The second-degree Taylor polynomial gives:
 
-$$P(y_0+\Delta y) = P(y_1) \approx P(y_0) + P'(y_0)\,\Delta y + \frac{1}{2}P''(y_0)\,(\Delta y)^2$$
+$$P(y_0+\Delta y) = P(y_1) \approx P(y_0) + P'(y_0) \Delta y + \frac{1}{2}P''(y_0) (\Delta y)^2$$
 
 We want the relative variation of the price, not the new price. We move $P(y_0)$ to the left side and divide by $P(y_0)$:
 
-$$\frac{\Delta P}{P} = \frac{P(y_1)-P(y_0)}{P(y_0)} \approx \frac{P'(y_0)}{P(y_0)}\,\Delta y + \frac{1}{2}\,\frac{P''(y_0)}{P(y_0)}\,(\Delta y)^2$$
+$$\frac{\Delta P}{P} = \frac{P(y_1)-P(y_0)}{P(y_0)} \approx \frac{P'(y_0)}{P(y_0)} \Delta y + \frac{1}{2} \frac{P''(y_0)}{P(y_0)} (\Delta y)^2$$
 
 The two ratios are the modified duration and the convexity:
 
@@ -399,6 +399,6 @@ $$D_{Mod} = -\frac{P'(y_0)}{P(y_0)} \qquad C = \frac{P''(y_0)}{P(y_0)}$$
 
 So the relative price change is:
 
-$$\frac{\Delta P}{P} \approx -D_{Mod}\,\Delta y + \frac{1}{2}\,C\,(\Delta y)^2$$
+$$\frac{\Delta P}{P} \approx -D_{Mod} \Delta y + \frac{1}{2} C (\Delta y)^2$$
 
 The [Modified Duration](#modified-duration) formula keeps only the first-degree term. It follows the tangent line. The [Convexity](#convexity) formula adds the second-degree term. It follows a parabola that bends like the price curve. The dropped terms are proportional to $(\Delta y)^3$ and higher. For a yield move of 100 bp, $(\Delta y)^3 = 10^{-6}$, so two terms are enough for normal market moves.
