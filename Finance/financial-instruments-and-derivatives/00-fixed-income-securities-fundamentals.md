@@ -180,6 +180,10 @@ $$\text{Second order: } -7.18\% + 1.40\% = -5.78\%$$
 
 The linear term grows in proportion to $\Delta y$. The convexity term grows in proportion to $(\Delta y)^2$. The change in yield is 10 times larger, so the linear term is 10 times larger, but the convexity term is 100 times larger. For the small change, the correction is 0.014% on a fall of 0.718%, about 2% of the linear result, and the two approximations are almost equal. For the large change, the correction is 1.40% on a fall of 7.18%, about 20% of the linear result. The linear approximation overstates the fall in price by almost a quarter of the true fall. This is the reason why the convexity can be ignored for small changes but not for large ones.
 
+The graph below shows the two approximations for the same bond ($D_{Mod}=3.59$, $C=70$). The orange line is the linear approximation. The blue curve is the second-order approximation. The two dots on each line mark the two examples above. Near $\Delta y=0$ the line and the curve are almost equal. As $\Delta y$ grows, the curve bends up and moves away from the line. The gap between them is the convexity term.
+
+![Linear and second-order approximations of the relative price change](Attachments/duration-convexity-approximation.svg)
+
 **Derivation**
 
 The second derivative is the derivative of the first derivative that we computed above:
