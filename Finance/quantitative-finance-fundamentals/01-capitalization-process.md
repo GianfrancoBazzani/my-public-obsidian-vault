@@ -116,6 +116,16 @@ $C_t = C_0 \left[\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{n}\right]^{rt
 
 Reference: [Continuous compounding explained (where e comes from?)](https://www.youtube.com/watch?v=pg827uDPFqA)
 
+## Comparison of the Three Capitalization Types
+
+The graph compares the growth of the same initial capital $C_0 = 100$ under the three capitalization types. The three types use the same nominal rate of 10% per year, and the term goes from 0 to 30 years.
+
+![](Attachments/capitalization-comparison.svg)
+
+The simple capitalization grows in a straight line, because the interest is always computed on $C_0$. The compound and the continuous capitalizations grow in an exponential way, because the interest is reinvested and it generates more interest. The shaded area is this interest on interest. After 30 years, the compound capital is more than four times the simple capital.
+
+> In the first years, the three curves are almost equal. The difference appears with the term $t$. This is the reason why the compound capitalization is relevant for the long term and the simple capitalization is enough for the short term.
+
 ## Applications of Each Capitalization Type
 
 Simple capitalization is commonly used in short-term deposits and interbank swaps, which quote a simple interest rate. It is also used to build the very short end of the yield curve. In general, this capitalization type is used when the reinvestment of the interest is not relevant.
