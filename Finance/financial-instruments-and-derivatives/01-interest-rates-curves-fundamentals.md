@@ -52,7 +52,43 @@ Usually the zero rate grows with the maturity, but the discount factor falls.
 
 ## Forward Rates
 
-TODO
+A forward rate $f(t_1, t_2)$ is the interest rate for a future period that starts at $t_1$ and ends at $t_2$. The market does not quote this rate directly. It is implicit in the current spot curve, and you deduce it from the zero rates.
+
+A spot rate is agreed today for a loan that starts today. A forward rate is also agreed today, but for a loan that starts in the future. The forward rate is implied by the spot curve of today, not by a forecast of future spot rates.
+
+
+$$f(t_1, t_2) = \left( \frac{(1 + r(t_2))^{t_2}}{(1 + r(t_1))^{t_1}} \right)^{\frac{1}{t_2 - t_1}} - 1$$
+
+**Example** 
+
+We define different interest rates for different tenors:
+
+ - r(1): 3.0%
+ - r(2): 4.0%
+ - r(3): 4.5%
+
+Forward 1y1y: $f(1,2) = \frac{(1 + 0.04)^{2}}{(1 + 0.03)} - 1 = 5.01\%$
+
+Forward 2y1y: $f(2,3) = \frac{(1 + 0.045)^{3}}{(1 + 0.04)^2}  - 1 = 5.51\%$
+
+
+**Derivation**
+
+The no-arbitrage condition gives the relation. Let $t_0 = 0$ be today. An investment from $t_0$ to $t_2$ must give the same result as an investment from $t_0$ to $t_1$ and then from $t_1$ to $t_2$ at the forward rate. Consider the spot curve represented by the following timeline:
+
+![Timeline of the no-arbitrage relation between the spot rates and the forward rate](Attachments/forward-rate-timeline.svg)
+
+Applying the no-arbitrage condition:
+
+$$C_0(1+r(t_2))^{t_2} = C_0(1+r(t_1))^{t_1}(1+f(t_1,t_2))^{t_2-t_1}$$
+
+Therefore:
+
+$$(1+r(t_2))^{t_2} = (1+r(t_1))^{t_1}(1+f(t_1,t_2))^{t_2-t_1}$$
+
+We can isolate $f(t_1,t_2)$:
+
+$$f(t_1,t_2) = \left [ \frac{(1+r(t_2))^{t_2}}{(1+r(t_1))^{t_1}} \right ]^{\frac{1}{t_2-t_1}} - 1$$
 
 ## Par Rates
 
