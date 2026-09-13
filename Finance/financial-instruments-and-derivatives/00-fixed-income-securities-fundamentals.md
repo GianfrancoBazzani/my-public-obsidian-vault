@@ -31,6 +31,25 @@ A certificate of deposit (CD) is different. The client agrees to leave a fixed a
 
 The main problem of a CD is its limited liquidity. Unlike bonds and bills, a CD is a contract between the client and one bank, and there is no market where the client can easily resell this debt to another investor. The only way to recover the money before maturity is to pay the penalty to the bank. Only large CDs issued to institutions (negotiable CDs) can be sold in a secondary market.
 
+## Pricing of a Fixed Income Security
+
+The price of a fixed-income security is the present value of all the cash flows that the security pays in the future. We must discount each cash flow back to today, and the size of the discount depends on two things, the yield and the time at which the cash flow arrives. The price is the sum of all these discounted cash flows:
+
+$$P=\sum_{t=1}^{n} \frac{CF_t}{(1+y)^t}$$
+
+- $P$ is the price of the security today.
+- $t$ is the time of each cash flow, in years.
+- $n$ is the number of cash flows.
+- $CF_t$ is the cash flow paid at time $t$ (a coupon, or the last coupon plus the principal at maturity).
+- $y$ is the yield to maturity, that is the discount rate that the market applies to the security.
+
+The term $1/(1+y)^t$ is the discount factor. It converts one unit of money paid at time $t$ into money of today. Two effects control its size:
+
+- The yield. A high yield gives a small discount factor, so the price is low. A low yield gives a large discount factor, so the price is high. This is why the price of a fixed-income security moves in the opposite direction to the yield.
+- The time. The exponent $t$ grows with the time to the cash flow, so a distant cash flow receives a stronger discount than a near cash flow of the same size. A cash flow at year 10 contributes much less to the price than the same cash flow at year 1.
+
+The yield $y$ is the single rate that makes the sum of the discounted cash flows equal to the market price. It is therefore the internal rate of return of the security, if the investor buys at the price $P$, holds the security to maturity, and reinvests each coupon at the rate $y$, the investor earns exactly $y$ per year.
+
 ## Macaulay Duration
 
 The Macaulay duration is the average time, in years, at which an investor receives the cash flows of a fixed-income security. Each cash flow is weighted by its present value. The formula is:
@@ -64,7 +83,6 @@ A bond has a face value of 100 and a maturity of 4 years. It pays an annual coup
 | **Total**  |                    |                 103.630                 |     386.405      |
 
 $$D_{Mac}=3.73$$
-
 
 ## Modified Duration
 
