@@ -226,9 +226,9 @@ Three characteristics of a bond determine how sensitive its price is to changes 
 
 ## Key Rate Duration
 
-The duration and the convexity give us a way to estimate the sensitivity of our fixed-income securities to a change in the interest rates. However, we did not define which interest rate changes. The interest rates are not a single number: they form a curve, with one rate for each maturity (the yield curve). The rates at different points of this curve can move in different ways. For example, the rate at 10 years can rise while the rate at 1 year falls. The duration and the convexity assume a parallel shift, where all the rates move by the same amount. The key rate duration removes this assumption.
+The duration and the convexity give us a way to estimate the sensitivity of our fixed-income securities to a change in the interest rates. However, we did not define which interest rate changes. The interest rates are not a single number they form a curve, with one rate for each maturity (the yield curve). The rates at different points of this curve can move in different ways. For example, the rate at 10 years can rise while the rate at 1 year falls. The duration and the convexity assume a parallel shift, where all the rates move by the same amount. The key rate duration removes this assumption.
 
-The key rate duration measures the sensitivity of the price of a fixed-income security to a change in the rate at one specific maturity, while all the other rates of the curve stay constant. This is a theoretical construction: in the market, the rates at nearby maturities rarely move in isolation.
+The key rate duration measures the sensitivity of the price of a fixed-income security to a change in the rate at one specific maturity, while all the other rates of the curve stay constant. This is a theoretical construction, in the market, the rates at nearby maturities rarely move in isolation.
 
 **Calculation**
 
@@ -246,7 +246,7 @@ $$\sum_{i} KRD_i = D_{Mod}$$
 > [!NOTE]
 > **Why the key rate durations add up to the duration**
 >
-> The equality is approximate for two reasons. First, each key rate duration is computed with a finite shift, so the second-order terms (convexity) do not cancel exactly. Second, the key rate durations measure shifts of the spot curve, while the modified duration measures a shift of the yield to maturity of the bond. The sum is therefore the effective duration for a parallel shift. For a plain bond, this number is very close to the modified duration, and most texts treat them as equal.
+> The equality is approximate for two reasons. First, each key rate duration is computed with a finite shift, so the second-order terms (convexity) do not cancel exactly. Second, the key rate durations measure shifts of the spot curve, while the modified duration measures a shift of the yield to maturity of the fixed-income security. The sum is therefore the effective duration for a parallel shift. For a plain fixed-income security, this number is very close to the modified duration, and most texts treat them as equal.
 
 
 **Why it is important**
