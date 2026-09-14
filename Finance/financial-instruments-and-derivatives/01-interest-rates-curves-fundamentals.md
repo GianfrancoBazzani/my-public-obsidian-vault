@@ -106,7 +106,9 @@ In the market we cannot observe directly the interest rates curves, what we see 
 
 The method is sequential. You sort the instruments by maturity, from the shortest to the longest. For each instrument, you use the zero rates that you already know to solve for the one unknown zero rate at its maturity. A coupon bond with maturity $T$ gives the zero rate at $T$, because the zero rates of its earlier coupon dates are already known.
 
-The no-arbitrage condition requires that the theoretical price equals the market price. For an instrument with price $P$ and cash flows $C_i$ at times $t_i$:
+The no-arbitrage condition requires that the theoretical price equals the market price. The same condition also fixes the rate that discounts each cash flow, a cash flow at time $t_i$ must be discounted with the zero rate of that date, $r(t_i)$.
+
+For an instrument with price $P$ and cash flows $C_i$ at times $t_i$:
 
 $$P = \sum_{i=1}^{n} \frac{C_i}{(1 + r(t_i))^{t_i}}$$
 
@@ -148,6 +150,6 @@ $$100\$ = \frac{4.6\$}{(1+0.03)} + \frac{4.6\$}{(1+0.0421)^2} + \frac{104.6\$}{(
 
 $$(1+r(3Y))^3 = \frac{104.6\$}{100\$ - \frac{4.6\$}{1.03} - \frac{4.6\$}{(1.0421)^2}} \quad \Rightarrow \quad r(3Y) = \sqrt[3]{\frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}}} - 1 \approx 0.046381 = 4.64 \%$$
 
-TODO
+## Carry y Roll-Down
 
-## Fundamental Relations Between Curves
+TODO
