@@ -156,6 +156,16 @@ Therefore:
 
 $$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = - \frac{1}{1 + y} \frac{1}{P} \sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t} = - \frac{D_{Mac}}{1+y} = -D_{Mod}$$
 
+## Money Duration
+
+The money duration is the modified duration multiplied by the price of the security. Some texts call it the dollar duration. The modified duration gives the sensitivity as a percentage of the price. The money duration gives the same sensitivity as an amount of currency.
+
+$$D_{Money} = D_{Mod} \times P$$
+
+The change in price for a change in yield is then:
+
+$$\Delta P \approx -D_{Money} \times \Delta y$$
+
 ## Convexity
 
 As we saw, the modified duration is a linear approximation. If the change in the yield is large, this approximation becomes unreliable, because the price curve is convex, not a straight line. Convexity is the second-order term that corrects this error.
