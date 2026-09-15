@@ -111,7 +111,7 @@ The two durations measure different things. The Macaulay duration is a time, in 
 
 **Example**
 
-The bond above has $D_{Mac}=3.73$ and $y=4\%$, so $D_{Mod}=3.73/1.04=3.59$. If the yield rises by 1% (from 4% to 5%), the price falls by approximately $\Delta P/P \approx -D_{Mod} \times \Delta y = -3.59 \times 0.01 = -3.59\%$. The approximation is a first-order one. For large changes in yield, the convexity of the price curve makes the true fall smaller and the true rise larger.
+The bond above has $D_{Mac}=3.73$ and $y=4$%, so $D_{Mod}=3.73/1.04=3.59$. If the yield rises by 1% (from 4% to 5%), the price falls by approximately $\Delta P/P \approx -D_{Mod} \times \Delta y = -3.59 \times 0.01 = -3.59$%. The approximation is a first-order one. For large changes in yield, the convexity of the price curve makes the true fall smaller and the true rise larger.
 
 **Derivation**
 
@@ -187,19 +187,19 @@ The effect of the convexity is small for small changes in the interest rates. It
 
 **Example**
 
-We continue with the bond above: $D_{Mod}=3.59$ and $y=4\%$. We take a convexity of $C=70$ to make the effect visible.
+We continue with the bond above: $D_{Mod}=3.59$ and $y=4$%. We take a convexity of $C=70$ to make the effect visible.
 
 For a small change, $\Delta y=0.002$:
 
-$$\text{Linear: } -D_{Mod}\cdot\Delta y = -3.59\times0.002 = -0.718\%$$
-$$\text{Convexity term: } \tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.002^2 = +0.014\%$$
-$$\text{Second order: } -0.718\% + 0.014\% = -0.704\%$$
+- **Linear:** $-D_{Mod}\cdot\Delta y = -3.59\times0.002 = -0.718$%
+- **Convexity term:** $\tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.002^2 = +0.014$%
+- **Second order:** $-0.718 + 0.014 = -0.704$%
 
 For a large change, $\Delta y=0.02$:
 
-$$\text{Linear: } -D_{Mod}\cdot\Delta y = -3.59\times0.02 = -7.18\%$$
-$$\text{Convexity term: } \tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.02^2 = +1.40\%$$
-$$\text{Second order: } -7.18\% + 1.40\% = -5.78\%$$
+- **Linear:** $-D_{Mod}\cdot\Delta y = -3.59\times0.02 = -7.18$%
+- **Convexity term:** $\tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.02^2 = +1.40$%
+- **Second order:** $-7.18 + 1.40 = -5.78$%
 
 | Change in yield | Linear approximation | Convexity term | Second-order approximation |
 | :-------------: | :------------------: | :------------: | :------------------------: |
@@ -298,11 +298,11 @@ The bond is most sensitive to changes in the 10-year rate ($KRD=5.2$) and modera
 
 If the 10-year rate rises by 0.5% ($\Delta y_{10}=0.005$) and the other rates stay constant, the price falls by approximately:
 
-$$\frac{\Delta P}{P}\approx -KRD_{10}\cdot\Delta y_{10} = -5.2\times0.005 = -2.6\%$$
+$\Delta P/P \approx -KRD_{10}\cdot\Delta y_{10} = -5.2\times0.005 = -0.026$, that is a fall of 2.6%.
 
 For a non-parallel movement, we add the effect of each key rate. If the 2-year rate rises by 1%, the 5-year rate rises by 0.5%, and the 10-year rate falls by 0.2%, the price changes by approximately:
 
-$$\frac{\Delta P}{P}\approx -(0.3\times0.01) - (2.1\times0.005) - (5.2\times(-0.002)) = -0.30\% - 1.05\% + 1.04\% = -0.31\%$$
+$\Delta P/P \approx -(0.3\times0.01) - (2.1\times0.005) - (5.2\times(-0.002)) = -0.0030 - 0.0105 + 0.0104 = -0.0031$, that is a fall of 0.31%.
 
 The modified duration alone cannot compute this result, because the rates did not move by the same amount.
 
@@ -342,13 +342,13 @@ Market:
 - 5-year swap rate: 4.2%.
 - 5-year government bond yield: 3.8%.
 
-ASW spread calculation:
+ASW spread calculation, with the rates in percent:
 
-$$\text{ASW} = (6.5\% - 4.2\%) \times \frac{100}{104} = 2.3\% \times 0.962 = 2.21\%$$
+$\text{ASW} = (6.5 - 4.2) \times (100/104) = 2.3 \times 0.962 = 2.21$%
 
 Comparison:
 
-- Credit spread over the government bond: $6.5\% - 3.8\% = 2.7\%$.
+- Credit spread over the government bond: 6.5% - 3.8% = 2.7%.
 - ASW spread: 2.21%.
 - Difference: 49 bp, because the bond price is above par.
 
