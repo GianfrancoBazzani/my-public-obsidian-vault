@@ -238,3 +238,41 @@ The bootstrap of the previous sections assumes a clean set of instruments, one f
 **Real example**
 
 The ECB publishes daily OIS curves. It builds them with OIS swaps up to 30Y and uses a log-linear interpolation on the discount factors.
+
+## Trading Strategies Based on Curve Analysis
+
+The concepts of the previous sections (zero rates, forward rates, carry and roll-down) are the base of several trading strategies. Each strategy takes a view on a different part of the curve.
+
+**1. Carry trades**
+
+- Buy the bonds with a high positive carry.
+- Finance the position with short instruments.
+- Gain the roll-down on a normal (upward sloping) curve.
+
+**2. Curve steepening / flattening**
+
+- Compare the implied forward rates with your own expectations of the future rates.
+- For a steepening view, go long the short tenor and short the long tenor. For a flattening view, do the opposite.
+- Use the key rate duration to size each leg with precision.
+
+**3. Forward rate arbitrage**
+
+- Compare the implied forward rates with the forwards quoted in the market.
+- Detect inconsistencies between tenors.
+- Trade them with calendar spread strategies.
+
+**Example: carry analysis**
+
+| Bond | Yield | Carry | Roll-Down |
+| ---- | ----- | ----- | --------- |
+| 2Y   | 3.2 % | 3.1 % | -0.1 %    |
+| 5Y   | 4.1 % | 4.0 % | +0.3 %    |
+| 10Y  | 4.8 % | 4.7 % | +0.5 %    |
+| 30Y  | 5.2 % | 5.1 % | +0.2 %    |
+
+The 10Y bond gives the best total of carry plus roll-down (5.2 %). It is the most attractive position for a carry strategy.
+
+**Risks to consider**
+
+- Changes in the shape of the curve.
+- Volatility of the rates.
