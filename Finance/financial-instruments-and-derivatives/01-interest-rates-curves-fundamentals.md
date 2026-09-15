@@ -54,11 +54,11 @@ A par rate curve is a curve that measures the yield of fixed income instruments 
 
 **Example**
 
-Consider a bond with a face value of 100, annual coupons $C$, and a maturity of 3 years. The bond is quoted at par when the present value of its cash flows, discounted with the zero rates, is equal to 100:
+Consider a bond with a par value of 100, annual coupons $C$, and a maturity of 3 years. The bond is quoted at par when the present value of its cash flows, discounted with the zero rates, is equal to 100:
 
 $$\frac{C}{1 + r(1)} + \frac{C}{(1 + r(2))^2} + \frac{C + 100}{(1 + r(3))^3} = 100$$
 
-The coupon $C$ that solves this equation, divided by the face value, is the 3-year par rate.
+The coupon $C$ that solves this equation, divided by the par value, is the 3-year par rate.
 
 ## Forward Rates
 
@@ -150,6 +150,58 @@ $$100\$ = \frac{4.6\$}{(1+0.03)} + \frac{4.6\$}{(1+0.0421)^2} + \frac{104.6\$}{(
 
 $$(1+r(3Y))^3 = \frac{104.6\$}{100\$ - \frac{4.6\$}{1.03} - \frac{4.6\$}{(1.0421)^2}} \quad \Rightarrow \quad r(3Y) = \sqrt[3]{\frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}}} - 1 \approx 0.046381 = 4.64 \%$$
 
-## Carry y Roll-Down
+## Carry and Roll-Down
 
-TODO
+The **Carry** is the yield obtained by keeping a position with the yield to maturity of the instrument unchanged. It comes from the coupon income and from the "pull to par" effect: as time passes, an instrument price moves toward its par value, apart from any move in the yield curve.
+
+The **Roll-Down** is the extra profit or loss that an instrument accrues, on an unchanged yield curve, because a different point of the curve applies to it as time passes. As an instrument moves toward maturity, it has less time to maturity, so a different point of the same yield curve applies to it. If this new yield is lower, the instrument price rises and the investor gains.
+
+**Carry**:
+
+$$Carry = \frac{Coupon + Amortization}{P_{initial}}$$
+
+The Amortization is the price change that comes only from the passage of time, with the yield of the instrument unchanged. It is the yearly part of the "pull to par", positive for a bond bought below par (discount) and negative for a bond bought above par (premium).
+
+**Roll-Down**:
+
+$$Roll\text{-}Down = \frac{P_{new} - P_{initial} - Amortization}{P_{initial}}$$
+
+The Roll-Down formula subtracts the Amortization because the Carry already contains the "pull to par". It measures only the extra price change from the new, lower point of the curve, so Carry + Roll-Down is the total return on a static curve.
+
+**Total Return**:
+
+$$Total = Carry + Roll\text{-}Down = \frac{P_{new} - P_{initial} + Coupon}{P_{initial}}$$
+
+**Example**
+
+Situation: a 5-year bond, coupon 5.0 %, price 102.19$, yield 4.5 %.
+
+Initial data ($t=0$):
+
+- Price: 102.19$
+- Yield: 4.5 %
+- Annual coupon: 5%
+- Maturity: 5 years
+
+After 1 year ($t=1$):
+
+- New maturity: 4 years
+- Yield 4Y (static curve): 4.3 %
+- New price: 102.52$
+- Coupon received: 5.0
+
+Carry:
+
+$$Amortization = \frac{5\$}{(1+0.045)} + \frac{5\$}{(1+0.045)^2} + \frac{5\$}{(1+0.045)^3} + \frac{105\$}{(1+0.045)^4} - 102.19\$ = 101.79\$ - 102.19\$ = -0.40\$$$
+
+$$Carry = \frac{5\$ - 0.40\$}{102.19\$} = 4.50\%$$
+
+Roll-Down:
+
+$$Roll\text{-}Down = \frac{102.52\$ - 102.19\$ - (-0.40\$)}{102.19\$} = \frac{102.52\$ - 101.79\$}{102.19\$} = 0.71\%$$
+
+Total Return:
+
+$$Total = Carry + Roll\text{-}Down = 4.50\% + 0.71\% = 5.21\%$$
+
+Of the total return, 4.50 % comes from the coupon and the "pull to par" (Carry), and 0.71 % comes from the move to the lower 4-year point of the static curve (Roll-Down).
