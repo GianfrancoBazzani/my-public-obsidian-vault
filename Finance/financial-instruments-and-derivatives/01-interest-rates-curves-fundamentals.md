@@ -34,8 +34,8 @@ The zero rate for maturity $T$ is the interest rate of a zero-coupon bond that m
 
 Zero rates:
 
-- Zero rate at 2 years: $r(2) = 4.5\,\%$
-- Zero rate at 5 years: $r(5) = 5.2\,\%$
+- Zero rate at 2 years: $r(2) = 0.045$ (4.5 %)
+- Zero rate at 5 years: $r(5) = 0.052$ (5.2 %)
 
 Discount factors:
 
@@ -77,9 +77,9 @@ We define different interest rates for different tenors:
  - r(2): 4.0%
  - r(3): 4.5%
 
-Forward 1y1y: $f(1,2) = \frac{(1 + 0.04)^{2}}{(1 + 0.03)} - 1 = 5.01\%$
+Forward 1y1y: $f(1,2) = \frac{(1 + 0.04)^{2}}{(1 + 0.03)} - 1 = 0.0501$ (5.01 %)
 
-Forward 2y1y: $f(2,3) = \frac{(1 + 0.045)^{3}}{(1 + 0.04)^2}  - 1 = 5.51\%$
+Forward 2y1y: $f(2,3) = \frac{(1 + 0.045)^{3}}{(1 + 0.04)^2}  - 1 = 0.0551$ (5.51 %)
 
 
 **Derivation**
@@ -134,21 +134,25 @@ The market quotes three instruments. The deposit gives the first zero rate direc
 
 - For the Deposit we already know the Zero Rate
 
-- For the Bond 1 we have to compute the YTM for the instrument quoted at par (100$):
+- For the Bond 1 we have to compute the YTM for the instrument quoted at par (100 USD):
 
-$$100\$ = \frac{4.2\$}{(1+0.03)} + \frac{104.2\$}{(1+r(2Y))^2}$$
+$$100 = \frac{4.2}{(1+0.03)} + \frac{104.2}{(1+r(2Y))^2}$$
 
   We isolate $r(2Y)$:
 
-$$(1+r(2Y))^2 = \frac{104.2\$}{100\$ - \frac{4.2\$}{1.03}} \quad \Rightarrow \quad r(2Y) = \sqrt{\frac{104.2}{100 - \frac{4.2}{1.03}}} - 1 \approx 0.042255 = 4.21 \%$$
+$$(1+r(2Y))^2 = \frac{104.2}{100 - \frac{4.2}{1.03}} \quad \Rightarrow \quad r(2Y) = \sqrt{\frac{104.2}{100 - \frac{4.2}{1.03}}} - 1 \approx 0.042255$$
 
-- For the Bond 2 we have to compute the YTM for the instrument quoted at par (100$):
+  The zero rate at 2 years is 4.21 %.
 
-$$100\$ = \frac{4.6\$}{(1+0.03)} + \frac{4.6\$}{(1+0.0421)^2} + \frac{104.6\$}{(1+r(3Y))^3}$$
+- For the Bond 2 we have to compute the YTM for the instrument quoted at par (100 USD):
+
+$$100 = \frac{4.6}{(1+0.03)} + \frac{4.6}{(1+0.0421)^2} + \frac{104.6}{(1+r(3Y))^3}$$
 
   We isolate $r(3Y)$:
 
-$$(1+r(3Y))^3 = \frac{104.6\$}{100\$ - \frac{4.6\$}{1.03} - \frac{4.6\$}{(1.0421)^2}} \quad \Rightarrow \quad r(3Y) = \sqrt[3]{\frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}}} - 1 \approx 0.046381 = 4.64 \%$$
+$$(1+r(3Y))^3 = \frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}} \quad \Rightarrow \quad r(3Y) = \sqrt[3]{\frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}}} - 1 \approx 0.046381$$
+
+  The zero rate at 3 years is 4.64 %.
 
 ## Carry and Roll-Down
 
@@ -174,11 +178,11 @@ $$Total = Carry + Roll\text{-}Down = \frac{P_{new} - P_{initial} + Coupon}{P_{in
 
 **Example**
 
-Situation: a 5-year bond, coupon 5.0 %, price 102.19$, yield 4.5 %.
+Situation: a 5-year bond, coupon 5.0 %, price 102.19 USD, yield 4.5 %.
 
 Initial data ($t=0$):
 
-- Price: 102.19$
+- Price: 102.19 USD
 - Yield: 4.5 %
 - Annual coupon: 5%
 - Maturity: 5 years
@@ -187,22 +191,30 @@ After 1 year ($t=1$):
 
 - New maturity: 4 years
 - Yield 4Y (static curve): 4.3 %
-- New price: 102.52$
+- New price: 102.52 USD
 - Coupon received: 5.0
 
 Carry:
 
-$$Amortization = \frac{5\$}{(1+0.045)} + \frac{5\$}{(1+0.045)^2} + \frac{5\$}{(1+0.045)^3} + \frac{105\$}{(1+0.045)^4} - 102.19\$ = 101.79\$ - 102.19\$ = -0.40\$$$
+$$Amortization = \frac{5}{(1+0.045)} + \frac{5}{(1+0.045)^2} + \frac{5}{(1+0.045)^3} + \frac{105}{(1+0.045)^4} - 102.19 = 101.79 - 102.19 = -0.40$$
 
-$$Carry = \frac{5\$ - 0.40\$}{102.19\$} = 4.50\%$$
+The Amortization is -0.40 USD.
+
+$$Carry = \frac{5 - 0.40}{102.19} = 0.0450$$
+
+The Carry is 4.50 %.
 
 Roll-Down:
 
-$$Roll\text{-}Down = \frac{102.52\$ - 102.19\$ - (-0.40\$)}{102.19\$} = \frac{102.52\$ - 101.79\$}{102.19\$} = 0.71\%$$
+$$Roll\text{-}Down = \frac{102.52 - 102.19 - (-0.40)}{102.19} = \frac{102.52 - 101.79}{102.19} = 0.0071$$
+
+The Roll-Down is 0.71 %.
 
 Total Return:
 
-$$Total = Carry + Roll\text{-}Down = 4.50\% + 0.71\% = 5.21\%$$
+$$Total = Carry + Roll\text{-}Down = 0.0450 + 0.0071 = 0.0521$$
+
+The total return is 5.21 %.
 
 Of the total return, 4.50 % comes from the coupon and the "pull to par" (Carry), and 0.71 % comes from the move to the lower 4-year point of the static curve (Roll-Down).
 
