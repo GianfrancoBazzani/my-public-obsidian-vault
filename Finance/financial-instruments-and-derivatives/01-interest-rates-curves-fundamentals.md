@@ -205,3 +205,36 @@ Total Return:
 $$Total = Carry + Roll\text{-}Down = 4.50\% + 0.71\% = 5.21\%$$
 
 Of the total return, 4.50 % comes from the coupon and the "pull to par" (Carry), and 0.71 % comes from the move to the lower 4-year point of the static curve (Roll-Down).
+
+## Real Applications Caveat
+
+The bootstrap of the previous sections assumes a clean set of instruments, one for each maturity, with a single price. The real market is not so clean. The practical construction of a curve must solve some problems that the theory does not show.
+
+**Practical challenges**
+
+- **Gaps in maturities:** the market does not quote an instrument for every maturity. You need an interpolation to fill the gaps between the quoted points.
+- **Variable liquidity:** not all the instruments are equally liquid. A liquid instrument gives a more reliable price than an illiquid one.
+- **Bid-Offer spreads:** each instrument has a bid price and an offer price. The usual choice is the mid price, but the mid is not always representative. If the spread is wide, if the market is one-sided, or if the last trades are all on one side, the mid does not reflect the price where you can trade.
+
+**Interpolation methods**
+
+- **Linear:** simple, but it can create arbitrage between the quoted points, because the implied forward rates jump at each node.
+- **Log-linear on discount factors:** interpolate the logarithm of the discount factors. This is equivalent to a constant forward rate between two nodes.
+- **Cubic spline:** a smooth approximation of the curve. It gives smooth forward rates, but a move in one quote can change the whole curve.
+
+**Hierarchy of instruments**
+
+1. **Most reliable:** OIS, EUR swaps.
+2. **Reliable:** government bonds, bills.
+3. **Less reliable:** corporate bonds.
+
+**Best practices**
+
+- Use the most liquid instruments.
+- Check the coherence across asset classes (cross-asset).
+- Monitor the daily outliers.
+- Document the methodology clearly.
+
+**Real example**
+
+The ECB publishes daily OIS curves. It builds them with OIS swaps up to 30Y and uses a log-linear interpolation on the discount factors.
