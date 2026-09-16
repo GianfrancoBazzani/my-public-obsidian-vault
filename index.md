@@ -1,4 +1,4 @@
-- [AI / Resources](AI/Resources.md) — Curated link list of AI resources on harness architecture, agent design, Claude Code guides, and open-source agent repositories.
+- [AI / Resources](AI/Resources.md) — Curated link list of AI resources on harness architecture, agent design, Claude Code guides, courses, and open-source agent repositories.
 
 - [AI / Research Articles / Design Patterns for Securing LLM Agents against Prompt Injections](AI/Research%20Articles/Design%20Patterns%20for%20Securing%20LLM%20Agents%20against%20Prompt%20Injections.pdf) — Paper (arXiv 2506.08837) proposing principled design patterns that give LLM agents provable resistance to prompt injection, with trade-offs and case studies.
 - [AI / Research Articles / grift](AI/Research%20Articles/grift.pdf) — Draft note on GRIFT, a typed directed reachability graph framework for AI-assisted security auditing of modular smart contracts and zero-knowledge backends.

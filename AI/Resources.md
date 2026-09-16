@@ -57,5 +57,9 @@
 - Evolving OAuth Client Registration in the Model Context Protocol: https://blog.modelcontextprotocol.io/posts/client_registration/
 - Graph Engineering explained by a Chinese AI engineer (video, via @kirillk_web3): https://x.com/kirillk_web3/status/2088682533278077382?s=20
 
+## Courses
+
+- Neural Networks and Transformers course (video playlist): https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+
 ## Standards
 - iso42001: https://www.gsc-co.com/wp-content/uploads/2024/08/SCAN-ISO-420012023_-Web.pdf
