@@ -52,7 +52,7 @@ The yield $y$ is the single rate that makes the sum of the discounted cash flows
 
 ## Macaulay Duration
 
-The Macaulay duration is the average time, in years, at which an investor receives the cash flows of a fixed-income security. Each cash flow is weighted by its present value. The formula is:
+The Macaulay duration is the weighted average time, in years, at which an investor receives the cash flows of a fixed-income security. Each cash flow is weighted by its present value. The intuition is that it is the average time in which you recover the money that you invested. Each time counts in proportion to the money, in value of today, that arrives at that time. The formula is:
 
 $$D_{Mac}=\frac{1}{P}\sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t}$$
 
@@ -434,3 +434,5 @@ So the relative price change is:
 $$\frac{\Delta P}{P} \approx -D_{Mod} \Delta y + \frac{1}{2} C (\Delta y)^2$$
 
 The [Modified Duration](#modified-duration) formula keeps only the first-degree term. It follows the tangent line. The [Convexity](#convexity) formula adds the second-degree term. It follows a parabola that bends like the price curve. The dropped terms are proportional to $(\Delta y)^3$ and higher. For a yield move of 100 bp, $(\Delta y)^3 = 10^{-6}$, so two terms are enough for normal market moves.
+
+TODO: Modify this page adding also the calculations for the continuous capitalization
