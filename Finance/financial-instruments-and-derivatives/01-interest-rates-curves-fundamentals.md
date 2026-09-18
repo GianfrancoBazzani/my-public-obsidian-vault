@@ -100,6 +100,14 @@ We can isolate $f(t_1,t_2)$:
 
 $$f(t_1,t_2) = \left [ \frac{(1+r(t_2))^{t_2}}{(1+r(t_1))^{t_1}} \right ]^{\frac{1}{t_2-t_1}} - 1$$
 
+**Chain of forward rates**
+
+The same no-arbitrage condition applies to each year of the curve. If you chain one year after the other, the zero rate at $T$ is the product of all the annual forward rates up to $T$:
+
+$$(1 + r(T))^{T} = \prod_{i=1}^{T} (1 + f(i-1, i))$$
+
+The term $f(0,1)$ is the spot rate of the first year, because a loan that starts today is a forward that starts at $t = 0$. The relation operates in the two directions. You get the forward rates from the zero rates if you divide. You get the zero rates from the forward rates if you multiply.
+
 ## Bootstrapping 
 
 In the market we cannot observe directly the interest rates curves, what we see are different fixed income instruments that are quoted in the market at different prices. Bootstrapping is the process of building a zero curve from the market prices of such instruments. 
@@ -288,3 +296,5 @@ The 10Y bond gives the best total of carry plus roll-down (5.2 %). It is the mos
 
 - Changes in the shape of the curve.
 - Volatility of the rates.
+
+TODO: Modify this page adding also the calculations for the continuous capitalization
