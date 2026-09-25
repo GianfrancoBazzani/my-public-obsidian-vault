@@ -30,6 +30,7 @@
 - buzz, Block's hive mind communication platform — a self-hosted workspace built on a Nostr relay where human teams and AI agents share one event log for channels, code review, workflows, and project memory: https://github.com/block/buzz
 - eve, Vercel's filesystem-first framework for durable AI agents — instructions, tools, skills, channels, and schedules live in conventional directories for easy inspection and extension: https://github.com/vercel/eve
 - centaur, Paradigm's multiplayer, self-hosted, secure agents — shared team agents running in isolated Kubernetes sandboxes, reachable from Slack or an API, with credential isolation and audit trails: https://github.com/paradigmxyz/centaur
+- quest, Electric Capital's open-source, self-hosted, safety-focused AI agent workbench — a ChatGPT-style web app that connects email, documents, Slack, and finance tools, with private vs. public modes so agents can work on sensitive data safely: https://github.com/electric-capital/quest
 - strands agents, AWS's open-source, model-driven SDK for building AI agents with a few lines of code: https://strandsagents.com/
 
 ## Open Source Knowledge Base Indexing Repos
