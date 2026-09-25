@@ -14,6 +14,7 @@
 
 - Best Practices for Claude Code: https://code.claude.com/docs/en/best-practices
 - Master Claude Code in a Weekend: https://github.com/luongnv89/claude-howto#master-claude-code-in-a-weekend
+- The Complete Guide to Building Skills for Claude (Anthropic, PDF): https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
 
 ## Open Source Agent Repos
 
