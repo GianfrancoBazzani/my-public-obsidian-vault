@@ -536,3 +536,6 @@ In this case the discriminant is $(-2)^2 - 4 \cdot 1 \cdot 3 = -8 < 0$, so no re
 The statement is equivalent to $x^2 + 5^2 \lt 50$ which can be simplified to $x^2<25$ or $|x| < 5$ therefore the truth set is $\{x \mid -5 \lt x \lt 5\}$
 
 ![Graph of y = |x| and the line y = 5; the truth set -5 < x < 5 is shaded where the graph of |x| is below the line](Attachments/abs-value-truth-set.svg)
+
+## 1.4 Operations on Sets
+TODO 

@@ -1,6 +1,5 @@
 ---
 
-by Ben Horowitz
 For the past three years I've been working at a growth-stage technological company, one where the business model had already been validated by revenue and by multiple players in the market. I moved through diverse roles during that time, but I kept wondering about the stage I never witnessed: that embryonic phase where founders still have to build a story from nothing and convince people to help them construct it, sell it, and buy it. The Hard Thing About Hard Things by Ben Horowitz gave me exactly that. It helped me understand processes embedded in my day-to-day job and executive decisions that I had never understood before - processes that, naively, once seemed nonsense to me.
 What follows is my compilation of practical notes extracted from the book. This is not a cooking recipe for how to build and scale a company following a happy path; it's a series of practical learnings that can help founders navigate the hard situations that inevitably occur in startups, drawn from Ben Horowitz's experience in his journey as CEO. As Ben himself puts it: "I can relate to what they're going through, but I cannot tell them what to do. I can only help them find it in themselves. And sometimes they can find peace where I could not."
 
