@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2937">
+<title>Nested number sets: N inside Z inside Q inside R inside C, with the irrational numbers as the part of R outside Q</title>
+<rect width="640" height="420" fill="white"/>
+
+<!-- C: complex numbers -->
+<rect x="10" y="10" width="620" height="400" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="28" y="40" font-weight="bold" font-size="16">ℂ  Complex numbers</text>
+<text x="48" y="390" font-style="italic">i,  2 + 3i,  −4i</text>
+
+<!-- R: real numbers -->
+<rect x="30" y="60" width="580" height="300" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="48" y="88" font-weight="bold" font-size="16">ℝ  Real numbers</text>
+
+<!-- Q: rational numbers -->
+<rect x="50" y="105" width="360" height="235" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="68" y="132" font-weight="bold">ℚ  Rational numbers</text>
+<text x="328" y="205" font-style="italic">1/2</text>
+<text x="328" y="230" font-style="italic">−0.75</text>
+<text x="328" y="255" font-style="italic">22/7</text>
+
+<!-- Z: integers -->
+<rect x="70" y="150" width="240" height="170" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+<text x="88" y="176" font-weight="bold">ℤ  Integers</text>
+<text x="245" y="220" font-style="italic">−1</text>
+<text x="245" y="245" font-style="italic">−5</text>
+
+<!-- N: natural numbers -->
+<rect x="90" y="195" width="140" height="105" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="106" y="221" font-weight="bold">ℕ  Natural</text>
+<text x="106" y="239" font-weight="bold">    numbers</text>
+<text x="106" y="275" font-style="italic">0, 1, 2, 3, …</text>
+
+<!-- R \ Q: irrational numbers -->
+<rect x="425" y="105" width="165" height="235" rx="10" fill="white" stroke="#0284c7" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="440" y="132" font-weight="bold">Irrational numbers</text>
+<text x="440" y="154">ℝ ∖ ℚ</text>
+<text x="440" y="205" font-style="italic">√2</text>
+<text x="440" y="230" font-style="italic">π</text>
+<text x="440" y="255" font-style="italic">e</text>
+</svg>

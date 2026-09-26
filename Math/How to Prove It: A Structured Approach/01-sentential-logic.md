@@ -392,3 +392,71 @@ If the conclusion of an argument is a contradiction, it means that its formula a
 
 If any of the premises is a tautology, that premise can be simplified out of the argument as the validity of the argument will always depend on the other premises. If any of the premises is a contradiction, the argument is always valid, as the premises can never all be true.
 
+### 1.3 Variables and Sets
+
+In mathematical reasoning, it is often necessary to make statements about objects that are represented by letters called **variables**. To represent a statement, we sometimes use a single letter, such as $P$, and other times we write $P(x)$ to stress that the statement is about the variable $x$.
+
+Statements involving variables can be combined using connectives, just like statements without variables.
+
+**Example 1.3.1.1** Analyze the logical form of the statement "$x$ is a prime number, and either $y$ or $z$ is divisible by $x$".
+
+We can let $P(x)$ stand for "$x$ is a prime number", $D(y, x)$ stand for "$y$ is divisible by $x$", and $D(z, x)$ stand for "$z$ is divisible by $x$". Therefore, the statement has the form $P(x) \land (D(y, x) \lor D(z, x))$.
+
+If a statement contains variables, we can no longer describe the statement as being simply true or false. Its truth value might depend on the values of the variables involved. To deal with this complication, we will define **truth sets** for statements containing variables.
+
+A **set** is a collection of objects. The objects in the collection are called **elements** of the set. The simplest way to specify a particular set is to list its elements between braces "${}$".
+
+We use the symbol $\in$ to mean "is an element of". To say that an object is not an element of a specific set, we use the symbol $\notin$.
+
+A set is completely determined once its elements have been specified. Thus, two sets that have exactly the same elements are always equal. Also, when a set is defined by listing its elements, all that matters is which objects are in the list of elements, not the order in which they are listed. An element can appear more than once in the list, and this does not change the set.
+
+Thus, $\{3, 7, 14\}$, $\{14, 3, 7\}$, and $\{3, 7, 14, 7\}$ are three different names for the same set.
+
+It may be impractical to define a set that contains a very large number of elements by listing all of its elements, and it would be impossible to give such a definition for a set that contains infinitely many elements. Sets are usually defined by spelling out the pattern that determines the elements of the set.
+
+For example, we could define the set $P$ of all prime numbers as:
+
+$$P = \{x \mid x \text{ is a prime number}\}$$
+
+This is read "$P$ is equal to the set of all $x$ such that $x$ is a prime number", and it means that the elements of $P$ are the values of $x$ that make the statement "$x$ is a prime number" come out true. You should think of the statement "$x$ is a prime number" as an **elementhood test** for the set. Any value of $x$ that makes this statement come out true passes the test and is an element of the set. Anything else fails the test and is not an element. 
+
+Note that $x$ is a bound variable in the statement $y \in \{x \mid x^2 \lt 9\}$, even though it is a free variable in the statement $x^2 \lt 9$. This last statement is a statement about $x$ that would be true for some values of $x$ and false for others. It is only when this statement is used inside the elementhood test notation that $x$ becomes a bound variable. We could say that the notation $\{x \mid \dots\}$ binds the variable $x$.
+
+In general, the statement $y \in \{x \mid P(x)\}$ means the same thing as $P(y)$, which is a statement about $y$ but not $x$. Similarly, $y \notin \{x \mid P(x)\}$ means the same thing as $\lnot P(y)$.
+
+The expression $\{x \mid P(x)\}$ is not a statement at all, it is a name for a set. It is important to make the distinction between expressions that are mathematical statements and expressions that are names for mathematical objects.
+
+**Definition 1.3.4** The **truth set** of a statement $P(x)$ is the set of all values of $x$ that make the statement $P(x)$ true. In other words, it is the set defined by using the statement $P(x)$ as an elementhood test: $\{x \mid P(x)\}$.
+
+Suppose that $A$ is the truth set of a statement $P(x)$. According to the definition of a truth set, this means that $A = \{x \mid P(x)\}$. For any object $y$, the statement $y \in \{x \mid P(x)\}$ means the same thing as $P(y)$. It follows that $y \in A$ means the same thing as $P(y)$. Thus, we see that in general, if $A$ is the truth set of $P(x)$, then to say that $y \in A$ means the same thing as saying $P(y)$.
+
+**Example 1.3.5.2** What is the truth set of the statement "$n$ is an even prime number"?
+
+$\{n \mid n \text{ is an even prime number}\}$. The only number that passes the elementhood test is $2$, so the set is $\{2\}$. Note that $2$ and $\{2\}$ are not the same: the first is a number and the second is a set whose only element is the number $2$.
+
+When a statement contains free variables, it is often clear from context that these variables stand for objects of a particular kind. The set of all objects of this kind is called the **universe of discourse** for the statement, and we say that the variables range over this universe.
+
+Certain sets come up often in mathematics as universes of discourse, and it is convenient to have fixed names for them. Here are a few of the most important ones:
+
+- **Real numbers:** $\mathbb{R} = \{x \mid x \text{ is a real number}\}$.
+- **Rational numbers:** $\mathbb{Q} = \{x \mid x \text{ is a rational number}\}$. A rational number is a real number that can be written as a fraction $p/q$, where $p$ and $q$ are integers and $q \neq 0$.
+- **Integers:** $\mathbb{Z} = \{x \mid x \text{ is an integer}\} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}$.
+- **Natural numbers:** $\mathbb{N} = \{x \mid x \text{ is a natural number}\} = \{0, 1, 2, 3, \dots\}$. Mathematicians do not agree on whether $0$ is a natural number: some authors start $\mathbb{N}$ at $1$. In these notes, as in the book, $0$ is a natural number.
+- **Irrational numbers:** $\{x \mid x \in \mathbb{R} \text{ and } x \notin \mathbb{Q}\}$, also written $\mathbb{R} \setminus \mathbb{Q}$. These are the real numbers that cannot be written as a fraction, such as $\sqrt{2}$ and $\pi$.
+- **Complex numbers:** $\mathbb{C} = \{a + bi \mid a \in \mathbb{R} \text{ and } b \in \mathbb{R}\}$, where $i$ is a number such that $i^2 = -1$.
+
+The diagram below shows how these sets contain each other. Every natural number is an integer, every integer is a rational number, every rational number is a real number, and every real number is a complex number. The irrational numbers are the part of $\mathbb{R}$ that is outside $\mathbb{Q}$.
+
+![Nested number sets: N inside Z inside Q inside R inside C, with the irrational numbers as the part of R outside Q](Attachments/number-sets.svg)
+
+The letters can be followed by a superscript $+$ or $-$ to indicate that only positive or negative numbers are to be included in the set. For example:
+
+$$\mathbb{R}^+ = \{x \mid x \text{ is a positive real number}\}$$
+$$\mathbb{Z}^- = \{x \mid x \text{ is a negative integer}\}$$
+
+The choice of universe of discourse can sometimes make a difference. For example, consider the statement $x^2 \lt 9$. If the universe of discourse of this statement were $\mathbb{R}$, then its truth set would be $\{x \in \mathbb{R} \mid x^2 \lt 9\}$, or in other words, the set of all real numbers between $-3$ and $3$, exclusive. But if the universe of discourse were $\mathbb{Z}$, then its truth set would be $\{x \in \mathbb{Z} \mid x^2 \lt 9\} = \{-2, -1, 0, 1, 2\}$.
+
+Sometimes this explicit notation is used not to specify the universe of discourse but to restrict attention to just a part of the universe.
+
+Because a set is completely determined once its elements have been specified, there is only one set that has no elements. It is called the **empty set**, or the **null set**, and is often denoted by $\emptyset$ or $\{\}$. For example, $\{x \in \mathbb{Z} \mid x \neq x\} = \emptyset$. Since the empty set has no elements, the statement $x \in \emptyset$ is always false.
+
