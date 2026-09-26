@@ -470,38 +470,69 @@ $$ D(x,2) \land D(x,3) \land \neg D(x,4) $$
 **c)** $x$ and $y$ are natural numbers, and exactly one of them is prime.
 
 We can let $P(w)$ stand for "$w$ is prime". Therefore, the logical form of the statement is:
+
 $$ x \in \mathbb{N} \land y \in \mathbb{N} \land \bigl(P(x) \oplus P(y)\bigr) $$
 
 **4\.** Write definitions using elementhood tests for the following sets:
 
 **a)** $\{1, 4, 9, 16, 25, 36, 49, \dots\}$.
 
+$$\{x \mid x \text{ is the square of a positive integer}\}$$
+
 **b)** $\{1, 2, 4, 8, 16, 32, 64, \dots\}$.
 
+$$\{x \mid x \text{ is a power of two}\}$$
+
 **c)** $\{10, 11, 12, 13, 14, 15, 16, 17, 18, 19\}$.
+
+$$ \{x \in \mathbb{N} \mid x \geq 10 \land x \leq 19 \} $$
 
 **5\.** Simplify the following statements. Which variables are free and which are bound? If the statement has no free variables, say whether it is true or false.
 
 **a)** $-3 \in \{x \in \mathbb{R} \mid 13 - 2x > 1\}$.
 
+$x$ is the only bound variable, and there are no free variables. The statement is equivalent to $13 - 2 \cdot (-3) > 1$, that is, $19 > 1$, which is true.
+
 **b)** $4 \in \{x \in \mathbb{R}^- \mid 13 - 2x > 1\}$.
 
+$x$ is the only bound variable, and there are no free variables. The statement is false as $4$ is not in the **universe of discourse** $\mathbb{R}^-$.
+
 **c)** $5 \notin \{x \in \mathbb{R} \mid 13 - 2x > c\}$.
+
+$x$ is the only bound variable, and $c$ the only free variable. The statement is equivalent to $\neg(13 - 2 \cdot 5 > c)$, that is, $\neg(3 > c)$, so the statement is true for any $c \geq 3$.
 
 **7\.** List the elements of the following sets:
 
 **a)** $\{x \in \mathbb{R} \mid 2x^2 + x - 1 = 0\}$.
 
+If we find the two roots of $2x^2 + x - 1 = 0$ we get $r_1=\frac{1}{2}$ and $r_2=-1$ so the only two elements that fulfil the elementhood test are $\frac{1}{2}$ and $-1$, and the set can be rewritten as $\{\frac{1}{2},-1\}$.
+
 **b)** $\{x \in \mathbb{R}^+ \mid 2x^2 + x - 1 = 0\}$.
+
+Now the **universe of discourse** is $\mathbb{R}^+$, so only positive real numbers can pass the elementhood test. Of the two roots, only $\frac{1}{2}$ is positive, therefore the set can be rewritten as $\{\frac{1}{2}\}$.
 
 **c)** $\{x \in \mathbb{Z} \mid 2x^2 + x - 1 = 0\}$.
 
+Now the **universe of discourse** is $\mathbb{Z}$, so only integers can pass the elementhood test. Of the two roots, only $-1$ is an integer, therefore the set can be rewritten as $\{-1\}$.
+
 **d)** $\{x \in \mathbb{N} \mid 2x^2 + x - 1 = 0\}$.
+
+Now the **universe of discourse** is $\mathbb{N}$, so only natural numbers can pass the elementhood test. Neither of the two roots is a natural number, therefore the set is equal to the empty set $\emptyset$.
 
 **9\.** What are the truth sets of the following statements? List a few elements of the truth set if you can.
 
 **a)** $x$ is a real number and $x^2 - 4x + 3 = 0$.
 
+The polynomial factors as $(x - 1)(x - 3)$, so it has two real roots, therefore the truth set is:
+
+$$\{1, 3\}$$
+
 **b)** $x$ is a real number and $x^2 - 2x + 3 = 0$.
 
+In this case the discriminant is $(-2)^2 - 4 \cdot 1 \cdot 3 = -8 < 0$, so no real number satisfies the equation. The quadratic formula gives only two complex roots $1 \pm i\sqrt{2}$, so the truth set is $\emptyset$.
+
 **c)** $x$ is a real number and $5 \in \{y \in \mathbb{R} \mid x^2 + y^2 < 50\}$.
+
+The statement is equivalent to $x^2 + 5^2 \lt 50$ which can be simplified to $x^2<25$ or $|x| < 5$ therefore the truth set is $\{x \mid -5 \lt x \lt 5\}$
+
+![Graph of y = |x| and the line y = 5; the truth set -5 < x < 5 is shaded where the graph of |x| is below the line](Attachments/abs-value-truth-set.svg)

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2937">
+<title>Graph of y = |x| and the line y = 5. The truth set −5 &lt; x &lt; 5 is shaded: it is where the graph of |x| is below the line.</title>
+<rect width="480" height="300" fill="white"/>
+
+<!-- Truth set band: -5 < x < 5 -->
+<rect x="115" y="25" width="250" height="240" fill="#dcfce7"/>
+
+<!-- Guides from (±5, 5) down to the x-axis -->
+<line x1="115" y1="115" x2="115" y2="240" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="365" y1="115" x2="365" y2="240" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 3"/>
+
+<!-- Axes (1 unit = 25 px, origin at 240,240) -->
+<line x1="20" y1="240" x2="455" y2="240" stroke="#1f2937" stroke-width="1.5"/>
+<polygon points="462,240 452,235 452,245" fill="#1f2937"/>
+<line x1="240" y1="270" x2="240" y2="25" stroke="#1f2937" stroke-width="1.5"/>
+<polygon points="240,18 235,28 245,28" fill="#1f2937"/>
+<text x="462" y="258" text-anchor="end" font-style="italic">x</text>
+<text x="250" y="26" font-style="italic">y</text>
+<line x1="235" y1="115" x2="245" y2="115" stroke="#1f2937" stroke-width="1.5"/>
+<text x="232" y="110" text-anchor="end">5</text>
+<text x="232" y="256" text-anchor="end">0</text>
+<text x="115" y="262" text-anchor="middle">−5</text>
+<text x="365" y="262" text-anchor="middle">5</text>
+
+<!-- Line y = 5 -->
+<line x1="25" y1="115" x2="450" y2="115" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="28" y="107" fill="#dc2626">y = 5</text>
+
+<!-- y = |x| -->
+<polyline points="40,40 240,240 440,40" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<text x="420" y="45" text-anchor="end" fill="#0284c7">y = |x|</text>
+
+<!-- Part of y = |x| below the line, and the truth set on the x-axis -->
+<polyline points="115,115 240,240 365,115" fill="none" stroke="#16a34a" stroke-width="4"/>
+<line x1="115" y1="240" x2="365" y2="240" stroke="#16a34a" stroke-width="5"/>
+
+<!-- Open circles: the endpoints are excluded -->
+<circle cx="115" cy="115" r="5" fill="white" stroke="#16a34a" stroke-width="2"/>
+<circle cx="365" cy="115" r="5" fill="white" stroke="#16a34a" stroke-width="2"/>
+<circle cx="115" cy="240" r="5" fill="white" stroke="#16a34a" stroke-width="2"/>
+<circle cx="365" cy="240" r="5" fill="white" stroke="#16a34a" stroke-width="2"/>
+
+<text x="240" y="290" text-anchor="middle" font-weight="bold" fill="#16a34a">truth set: −5 &lt; x &lt; 5</text>
+</svg>
