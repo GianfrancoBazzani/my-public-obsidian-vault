@@ -284,18 +284,18 @@ $$\neg(\text{a contradiction}) \text{ is a tautology}$$
 
 #### Exercises
 
-**3\.** In this exercise, we will use the symbol $+$ to mean **exclusive or** (XOR). In other words, $P + Q$ means "$P$ or $Q$, but not both".
+**3\.** In this exercise, we will use the symbol $\oplus$ to mean **exclusive or** (XOR). In other words, $P \oplus Q$ means "$P$ or $Q$, but not both".
 
-**a)** Make a truth table for $P + Q$.
+**a)** Make a truth table for $P \oplus Q$.
 
-| $P$ | $Q$ | $P + Q$ |
-| --- | --- | ------- |
-| F   | F   | F       |
-| F   | T   | T       |
-| T   | F   | T       |
-| T   | T   | F       |
+| $P$ | $Q$ | $P \oplus Q$ |
+| --- | --- | ------------ |
+| F   | F   | F            |
+| F   | T   | T            |
+| T   | F   | T            |
+| T   | T   | F            |
 
-**b)** Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent to $P + Q$. Justify your answer with a truth table.
+**b)** Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent to $P \oplus Q$. Justify your answer with a truth table.
 
 $$(P \lor Q) \land \neg(P \land Q)$$
 
@@ -452,3 +452,56 @@ The choice of universe of discourse can sometimes make a difference. For example
 Sometimes this explicit notation is used not to specify the universe of discourse but to restrict attention to just a part of the universe.
 
 Because a set is completely determined once its elements have been specified, there is only one set that has no elements. It is called the **empty set**, or the **null set**, and is often denoted by $\emptyset$ or $\{\}$. For example, $\{x \in \mathbb{Z} \mid x \neq x\} = \emptyset$. Since the empty set has no elements, the statement $x \in \emptyset$ is always false.
+
+#### Exercises
+
+**1\.** Analyze the logical forms of the following statements:
+
+**a)** $3$ is a common divisor of $6$, $9$, and $15$.
+
+We can let $D(x,y)$ stand for "$x$ is divisible by $y$". Therefore, the logical form of the statement is:
+
+$$ D(6,3) \land D(9,3) \land D(15,3)$$
+
+**b)** $x$ is divisible by both $2$ and $3$ but not $4$.
+
+$$ D(x,2) \land D(x,3) \land \neg D(x,4) $$
+
+**c)** $x$ and $y$ are natural numbers, and exactly one of them is prime.
+
+We can let $P(w)$ stand for "$w$ is prime". Therefore, the logical form of the statement is:
+$$ x \in \mathbb{N} \land y \in \mathbb{N} \land \bigl(P(x) \oplus P(y)\bigr) $$
+
+**4\.** Write definitions using elementhood tests for the following sets:
+
+**a)** $\{1, 4, 9, 16, 25, 36, 49, \dots\}$.
+
+**b)** $\{1, 2, 4, 8, 16, 32, 64, \dots\}$.
+
+**c)** $\{10, 11, 12, 13, 14, 15, 16, 17, 18, 19\}$.
+
+**5\.** Simplify the following statements. Which variables are free and which are bound? If the statement has no free variables, say whether it is true or false.
+
+**a)** $-3 \in \{x \in \mathbb{R} \mid 13 - 2x > 1\}$.
+
+**b)** $4 \in \{x \in \mathbb{R}^- \mid 13 - 2x > 1\}$.
+
+**c)** $5 \notin \{x \in \mathbb{R} \mid 13 - 2x > c\}$.
+
+**7\.** List the elements of the following sets:
+
+**a)** $\{x \in \mathbb{R} \mid 2x^2 + x - 1 = 0\}$.
+
+**b)** $\{x \in \mathbb{R}^+ \mid 2x^2 + x - 1 = 0\}$.
+
+**c)** $\{x \in \mathbb{Z} \mid 2x^2 + x - 1 = 0\}$.
+
+**d)** $\{x \in \mathbb{N} \mid 2x^2 + x - 1 = 0\}$.
+
+**9\.** What are the truth sets of the following statements? List a few elements of the truth set if you can.
+
+**a)** $x$ is a real number and $x^2 - 4x + 3 = 0$.
+
+**b)** $x$ is a real number and $x^2 - 2x + 3 = 0$.
+
+**c)** $x$ is a real number and $5 \in \{y \in \mathbb{R} \mid x^2 + y^2 < 50\}$.
