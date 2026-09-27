@@ -30,7 +30,7 @@ Thus, if $P$ and $Q$ stand for two statements, then we will write $P \lor Q$ to 
 
 The symbols ∧ and ∨ can only be used between two statements, to form their conjunction or disjunction, and the symbol ¬ can only be used before a statement, to negate it. This means that certain strings of letters and symbols are simply meaningless. For example, $P \neg \land Q$, $P \land \lor Q$, and $P \neg$ are all "ungrammatical" expressions in the language of logic. "Grammatical" expressions are sometimes called **well-formed** formulas or just **formulas**.
 
-#### Exercises
+### Exercises
 
 **5\.** Which of the following expressions are well-formed formulas?
 
@@ -282,7 +282,7 @@ $$P \land (\text{a contradiction}) \text{ is a contradiction}$$
 $$P \lor (\text{a contradiction}) \equiv P$$
 $$\neg(\text{a contradiction}) \text{ is a tautology}$$
 
-#### Exercises
+### Exercises
 
 **3\.** In this exercise, we will use the symbol $\oplus$ to mean **exclusive or** (XOR). In other words, $P \oplus Q$ means "$P$ or $Q$, but not both".
 
@@ -453,7 +453,7 @@ Sometimes this explicit notation is used not to specify the universe of discours
 
 Because a set is completely determined once its elements have been specified, there is only one set that has no elements. It is called the **empty set**, or the **null set**, and is often denoted by $\emptyset$ or $\{\}$. For example, $\{x \in \mathbb{Z} \mid x \neq x\} = \emptyset$. Since the empty set has no elements, the statement $x \in \emptyset$ is always false.
 
-#### Exercises
+### Exercises
 
 **1\.** Analyze the logical forms of the following statements:
 
@@ -538,4 +538,43 @@ The statement is equivalent to $x^2 + 5^2 \lt 50$ which can be simplified to $x^
 ![Graph of y = |x| and the line y = 5; the truth set -5 < x < 5 is shaded where the graph of |x| is below the line](Attachments/abs-value-truth-set.svg)
 
 ## 1.4 Operations on Sets
-TODO 
+
+**Definition 1.4.1**. The **intersection** of two sets $A$ and $B$ is the set $A \cap B$ defined as follows:
+
+$$A \cap B = \{x \mid x\in A \land x \in B\}$$
+
+The **union** of $A$ and $B$ is the set $A \cup B$ defined as follows:
+
+$$ A \cup B = \{x \mid x \in A \lor x \in B\}$$
+
+The **difference** of $A$ and $B$ is the set $A \setminus B$ defined as follows:
+
+$$ A \setminus B = \{x \mid x \in A \land x \notin B\}$$
+
+The **symmetric difference** of $A$ and $B$ is the set $A \triangle B$ defined as follows:
+
+$$ A \triangle B = (A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B) = \{x \mid x \in A \oplus x \in B\}$$
+
+Sometimes it is helpful when working with operations on sets to draw pictures of the results of these operations. One way to do this is with **Venn diagrams**. The interior of the rectangle enclosing the diagram represents the universe of discourse $U$, and the interiors of the two circles represent the two sets $A$ and $B$. Other sets formed by combining these sets would be represented by different regions in the diagram.
+
+![Four Venn diagrams inside the universe U: the intersection A ∩ B, the union A ∪ B, the difference A \ B and the symmetric difference A △ B, each shaded](Attachments/venn-set-operations.svg)
+
+The set theory operations $\cap$, $\cup$, $\setminus$, and $\triangle$ are related to the logical connectives $\land$, $\lor$, $\neg$, and $\oplus$. It is important to remember, though, that although the set theory operations and logical connectives are related, they are not interchangeable. The logical connectives can only be used to combine statements, whereas the set theory operations must be used to combine sets. For example, if $A$ is the truth set of $P(x)$ and $B$ is the truth set of $Q(x)$, then we can say that $A \cap B$ is the truth set of $P(x) \land Q(x)$, but expressions such as $A \land B$ or $P(x) \cap Q(x)$ are completely meaningless and should never be used.
+
+**Definition 1.4.5**. Suppose $A$ and $B$ are sets. We will say that $A$ is a **subset** of $B$ if every element of $A$ is also an element of $B$. We write $A \subseteq B$ to mean that $A$ is a subset of $B$. $A$ and $B$ are said to be **disjoint** if they have no elements in common. Note that this is the same as saying that the set of elements they have in common is the empty set, or in other words $A \cap B = \emptyset$.
+
+**Example 1.4.6**. Consider the sets $A$, $B$ and $C$. Suppose that $A \subseteq B$, that $A$ and $C$ are disjoint ($A \cap C = \emptyset$), and that $B$ and $C$ are not disjoint ($B \cap C \neq \emptyset$). The Venn diagram will look as follows:
+
+![Venn diagram inside the universe U: circle A lies inside circle B, and circle C overlaps B but not A](Attachments/venn-subset-disjoint.svg)
+
+**Theorem 1.4.7**. For any sets $A$ and $B$, $(A \cup B) \setminus B \subseteq A$.
+
+**Proof.** We must show that if something is an element of $(A \cup B) \setminus B$, then it must also be an element of $A$, so suppose that $x \in (A \cup B) \setminus B$. This means that $x \in A \cup B$ and $x \notin B$, or in other words, $(x \in A \lor x \in B) \land x \notin B$. Notice that these statements have the logical form $P \lor Q$ and $\neg Q$, where $P$ is $x \in A$ and $Q$ is $x \in B$. From these premises we can conclude that $P$ is true. Therefore, $x \in A$. Thus, anything that is an element of $(A \cup B) \setminus B$ must also be an element of $A$.
+
+### Exercises
+
+TODO
+
+## 1.5 The Conditional and Biconditional Connectives 
+
+TODO
