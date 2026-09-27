@@ -573,7 +573,180 @@ The set theory operations $\cap$, $\cup$, $\setminus$, and $\triangle$ are relat
 
 ### Exercises
 
-TODO
+**1\.** Let $A = \{1, 3, 12, 35\}$, $B = \{3, 7, 12, 20\}$, and $C = \{x \mid x \text{ is a prime number}\}$. List the elements of the following sets. Are any of the sets below disjoint from any of the others? Are any of the sets below subsets of any others?
+
+**a)** $A \cap B$.
+
+$$ A \cap B = \{3,12\} $$
+
+**b)** $(A \cup B) \setminus C$.
+
+$$ (A \cup B) \setminus C = \{1, 12, 20, 35\} $$
+
+**c)** $A \cup (B \setminus C)$.
+
+$$ A \cup (B \setminus C) = \{1,3,12,20,35\} $$
+
+**4\.** Use Venn diagrams to verify the following identities:
+
+**a)** $A \setminus (A \cap B) = A \setminus B$.
+
+![Two Venn diagrams inside the universe U: A \ (A ∩ B) and A \ B shade the same region, the part of A outside B](Attachments/venn-difference-identity.svg)
+
+The two shaded regions are the same, so $A \setminus (A \cap B) = A \setminus B$.
+
+**b)** $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+
+![Four Venn diagrams inside the universe U: A ∪ B, A ∪ C, their intersection (A ∪ B) ∩ (A ∪ C), and A ∪ (B ∩ C); the last two shade the same region](Attachments/venn-distributive-identity.svg)
+
+The region in both $A \cup B$ and $A \cup C$ is the same as the region of $A \cup (B \cap C)$, so $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+
+**5\.** Verify the identities in exercise 4 by writing out (using logical symbols) what it means for an object $x$ to be an element of each set and then using logical equivalences.
+
+**a)** $A \setminus (A \cap B) = A \setminus B$.
+
+We can write $A \setminus (A \cap B)$ in logical form: 
+
+$$ x \in A \land \neg (x \in A \land x \in B)$$
+
+If we apply the De Morgan's Law:
+
+$$ x \in A \land (x \notin A \lor x \notin B)$$
+
+If we apply the distributive property of the logic conjunction over the logic disjunction:
+
+$$ (x \in A \land x \notin A) \lor ( x \in A \land x \notin B)$$
+
+But $(x \in A \land x \notin A)$ is a contradiction, therefore the expression can be simplified to $( x \in A \land x \notin B)$ which is directly the logic form of $A \setminus B$.
+
+**b)** $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+
+We can write $A \cup (B \cap C)$ in logical form:
+
+$$ x \in A \lor (x \in B \land x \in C) $$
+
+If we apply the distributive property of the logic disjunction over the logic conjunction:
+
+$$ (x \in A \lor x \in B) \land (x \in A \lor x \in C) $$
+
+This is directly the logical form of $(A \cup B) \cap (A \cup C)$.
+
+**6\.** Use Venn diagrams to verify the following identities:
+
+**a)** $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$.
+
+![Four Venn diagrams inside the universe U: A \ C, B \ C, their union (A \ C) ∪ (B \ C), and (A ∪ B) \ C; the last two shade the same region](Attachments/venn-union-difference-identity.svg)
+
+The union of $A \setminus C$ and $B \setminus C$ is the same region as $(A \cup B) \setminus C$, so $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$.
+
+**b)** $A \cup (B \setminus C) = (A \cup B) \setminus (C \setminus A)$.
+
+![Four Venn diagrams inside the universe U: A ∪ B, C \ A, (A ∪ B) \ (C \ A), and A ∪ (B \ C); the last two shade the same region](Attachments/venn-union-set-difference-identity.svg)
+
+If we remove $C \setminus A$ from $A \cup B$, all of $A$ stays and only the part of $B$ outside $C$ stays. This is the same region as $A \cup (B \setminus C)$, so $A \cup (B \setminus C) = (A \cup B) \setminus (C \setminus A)$.
+
+**7\.** Verify the identities in exercise 6 by writing out (using logical symbols) what it means for an object $x$ to be an element of each set and then using logical equivalences.
+
+**a)** $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$.
+
+We can write $(A \cup B) \setminus C$ in logical form:
+
+$$(x \in A \lor x \in B) \land x \notin C$$
+
+If we apply the distributive property of the logic conjunction over the logic disjunction:
+
+$$(x \in A \land x \notin C) \lor (x \in B \land x \notin C)$$
+
+This is directly the logical form of $(A \setminus C) \cup (B \setminus C)$.
+
+**b)** $A \cup (B \setminus C) = (A \cup B) \setminus (C \setminus A)$.
+
+We can write $(A \cup B) \setminus (C \setminus A)$ in logical form:
+
+$$ (x \in A \lor x \in B) \land \neg (x \in C \land x \notin A) $$
+
+If we apply the De Morgan's Law:
+
+$$ (x \in A \lor x \in B) \land (x \notin C \lor x \in A) $$
+
+If we apply the distributive property of the logic disjunction over the logic conjunction:
+
+$$ x \in A \lor (x \in B \land x \notin C) $$
+
+This is directly the logical form of $A \cup (B \setminus C)$.
+
+**8\.** Use any method you wish to verify the following identities:
+
+**a)** $(A \setminus B) \cap C = (A \cap C) \setminus B$.
+
+![Four Venn diagrams inside the universe U: A \ B, A ∩ C, (A \ B) ∩ C and (A ∩ C) \ B; the last two shade the same region](Attachments/venn-difference-intersection-identity.svg)
+
+**b)** $(A \cap B) \setminus B = \emptyset$.
+
+We can write the expression in logical form:
+
+$$(x \in A \land x \in B) \land x \notin B$$
+
+If we apply the associative property of the logical conjunction:
+
+$$x \in A \land (x \in B \land x \notin B)$$
+
+In this expression, $x \in B \land x \notin B$ is a contradiction, therefore the full expression always evaluates to false, so its truth set is the empty set $\emptyset$.
+
+**c)** $A \setminus (A \setminus B) = A \cap B$.
+
+![Three Venn diagrams inside the universe U: A \ B, A \ (A \ B) and A ∩ B; the last two shade the same region](Attachments/venn-double-difference-identity.svg)
+
+**11\.** Suppose $A$ and $B$ are sets. Is it necessarily true that $(A \setminus B) \cup B = A$? If not, is one of these sets necessarily a subset of the other? Is $(A \setminus B) \cup B$ always equal to either $A \setminus B$ or $A \cup B$?
+
+We can write the expression $(A \setminus B) \cup B$ in logical form:
+
+$$(x \in A \land x \notin B) \lor x \in B$$
+
+If we apply the distributive property of the logical disjunction over the logical conjunction:
+
+$$(x \in A \lor x \in B) \land (x \notin B \lor x \in B)$$
+
+Here $x \notin B \lor x \in B$ is a tautology, therefore the expression can be simplified to $x \in A \lor x \in B$, which in set notation is $A \cup B$. So it is not necessarily true that $(A \setminus B) \cup B = A$. 
+
+By definition, $A \subseteq (A \setminus B) \cup B$ if and only if every element of $A$ is also an element of $(A \setminus B) \cup B$. Since every $x \in A$ is also in $A \cup B$, and $A \cup B = (A \setminus B) \cup B$, we can say that $A \subseteq (A \setminus B) \cup B$.
+
+We proved that $(A \setminus B) \cup B$ is always equal to $A \cup B$. However, it is equal to $A \setminus B$ only when $B$ is the empty set $\emptyset$, because no element of $B$ can be in $A \setminus B$.
+
+**12\.** It is claimed in this section that you cannot make a Venn diagram for four sets using overlapping circles.
+
+**a)** What's wrong with the following diagram? (Hint: Where's the set $(A \cap D) \setminus (B \cup C)$?)
+
+![Four overlapping circles A, B, C and D inside the universe U, with A and D on one diagonal and B and C on the other](Attachments/venn-four-circles.svg)
+
+A Venn diagram is supposed to show every possible combination of the sets. For each set, an element of the universe of discourse is either in the set or not in it, so each set gives 2 possibilities. Four sets give $2^4 = 16$ combinations. This means that the diagram must be able to show an element in a region for any possible combination of the four sets. Each combination needs its own region.
+
+This diagram has only 14, and $(A \cap D) \setminus (B \cup C)$ is one of the two that it does not have. So you cannot draw an element that is in $A$ and $D$ but not in $B$ or $C$, and the diagram is wrong.
+
+**b)** Can you make a Venn diagram for four sets using shapes other than circles?
+
+Yes. If we use ellipses instead of circles, every one of the 16 possible regions can appear:
+
+![Venn diagram of four sets A, B, C and D drawn as four overlapping ellipses inside the universe U, with all 16 regions and the region (A ∩ D) \ (B ∪ C) shaded](Attachments/venn-four-ellipses.svg)
+
+
+**14\.** Use Venn diagrams to show that the associative law holds for symmetric difference; that is, for any sets $A$, $B$, and $C$, $A \triangle (B \triangle C) = (A \triangle B) \triangle C$.
+
+![Four Venn diagrams inside the universe U: B △ C, A △ B, A △ (B △ C) and (A △ B) △ C; the last two shade the same region](Attachments/venn-symmetric-difference-associative.svg)
+
+**17\.** Fill in the blanks to make true identities:
+
+**a)** $(A \triangle B) \cap C = (C \setminus A) \triangle \underline{\qquad}$.
+
+$$C \setminus B$$
+
+**b)** $C \setminus (A \triangle B) = (A \cap C) \triangle \underline{\qquad}$.
+
+$$ C \setminus B$$
+
+**c)** $(B \setminus A) \triangle C = (A \triangle C) \triangle \underline{\qquad}$.
+
+$$ A \cup B $$
 
 ## 1.5 The Conditional and Biconditional Connectives 
 
