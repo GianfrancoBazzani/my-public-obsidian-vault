@@ -750,4 +750,99 @@ $$ A \cup B $$
 
 ## 1.5 The Conditional and Biconditional Connectives 
 
-TODO
+We introduce a new logical connective, $\rightarrow$, and write $P \rightarrow Q$ to represent the statement "If $P$ then $Q$". This statement is sometimes called a **conditional** statement, with $P$ as its **antecedent** and $Q$ as its **consequent**.
+
+To analyze arguments containing the connective $\rightarrow$ we must work out the truth table for the formula $P \rightarrow Q$. Because $P \rightarrow Q$ is supposed to mean that if $P$ is true then $Q$ is also true, we certainly want to say that if $P$ is true and $Q$ is false then $P \rightarrow Q$ is false. If $P$ is true and $Q$ is also true, then it seems reasonable to say that $P \rightarrow Q$ is true.
+
+| $P$ | $Q$ | $P \rightarrow Q$ |
+| :-: | :-: | :-: |
+| F | F | T |
+| F | T | T |
+| T | F | F |
+| T | T | T |
+
+To help us to understand this truth table, let's look at an example. Consider the statement "If $x > 2$ then $x^2 > 4$", which we could represent with the formula $P(x) \rightarrow Q(x)$, where $P(x)$ stands for the statement $x > 2$ and $Q(x)$ stands for $x^2 > 4$. The statements $P(x)$ and $Q(x)$ contain $x$ as a free variable, and each will be true for some values of $x$ and false for others. But surely, no matter what the value of $x$ is, we would say it is true that if $x > 2$ then $x^2 > 4$, so the conditional statement $P(x) \rightarrow Q(x)$ should be true.
+
+Suppose $x=3$. In this case $x>2$ and $x^2 = 9 > 4$, so $P(x)$ and $Q(x)$ are both true. This corresponds to line four of the truth table. Consider now the case $x = 1$. Then $x < 2$ and $x^2 = 1 < 4$, so $P(x)$ and $Q(x)$ are both false, corresponding to line one of the truth table. 
+
+Finally, consider the case $x = -5$. Then $x < 2$, so $P(x)$ is false, but $x^2 = 25 > 4$, so $Q(x)$ is true. Thus, in this case we find ourselves in the second line of the truth table.
+
+There are many other values of $x$ that could be plugged into our statement "If $x > 2$ then $x^2 > 4$", but if you try them, you'll find that they all lead to line one, two, or four of the truth table. No values of $x$ will lead to line three, because you could never have $x > 2$ but $x^2 \leq 4$. There is no value of $x$ for which $P(x)$ is true but $Q(x)$ is false. Thus, it should make sense that in the truth table for $P(x) \rightarrow Q(x)$, the only line that is false is the line in which $P$ is true and $Q$ is false.
+
+By comparing the truth tables, we can find the following statements that are equivalent to the conditional statement:
+
+$$P \rightarrow Q \text{ is equivalent to } \neg P \lor Q$$
+
+$$P \rightarrow Q \text{ is equivalent to } \neg(P \land \neg Q)$$
+
+From the statements $P \rightarrow Q$ and $Q$, it is incorrect to infer $P$, because it is $P$ that determines $Q$ and not the contrary. But it would certainly be correct to infer $P$ from the statements $Q \rightarrow P$ and $Q$. This shows that the formulas $P \rightarrow Q$ and $Q \rightarrow P$ do not mean the same thing. The formula $Q \rightarrow P$ is called the *converse* of $P \rightarrow Q$, and it is very important to make sure that a conditional statement is not confused with its converse.
+
+Another equivalence that relates the conditional argument with its converse is the **contrapositive** law:
+
+$$P \rightarrow Q \text{ is equivalent to } \neg Q \rightarrow \neg P$$### Exercises
+
+**1\.** Analyze the logical forms of the following statements:
+
+**a)** If this gas either has an unpleasant smell or is not explosive, then it isn't hydrogen.
+
+**b)** Having both a fever and a headache is a sufficient condition for George to go to the doctor.
+
+**c)** Both having a fever and having a headache are sufficient conditions for George to go to the doctor.
+
+**d)** If $x \neq 2$, then a necessary condition for $x$ to be prime is that $x$ be odd.
+
+**3\.** Analyze the logical form of the following statement:
+
+**a)** If it is raining, then it is windy and the sun is not shining.
+
+Now analyze the following statements. Also, for each statement determine whether the statement is equivalent to either statement (a) or its converse.
+
+**b)** It is windy and not sunny only if it is raining.
+
+**c)** Rain is a sufficient condition for wind with no sunshine.
+
+**d)** Rain is a necessary condition for wind with no sunshine.
+
+**e)** It's not raining, if either the sun is shining or it's not windy.
+
+**f)** Wind is a necessary condition for it to be rainy, and so is a lack of sunshine.
+
+**g)** Either it is windy only if it is raining, or it is not sunny only if it is raining.
+
+**8\.**
+
+**a)** Show that $(P \rightarrow Q) \land (Q \rightarrow R)$ is equivalent to $(P \rightarrow R) \land [(P \leftrightarrow Q) \lor (R \leftrightarrow Q)]$.
+
+**b)** Show that $(P \rightarrow Q) \lor (Q \rightarrow R)$ is a tautology.
+
+**10\.** Find a formula involving only the connectives $\neg$ and $\rightarrow$ that is equivalent to $P \leftrightarrow Q$.
+
+**11\.**
+
+**a)** Show that $(P \lor Q) \leftrightarrow Q$ is equivalent to $P \rightarrow Q$.
+
+**b)** Show that $(P \land Q) \leftrightarrow Q$ is equivalent to $Q \rightarrow P$.
+
+**12\.** Which of the following formulas are equivalent?
+
+**a)** $P \rightarrow (Q \rightarrow R)$.
+
+**b)** $Q \rightarrow (P \rightarrow R)$.
+
+**c)** $(P \rightarrow Q) \land (P \rightarrow R)$.
+
+**d)** $(P \land Q) \rightarrow R$.
+
+**e)** $P \rightarrow (Q \land R)$.
+
+
+Statements of the form $P \rightarrow Q$ come up very often in mathematics, but sometimes they are not written in the form "If $P$ then $Q$". Here are a few ways of expressing the idea $P \rightarrow Q$ that are used often in mathematics: 
+
+  - $P$ implies $Q$
+  - $Q$, if $P$
+  - $P$ only if $Q$
+  - $P$ is a sufficient condition for $Q$
+  - $Q$ is a necessary condition for $P$
+  
+Often in mathematics we want to say that both $P \rightarrow Q$ and its converse $Q \rightarrow P$ are true, and it is therefore convenient to introduce a new connective symbol $\leftrightarrow$ to express this. You can think of $P \leftrightarrow Q$ as just an abbreviation for the formula $(P \rightarrow Q) \land (Q \rightarrow P)$. A statement of the form $P \leftrightarrow Q$ is called a **biconditional** statement, because it represents two conditional statements. This is often written as "$P$ if and only if $Q$". The phrase **if and only if** occurs so often in mathematics that there is a common abbreviation for it, **iff**. Thus, $P \leftrightarrow Q$ is often written "$P$ iff $Q$". Another statement that means $P \leftrightarrow Q$ is "$P$ is a necessary and sufficient condition for $Q$".
+
