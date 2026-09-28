@@ -95,3 +95,31 @@ The sample space can be **discrete** or **continuous**:
 - A **discrete** sample space is finite or countably infinite, so we can list its outcomes, for example the six faces of a die.
 - A **continuous** sample space is uncountable, usually an interval of real numbers, for example the lifetime of a light bulb, $\Omega = [0, \infty)$.
 
+### Events
+
+An event $E_i \subseteq \Omega$ is a subset of the sample space. It is a set of outcomes that we are interested in. To find out if an event occurs, we do one trial and get one outcome $\omega$. If $\omega \in E_i$, the event $E_i$ occurs. If $\omega \notin E_i$, it does not occur.
+
+**Example:** For a die with the numbers 1 to 6, the sample space has these outcomes:
+
+$$\Omega = \lbrace \omega_1 = 1, \omega_2 = 2, \omega_3 = 3, \omega_4 = 4, \omega_5 = 5, \omega_6 = 6 \rbrace$$
+
+We can define these events:
+
+- $E_1$: the outcome is 2.
+- $E_2$: the outcome is an even number.
+- $E_3$: the outcome is an odd number.
+
+As sets, these events are:
+
+$$E_1 = \lbrace 2 \rbrace \qquad E_2 = \lbrace 2, 4, 6 \rbrace \qquad E_3 = \lbrace 1, 3, 5 \rbrace$$
+
+If we roll a 4, then $4 \in E_2$, so $E_2$ occurs. But $4 \notin E_1$ and $4 \notin E_3$, so $E_1$ and $E_3$ do not occur.
+
+#### Special Events
+
+Some events have special names:
+
+- **Elementary event:** an event with only one outcome, for example $\lbrace 3 \rbrace$. In the example above, $E_1 = \lbrace 2 \rbrace$ is an elementary event.
+- **Certain event:** the sample space $\Omega$ itself. It always occurs.
+- **Impossible event:** the empty set $\emptyset$. It never occurs.
+
