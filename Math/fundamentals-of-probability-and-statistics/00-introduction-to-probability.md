@@ -76,3 +76,22 @@ Probability theory also needs other branches of mathematics. Measure theory is t
 Functional analysis is also important for stochastic processes. A random variable is a measurable function. The random variables with a finite second moment form a Hilbert space, and many results about stochastic processes use this space and the theory of operator semigroups.
 
 ## 1.2 Introduction to Set Theory
+
+### Sample Space
+
+For an aleatory experiment to be useful, it must have two characteristics:
+
+1. We must be able to repeat it as many times as we want, under identical conditions (a controlled environment).
+2. It must have a well-defined set of **simple results** (elementary outcomes).
+
+We define the **sample space $\Omega$** as the set of all possible simple results of a specific aleatory experiment. We call each element of $\Omega$ an **outcome** (or sample point), and we write it as $\omega_i$:
+
+$$\Omega = \lbrace \omega_1, \omega_2, \ldots, \omega_N \rbrace$$
+
+Each trial of the experiment gives exactly one outcome.
+
+The sample space can be **discrete** or **continuous**:
+
+- A **discrete** sample space is finite or countably infinite, so we can list its outcomes, for example the six faces of a die.
+- A **continuous** sample space is uncountable, usually an interval of real numbers, for example the lifetime of a light bulb, $\Omega = [0, \infty)$.
+
