@@ -123,3 +123,136 @@ Some events have special names:
 - **Certain event:** the sample space $\Omega$ itself. It always occurs.
 - **Impossible event:** the empty set $\emptyset$. It never occurs.
 
+### Set Operators
+
+#### Membership Operator
+
+We say that a set $A$ **is contained in** a set $B$ ($A \subseteq B$) when each element of $A$ is also an element of $B$. The opposite is not necessarily true: $B$ can have elements that are not in $A$. We also say that $A$ is a **subset** of $B$.
+
+$$A \subseteq B \iff (x \in A \Rightarrow x \in B), \quad \forall x \in A$$
+
+> [!NOTE]
+> **Membership and inclusion**
+>
+> Strictly, this relation is called **inclusion**. The symbol $\in$ is the membership operator: it relates an element to a set ($x \in A$). The symbol $\subseteq$ relates a set to a set ($A \subseteq B$). Some texts write $\subset$ for the same relation.
+
+In the example of the die, $E_1 = \lbrace 2 \rbrace$ and $E_2 = \lbrace 2, 4, 6 \rbrace$, so $E_1 \subseteq E_2$. In terms of events, if $E_1$ occurs, then $E_2$ also occurs.
+
+The inclusion relation has these properties:
+
+1. If $A \subseteq B$ and $B \subseteq A$, then $A = B$.
+2. If $A$ is an event and $\Omega$ is the sample space, then $A \subseteq \Omega$ always.
+3. If $\emptyset$ is the empty set (the impossible event), then $\emptyset \subseteq A$ for each event $A$.
+4. The inclusion is transitive:
+
+$$A \subseteq B, \quad B \subseteq C \implies A \subseteq C$$
+
+#### Union Operator
+
+The **union** of two sets $A$ and $B$ ($A \cup B$) is the set of all the elements of $A$ and all the elements of $B$. It is an inclusive "or": an element that is in both $A$ and $B$ is also in $A \cup B$.
+
+$$A \cup B = \lbrace x : x \in A \lor x \in B \rbrace$$
+
+![Venn diagram of the union of A and B](Attachments/venn-union.svg)
+
+In terms of events, $A \cup B$ occurs when $A$ occurs, $B$ occurs, or both occur. In the example of the die, $E_1 \cup E_3 = \lbrace 1, 2, 3, 5 \rbrace$ and $E_2 \cup E_3 = \Omega$.
+
+The union operator has theseproperties:
+
+1. **Commutativity:** $A \cup B = B \cup A$.
+2. If $A \subseteq B$, then $A \cup B = B$.
+3. $A \cup \emptyset = A$.
+4. **Idempotence:** $A \cup A = A$.
+5. **Associativity:** $A \cup B \cup C = (A \cup B) \cup C = A \cup (B \cup C)$.
+
+#### Intersection Operation
+
+The **intersection** of two sets $A$ and $B$ ($A \cap B$) is the set of the elements that are in $A$ and in $B$ at the same time. It is an "and": an element that is only in $A$, or only in $B$, is not in $A \cap B$.
+
+$$A \cap B = \lbrace x : x \in A \land x \in B \rbrace$$
+
+![Venn diagram of the intersection of A and B](Attachments/venn-intersection.svg)
+
+In terms of events, $A \cap B$ occurs when $A$ and $B$ both occur. In the example of the die, $E_1 \cap E_2 = \lbrace 2 \rbrace$ and $E_2 \cap E_3 = \emptyset$, because an outcome cannot be even and odd at the same time.
+
+The intersection operator has these properties:
+
+1. **Commutativity:** $A \cap B = B \cap A$.
+2. If $A \subseteq B$, then $A \cap B = A$.
+3. $A \cap \emptyset = \emptyset$.
+4. **Idempotence:** $A \cap A = A$.
+5. **Associativity:** $A \cap B \cap C = (A \cap B) \cap C = A \cap (B \cap C)$.
+
+#### Distributive Property of Union and Intersection
+
+The union distributes over the intersection, and the intersection distributes over the union:
+
+$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
+
+$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$
+
+#### Incompatible Events
+
+If the intersection of two events is the empty set, $A \cap B = \emptyset$, we say that the events are **incompatible** (or mutually exclusive). Two incompatible events cannot occur together in one trial. In the example of the die, $E_2 \cap E_3 = \emptyset$, so "even" and "odd" are incompatible events.
+
+#### Difference of Sets
+
+The **difference** of two sets $A$ and $B$ ($A \setminus B$) is the set of the elements that are in $A$ but not in $B$:
+
+$$A \setminus B = \lbrace x \mid x \in A \land x \notin B \rbrace$$
+
+![Venn diagram of the difference of A and B](Attachments/venn-difference.svg)
+
+In terms of events, $A \setminus B$ occurs when $A$ occurs and $B$ does not occur. In the example of the die:
+
+$$E_2 \setminus E_1 = \lbrace 2, 4, 6 \rbrace \setminus \lbrace 2 \rbrace = \lbrace 4, 6 \rbrace$$
+
+The difference is not commutative. For example, $E_1 \setminus E_2 = \lbrace 2 \rbrace \setminus \lbrace 2, 4, 6 \rbrace = \emptyset$, which is not equal to $E_2 \setminus E_1$.
+
+The difference has these properties:
+
+1. $A \setminus \emptyset = A$.
+2. $A \setminus A = \emptyset$.
+3. $A \subseteq B \iff A \setminus B = \emptyset$.
+4. $A \cap B = \emptyset \iff A \setminus B = A$.
+5. $A \setminus B = A \cap B^c$, where $B^c$ is the complement of $B$ (see [Complementary Set](#complementary-set)).
+
+#### Universe of Discourse
+
+The **universe of discourse** $U$ is the set that contains all the elements that we talk about. Each set that we use in a discussion is a subset of $U$. For events, the universe of discourse is usually the sample space, $U = \Omega$.
+
+#### Complementary Set
+
+The **complement** of a set $A$, written $A^c$, is the set of the elements of $U$ that are not in $A$:
+
+$$A^c = \lbrace x \in U \mid x \notin A \rbrace$$
+
+Thus the complement is the difference of $U$ and $A$ (see [Difference of Sets](#difference-of-sets)):
+
+$$A^c = U \setminus A$$
+
+The complement always needs a universe of discourse, because "the elements that are not in $A$" has no clear meaning without it. For example, if $A = \lbrace 2, 4, 6 \rbrace$, the elements that are not in $A$ can be $\lbrace 1, 3, 5 \rbrace$, all the other natural numbers, or all the other real numbers. The answer depends on $U$.
+
+For events, $U = \Omega$, so the complement $A^c$ is the set of the outcomes in $\Omega$ that are not in $A$:
+
+$$A^c = \Omega \setminus A = \lbrace x \in \Omega \mid x \notin A \rbrace$$
+
+![Venn diagram of the complement of A](Attachments/venn-complement.svg)
+
+In terms of events, $A^c$ occurs when $A$ does not occur. In each trial, exactly one of $A$ and $A^c$ occurs. In the example of the die, $E_2^c = \lbrace 1, 3, 5 \rbrace = E_3$, so "not even" is the same event as "odd".
+
+The complement has these properties:
+
+1. **Involution:** $(A^c)^c = A$.
+2. $A \cup A^c = U$.
+3. $A \cap A^c = \emptyset$.
+4. $\emptyset^c = U$.
+5. $U^c = \emptyset$.
+6. **De Morgan's first law:** $(A \cup B)^c = A^c \cap B^c$.
+7. **De Morgan's second law:** $(A \cap B)^c = A^c \cup B^c$.
+
+Properties 2 and 3 say that $A$ and $A^c$ are incompatible events, and that together they cover all of $\Omega$.
+
+De Morgan's laws tell us that the complement changes a union into an intersection, and an intersection into a union. In terms of events, "not ($A$ or $B$)" is the same as "not $A$ and not $B$". Also, "not ($A$ and $B$)" is the same as "not $A$ or not $B$".
+
+**Example:** For the die, $E_1 \cup E_2 = \lbrace 2, 4, 6 \rbrace$, so $(E_1 \cup E_2)^c = \lbrace 1, 3, 5 \rbrace$. On the other side, $E_1^c \cap E_2^c = \lbrace 1, 3, 4, 5, 6 \rbrace \cap \lbrace 1, 3, 5 \rbrace = \lbrace 1, 3, 5 \rbrace$. The two sides give the same set.

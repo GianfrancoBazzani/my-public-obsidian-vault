@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="300" viewBox="0 0 440 300" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1f2937">
+<title>Venn diagram inside the sample space Omega: the intersection of A and B is the shaded region where circle A and circle B overlap</title>
+<rect width="440" height="300" fill="white"/>
+
+<!-- Omega: sample space -->
+<rect x="5" y="5" width="430" height="290" rx="10" fill="none" stroke="#374151" stroke-width="2"/>
+<text x="18" y="30" font-weight="bold">Ω</text>
+
+<!-- Fill: A ∩ B is circle B clipped to circle A -->
+<defs>
+  <clipPath id="clip-a">
+    <circle cx="170" cy="165" r="90"/>
+  </clipPath>
+</defs>
+<circle cx="270" cy="165" r="90" fill="#93c5fd" clip-path="url(#clip-a)"/>
+
+<!-- Outlines on top of all fills -->
+<g fill="none" stroke="#1f2937" stroke-width="2">
+  <circle cx="170" cy="165" r="90"/>
+  <circle cx="270" cy="165" r="90"/>
+</g>
+
+<!-- Labels -->
+<g text-anchor="middle" font-weight="bold">
+  <text x="130" y="171">A</text>
+  <text x="310" y="171">B</text>
+  <text x="220" y="55">A ∩ B</text>
+</g>
+</svg>

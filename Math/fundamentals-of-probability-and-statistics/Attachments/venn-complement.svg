@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="300" viewBox="0 0 440 300" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1f2937">
+<title>Venn diagram inside the sample space Omega: the complement of A is the shaded region of Omega outside the ellipse A</title>
+<rect width="440" height="300" fill="white"/>
+
+<!-- Fill: A^c is all of Omega except A -->
+<rect x="5" y="5" width="430" height="290" rx="10" fill="#93c5fd"/>
+<ellipse cx="220" cy="155" rx="110" ry="75" fill="white"/>
+
+<!-- Outlines on top of all fills -->
+<g fill="none" stroke="#1f2937" stroke-width="2">
+  <rect x="5" y="5" width="430" height="290" rx="10" stroke="#374151"/>
+  <ellipse cx="220" cy="155" rx="110" ry="75"/>
+</g>
+
+<!-- Labels -->
+<g font-weight="bold">
+  <text x="18" y="30">Ω</text>
+  <text x="220" y="161" text-anchor="middle">A</text>
+  <text x="365" y="265" text-anchor="middle">A<tspan dy="-7" font-size="12">c</tspan></text>
+</g>
+</svg>
