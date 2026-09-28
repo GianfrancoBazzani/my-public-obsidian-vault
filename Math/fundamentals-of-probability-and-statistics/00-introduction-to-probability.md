@@ -1,0 +1,78 @@
+# 1 Introduction to Probability
+
+## 1.1 Deterministic vs Aleatory Experiments and Philosophy
+
+### Deterministic Experiment
+
+A deterministic experiment gives the same result each time that we do it under the same conditions. If we know the conditions, we can calculate the result before we do the experiment. The transformation law is determined and known, so we say that a deterministic experiment is a **white box**.
+
+### Aleatory Experiment
+
+An aleatory (random) experiment can give different results each time that we do it under the same conditions. We may know the set of all possible results before we do the experiment, but we cannot know which result will occur in one trial. The transformation law is unknown to us, either because it does not exist or simply because we do not know it, so we say that an aleatory experiment is a **black box**.
+
+Sometimes we can also assign a probability to each of the possible results, but this is not always possible:
+
+- If we can assign a probability to each result, we have a situation of **risk**.
+- If we cannot, we have a situation of complete **uncertainty**.
+
+### History and Philosophy of Randomness
+
+Randomness is not only a mathematical tool. It is also a philosophy, because it changes how we think about nature.
+
+The modern scientific paradigm started with Nicolaus Copernicus (1473–1543), who published *De revolutionibus* in 1543, and with Galileo Galilei (1564–1642). Francis Bacon (1561–1626) then gave the scientific method its formal structure in *Novum Organum* (1620). At the start, science tried to explain large-scale phenomena, mainly the motion of the planets. With time, this approach became stronger, and Isaac Newton (1643–1727) published the *Principia* in 1687.
+
+The objective was always the same: to find clear mathematical laws that describe each natural system like a Swiss clock. If we know the laws, we can predict exactly what will occur at each moment. Pierre-Simon Laplace (1749–1827) gave the classic statement of this idea in *A Philosophical Essay on Probabilities* (1814). An intellect that knows all the forces and all the positions in nature at one moment could describe the movements of all bodies in a single formula, and for it "the future just like the past would be present before its eyes". In the words of the previous section, nature was a white box.
+
+This scientific success also moved into politics and society. The Enlightenment (approximately 1685–1815) applied the same clockwork model to society, where each part must operate with exact precision relative to the other parts. This model was often very rigid. Immanuel Kant (1724–1804) is a good example, because he agreed with the rule "let justice be done, though the world perish" (*fiat iustitia, et pereat mundus*) in *Perpetual Peace* (1795). The phrase itself is older than Kant. People usually attribute it to Emperor Ferdinand I in the 16th century, but Kant adopted it as a principle of politics.
+
+In the 20th century, this paradigm started to break. When physics studied the atom, it found a serious problem. From 1925 to 1927, Niels Bohr (1885–1962), Werner Heisenberg (1901–1976) and other physicists gave a revolutionary interpretation of nature at the microscopic scale, which we now call the Copenhagen interpretation. In their interpretation, the problem is not that we do not know the transformation law. The problem is that nature is intrinsically random.
+
+Some scientists did not accept this idea. Albert Einstein (1879–1955) said that "God does not play dice", and the famous debate between Bohr and Einstein started at the Solvay Conference in Brussels in 1927. In 1935, Einstein, Boris Podolsky (1896–1966) and Nathan Rosen (1909–1995) published a thought experiment (*Gedankenexperiment*), which we now call the EPR paradox. They said that the theory was incomplete, and that some **latent variables** (hidden variables), which the theory did not include, control the results. A latent variable is a variable that we cannot observe, but that has an effect on the results that we observe. Einstein and his colleagues still followed the old deterministic paradigm.
+
+In 1964, John Stewart Bell (1928–1990) published Bell's inequalities, which make it possible to test the EPR position with experiments. The experiments of Alain Aspect in 1982, and of other physicists after him, showed that the EPR position was wrong: no *local* hidden-variable theory can reproduce the results. For these experiments, Aspect, John Clauser and Anton Zeilinger got the Nobel Prize in Physics in 2022.
+
+Bell's inequalities do not eliminate non-local hidden-variable theories, such as the Bohmian mechanics of David Bohm (1952), so "nature is intrinsically random" remains an interpretation. But it is the interpretation that most physicists accept today: physical systems, at least at the microscopic scale, do not need more variables to explain them. They are intrinsically random.
+
+This idea had a very large effect on science, because it was not a small change. It required a completely different method of work. Fields that had no relation to physics started to use random models. Economists asked a new question: maybe the apparent complexity of economic systems does not prevent mathematical models, and maybe we simply used the wrong models. Finance asked the same question.
+
+### Applications of Probability and Statistics
+
+Today, probability and stochastic processes have very many applications. Instead of models that try to remove the randomness, scientists now build models that include it. A stochastic process is a mathematical model of a quantity that changes with time in a random way.
+
+#### Finance
+
+In finance, we use probability to calculate the value of financial instruments. The future price of a stock is not predictable, so we model it as a stochastic process. Louis Bachelier (1870–1946) first did this in his thesis *Théorie de la spéculation* (1900), where he used Brownian motion to describe the prices on the Paris stock exchange. Fischer Black (1938–1995), Myron Scholes and Robert Merton later built the Black–Scholes model (1973). This model gives the price of an option from the random movement of the price of the underlying stock. Most modern pricing and risk models in banks follow this approach.
+
+#### Economics
+
+In economics, central banks use dynamic stochastic general equilibrium (DSGE) models to forecast inflation, interest rates and unemployment. The name describes the model:
+
+- *Dynamic* means that the model follows the economy over time.
+- *Stochastic* means that random shocks hit the economy in each period, for example a sudden change in the price of oil or a new technology. The model cannot know these shocks in advance.
+- *General equilibrium* means that the model describes all the markets of the economy together, so that supply and demand match in all of them at the same time.
+
+The forecast is therefore not a single number, but a distribution of possible futures.
+
+#### Biology
+
+In biology, the SIR model forecasts the number of infected people in an epidemic. The model divides the population into three groups: susceptible (S), infected (I) and recovered (R). People move from S to I when they get the infection, and from I to R when they recover or die, so R is also called "removed". In the stochastic version of the model, each infection and each recovery is a random event, so the model gives a probability for each possible size of the epidemic.
+
+#### Physics
+
+In physics, quantum mechanics and statistical mechanics both use probability. In quantum mechanics, the theory does not give the result of a measurement. It gives the probability of each possible result. Statistical mechanics explains quantities such as temperature and pressure from the random motion of very many particles. Today physicists also write many parts of physics again with probabilistic concepts, for example with entropy and information as basic quantities.
+
+#### Machine Learning and Artificial Intelligence
+
+Machine learning and artificial intelligence have probability theory as their base. A classifier does not say "this image is a cat". It gives a probability for each possible class. A language model gives a probability for each possible next word, and then selects one of them. When we train a model, we usually search for the parameters that give the highest probability to the data that we observed. This is the principle of maximum likelihood, which comes from statistics. Bayesian methods, which update a probability when new data arrives, are also common in this field.
+
+#### Mathematics
+
+Probability theory also needs other branches of mathematics. Measure theory is the base of probability theory itself. Andrey Kolmogorov (1903–1987) showed this in 1933 in *Grundbegriffe der Wahrscheinlichkeitsrechnung* (Foundations of the Theory of Probability), where he gave the axioms that we still use today:
+
+- A probability is a measure on a collection of events.
+- The measure of the whole sample space is equal to one.
+- The measure is countably additive: if the events in a sequence cannot occur together, the probability that one of them occurs is the sum of their probabilities.
+
+Functional analysis is also important for stochastic processes. A random variable is a measurable function. The random variables with a finite second moment form a Hilbert space, and many results about stochastic processes use this space and the theory of operator semigroups.
+
+## 1.2 Introduction to Set Theory

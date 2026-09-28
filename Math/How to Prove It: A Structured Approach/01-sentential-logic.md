@@ -1,4 +1,4 @@
-# Sentential Logic
+# 1 Sentential Logic
 
 > **Sentential** (adjective): of or related to a sentence. In logic, sentential logic (also called propositional logic) studies whole sentences and the logical connectives that combine them, not the internal structure of the sentences.
 
