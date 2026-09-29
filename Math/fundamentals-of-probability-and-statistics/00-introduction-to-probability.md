@@ -248,14 +248,41 @@ The complement has these properties:
 3. $A \cap A^c = \emptyset$.
 4. $\emptyset^c = U$.
 5. $U^c = \emptyset$.
-6. **De Morgan's first law:** $(A \cup B)^c = A^c \cap B^c$.
-7. **De Morgan's second law:** $(A \cap B)^c = A^c \cup B^c$.
 
 Properties 2 and 3 say that $A$ and $A^c$ are incompatible events, and that together they cover all of $\Omega$.
 
+#### De Morgan's Laws
+
+De Morgan's laws give the complement of a union and the complement of an intersection (see [Complementary Set](#complementary-set)):
+
+1. **De Morgan's first law:** $(A \cup B)^c = A^c \cap B^c$.
+2. **De Morgan's second law:** $(A \cap B)^c = A^c \cup B^c$.
+
 De Morgan's laws tell us that the complement changes a union into an intersection, and an intersection into a union. In terms of events, "not ($A$ or $B$)" is the same as "not $A$ and not $B$". Also, "not ($A$ and $B$)" is the same as "not $A$ or not $B$".
 
-**Example:** For the die, $E_1 \cup E_2 = \lbrace 2, 4, 6 \rbrace$, so $(E_1 \cup E_2)^c = \lbrace 1, 3, 5 \rbrace$. On the other side, $E_1^c \cap E_2^c = \lbrace 1, 3, 4, 5, 6 \rbrace \cap \lbrace 1, 3, 5 \rbrace = \lbrace 1, 3, 5 \rbrace$. The two sides give the same set.
+**Example of the first law:** For the die, $E_1 \cup E_2 = \lbrace 2, 4, 6 \rbrace$, so $(E_1 \cup E_2)^c = \lbrace 1, 3, 5 \rbrace$. On the other side, $E_1^c \cap E_2^c = \lbrace 1, 3, 4, 5, 6 \rbrace \cap \lbrace 1, 3, 5 \rbrace = \lbrace 1, 3, 5 \rbrace$. The two sides give the same set.
+
+**Example of the second law:** For the die, $E_1 \cap E_2 = \lbrace 2 \rbrace$, so $(E_1 \cap E_2)^c = \lbrace 1, 3, 4, 5, 6 \rbrace$. On the other side, $E_1^c \cup E_2^c = \lbrace 1, 3, 4, 5, 6 \rbrace \cup \lbrace 1, 3, 5 \rbrace = \lbrace 1, 3, 4, 5, 6 \rbrace$. The two sides give the same set.
+
+**Generalization of the first law:** The first law is also true for any finite number of sets. For each $I \in \mathbb{N}$ and for each family of sets $A_0, A_1, \dots, A_I$:
+
+$$\left( \bigcup_{i=0}^{I} A_i \right)^c = \bigcap_{i=0}^{I} A_i^c$$
+
+**Proof:** Two sets $X$ and $Y$ are equal if and only if $X \subseteq Y$ and $Y \subseteq X$ (the principle of double inclusion). Thus we prove the two inclusions $\left( \bigcup_{i=0}^{I} A_i \right)^c \subseteq \bigcap_{i=0}^{I} A_i^c$ and $\bigcap_{i=0}^{I} A_i^c \subseteq \left( \bigcup_{i=0}^{I} A_i \right)^c$.
+
+To prove the first inclusion, let $x$ be an arbitrary element of $\left( \bigcup_{i=0}^{I} A_i \right)^c$. By the definition of the complement, $x \notin \bigcup_{i=0}^{I} A_i$. By the definition of the union, there is no value of $i \in \lbrace 0, 1, \dots, I \rbrace$ such that $x \in A_i$. Thus, for each $i$, $x \notin A_i$, that is, $x \in A_i^c$. By the definition of the intersection, $x \in \bigcap_{i=0}^{I} A_i^c$. Because $x$ is arbitrary, each element of the first set is also in the second set:
+
+$$\left( \bigcup_{i=0}^{I} A_i \right)^c \subseteq \bigcap_{i=0}^{I} A_i^c$$
+
+To prove the second inclusion, now let $x$ be an arbitrary element of $\bigcap_{i=0}^{I} A_i^c$. By the definition of the intersection, $x \in A_i^c$ for each $i \in \lbrace 0, 1, \dots, I \rbrace$. By the definition of the complement, $x \notin A_i$ for each $i$. Thus there is no value of $i$ such that $x \in A_i$, and by the definition of the union, $x \notin \bigcup_{i=0}^{I} A_i$. By the definition of the complement, $x \in \left( \bigcup_{i=0}^{I} A_i \right)^c$. Because $x$ is arbitrary, each element of the second set is also in the first set:
+
+$$\bigcap_{i=0}^{I} A_i^c \subseteq \left( \bigcup_{i=0}^{I} A_i \right)^c$$
+
+The two inclusions are true, so by the principle of double inclusion:
+
+$$\left( \bigcup_{i=0}^{I} A_i \right)^c = \bigcap_{i=0}^{I} A_i^c$$
+
+$\blacksquare$
 
 ### Buffon's Needle Problem
 
