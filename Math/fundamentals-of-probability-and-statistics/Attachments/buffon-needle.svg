@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" viewBox="0 0 560 360" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1f2937">
+<title>Buffon's needle: parallel lines at distance d, needles of length L dropped at random. One needle shows x, the distance from its center to the nearest line, and theta, its angle with the lines</title>
+<rect width="560" height="360" fill="white"/>
+
+<!-- Parallel lines, distance d = 120 between neighbors -->
+<g stroke="#374151" stroke-width="2">
+  <line x1="20" y1="60" x2="540" y2="60"/>
+  <line x1="20" y1="180" x2="540" y2="180"/>
+  <line x1="20" y1="300" x2="540" y2="300"/>
+</g>
+
+<!-- d: distance between two neighboring lines -->
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/>
+  </marker>
+</defs>
+<line x1="35" y1="62" x2="35" y2="178" stroke="#1f2937" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="45" y="126" font-style="italic">d</text>
+
+<!-- Needles of length L = 100 that do not cross a line -->
+<g stroke="#9ca3af" stroke-width="4" stroke-linecap="round">
+  <line x1="63" y1="127.1" x2="157" y2="92.9"/>
+  <line x1="431.3" y1="169.2" x2="448.7" y2="70.8"/>
+  <line x1="426.7" y1="235" x2="513.3" y2="285"/>
+</g>
+
+<!-- Needles that cross a line -->
+<g stroke="#dc2626" stroke-width="4" stroke-linecap="round">
+  <line x1="175" y1="118.3" x2="225" y2="31.7"/>
+  <line x1="114.6" y1="315.4" x2="185.4" y2="244.6"/>
+  <line x1="381.3" y1="269.2" x2="398.7" y2="170.8"/>
+</g>
+
+<!-- Annotated needle: center (300, 210), angle 60 degrees, crosses the line y = 180 -->
+<g stroke="#1f2937" stroke-width="1.5" fill="none">
+  <!-- x: distance from the center to the nearest line -->
+  <line x1="300" y1="210" x2="300" y2="182" stroke-dasharray="4 3"/>
+  <!-- Reference direction parallel to the lines -->
+  <line x1="300" y1="210" x2="360" y2="210" stroke-dasharray="4 3"/>
+  <!-- theta: angle between the needle and the lines -->
+  <path d="M 324 210 A 24 24 0 0 0 312 189.2"/>
+</g>
+<line x1="275" y1="253.3" x2="325" y2="166.7" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+<circle cx="300" cy="210" r="4" fill="#1f2937"/>
+<g font-style="italic" font-size="18">
+  <text x="286" y="202">x</text>
+  <text x="330" y="202">θ</text>
+  <text x="264" y="236">L</text>
+</g>
+
+<!-- Legend -->
+<g font-size="14">
+  <line x1="150" y1="340" x2="180" y2="340" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+  <text x="190" y="345">crosses a line</text>
+  <line x1="320" y1="340" x2="350" y2="340" stroke="#9ca3af" stroke-width="4" stroke-linecap="round"/>
+  <text x="360" y="345">does not cross</text>
+</g>
+</svg>

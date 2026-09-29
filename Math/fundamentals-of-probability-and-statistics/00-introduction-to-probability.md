@@ -157,7 +157,7 @@ $$A \cup B = \lbrace x : x \in A \lor x \in B \rbrace$$
 
 In terms of events, $A \cup B$ occurs when $A$ occurs, $B$ occurs, or both occur. In the example of the die, $E_1 \cup E_3 = \lbrace 1, 2, 3, 5 \rbrace$ and $E_2 \cup E_3 = \Omega$.
 
-The union operator has theseproperties:
+The union operator has these properties:
 
 1. **Commutativity:** $A \cup B = B \cup A$.
 2. If $A \subseteq B$, then $A \cup B = B$.
@@ -199,7 +199,7 @@ If the intersection of two events is the empty set, $A \cap B = \emptyset$, we s
 
 The **difference** of two sets $A$ and $B$ ($A \setminus B$) is the set of the elements that are in $A$ but not in $B$:
 
-$$A \setminus B = \lbrace x \mid x \in A \land x \notin B \rbrace$$
+$$A \setminus B = \lbrace x : x \in A \land x \notin B \rbrace$$
 
 ![Venn diagram of the difference of A and B](Attachments/venn-difference.svg)
 
@@ -225,7 +225,7 @@ The **universe of discourse** $U$ is the set that contains all the elements that
 
 The **complement** of a set $A$, written $A^c$, is the set of the elements of $U$ that are not in $A$:
 
-$$A^c = \lbrace x \in U \mid x \notin A \rbrace$$
+$$A^c = \lbrace x \in U : x \notin A \rbrace$$
 
 Thus the complement is the difference of $U$ and $A$ (see [Difference of Sets](#difference-of-sets)):
 
@@ -235,7 +235,7 @@ The complement always needs a universe of discourse, because "the elements that 
 
 For events, $U = \Omega$, so the complement $A^c$ is the set of the outcomes in $\Omega$ that are not in $A$:
 
-$$A^c = \Omega \setminus A = \lbrace x \in \Omega \mid x \notin A \rbrace$$
+$$A^c = \Omega \setminus A = \lbrace x \in \Omega : x \notin A \rbrace$$
 
 ![Venn diagram of the complement of A](Attachments/venn-complement.svg)
 
@@ -256,3 +256,133 @@ Properties 2 and 3 say that $A$ and $A^c$ are incompatible events, and that toge
 De Morgan's laws tell us that the complement changes a union into an intersection, and an intersection into a union. In terms of events, "not ($A$ or $B$)" is the same as "not $A$ and not $B$". Also, "not ($A$ and $B$)" is the same as "not $A$ or not $B$".
 
 **Example:** For the die, $E_1 \cup E_2 = \lbrace 2, 4, 6 \rbrace$, so $(E_1 \cup E_2)^c = \lbrace 1, 3, 5 \rbrace$. On the other side, $E_1^c \cap E_2^c = \lbrace 1, 3, 4, 5, 6 \rbrace \cap \lbrace 1, 3, 5 \rbrace = \lbrace 1, 3, 5 \rbrace$. The two sides give the same set.
+
+### Buffon's Needle Problem
+
+Georges-Louis Leclerc, Comte de Buffon (1707–1788), posed this problem in 1733. It is one of the first problems of geometric probability.
+
+**Problem statement:** A floor has parallel lines drawn on it. The distance between two neighboring lines is $d$. We drop a needle of length $L$ at random on the floor, with $L \le d$. What is the probability that the needle crosses one of the lines?
+
+![Buffon's needle: parallel lines at distance d, needles of length L, with x and theta on one needle](Attachments/buffon-needle.svg)
+
+#### Parameters of the Problem
+
+Before we calculate, we must identify the quantities in the problem. There are two types of quantities: fixed parameters and random variables.
+
+The **fixed parameters** do not change from one trial to the next:
+
+- $d$: the distance between two neighboring lines.
+- $L$: the length of the needle, with $L \le d$.
+
+The condition $L \le d$ is important. A needle that is not longer than the distance between the lines can cross a maximum of one line. Thus the needle crosses one line, or it crosses no line.
+
+#### Random Variables
+
+To know if a needle crosses a line, we must know where it falls and how it points. The figure shows that two numbers give all this information:
+
+- $x$: the distance from the center of the needle to the nearest line.
+- $\theta$: the angle between the needle and the lines.
+
+The horizontal position of the needle along the lines is not important, because all the positions along a line are equal. Thus $x$ and $\theta$ are sufficient.
+
+Each of the two variables has a range:
+
+- The center of the needle is always between two lines, and the nearest line is at a maximum distance of $d/2$. Thus $0 \le x \le d/2$.
+- The angles $\theta$ and $\pi - \theta$ give two needles that are mirror images of each other. They have the same distance to the line, so we can use only $0 \le \theta \le \pi/2$.
+
+"At random" means two things:
+
+1. $x$ has a uniform distribution on $[0, d/2]$, so the needle has no preferred position.
+2. $\theta$ has a uniform distribution on $[0, \pi/2]$, so the needle has no preferred direction. Also, $\theta$ is independent of $x$.
+
+#### Sample Space
+
+Each trial gives one pair $(x, \theta)$. Thus the sample space is a rectangle in the plane:
+
+$$\Omega = \lbrace (x, \theta) : 0 \le x \le d/2, \quad 0 \le \theta \le \pi/2 \rbrace$$
+
+The two conditions are independent of each other, so we can also write $\Omega$ as the Cartesian product of the range of $x$ and the range of $\theta$:
+
+$$\Omega = [0, d/2] \times [0, \pi/2]$$
+
+The Cartesian product $A \times B$ is the set of all the ordered pairs $(a, b)$ with $a \in A$ and $b \in B$.
+
+This is a continuous sample space, because it has an uncountable number of outcomes. We cannot count the outcomes, so we measure the area of the rectangle:
+
+$$\text{Area}(\Omega) = \frac{d}{2} \cdot \frac{\pi}{2} = \frac{\pi d}{4}$$
+
+#### Condition for a Crossing
+
+Now we must find the outcomes in which the needle crosses a line. Each half of the needle has the length $L/2$. The vertical distance that one half covers, from the center toward the nearest line, is $\frac{L}{2} \sin \theta$.
+
+The needle crosses the line when this vertical distance is equal to or larger than the distance from the center to the line:
+
+$$x \le \frac{L}{2} \sin \theta$$
+
+Thus the event "the needle crosses a line" is this subset of $\Omega$:
+
+$$E = \lbrace (x, \theta) \in \Omega : x \le \tfrac{L}{2} \sin \theta \rbrace$$
+
+Because $L \le d$, we have $\frac{L}{2} \sin \theta \le \frac{d}{2}$, so the region $E$ is always inside the rectangle $\Omega$.
+
+#### Strategy of the Solution
+
+The distribution of the outcomes on $\Omega$ is uniform. Thus each region of $\Omega$ has a probability that is proportional to its area. The probability of a crossing is the part of the rectangle that $E$ covers:
+
+$$P(E) = \frac{\text{Area}(E)}{\text{Area}(\Omega)}$$
+
+We know $\text{Area}(\Omega)$. The next step is to calculate $\text{Area}(E)$, which is the area under the curve $x = \frac{L}{2} \sin \theta$ for $\theta$ from $0$ to $\pi/2$.
+
+The figure shows $\Omega$ and $E$ in the plane $(\theta, x)$. The function $x = \frac{L}{2} \sin \theta$ starts at $0$ when $\theta = 0$. At that angle the needle is parallel to the lines, so it can touch a line only if $x = 0$. The function increases to its maximum $L/2$ when $\theta = \pi/2$. At that angle the needle is perpendicular to the lines, so it crosses a line if $x \le \frac{L}{2}$. Also, if the center of the needle is at a distance $x = 0$ from the line, the needle touches the line for all values of $\theta$.
+
+![Sample space of Buffon's needle: the rectangle Omega, with the region E under the curve x = (L/2) sin theta shaded](Attachments/buffon-sample-space.svg)
+
+The shaded area under the curve is the event $E$ where the needle crosses the line. The white area above the curve is $E^c$, where the needle does not cross a line.
+
+To calculate the area of $E$, we integrate the curve $x = \frac{L}{2} \sin \theta$ from $\theta = 0$ to $\theta = \pi/2$:
+
+$$\text{Area}(E) = \int_{0}^{\pi/2} \frac{L}{2} \sin \theta \ d\theta$$
+
+We can solve this integral with Barrow's rule.
+
+> [!NOTE]
+> **Barrow's rule**
+>
+> If $f$ is continuous on $[a, b]$ and $f = g'$ for some function $g$, then:
+>
+> $$\int_{a}^{b} f(t) \ dt = g(b) - g(a)$$
+>
+> Barrow's rule is a consequence of the fundamental theorem of calculus.
+
+To use the rule, we need a function $g$ with $g'(\theta) = \frac{L}{2} \sin \theta$. The derivative of the cosine is:
+
+$$\frac{d}{d\theta} \cos \theta = -\sin \theta$$
+
+Thus $g(\theta) = -\frac{L}{2} \cos \theta$ has the derivative $g'(\theta) = \frac{L}{2} \sin \theta$. The function $\sin \theta$ is continuous on $[0, \pi/2]$, so Barrow's rule applies:
+
+$$\text{Area}(E) = \int_{0}^{\pi/2} \frac{L}{2} \sin \theta \ d\theta = g\left(\frac{\pi}{2}\right) - g(0) = -\frac{L}{2} \cos \frac{\pi}{2} + \frac{L}{2} \cos 0 = -\frac{L}{2} \cdot 0 + \frac{L}{2} \cdot 1 = \frac{L}{2}$$
+
+#### Probability of a Crossing
+
+We now know the two areas. The probability of a crossing is the ratio of the area of $E$ to the area of $\Omega$:
+
+$$P(E) = \frac{\text{Area}(E)}{\text{Area}(\Omega)} = \frac{L/2}{\pi d/4} = \frac{L}{2} \cdot \frac{4}{\pi d} = \frac{2L}{\pi d}$$
+
+Thus the final solution is:
+
+$$P(\text{the needle crosses a line}) = \frac{2L}{\pi d}$$
+
+For example, if the length of the needle is equal to the distance between the lines ($L = d$), then $P(E) = \frac{2}{\pi} \approx 0.6366$.
+
+### Deterministic Results from Probability
+
+In the previous section, we found that the probability of a crossing in Buffon's needle problem is $\frac{2L}{\pi d}$. This result contains $\pi$, a constant that has nothing random in it. We can use this relation in the opposite direction. If we drop the needle $n$ times and it crosses a line $k$ times, the fraction $k/n$ is an approximation of $P(E)$. When $n$ increases, the approximation becomes better. Thus:
+
+$$\frac{k}{n} \approx \frac{2L}{\pi d} \quad \Rightarrow \quad \pi \approx \frac{2Ln}{dk}$$
+
+A random experiment gives an approximation of a deterministic number.
+
+The same idea is the base of **Monte Carlo simulation**. In Buffon's needle problem, we calculated an integral to get a probability. Monte Carlo simulation does the opposite: it uses a probability to get an integral. We did not do a Monte Carlo simulation here, but the idea is the same.
+
+Probability is a different way to approach a problem. Some problems also have a deterministic solution, but in many cases that solution is much more difficult to find. For example, an integral can have no antiderivative that we can write, or it can have many variables. In these cases, an exact calculation can be very difficult or not possible. A probabilistic method only needs many random trials and a count of the results, and it gives an approximation that becomes better with more trials.
+
