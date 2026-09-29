@@ -405,6 +405,8 @@ A set is completely determined once its elements have been specified. Thus, two 
 
 Thus, $\{3, 7, 14\}$, $\{14, 3, 7\}$, and $\{3, 7, 14, 7\}$ are three different names for the same set.
 
+The **cardinality** of a set is its size. For a finite set, the cardinality is the number of elements it contains. In symbolic notation, the cardinality of a set $S$ is written $|S|$. For example, $|\{3, 7, 14, 7\}| = 3$, because the repeated $7$ counts only once. We will deal with the idea of the cardinality of an infinite set later.
+
 It may be impractical to define a set that contains a very large number of elements by listing all of its elements, and it would be impossible to give such a definition for a set that contains infinitely many elements. Sets are usually defined by spelling out the pattern that determines the elements of the set.
 
 For example, we could define the set $P$ of all prime numbers as:
@@ -450,6 +452,16 @@ $$\mathbb{Z}^- = \{x \mid x \text{ is a negative integer}\}$$
 The choice of universe of discourse can sometimes make a difference. For example, consider the statement $x^2 \lt 9$. If the universe of discourse of this statement were $\mathbb{R}$, then its truth set would be $\{x \in \mathbb{R} \mid x^2 \lt 9\}$, or in other words, the set of all real numbers between $-3$ and $3$, exclusive. But if the universe of discourse were $\mathbb{Z}$, then its truth set would be $\{x \in \mathbb{Z} \mid x^2 \lt 9\} = \{-2, -1, 0, 1, 2\}$.
 
 Sometimes this explicit notation is used not to specify the universe of discourse but to restrict attention to just a part of the universe.
+
+The **complement** of a set $S$ is the collection of objects in the universe of discourse $U$ that are not in $S$. The complement is written $S^c$. In curly brace notation:
+
+$$S^c = \{x \mid (x \in U) \land (x \notin S)\}$$
+
+or more compactly as:
+
+$$S^c = \{x \mid x \notin S\}$$
+
+However, it should be apparent that the complement of a set always depends on which universe of discourse is chosen. For example, if the universe of discourse is $\mathbb{Z}$, the complement of $\{-2, -1, 0, 1, 2\}$ is $\{x \in \mathbb{Z} \mid x^2 \geq 9\}$, but if the universe of discourse is $\mathbb{R}$, the complement is a completely different set that also contains numbers such as $2.5$ and $\pi$.
 
 Because a set is completely determined once its elements have been specified, there is only one set that has no elements. It is called the **empty set**, or the **null set**, and is often denoted by $\emptyset$ or $\{\}$. For example, $\{x \in \mathbb{Z} \mid x \neq x\} = \emptyset$. Since the empty set has no elements, the statement $x \in \emptyset$ is always false.
 
@@ -551,6 +563,10 @@ The **difference** of $A$ and $B$ is the set $A \setminus B$ defined as follows:
 
 $$ A \setminus B = \{x \mid x \in A \land x \notin B\}$$
 
+Because $x \notin B$ means the same thing as $x \in B^c$, the difference of $A$ and $B$ is the intersection of $A$ with the complement of $B$:
+
+$$ A \setminus B = \{x \mid x \in A \land x \in B^c\} = A \cap B^c$$
+
 The **symmetric difference** of $A$ and $B$ is the set $A \triangle B$ defined as follows:
 
 $$ A \triangle B = (A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B) = \{x \mid x \in A \oplus x \in B\}$$
@@ -566,6 +582,16 @@ The set theory operations $\cap$, $\cup$, $\setminus$, and $\triangle$ are relat
 **Example 1.4.6**. Consider the sets $A$, $B$ and $C$. Suppose that $A \subseteq B$, that $A$ and $C$ are disjoint ($A \cap C = \emptyset$), and that $B$ and $C$ are not disjoint ($B \cap C \neq \emptyset$). The Venn diagram will look as follows:
 
 ![Venn diagram inside the universe U: circle A lies inside circle B, and circle C overlaps B but not A](Attachments/venn-subset-disjoint.svg)
+
+**Principle of double inclusion.** Two sets are equal if and only if each is a subset of the other. In symbolic notation:
+
+$$(A = B) \iff (A \subseteq B) \land (B \subseteq A)$$
+
+**Proof.** First assume that $A = B$. Every element of $A$ is an element of $A$, so every set is a subset of itself and $A \subseteq A$. Since $A = B$, we may substitute $B$ for $A$ on the left side of this expression and obtain $B \subseteq A$. Similarly, we may substitute on the right side and obtain $A \subseteq B$. We have thus demonstrated that if $A = B$, then $A$ and $B$ are both subsets of each other, giving us the first half of the proof.
+
+Assume now that $A \subseteq B$ and $B \subseteq A$. Then the definition of subset tells us that any element of $A$ is an element of $B$. Similarly, any element of $B$ is an element of $A$. This means that $A$ and $B$ have the same elements, which satisfies the definition of set equality. We deduce $A = B$, and we have the second half of the proof.
+
+This principle is the usual way to prove that two sets are equal: prove the two inclusions separately.
 
 **Theorem 1.4.7**. For any sets $A$ and $B$, $(A \cup B) \setminus B \subseteq A$.
 
