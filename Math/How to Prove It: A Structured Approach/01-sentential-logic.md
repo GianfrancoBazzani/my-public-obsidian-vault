@@ -399,6 +399,15 @@ If a statement contains variables, we can no longer describe the statement as be
 
 A **set** is a collection of objects. The objects in the collection are called **elements** of the set. The simplest way to specify a particular set is to list its elements between braces $\{\}$.
 
+A set of real numbers that contains every number between two endpoints $a$ and $b$ can also be written in **interval notation**. A square bracket $[\ ]$ means that the endpoint is included in the set, and a parenthesis $(\ )$ means that it is excluded:
+
+- **Closed interval** $[a, b]$: all real numbers $x$ with $a \leq x \leq b$. Both endpoints are included.
+- **Open interval** $(a, b)$: all real numbers $x$ with $a \lt x \lt b$. Both endpoints are excluded.
+- **Half-open intervals** $[a, b)$ and $(a, b]$: all real numbers $x$ with $a \leq x \lt b$, or with $a \lt x \leq b$. Only one endpoint is included.
+- **Unbounded intervals** $[a, \infty)$, $(a, \infty)$, $(-\infty, b]$, $(-\infty, b)$: all real numbers on one side of an endpoint. The symbol $\infty$ is not a number, so it always takes a parenthesis.
+
+For example, $[0, 1]$ contains $0$, $0.5$, and $1$, but $(0, 1)$ contains $0.5$ and not $0$ or $1$.
+
 We use the symbol $\in$ to mean "is an element of". To say that an object is not an element of a specific set, we use the symbol $\notin$.
 
 A set is completely determined once its elements have been specified. Thus, two sets that have exactly the same elements are always equal. Also, when a set is defined by listing its elements, all that matters is which objects are in the list of elements, not the order in which they are listed. An element can appear more than once in the list, and this does not change the set.
