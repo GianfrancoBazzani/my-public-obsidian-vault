@@ -814,7 +814,9 @@ From the statements $P \rightarrow Q$ and $Q$, it is incorrect to infer $P$, bec
 
 Another equivalence that relates the conditional argument with its converse is the **contrapositive** law:
 
-$$P \rightarrow Q \text{ is equivalent to } \neg Q \rightarrow \neg P$$### Exercises
+$$P \rightarrow Q \text{ is equivalent to } \neg Q \rightarrow \neg P$$
+
+### Exercises
 
 **1\.** Analyze the logical forms of the following statements:
 
