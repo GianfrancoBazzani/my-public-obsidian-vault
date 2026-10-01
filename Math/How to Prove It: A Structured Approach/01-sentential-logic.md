@@ -816,6 +816,16 @@ Another equivalence that relates the conditional argument with its converse is t
 
 $$P \rightarrow Q \text{ is equivalent to } \neg Q \rightarrow \neg P$$
 
+Statements of the form $P \rightarrow Q$ come up very often in mathematics, but sometimes they are not written in the form "If $P$ then $Q$". Here are a few ways of expressing the idea $P \rightarrow Q$ that are used often in mathematics: 
+
+  - $P$ implies $Q$
+  - $Q$, if $P$
+  - $P$ only if $Q$
+  - $P$ is a sufficient condition for $Q$
+  - $Q$ is a necessary condition for $P$
+  
+Often in mathematics we want to say that both $P \rightarrow Q$ and its converse $Q \rightarrow P$ are true, and it is therefore convenient to introduce a new connective symbol $\leftrightarrow$ to express this. You can think of $P \leftrightarrow Q$ as just an abbreviation for the formula $(P \rightarrow Q) \land (Q \rightarrow P)$. A statement of the form $P \leftrightarrow Q$ is called a **biconditional** statement, because it represents two conditional statements. This is often written as "$P$ if and only if $Q$". The phrase **if and only if** occurs so often in mathematics that there is a common abbreviation for it, **iff**. Thus, $P \leftrightarrow Q$ is often written "$P$ iff $Q$". Another statement that means $P \leftrightarrow Q$ is "$P$ is a necessary and sufficient condition for $Q$".
+
 ### Exercises
 
 **1\.** Analyze the logical forms of the following statements:
@@ -871,15 +881,3 @@ Now analyze the following statements. Also, for each statement determine whether
 **d)** $(P \land Q) \rightarrow R$.
 
 **e)** $P \rightarrow (Q \land R)$.
-
-
-Statements of the form $P \rightarrow Q$ come up very often in mathematics, but sometimes they are not written in the form "If $P$ then $Q$". Here are a few ways of expressing the idea $P \rightarrow Q$ that are used often in mathematics: 
-
-  - $P$ implies $Q$
-  - $Q$, if $P$
-  - $P$ only if $Q$
-  - $P$ is a sufficient condition for $Q$
-  - $Q$ is a necessary condition for $P$
-  
-Often in mathematics we want to say that both $P \rightarrow Q$ and its converse $Q \rightarrow P$ are true, and it is therefore convenient to introduce a new connective symbol $\leftrightarrow$ to express this. You can think of $P \leftrightarrow Q$ as just an abbreviation for the formula $(P \rightarrow Q) \land (Q \rightarrow P)$. A statement of the form $P \leftrightarrow Q$ is called a **biconditional** statement, because it represents two conditional statements. This is often written as "$P$ if and only if $Q$". The phrase **if and only if** occurs so often in mathematics that there is a common abbreviation for it, **iff**. Thus, $P \leftrightarrow Q$ is often written "$P$ iff $Q$". Another statement that means $P \leftrightarrow Q$ is "$P$ is a necessary and sufficient condition for $Q$".
-
