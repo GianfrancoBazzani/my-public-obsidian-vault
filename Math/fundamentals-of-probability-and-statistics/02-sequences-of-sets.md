@@ -261,3 +261,71 @@ $$
 $$
 
   Thus $\liminf A_n = A \cap B$ and $\limsup A_n = A \cup B$. If $A \neq B$, the two limits are different, so the sequence does not converge. This is the same as $x_n = (-1)^n$ for sequences of real numbers.
+
+**Proof: inferior limit of sequences of sets**
+
+We want to prove that the inferior limit, as the set of the elements that are in all the sets $A_k$ with the exception of a finite number of them, is equal to the union of the intersections of the tails:
+
+$$
+\liminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k
+$$
+
+Two sets are equal if and only if each one of them contains the other one. Thus we prove the two inclusions:
+
+$$
+\liminf_{n \to \infty} A_n \subseteq \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \qquad \text{and} \qquad \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \subseteq \liminf_{n \to \infty} A_n
+$$
+
+**a)** Let
+
+$$
+\delta_n = \bigcap_{k=n}^{\infty} A_k \qquad \text{and} \qquad \sigma_n = \bigcup_{k=n}^{\infty} A_k
+$$
+
+Observe that:
+
+$$
+\delta_1 \subseteq \delta_2 \subseteq \delta_3 \subseteq \dots
+$$
+
+$$
+\bigcap_{k=1}^{\infty} A_k \subseteq \bigcap_{k=2}^{\infty} A_k \subseteq \bigcap_{k=3}^{\infty} A_k \subseteq \dots
+$$
+
+$$
+\sigma_1 \supseteq \sigma_2 \supseteq \sigma_3 \supseteq \dots
+$$
+
+$$
+\bigcup_{k=1}^{\infty} A_k \supseteq \bigcup_{k=2}^{\infty} A_k \supseteq \bigcup_{k=3}^{\infty} A_k \supseteq \dots
+$$
+
+The intersection $\delta_{n+1}$ has one set less than $\delta_n$, because it does not contain $A_n$. When $n$ grows, the tail has fewer sets, so the intersection is less restrictive and the set gets bigger $\delta_n \subseteq \delta_{n+1}$. Similarly, the union $\sigma_{n+1}$ has one set less than $\sigma_n$, so $\sigma_n \supseteq \sigma_{n+1}$.
+
+**b)** $\liminf A_n \subseteq \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$
+
+Let $\omega \in \liminf A_n$. Then there is an $n \in \mathbb{N}$ such that $\omega \in A_k$ for all $k \geq n$. Thus $\omega$ is in the intersection $\delta_n$ of the tail from index $n$ on:
+
+$$
+\exists n : \omega \in \delta_n \implies \omega \in \bigcup_{n=1}^{\infty} \delta_n \implies \omega \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k
+$$
+
+This is true for each $\omega \in \liminf A_n$, so $\liminf A_n \subseteq \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$.
+
+**c)** $\bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \subseteq \liminf A_n$
+
+Let $\omega \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$. An element of a union is in at least one of the sets of the union, so there is an $n \in \mathbb{N}$ such that $\omega \in \delta_n$:
+
+$$
+\omega \in \bigcup_{n=1}^{\infty} \delta_n \implies \exists n : \omega \in \delta_n = \bigcap_{k=n}^{\infty} A_k \implies \forall k \geq n : \omega \in A_k
+$$
+
+Thus $\omega$ is in all the sets $A_k$ from index $n$ on. The only sets that can be without $\omega$ are $A_1, A_2, \dots, A_{n-1}$, which are a finite number of sets. Thus $\omega \in \liminf A_n$.
+
+This is true for each $\omega \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$, so $\bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \subseteq \liminf A_n$.
+
+From b) and c), each set contains the other one, so
+
+$$
+\liminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \qquad \blacksquare
+$$
