@@ -175,3 +175,89 @@ f : \mathbb{N} &\to \mathcal{P}(\Omega) \\
 $$
 
 Each term $A_n \subseteq \Omega$ is a set, and we denote the sequence by $\{A_n\}_{n \in \mathbb{N}}$.
+
+**Example:** let $A_n$ be the set
+
+$$
+A_n = \left\{ x \in \mathbb{R} : -\frac{1}{n} \leq x \leq \frac{1}{n} \right\}
+$$
+
+For $n = 1$ we get the real numbers in the interval $[-1, 1]$, for $n = 2$ we get $\left[ -\frac{1}{2}, \frac{1}{2} \right]$, and so on. In this case we have a sequence of **nested intervals**, where each interval contains the next one:
+
+$$
+A_1 \supseteq A_2 \supseteq A_3 \supseteq \dots
+$$
+
+![Nested intervals A_n = [-1/n, 1/n] on the real line: A_1 = [-1, 1] contains A_2 = [-1/2, 1/2], which contains A_3 = [-1/3, 1/3]](Attachments/nested-intervals.svg)
+
+## 2.6 Inferior and Superior Limits of Sequences of Sets
+
+For sequences of sets, the inferior and the superior limits have the same structure as for sequences of real numbers. The intersection $\bigcap$ takes the role of $\inf$, and the union $\bigcup$ takes the role of $\sup$.
+
+The inferior limit of a sequence of sets $\{A_n\}_{n \in \mathbb{N}}$ is denoted by:
+
+$$
+\liminf_{n \to \infty} A_n \qquad \text{or} \qquad \varliminf_{n \to \infty} A_n
+$$
+
+and the superior limit of a sequence of sets $\{A_n\}_{n \in \mathbb{N}}$ is denoted by:
+
+$$
+\limsup_{n \to \infty} A_n \qquad \text{or} \qquad \varlimsup_{n \to \infty} A_n
+$$
+
+**Definition:**
+
+For a sequence $\{A_n\}_{n \in \mathbb{N}}$ of subsets of $\Omega$:
+
+- The **inferior limit** is defined by:
+
+$$
+\liminf_{n \to \infty} A_n := \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k
+$$
+
+  $\omega \in \liminf A_n$ if and only if there is an index $n$ such that $\omega \in A_k$ for all $k \geq n$. That is, $\omega$ is in all the sets $A_k$, with the exception of a finite number of them.
+
+- The **superior limit** is defined by:
+
+$$
+\limsup_{n \to \infty} A_n := \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k
+$$
+
+  $\omega \in \limsup A_n$ if and only if for each index $n$ there is a $k \geq n$ such that $\omega \in A_k$. That is, $\omega$ is in an infinite number of the sets $A_k$.
+
+If the two limits are equal, we say that the sequence **converges** to the set $A$ and write
+
+$$
+\lim_{n \to \infty} A_n = A \qquad \text{where} \qquad A = \liminf_{n \to \infty} A_n = \limsup_{n \to \infty} A_n
+$$
+
+How to read the definition:
+
+- $\bigcap_{k=n}^{\infty} A_k$ contains the elements that are in **all** the sets of the tail from index $n$ on. When $n$ grows, there are fewer sets in the intersection, so this set can only get larger.
+- $\bigcup_{k=n}^{\infty} A_k$ contains the elements that are in **at least one** set of the tail from index $n$ on. When $n$ grows, there are fewer sets in the union, so this set can only get smaller.
+- An element that is in all the sets from some index on is also in an infinite number of sets, so $\liminf A_n \subseteq \limsup A_n$.
+
+**Examples:**
+
+- For the nested intervals $A_n = \left[ -\frac{1}{n}, \frac{1}{n} \right]$ of section 2.5, each interval contains the next one. Thus for each $n$:
+
+$$
+\bigcap_{k=n}^{\infty} A_k = \{0\} \qquad \text{and} \qquad \bigcup_{k=n}^{\infty} A_k = A_n
+$$
+
+  The only real number that is in all the intervals is $0$, because for each $x \neq 0$ there is an $n$ with $\frac{1}{n} < |x|$. Thus
+
+$$
+\liminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \{0\} = \{0\} \qquad \text{and} \qquad \limsup_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} A_n = \{0\}
+$$
+
+  The two limits are equal, so the sequence converges and $\lim_{n \to \infty} A_n = \{0\}$.
+
+- For two sets $A$ and $B$, let $A_n = A$ if $n$ is even and $A_n = B$ if $n$ is odd. Each tail contains both $A$ and $B$, so for each $n$:
+
+$$
+\bigcap_{k=n}^{\infty} A_k = A \cap B \qquad \text{and} \qquad \bigcup_{k=n}^{\infty} A_k = A \cup B
+$$
+
+  Thus $\liminf A_n = A \cap B$ and $\limsup A_n = A \cup B$. If $A \neq B$, the two limits are different, so the sequence does not converge. This is the same as $x_n = (-1)^n$ for sequences of real numbers.
