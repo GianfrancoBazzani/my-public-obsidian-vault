@@ -226,12 +226,6 @@ $$
 
   $\omega \in \limsup A_n$ if and only if for each index $k$ there is an $n \geq k$ such that $\omega \in A_n$. That is, $\omega$ is in an infinite number of the sets $A_n$.
 
-If the two limits are equal, we say that the sequence **converges** to the set $A$ and write
-
-$$
-\lim_{n \to \infty} A_n = A \qquad \text{where} \qquad A = \liminf_{n \to \infty} A_n = \limsup_{n \to \infty} A_n
-$$
-
 How to read the definition:
 
 - $\bigcap_{n=k}^{\infty} A_n$ contains the elements that are in **all** the sets of the tail from index $k$ on. When $k$ grows, there are fewer sets in the intersection, so this set can only get larger.
@@ -252,7 +246,7 @@ $$
 \liminf_{n \to \infty} A_n = \bigcup_{k=1}^{\infty} \{0\} = \{0\} \qquad \text{and} \qquad \limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} A_k = \{0\}
 $$
 
-  The two limits are equal, so the sequence converges and $\lim_{n \to \infty} A_n = \{0\}$.
+  The two limits are equal, so the sequence converges (see section 2.7) and $\lim_{n \to \infty} A_n = \{0\}$.
 
 - For two sets $A$ and $B$, let $A_n = A$ if $n$ is even and $A_n = B$ if $n$ is odd. Each tail contains both $A$ and $B$, so for each $k$:
 
@@ -260,7 +254,7 @@ $$
 \bigcap_{n=k}^{\infty} A_n = A \cap B \qquad \text{and} \qquad \bigcup_{n=k}^{\infty} A_n = A \cup B
 $$
 
-  Thus $\liminf A_n = A \cap B$ and $\limsup A_n = A \cup B$. If $A \neq B$, the two limits are different, so the sequence does not converge. This is the same as $x_n = (-1)^n$ for sequences of real numbers.
+  Thus $\liminf A_n = A \cap B$ and $\limsup A_n = A \cup B$. If $A \neq B$, the two limits are different, so the sequence does not converge (see section 2.7). This is the same as $x_n = (-1)^n$ for sequences of real numbers.
 
 **Proof: inferior limit of sequences of sets**
 
@@ -378,4 +372,121 @@ From b) and c), each set contains the other one, so
 
 $$
 \limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n \qquad \blacksquare
+$$
+
+## 2.7 Convergent Sequences of Sets
+
+A sequence of sets $\{A_n\}_{n \in \mathbb{N}}$ is **convergent** if and only if
+
+$$
+\limsup_{n \to \infty} A_n = \liminf_{n \to \infty} A_n
+$$
+
+In this case, the common set of the superior and the inferior limits is the **limit** of $A_n$:
+
+$$
+\lim_{n \to \infty} A_n = \liminf_{n \to \infty} A_n = \limsup_{n \to \infty} A_n
+$$
+
+
+If the inferior and the superior limits of a sequence of sets are different, we say that the sequence has **no limit**.
+
+**Example:** let $\{A_n\}_{n \in \mathbb{N}}$ be the sequence defined by
+
+$$
+A_n =
+\begin{cases}
+[0, 1] & n \text{ odd} \\
+[1, 2] & n \text{ even}
+\end{cases}
+$$
+
+Each tail $A_k, A_{k+1}, A_{k+2}, \dots$ contains both $[0, 1]$ and $[1, 2]$, so the intersection of each tail is $[0, 1] \cap [1, 2] = \{1\}$. Thus the inferior limit is
+
+$$
+\liminf_{n \to \infty} A_n = \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n = \bigcap_{n=1}^{\infty} A_n \cup \bigcap_{n=2}^{\infty} A_n \cup \bigcap_{n=3}^{\infty} A_n \cup \dots = \{1\}
+$$
+
+Similarly, the union of each tail is $[0, 1] \cup [1, 2] = [0, 2]$. Thus the superior limit is
+
+$$
+\limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n = \bigcup_{n=1}^{\infty} A_n \cap \bigcup_{n=2}^{\infty} A_n \cap \bigcup_{n=3}^{\infty} A_n \cap \dots = [0, 2]
+$$
+
+The inferior limit $\{1\}$ and the superior limit $[0, 2]$ are different, so the sequence has no limit.
+
+## 2.8 Monotone Sequences of Sets
+
+**Definition:**
+
+- $\{A_n\}_{n \in \mathbb{N}}$ is a **monotone increasing** sequence, written $A_n \uparrow$, if
+
+$$
+A_n \subseteq A_{n+1} \quad \forall n
+$$
+
+- $\{A_n\}_{n \in \mathbb{N}}$ is a **monotone decreasing** sequence, written $A_n \downarrow$, if
+
+$$
+A_n \supseteq A_{n+1} \quad \forall n
+$$
+
+**Proposition (limit of monotone sequences of sets):**
+
+Every monotone sequence of sets has a limit:
+
+- If $A_n \uparrow$, the limit is
+
+$$
+\lim_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} A_n
+$$
+
+- If $A_n \downarrow$, the limit is
+
+$$
+\lim_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} A_n
+$$
+
+## 2.9 Properties of the Limits of Sequences of Sets
+
+In this section, $\varlimsup A_n$ is the superior limit and $\varliminf A_n$ is the inferior limit of $\{A_n\}_{n \in \mathbb{N}}$, and $B$ is a set.
+
+**a)** The limits of a sequence can be found from the limits of its even terms $A_{2n}$ and its odd terms $A_{2n-1}$:
+
+$$
+\begin{aligned}
+\varlimsup A_n &= \varlimsup A_{2n} \cup \varlimsup A_{2n-1} \\
+\varliminf A_n &= \varliminf A_{2n} \cap \varliminf A_{2n-1}
+\end{aligned}
+$$
+
+An element is in an infinite number of the sets $A_n$ if and only if it is in an infinite number of the even sets or of the odd sets. An element is in all the sets from some index on if and only if this is true for the even sets and for the odd sets.
+
+**b)** The limits of the differences $B \setminus A_n$:
+
+$$
+\begin{aligned}
+\varlimsup (B \setminus A_n) &= B \setminus \varliminf A_n \\
+\varliminf (B \setminus A_n) &= B \setminus \varlimsup A_n
+\end{aligned}
+$$
+
+**c)** The complement changes the superior limit into the inferior limit, and the inferior limit into the superior limit:
+
+$$
+\begin{aligned}
+\left( \varlimsup A_n \right)^c &= \varliminf A_n^c \\
+\left( \varliminf A_n \right)^c &= \varlimsup A_n^c
+\end{aligned}
+$$
+
+This follows from De Morgan's laws, because the complement changes each union into an intersection and each intersection into a union.
+
+**d)** The limits of the unions and the intersections of two sequences $\{A_n\}_{n \in \mathbb{N}}$ and $\{B_n\}_{n \in \mathbb{N}}$:
+
+$$
+\begin{aligned}
+\varlimsup (A_n \cup B_n) &= \varlimsup A_n \cup \varlimsup B_n \\
+\varliminf (A_n \cap B_n) &= \varliminf A_n \cap \varliminf B_n
+\end{aligned}
 $$
