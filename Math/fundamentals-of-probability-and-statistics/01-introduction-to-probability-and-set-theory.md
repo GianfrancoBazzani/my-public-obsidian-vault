@@ -1,4 +1,4 @@
-# 1 Introduction to Probability
+# 1 Introduction to Probability and Set Theory
 
 ## 1.1 Deterministic vs Aleatory Experiments and Philosophy
 
