@@ -57,7 +57,30 @@ A convergent sequence has exactly one limit. Two different limits $L \neq L'$ wo
 - $x_n = (-1)^n$ diverges. The terms alternate between $-1$ and $1$, so for $\varepsilon = 1$ no $L$ has all terms from some index on within distance $1$ of it.
 - $x_n = n$ diverges. The terms grow without bound, and we write $x_n \to \infty$.
 
-## 2.3 Sequences of Sets
+## 2.3 Subsequences
+
+A **subsequence** is a sequence obtained from another sequence by keeping only some of its terms, in the same order, and discarding the rest.
+
+Formally, given a sequence $\{x_n\}_{n \in \mathbb{N}}$ and a strictly increasing sequence of natural numbers $n_1 < n_2 < n_3 < \dots$, the sequence $\{x_{n_k}\}_{k \in \mathbb{N}}$ is a subsequence of $\{x_n\}_{n \in \mathbb{N}}$.
+
+The indices must be strictly increasing, so a subsequence cannot repeat a term or change the order of the terms.
+
+If a sequence converges to $L$, every subsequence also converges to $L$. As a consequence, if two subsequences converge to different limits, the sequence diverges.
+
+**Examples:**
+
+- For $x_n = \frac{1}{n}$, the even terms $x_{2k} = \frac{1}{2k}$ give the subsequence $\frac{1}{2}, \frac{1}{4}, \frac{1}{6}, \dots$, which also converges to $0$.
+- For $x_n = (-1)^n$, the even terms give the subsequence $1, 1, 1, \dots$, which converges to $1$, and the odd terms give $-1, -1, -1, \dots$, which converges to $-1$. The two limits are different, so $x_n$ diverges.
+
+## 2.4 Sequences of Sets
+
+The **power set** of a set $\Omega$ is the set of all subsets of $\Omega$:
+
+$$
+\mathcal{P}(\Omega) = \{ A \mid A \subseteq \Omega \}
+$$
+
+It always contains $\emptyset$ and $\Omega$, and if $\Omega$ has $n$ elements, $\mathcal{P}(\Omega)$ has $2^n$ elements.
 
 In probability, sets almost never appear in isolation, but in the form of sequences. A **sequence of sets** is a map from $\mathbb{N}$ to all the possible subsets of the sample space, that is, to the power set $\mathcal{P}(\Omega)$, such that:
 
