@@ -49,7 +49,7 @@ How to read the definition:
 
 If a sequence does not converge to any $L$, we say that it **diverges**.
 
-A convergent sequence has exactly one limit. Two different limits $L \neq L'$ cannot both satisfy the definition.
+A convergent sequence has exactly one limit. Two different limits $L \neq L'$ would mean that, as $n$ grows, the terms $x_n$ approach two different values at the same time. This is impossible, because as the terms get closer and closer to $L$, they stay at a distance of almost $|L - L'|$ from $L'$, so they cannot also get arbitrarily close to $L'$.
 
 **Examples:**
 
