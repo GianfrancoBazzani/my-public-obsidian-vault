@@ -213,18 +213,18 @@ For a sequence $\{A_n\}_{n \in \mathbb{N}}$ of subsets of $\Omega$:
 - The **inferior limit** is defined by:
 
 $$
-\liminf_{n \to \infty} A_n := \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k = \bigcap_{k=1}^{\infty} A_k \cup \bigcap_{k=2}^{\infty} A_k \cup \bigcap_{k=3}^{\infty} A_k \cup \dots
+\liminf_{n \to \infty} A_n := \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n = \bigcap_{n=1}^{\infty} A_n \cup \bigcap_{n=2}^{\infty} A_n \cup \bigcap_{n=3}^{\infty} A_n \cup \dots
 $$
 
-  $\omega \in \liminf A_n$ if and only if there is an index $n$ such that $\omega \in A_k$ for all $k \geq n$. That is, $\omega$ is in all the sets $A_k$, with the exception of a finite number of them.
+  $\omega \in \liminf A_n$ if and only if there is an index $k$ such that $\omega \in A_n$ for all $n \geq k$. That is, $\omega$ is in all the sets $A_n$, with the exception of a finite number of them.
 
 - The **superior limit** is defined by:
 
 $$
-\limsup_{n \to \infty} A_n := \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k = \bigcup_{k=1}^{\infty} A_k \cap \bigcup_{k=2}^{\infty} A_k \cap \bigcup_{k=3}^{\infty} A_k \cap \dots
+\limsup_{n \to \infty} A_n := \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n = \bigcup_{n=1}^{\infty} A_n \cap \bigcup_{n=2}^{\infty} A_n \cap \bigcup_{n=3}^{\infty} A_n \cap \dots
 $$
 
-  $\omega \in \limsup A_n$ if and only if for each index $n$ there is a $k \geq n$ such that $\omega \in A_k$. That is, $\omega$ is in an infinite number of the sets $A_k$.
+  $\omega \in \limsup A_n$ if and only if for each index $k$ there is an $n \geq k$ such that $\omega \in A_n$. That is, $\omega$ is in an infinite number of the sets $A_n$.
 
 If the two limits are equal, we say that the sequence **converges** to the set $A$ and write
 
@@ -234,52 +234,52 @@ $$
 
 How to read the definition:
 
-- $\bigcap_{k=n}^{\infty} A_k$ contains the elements that are in **all** the sets of the tail from index $n$ on. When $n$ grows, there are fewer sets in the intersection, so this set can only get larger.
-- $\bigcup_{k=n}^{\infty} A_k$ contains the elements that are in **at least one** set of the tail from index $n$ on. When $n$ grows, there are fewer sets in the union, so this set can only get smaller.
+- $\bigcap_{n=k}^{\infty} A_n$ contains the elements that are in **all** the sets of the tail from index $k$ on. When $k$ grows, there are fewer sets in the intersection, so this set can only get larger.
+- $\bigcup_{n=k}^{\infty} A_n$ contains the elements that are in **at least one** set of the tail from index $k$ on. When $k$ grows, there are fewer sets in the union, so this set can only get smaller.
 - An element that is in all the sets from some index on is also in an infinite number of sets, so $\liminf A_n \subseteq \limsup A_n$.
 
 **Examples:**
 
-- For the nested intervals $A_n = \left[ -\frac{1}{n}, \frac{1}{n} \right]$ of section 2.5, each interval contains the next one. Thus for each $n$:
+- For the nested intervals $A_n = \left[ -\frac{1}{n}, \frac{1}{n} \right]$ of section 2.5, each interval contains the next one. Thus for each $k$:
 
 $$
-\bigcap_{k=n}^{\infty} A_k = \{0\} \qquad \text{and} \qquad \bigcup_{k=n}^{\infty} A_k = A_n
+\bigcap_{n=k}^{\infty} A_n = \{0\} \qquad \text{and} \qquad \bigcup_{n=k}^{\infty} A_n = A_k
 $$
 
   The only real number that is in all the intervals is $0$, because for each $x \neq 0$ there is an $n$ with $\frac{1}{n} < |x|$. Thus
 
 $$
-\liminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \{0\} = \{0\} \qquad \text{and} \qquad \limsup_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} A_n = \{0\}
+\liminf_{n \to \infty} A_n = \bigcup_{k=1}^{\infty} \{0\} = \{0\} \qquad \text{and} \qquad \limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} A_k = \{0\}
 $$
 
   The two limits are equal, so the sequence converges and $\lim_{n \to \infty} A_n = \{0\}$.
 
-- For two sets $A$ and $B$, let $A_n = A$ if $n$ is even and $A_n = B$ if $n$ is odd. Each tail contains both $A$ and $B$, so for each $n$:
+- For two sets $A$ and $B$, let $A_n = A$ if $n$ is even and $A_n = B$ if $n$ is odd. Each tail contains both $A$ and $B$, so for each $k$:
 
 $$
-\bigcap_{k=n}^{\infty} A_k = A \cap B \qquad \text{and} \qquad \bigcup_{k=n}^{\infty} A_k = A \cup B
+\bigcap_{n=k}^{\infty} A_n = A \cap B \qquad \text{and} \qquad \bigcup_{n=k}^{\infty} A_n = A \cup B
 $$
 
   Thus $\liminf A_n = A \cap B$ and $\limsup A_n = A \cup B$. If $A \neq B$, the two limits are different, so the sequence does not converge. This is the same as $x_n = (-1)^n$ for sequences of real numbers.
 
 **Proof: inferior limit of sequences of sets**
 
-We want to prove that the inferior limit, as the set of the elements that are in all the sets $A_k$ with the exception of a finite number of them, is equal to the union of the intersections of the tails:
+We want to prove that the inferior limit, as the set of the elements that are in all the sets $A_n$ with the exception of a finite number of them, is equal to the union of the intersections of the tails:
 
 $$
-\liminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k
+\liminf_{n \to \infty} A_n = \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n
 $$
 
 Two sets are equal if and only if each one of them contains the other one. Thus we prove the two inclusions:
 
 $$
-\liminf_{n \to \infty} A_n \subseteq \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \qquad \text{and} \qquad \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \subseteq \liminf_{n \to \infty} A_n
+\liminf_{n \to \infty} A_n \subseteq \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \qquad \text{and} \qquad \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \subseteq \liminf_{n \to \infty} A_n
 $$
 
 **a)** Let
 
 $$
-\delta_n = \bigcap_{k=n}^{\infty} A_k \qquad \text{and} \qquad \sigma_n = \bigcup_{k=n}^{\infty} A_k
+\delta_k = \bigcap_{n=k}^{\infty} A_n \qquad \text{and} \qquad \sigma_k = \bigcup_{n=k}^{\infty} A_n
 $$
 
 Observe that:
@@ -289,7 +289,7 @@ $$
 $$
 
 $$
-\bigcap_{k=1}^{\infty} A_k \subseteq \bigcap_{k=2}^{\infty} A_k \subseteq \bigcap_{k=3}^{\infty} A_k \subseteq \dots
+\bigcap_{n=1}^{\infty} A_n \subseteq \bigcap_{n=2}^{\infty} A_n \subseteq \bigcap_{n=3}^{\infty} A_n \subseteq \dots
 $$
 
 $$
@@ -297,35 +297,35 @@ $$
 $$
 
 $$
-\bigcup_{k=1}^{\infty} A_k \supseteq \bigcup_{k=2}^{\infty} A_k \supseteq \bigcup_{k=3}^{\infty} A_k \supseteq \dots
+\bigcup_{n=1}^{\infty} A_n \supseteq \bigcup_{n=2}^{\infty} A_n \supseteq \bigcup_{n=3}^{\infty} A_n \supseteq \dots
 $$
 
-The intersection $\delta_{n+1}$ has one set less than $\delta_n$, because it does not contain $A_n$. When $n$ grows, the tail has fewer sets, so the intersection is less restrictive and the set gets bigger $\delta_n \subseteq \delta_{n+1}$. Similarly, the union $\sigma_{n+1}$ has one set less than $\sigma_n$, so $\sigma_n \supseteq \sigma_{n+1}$.
+The intersection $\delta_{k+1}$ has one set less than $\delta_k$, because it does not contain $A_k$. When $k$ grows, the tail has fewer sets, so the intersection is less restrictive and the set gets bigger $\delta_k \subseteq \delta_{k+1}$. Similarly, the union $\sigma_{k+1}$ has one set less than $\sigma_k$, so $\sigma_k \supseteq \sigma_{k+1}$.
 
-**b)** $\liminf A_n \subseteq \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$
+**b)** $\liminf A_n \subseteq \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$
 
-Let $\omega \in \liminf A_n$. Then there is an $n \in \mathbb{N}$ such that $\omega \in A_k$ for all $k \geq n$. Thus $\omega$ is in the intersection $\delta_n$ of the tail from index $n$ on:
-
-$$
-\exists n : \omega \in \delta_n \implies \omega \in \bigcup_{n=1}^{\infty} \delta_n \implies \omega \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k
-$$
-
-This is true for each $\omega \in \liminf A_n$, so $\liminf A_n \subseteq \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$.
-
-**c)** $\bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \subseteq \liminf A_n$
-
-Let $\omega \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$. An element of a union is in at least one of the sets of the union, so there is an $n \in \mathbb{N}$ such that $\omega \in \delta_n$:
+Let $\omega \in \liminf A_n$. Then there is a $k \in \mathbb{N}$ such that $\omega \in A_n$ for all $n \geq k$. Thus $\omega$ is in the intersection $\delta_k$ of the tail from index $k$ on:
 
 $$
-\omega \in \bigcup_{n=1}^{\infty} \delta_n \implies \exists n : \omega \in \delta_n = \bigcap_{k=n}^{\infty} A_k \implies \forall k \geq n : \omega \in A_k
+\exists k : \omega \in \delta_k \implies \omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n
 $$
 
-Thus $\omega$ is in all the sets $A_k$ from index $n$ on. The only sets that can be without $\omega$ are $A_1, A_2, \dots, A_{n-1}$, which are a finite number of sets. Thus $\omega \in \liminf A_n$.
+This is true for each $\omega \in \liminf A_n$, so $\liminf A_n \subseteq \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$.
 
-This is true for each $\omega \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$, so $\bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \subseteq \liminf A_n$.
+**c)** $\bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \subseteq \liminf A_n$
+
+Let $\omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$. An element of a union is in at least one of the sets of the union, so there is a $k \in \mathbb{N}$ such that $\omega \in \delta_k$:
+
+$$
+\omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \exists k : \omega \in \delta_k = \bigcap_{n=k}^{\infty} A_n \implies \forall n \geq k : \omega \in A_n
+$$
+
+Thus $\omega$ is in all the sets $A_n$ from index $k$ on. The only sets that can be without $\omega$ are $A_1, A_2, \dots, A_{k-1}$, which are a finite number of sets. Thus $\omega \in \liminf A_n$.
+
+This is true for each $\omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$, so $\bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \subseteq \liminf A_n$.
 
 From b) and c), each set contains the other one, so
 
 $$
-\liminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \qquad \blacksquare
+\liminf_{n \to \infty} A_n = \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \qquad \blacksquare
 $$
