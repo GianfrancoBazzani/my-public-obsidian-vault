@@ -329,3 +329,53 @@ From b) and c), each set contains the other one, so
 $$
 \liminf_{n \to \infty} A_n = \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \qquad \blacksquare
 $$
+
+**Proof: superior limit of sequences of sets**
+
+We want to prove that the superior limit, as the set of the elements that are in an infinite number of the sets $A_n$, is equal to the intersection of the unions of the tails:
+
+$$
+\limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n
+$$
+
+Two sets are equal if and only if each one of them contains the other one. Thus we prove the two inclusions:
+
+$$
+\limsup_{n \to \infty} A_n \subseteq \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n \qquad \text{and} \qquad \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n \subseteq \limsup_{n \to \infty} A_n
+$$
+
+**a)** As in the proof of the inferior limit, let
+
+$$
+\sigma_k = \bigcup_{n=k}^{\infty} A_n
+$$
+
+Then $\bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n = \bigcap_{k=1}^{\infty} \sigma_k$, and $\sigma_1 \supseteq \sigma_2 \supseteq \sigma_3 \supseteq \dots$
+
+**b)** $\limsup A_n \subseteq \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n$
+
+Let $\omega \in \limsup A_n$, so $\omega$ is in an infinite number of the sets $A_n$. Let $k \in \mathbb{N}$ be an index. Only a finite number of sets, $A_1, A_2, \dots, A_{k-1}$, come before $A_k$. Thus at least one of the sets that contain $\omega$ has an index $n \geq k$:
+
+$$
+\forall k \ \exists n \geq k : \omega \in A_n \implies \forall k : \omega \in \sigma_k \implies \omega \in \bigcap_{k=1}^{\infty} \sigma_k \implies \omega \in \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n
+$$
+
+This is true for each $\omega \in \limsup A_n$, so $\limsup A_n \subseteq \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n$.
+
+**c)** $\bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n \subseteq \limsup A_n$
+
+Let $\omega \in \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n$. An element of an intersection is in all the sets of the intersection, so $\omega \in \sigma_k$ for all $k \in \mathbb{N}$:
+
+$$
+\omega \in \bigcap_{k=1}^{\infty} \sigma_k \implies \forall k : \omega \in \sigma_k = \bigcup_{n=k}^{\infty} A_n \implies \forall k \ \exists n \geq k : \omega \in A_n
+$$
+
+Suppose that $\omega$ is in only a finite number of the sets $A_n$. If $\omega$ is in no set, then $\omega \notin \sigma_1$. If not, let $N$ be the largest index with $\omega \in A_N$. For $k = N + 1$, no set $A_n$ with $n \geq k$ contains $\omega$, so $\omega \notin \sigma_{N+1}$. In the two cases there is a contradiction. Thus $\omega$ is in an infinite number of the sets $A_n$, and $\omega \in \limsup A_n$.
+
+This is true for each $\omega \in \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n$, so $\bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n \subseteq \limsup A_n$.
+
+From b) and c), each set contains the other one, so
+
+$$
+\limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n \qquad \blacksquare
+$$
