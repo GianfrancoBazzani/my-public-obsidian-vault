@@ -124,7 +124,33 @@ How to read the definition:
 - A monotone sequence always has a limit, if we accept $\pm\infty$ as a limit. Thus the inferior and the superior limits always exist, also when $x_n$ diverges.
 - $\liminf x_n \leq \limsup x_n$, and the sequence converges to $L$ if and only if $\liminf x_n = \limsup x_n = L$.
 
-**Example:** for $x_n = (-1)^n$, the subsequences converge to $-1$ and $1$, so $\liminf x_n = -1$ and $\limsup x_n = 1$. The two values are different, so the sequence diverges.
+**Examples:**
+
+- For $x_n = (-1)^n$, the subsequences converge to $-1$ and $1$, so $\liminf x_n = -1$ and $\limsup x_n = 1$. The two values are different, so the sequence diverges.
+- For $x_n = (-1)^n \left( 1 + \frac{1}{n} \right)$, the odd terms are negative and approach $-1$ from below, and the even terms are positive and approach $1$ from above. The table shows the infimum and the supremum of the tail for the first values of $n$:
+
+| $n$ | $x_n$ | $\inf_{k \geq n} x_k$ | $\sup_{k \geq n} x_k$ |
+| --- | --- | --- | --- |
+| $1$ | $-2$ | $-2$ | $\frac{3}{2}$ |
+| $2$ | $\frac{3}{2}$ | $-\frac{4}{3}$ | $\frac{3}{2}$ |
+| $3$ | $-\frac{4}{3}$ | $-\frac{4}{3}$ | $\frac{5}{4}$ |
+| $4$ | $\frac{5}{4}$ | $-\frac{6}{5}$ | $\frac{5}{4}$ |
+| $5$ | $-\frac{6}{5}$ | $-\frac{6}{5}$ | $\frac{7}{6}$ |
+| $6$ | $\frac{7}{6}$ | $-\frac{8}{7}$ | $\frac{7}{6}$ |
+| $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |
+| $\to \infty$ | | $\to -1$ | $\to 1$ |
+
+The graph shows the terms $x_n$ for $n$ from $1$ to $30$, with the supremum and the infimum of the tail as step lines:
+
+![Graph of x_n = (-1)^n (1 + 1/n) for n from 1 to 30, with the supremum and the infimum of the tail as step lines that approach 1 and -1](Attachments/limsup-liminf-sequence.svg)
+
+For each finite $n$, the infimum of the tail is still below $-1$ and the supremum of the tail is still above $1$. Each time that $n$ passes a term that is equal to the infimum or the supremum, that term leaves the tail, and the value moves nearer to its limit. Only in the limit we get
+
+$$
+\liminf_{n \to \infty} x_n = -1 \qquad \text{and} \qquad \limsup_{n \to \infty} x_n = 1
+$$
+
+Thus, a finite $n$ gives only an approximation of the inferior and the superior limits.
 
 ## 2.5 Sequences of Sets
 
