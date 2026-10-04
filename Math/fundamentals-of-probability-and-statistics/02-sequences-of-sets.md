@@ -72,7 +72,61 @@ If a sequence converges to $L$, every subsequence also converges to $L$. As a co
 - For $x_n = \frac{1}{n}$, the even terms $x_{2k} = \frac{1}{2k}$ give the subsequence $\frac{1}{2}, \frac{1}{4}, \frac{1}{6}, \dots$, which also converges to $0$.
 - For $x_n = (-1)^n$, the even terms give the subsequence $1, 1, 1, \dots$, which converges to $1$, and the odd terms give $-1, -1, -1, \dots$, which converges to $-1$. The two limits are different, so $x_n$ diverges.
 
-## 2.4 Sequences of Sets
+## 2.4 Inferior and Superior Limits
+
+A sequence that does not converge can still have subsequences that converge. The **inferior limit** and the **superior limit** describe the smallest and the largest values that these subsequences can approach.
+
+The inferior limit of a sequence $\{x_n\}_{n \in \mathbb{N}}$ is denoted by:
+
+$$
+\liminf_{n \to \infty} x_n \qquad \text{or} \qquad \varliminf_{n \to \infty} x_n
+$$
+
+and the superior limit of a sequence $\{x_n\}_{n \in \mathbb{N}}$ is denoted by:
+
+$$
+\limsup_{n \to \infty} x_n \qquad \text{or} \qquad \varlimsup_{n \to \infty} x_n
+$$
+
+**Definition:**
+
+For a sequence $\{x_n\}_{n \in \mathbb{N}}$ of real numbers:
+
+- The **inferior limit** is defined by:
+
+$$
+\liminf_{n \to \infty} x_n := \lim_{n \to \infty} \left( \inf_{k \geq n} x_k \right)
+$$
+
+or
+
+$$
+\liminf_{n \to \infty} x_n := \sup_{n \geq 1} \inf_{k \geq n} x_k = \sup \{ \inf \{ x_k : k \geq n \} : n \geq 1 \}
+$$
+
+- The **superior limit** is defined by:
+
+$$
+\limsup_{n \to \infty} x_n := \lim_{n \to \infty} \left( \sup_{k \geq n} x_k \right)
+$$
+
+or
+
+$$
+\limsup_{n \to \infty} x_n := \inf_{n \geq 1} \sup_{k \geq n} x_k = \inf \{ \sup \{ x_k : k \geq n \} : n \geq 1 \}
+$$
+
+How to read the definition:
+
+- $\inf_{k \geq n} x_k$ is the largest lower bound of the terms from index $n$ on. When $n$ grows, we remove terms from the tail, so this value can only increase.
+- $\sup_{k \geq n} x_k$ is the smallest upper bound of the terms from index $n$ on. When $n$ grows, this value can only decrease.
+- The limit of a nondecreasing sequence is its supremum, and the limit of a nonincreasing sequence is its infimum. This is why the two forms of each definition are equal.
+- A monotone sequence always has a limit, if we accept $\pm\infty$ as a limit. Thus the inferior and the superior limits always exist, also when $x_n$ diverges.
+- $\liminf x_n \leq \limsup x_n$, and the sequence converges to $L$ if and only if $\liminf x_n = \limsup x_n = L$.
+
+**Example:** for $x_n = (-1)^n$, the subsequences converge to $-1$ and $1$, so $\liminf x_n = -1$ and $\limsup x_n = 1$. The two values are different, so the sequence diverges.
+
+## 2.5 Sequences of Sets
 
 The **power set** of a set $\Omega$ is the set of all subsets of $\Omega$:
 
