@@ -53,7 +53,7 @@ A convergent sequence has exactly one limit. Two different limits $L \neq L'$ wo
 
 **Examples:**
 
-- $x_n = \frac{1}{n}$ converges to $0$. For a given $\varepsilon > 0$, choose $n_0 > \frac{1}{\varepsilon}$. Then for all $n \geq n_0$: $\left| \frac{1}{n} - 0 \right| = \frac{1}{n} \leq \frac{1}{n_0} < \varepsilon$.
+- $x_n = \frac{1}{n}$ converges to $0$. For a given $\varepsilon > 0$ we must find $n_0$ such that $|x_n - 0| = \frac{1}{n} < \varepsilon$ for all $n \geq n_0$. Since $\frac{1}{n} < \varepsilon \iff n > \frac{1}{\varepsilon}$ and the terms get smaller as $n$ grows, any $n_0 > \frac{1}{\varepsilon}$ works.
 - $x_n = (-1)^n$ diverges. The terms alternate between $-1$ and $1$, so for $\varepsilon = 1$ no $L$ has all terms from some index on within distance $1$ of it.
 - $x_n = n$ diverges. The terms grow without bound, and we write $x_n \to \infty$.
 
