@@ -317,7 +317,7 @@ This is true for each $\omega \in \liminf A_n$, so $\liminf A_n \subseteq \bigcu
 Let $\omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$. An element of a union is in at least one of the sets of the union, so there is a $k \in \mathbb{N}$ such that $\omega \in \delta_k$:
 
 $$
-\omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \exists k : \omega \in \delta_k = \bigcap_{n=k}^{\infty} A_n \implies \forall n \geq k : \omega \in A_n
+\omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \exists k : \omega \in \delta_k = \bigcap_{n=k}^{\infty} A_n \implies \forall n \geq k \ \omega \in A_n
 $$
 
 Thus $\omega$ is in all the sets $A_n$ from index $k$ on. The only sets that can be without $\omega$ are $A_1, A_2, \dots, A_{k-1}$, which are a finite number of sets. Thus $\omega \in \liminf A_n$.
@@ -357,7 +357,7 @@ Then $\bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n = \bigcap_{k=1}^{\infty}
 Let $\omega \in \limsup A_n$, so $\omega$ is in an infinite number of the sets $A_n$. Let $k \in \mathbb{N}$ be an index. Only a finite number of sets, $A_1, A_2, \dots, A_{k-1}$, come before $A_k$. Thus at least one of the sets that contain $\omega$ has an index $n \geq k$:
 
 $$
-\forall k \ \exists n \geq k : \omega \in A_n \implies \forall k : \omega \in \sigma_k \implies \omega \in \bigcap_{k=1}^{\infty} \sigma_k \implies \omega \in \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n
+\forall k \ \exists n \geq k : \omega \in A_n \implies \omega \in \sigma_k \ \forall k \implies \omega \in \bigcap_{k=1}^{\infty} \sigma_k \implies \omega \in \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n
 $$
 
 This is true for each $\omega \in \limsup A_n$, so $\limsup A_n \subseteq \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n$.
@@ -367,7 +367,7 @@ This is true for each $\omega \in \limsup A_n$, so $\limsup A_n \subseteq \bigca
 Let $\omega \in \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n$. An element of an intersection is in all the sets of the intersection, so $\omega \in \sigma_k$ for all $k \in \mathbb{N}$:
 
 $$
-\omega \in \bigcap_{k=1}^{\infty} \sigma_k \implies \forall k : \omega \in \sigma_k = \bigcup_{n=k}^{\infty} A_n \implies \forall k \ \exists n \geq k : \omega \in A_n
+\omega \in \bigcap_{k=1}^{\infty} \sigma_k \implies \omega \in \sigma_k = \bigcup_{n=k}^{\infty} A_n \ \forall k \implies \forall k \ \exists n \geq k : \omega \in A_n
 $$
 
 Suppose that $\omega$ is in only a finite number of the sets $A_n$. If $\omega$ is in no set, then $\omega \notin \sigma_1$. If not, let $N$ be the largest index with $\omega \in A_N$. For $k = N + 1$, no set $A_n$ with $n \geq k$ contains $\omega$, so $\omega \notin \sigma_{N+1}$. In the two cases there is a contradiction. Thus $\omega$ is in an infinite number of the sets $A_n$, and $\omega \in \limsup A_n$.
