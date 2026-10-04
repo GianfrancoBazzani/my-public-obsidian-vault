@@ -213,7 +213,7 @@ For a sequence $\{A_n\}_{n \in \mathbb{N}}$ of subsets of $\Omega$:
 - The **inferior limit** is defined by:
 
 $$
-\liminf_{n \to \infty} A_n := \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k
+\liminf_{n \to \infty} A_n := \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k = \bigcap_{k=1}^{\infty} A_k \cup \bigcap_{k=2}^{\infty} A_k \cup \bigcap_{k=3}^{\infty} A_k \cup \dots
 $$
 
   $\omega \in \liminf A_n$ if and only if there is an index $n$ such that $\omega \in A_k$ for all $k \geq n$. That is, $\omega$ is in all the sets $A_k$, with the exception of a finite number of them.
@@ -221,7 +221,7 @@ $$
 - The **superior limit** is defined by:
 
 $$
-\limsup_{n \to \infty} A_n := \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k
+\limsup_{n \to \infty} A_n := \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k = \bigcup_{k=1}^{\infty} A_k \cap \bigcup_{k=2}^{\infty} A_k \cap \bigcup_{k=3}^{\infty} A_k \cap \dots
 $$
 
   $\omega \in \limsup A_n$ if and only if for each index $n$ there is a $k \geq n$ such that $\omega \in A_k$. That is, $\omega$ is in an infinite number of the sets $A_k$.
