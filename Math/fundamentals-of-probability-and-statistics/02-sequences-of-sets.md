@@ -95,31 +95,31 @@ For a sequence $\{x_n\}_{n \in \mathbb{N}}$ of real numbers:
 - The **inferior limit** is defined by:
 
 $$
-\liminf_{n \to \infty} x_n := \lim_{n \to \infty} \left( \inf_{k \geq n} x_k \right)
+\liminf_{n \to \infty} x_n := \lim_{k \to \infty} \left( \inf_{n \geq k} x_n \right)
 $$
 
 or
 
 $$
-\liminf_{n \to \infty} x_n := \sup_{n \geq 1} \inf_{k \geq n} x_k = \sup \{ \inf \{ x_k : k \geq n \} : n \geq 1 \}
+\liminf_{n \to \infty} x_n := \sup_{k \geq 1} \inf_{n \geq k} x_n = \sup \{ \inf \{ x_n : n \geq k \} : k \geq 1 \}
 $$
 
 - The **superior limit** is defined by:
 
 $$
-\limsup_{n \to \infty} x_n := \lim_{n \to \infty} \left( \sup_{k \geq n} x_k \right)
+\limsup_{n \to \infty} x_n := \lim_{k \to \infty} \left( \sup_{n \geq k} x_n \right)
 $$
 
 or
 
 $$
-\limsup_{n \to \infty} x_n := \inf_{n \geq 1} \sup_{k \geq n} x_k = \inf \{ \sup \{ x_k : k \geq n \} : n \geq 1 \}
+\limsup_{n \to \infty} x_n := \inf_{k \geq 1} \sup_{n \geq k} x_n = \inf \{ \sup \{ x_n : n \geq k \} : k \geq 1 \}
 $$
 
 How to read the definition:
 
-- $\inf_{k \geq n} x_k$ is the largest lower bound of the terms from index $n$ on. When $n$ grows, we remove terms from the tail, so this value can only increase.
-- $\sup_{k \geq n} x_k$ is the smallest upper bound of the terms from index $n$ on. When $n$ grows, this value can only decrease.
+- $\inf_{n \geq k} x_n$ is the largest lower bound of the terms from index $k$ on. When $k$ grows, we remove terms from the tail, so this value can only increase.
+- $\sup_{n \geq k} x_n$ is the smallest upper bound of the terms from index $k$ on. When $k$ grows, this value can only decrease.
 - The limit of a nondecreasing sequence is its supremum, and the limit of a nonincreasing sequence is its infimum. This is why the two forms of each definition are equal.
 - A monotone sequence always has a limit, if we accept $\pm\infty$ as a limit. Thus the inferior and the superior limits always exist, also when $x_n$ diverges.
 - $\liminf x_n \leq \limsup x_n$, and the sequence converges to $L$ if and only if $\liminf x_n = \limsup x_n = L$.
@@ -127,9 +127,9 @@ How to read the definition:
 **Examples:**
 
 - For $x_n = (-1)^n$, the subsequences converge to $-1$ and $1$, so $\liminf x_n = -1$ and $\limsup x_n = 1$. The two values are different, so the sequence diverges.
-- For $x_n = (-1)^n \left( 1 + \frac{1}{n} \right)$, the odd terms are negative and approach $-1$ from below, and the even terms are positive and approach $1$ from above. The table shows the infimum and the supremum of the tail for the first values of $n$:
+- For $x_n = (-1)^n \left( 1 + \frac{1}{n} \right)$, the odd terms are negative and approach $-1$ from below, and the even terms are positive and approach $1$ from above. The table shows the infimum and the supremum of the tail for the first values of $k$:
 
-| $n$ | $x_n$ | $\inf_{k \geq n} x_k$ | $\sup_{k \geq n} x_k$ |
+| $k$ | $x_k$ | $\inf_{n \geq k} x_n$ | $\sup_{n \geq k} x_n$ |
 | --- | --- | --- | --- |
 | $1$ | $-2$ | $-2$ | $\frac{3}{2}$ |
 | $2$ | $\frac{3}{2}$ | $-\frac{4}{3}$ | $\frac{3}{2}$ |
@@ -144,13 +144,13 @@ The graph shows the terms $x_n$ for $n$ from $1$ to $30$, with the supremum and 
 
 ![Graph of x_n = (-1)^n (1 + 1/n) for n from 1 to 30, with the supremum and the infimum of the tail as step lines that approach 1 and -1](Attachments/limsup-liminf-sequence.svg)
 
-For each finite $n$, the infimum of the tail is still below $-1$ and the supremum of the tail is still above $1$. Each time that $n$ passes a term that is equal to the infimum or the supremum, that term leaves the tail, and the value moves nearer to its limit. Only in the limit we get
+For each finite $k$, the infimum of the tail is still below $-1$ and the supremum of the tail is still above $1$. Each time that $k$ passes a term that is equal to the infimum or the supremum, that term leaves the tail, and the value moves nearer to its limit. Only in the limit we get
 
 $$
 \liminf_{n \to \infty} x_n = -1 \qquad \text{and} \qquad \limsup_{n \to \infty} x_n = 1
 $$
 
-Thus, a finite $n$ gives only an approximation of the inferior and the superior limits.
+Thus, a finite $k$ gives only an approximation of the inferior and the superior limits.
 
 ## 2.5 Sequences of Sets
 
@@ -298,23 +298,23 @@ The intersection $\delta_{k+1}$ has one set less than $\delta_k$, because it doe
 
 **b)** $\liminf A_n \subseteq \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$
 
-Let $\omega \in \liminf A_n$. Then there is a $k \in \mathbb{N}$ such that $\omega \in A_n$ for all $n \geq k$. Thus $\omega$ is in the intersection $\delta_k$ of the tail from index $k$ on:
+Let $\omega \in \liminf A_n$. Then there is a $k_0 \in \mathbb{N}$ such that $\omega \in A_n$ for all $n \geq k_0$. Thus $\omega$ is in the intersection $\delta_{k_0}$ of the tail from index $k_0$ on:
 
 $$
-\exists k : \omega \in \delta_k \implies \omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n
+\exists k_0 : \omega \in \delta_{k_0} \implies \omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n
 $$
 
 This is true for each $\omega \in \liminf A_n$, so $\liminf A_n \subseteq \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$.
 
 **c)** $\bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \subseteq \liminf A_n$
 
-Let $\omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$. An element of a union is in at least one of the sets of the union, so there is a $k \in \mathbb{N}$ such that $\omega \in \delta_k$:
+Let $\omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$. An element of a union is in at least one of the sets of the union, so there is a $k_0 \in \mathbb{N}$ such that $\omega \in \delta_{k_0}$:
 
 $$
-\omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \exists k : \omega \in \delta_k = \bigcap_{n=k}^{\infty} A_n \implies \forall n \geq k \ \omega \in A_n
+\omega \in \bigcup_{k=1}^{\infty} \delta_k \implies \exists k_0 : \omega \in \delta_{k_0} = \bigcap_{n=k_0}^{\infty} A_n \implies \forall n \geq k_0 \ \omega \in A_n
 $$
 
-Thus $\omega$ is in all the sets $A_n$ from index $k$ on. The only sets that can be without $\omega$ are $A_1, A_2, \dots, A_{k-1}$, which are a finite number of sets. Thus $\omega \in \liminf A_n$.
+Thus $\omega$ is in all the sets $A_n$ from index $k_0$ on. The only sets that can be without $\omega$ are $A_1, A_2, \dots, A_{k_0 - 1}$, which are a finite number of sets. Thus $\omega \in \liminf A_n$.
 
 This is true for each $\omega \in \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n$, so $\bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n \subseteq \liminf A_n$.
 
