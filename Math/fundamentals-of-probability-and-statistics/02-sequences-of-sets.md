@@ -539,3 +539,27 @@ $$
 The intersection $\bigcap_{n=1}^{\infty} A_n$ is a lower bound, and each lower bound is a subset of it. The union $\bigcup_{n=1}^{\infty} A_n$ is an upper bound, and each upper bound contains it.
 
 
+## 2.11 Supremum and Infimum
+
+### 2.11.1 Supremum
+
+**Supremum of a set of numbers:** let $C$ be a non-empty set of real numbers. An upper bound of $C$ is any number $M$ such that $c \leq M$ for all $c \in C$. Suppose that $C$ has an upper bound. The **supremum** of $C$, denoted by $\sup C$, is the least of the upper bounds of $C$. If $C$ has a maximum element, the supremum is that element. If it does not, the supremum does not belong to $C$. For example, the interval $(0, 1)$ has no maximum, but its supremum is $1$. The supremum of a set of numbers is a number.
+
+**Supremum of a family of sets:** sets are compared by inclusion. An upper bound of a family of sets $(B_i)_{i \in I}$ is any set $M$ such that $B_i \subseteq M$ for all $i \in I$. The **supremum** of the family, denoted by $\sup_{i \in I} B_i$, is the least of its upper bounds, that is, the smallest set that contains each $B_i$. The supremum of a family of sets is a set, and it is equal to the union:
+
+$$
+\sup_{i \in I} B_i = \bigcup_{i \in I} B_i
+$$
+
+### 2.11.2 Infimum
+
+**Infimum of a set of numbers:** let $C$ be a non-empty set of real numbers. A lower bound of $C$ is any number $m$ such that $m \leq c$ for all $c \in C$. Suppose that $C$ has a lower bound. The **infimum** of $C$, denoted by $\inf C$, is the greatest of the lower bounds of $C$. If $C$ has a minimum element, the infimum is that element. If it does not, the infimum does not belong to $C$. For example, the interval $(0, 1)$ has no minimum, but its infimum is $0$. The infimum of a set of numbers is a number.
+
+**Infimum of a family of sets:** sets are compared by inclusion. A lower bound of a family of sets $(B_i)_{i \in I}$ is any set $L$ such that $L \subseteq B_i$ for all $i \in I$. The **infimum** of the family, denoted by $\inf_{i \in I} B_i$, is the greatest of its lower bounds, that is, the largest set that is contained in each $B_i$. The infimum of a family of sets is a set, and it is equal to the intersection:
+
+$$
+\inf_{i \in I} B_i = \bigcap_{i \in I} B_i
+$$
+
+
+TODO Add i.o and a.a concepts
