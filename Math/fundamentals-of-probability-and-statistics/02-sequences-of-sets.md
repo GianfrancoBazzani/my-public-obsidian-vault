@@ -490,3 +490,52 @@ $$
 \varliminf (A_n \cap B_n) &= \varliminf A_n \cap \varliminf B_n
 \end{aligned}
 $$
+
+## 2.10 Lower and Upper Bounds
+
+**Definition (bounds of a set of real numbers):**
+
+Let $S \subseteq \mathbb{R}$ be a set of real numbers.
+
+- A number $m \in \mathbb{R}$ is a **lower bound** of $S$ if
+
+$$
+m \leq x \quad \forall x \in S
+$$
+
+- A number $M \in \mathbb{R}$ is an **upper bound** of $S$ if
+
+$$
+x \leq M \quad \forall x \in S
+$$
+
+If $S$ has a lower bound, $S$ is **bounded below**. If $S$ has an upper bound, $S$ is **bounded above**. If $S$ has the two bounds, $S$ is **bounded**.
+
+A bound is not unique. If $m$ is a lower bound of $S$, each number smaller than $m$ is also a lower bound. If $M$ is an upper bound of $S$, each number larger than $M$ is also an upper bound.
+
+**Example:** let $S = (0, 1]$.
+
+- The numbers $0$, $-1$ and $-5$ are lower bounds of $S$. The number $0.5$ is not a lower bound, because $0.2 \in S$ and $0.2 < 0.5$.
+- The numbers $1$, $2$ and $10$ are upper bounds of $S$. The number $0.9$ is not an upper bound, because $1 \in S$ and $1 > 0.9$.
+
+Thus $S$ is bounded. The set $\mathbb{N}$ is bounded below by $1$, but it is not bounded above.
+
+**Definition (bounds of a sequence of sets):**
+
+For a sequence of sets $\{A_n\}_{n \in \mathbb{N}}$, the inclusion $\subseteq$ has the function of the order $\leq$:
+
+- A set $B$ is a **lower bound** of $\{A_n\}_{n \in \mathbb{N}}$ if
+
+$$
+B \subseteq A_n \quad \forall n
+$$
+
+- A set $C$ is an **upper bound** of $\{A_n\}_{n \in \mathbb{N}}$ if
+
+$$
+A_n \subseteq C \quad \forall n
+$$
+
+The intersection $\bigcap_{n=1}^{\infty} A_n$ is a lower bound, and each lower bound is a subset of it. The union $\bigcup_{n=1}^{\infty} A_n$ is an upper bound, and each upper bound contains it.
+
+
