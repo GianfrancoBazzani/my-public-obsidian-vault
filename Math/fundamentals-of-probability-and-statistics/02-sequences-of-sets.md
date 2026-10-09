@@ -232,6 +232,34 @@ How to read the definition:
 - $\bigcup_{n=k}^{\infty} A_n$ contains the elements that are in **at least one** set of the tail from index $k$ on. When $k$ grows, there are fewer sets in the union, so this set can only get smaller.
 - An element that is in all the sets from some index on is also in an infinite number of sets, so $\liminf A_n \subseteq \limsup A_n$.
 
+**Interpretation: infinitely often and almost always**
+
+Let $\omega \in \Omega$ be arbitrary. We go through the sequence $A_1, A_2, A_3, \dots$ with increasing $n$ and look at which sets $A_n$ contain $\omega$. Let $k$ be an index of the sequence. The **tail of index $k$** is the part of the sequence that starts at $A_k$, that is, the sets $A_n$ with $n \geq k$: $A_k, A_{k+1}, A_{k+2}, \dots$. When $k$ grows, the tail leaves out the first sets of the sequence. The two limits describe how $\omega$ behaves in the tail of index $k$ when $k$ grows.
+
+- **Infinitely often (i.o.):** when $k$ grows, the tail of index $k$ leaves out more sets, but $\omega$ always belongs to some set of the tail. That is, for every $k$, $\omega$ belongs to some set of the tail of index $k$. With quantifiers:
+
+$$
+\omega \in \{A_n \text{ i.o.}\} \iff \forall k \in \mathbb{N} \ \exists n \geq k : \omega \in A_n
+$$
+
+  The elements $\omega$ that satisfy this condition belong to $A_n$ for infinitely many indices $n$, that is, "infinitely often", and they form the superior limit:
+
+$$
+\{A_n \text{ i.o.}\} = \limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n
+$$
+
+- **Almost always (a.a.):** when $k$ grows, from some value of $k$ on, $\omega$ belongs to all the sets of the tail of index $k$. With quantifiers:
+
+$$
+\omega \in \{A_n \text{ a.a.}\} \iff \exists k \in \mathbb{N} : \omega \in A_n \ \forall n \geq k
+$$
+
+  The elements $\omega$ that satisfy this condition belong to $A_n$ for all $n$ from some index on, that is, "almost always" (eventually always), and they form the inferior limit:
+
+$$
+\{A_n \text{ a.a.}\} = \liminf_{n \to \infty} A_n = \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} A_n
+$$
+
 **Examples:**
 
 - For the nested intervals $A_n = \left[ -\frac{1}{n}, \frac{1}{n} \right]$ of section 2.5, each interval contains the next one. Thus for each $k$:
@@ -560,6 +588,3 @@ $$
 $$
 \inf_{i \in I} B_i = \bigcap_{i \in I} B_i
 $$
-
-
-TODO Add i.o and a.a concepts
