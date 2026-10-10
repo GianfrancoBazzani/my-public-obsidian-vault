@@ -10,9 +10,20 @@ Why do individuals perform economic actions? Because they pursue their own inter
 
 ## Incentives
 
-Incentives are the rewards and costs that an individual expects from each alternative that he has. When incentives change, the expected outcome of each alternative changes, and so does the action that the individual chooses. Individuals respond in a predictable way to different types of incentives. Love, social recognition, fame, and sex are powerful incentives. Even when someone altruistically helps another person, he does it for his own interests, to get his own incentives, whether personal fulfillment or social recognition.
+Incentives are the rewards and costs that an individual expects from each alternative that he has. When incentives change, the expected outcome of each alternative changes, and so can the action that the individual chooses. Individuals tend to respond to incentives in a predictable direction, but not in a predictable size. Mises explains that we can predict that, other things being equal, a fall in the demand for a good will lower its price, but we cannot predict the extent of this drop, because in the field of human action there are no constant relations. Sometimes the response even goes in the opposite direction. In a study of ten day-care centers in Haifa, Gneezy and Rustichini found that a fine for parents who picked up their children late increased the number of late parents, and the number did not fall when the fine was removed. The parents saw the fine as a price for extra time, not as a punishment.
+
+Love, social recognition, fame, and sex are powerful incentives. Even when someone altruistically helps another person, he acts to reach his own ends, because the well-being of that person is one of his goals. Mises calls action "selfish" only in this formal sense, and he writes that "even an action directly aiming at the improvement of other people's conditions is selfish", because the actor finds it more satisfactory to help than not to help. This does not mean that altruism is a disguise for personal fulfillment or social recognition.
+
+## Cooperation
+
+Propotinatie what the individuals whatn
+With the best possible quality
+And make rich to the other ones.
+
+The ones that will do that are the ones that later by social cooperation will reach their own goals
 
 ## References
 
+- Gneezy, Uri, and Aldo Rustichini. 2000. "A Fine Is a Price." *The Journal of Legal Studies* 29 (1): 1–17. [DOI](https://doi.org/10.1086/468061).
 - Mises, Ludwig von. 1949. *Human Action: A Treatise on Economics*. Yale University Press. [Free online edition](https://mises.org/library/book/human-action).
 - Smith, Adam. 1776. *An Inquiry into the Nature and Causes of the Wealth of Nations*. W. Strahan and T. Cadell. [Free online edition](https://www.gutenberg.org/ebooks/3300).
