@@ -40,6 +40,8 @@ The rules of a society decide whether personal interests and social interests po
 
 History supports this argument. Acemoglu and Robinson compare inclusive institutions, with secure property rights, an impartial system of law, and a level playing field for exchange and contracts, with extractive institutions, which enrich a small elite at the expense of the rest of society. In inclusive institutions, people keep most of the gains from their own efforts, so they have an incentive to work, save, invest, and innovate. In extractive institutions, this incentive is weak, and the economy does not grow.
 
+Human capital and capital goods are necessary for economic growth, but they are not sufficient. A society with skilled workers and modern machines stays poor if its rules let a few people take what others produce. Good institutions are the condition that makes the other factors productive, because they align personal interests with social interests. When individuals can keep the gains of their efforts, they work, save, invest, and innovate, and this brings economic growth, wealth, and social well-being.
+
 ## References
 
 - Acemoglu, Daron, and James A. Robinson. 2012. *Why Nations Fail: The Origins of Power, Prosperity, and Poverty*. Crown Business.
