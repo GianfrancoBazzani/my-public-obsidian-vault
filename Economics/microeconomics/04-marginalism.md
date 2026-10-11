@@ -14,9 +14,9 @@ The Austrian school of economics grew around Menger in Vienna. Walras put his ow
 
 ## Marginal Utility
 
-Menger first showed that value is not a property of goods. Value is subjective, because it depends on the ability of a good to satisfy our needs. Menger then applied this idea to the different units of the same good. Different satisfactions have unequal importance for us, so the different units of the same good also have unequal value. Each unit gets its value from the need that it satisfies. Thus, the same good can have a different value for the same person at different times, according to the need that it meets.
+[Value and Utility](03-value-and-utility.md) explains that value is subjective. Menger applied this idea to the different units of the same good. Different satisfactions have unequal importance for us, so the different units of the same good also have unequal value. Each unit gets its value from the need that it satisfies. Thus, the same good can have a different value for the same person at different times, according to the need that it meets.
 
-The marginal unit is the unit that an individual adds or removes in a decision. Marginal utility is the importance that he gives to that unit. Mises defines utility as the importance that we attach to a thing, because we believe that it can remove our uneasiness. In the Austrian view, utility is ranked and not measured. An individual can say that he prefers one satisfaction to another, but he cannot say by how many units he prefers it.
+The marginal unit is the unit that an individual adds or removes in a decision. Marginal utility is the importance that he gives to that unit. Mises defines utility as the importance that we attach to a thing, because we believe that it can remove our uneasiness. Like value, marginal utility is ranked and not measured.
 
 ## Law of Diminishing Marginal Utility
 

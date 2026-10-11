@@ -1,13 +1,13 @@
 # Ends and Means
 
-Each [human action](05-human-action.md) has two parts. The end is the goal that the actor wants to reach. The means are the things that he uses to reach it. Economics does not judge the ends. It studies how people use means to reach them.
+Each [human action](01-human-action.md) has two parts. The end is the goal that the actor wants to reach. The means are the things that he uses to reach it. Economics does not judge the ends. It studies how people use means to reach them.
 
 ## Ends
 
 An end is a state of affairs that the actor prefers to the present state. Ends have two properties.
 
 1. **Unlimited.** Humans always have more ends than they can reach. When a person reaches one end, a new uneasiness appears, and he wants something else. A person who has food wants better food, then a house, then education for his children, then free time. Nobody reaches a state where all his wants are satisfied.
-2. **Subjective.** Each person ranks his ends in a different order. The value of an end is the priority that the actor gives to it, and this priority exists only in his mind. Two people can want the same thing with different intensity, and the same person can value it differently at different times. Values are ranked, not measured (see [Marginalism](03-marginalism.md)). A person knows that he prefers A to B, but he cannot say by how many units.
+2. **Subjective.** Each person ranks his ends in a different order. The value of an end is the priority that the actor gives to it, and this priority exists only in his mind. Two people can want the same thing with different intensity, and the same person can value it differently at different times. Values are ranked, not measured (see [Marginalism](04-marginalism.md)). A person knows that he prefers A to B, but he cannot say by how many units.
 
 ## Means
 
@@ -22,7 +22,7 @@ If one condition is missing, the thing is not a good. For example, a medicinal p
 
 Means also have two properties.
 
-1. **Scarce.** Means are limited in relation to the ends that people want to reach with them. If a person uses a resource for one end, he cannot use it for another end. This is the origin of the [opportunity cost](02-opportunity-cost.md) of each action. A thing that is available in quantities greater than all needs, such as the air in normal conditions, is not an object of action. Nobody needs to economize it.
+1. **Scarce.** Means are limited in relation to the ends that people want to reach with them. If a person uses a resource for one end, he cannot use it for another end. This is the origin of the [opportunity cost](06-opportunity-cost.md) of each action. A thing that is available in quantities greater than all needs, such as the air in normal conditions, is not an object of action. Nobody needs to economize it.
 2. **Subjectively useful.** The usefulness of a means is not a property of the thing. Each actor sees different uses for the same means, so each actor values it differently. A piece of land is a farm for one person, the site of a factory for a second person, and a park for a third person. The value of a means comes from the value of the ends that it helps to reach.
 
 ## Types of Goods

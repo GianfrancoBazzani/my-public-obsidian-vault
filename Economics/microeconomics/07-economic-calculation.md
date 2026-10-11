@@ -8,7 +8,7 @@ Jesús Huerta de Soto expresses this idea with a wordplay in Spanish: "El futuro
 
 Each action has a cost and a benefit for the actor.
 
-- **Cost.** The cost is the [opportunity cost](02-opportunity-cost.md) of the action. It is the value of the most valued end that the actor gives up when he chooses this action.
+- **Cost.** The cost is the [opportunity cost](06-opportunity-cost.md) of the action. It is the value of the most valued end that the actor gives up when he chooses this action.
 - **Benefit.** The benefit is the difference between the value of the end that the actor reaches and the value of the cost. Mises calls it gain or profit, and he explains that this profit "in this primary sense is purely subjective". It is a psychic phenomenon, an increase in the satisfaction of the actor, and nobody can measure it.
 
 Economic calculation is the comparison of the subjective value of the end with the subjective value of the cost. All humans do economic calculation continuously, often without being aware of it. A person who decides to walk to work instead of taking a taxi compares the value of the money that he saves with the value of the time and effort that he spends.
