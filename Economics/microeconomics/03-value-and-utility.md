@@ -40,7 +40,7 @@ Value is subjective, but it is real. Values direct the actions of people, and th
 
 ## Ordinal and Cardinal Valuation
 
-Value is subjective, so nobody can measure it. To measure a quantity, we need a constant unit that everybody accepts. We measure length in meters and weight in kilograms. A person who buys a refrigerator can measure his kitchen in centimeters, and he knows that the refrigerator will fit. No such unit exists for value. The value of a good depends on the person and on his changing circumstances, so a unit of value cannot be constant.
+Value is subjective, so nobody can measure it. To measure a quantity, we need a constant unit that everybody accepts. We measure length in meters and weight in kilograms. No such unit exists for value. The value of a good depends on the person and on his changing circumstances, so a unit of value cannot be constant.
 
 Thus, we can only rank values. This is ordinal valuation. A person knows that he prefers A to B, and B to C. The constant reference for this comparison is the person himself. But he cannot say that A is worth 14.37 units and B 4.26 units. This would be cardinal valuation, and it is not possible. Mises explains:
 
@@ -52,7 +52,7 @@ Think of how you value your own things. You can say that you prefer your family 
 
 There are two consequences.
 
-1. **No interpersonal comparisons.** We cannot compare the satisfaction of one person with the satisfaction of another person, because there is no common unit. Nobody can say that a good gives more satisfaction to Ana than to Bruno.
+1. **No interpersonal comparisons.** We cannot compare the satisfaction of one person with the satisfaction of another person, because there is no common unit.
 2. **Prices do not measure value.** A price is an exchange ratio between two goods. It does not measure value. In a voluntary exchange, the buyer values the good more than its price, and the seller values it less than its price. If they valued it equally, they would not trade. Money prices make [economic calculation](07-economic-calculation.md) possible, but they do not measure the subjective value of goods.
 
 ## References
