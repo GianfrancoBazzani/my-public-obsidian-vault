@@ -14,9 +14,9 @@ The Austrian school of economics grew around Menger in Vienna. Walras put his ow
 
 ## Marginal Utility
 
-[Value and Utility](03-value-and-utility.md) explains that value is subjective. Menger applied this idea to the different units of the same good. Different satisfactions have unequal importance for us, so the different units of the same good also have unequal value. Each unit gets its value from the need that it satisfies. Thus, the same good can have a different value for the same person at different times, according to the need that it meets.
+[Value and Utility](03-value-and-utility.md) explains that value is subjective. Menger applied this idea to the different units of the same good. The needs that a good satisfies have unequal importance for us. But all the interchangeable units of a good have the same value, because any unit can satisfy any of these needs. The value of a unit depends on the need that the person gives up if he loses one unit, as the next sections explain. Thus, the same good can have a different value for the same person at different times, according to his stock and his needs.
 
-The marginal unit is the unit that an individual adds or removes in a decision. Marginal utility is the importance that he gives to that unit. Mises defines utility as the importance that we attach to a thing, because we believe that it can remove our uneasiness. Like value, marginal utility is ranked and not measured.
+Marginal utility is the utility of the last relevant unit of an interchangeable means that a person has, at a specific moment and place. This utility comes from the end that the unit serves. It is the position of the least important use of the stock on the scale of value of the person. Mises defines utility as the importance that we attach to a thing, because we believe that it can remove our uneasiness. Like value, marginal utility is ranked and not measured.
 
 ## Law of Diminishing Marginal Utility
 
@@ -37,6 +37,8 @@ Each sack satisfies a less important need than the sack before it. Mises explain
 All the sacks of the farmer are the same, so he can use any one of them for any of his needs. If he loses one sack, he does not reduce each use by one fifth. He stops the least important use, and he does not feed the parrots. The loss of any sack costs him only the satisfaction of the least important use. For this reason, each sack has the same value for him, and this value is the satisfaction that the parrots give him.
 
 Menger states this as a general rule. The value of one unit of a stock is equal to the importance of the least important satisfaction that the whole stock provides. Ammous concludes that the value of a good does not depend on its total or abstract utility. It depends on the quantity of the good that we have, in relation to our needs. Humans decide on the basis of the utility of specific quantities of a good, and of the ability of these quantities to satisfy their specific needs.
+
+The unit is not a fixed physical quantity. The action decides it. The relevant unit is the quantity that the person chooses about in a specific action. If the farmer must decide about one sack, the unit is one sack, and its value is the satisfaction that the parrots give him. If a flood can destroy two sacks together, the relevant unit is two sacks. Their value is the satisfaction of the two least important uses, the parrots and the brandy. Thus, the same good can have a different marginal utility in different actions, because the relevant unit and the stock of the actor change.
 
 ## Water-Diamond Paradox
 
