@@ -11,7 +11,7 @@ An end is a state of affairs that the actor prefers to the present state. Ends h
 
 ## Means
 
-A means is anything that the actor thinks will help him reach his end. Means are also called resources or economic goods. A thing is not a means because of its physical properties. It becomes a means when a person sees a use for it. Carl Menger gives four conditions for a thing to become a good:
+A means is anything that the actor thinks will help him reach his end. Means are also called economic goods. A thing is not a means because of its physical properties. It becomes a means when a person sees a use for it. Carl Menger gives four conditions for a thing to become a good:
 
 1. A human need exists.
 2. The thing has properties that can satisfy this need.
