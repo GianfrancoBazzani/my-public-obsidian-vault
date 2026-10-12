@@ -14,7 +14,18 @@ Every choice has many alternatives, but only one of them is the opportunity cost
 
 In the Austrian view, opportunity cost is subjective. Mises explains that action sorts and grades its ends, so values are ranked in order and not measured with numbers. Only the individual knows how he ranks his alternatives, and two people who face the same options can have different costs. For this reason, nobody can observe or measure the opportunity cost of another person. An observer sees only the choice, not the alternative that the actor gave up.
 
-James Buchanan adds that cost exists only in the mind of the decision maker and only at the moment of choice. The cost is the value of an alternative that will never happen, so it disappears when the choice is made. After the choice, nobody can know with certainty what the forgone alternative would have given.
+In *Cost and Choice* (1969), James Buchanan explains that cost exists only in the mind of the decision maker and only at the moment of choice. The cost is the value of an alternative that will never happen, so it disappears when the choice is made. After the choice, nobody can know with certainty what the forgone alternative would have given.
+
+Buchanan lists six properties of the cost that influences a choice:
+
+1. **It is borne only by the decision maker.** Nobody can transfer it to another person.
+2. **It is subjective.** In his words, "it exists in the mind of the decision-maker and nowhere else."
+3. **It is based on expectations.** It looks forward, because the actor estimates what each alternative will give him (see the ex ante calculation in [Economic Calculation](07-economic-calculation.md)).
+4. **It can never be realized.** The actor gives up the alternative, so he never enjoys it.
+5. **Nobody else can measure it.** An observer cannot see the subjective experience of another person.
+6. **It is dated at the moment of choice.** Before the choice there is no decision, and after the choice the alternative is gone.
+
+Buchanan also separates two meanings of cost. Choice-influencing cost is the value of the alternatives that the actor gives up. It exists before the choice and affects it. Choice-influenced cost is the outlays and the losses that come after the choice, such as the money that a company pays for the materials of a project. Buchanan writes that "in the one case, cost inhibits choice; in the other, cost results from choice." Only choice-influencing cost is a true opportunity cost. Accountants and observers can see the choice-influenced costs, but these costs do not explain why the actor chose.
 
 ## Monetary Calculation as a Tool
 
