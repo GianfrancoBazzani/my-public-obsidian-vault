@@ -17,7 +17,11 @@ Menger defines value as "the importance that individual goods or quantities of g
 Two factors determine the value of a good.
 
 1. **Subjective utility.** Utility is subjective, because it depends on the end of the actor and on his belief that the good can help him reach it. Utility is also marginal. The actor values each unit of a good by the least important use of his stock (see [Marginalism](04-marginalism.md)).
-2. **Economic scarcity.** Economic scarcity is related to physical scarcity, but it is not the same. A good is economically scarce when the quantity that people want is greater than the quantity available. A physically rare thing, such as an old letter of an unknown person, can have no value because nobody wants it. A physically abundant thing, such as water in a desert city, can be economically scarce.
+2. **Economic scarcity.** A good is economically scarce when the quantity that people want is greater than the quantity available. A physically rare thing, such as an old letter of an unknown person, can have no value because nobody wants it. A physically abundant thing, such as water in a desert city, can be economically scarce.
+
+Randy Barnett explains why economic scarcity is not the same as physical scarcity. For him, economic scarcity is subjective. Imagine a world with an unlimited number of trees. One tree stands between my house and the house of my neighbor. I want to keep it, because I like to look at it. My neighbor wants to cut it, because it blocks her view of the sunset. The unlimited number of trees does not solve our problem, because the relevant good is not "trees" but "the tree between our houses". Our two actions need the same object for different uses at the same time, so they cannot both happen.
+
+Thus, a good is economically scarce when one or more persons want to use it, and it cannot satisfy all these wants at the same time. This is the same definition as above. Scarcity comes from a conflict between wants, not from the physical quantity of a thing. It can also exist for one person who wants to use a resource for two incompossible uses. In a world where all the wanted uses of resources were compatible, resources could be as physically limited as in our world, but nothing would be economically scarce.
 
 The more useful and the more scarce a good is, the more people value it. The less useful and the less scarce a good is, the less people value it. A good that is useful but not scarce, such as air, is a free good, and nobody needs to economize it (see [Ends and Means](02-ends-and-means.md)).
 
@@ -60,5 +64,6 @@ There are two consequences.
 Links last checked: 11 October 2026.
 
 - Ammous, Saifedean. 2023. *Principles of Economics*. The Saif House. [Author page](https://saifedean.com/poe/).
+- Barnett, Randy E. 1998. *The Structure of Liberty: Justice and the Rule of Law*. Oxford University Press. 2nd ed., 2014.
 - Menger, Carl. (1871) 1950. *Principles of Economics*. Translated by James Dingwall and Bert F. Hoselitz. Free Press. Originally published as *Grundsätze der Volkswirthschaftslehre*. [Free online edition](https://mises.org/library/book/principles-economics).
 - Mises, Ludwig von. 1949. *Human Action: A Treatise on Economics*. Yale University Press. [Free online edition](https://mises.org/library/book/human-action).
