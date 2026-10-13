@@ -57,7 +57,17 @@ Think of how you value your own things. You can say that you prefer your family 
 There are two consequences.
 
 1. **No interpersonal comparisons.** We cannot compare the satisfaction of one person with the satisfaction of another person, because there is no common unit.
-2. **Prices do not measure value.** A price is an exchange ratio between two goods. It does not measure value. In a voluntary exchange, the buyer values the good more than its price, and the seller values it less than its price. If they valued it equally, they would not trade. Money prices make [economic calculation](07-economic-calculation.md) possible, but they do not measure the subjective value of goods.
+2. **Prices do not measure value.** A price is an exchange ratio between two goods, not a measure of value. The next section explains this difference.
+
+## Value and Price
+
+Value and price are different things, and people often confuse them. Value is a subjective judgment in the mind of one person. A price is the exchange ratio between two goods in a real exchange, usually between a good and a quantity of money. The price of a good is not its objective value. It is also not the subjective value of the buyer or of the seller.
+
+An exchange shows only the limits of the valuations of the two parties. Imagine that a seller agrees to sell a good for 1,000 dollars. She shows that she values the good less than 1,000 dollars. If she valued it more, she would keep it. The buyer pays 1,000 dollars, so he shows that he values the good more than 1,000 dollars. If he valued it less, he would keep his money. If the two parties valued the good equally, they would not trade.
+
+Thus, a price gives only an upper limit of the valuation of the seller and a lower limit of the valuation of the buyer. Nobody can find the exact valuation of a person from the price of his exchange. Also, a price is valid only for one time and one place. The same good can have a different price tomorrow, or in a different market, because the valuations of the people change.
+
+A common mistake is to confuse value with price. With this mistake comes the idea that we can measure value objectively, in units of money. But value cannot be measured, as the previous section explains. Money prices make [economic calculation](07-economic-calculation.md) possible, but they do not measure the subjective value of goods.
 
 ## References
 
