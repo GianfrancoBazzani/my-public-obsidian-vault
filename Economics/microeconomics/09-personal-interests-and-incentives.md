@@ -2,7 +2,7 @@
 
 ## Personal Interest
 
-Why do individuals perform economic actions? Because they pursue their own interests. Mises writes that "the incentive that impels a man to act is always some uneasiness", because a man perfectly content with his state of affairs would have no reason to change it. Uneasiness alone is not sufficient. The individual must also imagine a more satisfactory state of affairs, and he must expect that his action can remove or at least reduce the uneasiness. If one of these three conditions is missing, he does not act. It is important to note that personal interest does not mean selfishness. The ends that an individual chooses can be material or spiritual, and they can include the well-being of his family, his community, or strangers. What matters is that the ends are his own, because only the individual can rank his goals and only he can judge whether an action made him better off.
+Why do individuals perform economic actions? Because they pursue their own interests. Mises writes that "the incentive that impels a man to act is always some uneasiness", because a man perfectly content with his state of affairs would have no reason to change it. Uneasiness alone is not sufficient. The individual must also imagine a more satisfactory state of affairs, and he must expect that his action can remove or at least reduce the uneasiness. If one of these three conditions is missing, he does not act (see [Human Action](01-human-action.md)). It is important to note that personal interest does not mean selfishness. The ends that an individual chooses can be material or spiritual, and they can include the well-being of his family, his community, or strangers. What matters is that the ends are his own, because only the individual can rank his goals and only he can judge whether an action made him better off.
 
 > It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but from their regard to their own interest. We address ourselves, not to their humanity, but to their self-love, and never talk to them of our own necessities, but of their advantages.
 >
@@ -40,8 +40,6 @@ The rules of a society decide whether personal interests and social interests po
 
 History supports this argument. Acemoglu and Robinson compare inclusive institutions, with secure property rights, an impartial system of law, and a level playing field for exchange and contracts, with extractive institutions, which enrich a small elite at the expense of the rest of society. In inclusive institutions, people keep most of the gains from their own efforts, so they have an incentive to work, save, invest, and innovate. In extractive institutions, this incentive is weak, and the economy does not grow.
 
-Human capital and capital goods are necessary for economic growth, but they are not sufficient. A society with skilled workers and modern machines stays poor if its rules let a few people take what others produce. Good institutions are the condition that makes the other factors productive, because they align personal interests with social interests. When individuals can keep the gains of their efforts, they work, save, invest, and innovate, and this brings economic growth, wealth, and social well-being.
-
 ## The Problem of Incentives
 
 > Having knowledge of potential uses for resources is one thing. Putting that knowledge into action is another. Human action is costly.
@@ -66,15 +64,15 @@ The problem has two parts:
 For Barnett, some of the rights that define justice solve the incentive problem:
 
 - **First possession.** The first person who invests scarce resources to control an unowned resource becomes its owner. Without this right, nobody would improve a resource in a permanent way, because he could lose the benefits of his investment.
-- **Freedom from contract.** Nobody can transfer the rights of a person without his consent. Thus, the person who wants a resource must offer something that the owner values more. This prevents negative incentives.
-- **Freedom to contract.** Agreements that people make in the hope of a profit are enforceable. This gives positive incentives for beneficial exchanges and makes entrepreneurship possible.
-- **Stable rules.** If the legal rules changed too frequently, people could not rely on them, and they would have less incentive to invest and to conserve resources.
+- **Freedom from contract.** Consent is necessary. Nobody can transfer the rights of a person without his consent, so nobody can take the results of his effort. This prevents negative incentives.
+- **Freedom to contract.** Consent is sufficient. Agreements that people make in the hope of a profit are enforceable. This gives positive incentives for beneficial exchanges and makes entrepreneurship possible.
+- **Stable rules.** Barnett adds that the legal rules must not change too frequently. As with the rule of law above, people must be able to rely on the rules, or they lose the incentive to invest and to conserve resources.
 
 When someone takes the resources of a person without his consent, the incentives of that person decrease. To condemn the taking is not enough. The victim must receive compensation, and the person who took the resources must pay it. If someone else paid, a new forced transfer would happen. Barnett calls this the right of restitution.
 
 ### Free Riders
 
-Some goods are nonexcludable. The producer cannot stop people who do not pay from using them. These people are free riders, and they reduce the incentive to produce the good. The classic textbook example is a lighthouse, because its light helps all ships. Some economists conclude that the government must tax ship owners to pay for lighthouses.
+Some goods are nonexcludable. The producer cannot stop people who do not pay from using them. These people are free riders. This is a case of the external economies of Mises above: the producer cannot keep all the benefits of his action, so his incentive to produce the good is weak. The classic textbook example is a lighthouse, because its light helps all ships. Some economists conclude that the government must tax ship owners to pay for lighthouses.
 
 Barnett answers that free riders are a smaller problem than people think. Ronald Coase discovered that, in England, ports paid for many lighthouses with port fees. Broadcast radio and television charge advertisers, not listeners. Free riders also give an incentive to invent ways of exclusion, such as cable television. A tax, in contrast, has problems of knowledge and of partiality. Without the consent of buyers and sellers, nobody can know how much people want a good. And nothing guarantees that the authority will use its power impartially.
 
@@ -82,7 +80,7 @@ Barnett answers that free riders are a smaller problem than people think. Ronald
 
 The problem of knowledge and the problem of incentives are different. The first is about what people know. The second is about what people want to do. A completely honest and benevolent planner has no incentive problem, but he still cannot know the particular circumstances of millions of people. A planner who knows everything, but who acts in his own interest, has no knowledge problem, but he has an incentive problem. He does not bear the results of his decisions, so he has no reason to use resources for the good of their owners.
 
-But the two problems are also connected. Local knowledge is useless if the person who has it has no reason to act on it. Good incentives are useless if the person who has them does not know what to do. Several property and freedom of contract solve both problems. They give the decision about each resource to the person who has the relevant knowledge, and they make this person bear the costs and receive the benefits of his decisions. Prices show this double function. In Hayek's example of tin, a higher price tells people that tin is scarcer. It also gives users a reason to use less tin, and gives producers a reason to produce more. A price is both a signal and a reward.
+But the two problems are also connected. Local knowledge is useless if the person who has it has no reason to act on it. Good incentives are useless if the person who has them does not know what to do. Several property and freedom of contract solve both problems. They give the decision about each resource to the person who has the relevant knowledge, and they make this person bear the costs and receive the benefits of his decisions. Prices show this double function. In Hayek's example of tin (see [The Problem of Knowledge](11-the-problem-of-knowledge.md)), a higher price tells people that tin is scarcer. It also gives users a reason to use less tin, and gives producers a reason to produce more. A price is both a signal and a reward.
 
 ## References
 
