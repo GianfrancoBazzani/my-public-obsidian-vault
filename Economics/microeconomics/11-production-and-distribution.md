@@ -35,7 +35,7 @@ With these two kinds of information, we can decide what to produce and how to pr
 
 ## Discovery of New Knowledge
 
-Imagine that we could collect and transmit all the information that is economically relevant to answer what to produce and how. The problem is still not solved. Much of the information that we need does not exist yet. People create it when they act.
+The problem of knowledge shows that nobody can collect all the dispersed information (see [The Problem of Knowledge](09-the-problem-of-knowledge.md)). But imagine that we could. The problem is still not solved. Much of the information that we need does not exist yet. People create it when they act.
 
 New technologies are a good example. Nobody knows a better method of production before someone discovers it, so nobody can transmit it before then. The same is true for the future. What will the cities of the future look like? Nobody can know, because many of the people who will design them are not born yet.
 
@@ -49,8 +49,19 @@ In a market, entrepreneurs search for opportunities for profit. When an entrepre
 
 Thus, the set of rules that answers what to produce and how to produce it also determines the information that is available to answer these questions. The information is endogenous to the system, not a given fact outside it. In a market economy, private property and the possibility of profit give people an incentive to discover new knowledge (see [Personal Interests and Incentives](10-personal-interests-and-incentives.md)). A central planner has a problem that is larger than the collection of dispersed information. If his system blocks the free entrepreneurial action of individuals, the information that he needs is never created.
 
+## Incentive Structure
+
+When we answer the question "for whom do we produce?", we decide how goods and services are distributed. At the same time, we determine the incentive structure of the society. Imagine two extreme cases. In the first case, a minority receives nothing, whatever it produces. In the second case, a minority receives everything, even if it produces nothing. In both cases, the incentives are completely distorted. Why should a person produce if he gets nothing in exchange? And why should he produce if he gets everything without effort? In the first case, the incentives are too weak. In the second case, they are too strong (see [Personal Interests and Incentives](10-personal-interests-and-incentives.md)).
+
+Thus, an economy can work efficiently only with a good system of incentives, and this system is not a trivial topic.
+
+The incentives must push people to discover new information, as we saw in the previous section. But they must also push people to share it. An individual can have information and keep it from others. We want incentives that make the transmission of this information to others the best way for the individual to reach his own ends. Then the information can spread through the whole economy with as little friction as possible. In a market economy, prices do this: a price transmits information and also gives a reward to the person who acts on it (see [The Problem of Knowledge](09-the-problem-of-knowledge.md)). Randy Barnett calls the need to act on existing knowledge and to discover new knowledge the incentive problem (see [Personal Interests and Incentives](10-personal-interests-and-incentives.md)).
+
+The problem of information and the problem of incentives are connected. If we know the best answers to what to produce and how to produce it, but we do not answer for whom to produce, we have much information that nobody uses correctly.
+
 ## References
 
+- Barnett, Randy E. 1998. *The Structure of Liberty: Justice and the Rule of Law*. Oxford University Press.
 - Hayek, Friedrich A. (1968) 2002. "Competition as a Discovery Procedure." Translated by Marcellus S. Snow. *The Quarterly Journal of Austrian Economics* 5 (3): 9–23.
 - Huerta de Soto, Jesús. (1992) 2010. *Socialism, Economic Calculation and Entrepreneurship*. Translated by Melinda A. Stroup. Edward Elgar. Originally published as *Socialismo, cálculo económico y función empresarial* (Unión Editorial).
 - Samuelson, Paul A. 1948. *Economics: An Introductory Analysis*. McGraw-Hill.
