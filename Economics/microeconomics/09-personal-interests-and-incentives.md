@@ -42,11 +42,58 @@ History supports this argument. Acemoglu and Robinson compare inclusive institut
 
 Human capital and capital goods are necessary for economic growth, but they are not sufficient. A society with skilled workers and modern machines stays poor if its rules let a few people take what others produce. Good institutions are the condition that makes the other factors productive, because they align personal interests with social interests. When individuals can keep the gains of their efforts, they work, save, invest, and innovate, and this brings economic growth, wealth, and social well-being.
 
+## The Problem of Incentives
+
+> Having knowledge of potential uses for resources is one thing. Putting that knowledge into action is another. Human action is costly.
+>
+> — Randy E. Barnett, *The Structure of Liberty* (1998), ch. 8
+
+In *The Structure of Liberty* (1998), Randy Barnett explains in more detail why institutions such as property and contract give good incentives. Each person has personal and local knowledge that others do not have (see [The Problem of Knowledge](11-the-problem-of-knowledge.md)). But knowledge is not enough. A person must also want to act on it, and each action has a subjective cost that only he bears (see [Opportunity Cost](06-opportunity-cost.md)). Barnett calls this kind of difficulty a problem of interest, and the incentive problem is one of these problems.
+
+Barnett defines the problem as follows:
+
+> The Incentive Problem: ensuring that persons have an adequate incentive to make choices reflecting the knowledge to which they have access and to discover new information; it is the need to close the gap between the conduct that justice permits and a right-holder's interest to act knowledgeably with his or her resources.
+>
+> — Randy E. Barnett, *The Structure of Liberty* (1998), ch. 8
+
+The problem has two parts:
+
+1. **To use existing knowledge.** People must have an incentive to bear the cost of choice and to act on the knowledge that they already have.
+2. **To discover new knowledge.** People must have an incentive to search for new knowledge about the uses of resources. This is entrepreneurship. Barnett follows Israel Kirzner: ignorance makes opportunities for profit possible, and the possibility of profit gives the entrepreneur the incentive to discover them.
+
+### How Justice Gives Incentives
+
+For Barnett, some of the rights that define justice solve the incentive problem:
+
+- **First possession.** The first person who invests scarce resources to control an unowned resource becomes its owner. Without this right, nobody would improve a resource in a permanent way, because he could lose the benefits of his investment.
+- **Freedom from contract.** Nobody can transfer the rights of a person without his consent. Thus, the person who wants a resource must offer something that the owner values more. This prevents negative incentives.
+- **Freedom to contract.** Agreements that people make in the hope of a profit are enforceable. This gives positive incentives for beneficial exchanges and makes entrepreneurship possible.
+- **Stable rules.** If the legal rules changed too frequently, people could not rely on them, and they would have less incentive to invest and to conserve resources.
+
+When someone takes the resources of a person without his consent, the incentives of that person decrease. To condemn the taking is not enough. The victim must receive compensation, and the person who took the resources must pay it. If someone else paid, a new forced transfer would happen. Barnett calls this the right of restitution.
+
+### Free Riders
+
+Some goods are nonexcludable. The producer cannot stop people who do not pay from using them. These people are free riders, and they reduce the incentive to produce the good. The classic textbook example is a lighthouse, because its light helps all ships. Some economists conclude that the government must tax ship owners to pay for lighthouses.
+
+Barnett answers that free riders are a smaller problem than people think. Ronald Coase discovered that, in England, ports paid for many lighthouses with port fees. Broadcast radio and television charge advertisers, not listeners. Free riders also give an incentive to invent ways of exclusion, such as cable television. A tax, in contrast, has problems of knowledge and of partiality. Without the consent of buyers and sellers, nobody can know how much people want a good. And nothing guarantees that the authority will use its power impartially.
+
+### Knowledge and Incentives
+
+The problem of knowledge and the problem of incentives are different. The first is about what people know. The second is about what people want to do. A completely honest and benevolent planner has no incentive problem, but he still cannot know the particular circumstances of millions of people. A planner who knows everything, but who acts in his own interest, has no knowledge problem, but he has an incentive problem. He does not bear the results of his decisions, so he has no reason to use resources for the good of their owners.
+
+But the two problems are also connected. Local knowledge is useless if the person who has it has no reason to act on it. Good incentives are useless if the person who has them does not know what to do. Several property and freedom of contract solve both problems. They give the decision about each resource to the person who has the relevant knowledge, and they make this person bear the costs and receive the benefits of his decisions. Prices show this double function. In Hayek's example of tin, a higher price tells people that tin is scarcer. It also gives users a reason to use less tin, and gives producers a reason to produce more. A price is both a signal and a reward.
+
 ## References
 
 - Acemoglu, Daron, and James A. Robinson. 2012. *Why Nations Fail: The Origins of Power, Prosperity, and Poverty*. Crown Business.
+- Barnett, Randy E. 1998. *The Structure of Liberty: Justice and the Rule of Law*. Oxford University Press.
+- Buchanan, James M. 1969. *Cost and Choice: An Inquiry in Economic Theory*. Markham. [Free online edition](https://www.econlib.org/library/Buchanan/buchCv6.html).
+- Coase, Ronald H. 1974. "The Lighthouse in Economics." *The Journal of Law and Economics* 17 (2): 357–376.
 - Gneezy, Uri, and Aldo Rustichini. 2000. "A Fine Is a Price." *The Journal of Legal Studies* 29 (1): 1–17. [DOI](https://doi.org/10.1086/468061).
 - Hayek, Friedrich A. 1944. *The Road to Serfdom*. Routledge. [Free online edition](https://mises.org/library/book/road-serfdom).
+- Hayek, Friedrich A. 1945. "The Use of Knowledge in Society." *The American Economic Review* 35 (4): 519–530. [Free online edition](https://www.econlib.org/library/Essays/hykKnw.html).
+- Kirzner, Israel M. 1973. *Competition and Entrepreneurship*. University of Chicago Press.
 - Menger, Carl. 1892. "On the Origin of Money." *The Economic Journal* 2 (6): 239–255. [DOI](https://doi.org/10.2307/2956146).
 - Mises, Ludwig von. 1949. *Human Action: A Treatise on Economics*. Yale University Press. [Free online edition](https://mises.org/library/book/human-action).
 - North, Douglass C. 1990. *Institutions, Institutional Change and Economic Performance*. Cambridge University Press. [DOI](https://doi.org/10.1017/CBO9780511808678).
