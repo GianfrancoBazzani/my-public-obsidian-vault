@@ -1,6 +1,6 @@
 # Production and Distribution
 
-A society needs economic goods to survive. It needs a continuous flow of economic goods that satisfies the basic needs of all its members, and this need never ends. Thus, each society must produce and distribute economic goods regularly.
+A society needs economic goods to survive. It needs a continuous flow of economic goods that satisfies the basic needs of all its members. Thus, each society must produce and distribute economic goods regularly.
 
 This need does not depend on the type of society or on its degree of development. We find the same need in a primitive tribe and in a modern industrial country.
 
@@ -8,7 +8,7 @@ This need does not depend on the type of society or on its degree of development
 
 Each economy must answer three questions. Paul Samuelson made this list popular in his textbook *Economics* (1948).
 
-1. **What do we produce?** Which goods and services, and in what quantities, give the continuous flow of goods that the society needs.
+1. **What do we produce?** Which goods and services we produce, and in what quantities.
 2. **How do we produce it?** Which resources and which methods of production we use.
 3. **For whom do we produce it?** How the goods are distributed among the members of the society.
 
@@ -29,15 +29,15 @@ There are different ways to produce the same good, and some ways use fewer resou
 
 To decide what to produce and what not to produce, we must know the preferences of the individuals who form the economic system. We must start with the goods that individuals need and value most (see [Value and Utility](03-value-and-utility.md)). We cannot produce at random.
 
-We must also know which technologies we can use to combine the factors of production and produce these goods. There can be different ways to produce a specific good, and some ways are better than others.
+We must also know which technologies we can use to combine the factors of production and produce these goods.
 
 With these two kinds of information, we can decide what to produce and how to produce it. But this information is not given. It is not public, and it is not accessible to everyone. It is dispersed among all the individuals of the society (see [The Problem of Knowledge](09-the-problem-of-knowledge.md)). Thus, it is difficult to obtain.
 
 ## Discovery of New Knowledge
 
-Imagine that we could collect and transmit all the information that is economically relevant to answer what to produce and how. The problem is still not solved, because this information depends on its context. Much of the information that we need does not exist yet. People create it when they act.
+Imagine that we could collect and transmit all the information that is economically relevant to answer what to produce and how. The problem is still not solved. Much of the information that we need does not exist yet. People create it when they act.
 
-New technologies are a good example. Nobody knows a better method of production before someone discovers it. If the institutional framework does not give people an incentive to explore new technologies, nobody discovers them, and the information about them never exists. We cannot transmit information that nobody created. And even if we could state and transmit all existing information, the information of the future is still missing. What will the cities of the future look like? Nobody can know, because many of the people who will design them are not born yet.
+New technologies are a good example. Nobody knows a better method of production before someone discovers it, so nobody can transmit it before then. The same is true for the future. What will the cities of the future look like? Nobody can know, because many of the people who will design them are not born yet.
 
 Friedrich Hayek describes competition as a discovery procedure:
 
@@ -47,7 +47,7 @@ Friedrich Hayek describes competition as a discovery procedure:
 
 In a market, entrepreneurs search for opportunities for profit. When an entrepreneur finds a cheaper method of production, or a good that people value more, he creates new information (see [Economic Calculation](07-economic-calculation.md)). Jesús Huerta de Soto explains that each entrepreneurial act creates information that did not exist before, and that prices transmit this information to other people. Competition then shows which of these discoveries people really value. Nobody can know these results in advance, because they appear only when people compete.
 
-Thus, the set of rules that answers what to produce and how to produce it also determines the information that is available to answer these questions. The information is endogenous to the system, not a given fact outside it. The institutions of a society decide whether people have an incentive to discover new knowledge (see [Personal Interests and Incentives](10-personal-interests-and-incentives.md)). In a market economy, private property and the possibility of profit give this incentive. A central planner has a problem that is larger than the collection of dispersed information. If his system blocks the free entrepreneurial action of individuals, the information that he needs is never created.
+Thus, the set of rules that answers what to produce and how to produce it also determines the information that is available to answer these questions. The information is endogenous to the system, not a given fact outside it. In a market economy, private property and the possibility of profit give people an incentive to discover new knowledge (see [Personal Interests and Incentives](10-personal-interests-and-incentives.md)). A central planner has a problem that is larger than the collection of dispersed information. If his system blocks the free entrepreneurial action of individuals, the information that he needs is never created.
 
 ## References
 
