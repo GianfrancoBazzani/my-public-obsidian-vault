@@ -1,4 +1,4 @@
-# Inflation
+# Inflation and Banks
 
 Inflation is a general and continuous increase of prices. In other words, each unit of money buys fewer goods and services over time. Inflation is probably one of the worst phenomena in an economy. It is not only that prices are higher, and that individuals must pay more, in relation to their income, for the same goods and services. Entrepreneurs also become uncertain about their future costs, so they reduce or stop their investments and their production. Prices tell each individual what others value and which uses of resources are profitable. When all prices change continuously, these signals become less clear, and the errors of economic calculation increase.
 

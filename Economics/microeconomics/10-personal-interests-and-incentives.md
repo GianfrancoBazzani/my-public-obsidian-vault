@@ -46,7 +46,7 @@ History supports this argument. Acemoglu and Robinson compare inclusive institut
 >
 > — Randy E. Barnett, *The Structure of Liberty* (1998), ch. 8
 
-In *The Structure of Liberty* (1998), Randy Barnett explains in more detail why institutions such as property and contract give good incentives. Each person has personal and local knowledge that others do not have (see [The Problem of Knowledge](11-the-problem-of-knowledge.md)). But knowledge is not enough. A person must also want to act on it, and each action has a subjective cost that only he bears (see [Opportunity Cost](06-opportunity-cost.md)). Barnett calls this kind of difficulty a problem of interest, and the incentive problem is one of these problems.
+In *The Structure of Liberty* (1998), Randy Barnett explains in more detail why institutions such as property and contract give good incentives. Each person has personal and local knowledge that others do not have (see [The Problem of Knowledge](09-the-problem-of-knowledge.md)). But knowledge is not enough. A person must also want to act on it, and each action has a subjective cost that only he bears (see [Opportunity Cost](06-opportunity-cost.md)). Barnett calls this kind of difficulty a problem of interest, and the incentive problem is one of these problems.
 
 Barnett defines the problem as follows:
 
@@ -80,7 +80,7 @@ Barnett answers that free riders are a smaller problem than people think. Ronald
 
 The problem of knowledge and the problem of incentives are different. The first is about what people know. The second is about what people want to do. A completely honest and benevolent planner has no incentive problem, but he still cannot know the particular circumstances of millions of people. A planner who knows everything, but who acts in his own interest, has no knowledge problem, but he has an incentive problem. He does not bear the results of his decisions, so he has no reason to use resources for the good of their owners.
 
-But the two problems are also connected. Local knowledge is useless if the person who has it has no reason to act on it. Good incentives are useless if the person who has them does not know what to do. Several property and freedom of contract solve both problems. They give the decision about each resource to the person who has the relevant knowledge, and they make this person bear the costs and receive the benefits of his decisions. Prices show this double function. In Hayek's example of tin (see [The Problem of Knowledge](11-the-problem-of-knowledge.md)), a higher price tells people that tin is scarcer. It also gives users a reason to use less tin, and gives producers a reason to produce more. A price is both a signal and a reward.
+But the two problems are also connected. Local knowledge is useless if the person who has it has no reason to act on it. Good incentives are useless if the person who has them does not know what to do. Several property and freedom of contract solve both problems. They give the decision about each resource to the person who has the relevant knowledge, and they make this person bear the costs and receive the benefits of his decisions. Prices show this double function. In Hayek's example of tin (see [The Problem of Knowledge](09-the-problem-of-knowledge.md)), a higher price tells people that tin is scarcer. It also gives users a reason to use less tin, and gives producers a reason to produce more. A price is both a signal and a reward.
 
 ## References
 
