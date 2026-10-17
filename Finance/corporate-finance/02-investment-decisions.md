@@ -21,7 +21,7 @@ Each period the depreciation $\delta_t K_t$ uses up a part of the capital. The i
 - **Maintenance CapEx** replaces the capital used up. If $I_t = \delta_t K_t$, the capital stays constant.
 - **Growth CapEx** increases the capital. Only an investment above the depreciation, $I_t > \delta_t K_t$, increases the capacity of the company.
 
-The examples of the slide act on $K_t$ in different ways:
+The examples above act on $K_t$ in different ways:
 
 | Example | Effect on $K_t$ |
 | --- | --- |
@@ -33,7 +33,7 @@ The examples of the slide act on $K_t$ in different ways:
 A divestment creates value when the price received is higher than the present value of the free cash flows that the division would generate inside the company.
 
 > [!NOTE]
-> In a strict sense, an **equity carve-out** is the sale to the public (an IPO) of a part of the shares of a subsidiary, while the parent company keeps the control. The slide uses the term in a wider sense, for the sale of a division in general (a **divestiture**).
+> In a strict sense, an **equity carve-out** is the sale to the public (an IPO) of a part of the shares of a subsidiary, while the parent company keeps the control. This note uses the term in a wider sense, for the sale of a division in general (a **divestiture**).
 
 ## Sources and uses
 

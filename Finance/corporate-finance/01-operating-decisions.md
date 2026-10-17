@@ -45,7 +45,7 @@ $$FCF = EBIT (1-\tau) + D\&A - \Delta K_t^W - I_t$$
 The FCF is the cash available to **all the providers of funds**, the creditors and the shareholders. For this reason it does not deduct the payments to them (interest, debt repayments and dividends). These payments are the cost of capital. The cost of capital does not appear in the FCF. It appears in the discount rate (the WACC), which converts the future FCF into the value of the company.
 
 > [!NOTE]
-> The slide calls the FCF a "profit", but the FCF is a cash measure, not an accounting profit. It is different from the net income for two reasons. It deducts the purchase of fixed capital and the changes in working capital. It does not deduct the costs that are not payments of cash, such as the depreciation.
+> The definition above calls the FCF a "profit", but the FCF is a cash measure, not an accounting profit. It is different from the net income for two reasons. It deducts the purchase of fixed capital and the changes in working capital. It does not deduct the costs that are not payments of cash, such as the depreciation.
 
 The taxes in the table are calculated on the EBIT, as if the company had no debt. In reality the interest is deductible from the taxable profit, so debt reduces the taxes (the **interest tax shield**). This benefit is not in the FCF. It is in the WACC, which uses the cost of debt after taxes, $\kappa_D (1-\tau)$.
 
