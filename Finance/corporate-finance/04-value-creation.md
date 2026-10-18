@@ -115,7 +115,7 @@ For example, with $ROIC = 8\%$ and $g = 4\%$, the company reinvests $\frac{4\%}{
 
 ![](Attachments/growth-and-value.svg)
 
-Growth is not a goal in itself. The company must first earn a return above its cost of capital, and only then grow.
+Growth is not a goal in itself. The company must first earn a return above its cost of capital, and only then grow. The note [Why Value Value?](05-why-value-value.md) compares the long-term value with the other possible goals of a company (the share price today, the accounting profit and the growth).
 
 ## References
 

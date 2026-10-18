@@ -29,7 +29,7 @@ The goal of the company, to create value, can be written as an optimization prob
 $$\max_{p,q,I,f} \sum_{t=0}^{\infty} \frac{\Pi_t}{(1+\kappa_t)^t}$$
 
 - $p, q, I, f$ are the decision variables, one for each type of decision. The prices $p$ and the quantities $q$ are the operating decisions, the investment $I$ is the investment decision, and the funds $f$ are the financing decisions.
-- $t$ is the period (e.g. the year), from today ($t=0$) to an infinite horizon ($t=\infty$), because a company aims to create value in the long term and has no defined end.
+- $t$ is the period (e.g. the year), from today ($t=0$) to an infinite horizon ($t=\infty$), because a company aims to create value in the long term and has no defined end. The note [Why Value Value?](05-why-value-value.md) explains why the goal is long term.
 - $\Pi_t$ is the free cash flow of the company in period $t$: the cash available to all the providers of funds (creditors and shareholders), after the operating costs and the investments.
 - $\kappa_t$ is the discount rate in period $t$, i.e. the cost of capital: the return that the providers of funds require. When the cash flow is available to all the providers of funds, this rate is the **weighted average cost of capital** (WACC), the average of the cost of debt and the cost of equity, weighted by the share of each in the funding of the company.
 - $\frac{\Pi_t}{(1+\kappa_t)^t}$ is the present value of the cash flow of period $t$, and the sum of all of them is the value of the company.
