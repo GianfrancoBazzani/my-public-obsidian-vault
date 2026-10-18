@@ -2,7 +2,7 @@
 
 ## Structure of interest rates
 
-The **structure of interest rates** describes the relation between interest rates and their **tenors**. The tenor is the time to maturity of a fixed income instrument. Each instrument a has its own interest rate, and this rate could depend on the tenor of the instrument. For example, in normal market conditions a longer instrument usually pays a higher interest rate. The main reasons are:
+The **structure of interest rates** describes the relation between interest rates and their **tenors**. The tenor is the time to maturity of a fixed income instrument. Each instrument has its own interest rate, and this rate could depend on the tenor of the instrument. For example, in normal market conditions a longer instrument usually pays a higher interest rate. The main reasons are:
 
 - **Term premium (liquidity preference):** the lender locks the capital for a longer time and is exposed to more uncertainty, so the lender asks for a compensation.
 - **Expectations of future short rates:** the long rate reflects the expected path of the short rates. If the market expects rate cuts, the long rate can be lower than the short rate.
@@ -11,7 +11,7 @@ The **structure of interest rates** describes the relation between interest rate
 - **Interest rate risk (price sensitivity):** the price of a long instrument moves more when the rates change, so the investor asks for a compensation for this volatility.
 - **Market segmentation (preferred habitat):** different investors prefer different tenors, for example banks prefer short tenors and pension funds prefer long tenors. Supply and demand in each segment set the rate of that tenor.
 
-The **curve** is the graph of this structure. It shows the tenor on the horizontal axis and the interest rate on the vertical axis. EaSpot Curve or ch point is the rate of one tenor. The curve is not always upward sloping. It can be flat or inverted when the market expects lower rates in the future, as in the US Treasury market in 2022 and 2023.
+The **curve** is the graph of this structure. It shows the tenor on the horizontal axis and the interest rate on the vertical axis. Each point is the rate of one tenor. The curve is not always upward sloping. It can be flat or inverted when the market expects lower rates in the future, as in the US Treasury market in 2022 and 2023.
 
 ## Yield Curve
 
@@ -59,6 +59,30 @@ Consider a bond with a par value of 100, annual coupons $C$, and a maturity of 3
 $$\frac{C}{1 + r(1)} + \frac{C}{(1 + r(2))^2} + \frac{C + 100}{(1 + r(3))^3} = 100$$
 
 The coupon $C$ that solves this equation, divided by the par value, is the 3-year par rate.
+
+**Derivation**
+
+The discount factor of year $i$ is $DF(i) = \frac{1}{(1 + r(i))^i}$, as in the section on the zero rates. With the discount factors, the condition for the par price of a bond with maturity $T$ and annual coupons $C$ is the following equation.
+
+$$100 = \sum_{i=1}^{T} C \times DF(i) + 100 \times DF(T)$$
+
+The first term is the present value of the coupons, and the second term is the present value of the principal. Move the principal to the left side.
+
+$$100 \left[ 1 - DF(T) \right] = C \sum_{i=1}^{T} DF(i)$$
+
+The par rate $c$ is the coupon divided by the par value, $c = \frac{C}{100}$. Divide the two sides by $100 \sum_{i=1}^{T} DF(i)$.
+
+$$c = \frac{C}{100} = \frac{1 - DF(T)}{\sum_{i=1}^{T} DF(i)}$$
+
+The par value does not appear in the result. The par rate depends only on the discount factors, i.e. on the zero curve.
+
+For example, the zero rates $r(1) = 3.0\%$, $r(2) = 4.0\%$ and $r(3) = 4.5\%$ give the discount factors $DF(1) = 0.9709$, $DF(2) = 0.9246$ and $DF(3) = 0.8763$.
+
+$$c = \frac{1 - 0.8763}{0.9709 + 0.9246 + 0.8763} = \frac{0.1237}{2.7717} = 0.0446$$
+
+The 3-year par rate is 4.46 %. It is lower than the 3-year zero rate of 4.5 %, because the bond also pays coupons at the earlier dates, where the zero rates are lower.
+
+The bootstrapping below uses the same relation in the other direction. It starts from the par rates of the market and finds the zero rates.
 
 ## Forward Rates
 
