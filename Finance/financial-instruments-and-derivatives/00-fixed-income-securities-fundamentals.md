@@ -50,6 +50,31 @@ The term $1/(1+y)^t$ is the discount factor. It converts one unit of money paid 
 
 The yield $y$ is the single rate that makes the sum of the discounted cash flows equal to the market price. It is therefore the internal rate of return of the security, if the investor buys at the price $P$, holds the security to maturity, and reinvests each coupon at the rate $y$, the investor earns exactly $y$ per year.
 
+### Clean and Dirty Prices
+
+The **dirty price**, or **full price**, is the price $P$ of the fixed-income security defined above. It is the **cash that the buyer pays** on the settlement date. Between two coupon dates the times $t$ are not whole years, e.g. 3 months after the last coupon of an annual bond the cash flows arrive at $t = 0.75, 1.75, \dots$
+
+The **clean price** is the dirty price minus the **accrued interest** ($AI$), the part of the next coupon that the seller earned from the last coupon date to the settlement date. Thus the accrued interest grows with the time. The buyer pays the clean price plus the accrued interest, i.e. the dirty price, because the buyer receives the full next coupon.
+
+$$P_{clean} = P_{dirty} - AI$$
+
+$$AI = \frac{C}{f} \times \frac{\text{time since the last coupon}}{\text{time between two coupons}} = C \times \text{years since the last coupon}$$
+
+$C$ is the annual coupon and $f$ is the frequency of payment (1, 2 or 4 coupons in one year), so $\frac{C}{f}$ is one coupon. In years, the frequency cancels, because one coupon accrues in $\frac{1}{f}$ years. The day-count rule of the security sets how to count the time (see [Interest Rate Curves Fundamentals](01-interest-rates-curves-fundamentals.md)).
+
+In the example above ($C = 5$, $f = 1$), $AI = 5 \times \frac{3}{12} = 1.25$. The other 9 months, until the next coupon, belong to the buyer.
+
+The chart shows a 10-year bond with a 3% coupon paid every six months ($\frac{C}{f} = 1.5$) and a constant yield of 5%.
+
+![Dirty price and clean price of a 10-year bond with a constant yield](Attachments/dirty-vs-clean-price.svg)
+
+- The dirty price draws a **saw-tooth**. It rises with the accrued interest and falls by the coupon on each coupon date. This fall is **not a loss**, because the money moves from the price to the cash of the holder.
+- The clean price rises **smoothly** to par. It stays below 100, because the 3% coupon is lower than the 5% yield. Its change is **not the return**, because it does not include the accrued interest.
+
+**Why the market quotes the clean price**
+
+The accrued interest grows linearly and goes back to zero on the coupon date, so it absorbs the jump of the dirty price. The clean price stays continuous, so it lets you compare the prices of different bonds, also when their coupon calendars are different. Screens, trading desks and futures quote the clean price. The settlement and the return always use the dirty price.
+
 ## Macaulay Duration
 
 The Macaulay duration is the weighted average time, in years, at which an investor receives the cash flows of a fixed-income security. Each cash flow is weighted by its present value. The intuition is that it is the average time in which you recover the money that you invested. Each time counts in proportion to the money, in value of today, that arrives at that time. The formula is:
