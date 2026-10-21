@@ -77,15 +77,20 @@ The accrued interest grows linearly and goes back to zero on the coupon date, so
 
 ## Macaulay Duration
 
-The Macaulay duration is the weighted average time, in years, at which an investor receives the cash flows of a fixed-income security. Each cash flow is weighted by its present value. The intuition is that it is the average time in which you recover the money that you invested. Each time counts in proportion to the money, in value of today, that arrives at that time. The formula is:
+The Macaulay duration is the weighted average time, in years, at which an investor receives the cash flows of a fixed-income security. Each cash flow is weighted by its present value. The intuition is that it is the average time in which you recover the money that you invested. Each time counts in proportion to the money, in value of today, that arrives at that time. For a security with $m$ cash flows per year, the formula is
+
+$$D_{Mac}=\frac{1}{P}\sum_{k=1}^{N} t_k \cdot \frac{CF_{t_k}}{\left(1+\frac{y}{m}\right)^{m t_k}}$$
+
+- $m$ is the compounding frequency, the number of cash flows per year (e.g. $m = 2$ for semiannual coupons).
+- $t_k = k/m$ is the time of the $k$-th cash flow, in years.
+- $N = m T$ is the number of cash flows, and $T$ is the maturity in years.
+- $CF_{t_k}$ is the cash flow paid at time $t_k$ (coupon, or coupon plus principal at maturity).
+- $P$ is the price of the security.
+- $y$ is the yield to maturity, quoted as a nominal annual rate with $m$ compounding periods per year. It is the discount rate that makes the sum of the discounted cash flows equal to $P$.
+
+In the particular case of one cash flow per year ($m = 1$), the times are whole years ($t_k = k$), and the formula becomes
 
 $$D_{Mac}=\frac{1}{P}\sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t}$$
-
-- $t$ is the time of each cash flow, in years.
-- $n$ is the number of cash flows.
-- $CF_t$ is the cash flow paid at time $t$ (coupon, or coupon plus principal at maturity).
-- $P$ is the price of the security.
-- $y$ is the yield to maturity. It is the discount rate that makes the sum of the discounted cash flows equal to $P$.
 
 The formula sums all the cash flows, each multiplied by the time at which it is paid and discounted at the yield to maturity with compound interest. The sum is then divided by the price of the security. The division by $P$ is what turns the sum into an average. A weighted average of the times $t$ is the sum of each $t$ multiplied by a weight, where all the weights add up to 1. In the formula, the weight of each time $t$ is its discounted cash flow divided by $P$. Because $y$ is the rate that makes the discounted cash flows add up to the price:
 
@@ -94,6 +99,10 @@ $$\sum_{t=1}^{n} \frac{CF_t}{(1+y)^t} = P$$
 the weights add up to exactly 1, and $D_{Mac}$ is a true average of the times $t$. Each time $t$ counts in proportion to the share of the price that its cash flow represents. A cash flow that is large or paid soon has a large present value and pulls the average towards its time. A cash flow that is small or paid late has a small present value and pulls the average less.
 
 A zero-coupon bond is the simplest check. It has one cash flow at maturity, so that cash flow is the whole price, its weight is 1, and the Macaulay duration equals the maturity. A coupon bond pays part of the price before maturity, so its Macaulay duration is shorter than the maturity.
+
+The times $t_k$ are always in years, so the Macaulay duration is a time in years for all compounding frequencies. With continuous compounding ($m \to \infty$), the discount factor becomes $e^{-y t_k}$, and the Macaulay duration is
+
+$$D_{Mac}=\frac{1}{P}\sum_{k=1}^{N} t_k \cdot CF_{t_k} e^{-y t_k}$$
 
 **Example**
 
@@ -107,7 +116,39 @@ A bond has a face value of 100 and a maturity of 4 years. It pays an annual coup
 |     4      |        105         |                 89.754                  |     359.016      |
 | **Total**  |                    |                 103.630                 |     386.405      |
 
-$$D_{Mac}=3.73$$
+With annual compounding ($m = 1$), the Macaulay duration is
+
+$$D_{Mac}=\frac{1}{103.630}\left[1 \cdot \frac{5}{1.04} + 2 \cdot \frac{5}{1.04^2} + 3 \cdot \frac{5}{1.04^3} + 4 \cdot \frac{105}{1.04^4}\right]=\frac{386.405}{103.630}=3.73$$
+
+If the yield of 4% uses continuous compounding, the price is 103.329, and the Macaulay duration is
+
+$$D_{Mac}=\frac{1}{103.329}\left[1 \cdot 5 e^{-0.04} + 2 \cdot 5 e^{-0.08} + 3 \cdot 5 e^{-0.12} + 4 \cdot 105 e^{-0.16}\right]=\frac{385.239}{103.329}=3.73$$
+
+**Example with semiannual cash flows**
+
+The same bond pays its 5% coupon in two parts of 2.5 every six months ($m = 2$). The yield to maturity is 4% with semiannual compounding, so each period has a rate of 2%.
+
+| Time ($t_k$) | Cash flow ($CF_{t_k}$) | Present value ($PV_{t_k}$) | $t_k \times PV_{t_k}$ |
+| :----------: | :--------------------: | :------------------------: | :-------------------: |
+|     0.5      |          2.5           |           2.451            |         1.225         |
+|     1.0      |          2.5           |           2.403            |         2.403         |
+|     1.5      |          2.5           |           2.356            |         3.534         |
+|     2.0      |          2.5           |           2.310            |         4.619         |
+|     2.5      |          2.5           |           2.264            |         5.661         |
+|     3.0      |          2.5           |           2.220            |         6.660         |
+|     3.5      |          2.5           |           2.176            |         7.617         |
+|     4.0      |         102.5          |           87.483           |        349.931        |
+|  **Total**   |                        |          103.663           |        381.650        |
+
+With semiannual compounding ($m = 2$), the Macaulay duration is
+
+$$D_{Mac}=\frac{1}{103.663}\left[\sum_{k=1}^{7} \frac{k}{2} \cdot \frac{2.5}{1.02^{k}} + 4 \cdot \frac{102.5}{1.02^{8}}\right]=\frac{381.650}{103.663}=3.68$$
+
+If the yield of 4% uses continuous compounding, the price is 103.512, and the Macaulay duration is
+
+$$D_{Mac}=\frac{1}{103.512}\left[\sum_{k=1}^{7} \frac{k}{2} \cdot 2.5 e^{-0.04 \cdot \frac{k}{2}} + 4 \cdot 102.5 e^{-0.16}\right]=\frac{381.067}{103.512}=3.68$$
+
+The Macaulay duration is shorter than the 3.73 years of the annual bond, because half of each coupon arrives six months earlier.
 
 ## Modified Duration
 
