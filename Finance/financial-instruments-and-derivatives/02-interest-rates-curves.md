@@ -1,4 +1,4 @@
-# Interest Rate Curves Fundamentals
+# Interest Rate Curves
 
 ## Structure of interest rates
 

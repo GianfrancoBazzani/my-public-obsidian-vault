@@ -1,4 +1,4 @@
-# Fixed Income Securities Fundamentals
+# Fixed Income Securities
 
 ## Core fixed-income instruments
 
