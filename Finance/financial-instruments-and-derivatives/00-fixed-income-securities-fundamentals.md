@@ -152,12 +152,21 @@ The Macaulay duration is shorter than the 3.73 years of the annual bond, because
 
 ## Modified Duration
 
-The Modified Duration measures the sensitivity of the price of the security when there are changes in the interest rates. When the yield rises, the price of a fixed-income security falls. The modified duration measures how much: a modified duration of 3.59 means that the price falls by approximately 3.59% when the yield rises by 1 percentage point (e.g. from 4% to 5%). It is the Macaulay duration divided by $(1 + y)$:
+The Modified Duration measures the sensitivity of the price of the security when there are changes in the interest rates. When the yield rises, the price of a fixed-income security falls. The modified duration measures how much: a modified duration of 3.59 means that the price falls by approximately 3.59% when the yield rises by 1 percentage point (e.g. from 4% to 5%). For a security with $m$ cash flows per year, it is the Macaulay duration divided by $\left(1 + \frac{y}{m}\right)$
+
+$$D_{Mod}=\frac{D_{Mac}}{1+\frac{y}{m}}$$
+
+- $D_{Mac}$ is the Macaulay duration, in years.
+- $m$ is the compounding frequency, the number of cash flows per year.
+- $y$ is the yield to maturity, quoted as a nominal annual rate with $m$ compounding periods per year.
+
+In the particular case of one cash flow per year ($m = 1$), the formula becomes
 
 $$D_{Mod}=\frac{D_{Mac}}{1+y}$$
 
-- $D_{Mac}$ is the Macaulay duration, in years.
-- $y$ is the yield to maturity.
+With continuous compounding ($m \to \infty$), the term $\frac{y}{m}$ goes to zero, and the modified duration is equal to the Macaulay duration
+
+$$D_{Mod}=D_{Mac}$$
 
 With the modified duration, the percentage change in price for a small change in yield is:
 
@@ -167,7 +176,7 @@ $$\frac{\Delta P}{P}\approx -D_{Mod}\times\Delta y$$
 - $\Delta P / P$ is the percentage change in the price.
 - The minus sign shows that the price moves in the opposite direction to the yield.
 
-The two durations measure different things. The Macaulay duration is a time, in years. The modified duration is a sensitivity of the price to the yield. The division by $(1 + y)$ converts the time into the sensitivity.
+The two durations measure different things. The Macaulay duration is a time, in years. The modified duration is a sensitivity of the price to the yield. The division by $\left(1 + \frac{y}{m}\right)$ converts the time into the sensitivity. With continuous compounding, the time and the sensitivity have the same value.
 
 > [!NOTE]
 > **Why is this an approximation?**
@@ -178,6 +187,8 @@ The two durations measure different things. The Macaulay duration is a time, in 
 **Example**
 
 The bond above has $D_{Mac}=3.73$ and $y=4$%, so $D_{Mod}=3.73/1.04=3.59$. If the yield rises by 1% (from 4% to 5%), the price falls by approximately $\Delta P/P \approx -D_{Mod} \times \Delta y = -3.59 \times 0.01 = -3.59$%. The approximation is a first-order one. For large changes in yield, the convexity of the price curve makes the true fall smaller and the true rise larger.
+
+With semiannual cash flows ($m = 2$), the same bond has $D_{Mac}=3.68$, so $D_{Mod}=3.68/1.02=3.61$. If the yield of 4% uses continuous compounding, $D_{Mod}=D_{Mac}=3.73$ for the annual bond and $D_{Mod}=D_{Mac}=3.68$ for the semiannual bond.
 
 **Derivation**
 
@@ -221,6 +232,14 @@ $$\frac{\mathrm{d}}{\mathrm{d} u} \sum_{t=1}^{n} CF_t u^{-t} = \sum_{t=1}^{n} - 
 Therefore:
 
 $$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = - \frac{1}{1 + y} \frac{1}{P} \sum_{t=1}^{n} t \cdot \frac{CF_t}{(1+y)^t} = - \frac{D_{Mac}}{1+y} = -D_{Mod}$$
+
+With $m$ cash flows per year, the same steps with $u = 1 + \frac{y}{m}$ give $\frac{\mathrm{d} u}{\mathrm{d} y} = \frac{1}{m}$. This factor cancels the $m$ of the exponent $-m t_k$.
+
+$$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = \frac{1}{P} \sum_{k=1}^{N} CF_{t_k} \left(-m t_k\right) \left(1+\frac{y}{m}\right)^{-m t_k - 1} \frac{1}{m} = - \frac{1}{1 + \frac{y}{m}} \frac{1}{P} \sum_{k=1}^{N} t_k \cdot \frac{CF_{t_k}}{\left(1+\frac{y}{m}\right)^{m t_k}} = - \frac{D_{Mac}}{1+\frac{y}{m}} = -D_{Mod}$$
+
+With continuous compounding, the derivative of $e^{-y t_k}$ is $-t_k e^{-y t_k}$, so no factor remains.
+
+$$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = \frac{1}{P} \sum_{k=1}^{N} -t_k \cdot CF_{t_k} e^{-y t_k} = -D_{Mac} = -D_{Mod}$$
 
 ## Money Duration
 
