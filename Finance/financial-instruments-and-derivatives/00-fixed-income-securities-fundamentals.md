@@ -241,9 +241,9 @@ With continuous compounding, the derivative of $e^{-y t_k}$ is $-t_k e^{-y t_k}$
 
 $$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = \frac{1}{P} \sum_{k=1}^{N} -t_k \cdot CF_{t_k} e^{-y t_k} = -D_{Mac} = -D_{Mod}$$
 
-## Money Duration
+## Money Duration or Dollar Duration
 
-The money duration is the modified duration multiplied by the price of the security. Some texts call it the dollar duration. The modified duration gives the sensitivity as a percentage of the price. The money duration gives the same sensitivity as an amount of currency.
+The money duration, or dollar duration, is the modified duration multiplied by the price of the security. The modified duration gives the sensitivity as a percentage of the price. The money duration gives the same sensitivity as an amount of currency.
 
 $$D_{Money} = D_{Mod} \times P$$
 
