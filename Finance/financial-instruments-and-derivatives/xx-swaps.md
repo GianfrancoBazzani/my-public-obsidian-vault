@@ -54,7 +54,6 @@ A fixed-rate security packages two risks: interest rate risk and credit risk. Th
 - **Comparable numbers.** The ASW spread puts every fixed-income security on one scale: spread over the swap curve. A 3-year bond at 98 and a 7-year bond at 105 become directly comparable.
 - **Access to fixed-rate supply.** Most corporate bonds are fixed-rate, but many investors need floating cash flows. The asset swap converts the available supply into the required form.
 - **Floating-rate funding.** A bank funds itself at a floating rate. It buys the security, swaps it, and locks the margin between "floating + ASW spread" and its floating funding cost.
-- **Relative value.** If the ASW spread is wider than the CDS spread of the same issuer, the investor can buy the security, swap it, and buy protection. This is the CDS-bond basis trade.
 
 **When this is not interesting**
 
@@ -66,6 +65,6 @@ A fixed-rate security packages two risks: interest rate risk and credit risk. Th
 **Practical applications**
 
 - **Relative value analysis.** Compare the ASW spreads of different issuers with the same maturity. A wider spread means more compensation per unit of credit risk.
-- **Bond vs. CDS arbitrage.** If the ASW spread is greater than the CDS spread of the same issuer, buy the security, swap it, and buy protection. The position earns the difference with little net credit risk.
+- **Bond vs. CDS arbitrage.** If the ASW spread is greater than the CDS spread of the same issuer, buy the security, swap it, and buy protection. The position earns the difference with little net credit risk. This is the CDS-bond basis trade.
 - **Sector rotation.** Compare the average ASW spread of each sector against its history. Identify sectors that are cheap or expensive relative to their usual level.
 - **Portfolio construction.** Use asset-swapped securities as the base of a credit-neutral portfolio. The portfolio then has credit exposure only, with no duration exposure.
