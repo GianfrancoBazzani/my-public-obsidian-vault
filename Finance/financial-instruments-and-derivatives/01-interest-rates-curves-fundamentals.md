@@ -26,9 +26,25 @@ The yield curve has two limits:
 
 For these two reasons you cannot use a yield to discount one single cash flow. To discount cash flows you must use the zero curve of the next section. The **bootstrap** procedure extracts the zero curve from the market instruments.
 
-## Spot rates/Zero rates
+## Zero rates
 
 The zero rate for maturity $T$ is the interest rate of a zero-coupon bond that matures at $T$. The bond pays no coupon, the only cash flow is the principal at maturity. There is one zero rate for each maturity, and together they form the zero curve.
+
+The discount factor $DF(T)$ is the value today of one unit of money paid at $T$. For a zero rate with $m$ compounding periods per year, the discount factor is
+
+$$DF(T) = \frac{1}{\left(1 + \frac{r(T)}{m}\right)^{m T}}$$
+
+- $m$ is the compounding frequency, the number of compounding periods per year.
+- $T$ is the maturity, in years.
+- $r(T)$ is the zero rate for the maturity $T$, quoted as a nominal annual rate with $m$ compounding periods per year.
+
+In the particular case of annual compounding ($m = 1$), the formula becomes
+
+$$DF(T) = \frac{1}{(1 + r(T))^{T}}$$
+
+With continuous compounding ($m \to \infty$), the discount factor is
+
+$$DF(T) = e^{-r(T) T}$$
 
 **Example**
 
@@ -37,10 +53,17 @@ Zero rates:
 - Zero rate at 2 years: $r(2) = 0.045$ (4.5 %)
 - Zero rate at 5 years: $r(5) = 0.052$ (5.2 %)
 
-Discount factors:
+Discount factors with annual compounding:
 
 - $DF(2) = \frac{1}{(1.045)^2} = 0.9157$
 - $DF(5) = \frac{1}{(1.052)^5} = 0.7761$
+
+Discount factors with continuous compounding:
+
+- $DF(2) = e^{-0.045 \cdot 2} = 0.9139$
+- $DF(5) = e^{-0.052 \cdot 5} = 0.7711$
+
+For the same zero rate, continuous compounding gives a lower discount factor, because the interest accrues on the interest at each instant.
 
 The chart shows the two points of the example. The left panel gives the zero rates. The right panel gives the discount factors.
 
@@ -320,5 +343,3 @@ The 10Y bond gives the best total of carry plus roll-down (5.2 %). It is the mos
 
 - Changes in the shape of the curve.
 - Volatility of the rates.
-
-TODO: Modify this page adding also the calculations for the continuous capitalization
