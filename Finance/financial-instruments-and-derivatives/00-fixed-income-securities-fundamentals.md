@@ -50,6 +50,10 @@ The term $1/(1+y)^t$ is the discount factor. It converts one unit of money paid 
 
 The yield $y$ is the single rate that makes the sum of the discounted cash flows equal to the market price. It is therefore the internal rate of return of the security, if the investor buys at the price $P$, holds the security to maturity, and reinvests each coupon at the rate $y$, the investor earns exactly $y$ per year.
 
+With continuous compounding, the discount factor of each cash flow is $e^{-y t}$, and the price is
+
+$$P=\sum_{t=1}^{n} CF_t e^{-y t}$$
+
 ### Yield
 
 The yield of a fixed-income security is the single discount rate that gives a price equal to the market price, when it is applied to all the cash flows of the security.
