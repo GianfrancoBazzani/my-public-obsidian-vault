@@ -129,8 +129,21 @@ A forward rate $f(t_1, t_2)$ is the interest rate for a future period that start
 
 A spot rate is agreed today for a loan that starts today. A forward rate is also agreed today, but for a loan that starts in the future. The forward rate is implied by the spot curve of today, not by a forecast of future spot rates.
 
+For zero rates and a forward rate with $m$ compounding periods per year, the forward rate is
+
+$$f(t_1, t_2) = m \left[ \left( \frac{\left(1 + \frac{r(t_2)}{m}\right)^{m t_2}}{\left(1 + \frac{r(t_1)}{m}\right)^{m t_1}} \right)^{\frac{1}{m (t_2 - t_1)}} - 1 \right]$$
+
+- $m$ is the compounding frequency, the number of compounding periods per year.
+- $t_1$ and $t_2$ are the start and the end of the future period, in years.
+- $r(t_1)$ and $r(t_2)$ are the zero rates for the maturities $t_1$ and $t_2$.
+
+In the particular case of annual compounding ($m = 1$), the formula becomes
 
 $$f(t_1, t_2) = \left( \frac{(1 + r(t_2))^{t_2}}{(1 + r(t_1))^{t_1}} \right)^{\frac{1}{t_2 - t_1}} - 1$$
+
+With continuous compounding ($m \to \infty$), the forward rate is
+
+$$f(t_1, t_2) = \frac{r(t_2) t_2 - r(t_1) t_1}{t_2 - t_1}$$
 
 **Example** 
 
@@ -140,10 +153,19 @@ We define different interest rates for different tenors:
  - r(2): 4.0%
  - r(3): 4.5%
 
+With annual compounding:
+
 Forward 1y1y: $f(1,2) = \frac{(1 + 0.04)^{2}}{(1 + 0.03)} - 1 = 0.0501$ (5.01 %)
 
 Forward 2y1y: $f(2,3) = \frac{(1 + 0.045)^{3}}{(1 + 0.04)^2}  - 1 = 0.0551$ (5.51 %)
 
+If the same zero rates use continuous compounding:
+
+Forward 1y1y: $f(1,2) = \frac{0.04 \cdot 2 - 0.03 \cdot 1}{2 - 1} = 0.0500$ (5.00 %)
+
+Forward 2y1y: $f(2,3) = \frac{0.045 \cdot 3 - 0.04 \cdot 2}{3 - 2} = 0.0550$ (5.50 %)
+
+With continuous compounding, the forward rate is a weighted difference of the zero rates, so the calculation does not need powers or roots.
 
 **Derivation**
 
@@ -151,23 +173,41 @@ The no-arbitrage condition gives the relation. Let $t_0 = 0$ be today. An invest
 
 ![Timeline of the no-arbitrage relation between the spot rates and the forward rate](Attachments/forward-rate-timeline.svg)
 
-Applying the no-arbitrage condition:
+Applying the no-arbitrage condition with $m$ compounding periods per year:
 
-$$C_0(1+r(t_2))^{t_2} = C_0(1+r(t_1))^{t_1}(1+f(t_1,t_2))^{t_2-t_1}$$
+$$C_0\left(1+\frac{r(t_2)}{m}\right)^{m t_2} = C_0\left(1+\frac{r(t_1)}{m}\right)^{m t_1}\left(1+\frac{f(t_1,t_2)}{m}\right)^{m (t_2-t_1)}$$
 
 Therefore:
 
-$$(1+r(t_2))^{t_2} = (1+r(t_1))^{t_1}(1+f(t_1,t_2))^{t_2-t_1}$$
+$$\left(1+\frac{r(t_2)}{m}\right)^{m t_2} = \left(1+\frac{r(t_1)}{m}\right)^{m t_1}\left(1+\frac{f(t_1,t_2)}{m}\right)^{m (t_2-t_1)}$$
 
 We can isolate $f(t_1,t_2)$:
 
-$$f(t_1,t_2) = \left [ \frac{(1+r(t_2))^{t_2}}{(1+r(t_1))^{t_1}} \right ]^{\frac{1}{t_2-t_1}} - 1$$
+$$f(t_1,t_2) = m \left[ \left( \frac{\left(1+\frac{r(t_2)}{m}\right)^{m t_2}}{\left(1+\frac{r(t_1)}{m}\right)^{m t_1}} \right)^{\frac{1}{m (t_2-t_1)}} - 1 \right]$$
+
+With $m = 1$, this is the annual formula. With continuous compounding, the no-arbitrage condition is
+
+$$C_0 e^{r(t_2) t_2} = C_0 e^{r(t_1) t_1} e^{f(t_1,t_2) (t_2-t_1)}$$
+
+$C_0$ cancels, and the product of the exponentials is the exponential of the sum of the exponents. Thus the exponents are equal.
+
+$$r(t_2) t_2 = r(t_1) t_1 + f(t_1,t_2) (t_2-t_1)$$
+
+We can isolate $f(t_1,t_2)$:
+
+$$f(t_1,t_2) = \frac{r(t_2) t_2 - r(t_1) t_1}{t_2 - t_1}$$
 
 **Chain of forward rates**
 
-The same no-arbitrage condition applies to each year of the curve. If you chain one year after the other, the zero rate at $T$ is the product of all the annual forward rates up to $T$:
+The same no-arbitrage condition applies to each year of the curve. If you chain one year after the other, the zero rate at $T$ is the product of all the annual forward rates up to $T$. With annual compounding, the chain is
 
 $$(1 + r(T))^{T} = \prod_{i=1}^{T} (1 + f(i-1, i))$$
+
+With continuous compounding, the product of the exponentials becomes a sum of the forward rates.
+
+$$r(T) T = \sum_{i=1}^{T} f(i-1, i)$$
+
+Thus the continuous zero rate at $T$ is the average of the annual forward rates up to $T$.
 
 The term $f(0,1)$ is the spot rate of the first year, because a loan that starts today is a forward that starts at $t = 0$. The relation operates in the two directions. You get the forward rates from the zero rates if you divide. You get the zero rates from the forward rates if you multiply.
 
