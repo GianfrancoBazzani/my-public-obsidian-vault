@@ -290,28 +290,34 @@ The effect of the convexity is small for small changes in the interest rates. It
 
 **Example**
 
-We continue with the bond above: $D_{Mod}=3.59$ and $y=4$%. We take a convexity of $C=70$ to make the effect visible.
+We continue with the bond above, with $D_{Mod}=3.59$ and $y=4$%. With annual compounding, the convexity of the bond is
+
+$$C=\frac{1}{103.630}\left[\frac{1 \cdot 2 \cdot 5}{1.04^{3}} + \frac{2 \cdot 3 \cdot 5}{1.04^{4}} + \frac{3 \cdot 4 \cdot 5}{1.04^{5}} + \frac{4 \cdot 5 \cdot 105}{1.04^{6}}\right]=\frac{1743.510}{103.630}=16.82$$
+
+The exact change is the price of the bond at the new yield divided by the price of 103.630, minus 1.
 
 For a small change, $\Delta y=0.002$:
 
 - **Linear:** $-D_{Mod}\cdot\Delta y = -3.59\times0.002 = -0.718$%
-- **Convexity term:** $\tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.002^2 = +0.014$%
-- **Second order:** $-0.718 + 0.014 = -0.704$%
+- **Convexity term:** $\tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times16.82\times0.002^2 = +0.003$%
+- **Second order:** $-0.718 + 0.003 = -0.715$%
+- **Exact:** $\frac{102.890}{103.630} - 1 = -0.714$%
 
 For a large change, $\Delta y=0.02$:
 
-- **Linear:** $-D_{Mod}\cdot\Delta y = -3.59\times0.02 = -7.18$%
-- **Convexity term:** $\tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times70\times0.02^2 = +1.40$%
-- **Second order:** $-7.18 + 1.40 = -5.78$%
+- **Linear:** $-D_{Mod}\cdot\Delta y = -3.59\times0.02 = -7.180$%
+- **Convexity term:** $\tfrac{1}{2}C\cdot(\Delta y)^2 = \tfrac{1}{2}\times16.82\times0.02^2 = +0.336$%
+- **Second order:** $-7.180 + 0.336 = -6.844$%
+- **Exact:** $\frac{96.535}{103.630} - 1 = -6.846$%
 
-| Change in yield | Linear approximation | Convexity term | Second-order approximation |
-| :-------------: | :------------------: | :------------: | :------------------------: |
-|     +0.2%       |       -0.718%        |    +0.014%     |          -0.704%           |
-|     +2%         |       -7.18%         |    +1.40%      |          -5.78%            |
+| Change in yield | Linear approximation | Convexity term | Second-order approximation | Exact change |
+| :-------------: | :------------------: | :------------: | :------------------------: | :----------: |
+|     +0.2%       |       -0.718%        |    +0.003%     |          -0.715%           |   -0.714%    |
+|     +2%         |       -7.180%        |    +0.336%     |          -6.844%           |   -6.846%    |
 
-The linear term grows in proportion to $\Delta y$. The convexity term grows in proportion to $(\Delta y)^2$. The change in yield is 10 times larger, so the linear term is 10 times larger, but the convexity term is 100 times larger. For the small change, the correction is 0.014% on a fall of 0.718%, about 2% of the linear result, and the two approximations are almost equal. For the large change, the correction is 1.40% on a fall of 7.18%, about 20% of the linear result. The linear approximation overstates the fall in price by almost a quarter of the true fall. This is the reason why the convexity can be ignored for small changes but not for large ones.
+The linear term grows in proportion to $\Delta y$. The convexity term grows in proportion to $(\Delta y)^2$. The change in yield is 10 times larger, so the linear term is 10 times larger, but the convexity term is 100 times larger. For the small change, the correction is 0.003% on a fall of 0.718%, and the two approximations are almost equal. For the large change, the correction is 0.336% on a fall of 7.180%, about 5% of the linear result. The linear approximation overstates the fall in price by 0.334%, but the second-order approximation is almost exact, with -6.844% against an exact change of -6.846%. This is the reason why the convexity can be ignored for small changes but not for large ones.
 
-The graph below shows the two approximations for the same bond ($D_{Mod}=3.59$, $C=70$). The orange line is the linear approximation. The blue curve is the second-order approximation. The two dots on each line mark the two examples above. Near $\Delta y=0$ the line and the curve are almost equal. As $\Delta y$ grows, the curve bends up and moves away from the line. The gap between them is the convexity term.
+The graph below shows the two approximations for the same bond ($D_{Mod}=3.59$, $C=16.82$). The orange line is the linear approximation. The blue curve is the second-order approximation. The dots mark the two examples above. At these two changes in yield, the dots of the two approximations almost overlap. Near $\Delta y=0$ the line and the curve are almost equal. As $\Delta y$ grows, the curve bends up and moves away from the line. The gap between them is the convexity term.
 
 ![Linear and second-order approximations of the relative price change](Attachments/duration-convexity-approximation.svg)
 
