@@ -73,37 +73,53 @@ Usually the zero rate grows with the maturity, but the discount factor falls.
 
 ## Par Rates
 
-A par rate curve is a curve that measures the yield of fixed income instruments quoted at par price. Each rate in the curve is the rate that an instrument needs to have to be quoted at par price. When we say that an instrument is quoted at par, we say that the instrument is quoted at its nominal or issue value. Usually, in bonds, the par price is 100.
+The par rate for the maturity $T$ is the coupon rate that makes the price of a fixed-income security equal to its par value. The par value is the nominal or issue value of the security, usually 100. There is one par rate for each maturity, and together they form the par rate curve.
 
-**Example**
+For a fixed-income security with a par value of 100 and $m$ coupons per year, on a coupon date, the annual coupon that gives the par price is
 
-Consider a bond with a par value of 100, annual coupons $C$, and a maturity of 3 years. The bond is quoted at par when the present value of its cash flows, discounted with the zero rates, is equal to 100:
+$$C = \frac{100 m \left[ 1 - DF(T) \right]}{\sum_{k=1}^{N} DF(t_k)}$$
 
-$$\frac{C}{1 + r(1)} + \frac{C}{(1 + r(2))^2} + \frac{C + 100}{(1 + r(3))^3} = 100$$
+- $C$ is the annual coupon, in currency. Each coupon payment is $\frac{C}{m}$.
+- $m$ is the number of coupons per year (e.g. $m = 2$ for semiannual coupons).
+- $t_k = k/m$ is the time of the $k$-th coupon, in years.
+- $N = m T$ is the number of coupons, and $T$ is the maturity in years.
+- $DF(t_k)$ is the discount factor of the time $t_k$, from the zero curve.
 
-The coupon $C$ that solves this equation, divided by the par value, is the 3-year par rate.
+The par rate is the annual coupon divided by the par value, $c = \frac{C}{100}$, quoted as a nominal annual rate with $m$ compounding periods per year. The par value cancels in this division, so the par rate depends only on the discount factors, i.e. on the zero curve.
+
+In the particular case of one coupon per year ($m = 1$), the coupons arrive at the whole years $t_k = k = 1, \dots, T$, and the formula becomes
+
+$$C = \frac{100 \left[ 1 - DF(T) \right]}{\sum_{k=1}^{T} DF(k)}$$
+
+The discount factors can come from zero rates with any compounding, and this compounding can be different from the $m$ of the coupons. If the zero rates use continuous compounding, the discount factors are $DF(t_k) = e^{-r(t_k) t_k}$, and the formula for $C$ does not change.
 
 **Derivation**
 
-The discount factor of year $i$ is $DF(i) = \frac{1}{(1 + r(i))^i}$, as in the section on the zero rates. With the discount factors, the condition for the par price of a bond with maturity $T$ and annual coupons $C$ is the following equation.
+Each coupon payment is $\frac{C}{m}$, and the last cash flow also includes the principal of 100. The security is quoted at par when the present value of its cash flows is equal to 100.
 
-$$100 = \sum_{i=1}^{T} C \times DF(i) + 100 \times DF(T)$$
+$$100 = \sum_{k=1}^{N} \frac{C}{m} DF(t_k) + 100 \times DF(T)$$
 
 The first term is the present value of the coupons, and the second term is the present value of the principal. Move the principal to the left side.
 
-$$100 \left[ 1 - DF(T) \right] = C \sum_{i=1}^{T} DF(i)$$
+$$100 \left[ 1 - DF(T) \right] = \frac{C}{m} \sum_{k=1}^{N} DF(t_k)$$
 
-The par rate $c$ is the coupon divided by the par value, $c = \frac{C}{100}$. Divide the two sides by $100 \sum_{i=1}^{T} DF(i)$.
+Multiply the two sides by $m$, and divide them by the sum of the discount factors. The result is the formula of the annual coupon.
 
-$$c = \frac{C}{100} = \frac{1 - DF(T)}{\sum_{i=1}^{T} DF(i)}$$
+**Example**
 
-The par value does not appear in the result. The par rate depends only on the discount factors, i.e. on the zero curve.
+A bond has a par value of 100, annual coupons ($m = 1$), and a maturity of 3 years. The zero rates are $r(1) = 3.0\%$, $r(2) = 4.0\%$ and $r(3) = 4.5\%$.
 
-For example, the zero rates $r(1) = 3.0\%$, $r(2) = 4.0\%$ and $r(3) = 4.5\%$ give the discount factors $DF(1) = 0.9709$, $DF(2) = 0.9246$ and $DF(3) = 0.8763$.
+With annual compounding, the discount factors are $DF(1) = 0.9709$, $DF(2) = 0.9246$ and $DF(3) = 0.8763$.
 
-$$c = \frac{1 - 0.8763}{0.9709 + 0.9246 + 0.8763} = \frac{0.1237}{2.7717} = 0.0446$$
+$$C = \frac{100 \left[ 1 - 0.8763 \right]}{0.9709 + 0.9246 + 0.8763} = \frac{12.37}{2.7717} = 4.46$$
 
-The 3-year par rate is 4.46 %. It is lower than the 3-year zero rate of 4.5 %, because the bond also pays coupons at the earlier dates, where the zero rates are lower.
+The annual coupon is 4.46, so the 3-year par rate is $c = \frac{4.46}{100} = 4.46$ %. It is lower than the 3-year zero rate of 4.5 %, because the bond also pays coupons at the earlier dates, where the zero rates are lower.
+
+If the same zero rates use continuous compounding, the discount factors are $DF(1) = e^{-0.03} = 0.9704$, $DF(2) = e^{-0.08} = 0.9231$ and $DF(3) = e^{-0.135} = 0.8737$.
+
+$$C = \frac{100 \left[ 1 - 0.8737 \right]}{0.9704 + 0.9231 + 0.8737} = \frac{12.63}{2.7673} = 4.56$$
+
+The annual coupon is 4.56, so the 3-year par rate is 4.56 %. It is higher than with annual compounding, because the discount factors are lower. This par rate uses annual compounding ($m = 1$), so it is not directly comparable with the continuous zero rate of 4.5 %.
 
 The bootstrapping below uses the same relation in the other direction. It starts from the par rates of the market and finds the zero rates.
 
