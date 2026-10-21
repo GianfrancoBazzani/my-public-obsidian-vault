@@ -213,21 +213,21 @@ The term $f(0,1)$ is the spot rate of the first year, because a loan that starts
 
 ## Bootstrapping 
 
-In the market we cannot observe directly the interest rates curves, what we see are different fixed income instruments that are quoted in the market at different prices. Bootstrapping is the process of building a zero curve from the market prices of such instruments. 
+In the market we cannot observe the zero curve directly. What we see are different fixed income instruments that are quoted in the market at different prices. Bootstrapping is the process of building a zero curve from the market prices of such instruments. 
 
 The method is sequential. You sort the instruments by maturity, from the shortest to the longest. For each instrument, you use the zero rates that you already know to solve for the one unknown zero rate at its maturity. A coupon bond with maturity $T$ gives the zero rate at $T$, because the zero rates of its earlier coupon dates are already known.
 
 The no-arbitrage condition requires that the theoretical price equals the market price. The same condition also fixes the rate that discounts each cash flow, a cash flow at time $t_i$ must be discounted with the zero rate of that date, $r(t_i)$.
 
-For an instrument with price $P$ and cash flows $C_i$ at times $t_i$:
+For an instrument with cash flows $C_i$ at times $t_i$, the price $P$ with annual compounding is
 
 $$P = \sum_{i=1}^{n} \frac{C_i}{(1 + r(t_i))^{t_i}}$$
 
-Only $r(t_n)$ is unknown in this equation. The procedure is:
+Only $r(t_n)$ is unknown in this equation. The procedure has four steps.
 
-1. **Shortest maturity:** Compute the zero rate directly from the instrument that pays $C_1 + P_1$ at $t_1$ and costs $P_0$ today:
+1. **Shortest maturity:** Compute the zero rate directly from the first instrument. This instrument pays a single cash flow $C_1$ at $t_1$, which includes the interest and the principal, and its price today is $P$.
 
-   $$r(t_1) = \frac{C_1 + P_1}{P_0} - 1$$
+   $$r(t_1) = \left(\frac{C_1}{P}\right)^{\frac{1}{t_1}} - 1$$
 
 2. **Next maturities:** Write the price equation of the next instrument with the known zero rates.
 3. **Iteration:** Solve the price equation for the unknown $r(T)$ and repeat for the next maturity.
@@ -235,7 +235,7 @@ Only $r(t_n)$ is unknown in this equation. The procedure is:
 
 **Example**
 
-The market quotes three instruments. The deposit gives the first zero rate directly. The two swaps are quoted at par, so the price of each swap equals its notional.
+The market quotes three instruments. The deposit gives the first zero rate directly. The two bonds pay annual coupons and are quoted at par, so the price of each bond equals its par value of 100 USD.
 
 | Instrument | Maturity | Coupon | Price | Zero Rate |
 | ---------- | -------- | ------ | ----- | --------- |
@@ -245,23 +245,23 @@ The market quotes three instruments. The deposit gives the first zero rate direc
 
 - For the Deposit we already know the Zero Rate
 
-- For the Bond 1 we have to compute the YTM for the instrument quoted at par (100 USD):
+- For Bond 1 we compute the zero rate at 2 years. We discount the first coupon with the 1-year zero rate, so $r(2Y)$ is the only unknown.
 
 $$100 = \frac{4.2}{(1+0.03)} + \frac{104.2}{(1+r(2Y))^2}$$
 
-  We isolate $r(2Y)$:
+  We isolate $r(2Y)$.
 
 $$(1+r(2Y))^2 = \frac{104.2}{100 - \frac{4.2}{1.03}} \quad \Rightarrow \quad r(2Y) = \sqrt{\frac{104.2}{100 - \frac{4.2}{1.03}}} - 1 \approx 0.042255$$
 
-  The zero rate at 2 years is 4.21 %.
+  The zero rate at 2 years is 4.23 %.
 
-- For the Bond 2 we have to compute the YTM for the instrument quoted at par (100 USD):
+- For Bond 2 we compute the zero rate at 3 years. We discount the first two coupons with the 1-year and 2-year zero rates, so $r(3Y)$ is the only unknown. We keep the full value of $r(2Y)$, because a rounded value carries its error into all the longer maturities.
 
-$$100 = \frac{4.6}{(1+0.03)} + \frac{4.6}{(1+0.0421)^2} + \frac{104.6}{(1+r(3Y))^3}$$
+$$100 = \frac{4.6}{(1+0.03)} + \frac{4.6}{(1+0.042255)^2} + \frac{104.6}{(1+r(3Y))^3}$$
 
-  We isolate $r(3Y)$:
+  We isolate $r(3Y)$.
 
-$$(1+r(3Y))^3 = \frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}} \quad \Rightarrow \quad r(3Y) = \sqrt[3]{\frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.0421)^2}}} - 1 \approx 0.046381$$
+$$(1+r(3Y))^3 = \frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.042255)^2}} \quad \Rightarrow \quad r(3Y) = \sqrt[3]{\frac{104.6}{100 - \frac{4.6}{1.03} - \frac{4.6}{(1.042255)^2}}} - 1 \approx 0.046376$$
 
   The zero rate at 3 years is 4.64 %.
 
