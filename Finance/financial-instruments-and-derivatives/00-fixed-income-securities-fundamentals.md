@@ -31,7 +31,7 @@ A certificate of deposit (CD) is different. The client agrees to leave a fixed a
 
 The main problem of a CD is its limited liquidity. Unlike bonds and bills, a CD is a contract between the client and one bank, and there is no market where the client can easily resell this debt to another investor. The only way to recover the money before maturity is to pay the penalty to the bank. Only large CDs issued to institutions (negotiable CDs) can be sold in a secondary market.
 
-## Pricing of a Fixed Income Security
+## Pricing of a Fixed-Income Security
 
 The price of a fixed-income security is the present value of all the cash flows that the security pays in the future. We must discount each cash flow back to today, and the size of the discount depends on two things, the yield and the time at which the cash flow arrives. The price is the sum of all these discounted cash flows:
 
@@ -49,6 +49,20 @@ The term $1/(1+y)^t$ is the discount factor. It converts one unit of money paid 
 - The time. The exponent $t$ grows with the time to the cash flow, so a distant cash flow receives a stronger discount than a near cash flow of the same size. A cash flow at year 10 contributes much less to the price than the same cash flow at year 1.
 
 The yield $y$ is the single rate that makes the sum of the discounted cash flows equal to the market price. It is therefore the internal rate of return of the security, if the investor buys at the price $P$, holds the security to maturity, and reinvests each coupon at the rate $y$, the investor earns exactly $y$ per year.
+
+### Yield
+
+The yield of a fixed-income security is the single discount rate that gives a price equal to the market price, when it is applied to all the cash flows of the security.
+
+**Example**
+
+A bond has a principal of 100 and a maturity of 2 years. It pays a coupon of 5% per year in two parts of 2.5 every six months. The market price of the bond is 97.50. If $y$ is the yield of the bond with continuous compounding, the same rate $y$ discounts all the cash flows.
+
+$$2.5 e^{-y \cdot 0.5} + 2.5 e^{-y \cdot 1.0} + 2.5 e^{-y \cdot 1.5} + 102.5 e^{-y \cdot 2.0} = 97.50$$
+
+There is no closed formula for $y$, so we must solve the equation with a numerical method, such as trial and error or Newton-Raphson. A rate of 6% gives a price of 97.97, which is too high, and a rate of 7% gives a price of 96.11, which is too low. Thus $y$ is between 6% and 7%, and the numerical method gives
+
+$$y = 0.0625 \quad (6.25\%)$$
 
 ### Clean and Dirty Prices
 
@@ -73,7 +87,7 @@ The chart shows a 10-year bond with a 3% coupon paid every six months ($\frac{C}
 
 **Why the market quotes the clean price**
 
-The accrued interest grows linearly and goes back to zero on the coupon date, so it absorbs the jump of the dirty price. The clean price stays continuous, so it lets you compare the prices of different bonds, also when their coupon calendars are different. Screens, trading desks and futures quote the clean price. The settlement and the return always use the dirty price.
+The accrued interest grows linearly and goes back to zero on the coupon date, so it absorbs the jump of the dirty price. The clean price stays continuous, so it lets you compare the prices of different fixed-income securities, also when their coupon calendars are different. Screens, trading desks and futures quote the clean price. The settlement and the return always use the dirty price.
 
 ## Macaulay Duration
 
@@ -98,7 +112,7 @@ $$\sum_{t=1}^{n} \frac{CF_t}{(1+y)^t} = P$$
 
 the weights add up to exactly 1, and $D_{Mac}$ is a true average of the times $t$. Each time $t$ counts in proportion to the share of the price that its cash flow represents. A cash flow that is large or paid soon has a large present value and pulls the average towards its time. A cash flow that is small or paid late has a small present value and pulls the average less.
 
-A zero-coupon bond is the simplest check. It has one cash flow at maturity, so that cash flow is the whole price, its weight is 1, and the Macaulay duration equals the maturity. A coupon bond pays part of the price before maturity, so its Macaulay duration is shorter than the maturity.
+A zero-coupon bond is the simplest check. It has one cash flow at maturity, so that cash flow is the whole price, its weight is 1, and the Macaulay duration equals the maturity. A security with coupons pays part of the price before maturity, so its Macaulay duration is shorter than the maturity.
 
 The times $t_k$ are always in years, so the Macaulay duration is a time in years for all compounding frequencies. With continuous compounding ($m \to \infty$), the discount factor becomes $e^{-y t_k}$, and the Macaulay duration is
 
@@ -266,7 +280,7 @@ $$\frac{\Delta P}{P} \approx -D_{Mod} \cdot \Delta y + \frac{1}{2} C \cdot (\Del
 > [!NOTE]
 > This formula is a second-order Taylor polynomial of the price around the current yield. The first-order term is the duration. The second-order term is the convexity. The formula ignores the terms of order three and higher, so it is still an approximation. See [Appendix 1](#appendix-1-taylor-polynomial-and-the-relative-price-change) for the rationale of the Taylor polynomial and how each term maps to duration and convexity.
 
-For a bond with fixed cash flows, the convexity is always positive. Negative convexity can appear only when the cash flows depend on the yield, for example in callable bonds or mortgage-backed securities. The formula above does not apply to those securities, because it treats the $CF_t$ as constants. A positive convexity always gives a better result than the simpler linear approximation, whatever the interest rates do. If the interest rates rise, the convexity term reduces the fall in price that the linear approximation computes. If the interest rates fall, the convexity term increases the rise in price that the linear approximation computes.
+For a fixed-income security with fixed cash flows, the convexity is always positive. Negative convexity can appear only when the cash flows depend on the yield, for example in callable bonds or mortgage-backed securities. The formula above does not apply to those securities, because it treats the $CF_t$ as constants. A positive convexity always gives a better result than the simpler linear approximation, whatever the interest rates do. If the interest rates rise, the convexity term reduces the fall in price that the linear approximation computes. If the interest rates fall, the convexity term increases the rise in price that the linear approximation computes.
 
 The effect of the convexity is small for small changes in the interest rates. It becomes important for large changes, for example when a long period of time has passed and the interest rates have moved far from their initial level.
 
@@ -323,7 +337,7 @@ Therefore:
 
 $$C = \frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1) CF_t}{(1+y)^{t+2}}$$
 
-Every term of the sum is positive, because $t$, $CF_t$, and $(1+y)$ are positive. This is the reason why the convexity of a bond with fixed positive cash flows is always positive.
+Every term of the sum is positive, because $t$, $CF_t$, and $(1+y)$ are positive. This is the reason why the convexity of a fixed-income security with fixed positive cash flows is always positive.
 
 ## Practical Interpretation of Durations and Convexity
 
@@ -331,7 +345,7 @@ The modified duration and the convexity are widely used to evaluate the profit a
 
 **Sensitivity factors**
 
-Three characteristics of a bond determine how sensitive its price is to changes in the interest rates:
+Three characteristics of a fixed-income security determine how sensitive its price is to changes in the interest rates:
 
 - **Maturity:** a longer maturity gives a more sensitive price. The cash flows are further away, so a change in the yield discounts them more.
 - **Coupon:** a lower coupon gives a more sensitive price. A larger part of the price comes from the final payment, so the duration is longer. A zero-coupon bond is the most sensitive for a given maturity.
@@ -391,17 +405,17 @@ $\Delta P/P \approx -(0.3\times0.01) - (2.1\times0.005) - (5.2\times(-0.002)) = 
 
 The modified duration alone cannot compute this result, because the rates did not move by the same amount.
 
-## Asset Swaps
+## Asset Swaps TODO Move to another more advanced note
 
-An asset swap is a strategy that combines the purchase of a fixed-coupon bond with the entry into an Interest Rate Swap (IRS). The investor pays the fixed coupons to the swap counterparty and receives floating payments in exchange. The swap transforms the fixed cash flows of the bond into floating cash flows. 
+An asset swap is a strategy that combines the purchase of a fixed-coupon security with the entry into an Interest Rate Swap (IRS). The investor pays the fixed coupons to the swap counterparty and receives floating payments in exchange. The swap transforms the fixed cash flows of the security into floating cash flows. 
 
-When we buy a bond, this bond usually has a fixed coupon (e.g. 5% every year). Sometimes, instead of a fixed coupon rate, we want exposure to the floating interest rate paid at that moment.
+When we buy a fixed-income security, it usually has a fixed coupon (e.g. 5% every year). Sometimes, instead of a fixed coupon rate, we want exposure to the floating interest rate paid at that moment.
 
-Asset swaps are widely used in fixed income trading strategies to hedge interest rate risk. The swap removes most of the sensitivity of the position to changes in interest rates, but the investor keeps the credit risk of the bond issuer. For this reason, the asset swap spread is a common measure of the credit risk of a bond.
+Asset swaps are widely used in fixed income trading strategies to hedge interest rate risk. The swap removes most of the sensitivity of the position to changes in interest rates, but the investor keeps the credit risk of the issuer. For this reason, the asset swap spread is a common measure of the credit risk of a fixed-income security.
 
 ### Mechanics of the Asset Swap
 
-1. **Purchase of the bond:** the investor pays the market price of the bond.
+1. **Purchase of the security:** the investor pays the market price of the security.
 2. **Entry into the IRS:**
    - Pays: the fixed rate of the swap.
    - Receives: the floating rate (EURIBOR/SOFR + spread).
@@ -409,7 +423,7 @@ Asset swaps are widely used in fixed income trading strategies to hedge interest
 
 ### Asset Swap Spread
 
-$$\text{ASW Spread} = (\text{Bond Coupon} - \text{Swap Rate}) \times \frac{100}{\text{Bond Price}}$$
+$$\text{ASW Spread} = (\text{Coupon} - \text{Swap Rate}) \times \frac{100}{\text{Price}}$$
 
 **Interpretation:** the ASW spread is the additional spread over the floating reference rate that the investor receives for the credit risk.
 
@@ -441,27 +455,27 @@ Comparison:
 
 **Why this is interesting**
 
-A fixed-rate bond packages two risks: interest rate risk and credit risk. The asset swap separates them. The investor keeps the credit risk of the issuer and passes the interest rate risk to the swap counterparty. The position behaves like a floating-rate note issued by XYZ.
+A fixed-rate security packages two risks: interest rate risk and credit risk. The asset swap separates them. The investor keeps the credit risk of the issuer and passes the interest rate risk to the swap counterparty. The position behaves like a floating-rate note issued by XYZ.
 
 - **Pure credit view.** If the investor thinks the credit of XYZ is cheap, the asset swap pays only for that view. A rate move does not change the result.
-- **Comparable numbers.** The ASW spread puts every bond on one scale: spread over the swap curve. A 3-year bond at 98 and a 7-year bond at 105 become directly comparable.
+- **Comparable numbers.** The ASW spread puts every fixed-income security on one scale: spread over the swap curve. A 3-year bond at 98 and a 7-year bond at 105 become directly comparable.
 - **Access to fixed-rate supply.** Most corporate bonds are fixed-rate, but many investors need floating cash flows. The asset swap converts the available supply into the required form.
-- **Floating-rate funding.** A bank funds itself at a floating rate. It buys the bond, swaps it, and locks the margin between "floating + ASW spread" and its floating funding cost.
-- **Relative value.** If the ASW spread is wider than the CDS spread of the same issuer, the investor can buy the bond, swap it, and buy protection. This is the CDS-bond basis trade.
+- **Floating-rate funding.** A bank funds itself at a floating rate. It buys the security, swaps it, and locks the margin between "floating + ASW spread" and its floating funding cost.
+- **Relative value.** If the ASW spread is wider than the CDS spread of the same issuer, the investor can buy the security, swap it, and buy protection. This is the CDS-bond basis trade.
 
 **When this is not interesting**
 
 - **The investor wants duration.** If the investor expects rates to fall, the swap removes the price gain that the investor wants.
 - **Costs are high relative to the spread.** The swap bid-offer, the collateral requirements, and the counterparty risk can consume a small ASW spread.
-- **The bond has embedded options.** A callable or puttable bond does not have certain fixed cash flows. A standard asset swap does not hedge it well.
+- **The security has embedded options.** A callable or puttable bond does not have certain fixed cash flows. A standard asset swap does not hedge it well.
 - **Rates are stable.** The value of the duration hedge is low when rate uncertainty is low. The swap then adds cost with little benefit.
 
 **Practical applications**
 
 - **Relative value analysis.** Compare the ASW spreads of different issuers with the same maturity. A wider spread means more compensation per unit of credit risk.
-- **Bond vs. CDS arbitrage.** If the ASW spread is greater than the CDS spread of the same issuer, buy the bond, swap it, and buy protection. The position earns the difference with little net credit risk.
+- **Bond vs. CDS arbitrage.** If the ASW spread is greater than the CDS spread of the same issuer, buy the security, swap it, and buy protection. The position earns the difference with little net credit risk.
 - **Sector rotation.** Compare the average ASW spread of each sector against its history. Identify sectors that are cheap or expensive relative to their usual level.
-- **Portfolio construction.** Use asset-swapped bonds as the base of a credit-neutral portfolio. The portfolio then has credit exposure only, with no duration exposure.
+- **Portfolio construction.** Use asset-swapped securities as the base of a credit-neutral portfolio. The portfolio then has credit exposure only, with no duration exposure.
 
 ## Appendix 1: Taylor Polynomial and the Relative Price Change
 
