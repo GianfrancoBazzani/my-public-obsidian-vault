@@ -12,7 +12,7 @@ $$\text{Long payoff} = S_T - K$$
 
 $$\text{Short payoff} = K - S_T$$
 
-Since there's no upfront cost, payoff equals profit. Both sides are obligated, so the payoffs are straight lines, with unlimited gains and losses for both.
+Since there's no upfront cost, payoff equals profit. Both sides are obligated, so the payoffs are straight lines. The long side has unlimited gains and a maximum loss of $K$ if the price falls to zero, and the short side has the opposite.
 
 **Extending to options**
 
@@ -21,11 +21,11 @@ With options, "long" means you bought the option (the holder) and "short" means 
 | Position   | Right or obligation             | Profit                 | Gains if               |
 | ---------- | ------------------------------- | ---------------------- | ---------------------- |
 | Long call  | Right to buy                    | $\max(S_T - K, 0) - c$ | The price rises        |
-| Short call | Obligation to sell if exercised | $c - \max(S_T - K, 0)$ | The price doesn't rise |
+| Short call | Obligation to sell if exercised | $c - \max(S_T - K, 0)$ | The price stays below $K + c$ |
 | Long put   | Right to sell                   | $\max(K - S_T, 0) - p$ | The price falls        |
-| Short put  | Obligation to buy if exercised  | $p - \max(K - S_T, 0)$ | The price doesn't fall |
+| Short put  | Obligation to buy if exercised  | $p - \max(K - S_T, 0)$ | The price stays above $K - p$ |
 
-The key difference from forwards is that with options, "long" doesn't always mean buying the asset. A long put gives you the right to sell. Because the holder only exercises when it's profitable, option payoffs are kinked rather than straight. The holder's maximum loss is the premium, while the writer's maximum gain is that premium, with potentially large losses (unlimited for a short call).
+The key difference from forwards is that with options, "long" doesn't always mean buying the asset. A long put gives you the right to sell. Because the holder only exercises when it's profitable, option payoffs are kinked rather than straight. The holder's maximum loss is the premium, while the writer's maximum gain is that premium, with potentially large losses (unlimited for a short call, up to $K - p$ for a short put).
 
 **The zero-sum link**
 
@@ -65,7 +65,7 @@ The total gain is 2, which is the final price minus the initial price. A long fo
 
 **Forward and futures prices**
 
-If the interest rates are constant, the forward price and the futures price for the same maturity are equal. If the interest rates change in a random way, the two prices can differ, because the trader reinvests the daily gains and finances the daily losses at the rates of each day. The difference depends on the correlation between the interest rates and the price of the asset. If the price of the asset tends to rise when the interest rates rise, the long side of a futures contract reinvests its gains at higher rates, so the futures price is higher than the forward price. For short maturities the difference is usually small.
+If the risk-free rate is constant and the same for all maturities, the forward price and the futures price for the same maturity are equal. If the interest rates change in a random way, the two prices can differ, because the trader reinvests the daily gains and finances the daily losses at the rates of each day. The difference depends on the correlation between the interest rates and the price of the asset. If the price of the asset tends to rise when the interest rates rise, the long side of a futures contract reinvests its gains at higher rates, so the futures price is higher than the forward price. For short maturities the difference is usually small.
 
 ## Specification of a futures contract
 
@@ -78,8 +78,6 @@ When an exchange creates a new futures contract, it must specify the exact terms
 - **The price quotes.** The exchange specifies how it quotes the price and the tick size, which is the minimum movement of the price.
 - **The daily price limits.** These are the maximum movements of the price in one day. A movement equal to the limit is a limit move (limit up or limit down). The limits prevent large price movements that come from speculative excesses.
 - **The position limits.** These are the maximum number of contracts that one speculator can hold. The limits prevent speculators from having too much influence on the market. Bona fide hedgers are usually exempt.
-
-The first four parameters (asset, contract size, delivery arrangements and delivery months) are the most important in the design of a new contract.
 
 **Key dates of a futures contract**
 
@@ -94,6 +92,6 @@ The first four parameters (asset, contract size, delivery arrangements and deliv
 | Last delivery day                      | The last day when the delivery can occur.                                                                                                |
 | Final settlement date                  | For a cash-settled contract, the day when the exchange sets the final settlement price and closes the open positions.                    |
 
-The delivery takes three business days. On the position day, the short side declares its intention to deliver. On the notice day, the clearing house matches the short side with a long side, usually the oldest open long position, and notifies the two sides. On the delivery day, the short side delivers the asset and the long side pays. For this reason, the first position day, the first notice day and the first delivery day are usually three consecutive business days.
+On CME/CBOT contracts with physical delivery, such as Treasury and grain futures, the delivery always takes three business days. On the position day, the short side declares its intention to deliver. On the notice day, the clearing house matches the short side with a long side, usually the oldest open long position, and notifies the two sides. On the delivery day, the short side delivers the asset and the long side pays. For this reason, the first position day, the first notice day and the first delivery day are usually three consecutive business days.
 
 The exact dates, and the order of the last trading day and the last notice day, change from one contract to another. The contract specifications of the exchange give the real calendar of each contract.
