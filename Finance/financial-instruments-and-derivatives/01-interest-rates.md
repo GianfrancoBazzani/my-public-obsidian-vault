@@ -53,7 +53,12 @@ Banks hold reserves in accounts at the central bank. At the end of each day some
 
 ### Repo Rates
 
-TODO
+Unlike unsecured overnight rates, repo rates are secured borrowing rates. In a **repo** (repurchase agreement), a financial institution sells securities, usually government bonds, and agrees to buy them back later at a slightly higher price. The difference between the two prices is the interest, and its annualized value is the **repo rate**. For the counterparty, the same trade is a **reverse repo**. The lender receives legal title to the securities, so if the borrower defaults the lender sells them, and if the lender defaults the borrower keeps the cash, with any difference settled by close-out netting under a master agreement such as the GMRA. A **haircut** (cash lent below the market value of the securities) and daily margin calls protect the lender against a fall in the value of the collateral, so a repo has very little credit risk. Most repos are overnight, and longer ones are **term repos**. **General collateral** (GC) repos accept any bond of a given class, while **special** repos ask for one bond in high demand and pay a lower rate. In theory a repo rate is slightly below the unsecured overnight rate of the same currency, but scarce reserves or a large supply of bonds can push it above, as when SOFR rose above the EFFR from late 2025. The main repo benchmarks are:
+
+- **SOFR** (Secured Overnight Financing Rate) is the overnight rate of repos backed by US Treasuries. The New York Fed publishes it at about 08:00 ET on the next business day as the volume-weighted median of tri-party, GCF and FICC-cleared bilateral transactions, with specials filtered out. Recommended in 2017 as the USD risk-free rate, it replaced USD LIBOR.
+- **SARON** (see Overnight Rates) is the Swiss franc equivalent.
+- **RepoFunds Rate** is a family of daily repo indices that CME publishes from trades on the BrokerTec and MTS platforms, with RFR Euro and country indices such as RFR Germany for euro sovereign collateral and RFR Sterling for gilts.
+- **Tokyo Repo Rate** is the yen repo rate that the Japan Securities Dealers Association (JSDA) publishes for tenors from overnight to one year.
 
 ## Reference Rates
 
