@@ -89,4 +89,20 @@ EURIBOR was reformed instead of retired, and since 2019 a hybrid methodology use
 
 ## Liquidity Preference Theory
 
-The **liquidity preference theory** explains why the yield curve usually slopes upward. Depositors prefer short maturities, which keep their money available, while borrowers prefer long fixed-rate loans, which remove their refinancing risk. This makes supply and demand asymmetric, with a surplus of short-term funds and a shortage of long-term funds. Banks and other intermediaries close this gap by setting long rates above the expected future short rates, which attracts long-term deposits and discourages long-term borrowing. The extra yield is the **liquidity (term) premium**, so a forward rate equals the expected future short rate plus a premium that usually grows with maturity, and the curve slopes upward even when short rates are expected to stay flat. Banks earn this premium through **maturity transformation**, funding long fixed-rate loans with short deposits, but a rise in short rates then reduces their net interest income, a risk that they manage with asset-liability management and swaps. The theory, formalized by Hicks in 1939, differs from the **expectations theory** (long rates reflect only expected short rates, so forward rates equal expected rates) and the **market segmentation theory** (each maturity has its own supply and demand). The premium is not always positive, and model estimates of the US 10-year term premium were mostly negative from 2016 to 2024 under quantitative easing.
+The **liquidity preference theory** explains why the yield curve usually slopes upward. Depositors and investors prefer short maturities, because long bonds are less liquid and their prices move more when rates change, so an early sale can bring a larger loss, while borrowers prefer long fixed-rate loans, which remove their refinancing risk. This makes supply and demand asymmetric, with a surplus of short-term funds and a shortage of long-term funds. Banks and other intermediaries close this gap by setting long rates above the expected future short rates, which attracts long-term deposits and discourages long-term borrowing. The extra yield is the **liquidity (term) premium**, so a forward rate equals the expected future short rate plus a premium that usually grows with maturity, and the curve slopes upward even when short rates are expected to stay flat.
+
+In terms of yields, the $n$-year rate is approximately the average of the current and expected one-year rates plus a premium $L_n$ that the theory assumes to be positive and to grow with maturity.
+
+$$i_n = \frac{i_1 + i_2^e + \dots + i_n^e}{n} + L_n$$
+
+The shape of the curve then depends on the expected path of short rates. Expected rises give a steep upward curve, flat expectations still give an upward curve, small expected falls give a flat or upward curve, and only large expected falls give an inverted curve. For example, with a one-year rate of 4% and premiums of 0.25% at two years and 0.50% at three years, the yields are the following.
+
+| Maturity | Short rates expected flat at 4% | Short rates expected to fall to 3% and 2% |
+| --- | --- | --- |
+| 1 year | 4.00% | 4.00% |
+| 2 years | 4% + 0.25% = 4.25% | 3.5% + 0.25% = 3.75% |
+| 3 years | 4% + 0.50% = 4.50% | 3% + 0.50% = 3.50% |
+
+This explains why upward curves are much more common than inverted ones, while the pure expectations theory, with no premium, predicts both about equally often.
+
+Banks earn this premium through **maturity transformation**, funding long fixed-rate loans with short deposits, but a rise in short rates then reduces their net interest income, a risk that they manage with asset-liability management and swaps. The theory, formalized by Hicks in 1939, differs from the **expectations theory** (long rates reflect only expected short rates, so forward rates equal expected rates) and the **market segmentation theory** (each maturity has its own supply and demand). The premium is not always positive, and model estimates of the US 10-year term premium were mostly negative from 2016 to 2024 under quantitative easing.
