@@ -41,6 +41,11 @@ For any given currency, many different types of interest rates are regularly quo
 
 **Treasury rates** are the yields on the bills, notes and bonds that a government issues to borrow in its own currency, and they are the usual risk-free rates, with the limits given above. Auctions and secondary trading set them, and the US Treasury publishes them every business day as a par yield curve from 1 month to 30 years. The euro area has no single Treasury, so the German Bund is the benchmark and other sovereigns are quoted as a spread over it, for example the BTP–Bund spread. Treasury rates are also the base of the G-spread of corporate bonds.
 
+They are usually lower than other very low-risk rates for two main reasons.
+
+ 1. Regulatory demand and capital requirements: Banks and other financial institutions must hold Treasuries to meet regulatory requirements, and they need to set aside less capital for Treasuries than for other low-risk investments. This raises demand for Treasuries, which pushes their prices up and their yields down.
+ 2. Tax advantages: Interest earned on Treasuries is exempt from state and local income taxes, unlike most other fixed-income investments. Because investors keep more of the return after taxes, they are willing to accept a lower stated rate.
+ 
 ### Overnight Rates
 
 Banks hold reserves in accounts at the central bank. At the end of each day some banks have surplus reserves and others need funds, so they lend and borrow overnight, bilaterally or through a broker. Each currency has its own overnight benchmark:
