@@ -351,6 +351,16 @@ $$C = \frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \frac{1}{P}\sum_{t=1}^{n}
 
 Every term of the sum is positive, because $t$, $CF_t$, and $(1+y)$ are positive. This is the reason why the convexity of a fixed-income security with fixed positive cash flows is always positive.
 
+## Duration and Convexity of a Portfolio
+
+A portfolio of fixed-income securities is a set of cash flows at different times, so the methods above apply to it as to a single asset, with its cash flow yield (the internal rate of return of all its cash flows) as the yield. In practice, its duration and convexity are computed as the value-weighted averages of those of its securities, which gives a close result, and its money duration is the simple sum of their money durations.
+
+$$D_P = \sum_i w_i D_i \qquad C_P = \sum_i w_i C_i \qquad w_i = \frac{P_i}{\sum_j P_j}$$
+
+The weighted average assumes that the yields of all the securities change by about the same amount. When their maturities differ widely, this holds only for a parallel shift of the yield curve.
+
+A financial institution whose assets and liabilities have the same present value and the same duration (**immunization**) removes its exposure to small parallel shifts of the yield curve. If the present values differ, it must match the money durations instead. It is still exposed to large shifts, which it covers by keeping the convexity of its assets above that of its liabilities, and to non-parallel shifts, which the key rate duration below measures.
+
 ## Practical Interpretation of Durations and Convexity
 
 The modified duration and the convexity are widely used to evaluate the profit and loss (PnL) of a portfolio of fixed-income securities against changes in the interest rates. They approximate how the price of the portfolio changes when the interest rates move. The duration and the convexity of the portfolio are the value-weighted averages of the durations and convexities of its assets. With these two numbers, the two-term formula gives the change in the price of the whole portfolio, without the need to recompute the discounted value of all the cash flows of all the assets. The result is an approximation, and it assumes that all yields move by the same amount (a parallel shift of the yield curve).
