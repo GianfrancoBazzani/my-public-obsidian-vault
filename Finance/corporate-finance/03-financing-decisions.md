@@ -83,7 +83,7 @@ The examples in the definition are the main ways to raise external funds:
 | --- | --- | --- |
 | **IPO** (*initial public offering*) | Equity | The company sells its shares to the public for the first time, and its shares start to trade on a stock exchange. |
 | **Capital increase** | Equity | The company issues new shares. For a listed company, this is a **seasoned equity offering** (SEO). In a **rights issue**, the existing shareholders have the right to buy the new shares first. |
-| **Bond issue** | Debt | The company sells bonds to many investors in the market. See [Fixed Income Securities Fundamentals](../financial-instruments-and-derivatives/00-fixed-income-securities-fundamentals.md). |
+| **Bond issue** | Debt | The company sells bonds to many investors in the market. |
 | **Raising debt** | Debt | The company borrows from banks or other lenders, e.g. loans and credit lines. |
 
 The equity does not have to be repaid and does not have a fixed cost, but it is the most expensive source and it dilutes the control of the existing shareholders. The debt is cheaper and keeps the control, but it creates fixed payments that the company must make in all conditions.
