@@ -2,7 +2,7 @@
 
 ## Exchange-traded vs. over-the-counter markets
 
-An **exchange-traded market** is a centralized, organized marketplace (such as the CME Group or Eurex) where standardized contracts are traded. The exchange defines the contract terms, such as the underlying asset, the contract size, and the delivery or expiration dates. Trades go through a clearing house, which stands between buyer and seller and requires margin from both, so counterparty credit risk is greatly reduced. Prices and trading volumes are publicly visible. Futures contracts trade on exchanges, while forward contracts trade OTC (see [Futures](xx-futures.md) for the comparison of the two contracts).
+An **exchange-traded market** is a centralized, organized marketplace (such as the CME Group or Eurex) where standardized contracts are traded. The exchange defines the contract terms, such as the underlying asset, the contract size, and the delivery or expiration dates. Trades go through a clearing house, which stands between buyer and seller and requires margin from both, so counterparty credit risk is greatly reduced. Prices and trading volumes are publicly visible. Futures contracts trade on exchanges, while forward contracts trade OTC (see [Futures and Forwards](xx-futures-and-forwards.md) for the comparison of the two contracts).
 
 The **over-the-counter (OTC) market** is a decentralized network in which participants, typically banks, other financial institutions, fund managers, and corporations, deal directly with one another, traditionally by phone and now increasingly through electronic platforms. Because each deal is negotiated privately, contracts can be customized to fit the parties' exact needs, such as an unusual maturity, notional amount, or underlying asset. The trade-off is that OTC transactions have historically carried more counterparty credit risk and less transparency. Since the 2008 financial crisis, regulators have narrowed this gap by requiring many standardized OTC derivatives to be cleared through central counterparties and reported to trade repositories.
 
@@ -66,7 +66,7 @@ A casino creates risk for entertainment, while a futures market transfers a risk
 
 **The public-interest answer**
 
-A ban would make futures markets thin and costly and would hurt the hedgers it means to protect. The real concern is excessive or manipulative speculation, which exchanges and regulators control with the following rules (see [Futures](xx-futures.md)).
+A ban would make futures markets thin and costly and would hurt the hedgers it means to protect. The real concern is excessive or manipulative speculation, which exchanges and regulators control with the following rules (see [Futures and Forwards](xx-futures-and-forwards.md)).
 
 - **Margin requirements** make each trader cover losses daily, so one default does not spread.
 - **Daily price limits** cap how far the price can move in one session, which slows panic moves.

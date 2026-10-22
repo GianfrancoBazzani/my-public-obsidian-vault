@@ -1,4 +1,4 @@
-# Futures
+# Futures and Forwards
 
 ## Long vs. short forwards
 
