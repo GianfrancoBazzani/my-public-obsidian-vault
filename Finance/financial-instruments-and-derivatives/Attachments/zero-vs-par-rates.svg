@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="330" viewBox="0 0 700 330" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect width="700" height="330" fill="white"/>
+<text x="200" y="24" text-anchor="middle" font-weight="bold">Upward-sloping zero curve</text>
+<line x1="70" y1="235.71" x2="330" y2="235.71" stroke="#ddd"/>
+<text x="62" y="239.71" text-anchor="end">1.0 %</text>
+<line x1="70" y1="207.14" x2="330" y2="207.14" stroke="#ddd"/>
+<text x="62" y="211.14" text-anchor="end">2.0 %</text>
+<line x1="70" y1="178.57" x2="330" y2="178.57" stroke="#ddd"/>
+<text x="62" y="182.57" text-anchor="end">3.0 %</text>
+<line x1="70" y1="150.00" x2="330" y2="150.00" stroke="#ddd"/>
+<text x="62" y="154.00" text-anchor="end">4.0 %</text>
+<line x1="70" y1="121.43" x2="330" y2="121.43" stroke="#ddd"/>
+<text x="62" y="125.43" text-anchor="end">5.0 %</text>
+<line x1="70" y1="92.86" x2="330" y2="92.86" stroke="#ddd"/>
+<text x="62" y="96.86" text-anchor="end">6.0 %</text>
+<line x1="70" y1="64.29" x2="330" y2="64.29" stroke="#ddd"/>
+<text x="62" y="68.29" text-anchor="end">7.0 %</text>
+<line x1="70.00" y1="50" x2="70.00" y2="250" stroke="#ddd"/>
+<text x="70.00" y="268" text-anchor="middle">0</text>
+<line x1="122.00" y1="50" x2="122.00" y2="250" stroke="#ddd"/>
+<text x="122.00" y="268" text-anchor="middle">2</text>
+<line x1="174.00" y1="50" x2="174.00" y2="250" stroke="#ddd"/>
+<text x="174.00" y="268" text-anchor="middle">4</text>
+<line x1="226.00" y1="50" x2="226.00" y2="250" stroke="#ddd"/>
+<text x="226.00" y="268" text-anchor="middle">6</text>
+<line x1="278.00" y1="50" x2="278.00" y2="250" stroke="#ddd"/>
+<text x="278.00" y="268" text-anchor="middle">8</text>
+<line x1="330.00" y1="50" x2="330.00" y2="250" stroke="#ddd"/>
+<text x="330.00" y="268" text-anchor="middle">10</text>
+<rect x="70" y="50" width="260" height="200" fill="none" stroke="#333"/>
+<polygon points="96.00,235.71 122.00,218.57 148.00,201.43 174.00,184.29 200.00,167.14 226.00,150.00 252.00,132.86 278.00,115.71 304.00,98.57 330.00,81.43 330.00,98.45 304.00,111.17 278.00,124.70 252.00,138.97 226.00,153.90 200.00,169.43 174.00,185.47 148.00,201.93 122.00,218.71 96.00,235.71" fill="#888" fill-opacity="0.25"/>
+<path d="M96.00,235.71 L122.00,218.57 L148.00,201.43 L174.00,184.29 L200.00,167.14 L226.00,150.00 L252.00,132.86 L278.00,115.71 L304.00,98.57 L330.00,81.43" stroke="#1f4fd8" stroke-width="2" fill="none"/>
+<path d="M96.00,235.71 L122.00,218.71 L148.00,201.93 L174.00,185.47 L200.00,169.43 L226.00,153.90 L252.00,138.97 L278.00,124.70 L304.00,111.17 L330.00,98.45" stroke="#d81f1f" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+<circle cx="330.00" cy="81.43" r="4" fill="#1f4fd8"/>
+<circle cx="330.00" cy="98.45" r="4" fill="#d81f1f"/>
+<text x="322" y="220" text-anchor="end" fill="#1f4fd8">10-year zero rate 6.40 %</text>
+<text x="322" y="238" text-anchor="end" fill="#d81f1f">10-year par rate 5.80 %</text>
+<text x="200" y="288" text-anchor="middle">Maturity (years)</text>
+<text transform="translate(26,150) rotate(-90)" text-anchor="middle">Rate</text>
+<text x="550" y="24" text-anchor="middle" font-weight="bold">Downward-sloping zero curve</text>
+<line x1="420" y1="235.71" x2="680" y2="235.71" stroke="#ddd"/>
+<text x="412" y="239.71" text-anchor="end">1.0 %</text>
+<line x1="420" y1="207.14" x2="680" y2="207.14" stroke="#ddd"/>
+<text x="412" y="211.14" text-anchor="end">2.0 %</text>
+<line x1="420" y1="178.57" x2="680" y2="178.57" stroke="#ddd"/>
+<text x="412" y="182.57" text-anchor="end">3.0 %</text>
+<line x1="420" y1="150.00" x2="680" y2="150.00" stroke="#ddd"/>
+<text x="412" y="154.00" text-anchor="end">4.0 %</text>
+<line x1="420" y1="121.43" x2="680" y2="121.43" stroke="#ddd"/>
+<text x="412" y="125.43" text-anchor="end">5.0 %</text>
+<line x1="420" y1="92.86" x2="680" y2="92.86" stroke="#ddd"/>
+<text x="412" y="96.86" text-anchor="end">6.0 %</text>
+<line x1="420" y1="64.29" x2="680" y2="64.29" stroke="#ddd"/>
+<text x="412" y="68.29" text-anchor="end">7.0 %</text>
+<line x1="420.00" y1="50" x2="420.00" y2="250" stroke="#ddd"/>
+<text x="420.00" y="268" text-anchor="middle">0</text>
+<line x1="472.00" y1="50" x2="472.00" y2="250" stroke="#ddd"/>
+<text x="472.00" y="268" text-anchor="middle">2</text>
+<line x1="524.00" y1="50" x2="524.00" y2="250" stroke="#ddd"/>
+<text x="524.00" y="268" text-anchor="middle">4</text>
+<line x1="576.00" y1="50" x2="576.00" y2="250" stroke="#ddd"/>
+<text x="576.00" y="268" text-anchor="middle">6</text>
+<line x1="628.00" y1="50" x2="628.00" y2="250" stroke="#ddd"/>
+<text x="628.00" y="268" text-anchor="middle">8</text>
+<line x1="680.00" y1="50" x2="680.00" y2="250" stroke="#ddd"/>
+<text x="680.00" y="268" text-anchor="middle">10</text>
+<rect x="420" y="50" width="260" height="200" fill="none" stroke="#333"/>
+<polygon points="446.00,64.29 472.00,81.43 498.00,98.57 524.00,115.71 550.00,132.86 576.00,150.00 602.00,167.14 628.00,184.29 654.00,201.43 680.00,218.57 680.00,213.98 654.00,196.37 628.00,179.26 602.00,162.53 576.00,146.07 550.00,129.77 524.00,113.55 498.00,97.29 472.00,80.90 446.00,64.29" fill="#888" fill-opacity="0.25"/>
+<path d="M446.00,64.29 L472.00,81.43 L498.00,98.57 L524.00,115.71 L550.00,132.86 L576.00,150.00 L602.00,167.14 L628.00,184.29 L654.00,201.43 L680.00,218.57" stroke="#1f4fd8" stroke-width="2" fill="none"/>
+<path d="M446.00,64.29 L472.00,80.90 L498.00,97.29 L524.00,113.55 L550.00,129.77 L576.00,146.07 L602.00,162.53 L628.00,179.26 L654.00,196.37 L680.00,213.98" stroke="#d81f1f" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+<circle cx="680.00" cy="218.57" r="4" fill="#1f4fd8"/>
+<circle cx="680.00" cy="213.98" r="4" fill="#d81f1f"/>
+<text x="672" y="72" text-anchor="end" fill="#1f4fd8">10-year zero rate 1.60 %</text>
+<text x="672" y="90" text-anchor="end" fill="#d81f1f">10-year par rate 1.76 %</text>
+<text x="550" y="288" text-anchor="middle">Maturity (years)</text>
+<text transform="translate(376,150) rotate(-90)" text-anchor="middle">Rate</text>
+<line x1="200" y1="316" x2="230" y2="316" stroke="#1f4fd8" stroke-width="2"/><text x="236" y="320">Zero rate</text>
+<line x1="380" y1="316" x2="410" y2="316" stroke="#d81f1f" stroke-width="2" stroke-dasharray="6 4"/><text x="416" y="320">Par rate (annual coupons)</text>
+</svg>

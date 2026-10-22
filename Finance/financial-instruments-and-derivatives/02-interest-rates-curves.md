@@ -121,7 +121,13 @@ $$C = \frac{100 \left[ 1 - 0.8737 \right]}{0.9704 + 0.9231 + 0.8737} = \frac{12.
 
 The annual coupon is 4.56, so the 3-year par rate is 4.56 %. It is higher than with annual compounding, because the discount factors are lower. This par rate uses annual compounding ($m = 1$), so it is not directly comparable with the continuous zero rate of 4.5 %.
 
-The bootstrapping below uses the same relation in the other direction. It starts from the par rates of the market and finds the zero rates.
+**Par rates and the shape of the zero curve**
+
+A coupon bond is a bundle of zero-coupon payments, one on each coupon date, and each payment is discounted at its own zero rate. A par bond is priced at par, so its yield to maturity is equal to its coupon rate, and the par rate is therefore the single rate that replaces all these zero rates and gives the same price. It therefore behaves like a weighted average of the zero rates from the first coupon date to $T$, with weights proportional to the present value of each payment times its time, so most of the weight is on the final payment of the principal, while the zero rate $r(T)$ is the rate of the last date only. On an upward-sloping zero curve, the coupons before $T$ are discounted at lower rates, so the par rate is below $r(T)$, as in the example above. On a downward-sloping curve the earlier rates are higher, so the par rate is above $r(T)$, and on a flat curve the two are equal.
+
+The chart shows the two cases for zero rates that rise or fall by 0.6 % per year, with annual coupons and annual compounding.
+
+![Zero rates and par rates on an upward-sloping and a downward-sloping zero curve](Attachments/zero-vs-par-rates.svg)
 
 ## Forward Rates
 
