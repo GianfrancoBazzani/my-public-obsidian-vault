@@ -70,7 +70,17 @@ A **reference rate** is a benchmark rate published daily by an administrator or 
 - **Credit spreads.** Risky bond yields are quoted as a spread over a Treasury or swap rate.
 - **Monetary policy.** Central banks steer the overnight rate (the Fed with a target range for the federal funds rate, the ECB with its deposit facility rate), and the change passes to all other rates.
 
-To resist manipulation, a reference rate should be anchored in real transactions. LIBOR came from bank estimates, so the market replaced it with transaction-based overnight rates. EURIBOR was reformed instead, and since 2019 a hybrid methodology uses panel-bank transactions when available and data derived from transactions otherwise. It remains the main rate for floating-rate loans and mortgages in the euro area, next to €STR.
+To resist manipulation, a reference rate should be anchored in real transactions. Before LIBOR was retired (end of 2021 for most settings, June 2023 for USD), national working groups chose a nearly risk-free overnight rate (RFR) for each currency to replace it. These rates are calculated from large volumes of real transactions instead of bank estimates, which makes them much harder to manipulate, though not immune. Because they are overnight and carry almost no bank credit risk, contracts compound them over the interest period (in arrears, or through term versions such as Term SOFR) and add a fixed credit spread adjustment when they convert legacy LIBOR deals.
+
+| Currency | Replaces | New rate | Full name | Administrator | Underlying market | Type |
+|---|---|---|---|---|---|---|
+| USD | USD LIBOR | **SOFR** | Secured Overnight Financing Rate | NY Fed | Treasury repo | Secured |
+| EUR | EUR LIBOR / EONIA | **€STR** | Euro Short-Term Rate | ECB | Wholesale bank borrowing | Unsecured |
+| GBP | GBP LIBOR | **SONIA** | Sterling Overnight Index Average | Bank of England | Overnight deposits | Unsecured |
+| CHF | CHF LIBOR | **SARON** | Swiss Average Rate Overnight | SIX | CHF repo | Secured |
+| JPY | JPY LIBOR | **TONA** | Tokyo Overnight Average Rate | Bank of Japan | Uncollateralized call money | Unsecured |
+
+EURIBOR was reformed instead of retired, and since 2019 a hybrid methodology uses panel-bank transactions when available and data derived from transactions otherwise. It remains the main rate for floating-rate loans and mortgages in the euro area, next to €STR.
 
 ## Liquidity Preference Theory
 
