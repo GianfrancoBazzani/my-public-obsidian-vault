@@ -2,7 +2,7 @@
 
 ## Long vs. short forwards
 
-A forward is an agreement made today to trade an asset on a future date at a fixed delivery price $K$. The long party agrees to buy the asset, and the short party agrees to sell it. Nothing changes hands at the start. The contract is set up to be worth zero to both sides, and the trade happens at maturity.
+A **forward** is an agreement made today to trade an asset on a future date at a fixed delivery price $K$. The long party agrees to buy the asset, and the short party agrees to sell it. Nothing changes hands at the start. The contract is set up to be worth zero to both sides, and the trade happens at maturity.
 
 The terms "long" and "short" describe your side of the contract and which way you benefit from price moves. Long means you'll own the asset, so you gain if the price rises. Short means you'll deliver it, so you gain if the price falls. The difference is defined by the obligation to buy or sell, not by expectations.
 
