@@ -43,7 +43,9 @@ For any given currency, many different types of interest rates are regularly quo
 
 ### Overnight Rates
 
-**€STR** (euro short-term rate) is the unsecured overnight wholesale borrowing rate of euro-area banks. The ECB publishes it every TARGET2 business day at 08:00 CET as the volume-weighted mean of the previous day's fixed-rate deposits above €1 million reported in the money market statistical reporting (MMSR), after trimming the top and bottom 25% of the volume. Recommended in 2018 as the euro risk-free rate, it started on 2 October 2019 and is hard to manipulate because it comes from real transactions. It tracks the ECB deposit facility rate and is the floating rate of euro OIS, the discount rate of collateralized euro derivatives, and the base of the compounded and term rates that serve as EURIBOR fallbacks. Loans and bonds still mostly use EURIBOR, while €STR is used mainly in short-dated products such as repos and deposits.
+Banks hold reserves in accounts at the central bank. At the end of each day some banks have surplus reserves and others need funds, so they lend and borrow overnight, bilaterally or through a broker.
+
+**€STR** (euro short-term rate) is the unsecured overnight wholesale borrowing rate of euro-area banks. The ECB publishes it every TARGET2 business day at 08:00 CET as the volume-weighted mean of the previous day's fixed-rate deposits above €1 million reported in the money market statistical reporting (MMSR), after trimming the top and bottom 25% of the volume. Recommended in 2018 as the euro risk-free rate, it started on 2 October 2019 and is hard to manipulate because it comes from real transactions. It tracks the ECB deposit facility rate and is the floating rate of euro OIS, the discount rate of collateralized euro derivatives, and the base of the compounded and term rates that serve as EURIBOR fallbacks.
 
 ### Repo Rates
 
