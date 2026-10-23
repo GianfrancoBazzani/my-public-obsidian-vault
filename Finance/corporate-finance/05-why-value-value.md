@@ -18,7 +18,7 @@ This goal is different from three other goals that look similar.
 
 The shareholders are the **residual claimants** of the company. They get what remains after the company pays the employees, the suppliers, the creditors and the taxes. For this reason the long-term value for the shareholders also needs the support of the other groups.
 
-## The advantages of a long-term view
+## The Advantages of a Long-Term View
 
 **For the companies**
 
@@ -33,7 +33,7 @@ The shareholders are the **residual claimants** of the company. They get what re
 - The economy gets **sustainable** growth, innovation and jobs.
 - There are fewer **bubbles and crises** (see below).
 
-## The share price today and the long-term value
+## The Share Price Today and the Long-Term Value
 
 The share price shows the expectations of the investors about the future cash flows. These expectations can be wrong, or too high. For this reason the maximization of the share price today is not the same as the maximization of the long-term value.
 
@@ -45,7 +45,7 @@ The managers can increase the share price in the short term with actions that de
 
 The market can also have a wrong price for a long time, as in a bubble. In the long term the share price follows the cash flows. Thus, a price above the value is not a permanent gain for the shareholders.
 
-## The risks of a focus on the accounting profit
+## The Risks of a Focus on the Accounting Profit
 
 The accounting profit (the net income, also called the **earnings**) is not the same as the value. A focus on the accounting profit has four risks.
 
@@ -62,7 +62,7 @@ $$\Delta V = \frac{10}{1.10} - \frac{1}{1.10} \times \frac{3}{10\%} = 9.1 - 27.3
 
 The profit increases, but the value decreases by $18.2$. The cut is a project with $NPV < 0$, so the rule of [Investment Decisions](02-investment-decisions.md) rejects it. If the investors do not see the effect of the cut, the share price can increase today. It decreases later, when the lost cash flows become visible.
 
-## Shareholders and other stakeholders
+## Shareholders and Other Stakeholders
 
 The **stakeholders** are all the groups that have an interest in the company, e.g. the employees, the customers, the suppliers, the community and the environment.
 
@@ -88,7 +88,7 @@ In some cases the interests are in conflict.
 
 The company gives priority to the long-term value for the shareholders, but within the law and the ethics. When there is a conflict, it looks for the solution that causes the least damage to the other groups. The company must not destroy the base that keeps its value, i.e. its customers and its employees.
 
-## Bubbles and crises
+## Bubbles and Crises
 
 The tulip mania (Netherlands, 1630s), the dot-com bubble (late 1990s) and the financial crisis of 2007–2008 have common characteristics.
 
@@ -100,7 +100,7 @@ The tulip mania (Netherlands, 1630s), the dot-com bubble (late 1990s) and the fi
 
 In each case the investors forgot the principles of the value. A business creates value only if it generates cash flows with a return above its cost of capital.
 
-## Does more growth always create value?
+## Does More Growth Always Create Value?
 
 No. The growth creates value only if the **ROIC is higher than the WACC**. If the ROIC is lower than the WACC, the growth destroys value, and a faster growth destroys value faster (see the growth formula and the table in [Value Creation](04-value-creation.md)).
 
@@ -112,7 +112,7 @@ The growth can also cause other problems.
 
 The quality of the growth is important, not only the size.
 
-## The role of the boards and the shareholders
+## The Role of the Boards and the Shareholders
 
 The managers act for the shareholders, but their interests can be different, e.g. when the managers get a bonus on the profit of the quarter. This conflict is the **agency problem**. The board of directors and the shareholders can keep the managers focused on the long-term value.
 

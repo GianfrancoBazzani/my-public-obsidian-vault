@@ -1,6 +1,6 @@
 # Companies and Corporate Finance
 
-## Project and company
+## Project and Company
 
 A **project** is a **planned** set of actions aimed at obtaining an **economic profit** within a **defined time horizon**. A project typically has 3 phases:
 
@@ -10,7 +10,7 @@ A **project** is a **planned** set of actions aimed at obtaining an **economic p
 
 A **company** is a coherent set of projects whose goal is to **create value** in the **long term**.
 
-## Corporate finance
+## Corporate Finance
 
 **Corporate finance** is the discipline whose goal is to **quantify** the **value** created by a **company**, in order to guide the business **decisions** that **maximize** it.
 
@@ -22,7 +22,7 @@ From the point of view of corporate finance, business decisions can be classifie
 
 A similar classification divides corporate finance into three main areas: working capital management (how to manage the day-to-day financial activities), capital budgeting (which long-term investments to make) and capital structure (how to finance them).
 
-## Value creation as an optimization problem
+## Value Creation as an Optimization Problem
 
 The goal of the company, to create value, can be written as an optimization problem. The company chooses its operating, investment and financing decisions to maximize the present value of all its future cash flows:
 
@@ -74,7 +74,7 @@ $$\Pi_t \geq \kappa_t^{\mathcal{D}} \sum_{j \in \mathcal{D}} f_{j,t} - \sum_{j \
 
 The constraint can also be written as $\Pi_t + \sum_{j \in \mathcal{C}} f_{j,t} \geq \kappa_t^{\mathcal{D}} \sum_{j \in \mathcal{D}} f_{j,t}$. This means that the cash flow of the company, plus the funds of the shareholders, must be sufficient to pay the interest on the debt. If this is not true, the company cannot meet its obligations to its creditors.
 
-## The company from a financial point of view
+## The Company from a Financial Point of View
 
 The diagram shows the cycle of the funds in a company. The diamonds mark the decisions, with **F** for financing, **I** for investment and **O** for operating. These letters are types of decision, not the symbols of the formulas above (e.g. the diamond **F** is not the fixed costs $F_t$).
 

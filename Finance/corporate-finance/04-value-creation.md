@@ -13,13 +13,13 @@ From this definition it follows that:
 - A company can be **profitable** and **destroy value**.
 - A company that **grows** can **destroy value faster**.
 
-## The required return: the opportunity cost of capital
+## The Opportunity Cost of Capital
 
 The investors who give their funds to a company give up the alternative, which is an investment in a financial asset with the same risk. The return of this alternative is the **opportunity cost of capital**, and it is the minimum return that the investors require from the company. This is the cost of capital $\kappa$ of [Companies and Corporate Finance](00-companies-and-corporate-finance.md), the rate $k$ of [Investment Decisions](02-investment-decisions.md), and the costs $k_E$ and $k_D$ of the WACC in [Financing Decisions](03-financing-decisions.md).
 
 The cost of debt $k_D$ is easy to observe, because it is the interest rate of the debt of the company. The cost of equity $k_E$ is not observable, because the shareholders have no contractual return. The CAPM estimates it.
 
-## The synthetic asset: the CAPM
+## CAPM
 
 The **capital asset pricing model** (CAPM) gives the required return of an asset $i$:
 
@@ -49,7 +49,7 @@ The synthetic asset is a portfolio with $120\%$ in the market, financed with a l
 > [!NOTE]
 > The CAPM gives the cost of equity $k_E$. The cost of capital of the whole company is the WACC, which combines $k_E$ with the cost of debt (see [Financing Decisions](03-financing-decisions.md)). The CAPM is the standard model, but the empirical tests do not support it fully: e.g. the portfolios of small companies earn more than the CAPM predicts. Other models, such as the Fama–French three-factor model, add more factors of risk.
 
-## Cash flows in excess of all the costs: the economic profit
+## The Economic Profit
 
 The **economic value added** (EVA), or **economic profit**, measures the value that the company creates in a period. It deducts from the operating profit the cost of all the capital, debt and equity:
 
@@ -62,7 +62,7 @@ $$EVA = NOPAT - WACC \times IC = (ROIC - WACC) \times IC$$
 
 The company creates value when $EVA > 0$, i.e. when $ROIC > WACC$. This is the rule of [Companies and Corporate Finance](00-companies-and-corporate-finance.md) for the whole company, and the rule $NPV > 0$ (or $IRR > k$) of [Investment Decisions](02-investment-decisions.md) for one project.
 
-## A profitable company can destroy value
+## A Profitable Company Can Destroy Value
 
 The accounting profit (the net income) deducts the interest on the debt, but it does not deduct the cost of equity. A company can have a positive net income and a return that is lower than the return that its shareholders require.
 
@@ -86,7 +86,7 @@ The company is **profitable**: its net income is positive. But:
 
 The shareholders would earn more with an investment of the same risk in the financial markets.
 
-## A growing company can destroy value faster
+## A Growing Company Can Destroy Value Faster
 
 The growth needs investment. When the company reinvests a part of its $NOPAT$ at a return $ROIC$, the $NOPAT$ grows at the rate:
 

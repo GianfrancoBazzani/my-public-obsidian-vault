@@ -11,7 +11,7 @@ The three types of decisions work together. The [investment decisions](02-invest
 > [!NOTE]
 > The definition above links the financing decisions to the external resources, but the internal resources are also a financing decision. The profit that the company keeps (retained earnings) belongs to the shareholders and is a part of the equity. For this reason the **payout policy**, i.e. how much cash to pay as dividends or share buybacks and how much to keep, is also a financing decision.
 
-## The optimal composition of the funds
+## The Optimal Composition of the Funds
 
 The composition of the funds (debt, equity, and hybrids such as mezzanine capital) is the **capital structure** of the company. Its cost is the **weighted average cost of capital** (WACC):
 
@@ -38,7 +38,7 @@ $$WACC = \frac{600}{1{,}000} \times 12\% + \frac{400}{1{,}000} \times 5\% \times
 
 Without the interest tax shield, the cost of the debt would add $2.0\%$ instead of $1.5\%$, and the WACC would be $9.2\%$.
 
-## Capital structure theories
+## Capital Structure Theories
 
 Debt is cheaper than equity ($k_D < k_E$), because the creditors are paid before the shareholders and the interest is deductible. Then why do companies not use only debt? Three theories answer this question.
 
@@ -57,7 +57,7 @@ $$V_L = V_U + \tau D$$
 
 In this case more debt always gives more value, and the optimal company would use only debt. This is not what happens in reality, because the model ignores the costs of financial distress.
 
-### Trade-off theory
+### Trade-Off Theory
 
 The **trade-off theory** adds the costs of **financial distress**: the direct costs of a bankruptcy (lawyers, consultants, courts), and the indirect costs (the loss of customers, suppliers and employees, and the investments that the company can no longer make). These costs increase with the debt:
 
@@ -71,11 +71,11 @@ The chart shows an illustrative example, with $V_U = 1{,}000$, $\tau = 25\%$ and
 
 In practice it is difficult to measure the costs of financial distress, so the trade-off theory gives a target range, not an exact number.
 
-### Pecking order theory
+### Pecking Order Theory
 
 The **pecking order theory** (see [Investment Decisions](02-investment-decisions.md)) explains the choice of the source with the asymmetric information between the managers and the investors. Companies prefer the internal funds first, then debt, and equity last, because an issue of new shares can tell the market that the managers think the shares are overvalued.
 
-## The instruments
+## The Instruments
 
 The examples in the definition are the main ways to raise external funds:
 
@@ -88,7 +88,7 @@ The examples in the definition are the main ways to raise external funds:
 
 The equity does not have to be repaid and does not have a fixed cost, but it is the most expensive source and it dilutes the control of the existing shareholders. The debt is cheaper and keeps the control, but it creates fixed payments that the company must make in all conditions.
 
-## Solvency and liquidity
+## Solvency and Liquidity
 
 The financing decisions must ensure that the company can always pay its obligations:
 

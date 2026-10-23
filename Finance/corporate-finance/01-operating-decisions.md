@@ -8,9 +8,9 @@ They are related to the **management** of the business, its **efficiency** and i
 
 They are the decisions involved in going **from revenue to free cash flow (FCF)**. The FCF is the **profit** available after all the costs except the **cost of capital**.
 
-"Under given conditions" means that the operating decisions take the capital of the company and its funding as given. They choose how to use the capital that the investment and financing decisions provide. In the optimization problem of [Companies and Corporate Finance](00-companies-and-corporate-finance.md) (section "Value creation as an optimization problem"), the operating decisions are the prices $p_t$ and the quantities $q_t$, together with the management of the costs $v_t$, $F_t$ and of the working capital $\Delta K_t^W$.
+"Under given conditions" means that the operating decisions take the capital of the company and its funding as given. They choose how to use the capital that the investment and financing decisions provide. In the optimization problem of [Companies and Corporate Finance](00-companies-and-corporate-finance.md) (section "Value Creation as an Optimization Problem"), the operating decisions are the prices $p_t$ and the quantities $q_t$, together with the management of the costs $v_t$, $F_t$ and of the working capital $\Delta K_t^W$.
 
-## From revenue to free cash flow
+## From Revenue to Free Cash Flow
 
 The table shows the steps from the revenue to the FCF, and the operating decisions that act on each step. The notation is the same as in [Companies and Corporate Finance](00-companies-and-corporate-finance.md), with $\tau$ for the tax rate.
 
@@ -40,7 +40,7 @@ $$FCF = EBIT (1-\tau) + D\&A - \Delta K_t^W - I_t$$
 > [!NOTE]
 > The capital expenditure $I_t$ is an investment decision, not an operating decision. The operating decisions act on all the other steps of the table. The FCF also deducts $I_t$, because the cash that goes into new fixed capital is not available to the providers of funds.
 
-## Free cash flow and the cost of capital
+## Free Cash Flow and the Cost of Capital
 
 The FCF is the cash available to **all the providers of funds**, the creditors and the shareholders. For this reason it does not deduct the payments to them (interest, debt repayments and dividends). These payments are the cost of capital. The cost of capital does not appear in the FCF. It appears in the discount rate (the WACC), which converts the future FCF into the value of the company.
 
@@ -49,7 +49,7 @@ The FCF is the cash available to **all the providers of funds**, the creditors a
 
 The taxes in the table are calculated on the EBIT, as if the company had no debt. In reality the interest is deductible from the taxable profit, so debt reduces the taxes (the **interest tax shield**). This benefit is not in the FCF. It is in the WACC, which uses the cost of debt after taxes, $\kappa_D (1-\tau)$.
 
-## Quality of the cash flows
+## Quality of the Cash Flows
 
 The operating decisions must maximize the cash flows, but also their **quality**. The cash flows have a high quality when they are:
 
@@ -59,7 +59,7 @@ The operating decisions must maximize the cash flows, but also their **quality**
 
 In accounting, the similar concept of **earnings quality** measures how well the reported profit predicts the future cash flows, i.e. how "repeatable, controllable and bankable" the profit is.
 
-## Efficiency: working capital and the cash conversion cycle
+## Efficiency: Working Capital and the Cash Conversion Cycle
 
 The collection and payment terms and the management of the inventories set the **working capital** $K^W$. The **cash conversion cycle** (CCC) measures the number of days between the payment of cash to the suppliers and the collection of cash from the customers:
 
@@ -75,7 +75,7 @@ A shorter cycle needs less working capital. A decrease in the working capital ($
 - Keep less inventory (lower $DIO$). Too little inventory can cause a loss of sales when the products are not available.
 - Pay the suppliers later (higher $DPO$). Late payment beyond the agreed terms can damage the relations with the suppliers and the credit rating of the company.
 
-## Robustness: operating leverage and the break-even point
+## Robustness: Operating Leverage and the Break-Even Point
 
 The robustness of the business depends on the structure of its costs. The **operating leverage** measures how much the operating result changes when the sales change. The **degree of operating leverage** (DOL) is:
 

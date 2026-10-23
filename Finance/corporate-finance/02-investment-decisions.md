@@ -10,7 +10,7 @@ The fundamental criterion is: **IRR > cost of capital**.
 
 The investment decisions are different from the [operating decisions](01-operating-decisions.md). The operating decisions use a given capital in the short to medium term. The investment decisions change the capital itself, in the long term, and they are often difficult to reverse.
 
-## Investment and the capital stock
+## Investment and the Capital Stock
 
 In the model of [Companies and Corporate Finance](00-companies-and-corporate-finance.md), the investment $I_t$ (the CapEx) changes the capital stock:
 
@@ -35,7 +35,7 @@ A divestment creates value when the price received is higher than the present va
 > [!NOTE]
 > In a strict sense, an **equity carve-out** is the sale to the public (an IPO) of a part of the shares of a subsidiary, while the parent company keeps the control. This note uses the term in a wider sense, for the sale of a division in general (a **divestiture**).
 
-## Sources and uses
+## Sources and Uses
 
 Each investment needs funds. The *sources* tell where the funds come from, and the *uses* tell where they go:
 
@@ -48,7 +48,7 @@ The total of the sources is always equal to the total of the uses. In the diagra
 
 The choice between the sources is a financing decision. The **pecking order theory** says that companies prefer internal funds first, then debt, and equity last, because the managers know more about the company than the outside investors. The empirical tests of this theory give mixed results.
 
-## The decision criterion: NPV and IRR
+## The Decision Criterion: NPV and IRR
 
 An investment project is a series of cash flows: a negative cash flow $CF_0$ at the start (the investment), and then the free cash flows $CF_t$ that the project generates.
 
@@ -98,7 +98,7 @@ The rule $IRR > k$ is simple to explain, and surveys show that managers prefer i
 
 For this reason, the NPV is the main criterion. The rule $IRR > k$ gives the same decision only for conventional and independent projects.
 
-## Which cash flows and which rate
+## Which Cash Flows and Which Rate
 
 The analysis is correct only if the cash flows and the rate are correct:
 
