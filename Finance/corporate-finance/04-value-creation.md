@@ -158,7 +158,7 @@ The accounting profit and the cash flows often move together, but the accounting
 
 ## Relation between Growth, ROIC and Cash Flow
 
-The value that a company creates depends on its ROIC, its growth and how long it can keep them. The cash flow of one year alone is not a good measure of the performance. A company that invests to grow has a lower cash flow today, but it creates more value if its ROIC is higher than the WACC.
+The value of a company is the present value of its future free cash flows (see [Companies and Corporate Finance](00-companies-and-corporate-finance.md)). The ROIC and the growth drive these cash flows, so the value is the result of the ROIC, the growth and how long the company can keep them. An analysis of the ROIC and the growth shows whether the company creates value, how much value it creates and for how long. The cash flow of one year alone is not a good measure of the performance. A company that invests to grow has a lower cash flow today, but it creates more value if its ROIC is higher than the WACC.
 
 The growth, the ROIC and the investment rate are linked. Each unit of net investment adds the ROIC to the NOPAT of the next year, so $\Delta NOPAT = ROIC \times \text{Net investment}$. Divide both sides by the NOPAT to get the growth.
 
@@ -197,7 +197,24 @@ Some argue that a company with a low ROIC should grow, because its ROIC increase
 
 In general, a company with a high ROIC creates more value if it grows faster than if it increases its ROIC further. A company with a low ROIC creates more value if it first increases its ROIC.
 
-The types of growth earn different returns, so they do not all create the same value. The growth from new products or new markets usually creates the most value. The growth from a larger share of a mature market usually creates less, because the competitors react, for example with lower prices. The growth from acquisitions often creates little value for the buyer, because the buyer usually pays a premium over the value of the target.
+### Types of Growth
+
+The **organic growth** is the growth of the revenue and the profit that comes from the operations and the internal investments of the company, not from acquisitions or mergers (the **inorganic growth**). It comes from more sales to the current customers, new customers, new markets or regions, higher prices and new products or services. It is usually measured without the effects of acquisitions, divestitures and currency changes, so it shows the underlying performance of the company.
+
+Like any growth, it creates value only if its RONIC is higher than the WACC, and the amount depends on its source.
+
+| Source of the organic growth | Value created | Why |
+| --- | --- | --- |
+| New products that create new markets | Highest | Little capital, no sales taken from the competitors and little competition at first, so very high returns |
+| More sales to the current customers, or new customers in the market | High | The whole market grows, so the competitors have little reason to react |
+| A larger share of a fast-growing market | Medium | The competitors still grow, so they react less |
+| Incremental innovation, promotions or customers taken from the competitors in a mature market | Lowest | The competitors copy the moves or cut their prices, so the returns fall, sometimes below the WACC |
+
+The organic growth usually creates more value than an acquisition, for three reasons.
+
+- **The premium.** The buyer pays the standalone value of the target plus a premium, often $30\%$ or more. So the shareholders of the target get most of the expected synergies (the extra cash flows of the combined companies) before the buyer realizes them. The buyer creates value only if the synergies that it realizes are higher than the premium.
+- **The lower return.** The invested capital includes the full price, with the goodwill (the part of the price above the fair value of the net assets). So the ROIC of an acquisition is usually much lower than the ROIC of an organic investment.
+- **The risk.** The buyers often overestimate the synergies or realize them late, and the integration can fail. An organic investment can be made step by step and stopped if it does not work.
 
 ## A Growing Company Can Destroy Value Faster
 
@@ -233,15 +250,20 @@ Links last checked: 24 October 2026.
 - Damodaran, Aswath. "Session 25: Valuation." Corporate Finance course, Spring 2024. NYU Stern School of Business. [Free online PDF](https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr24/session25slides.pdf).
 - Koller, Tim, Marc Goedhart, and David Wessels. 2025. *Valuation: Measuring and Managing the Value of Companies*. 8th ed. McKinsey & Company. Hoboken, NJ: Wiley. Chapter 3, "Fundamental Principles of Value Creation."
 - Koller, Tim, Marc Goedhart, and David Wessels. 2025. *Valuation: Measuring and Managing the Value of Companies*. 8th ed. McKinsey & Company. Hoboken, NJ: Wiley. Chapter 9, "Growth."
+- Koller, Tim, Marc Goedhart, and David Wessels. 2025. *Valuation: Measuring and Managing the Value of Companies*. 8th ed. McKinsey & Company. Hoboken, NJ: Wiley. Chapter 31, "Mergers and Acquisitions."
 - Wikipedia. "Contribution Margin." [Online article](https://en.wikipedia.org/wiki/Contribution_margin).
+- Wikipedia. "Control Premium." [Online article](https://en.wikipedia.org/wiki/Control_premium).
 - Wikipedia. "Cost of Capital." [Online article](https://en.wikipedia.org/wiki/Cost_of_capital).
 - Wikipedia. "Earnings Before Interest, Taxes, Depreciation and Amortization." [Online article](https://en.wikipedia.org/wiki/Earnings_before_interest,_taxes,_depreciation_and_amortization).
 - Wikipedia. "Economic Value Added." [Online article](https://en.wikipedia.org/wiki/Economic_value_added).
 - Wikipedia. "Economies of Scale." [Online article](https://en.wikipedia.org/wiki/Economies_of_scale).
 - Wikipedia. "Free Cash Flow." [Online article](https://en.wikipedia.org/wiki/Free_cash_flow).
+- Wikipedia. "Goodwill (Accounting)." [Online article](https://en.wikipedia.org/wiki/Goodwill_(accounting)).
+- Wikipedia. "Mergers and Acquisitions." [Online article](https://en.wikipedia.org/wiki/Mergers_and_acquisitions).
 - Wikipedia. "Modigliani–Miller Theorem." [Online article](https://en.wikipedia.org/wiki/Modigliani%E2%80%93Miller_theorem).
 - Wikipedia. "Net Operating Profit After Taxes." [Online article](https://en.wikipedia.org/wiki/Net_operating_profit_after_taxes).
 - Wikipedia. "Opportunity Cost." [Online article](https://en.wikipedia.org/wiki/Opportunity_cost).
+- Wikipedia. "Organic Growth." [Online article](https://en.wikipedia.org/wiki/Organic_growth).
 - Wikipedia. "Perpetuity." [Online article](https://en.wikipedia.org/wiki/Perpetuity).
 - Wikipedia. "Profit (Economics)." [Online article](https://en.wikipedia.org/wiki/Profit_(economics)).
 - Wikipedia. "Return on Capital." [Online article](https://en.wikipedia.org/wiki/Return_on_capital).
