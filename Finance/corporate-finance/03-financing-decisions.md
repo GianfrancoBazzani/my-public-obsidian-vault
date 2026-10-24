@@ -49,7 +49,28 @@ Debt is cheaper than equity ($k_D < k_E$), because the creditors are paid before
 - **Proposition I:** $V_L = V_U$. The value of a company with debt (levered, $V_L$) is equal to the value of the same company without debt (unlevered, $V_U$).
 - **Proposition II:** $k_E = k_0 + \frac{D}{E} (k_0 - k_D)$, where $k_0$ is the cost of capital of the company without debt. When the debt increases, the shareholders take more risk, so the cost of equity increases. This increase cancels exactly the advantage of the cheaper debt, and the WACC stays equal to $k_0$.
 
-For example, with $k_0 = 10\%$, $k_D = 5\%$ and $\frac{D}{E} = 0.5$, the cost of equity is $k_E = 10\% + 0.5 \times (10\% - 5\%) = 12.5\%$. The WACC is $\frac{2}{3} \times 12.5\% + \frac{1}{3} \times 5\% = 10\%$, the same as without debt.
+**Example**
+
+A company has no debt. It generates a cash flow of $100$ each year forever, before any payment to the shareholders, and its cost of capital is $k_0 = 10\%$. Its value is $V_U = \frac{100}{10\%} = 1{,}000$, and all this value belongs to the shareholders.
+
+The company borrows a permanent debt of $200$ at $k_D = 5\%$ and pays the $200$ to the shareholders. The operations do not change, so the cash flow available to the creditors and the shareholders is still $100$. Only the split of this cash flow changes.
+
+| Item | Without debt | With debt |
+| --- | --- | --- |
+| Cash flow of the company | $100$ | $100$ |
+| To the creditors (interest $5\% \times 200$) | $0$ | $10$ |
+| To the shareholders | $100$ | $90$ |
+| Value of the debt $D$ | $0$ | $200$ |
+| Value of the equity $E$ | $1{,}000$ | $800$ |
+| **Value of the company** $V$ | $1{,}000$ | $1{,}000$ |
+| Cost of equity $k_E$ | $10\%$ | $11.25\%$ |
+| WACC | $10\%$ | $10\%$ |
+
+- **Proposition I.** The value of the company stays at $1{,}000$. The debt does not create value. It only divides the same cash flow in two parts, $200$ for the creditors and $800$ for the shareholders.
+- **Proposition II.** The cost of equity increases to $k_E = 10\% + \frac{200}{800} (10\% - 5\%) = 11.25\%$, which is the return $\frac{90}{800}$ of the shareholders. The WACC is $\frac{800}{1{,}000} \times 11.25\% + \frac{200}{1{,}000} \times 5\% = 10\%$, so it does not change.
+- **The shareholders do not lose.** Their shares are worth $800$, and they received $200$ in cash, so they still have $1{,}000$.
+
+This is the principle of the **conservation of value**. If an action does not change the cash flows of the company, it does not change the value of the company. It only changes who gets the cash flows. With taxes, the debt changes the cash flows, because the interest reduces the taxes.
 
 **With taxes.** If the interest is deductible, each unit of debt reduces the taxes. With a permanent debt $D$, the present value of the tax shield is $\tau D$, so:
 
@@ -95,7 +116,7 @@ The financing decisions must ensure that the company can always pay its obligati
 - **Solvency** is the ability of the company to meet its **long-term** obligations, i.e. to pay its debt and stay in business. It depends mainly on the capital structure: how much debt the company has, compared with its equity and its capacity to generate cash.
 - **Liquidity** is the ability of the company to pay its **short-term** obligations as they fall due. It depends mainly on the current assets that the company can quickly turn into cash, and on the [cash conversion cycle](01-operating-decisions.md).
 
-A company can be solvent but illiquid: it has enough value in the long term, but not enough cash today. For this reason the financing decisions must also match the maturity of the funds with the maturity of the uses. Long-term investments need long-term funds, and short-term funds can finance the working capital.
+A company can be solvent but illiquid, which means that it has enough value in the long term, but not enough cash today. For this reason the financing decisions must also match the maturity of the funds with the maturity of the uses. Long-term investments need long-term funds, and short-term funds can finance the working capital.
 
 The usual ratios are:
 
@@ -107,7 +128,7 @@ The usual ratios are:
 | **Debt-to-equity ratio** | $\frac{\text{Total liabilities}}{\text{Total equity}}$ | Solvency: the funds from the lenders for each unit of funds from the shareholders. |
 | **Times interest earned** (TIE) | $\frac{EBIT}{\text{Interest expense}}$ | Solvency: how many times the operating profit covers the interest. |
 
-The TIE ratio is related to the financing constraint of [Companies and Corporate Finance](00-companies-and-corporate-finance.md): the cash flow of the company must be sufficient to pay the interest on the debt. A TIE close to 1 means that the company is near the limit of this constraint.
+The TIE ratio is related to the financing constraint of [Companies and Corporate Finance](00-companies-and-corporate-finance.md), which says that the cash flow of the company must be sufficient to pay the interest on the debt. A TIE close to 1 means that the company is near the limit of this constraint.
 
 The good values of these ratios depend on the industry. Compare them with the history of the company and with similar companies, not with a fixed number.
 

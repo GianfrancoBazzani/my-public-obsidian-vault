@@ -46,7 +46,7 @@ The total of the sources is always equal to the total of the uses. In the diagra
 
 The choice between the sources is a financing decision. The **pecking order theory** says that companies prefer internal funds first, then debt, and equity last, because the managers know more about the company than the outside investors. The empirical tests of this theory give mixed results.
 
-## The Decision Criterion: NPV and IRR
+## NPV and IRR
 
 An investment project is a series of cash flows: a negative cash flow $CF_0$ at the start (the investment), and then the free cash flows $CF_t$ that the project generates.
 
