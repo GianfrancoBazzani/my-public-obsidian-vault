@@ -131,6 +131,30 @@ The **growth** ($g$) is the rate at which the NOPAT and the cash flows of the co
 
 $$g = \frac{NOPAT_{t+1} - NOPAT_t}{NOPAT_t}$$
 
+## A Profitable Company Can Destroy Value
+
+The accounting profit (the net income) deducts the interest on the debt, but it does not deduct the cost of equity. A company can have a positive net income and a return that is lower than the return that its shareholders require.
+
+**Example**
+
+Use the company of [Financing Decisions](03-financing-decisions.md): equity of $600$, debt of $400$, $k_E = 12\%$, $k_D = 5\%$, $\tau = 25\%$ and $WACC = 8.7\%$. Assume that the book values are equal to the market values, and that the EBIT is $80$:
+
+| Item | Value |
+| --- | --- |
+| EBIT | $80$ |
+| − Interest ($5\% \times 400$) | $-20$ |
+| = Profit before taxes | $60$ |
+| − Taxes ($25\%$) | $-15$ |
+| = **Net income** | $45$ |
+
+The company is **profitable**: its net income is positive. But:
+
+- $NOPAT = 80 \times (1 - 0.25) = 60$, so $ROIC = \frac{60}{1{,}000} = 6\%$, which is lower than the $WACC$ of $8.7\%$.
+- $EVA = 60 - 8.7\% \times 1{,}000 = -27$: the company **destroys value**.
+- From the point of view of the shareholders, the return on equity is $ROE = \frac{45}{600} = 7.5\%$, lower than the $12\%$ that they require.
+
+The shareholders would earn more with an investment of the same risk in the financial markets.
+
 ## Relation between ROIC, Growth and Cash Flow
 
 The value that a company creates is governed ultimately by its ROIC, its revenue growth and its ability to sustain both over time. Only if the ROIC exceeds the cost of capital will growth increase the value of the company. Growth at lower returns actually reduces the value of the company. For this reason, the near-term cash flow by itself may not be a meaningful performance indicator. A company that invests to grow at a high ROIC has a lower cash flow today, but it creates more value.
@@ -165,7 +189,7 @@ A company has a revenue of $1{,}000$, a NOPAT of $100$ and an invested capital o
 
 With zero growth, the company does not need to invest, so its FCF is equal to its NOPAT. To grow at $5\%$, it must invest $25\%$ of its NOPAT, so its FCF today is lower. The growth creates value only because the ROIC of $20\%$ is higher than the cost of capital.
 
-## Relation of Growth, ROIC and Value creation
+## Relation of Growth, ROIC and Value Creation
 
 For any level of growth, value increases with improvements in ROIC. *Ceteris paribus*, a higher ROIC is always good, because it means that the company does not have to invest as much to achieve a given level of growth. The same cannot be said of growth. When ROIC is high, faster growth increases value. But when ROIC is lower than the company's cost of capital, faster growth destroys value. When the return on capital is lower than the cost of capital, growing faster means investing more at value-destroying returns. Where ROIC equals the cost of capital, we can draw the dividing line between creating and destroying value through growth. On that line, value is neither created nor destroyed, regardless of how fast the company grows.
 
@@ -174,31 +198,6 @@ It is sometimes argued that even low-ROIC companies should strive for growth. Th
 In general, companies already earning a high ROIC can generate more additional value by increasing their rate of growth, rather than their ROIC. For their part, low-ROIC companies will generate relatively  more value by focusing on increasing their ROIC.
 
 Additionally, different types of growth earn different returns on capital, so not all growth is equally value-creating. Each company must understand the pecking order of growth-related value creation that applies to its industry and company type.
-
-### A Profitable Company Can Destroy Value
-
-
-The accounting profit (the net income) deducts the interest on the debt, but it does not deduct the cost of equity. A company can have a positive net income and a return that is lower than the return that its shareholders require.
-
-**Example**
-
-Use the company of [Financing Decisions](03-financing-decisions.md): equity of $600$, debt of $400$, $k_E = 12\%$, $k_D = 5\%$, $\tau = 25\%$ and $WACC = 8.7\%$. Assume that the book values are equal to the market values, and that the EBIT is $80$:
-
-| Item | Value |
-| --- | --- |
-| EBIT | $80$ |
-| − Interest ($5\% \times 400$) | $-20$ |
-| = Profit before taxes | $60$ |
-| − Taxes ($25\%$) | $-15$ |
-| = **Net income** | $45$ |
-
-The company is **profitable**: its net income is positive. But:
-
-- $NOPAT = 80 \times (1 - 0.25) = 60$, so $ROIC = \frac{60}{1{,}000} = 6\%$, which is lower than the $WACC$ of $8.7\%$.
-- $EVA = 60 - 8.7\% \times 1{,}000 = -27$: the company **destroys value**.
-- From the point of view of the shareholders, the return on equity is $ROE = \frac{45}{600} = 7.5\%$, lower than the $12\%$ that they require.
-
-The shareholders would earn more with an investment of the same risk in the financial markets.
 
 ### A Growing Company Can Destroy Value Faster
 
