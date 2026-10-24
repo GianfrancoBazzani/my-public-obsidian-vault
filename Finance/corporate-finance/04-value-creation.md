@@ -67,8 +67,6 @@ $$NOPAT = EBIT (1 - \tau) = (EBITDA - D\&A)(1 - \tau)$$
 
 - $\tau$ is the tax rate, so $\tau EBIT$ are the taxes on the operating profit.
 
-The NOPAT is different from the **net income**. The net income deducts the interest, so it belongs only to the shareholders and it changes with the debt of the company. The NOPAT is before the interest.
-
 ### Invested Capital
 
 The **IC** (*invested capital*) represents the cumulative amount that the business has invested in its core operations, primarily property, plant and equipment (PP&E) and working capital. These are the assets that generate the NOPAT, so the IC is the base for the return of the operations.
