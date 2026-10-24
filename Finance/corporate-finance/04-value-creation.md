@@ -98,21 +98,25 @@ The two can be very different. A company with $IC = 500$ and $NOPAT = 100$ inves
 
 The ROIC is different from the **return on equity** (ROE), $ROE = \frac{\text{net income}}{\text{equity}}$. The ROE measures the return for the shareholders only, after the interest on the debt. The ROE changes with the debt of the company, so we compare it with the cost of equity $k_E$, not with the WACC.
 
-
-
 ### The Economic Profit
 
-The **economic value added** (EVA), or **economic profit**, measures the value that the company creates in a period. It deducts from the operating profit the cost of all the capital, debt and equity:
+The **economic value added** (EVA), or **economic profit**, measures the value that the company creates in a period:
 
 $$EVA = NOPAT - WACC \times IC = (ROIC - WACC) \times IC$$
 
-- $ROIC = \frac{NOPAT}{IC}$ is the return on invested capital of the section "ROIC" above.
-- $WACC \times IC$ is the **capital charge**, the cost of all the capital.
-
 The company creates value when $EVA > 0$, i.e. when $ROIC > WACC$. 
 
+### Investment Rate
 
-## Growth
+The **IR** (*investment rate*, also called the *reinvestment rate*) is the portion of the NOPAT that the company invests back into the business.
+
+$$IR = \frac{\text{Net investment}}{NOPAT}$$
+
+### Growth
+
+The **growth** ($g$) is the rate at which the NOPAT and the cash flows of the company grow each year.
+
+$$g = \frac{NOPAT_{t+1} - NOPAT_t}{NOPAT_t}$$
 
 ## Relation between ROIC and Growth
 
