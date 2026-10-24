@@ -9,7 +9,9 @@ This definition has two consequences.
 - A company can be **profitable** and **destroy value**.
 - A company that **grows** can **destroy value faster**.
 
-The definition also gives the principle of the **conservation of value**. **Anything that does not increase the cash flows does not create value.** An action that only changes who gets the cash flows, or how the accounts show them, does not change the value. For example, without taxes, a company that borrows to pay its shareholders does not change its value, because its cash flow stays the same (see [Financing Decisions](03-financing-decisions.md)).
+The definition also gives the principle of the **conservation of value**. **Anything that does not increase the cash flows does not create value.** An action that only changes who gets the cash flows, or how the accounts show them, does not change the value.
+
+This is the usual case of the **financial engineering**, which uses financial instruments and transactions to change how the cash flows and the risks are divided, timed or taxed (e.g. the capital structure, derivatives, securitization, share buybacks, leasing or hybrid securities). The financial engineering creates value only if it increases the cash flows of the investors, e.g. with lower taxes or lower costs of financial distress (see [Financing Decisions](03-financing-decisions.md)). For example, a company that borrows to pay its shareholders reduces its taxes, because the interest is deductible. A permanent debt of $200$ at $5\%$, with a tax rate of $25\%$, saves $25\% \times 5\% \times 200 = 2.5$ of taxes each year. The value of the company increases by the present value of this saving, $\frac{2.5}{5\%} = 50$.
 
 ## Definitions
 
@@ -257,6 +259,7 @@ Links last checked: 24 October 2026.
 - Wikipedia. "Earnings Before Interest, Taxes, Depreciation and Amortization." [Online article](https://en.wikipedia.org/wiki/Earnings_before_interest,_taxes,_depreciation_and_amortization).
 - Wikipedia. "Economic Value Added." [Online article](https://en.wikipedia.org/wiki/Economic_value_added).
 - Wikipedia. "Economies of Scale." [Online article](https://en.wikipedia.org/wiki/Economies_of_scale).
+- Wikipedia. "Financial Distress." [Online article](https://en.wikipedia.org/wiki/Financial_distress).
 - Wikipedia. "Free Cash Flow." [Online article](https://en.wikipedia.org/wiki/Free_cash_flow).
 - Wikipedia. "Goodwill (Accounting)." [Online article](https://en.wikipedia.org/wiki/Goodwill_(accounting)).
 - Wikipedia. "Mergers and Acquisitions." [Online article](https://en.wikipedia.org/wiki/Mergers_and_acquisitions).
