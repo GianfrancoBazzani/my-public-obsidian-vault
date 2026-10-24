@@ -137,7 +137,7 @@ The accounting profit (the net income) deducts the interest on the debt, but it 
 
 **Example**
 
-Use the company of [Financing Decisions](03-financing-decisions.md): equity of $600$, debt of $400$, $k_E = 12\%$, $k_D = 5\%$, $\tau = 25\%$ and $WACC = 8.7\%$. Assume that the book values are equal to the market values, and that the EBIT is $80$:
+Consider a company with equity of $600$, debt of $400$, $k_E = 12\%$, $k_D = 5\%$, $\tau = 25\%$ and $WACC = 8.7\%$. Assume that the book values are equal to the market values, and that the EBIT is $80$:
 
 | Item | Value |
 | --- | --- |
@@ -200,10 +200,6 @@ In general, companies already earning a high ROIC can generate more additional v
 Additionally, different types of growth earn different returns on capital, so not all growth is equally value-creating. Each company must understand the pecking order of growth-related value creation that applies to its industry and company type.
 
 ### A Growing Company Can Destroy Value Faster
-
-The growth needs investment. When the company reinvests a part of its $NOPAT$ at a return $ROIC$, the $NOPAT$ grows at the rate:
-
-$$g = \text{reinvestment rate} \times ROIC \quad \Rightarrow \quad \text{reinvestment rate} = \frac{g}{ROIC}$$
 
 The free cash flow is the part of the $NOPAT$ that the company does not reinvest, $FCF = NOPAT \left(1 - \frac{g}{ROIC}\right)$. With a constant growth, the value of the company is the value of a growing perpetuity:
 
