@@ -104,6 +104,21 @@ $$EVA = NOPAT - WACC \times IC = (ROIC - WACC) \times IC$$
 
 The company creates value when $EVA > 0$, i.e. when $ROIC > WACC$.
 
+Measuring value creation in terms of economic profit encourages a company to undertake investments that earn more than their cost of capital, even if their return is lower than the current average return.
+
+**Example**
+
+A company has $IC = 1{,}000$, a ROIC of $20\%$ and a WACC of $10\%$. It can invest $500$ more in a project that earns $15\%$.
+
+| Item | Without the project | With the project |
+| --- | --- | --- |
+| IC | $1{,}000$ | $1{,}500$ |
+| NOPAT | $200$ | $200 + 75 = 275$ |
+| ROIC | $20.0\%$ | $18.3\%$ |
+| EVA ($NOPAT - 10\% \times IC$) | $100$ | $125$ |
+
+The project reduces the average ROIC, but it increases the EVA by $25$, because its return of $15\%$ is higher than the WACC. A target on the ROIC would reject the project, and a target on the EVA would accept it.
+
 ### Investment Rate
 
 The **IR** (*investment rate*, also called the *reinvestment rate*) is the portion of the NOPAT that the company invests back into the business.
@@ -116,27 +131,52 @@ The **growth** ($g$) is the rate at which the NOPAT and the cash flows of the co
 
 $$g = \frac{NOPAT_{t+1} - NOPAT_t}{NOPAT_t}$$
 
-## Relation between ROIC and Growth
+## Relation between ROIC, Growth and Cash Flow
 
-The value a company creates is governed ultimatelly by its ROIC, Revenyew grewth, and abilit yto sustain both over time. Only if ROIC exceeds the cost of capital will grwth increase a company;s valure. Growth at lowers returns actually reduces a company's value.
+The value that a company creates is governed ultimately by its ROIC, its revenue growth and its ability to sustain both over time. Only if the ROIC exceeds the cost of capital will growth increase the value of the company. Growth at lower returns actually reduces the value of the company. For this reason, the near-term cash flow by itself may not be a meaningful performance indicator. A company that invests to grow at a high ROIC has a lower cash flow today, but it creates more value.
 
-TODO Buen Ejemplo:
-A company with zero grwoth, 1000 revenue 100 proifts and 500 of IC, which is the ROIC?
+Growth, ROIC and cash flow are tied together mathematically in the following relationship.
 
-ROIC = 20%
+$$g = ROIC \times IR$$
 
-ROIC = NOPAT / Invested Capital = 100 / 500 = 20%
+Another way to look at this relationship is in terms of cash flow.
 
-This assumes the 100 of profit is after-tax operating profit (NOPAT). If it’s pre-tax or net income after interest, you’d need to adjust it first.
+$$FCF = NOPAT \times (1 - IR)$$
 
-Revenue and growth don’t change the ROIC calculation, but they tell you a couple of related things:
+In this equation, the investment rate is equal to the growth divided by the ROIC.
 
-Operating margin: 100 / 1,000 = 10%
-Capital turnover: 1,000 / 500 = 2.0x, and 10% × 2.0 = 20% ROIC
-Reinvestment: with zero growth, the reinvestment rate (growth ÷ ROIC) is 0%. The company doesn’t need to reinvest, so free cash flow equals NOPAT (100).
-TODO Buen Ejemplo:
+$$FCF = NOPAT \times \left(1 - \frac{g}{ROIC}\right)$$
 
-## A Profitable Company Can Destroy Value
+Here the ROIC is the return on the new capital (RONIC), because only the new investments make the NOPAT grow. If the new investments earn the same return as the existing capital, the two are equal.
+
+Since the variables are tied together mathematically, you can describe the performance of a company with any two of them. We generally describe the performance of a company in terms of growth and ROIC, because you can analyze growth and ROIC across time and versus peers.
+
+**Example**
+
+A company has a revenue of $1{,}000$, a NOPAT of $100$ and an invested capital of $500$.
+
+- $ROIC = \frac{100}{500} = 20\%$.
+- The table shows the investment rate and the FCF for two growth rates.
+
+| Growth $g$ | $IR = \frac{g}{ROIC}$ | $FCF = NOPAT (1 - IR)$ |
+| --- | --- | --- |
+| $0\%$ | $0\%$ | $100$ |
+| $5\%$ | $25\%$ | $75$ |
+
+With zero growth, the company does not need to invest, so its FCF is equal to its NOPAT. To grow at $5\%$, it must invest $25\%$ of its NOPAT, so its FCF today is lower. The growth creates value only because the ROIC of $20\%$ is higher than the cost of capital.
+
+## Relation of Growth, ROIC and Value creation
+
+For any level of growth, value increases with improvements in ROIC. *Ceteris paribus*, a higher ROIC is always good, because it means that the company does not have to invest as much to achieve a given level of growth. The same cannot be said of growth. When ROIC is high, faster growth increases value. But when ROIC is lower than the company's cost of capital, faster growth destroys value. When the return on capital is lower than the cost of capital, growing faster means investing more at value-destroying returns. Where ROIC equals the cost of capital, we can draw the dividing line between creating and destroying value through growth. On that line, value is neither created nor destroyed, regardless of how fast the company grows.
+
+It is sometimes argued that even low-ROIC companies should strive for growth. The logic is that if a company grows, its ROIC will naturally increase. However, we find this true only for young, start-up businesses. Most often in mature companies, a low ROIC indicates a flawed business model or an unattractive industry structure. Do not fall for the trap that growth will lead to scale economies that automatically increase a company's return on capital. It almost never happens for mature businesses.
+
+In general, companies already earning a high ROIC can generate more additional value by increasing their rate of growth, rather than their ROIC. For their part, low-ROIC companies will generate relatively  more value by focusing on increasing their ROIC.
+
+Additionally, different types of growth earn different returns on capital, so not all growth is equally value-creating. Each company must understand the pecking order of growth-related value creation that applies to its industry and company type.
+
+### A Profitable Company Can Destroy Value
+
 
 The accounting profit (the net income) deducts the interest on the debt, but it does not deduct the cost of equity. A company can have a positive net income and a return that is lower than the return that its shareholders require.
 
@@ -160,7 +200,7 @@ The company is **profitable**: its net income is positive. But:
 
 The shareholders would earn more with an investment of the same risk in the financial markets.
 
-## A Growing Company Can Destroy Value Faster
+### A Growing Company Can Destroy Value Faster
 
 The growth needs investment. When the company reinvests a part of its $NOPAT$ at a return $ROIC$, the $NOPAT$ grows at the rate:
 
