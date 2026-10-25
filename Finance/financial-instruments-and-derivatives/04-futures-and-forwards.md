@@ -46,22 +46,28 @@ A **futures contract** is also an agreement to buy or sell an asset on a future 
 
 **Daily settlement**
 
-The main practical difference is the timing of the gains and losses. With a forward, the whole gain or loss arrives at maturity. With a futures contract, the gain or loss from the change of the futures price goes into or out of the margin account of the trader at the end of each day. This process is **marking to market**. If the balance falls below the maintenance margin, the trader receives a margin call and must add funds to bring the balance back to the initial margin, or the broker closes the position.
+The main practical difference is the timing of the gains and losses. A forward pays the whole gain or loss at maturity. A futures contract pays it at the end of each day, into or out of the margin account of the trader. This is **marking to market**.
 
-The initial margin is a performance bond, usually a small percentage of the value of the contract. It is not a loan and not a price paid for the contract, so a futures contract is also worth zero to both sides at the start, the same as a forward. The margin makes sure that the losers can pay the winners, stops the losses from building up over time, and protects the broker and the clearing house from traders who cannot pay. Because the margin is only a small part of the value of the contract, it also gives leverage, which magnifies both gains and losses.
+The margin is a performance bond. It makes sure that the losers can pay the winners, stops the losses from building up, and protects the broker and the clearing house. Because it is a small part of the value of the contract, it also gives leverage, which magnifies both gains and losses.
+
+- **Initial margin.** The deposit when the position opens, usually a small percentage of the value of the contract.
+- **Maintenance margin.** The minimum balance, lower than the initial margin. Below it, the trader receives a margin call.
+- **Variation margin.** The funds that the trader adds after a margin call, usually within one day, to bring the balance back to the initial margin. If the trader does not pay, the broker closes the position.
+
+The clearing house of the exchange sets the minimum margins and increases them when the price becomes more volatile, and a broker can ask for more. The trader can withdraw the balance above the initial margin. The margin is usually cash, which earns interest close to the risk-free rate, or government bills, which keep their own interest, so it usually has no opportunity cost. The traders post margin with their brokers, the brokers with the members of the clearing house, and the members post a **clearing margin** with the clearing house.
 
 **Example**
 
-A trader goes long one futures contract at a price of 100 and holds it to maturity, where the futures price is equal to the spot price $S_T = 102$.
+A trader goes long one futures contract at 100, with an initial margin of 3 ($3\%$ of the value) and a maintenance margin of 2.5. The trader holds it to maturity, where the futures price is equal to the spot price $S_T = 102$.
 
-| Day          | Futures price | Daily gain or loss | Cumulative gain or loss |
-| ------------ | ------------- | ------------------ | ----------------------- |
-| 0            | 100           | -                  | -                       |
-| 1            | 101           | +1                 | +1                      |
-| 2            | 99            | -2                 | -1                      |
-| 3 (maturity) | 102           | +3                 | +2                      |
+| Day          | Futures price | Daily gain or loss | Cumulative gain or loss | Margin balance | Variation margin |
+| ------------ | ------------- | ------------------ | ----------------------- | -------------- | ---------------- |
+| 0            | 100           | -                  | -                       | 3              | -                |
+| 1            | 101           | +1                 | +1                      | 4              | -                |
+| 2            | 99            | -2                 | -1                      | 2              | +1               |
+| 3 (maturity) | 102           | +3                 | +2                      | 6              | -                |
 
-The total gain is 2, which is the final price minus the initial price. A long forward with $K = 100$ gives the same payoff, $S_T - K = 102 - 100 = 2$, if we ignore the interest on the margin balance. The total is the same, but the futures contract pays it day by day and the forward pays it once at maturity.
+On day 2 the balance falls to 2, below 2.5, so the trader receives a margin call and adds 1. At maturity the balance is 6 for total deposits of $3 + 1 = 4$, a gain of 2, which is the final price minus the initial price. A long forward with $K = 100$ gives the same payoff, $S_T - K = 2$, if we ignore the interest on the margin, but it pays it once at maturity and not day by day.
 
 **Forward and futures prices**
 
