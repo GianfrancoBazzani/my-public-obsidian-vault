@@ -52,6 +52,24 @@ Arbitrageurs exploit either gap until the trades push $F_0$ back to $S_0 e^{rT}$
 
 ### Known Income Asset
 
+The asset provides an income with a known present value $I$ during the life of the contract, such as a coupon-bearing bond or a stock with known dividends. $I$ is the sum of the income payments, each discounted at the risk-free rate.
+
+Under no arbitrage, the forward price is
+
+$$F_0 = (S_0 - I) e^{rT}$$
+
+The income lowers the forward price, because the holder of the asset receives it and the holder of the forward does not.
+
+If $F_0 > (S_0 - I) e^{rT}$, the forward is overpriced. An arbitrageur borrows $S_0$ at $r$, buys the asset, and takes a short forward position. The income repays part of the loan when it arrives. At $T$, the arbitrageur delivers the asset for $F_0$ and repays the remaining $(S_0 - I) e^{rT}$, for a profit of
+
+$$F_0 - (S_0 - I) e^{rT} > 0$$
+
+If $F_0 < (S_0 - I) e^{rT}$, the forward is underpriced. An arbitrageur short sells the asset, invests $S_0$ at $r$, and takes a long forward position. Part of the investment pays the income owed to the lender of the asset. At $T$, the arbitrageur receives the remaining $(S_0 - I) e^{rT}$, buys the asset for $F_0$, and returns it to the lender, for a profit of
+
+$$(S_0 - I) e^{rT} - F_0 > 0$$
+
+Arbitrageurs exploit either gap until the trades push $F_0$ back to $(S_0 - I) e^{rT}$.
+
 ### Known Yield Asset
 
 ## Forward Contracts Valuation
