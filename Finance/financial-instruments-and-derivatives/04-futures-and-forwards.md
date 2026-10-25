@@ -69,10 +69,6 @@ A trader goes long one futures contract at 100, with an initial margin of 3 ($3\
 
 On day 2 the balance falls to 2, below 2.5, so the trader receives a margin call and adds 1. At maturity the balance is 6 for total deposits of $3 + 1 = 4$, a gain of 2, which is the final price minus the initial price. A long forward with $K = 100$ gives the same payoff, $S_T - K = 2$, if we ignore the interest on the margin, but it pays it once at maturity and not day by day.
 
-**Forward and futures prices**
-
-If the risk-free rate is constant and the same for all maturities, the forward price and the futures price for the same maturity are equal. If the interest rates change in a random way, the two prices can differ, because the trader reinvests the daily gains and finances the daily losses at the rates of each day. The difference depends on the correlation between the interest rates and the price of the asset. If the price of the asset tends to rise when the interest rates rise, the long side of a futures contract reinvests its gains at higher rates, so the futures price is higher than the forward price. For short maturities the difference is usually small.
-
 ## Specification of a futures contract
 
 When an exchange creates a new futures contract, it must specify the exact terms of the agreement between the two sides. These standard terms are what make futures contracts interchangeable. The goal of the design is a contract that attracts enough hedgers and speculators to give good liquidity. The main parameters are the following.
