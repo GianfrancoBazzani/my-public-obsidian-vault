@@ -158,7 +158,56 @@ This is the forward price of a known-yield asset with $q = r_f$, and it is known
 
 ## Commodities
 
+Storage costs act as negative income, because the holder of the commodity pays them and the holder of the forward does not.
+
+### Investment Commodities
+
+For an investment commodity such as gold or silver, with storage costs of known present value $U$ during the life of the contract, the no-arbitrage forward price is
+
+$$F_0 = (S_0 + U) e^{rT}$$
+
+If the storage costs are a constant fraction $u$ of the price per annum, they act as a negative yield, and
+
+$$F_0 = S_0 e^{(r + u)T}$$
+
+If $F_0 > (S_0 + U) e^{rT}$, an arbitrageur borrows $S_0 + U$, buys the commodity, pays the storage costs, and takes a short forward position, for a profit of $F_0 - (S_0 + U) e^{rT}$ at $T$. If $F_0 < (S_0 + U) e^{rT}$, an investor who holds the commodity sells it, saves the storage costs, invests the proceeds, and takes a long forward position, for a profit of $(S_0 + U) e^{rT} - F_0$ at $T$.
+
+> [!NOTE]
+> **Gold hedging and the gold lease rate**
+>
+> A gold mining company hedges its future production with a short forward contract with a bank, which fixes the price it will receive. The bank hedges its long forward by borrowing gold from a central bank, selling it spot, and investing the proceeds at $r$. At $T$, the bank buys the gold from the mining company for $F_0$ and returns it to the central bank. The central bank charges interest on the loan in gold, called the gold lease rate $\ell$. Since holders of gold can earn $\ell$ by lending it, gold acts as an asset with yield $\ell$, and, ignoring storage costs,
+>
+> $$F_0 = S_0 e^{(r - \ell)T}$$
+
+### Consumption Commodities
+
+For a consumption commodity such as oil or copper, only the first trade works. That trade only requires borrowing, buying and storing the commodity, and delivering it at $T$, so anyone can do it and $F_0$ cannot stay above $(S_0 + U) e^{rT}$. The second trade fails. Holders keep the commodity because they plan to use it in some way, not as an investment, so they are very reluctant to sell it and take a long forward position. A forward delivers the commodity only at $T$ and cannot be used before, while a lack of inventory today can stop production. Arbitrage therefore gives only an upper bound.
+
+$$F_0 \le (S_0 + U) e^{rT} \qquad F_0 \le S_0 e^{(r + u)T}$$
+
+The gap is the convenience yield $y$, the benefit of holding the physical commodity, for example to keep a factory running. It is defined by
+
+$$F_0 e^{yT} = (S_0 + U) e^{rT} \qquad F_0 = S_0 e^{(r + u - y)T}$$
+
+A high $y$ means that users expect shortages and value the commodity in hand. For investment assets $y = 0$.
 
 ## Cost of Carry
 
+The cost of carry $c$ is the storage cost plus the interest paid to finance the asset, minus the income earned on it, all per annum with continuous compounding. It summarizes all the previous cases in two formulas. For an investment asset
+
+$$F_0 = S_0 e^{cT}$$
+
+and for a consumption asset
+
+$$F_0 = S_0 e^{(c - y)T}$$
+
+| Asset | $c$ |
+| --- | --- |
+| No-income asset | $r$ |
+| Known-yield asset, such as a stock index | $r - q$ |
+| Currency | $r - r_f$ |
+| Commodity with income yield $q$ and storage cost $u$ | $r - q + u$ |
+
 ## Futures Prices vs. Expected Spot Prices
+
+TODO Add the expected price theory
