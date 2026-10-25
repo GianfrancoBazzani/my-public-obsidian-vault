@@ -52,9 +52,9 @@ The margin is a performance bond. It makes sure that the losers can pay the winn
 
 - **Initial margin.** The deposit when the position opens, usually a small percentage of the value of the contract.
 - **Maintenance margin.** The minimum balance, lower than the initial margin. Below it, the trader receives a margin call.
-- **Variation margin.** The funds that the trader adds after a margin call, usually within one day, to bring the balance back to the initial margin. If the trader does not pay, the broker closes the position.
+- **Variation margin.** The funds that the trader adds after a margin call, usually within one day, to bring the balance back to the initial margin. In clearing, the term often means the daily gain or loss. If the trader does not pay, the broker closes the position.
 
-The clearing house of the exchange sets the minimum margins and increases them when the price becomes more volatile, and a broker can ask for more. The trader can withdraw the balance above the initial margin. The margin is usually cash, which earns interest close to the risk-free rate, or government bills, which keep their own interest, so it usually has no opportunity cost. The traders post margin with their brokers, the brokers with the members of the clearing house, and the members post a **clearing margin** with the clearing house.
+The clearing house of the exchange sets the minimum margins and increases them when the price becomes more volatile, and a broker can ask for more. The trader can withdraw the balance above the initial margin. The margin can be cash or government bills. The bills keep their interest, so their opportunity cost is small, but some brokers pay little or no interest on cash. The traders post margin with their brokers, the brokers with the members of the clearing house, and the members post a **clearing margin** with the clearing house.
 
 **Example**
 
@@ -87,13 +87,13 @@ When an exchange creates a new futures contract, it must specify the exact terms
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | First trading day                      | The first day when the market can trade the contract.                                                                                    |
 | First position day (first intention day) | The first day when the short side can declare to the clearing house its intention to deliver.                                          |
-| First notice day                       | The first day when the clearing house matches a short side with a long side and notifies the two sides. A long trader who does not want delivery usually closes the position before this day. |
+| First notice day                       | The first day when the clearing house notifies a long side of a delivery. A long trader who does not want delivery usually closes the position before this day. |
 | First delivery day                     | The first day when the delivery can occur.                                                                                               |
 | Last trading day                       | The last day when the market can trade the contract. After this day, the open positions settle by delivery or by cash settlement.        |
 | Last notice day                        | The last day when the clearing house can notify a long side of a delivery.                                                               |
 | Last delivery day                      | The last day when the delivery can occur.                                                                                                |
 | Final settlement date                  | For a cash-settled contract, the day when the exchange sets the final settlement price and closes the open positions.                    |
 
-On CME/CBOT contracts with physical delivery, such as Treasury and grain futures, the delivery always takes three business days. On the position day, the short side declares its intention to deliver. On the notice day, the clearing house matches the short side with a long side, usually the oldest open long position, and notifies the two sides. On the delivery day, the short side delivers the asset and the long side pays. For this reason, the first position day, the first notice day and the first delivery day are usually three consecutive business days.
+On CBOT Treasury and grain futures, the delivery always takes three business days. On the position day, the short side declares its intention to deliver, and the clearing house matches it with the oldest open long position. On the notice day, the two sides receive the match and the short side invoices the long side. On the delivery day, the short side delivers the asset and the long side pays. For this reason, the first position day, the first notice day and the first delivery day are usually three consecutive business days.
 
 The exact dates, and the order of the last trading day and the last notice day, change from one contract to another. The contract specifications of the exchange give the real calendar of each contract.
