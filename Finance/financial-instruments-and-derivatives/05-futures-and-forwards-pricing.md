@@ -21,7 +21,7 @@ Some arbitrage strategies start with the sale of an asset, so they require the a
 
 Short selling is not always available, but investors who hold the asset purely for investment can still do these trades. They sell the asset instead of borrowing it, and at the end of the strategy they hold the same asset plus the profit.
 
-## Future and Forward Price of an Investment Asset
+## Investment Assets
 
 In the case of investment assets we consider three different situations, the asset provides no income, the asset provides known dollar income, the asset provides known yield.
 
@@ -32,7 +32,7 @@ The pricing equations use the following notation.
 - $F_0$ is the forward or futures price today.
 - $r$ is the risk-free zero rate for the maturity $T$, per annum with continuous compounding.
 
-### No Income Asset
+### No-Income Assets
 
 The simplest forward contract to price is one on an investment asset that provides no income and has no storage costs, such as a non-dividend-paying stock or a zero-coupon bond.
 
@@ -50,7 +50,7 @@ $$S_0 e^{rT} - F_0 > 0$$
 
 Arbitrageurs exploit either gap until the trades push $F_0$ back to $S_0 e^{rT}$.
 
-### Known Income Asset
+### Known-Income Assets
 
 If the asset provides an income with a known present value $I$ during the life of the contract, the no-arbitrage forward price is
 
@@ -70,7 +70,7 @@ $$(S_0 - I) e^{rT} - F_0 > 0$$
 
 Arbitrageurs exploit either gap until the trades push $F_0$ back to $(S_0 - I) e^{rT}$.
 
-### Known Yield Asset
+### Known-Yield Assets
 
 If the asset provides an income equal to a known yield $q$ of its price, the no-arbitrage forward price is
 
@@ -92,7 +92,7 @@ $$S_0 e^{(r - q)T} - F_0 > 0$$
 
 Arbitrageurs exploit either gap until the trades push $F_0$ back to $S_0 e^{(r - q)T}$.
 
-## Futures and Forward Valuation
+## Forward Contract Valuation
 
 At the start of a forward contract no money changes hands, so the delivery price $K$ equals the forward price of that day and the contract is worth zero. Later, $K$ stays fixed while the forward price $F_0$ for the same delivery date changes, so the contract gains or loses value. Here $T$ is the time left to delivery.
 
@@ -122,11 +122,7 @@ At the start $K = F_0$, so both values are zero. These formulas hold for all thr
 
 A forward has no value only when $K = F_0$, as at the start. Later, $F_0$ drifts from $K$ as the spot price, interest rates, expected income or yield, and time to delivery change. In real markets, bid-ask spreads, transaction costs, funding costs above $r$, and counterparty default risk can give even a new contract a small value.
 
-
-
-
-
-### Considering Daily settlement, Futures vs Forwards
+## Forward vs. Futures Prices
 
 With a constant risk-free rate, forward and futures prices for the same delivery date can be considered equal. Daily settlement only changes the timing of the cash flows. With a known rate, an investor can scale the futures position each day so that the settled gains, plus interest, match the payoff of a forward at maturity. Both strategies cost nothing to enter and pay the same, so the two prices must be equal.
 
@@ -134,10 +130,35 @@ With unpredictable interest rates, the timing matters and the two prices differ.
 
 For contracts of a few months the difference is negligible, so this note treats the two prices as equal. For long-dated contracts the interest on the daily cash flows compounds and the difference can become large. Taxes, transaction costs, margin treatment, and the lower default risk of futures can also make the prices differ.
 
-## Forward and Futures Contracts on Currencies
+## Currencies
 
-## Forward Price of a Commodity
+A foreign currency is an asset that earns the foreign risk-free rate $r_f$, with continuous compounding. Here $S_0$ and $F_0$ are the spot and forward prices, in dollars, of one unit of the foreign currency.
+
+An investor can convert one unit of the foreign currency into dollars at $T$ in two risk-free ways.
+
+```mermaid
+flowchart LR
+    A["1 unit of foreign currency<br>at time 0"]
+    B["e<sup>r<sub>f</sub>T</sup> units of foreign currency<br>at time T"]
+    C["S<sub>0</sub> dollars<br>at time 0"]
+    D1["F<sub>0</sub> e<sup>r<sub>f</sub>T</sup> dollars<br>at time T"]
+    D2["S<sub>0</sub> e<sup>rT</sup> dollars<br>at time T"]
+
+    A -->|"invest at r<sub>f</sub>"| B
+    B -->|"sell forward at F<sub>0</sub>"| D1
+    A -->|"convert at S<sub>0</sub>"| C
+    C -->|"invest at r"| D2
+```
+
+Under no arbitrage, both ways give the same dollar amount at $T$.
+
+$$F_0 e^{r_f T} = S_0 e^{rT} \quad \Rightarrow \quad F_0 = S_0 e^{(r - r_f)T}$$
+
+This is the forward price of a known-yield asset with $q = r_f$, and it is known as interest rate parity.
+
+## Commodities
+
 
 ## Cost of Carry
 
-## Futures Prices and Expected Future Spot Price
+## Futures Prices vs. Expected Spot Prices
