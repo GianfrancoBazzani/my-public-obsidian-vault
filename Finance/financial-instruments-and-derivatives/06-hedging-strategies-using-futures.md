@@ -12,7 +12,7 @@ As a rule of thumb, the futures position is the opposite of the exposure. A hedg
 
 A **perfect hedge** completely eliminates risk, because the gain or loss on the futures position exactly offsets the loss or gain on the exposure, so the outcome is fixed and known in advance. This requires the hedge to match the asset, the quantity, and the timing exactly. An **imperfect hedge** reduces risk but does not remove it, usually because of basis risk (see [Risks](#risks)), mismatched quantities, or timing differences. A perfect hedge gives certainty, not necessarily a better result. Because it removes the downside and the upside together, an imperfect hedge can turn out better when prices move in the hedger's favor, and worse when they move against it.
 
-A perfect hedge does not lock in the current spot price $S_0$. It locks in the futures price $F_0$, which generally differs from $S_0$ because of the cost of carry.
+A perfect hedge does not lock in the current spot price $S_0$. It locks in the futures price $F_0$, which generally differs from $S_0$ because of the cost of carry (see [Futures and Forwards Pricing](05-futures-and-forwards-pricing.md)).
 
 $$
 F_0 = S_0 e^{(c - y)T}
@@ -70,12 +70,79 @@ $$
 $F_1$ is known when the hedge starts, so the only uncertainty is the final basis $b_2$, which is the basis risk. If the hedge is closed out at maturity, $b_2 = 0$ and the effective price is $F_1$. A higher $b_2$ helps the short hedger and a lower $b_2$ helps the long hedger, as in the table above. For example, with $S_1 = 2.50$, $F_1 = 2.20$, $S_2 = 2.00$, and $F_2 = 1.90$, the basis weakens from 0.30 to 0.10 and the effective price is $2.20 + 0.10 = 2.30$.
 
 Backwardation does not by itself favor a long hedger. The hedger locks in a price near $F_1$, which is below today's spot price $S_1$, but the alternative to the hedge is to buy at $S_2$, not at $S_1$. The result depends on how the basis changes, not on its sign at the start.
- 
-TODO add equations and formulas of minimum variance daily settlement vs not
 
 ## Cross hedging
 
-The **optimal hedge ratio** (the minimum variance hedge ratio) is the slope of the best-fit line obtained when changes in the spot price are regressed against changes in the futures price.
+**Cross hedging** uses futures on a different but correlated asset, because no liquid futures exist on the hedged asset. For example, an airline hedges jet fuel with heating oil futures. The two prices do not move exactly together, which adds basis risk.
+
+The **hedge ratio** is the size of the futures position divided by the size of the exposure. A ratio of 1.0 suits a hedge on the same asset. In a cross hedge, a ratio of 1.0 is not always optimal, because the two prices can change by different amounts. The hedger should instead choose the hedge ratio that minimizes the variance of the value of the hedged position.
+
+### Minimum Variance Hedge Ratio
+
+The goal of a hedge is to reduce risk, not to increase the expected profit, and the variance of the hedged position measures how uncertain the final result is, so the best hedge ratio is the one with the smallest variance.
+
+Suppose the hedger is long one unit of the asset and short $h$ units of futures. Over the life of the hedge, $\Delta S$ is the change in the spot price and $\Delta F$ is the change in the futures price, with standard deviations $\sigma_S$ and $\sigma_F$ and correlation $\rho$. The change in the value of the hedged position is
+
+$$
+\Delta V = \Delta S - h \Delta F
+$$
+
+For two random variables, $\text{Var}(X - hY) = \text{Var}(X) + h^2 \text{Var}(Y) - 2h \text{Cov}(X, Y)$, and $\text{Cov}(\Delta S, \Delta F) = \rho \sigma_S \sigma_F$. The variance of the hedged position is therefore
+
+$$
+\sigma_V^2 = \sigma_S^2 + h^2 \sigma_F^2 - 2 h \rho \sigma_S \sigma_F
+$$
+
+This is a parabola in $h$ that opens upward, so its minimum is where the derivative is zero.
+
+$$
+\frac{d \sigma_V^2}{d h} = 2 h \sigma_F^2 - 2 \rho \sigma_S \sigma_F = 0
+\quad \Rightarrow \quad
+h^* = \rho \frac{\sigma_S}{\sigma_F}
+$$
+
+The second derivative $2 \sigma_F^2$ is positive, which confirms a minimum. The optimal hedge ratio is the correlation scaled by the relative volatility of the two prices. It equals 1.0 only if $\rho = 1$ and $\sigma_S = \sigma_F$, which is the case of a hedge on the same asset with no basis risk. A low correlation or a futures price that is more volatile than the spot price lowers $h^*$.
+
+Because $\rho \sigma_S \sigma_F = \text{Cov}(\Delta S, \Delta F)$, the ratio can also be written as $h^* = \text{Cov}(\Delta S, \Delta F) / \text{Var}(\Delta F)$. This is the slope of the best-fit line when $\Delta S$ is regressed on $\Delta F$, so in practice $h^*$ is estimated from historical data with a linear regression.
+
+Substituting $h^*$ into $\sigma_V^2$ gives the variance that remains after the hedge.
+
+$$
+\sigma_V^2 = \sigma_S^2 (1 - \rho^2)
+$$
+
+The **hedge effectiveness** is the share of the variance that the hedge removes, $1 - \sigma_V^2 / \sigma_S^2 = \rho^2$, which is the $R^2$ of the regression. A correlation of 0.9 removes 81% of the variance, while a correlation of 0.5 removes only 25%.
+
+> [!NOTE]
+> **Estimating the regression in practice**
+>
+> The trader regresses one to three years of historical spot price changes on futures price changes, measured over non-overlapping periods as long as the hedge and without the jumps at contract rolls. The slope gives $h^*$ and the $R^2$ the hedge effectiveness (`SLOPE` and `RSQ` in a spreadsheet). The trader re-estimates both regularly, because the relation between the prices changes over time.
+
+### Optimal Number of Contracts
+
+If $Q_A$ is the size of the position being hedged and $Q_F$ is the size of one futures contract, both in units of the asset, the futures position should cover $h^* Q_A$ units. The optimal number of contracts is
+
+$$
+N^* = \frac{h^* Q_A}{Q_F}
+$$
+
+For example, an airline will buy 2 million gallons of jet fuel in one month and hedges with heating oil futures of 42,000 gallons each. Monthly price changes give $\sigma_S = 0.0263$, $\sigma_F = 0.0313$, and $\rho = 0.928$. Then $h^* = 0.928 \times 0.0263 / 0.0313 = 0.78$ and $N^* = 0.78 \times 2{,}000{,}000 / 42{,}000 = 37.1$, so the airline buys 37 contracts.
+
+### Impact of Daily Settlement
+
+Futures gains and losses are settled daily, so the hedge must offset daily changes in value, not changes in price per unit. This adjustment is called **tailing the hedge**. Let $V_A$ be the value of the hedged position (spot price times $Q_A$), $V_F$ the value of one contract (futures price times $Q_F$), and $r_S$, $r_F$ the one-day percentage price changes, with standard deviations $\hat\sigma_S$, $\hat\sigma_F$ and correlation $\hat\rho$. With $N$ contracts, the daily change in value is
+
+$$
+\Delta V = V_A r_S - N V_F r_F
+$$
+
+The same minimization as above, with $V_A r_S$ for $\Delta S$ and $N V_F r_F$ for $h \Delta F$, gives
+
+$$
+N^* = \hat\rho \frac{\hat\sigma_S}{\hat\sigma_F} \frac{V_A}{V_F} = \hat h \frac{V_A}{V_F}
+$$
+
+Since $V_A$ and $V_F$ move with prices, the hedger adjusts $N^*$ over time. In the airline example, with a spot price of 1.94 and a futures price of 1.99, $V_A = 3{,}880{,}000$ and $V_F = 83{,}580$. If $\hat h \approx 0.78$, then $N^* = 36.2$, so the tailed hedge uses 36 contracts instead of 37.
 
 ## Stack and Roll
 
