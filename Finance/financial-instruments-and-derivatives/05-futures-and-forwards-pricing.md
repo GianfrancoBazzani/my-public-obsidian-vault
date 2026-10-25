@@ -52,11 +52,11 @@ Arbitrageurs exploit either gap until the trades push $F_0$ back to $S_0 e^{rT}$
 
 ### Known Income Asset
 
-The asset provides an income with a known present value $I$ during the life of the contract, such as a coupon-bearing bond or a stock with known dividends. $I$ is the sum of the income payments, each discounted at the risk-free rate.
-
-Under no arbitrage, the forward price is
+If the asset provides an income with a known present value $I$ during the life of the contract, the no-arbitrage forward price is
 
 $$F_0 = (S_0 - I) e^{rT}$$
+
+Coupon-bearing bonds and stocks with known dividends are examples of such assets. $I$ is the sum of the income payments, each discounted at the risk-free rate.
 
 The income lowers the forward price, because the holder of the asset receives it and the holder of the forward does not.
 
@@ -72,7 +72,58 @@ Arbitrageurs exploit either gap until the trades push $F_0$ back to $(S_0 - I) e
 
 ### Known Yield Asset
 
-## Forward Contracts Valuation
+If the asset provides an income equal to a known yield $q$ of its price, the no-arbitrage forward price is
+
+$$F_0 = S_0 e^{(r - q)T}$$
+
+A stock index with its dividend yield and a foreign currency with its interest rate are examples of such assets. $q$ is the average yield per annum during the life of the contract, with continuous compounding.
+
+The yield lowers the forward price for the same reason as a known income.
+
+If the income is reinvested in the asset, $e^{-qT}$ units today grow to one unit at $T$. The arbitrage trades use this fact.
+
+If $F_0 > S_0 e^{(r - q)T}$, the forward is overpriced. An arbitrageur borrows $S_0 e^{-qT}$ at $r$, buys $e^{-qT}$ units of the asset, reinvests the income in the asset, and takes a short forward position on one unit. At $T$, the arbitrageur delivers one unit for $F_0$ and repays $S_0 e^{(r - q)T}$, for a profit of
+
+$$F_0 - S_0 e^{(r - q)T} > 0$$
+
+If $F_0 < S_0 e^{(r - q)T}$, the forward is underpriced. An arbitrageur short sells $e^{-qT}$ units of the asset, invests $S_0 e^{-qT}$ at $r$, and takes a long forward position on one unit. The arbitrageur pays the income owed to the lender by short selling more of the asset, so the short position grows to one unit at $T$. At $T$, the arbitrageur receives $S_0 e^{(r - q)T}$, buys one unit for $F_0$, and returns it to the lender, for a profit of
+
+$$S_0 e^{(r - q)T} - F_0 > 0$$
+
+Arbitrageurs exploit either gap until the trades push $F_0$ back to $S_0 e^{(r - q)T}$.
+
+## Futures and Forward Valuation
+
+At the start of a forward contract no money changes hands, so the delivery price $K$ equals the forward price of that day and the contract is worth zero. Later, $K$ stays fixed while the forward price $F_0$ for the same delivery date changes, so the contract gains or loses value. Here $T$ is the time left to delivery.
+
+To find the value $f$ of a long forward with delivery price $K$, consider a portfolio of this contract and a new short forward at today's forward price $F_0$. The new short forward costs nothing to enter. With $S_T$ the spot price at $T$, the payoffs are the following.
+
+| Position | Value today | Payoff at $T$ |
+| --- | --- | --- |
+| Long forward at $K$ | $f$ | $S_T - K$ |
+| Short forward at $F_0$ | $0$ | $F_0 - S_T$ |
+| Portfolio | $f$ | $F_0 - K$ |
+
+The portfolio pays $F_0 - K$ whatever $S_T$ is, so under no arbitrage it is worth the present value of that amount. Thus the value of a long forward is
+
+$$f_{\text{long}} = (F_0 - K) e^{-rT}$$
+
+and, with the opposite positions, the value of a short forward is
+
+$$f_{\text{short}} = (K - F_0) e^{-rT}$$
+
+At the start $K = F_0$, so both values are zero. These formulas hold for all three types of investment asset. The table below substitutes $F_0$ from each case and gives the values for assets with no income, known income, and known yield.
+
+| Asset | $f_{\text{long}}$ | $f_{\text{short}}$ |
+| --- | --- | --- |
+| No income | $S_0 - K e^{-rT}$ | $K e^{-rT} - S_0$ |
+| Known income $I$ | $S_0 - I - K e^{-rT}$ | $K e^{-rT} - S_0 + I$ |
+| Known yield $q$ | $S_0 e^{-qT} - K e^{-rT}$ | $K e^{-rT} - S_0 e^{-qT}$ |
+
+A forward has no value only when $K = F_0$, as at the start. Later, $F_0$ drifts from $K$ as the spot price, interest rates, expected income or yield, and time to delivery change. In real markets, bid-ask spreads, transaction costs, funding costs above $r$, and counterparty default risk can give even a new contract a small value.
+
+
+
 
 
 ### Considering Daily settlement, Futures vs Forwards
