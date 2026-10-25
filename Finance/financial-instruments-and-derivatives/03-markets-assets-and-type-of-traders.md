@@ -1,4 +1,4 @@
-# Markets and Types of Traders
+# Markets, Assets, and Types of Traders
 
 ## Exchange-traded vs. over-the-counter markets
 

@@ -33,7 +33,7 @@ In both forwards and options, the long's profit plus the short's profit always e
 
 ## Forwards vs. futures
 
-A **futures contract** is also an agreement to buy or sell an asset on a future date at a price fixed today. The economic idea is the same as a forward, but the two contracts trade in different ways. A forward is a private contract between two parties in the OTC market. A futures contract trades on an exchange, with the standardized terms, the clearing house and the margin of an exchange-traded market (see the section on exchange-traded and OTC markets in [Markets and Types of Traders](03-markets-and-types-of-traders.md)).
+A **futures contract** is also an agreement to buy or sell an asset on a future date at a price fixed today. The economic idea is the same as a forward, but the two contracts trade in different ways. A forward is a private contract between two parties in the OTC market. A futures contract trades on an exchange, with the standardized terms, the clearing house and the margin of an exchange-traded market (see the section on exchange-traded and OTC markets in [Markets, Assets, and Types of Traders](03-markets-assets-and-type-of-traders.md)).
 
 |                  | Forward                                      | Futures                                           |
 | ---------------- | -------------------------------------------- | ------------------------------------------------- |
