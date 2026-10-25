@@ -97,3 +97,31 @@ When an exchange creates a new futures contract, it must specify the exact terms
 On CBOT Treasury and grain futures, the delivery always takes three business days. On the position day, the short side declares its intention to deliver, and the clearing house matches it with the oldest open long position. On the notice day, the two sides receive the match and the short side invoices the long side. On the delivery day, the short side delivers the asset and the long side pays. For this reason, the first position day, the first notice day and the first delivery day are usually three consecutive business days.
 
 The exact dates, and the order of the last trading day and the last notice day, change from one contract to another. The contract specifications of the exchange give the real calendar of each contract.
+
+## Is speculation in futures markets gambling?
+
+A common view holds that speculation in futures markets is pure gambling and that speculators should not be allowed on futures exchanges. The view has some truth in it, but it ignores the role of speculators.
+
+**Why the view looks reasonable**
+
+A speculator has no exposure to protect and takes risk only for profit, so a futures position looks like a bet. Leverage makes the bet larger, and before costs futures trading is a zero-sum game. Large speculative positions can also add volatility or be used to try to corner a market.
+
+**Why the view is wrong**
+
+A casino creates risk for entertainment, while a futures market transfers a risk that already exists. A farmer faces the price of wheat whether an exchange exists or not, and speculators are the traders who accept that risk.
+
+- **Counterparties for hedgers.** A wheat producer who wants to sell forward may not find, on the same day, a miller who wants to buy the same quantity. Speculators fill this gap.
+- **Liquidity.** Speculative volume narrows bid–offer spreads, lowers costs for hedgers, and lets large positions trade without a big move in price.
+- **Price discovery.** Speculators profit only if they forecast well, so they collect information on supply and demand. Their trades put it into the futures price that producers and consumers use to plan.
+- **Compensation for risk.** In theory, hedgers pay speculators a premium for taking their risk, much as an insurer earns a premium, although the evidence for this premium is mixed.
+
+**The public-interest answer**
+
+A ban would make futures markets thin and costly and would hurt the hedgers it means to protect. The real concern is excessive or manipulative speculation, which exchanges and regulators control with the following rules (see [Forwards vs. futures](#forwards-vs-futures) for the margins and [Specification of a futures contract](#specification-of-a-futures-contract) for the limits).
+
+- **Margin requirements** make each trader cover losses daily, so one default does not spread.
+- **Daily price limits** cap how far the price can move in one session, which slows panic moves.
+- **Position limits** cap the speculative contracts one trader can hold, which makes corners and squeezes harder.
+- **Large-trader reporting** lets regulators watch big positions and act against manipulation.
+
+Speculation is therefore a necessary part of a working futures market. It should be regulated, not banned.

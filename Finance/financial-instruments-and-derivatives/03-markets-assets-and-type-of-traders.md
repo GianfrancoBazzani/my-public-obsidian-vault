@@ -27,13 +27,29 @@ An order tells the broker how to execute a trade. The main types are the followi
 | Market-if-touched (MIT) order (board order)  | When a trade occurs at the specified price or a more favorable one, the order becomes a market order. Traders use it to take profits after favorable moves. |
 | Discretionary order (market-not-held order)  | A market order that the broker can delay to try to get a better price.                                                                                   |
 
+## Types of assets
+
+In markets it is important to distinguish between investment assets and consumption assets.
+
+An **investment asset** is an asset that is held solely for investment purposes by at least some traders. Stocks and bonds are clearly investment assets. Gold and silver are also examples of investment assets, because a significant number of investors hold them only as a store of value, even though industry also uses them. The holder of an investment asset expects a return from the price or the income of the asset, not from its use.
+
+A **financial asset** is an investment asset whose value comes from a contractual claim rather than from a physical good. A stock is a claim on the equity of a company, a bond is a claim on the coupons and the principal that the issuer promises, and a currency or a bank deposit is a claim on a central bank or a commercial bank. Financial assets have no storage costs, and many of them pay an income to the holder, such as dividends, coupons, or the interest rate of a foreign currency. Every financial asset is an investment asset, but not every investment asset is a financial asset, since gold and silver are physical goods that must be stored and insured.
+
+A **consumption asset** is an asset that is held primarily for consumption. It is not normally held for investment. Examples of consumption assets are commodities such as copper, crude oil, corn, and pork bellies. A refinery keeps crude oil to process it and a food producer keeps corn to use it, so these holders do not sell their inventories only to exploit a small difference in price.
+
+| Type                      | Main reason to hold              | Examples                              | Storage costs | Typical income               |
+| ------------------------- | -------------------------------- | ------------------------------------- | ------------- | ---------------------------- |
+| Financial asset           | Investment                       | Stocks, bonds, currencies             | None          | Dividends, coupons, interest |
+| Physical investment asset | Investment                       | Gold, silver                          | Yes           | None                         |
+| Consumption asset         | Use in production or consumption | Copper, crude oil, corn, pork bellies | Yes           | None                         |
+
 ## Types of traders
 
 In the market we can identify three types of traders, the hedgers, the speculators and the arbitrageurs.
 
 **Hedgers** use derivatives to **reduce risk** they already face. Forwards and futures lock in a future price, which removes uncertainty but also gives up favourable moves. Options act like insurance, because they protect against bad moves and keep the upside, for an upfront premium. Hedging makes outcomes more certain, not necessarily better.
 
-**Speculators** **take on risk** by betting on price direction, with no exposure to protect. Derivatives give them **leverage**. Futures need only a small margin, and options buy more exposure per dollar. For example, 2,000 USD in call options can earn far more than 2,000 USD in shares, or be lost entirely. Leverage magnifies both gains and losses.
+**Speculators** **take on risk** by betting on price direction, with no exposure to protect. Derivatives give them **leverage**. Futures need only a small margin, and options buy more exposure per dollar. For example, 2,000 USD in call options can earn far more than 2,000 USD in shares, or be lost entirely. Leverage magnifies both gains and losses. The note on futures and forwards discusses [whether speculation in futures markets is gambling](04-futures-and-forwards.md#is-speculation-in-futures-markets-gambling).
 
 **Arbitrageurs** lock in a **riskless profit** through simultaneous trades in two or more markets, exploiting price differences. An example is buying a stock cheaply in New York and selling it higher in London. Such opportunities disappear quickly because arbitrage trading closes the gap. The pricing of derivatives relies on the **no-arbitrage** assumption.
 
@@ -46,31 +62,3 @@ In the market we can identify three types of traders, the hedgers, the speculato
 **Drift into speculation**
 
 Hedgers or arbitrageurs can drift into speculating, as in the Barings and Société Générale losses, so firms need strict risk limits.
-
-## Is speculation in futures markets gambling?
-
-A common view holds that speculation in futures markets is pure gambling and that speculators should not be allowed on futures exchanges. The view has some truth in it, but it ignores the role of speculators.
-
-**Why the view looks reasonable**
-
-A speculator has no exposure to protect and takes risk only for profit, so a futures position looks like a bet. Leverage makes the bet larger, and before costs futures trading is a zero-sum game. Large speculative positions can also add volatility or be used to try to corner a market.
-
-**Why the view is wrong**
-
-A casino creates risk for entertainment, while a futures market transfers a risk that already exists. A farmer faces the price of wheat whether an exchange exists or not, and speculators are the traders who accept that risk.
-
-- **Counterparties for hedgers.** A wheat producer who wants to sell forward may not find, on the same day, a miller who wants to buy the same quantity. Speculators fill this gap.
-- **Liquidity.** Speculative volume narrows bid–offer spreads, lowers costs for hedgers, and lets large positions trade without a big move in price.
-- **Price discovery.** Speculators profit only if they forecast well, so they collect information on supply and demand. Their trades put it into the futures price that producers and consumers use to plan.
-- **Compensation for risk.** In theory, hedgers pay speculators a premium for taking their risk, much as an insurer earns a premium, although the evidence for this premium is mixed.
-
-**The public-interest answer**
-
-A ban would make futures markets thin and costly and would hurt the hedgers it means to protect. The real concern is excessive or manipulative speculation, which exchanges and regulators control with the following rules (see [Futures and Forwards](04-futures-and-forwards.md)).
-
-- **Margin requirements** make each trader cover losses daily, so one default does not spread.
-- **Daily price limits** cap how far the price can move in one session, which slows panic moves.
-- **Position limits** cap the speculative contracts one trader can hold, which makes corners and squeezes harder.
-- **Large-trader reporting** lets regulators watch big positions and act against manipulation.
-
-Speculation is therefore a necessary part of a working futures market. It should be regulated, not banned.
