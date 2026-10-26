@@ -19,10 +19,11 @@ In barter, traders first exchange a good that is hard to sell for a more saleabl
 
 The price to buy a good and the price to sell it at once are two different magnitudes. A person who buys a book or a piece of clothing cannot resell it at once, in the same market, at the same price. This gap, today called the bid-ask spread, measures saleableness. The smaller the gap, the more saleable the good. Grain or cotton sells in almost any quantity at any time near the current price, cloth or silk sells only at a clear discount, and astronomical instruments sell at a large loss. The gap also grows as the time to sell shrinks. A seller who must sell within a short, fixed period accepts a larger discount than one who can wait for the right buyer, and this effect is strongest for goods with few buyers. Money has almost no gap, so its holder can buy any good at its economic price.
 
-
 ## Recursive Effect of Salability
 
-TODO
+Traders bring less saleable goods to the market to get goods of another kind, so each trader has an interest to first exchange them for more saleable goods. Every such exchange widens the market of the more saleable good, which makes it even more saleable and attracts more traders. Others copy the traders who succeed with this method, and the practice becomes a habit. When a good becomes money, its saleableness increases further and widens the gap with all other goods, until the difference stops being only one of degree and becomes, in a certain sense, absolute.
+
+This gives the holder of money a position of power. The holder of money can buy any good at any time at its economic price. The holder of any other good must first overcome a difficulty, the sale of that good, before reaching the same purpose. This is the main explanation of the superior position of the buyer over the seller, a fact long observed but, before this theory, poorly explained. The Latin maxim *pecuniam habens, habet omnem rem quem vult habere*, "whoever has money has every thing they want to have", sums up this advantage.
 
 ## Precious Metals
 
