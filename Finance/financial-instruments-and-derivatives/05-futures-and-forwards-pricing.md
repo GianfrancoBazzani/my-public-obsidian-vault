@@ -228,7 +228,7 @@ Consider a speculator who takes a long position in a futures contract. Ignore da
 
 where $F_0$ is the futures price today, $S_T$ is the price of the asset at time $T$, and $r$ is the risk-free interest rate for an investment lasting time $T$.
 
-The discount rate for the expected cash flow at time $T$ equals the required return $k$ of the investor on the investment. The present value of this investment is
+The discount rate for the expected cash flow at time $T$ equals the required return $k$ of the investor on the investment. This $k$ is the expected return of the asset per annum with continuous compounding, so for an asset with no income $E(S_T) = S_0 e^{kT}$. It equals $r$ plus a premium for the systematic risk of the asset. The present value of this investment is
 
 $$-F_0 e^{-rT} + E(S_T) e^{-kT}$$
 
