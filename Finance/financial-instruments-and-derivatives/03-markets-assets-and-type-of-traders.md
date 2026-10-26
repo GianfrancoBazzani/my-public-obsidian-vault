@@ -31,7 +31,7 @@ An order tells the broker how to execute a trade. The main types are the followi
 
 In markets it is important to distinguish between investment assets and consumption assets.
 
-An **investment asset** is an asset that is held solely for investment purposes by at least some traders. Stocks and bonds are clearly investment assets. Gold and silver are also examples of investment assets, because a significant number of investors hold them only as a store of value, even though industry also uses them. The holder of an investment asset expects a return from the price or the income of the asset, not from its use.
+An **investment asset** is an asset that is held solely for investment purposes by at least some significant number of traders. Stocks and bonds are clearly investment assets. Gold and silver are also examples of investment assets, because a significant number of investors hold them only as a store of value, even though industry also uses them. The holder of an investment asset expects a return from the price or the income of the asset, not from its use.
 
 A **financial asset** is an investment asset whose value comes from a contractual claim rather than from a physical good. A stock is a claim on the equity of a company, a bond is a claim on the coupons and the principal that the issuer promises, and a currency or a bank deposit is a claim on a central bank or a commercial bank. Financial assets have no storage costs, and many of them pay an income to the holder, such as dividends, coupons, or the interest rate of a foreign currency. Every financial asset is an investment asset, but not every investment asset is a financial asset, since gold and silver are physical goods that must be stored and insured.
 
