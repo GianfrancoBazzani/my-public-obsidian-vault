@@ -81,22 +81,51 @@ Money did not come from law. It is a social institution, not a state one. A medi
 
 The state did not make the precious metals money. It later recognized and regulated money, for example with coinage that reduced the risk about the genuineness, weight, and fineness of the metal. In this way the state perfected money and adapted it to the changing needs of commerce, as statute law perfects customary law.
 
+## Chartalism and MMT
+
+### Chartalism
+
+Chartalism is the state theory of money. Georg Friedrich Knapp gave it its classic form in 1905, with the claim that money is a creature of law. In this view, a thing becomes money because the state declares it the means of payment and accepts it for taxes and other debts to the state. The value of money thus comes from the authority of the state, not from the qualities of the good.
+
+### Modern Monetary Theory
+
+Modern Monetary Theory (MMT), also called neochartalism, is the modern form of chartalism. Its main claims are the following.
+
+- **Taxes drive money.** The state imposes a tax that people can pay only in its currency. People then must earn that currency, so they accept it in private trade too.
+- **Money is a unit of account first.** Money starts as a unit to record debts and credits, which the state or a large authority such as a temple sets. Its use as a medium of exchange comes later.
+- **The issuer cannot run out of its own currency.** A state that issues its own currency does not need taxes or loans to pay for its spending. The real limit on spending is inflation, not revenue.
+- **Taxes do not fund spending.** Taxes create demand for the currency and remove money from the economy to control inflation.
+
+### Contrast with Menger's Theory
+
+The two theories disagree on almost every main point.
+
+| Point | Menger | Chartalism and MMT |
+|---|---|---|
+| Origin of money | A spontaneous market process, without plan or law | A decision of the state, or of a similar central authority |
+| First function | Medium of exchange | Unit of account for debts and taxes |
+| Source of value | The saleableness of the good, which grows from its use in trade | The obligation to pay taxes in the currency |
+| Role of the state | The state later recognizes, regulates, and perfects money that already exists | The state creates money and gives it its value |
+
+The two theories also disagree on how money keeps its value. Ludwig von Mises traced the purchasing power of money back, step by step, to the exchange ratios of a good in barter before it became money. This regression theorem explains why people accept money today. Chartalism replaces this chain with the tax obligation.
+
+### Standards of Empirical Evidence
+
+A common objection to Menger is that no document shows the transition from barter to money. The account of Menger is thus a conjectural history, not a documented one. But the absence of evidence does not have the same weight for the two theories.
+
+- **Menger's theory** predicts a slow and decentralized process. Many small trades, over many generations, made one good more saleable. Nobody had a reason to record this change, so few documents are an expected result.
+- **Chartalism** predicts a public and deliberate act of the state. A decree that creates money and taxes in it is the type of event that states record. If no such record exists, the theory loses support.
+
+This gives a clear test for chartalism. A chartalist must find a period with no money, and then show a state that issues tokens and accepts them for taxes, so that the tokens become money. The available historical evidence does not show this sequence and largely agrees with Menger. Some states did create a currency by law, such as the paper money of the American colonies. But in these cases, money already existed, so they do not explain the origin of money.
+
 ## References
 
 - Ammous, Saifedean. 2018. *The Bitcoin Standard: The Decentralized Alternative to Central Banking*. Wiley.
 - Camera, Gabriele, Marco Casari, and Maria Bigoni. 2013. "Money and Trust among Strangers." *Proceedings of the National Academy of Sciences* 110 (37): 14889–14893. [DOI](https://doi.org/10.1073/pnas.1301888110).
 - Dunbar, R. I. M. 1992. "Neocortex Size as a Constraint on Group Size in Primates." *Journal of Human Evolution* 22 (6): 469–493. [DOI](https://doi.org/10.1016/0047-2484%2892%2990081-J).
 - Jevons, William Stanley. 1875. *Money and the Mechanism of Exchange*. Henry S. King & Co. [Online edition](https://www.econlib.org/library/YPDBooks/Jevons/jvnMME.html).
+- Knapp, Georg Friedrich. 1905. *The State Theory of Money*. Translated by H. M. Lucas and J. Bonar (1924). Macmillan.
+- Mawhorter, Joshua. 2026. "Menger versus Chartalism: Standards of Empirical Evidence." *Mises Wire*, Mises Institute, January 22. [Online (Spanish)](https://mises.org/es/mises-wire/menger-versus-cartalismo-estandares-de-evidencia-empirica).
 - Menger, Carl. 1892. "On the Origin of Money." *The Economic Journal* 2 (6): 239–255. [DOI](https://doi.org/10.2307/2956146).
 - Mises, Ludwig von. 1912. *The Theory of Money and Credit*. Translated by H. E. Batson (1934). Jonathan Cape.
-
-
-
-
-
-
-
-
-/// Patron de pagos diferidos
-
-/// Neo chartalismo, georges frederic napt. MMT vs teoria evolutiva del dinero menger
+- Wray, L. Randall. 2012. *Modern Money Theory: A Primer on Macroeconomics for Sovereign Monetary Systems*. Palgrave Macmillan.
