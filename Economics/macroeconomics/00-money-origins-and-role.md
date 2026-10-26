@@ -2,13 +2,32 @@
 
 ## Theory of the Saleableness of Goods
 
-Carl Menger explained the origin of money with the saleableness of goods, today usually called salability or liquidity. In this theory, goods have different degrees of saleableness, and any theory of money necessarily requires a theory of the saleableness of goods. A good is more saleable when its owner can sell it more easily, at any time, at a price close to its economic price. The gap between the price to buy a good and the price to sell it at once measures this. The smaller the gap, the more saleable the good.
+Carl Menger explained the origin of money with the saleableness of goods, today usually called salability or liquidity. In this theory, goods have different degrees of saleableness, and any theory of money necessarily requires a theory of the saleableness of goods. A good is more saleable when its owner can sell it more easily, at any time, at a price close to its economic price. 
 
 Saleableness depends on four groups of factors.
 
-- **Buyers.** The number of people who want the good, how much they want it, and their purchasing power.
-- **Quantity.** The amount that can be sold without a fall in the price, and the divisibility of the good.
-- **Space.** The cost to transport the good relative to its value, and the reach of its markets.
-- **Time.** The durability of the good, its storage cost, how long the need for it lasts, and how often its markets meet.
+- **Buyers.** The number of people who want the good, how strongly and how often they want it, and their purchasing power.
+- **Quantity.** The available quantity of the good relative to the unsatisfied need for it, and the divisibility of the good.
+- **Space.** How widely the need for the good is spread, the cost to transport it relative to its value, the development of transport and commerce, and the reach of organized markets connected by arbitrage.
+- **Time.** How stable the need for the good is, its durability, its storage cost, the rate of interest, how often its markets meet, and the development of speculation and forward contracts.
+
+In all four groups, developed markets and speculation increase saleableness, and political and social restrictions on exchange, transport, or storage decrease it.
 
 In barter, traders first exchange a good that is hard to sell for a more saleable one, which brings them closer to the good they want. Others copy them, so the most saleable goods become even more saleable. In the end, one or a few goods, such as precious metals, are accepted by all and become money, without any law or agreement. Money is thus not a different kind of good, only the good with the highest degree of saleableness.
+
+## Bid-Ask Spread
+
+The price to buy a good and the price to sell it at once are two different magnitudes. A person who buys a book or a piece of clothing cannot resell it at once, in the same market, at the same price. This gap, today called the bid-ask spread, measures saleableness. The smaller the gap, the more saleable the good. Grain or cotton sells in almost any quantity at any time near the current price, cloth or silk sells only at a clear discount, and astronomical instruments sell at a large loss. The gap also grows as the time to sell shrinks. A seller who must sell within a short, fixed period accepts a larger discount than one who can wait for the right buyer, and this effect is strongest for goods with few buyers. Money has almost no gap, so its holder can buy any good at its economic price.
+
+
+## Recursive Effect of Salability
+
+TODO
+
+## Precious Metals
+
+## Bottom-Up Emergence of Money
+
+Money did not come from law. It is a social institution, not a state one. A medium of exchange can also be created by law, like other social institutions, but this is neither the only nor the main way in which money arose. The origin of money can only be understood as a spontaneous process, the unplanned result of the individual efforts of the members of a society, who little by little learned to tell apart the different degrees of saleableness of goods.
+
+The state did not make the precious metals money. It later recognized and regulated money, for example with coinage that reduced the risk about the genuineness, weight, and fineness of the metal. In this way the state perfected money and adapted it to the changing needs of commerce, as statute law perfects customary law.
