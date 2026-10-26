@@ -210,4 +210,46 @@ $$F_0 = S_0 e^{(c - y)T}$$
 
 ## Futures Prices vs. Expected Spot Prices
 
-TODO Add the expected price theory
+We refer to the market's average opinion about what the spot price of an asset will be at a certain future time as the expected spot price of the asset at that time.
+
+The higher the risk of an investment, the higher the expected return that an investor demands. The capital asset pricing model (CAPM) shows that only one of the two types of risk earns this extra return.
+
+- **Nonsystematic risk** is specific to the investment. A well-diversified portfolio almost eliminates it, so an investor requires no extra return for it.
+- **Systematic risk** comes from the correlation between the returns of the investment and the returns of the whole stock market. Diversification cannot eliminate it, so it alone sets the expected return.
+  - With positive systematic risk, the investor requires an expected return above the risk-free rate.
+  - With negative systematic risk, the investor accepts an expected return below the risk-free rate, because the investment tends to gain when the market falls and so reduces the risk of the portfolio.
+
+Consider a speculator who takes a long position in a futures contract. Ignore daily settlement, so the futures contract can be treated as a forward contract. The speculator puts the present value of the futures price into a risk-free investment and, at the same time, takes the long futures position. On the delivery date, the proceeds of the risk-free investment buy the asset, which is then immediately sold at its market price. The cash flows to the speculator are
+
+| Time | Cash flow |
+| --- | --- |
+| Today | $-F_0 e^{-rT}$ |
+| End of the futures contract | $+S_T$ |
+
+where $F_0$ is the futures price today, $S_T$ is the price of the asset at time $T$, and $r$ is the risk-free interest rate for an investment lasting time $T$.
+
+The discount rate for the expected cash flow at time $T$ equals the required return $k$ of the investor on the investment. The present value of this investment is
+
+$$-F_0 e^{-rT} + E(S_T) e^{-kT}$$
+
+where $E(S_T)$ is the expected spot price at time $T$.
+
+In a competitive market, the price of every investment adjusts until its present value is zero. If the present value were positive, investors would take long futures positions and push $F_0$ up. If it were negative, investors would take short positions and push $F_0$ down. Thus
+
+$$-F_0 e^{-rT} + E(S_T) e^{-kT} = 0$$
+
+and
+
+$$F_0 = E(S_T) e^{(r - k)T}$$
+
+The sign of $r - k$ depends on the systematic risk of the asset.
+
+| Systematic risk of the asset | Required return | Futures price |
+| --- | --- | --- |
+| Positive | $k > r$ | $F_0 < E(S_T)$ |
+| Zero | $k = r$ | $F_0 = E(S_T)$ |
+| Negative | $k < r$ | $F_0 > E(S_T)$ |
+
+With positive systematic risk, the long speculator bears a risk that diversification cannot eliminate. The futures price is thus below the expected spot price, so the expected gain $E(S_T) - F_0$ pays the speculator for this risk. The short hedgers pay this premium to transfer their risk.
+
+The situation $F_0 < E(S_T)$ is called **normal backwardation**, and $F_0 > E(S_T)$ is called **contango**. Here the two terms compare the futures price with the expected spot price, not with today's spot price as in [Hedging Strategies Using Futures](06-hedging-strategies-using-futures.md).
