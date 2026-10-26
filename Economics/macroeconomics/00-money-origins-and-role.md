@@ -8,35 +8,41 @@ Money is a social technology that emerged and developed to solve the problems of
 
 Before money, people traded goods directly for other goods. This is barter. A farmer who has wheat and wants shoes must find a shoemaker and give wheat for the shoes.
 
-Barter works in small groups, where people know each other and trade only a few goods. But when the division of labor grows, barter becomes slow and costly. Each barter trade needs three coincidences at once, a coincidence of wants, a coincidence in space, and a coincidence in time.
+Barter works in small groups, where people know each other and trade only a few goods. Such a group has at most about 150 people, the number of stable relationships that one person can keep, known as Dunbar's number. But when the division of labor grows, barter becomes slow and costly. Each barter trade needs a double coincidence of wants and a coincidence in space.
+
+Experiments with anonymous strangers confirm the role of group size. Without money, cooperation falls from about 71% in pairs to about 29% in groups of 32. With tokens that work as money, it stays at about 52 to 54% in every group size. Money thus helps in large groups of strangers, but not in pairs.
 
 ### Coincidence of Wants
 
-In a barter trade, each person must want what the other person offers. The farmer wants shoes, and the shoemaker must want wheat. This is the double coincidence of wants.
+In a barter trade, each person must want what the other person offers. The farmer wants shoes, and the shoemaker must want wheat. This is the double coincidence of wants. It must hold in the kind and quality of the goods, in their quantity, and in time. Barter also needs a coincidence in space.
 
-If the shoemaker wants fish and not wheat, the trade does not happen. The farmer must first find a fisherman who wants wheat, trade the wheat for fish, and then trade the fish for the shoes. Each extra step costs time and effort. When the number of goods in the economy increases, the chance to find a person with the exact opposite wants becomes very small.
+**Coincidence in Kind and Quality**
 
-### Coincidence in Space
+The shoemaker must want wheat, and must also accept the quality of the farmer's wheat. If the shoemaker wants fish and not wheat, the trade does not happen. The farmer must first find a fisherman who wants wheat, trade the wheat for fish, and then trade the fish for the shoes. Each extra step costs time and effort. When the number of goods in the economy increases, the chance to find a person with the exact opposite wants becomes very small.
 
-The two people must also meet in the same place. If the farmer lives in a village and the shoemaker lives in a town far away, one of them must travel with the goods. Heavy or bulky goods, such as wheat or cattle, are expensive to carry over long distances. Thus, barter limits trade to people who live near each other and to goods that are easy to move.
+**Coincidence in Quantity**
 
-### Coincidence in Time
+The quantities must also match. If one pair of shoes is worth two sacks of wheat, but the shoemaker wants only one sack, the trade fails, because the shoemaker cannot give half a pair. Many goods, such as shoes, coats, or cattle, lose their value when they are divided. Each pair of goods also needs its own exchange ratio, so 100 goods give 4,950 possible ratios.
+
+**Coincidence in Time**
 
 The two people must also be ready to trade at the same time. The farmer has wheat only after the harvest, but needs shoes in winter. The shoemaker can need wheat today and have shoes ready only next month.
 
 Many goods also lose their value over time. Wheat rots, cattle get sick, and fish goes bad in a few days. Thus, a person cannot easily keep the value of today's work to buy goods in the future.
 
-### From Barter to Money
+**Coincidence in Space**
 
-People solve these problems with indirect exchange. They accept a good that they do not want to consume, because they know that other people accept it too. This good becomes a medium of exchange, and the most accepted medium of exchange becomes money.
+The two people must also meet in the same place. If the farmer lives in a village and the shoemaker lives in a town far away, one of them must travel with the goods. Heavy or bulky goods, such as wheat or cattle, are expensive to carry over long distances. Thus, barter limits trade to people who live near each other and to goods that are easy to move.
 
-Money removes the three coincidences.
+## Need for a Standard of Deferred Payment
 
-- **Wants.** The farmer sells the wheat to anyone who wants it, and buys the shoes from anyone who sells them. The two trades do not need to happen with the same person.
-- **Space.** Money is light and easy to carry, so a person can trade with people far away.
-- **Time.** Money keeps its value over time, so a person can sell today and buy in the future.
+Many trades are not spot trades. The shoemaker can give the shoes in winter, and the farmer can pay with wheat after the harvest. This creates a debt, and credit is thus an exchange of present goods for future goods.
 
-Which good becomes money, and how, is the subject of the theory of the saleableness of goods.
+A debt in goods is hard to settle, because the value of the good at the date of payment is uncertain. After a good harvest, wheat is cheap, so the shoemaker receives less value than expected, and possibly at a time when the shoemaker does not need wheat. A person with debts and claims in many different goods also cannot add them up, because each good has its own exchange ratio.
+
+Money solves both problems. Debts are expressed in money, the good most likely to keep its exchange ratio with many other goods nearly unchanged. All debts then have one unit of measure and can be paid at a later date. This is the role of money as a standard of deferred payment.
+
+This role is not a separate function of money. A deferred payment is only the settlement of a credit, which is itself an exchange, so the role follows from the function of money as a medium of exchange. The term is useful mainly to show how changes in the value of money change the real value of debts.
 
 ## Menger's Theory of the Origin of Money
 
@@ -78,6 +84,19 @@ The state did not make the precious metals money. It later recognized and regula
 ## References
 
 - Ammous, Saifedean. 2018. *The Bitcoin Standard: The Decentralized Alternative to Central Banking*. Wiley.
-- Jevons, William Stanley. 1875. *Money and the Mechanism of Exchange*. Henry S. King & Co.
+- Camera, Gabriele, Marco Casari, and Maria Bigoni. 2013. "Money and Trust among Strangers." *Proceedings of the National Academy of Sciences* 110 (37): 14889–14893. [DOI](https://doi.org/10.1073/pnas.1301888110).
+- Dunbar, R. I. M. 1992. "Neocortex Size as a Constraint on Group Size in Primates." *Journal of Human Evolution* 22 (6): 469–493. [DOI](https://doi.org/10.1016/0047-2484%2892%2990081-J).
+- Jevons, William Stanley. 1875. *Money and the Mechanism of Exchange*. Henry S. King & Co. [Online edition](https://www.econlib.org/library/YPDBooks/Jevons/jvnMME.html).
 - Menger, Carl. 1892. "On the Origin of Money." *The Economic Journal* 2 (6): 239–255. [DOI](https://doi.org/10.2307/2956146).
 - Mises, Ludwig von. 1912. *The Theory of Money and Credit*. Translated by H. E. Batson (1934). Jonathan Cape.
+
+
+
+
+
+
+
+
+/// Patron de pagos diferidos
+
+/// Neo chartalismo, georges frederic napt. MMT vs teoria evolutiva del dinero menger
