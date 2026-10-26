@@ -27,6 +27,8 @@ This gives the holder of money a position of power. The holder of money can buy 
 
 ## Precious Metals
 
+Many societies used goods such as cattle, skins, salt, or shells as media of exchange. As they advanced, and once they had a sufficient supply, they adopted the precious metals as money, at different times and without any state order or agreement among traders. The reason is that the precious metals rank high in every factor of saleableness. Almost everyone wants them for their use and beauty, and their supply is small relative to this demand. They are homogeneous, very divisible, durable, found in many regions, easy to extract and work, and cheap to store and to transport relative to their value. Their exchange ratio with other goods changes little, and their color and ring make their quality and weight easy to check, so they became the favorite means to store wealth.
+
 ## Bottom-Up Emergence of Money
 
 Money did not come from law. It is a social institution, not a state one. A medium of exchange can also be created by law, like other social institutions, but this is neither the only nor the main way in which money arose. The origin of money can only be understood as a spontaneous process, the unplanned result of the individual efforts of the members of a society, who little by little learned to tell apart the different degrees of saleableness of goods.
