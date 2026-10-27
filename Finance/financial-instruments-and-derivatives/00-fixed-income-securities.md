@@ -78,7 +78,7 @@ $$P_{clean} = P_{dirty} - AI$$
 
 $$AI = \frac{\text{annual coupon}}{f} \times \frac{\text{time since the last coupon}}{\text{time between two coupons}} = \text{annual coupon} \times \text{years since the last coupon}$$
 
-Here $f$ is the frequency of payment (1, 2 or 4 coupons in one year), so the annual coupon divided by $f$ is one coupon. In years, the frequency cancels, because one coupon accrues in $\frac{1}{f}$ years. The day-count rule of the security sets how to count the time. For example, the Actual/365 rule divides the actual number of days by 365, and the 30/360 rule counts each month as 30 days and the year as 360 days.
+Here $f$ is the frequency of payment (1, 2 or 4 coupons in one year), so the annual coupon divided by $f$ is one coupon. In years, the frequency cancels, because one coupon accrues in $\frac{1}{f}$ years. The day count convention of the security sets how to count the time (see [Day Count Conventions](#day-count-conventions)).
 
 For an annual bond ($f = 1$) with a coupon of 5, the accrued interest 3 months after the last coupon is $AI = 5 \times \frac{3}{12} = 1.25$. The other 9 months, until the next coupon, belong to the buyer.
 
@@ -92,6 +92,34 @@ The chart shows a 10-year bond with a 3% coupon, paid in two parts of 1.5 every 
 **Why the market quotes the clean price**
 
 The accrued interest grows linearly and goes back to zero on the coupon date, so it absorbs the jump of the dirty price. The clean price stays continuous, so it lets you compare the prices of different fixed-income securities, also when their coupon calendars are different. Screens, trading desks and futures quote the clean price. The settlement and the return always use the dirty price.
+
+### Day Count Conventions
+
+The interest of a fixed-income security accrues day by day. To calculate the interest between two dates, we must change the number of days into a fraction of a year. The **day count convention** of the security sets this rule.
+
+$$\text{interest} = \text{face value} \times \text{annual rate} \times \frac{\text{days in the period}}{\text{days in the year}}$$
+
+Each convention sets how to count the days in the period and the days in the year. In the United States, the market uses three conventions.
+
+**1. Actual/Actual**
+
+The days in the period are the actual calendar days. With $f$ coupons per year, the days in the year are $f$ times the actual days in the coupon period. Thus the interest is
+
+$$\text{interest} = \frac{\text{annual coupon}}{f} \times \frac{\text{actual days since the last coupon}}{\text{actual days between the two coupons}}$$
+
+U.S. Treasury bonds and notes use this convention. Leap years and months of different lengths are included automatically, because the convention counts the real days.
+
+**2. 30/360**
+
+Each month has 30 days and the year has 360 days. Between the date $D_1/M_1/Y_1$ and the date $D_2/M_2/Y_2$ (day, month, year), the number of days is
+
+$$\text{days} = 360 (Y_2 - Y_1) + 30 (M_2 - M_1) + (D_2 - D_1)$$
+
+If $D_1$ is the 31st, it becomes the 30th. If $D_2$ is the 31st and $D_1$ is the 30th or the 31st, $D_2$ also becomes the 30th. Some U.S. variants also have special cases for the last day of February. U.S. corporate bonds, municipal bonds and agency bonds use this convention. The calculation is easy, because each full month gives the same interest.
+
+**3. Actual/360**
+
+The days in the period are the actual calendar days, but the year has 360 days. U.S. Treasury bills and most money market instruments use this convention, for example commercial paper, deposits and overnight rates. A full year of 365 days gives the interest of $\frac{365}{360}$ years, so the interest is slightly higher than the annual rate. The [Discount Rate](#discount-rate) of a bill uses this convention.
 
 ### Discount Rate
 
