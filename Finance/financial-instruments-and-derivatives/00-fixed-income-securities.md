@@ -70,9 +70,9 @@ $$y = 0.0625 \quad (6.25\%)$$
 
 ### Clean and Dirty Prices
 
-The **dirty price**, or **full price**, is the price $P$ of the fixed-income security defined above. It is the **cash that the buyer pays** on the settlement date. Between two coupon dates the times $t$ are not whole years, e.g. 3 months after the last coupon of an annual bond the cash flows arrive at $t = 0.75, 1.75, \dots$
+For a fixed-income security that pays coupons, we define the **dirty price**, or **full price**, as the price $P_{dirty}$. It is the **cash that the buyer of the bond pays**. Between two coupon dates the times $t$ are not whole years, e.g. 3 months after the last coupon of an annual bond the cash flows arrive at $t = 0.75, 1.75, \dots$
 
-The **clean price** is the dirty price minus the **accrued interest** ($AI$), the part of the next coupon that the seller earned from the last coupon date to the settlement date. Thus the accrued interest grows with the time. The buyer pays the clean price plus the accrued interest, i.e. the dirty price, because the buyer receives the full next coupon.
+The **clean price** is the dirty price minus the **accrued interest** ($AI$), the part of the next coupon that the seller earned from the last coupon date to the date of the sale. Thus the accrued interest grows with the time. The buyer pays the clean price plus the accrued interest, i.e. the dirty price, because the buyer receives the full next coupon.
 
 $$P_{clean} = P_{dirty} - AI$$
 
@@ -92,6 +92,26 @@ The chart shows a 10-year bond with a 3% coupon, paid in two parts of 1.5 every 
 **Why the market quotes the clean price**
 
 The accrued interest grows linearly and goes back to zero on the coupon date, so it absorbs the jump of the dirty price. The clean price stays continuous, so it lets you compare the prices of different fixed-income securities, also when their coupon calendars are different. Screens, trading desks and futures quote the clean price. The settlement and the return always use the dirty price.
+
+### Discount Rate
+
+Some instruments, such as [bills](#bills), pay no coupons. They pay only the face value at maturity. The interest earned is the face value minus the price. The market often quotes these instruments with a **discount rate**. The discount rate is the interest earned as a percentage of the **final face value**, not as a percentage of the initial price paid for the instrument. It also uses a year of 360 days.
+
+For example, if the quote of a 91-day Treasury bill is 8, the interest earned is 8% of the face value per 360 days. With a face value of 100, the interest earned over the 91-day life of the bill is
+
+$$100 \times 0.08 \times \frac{91}{360} = 2.022$$
+
+Thus the cash price of the bill is $100 - 2.022 = 97.978$.
+
+In general, for a face value of 100, the relation between the quoted price and the cash price of a Treasury bill in the United States is
+
+$$P = \frac{360}{n}(100 - Y)$$
+
+- $P$ is the quoted price, that is the discount rate in percent.
+- $Y$ is the cash price, the price that the buyer pays for a face value of 100.
+- $n$ is the remaining life of the bill, in calendar days.
+
+The term $100 - Y$ is the interest that the holder earns until maturity. The factor $\frac{360}{n}$ converts this interest for $n$ days into an interest for 360 days. For example, when the cash price of a 90-day Treasury bill is 99, the quoted price is $P = \frac{360}{90}(100 - 99) = 4$.
 
 ## Macaulay Duration
 
