@@ -34,8 +34,6 @@ The discount pays for risk and for time. Bills of equal reliability still differ
 
 When trade expands, more bills come in for discount. One dealer can get cash when other dealers discount the bills of this dealer, but the dealers as a group cannot. "They must get cash from outside the market. They themselves must become borrowers." The cash comes from the custodians who keep the coin of the public. A firm that lends to the market and borrows as a custodian from the public is a bank.
 
-Deposits then become money in two ways. A transferable receipt for a deposit can pay a debt, as a banknote does, and an order of the depositor to the bank can pay a debt, as a check does. When the bank lends, it can credit the borrower with a deposit and keep its coin, so "from the point of view of the rest of the economy, the bank has 'created' money". The debt of the bank, the firm at the center of the widest circle of trust, becomes the money of the market.
-
 ## Bills of Exchange and Foreign Exchange
 
 **Origin**
@@ -103,27 +101,118 @@ The money market of the bills was a main source of credit for governments too, w
 
 The Genoese lent with bills on Antwerp, paid in gold to the Spanish army, and took their repayment in Spain in silver from the Americas. From 1567 to 1632, this system sent more than 500 million florins to the armies in the Low Countries.
 
-The Revolution of 1688 changed the borrower. Parliament now voted the taxes and stood behind the loans, so the king could no longer default alone. The Bank of England could deal in bills of exchange and bullion, took deposits, and issued banknotes, so it joined the lender to the government with the bank of Hicks. Still, the risk premium on British government debt stayed high for some decades after 1688. The bank at the center of the money market, which is also the lender to the government, is the origin of the central bank, the subject of [the next note](02-role-of-central-banks.md).
+The Revolution of 1688 changed the borrower. Parliament now voted the taxes and stood behind the loans, so the king could no longer default alone. The Bank of England could deal in bills of exchange and bullion, took deposits, and issued banknotes, so it joined the lender to the government with the bank of Hicks. Still, the risk premium on British government debt stayed high for some decades after 1688. The bank at the center of the money market, which is also the lender to the government, is the origin of the central bank (see [Role of Central Banks](02-role-of-central-banks.md)).
 
-## Limits of the Account
+## Banks and Bank Money
 
-The sequence of Hicks is a model, and history did not follow it step by step. Remittance came first and credit second, deposit banks grew from the money changers in parallel with the bill market, and cities such as Amsterdam founded public banks. History does support the core of the model. Trust started in closed circles of merchants, guarantees, negotiability, endorsement, and discount extended it to strangers, and banks emerged at the center of these circles.
+In chapter 7, "Banks and Bank Money", Hicks shows how a bank becomes the issuer of the money of the market, and how this exposes it to the risk of a run.
 
-TODO ADD Primitive banks emergence and banking bussiens
+**Business of a Bank**
+
+For Hicks, a firm is a fully formed bank when it does three things.
+
+1. Accepting deposits.
+2. Discounting bills.
+3. Making advances to customers.
+
+| Assets | Liabilities |
+| --- | --- |
+| Reserve of coin, today of central bank money | Deposits, payable on demand |
+| Discounted bills, short and easy to sell | Capital of the owners |
+| Advances to customers, fixed until due | |
+
+The bank pays a low rate of interest, or none, on its deposits, and earns a higher rate on its bills and advances. The spread between the two pays the costs of the bank and gives its profit. To earn it, the bank turns short deposits into longer loans, which is maturity transformation.
+
+Capital and liquid assets protect against two different risks.
+
+- **Solvency.** Capital absorbs the losses on loans. When the losses exceed the capital, the debts of the bank exceed its assets, and the bank is insolvent.
+- **Liquidity.** Liquid assets pay the withdrawals. A solvent bank can still fail if it cannot pay its debts when they come due.
+
+**Creation of Bank Money**
+
+Deposits become money in two ways. A transferable receipt for a deposit can pay a debt, as a banknote does, and an order of the depositor to the bank can pay a debt, as a check does. When the bank lends, it can credit the borrower with a deposit and keep its coin, so "from the point of view of the rest of the economy, the bank has 'created' money". The debt of the bank, the firm at the center of the widest circle of trust, becomes the money of the market.
+
+Bank money thus comes from debt. A loan creates two debts at once, the debt of the borrower to the bank and the new deposit, which is a debt of the bank to the borrower. The loan comes first and creates the deposit, so the bank does not lend out the savings of its depositors. The repayment of the loan cancels both debts, so it destroys money. In the United Kingdom in 2014, 97% of the money that the public held was bank deposits, and only 3% was currency.
+
+The bank cannot create money without limit. It must stay profitable against other banks, follow prudential regulation, and keep enough reserves to pay depositors who withdraw cash or move their deposits to other banks.
+
+**Risk of Liquidity**
+
+Each loan adds a deposit that the depositor can withdraw at any time, but the advance stays fixed until it is due. The creation of money thus exposes the bank to two forms of liquidity risk.
+
+- **Funding liquidity risk.** Many depositors withdraw at once, and the bank runs short of funds. A run is the acute form of this risk.
+- **Market liquidity risk.** The bank cannot sell an asset quickly, or can sell it only at a heavy discount.
+
+Each form feeds the other. Withdrawals force the bank to sell assets, often at a low price, and assets that are hard to sell leave the bank short of funds. Losses in a fire sale can also destroy the capital of the bank, so a problem of liquidity can become a problem of solvency.
+
+Hicks lists three protections against this risk.
+
+| Protection | How it works | Limit in a general panic |
+| --- | --- | --- |
+| Law of large numbers | With many depositors who have independent needs, withdrawals and new deposits mostly cancel. The variation of the total grows only with the square root of the number of depositors, so 100 times more depositors of the same size need only about 10 times the reserve. | In a panic, withdrawals are no longer independent, because all depositors withdraw at the same time. |
+| Liquid reserves | The bank keeps a part of its assets in coin or in assets that it can sell quickly, such as prime bills or government bonds. | It works only in part, because when all banks sell at the same time, only the most liquid assets keep their price. |
+| Borrowing from another bank | The bank arranges in advance to borrow from a bank with spare cash. | The other banks have the same problem, so no bank lends. |
+
+Only the liquid reserves still protect the bank in a general panic, and only in part, because the reserve must be in assets that stay liquid when all banks sell at once. The failure of the other two protections creates the need for an ultimate lender outside the market, which is the role of the central bank (see [Role of Central Banks](02-role-of-central-banks.md)).
+
+**Liquidity of Assets**
+
+Liquidity is the ease with which a holder can turn an asset into money, the saleableness of Menger (see [Money Origins and Role](00-money-origins-and-role.md)). In 1930, Keynes defined it by comparison. Bills and call loans are more liquid than investments, "i.e. more certainly realisable at short notice without loss", and investments are more liquid than advances. Profit, as a rule, goes in the opposite order, so the banker must always weigh one against the other.
+
+| Asset of a bank | Liquidity | Profit |
+| --- | --- | --- |
+| Bills and call loans | Highest | Lowest |
+| Investments | Middle | Middle |
+| Advances to customers | Lowest | Highest |
+
+Liquidity is thus a degree, not a yes or no. Hicks extends the idea from banks to all holders of assets, who choose from a "spectrum" of assets with different degrees of liquidity.
+
+An asset is liquid if it can be traded at low cost, in large quantities, and in a short time, without a significant effect on its price. Each of these is a separate dimension, and an asset can be strong in one and weak in another.
+
+| Dimension | Meaning |
+| --- | --- |
+| Tightness | The cost to sell and buy back at once, measured by the bid-ask spread |
+| Depth | The volume that can be traded without an effect on the price |
+| Immediacy | The speed at which a trade of a given size and cost can be arranged |
+| Resilience | The speed at which the price recovers after a large trade |
+
+Two more facts prevent a yes or no answer.
+
+- **Certainty of the price.** A long-term government bond sells at once and at a small spread, but its price falls when interest rates rise, so its sale is not certain to be without loss.
+- **Conditions of the market.** An asset is liquid for one seller, but not when all holders sell at once. In a fire sale, the buyers that value the asset most, often other banks, are in trouble at the same time, so the price falls far below the value of the asset. Market liquidity can thus suddenly dry up. In March 2020, even the market for US Treasury securities needed support, and the Fed announced purchases of at least $500 billion of them "to support the smooth functioning" of the market.
+
+Regulation also treats liquidity as a degree. Since 2015, the Basel III liquidity coverage ratio requires banks to hold high-quality liquid assets that cover their net cash outflows over 30 days of stress, in full from 2019. The standard states that the liquidity of an asset "depends on the underlying stress scenario, the volume to be monetised and the timeframe considered", and it counts each class of asset at a discount, or haircut, that grows as its liquidity falls.
+
+| Level | Assets | Haircut | Maximum share of the stock |
+| --- | --- | --- | --- |
+| 1 | Coins and banknotes, central bank reserves, sovereign bonds with a 0% risk weight | 0% | No limit |
+| 2A | Sovereign bonds with a 20% risk weight, corporate and covered bonds rated AA- or higher | 15% | 40% for all of Level 2 |
+| 2B | Mortgage-backed securities rated AA or higher (25%), corporate bonds rated A+ to BBB- and equities (50%) | 25% to 50% | 15% |
+
+Loans to customers are on no list, so they do not count.
 
 ## Resources
 
 - Bagehot, Walter. 1873. *Lombard Street: A Description of the Money Market*. Henry S. King & Co. [Project Gutenberg](https://www.gutenberg.org/ebooks/4359).
 - Bank of England Museum. "Why Was the Bank of England Founded?" [Online](https://www.bankofengland.co.uk/museum/online-collections/blog/why-was-the-bank-of-england-founded).
+- Basel Committee on Banking Supervision. 2013. *Basel III: The Liquidity Coverage Ratio and Liquidity Risk Monitoring Tools*. Bank for International Settlements, January. [PDF](https://www.bis.org/publications/201301-standards-basel-iii-liquidity-coverage-ratio-and-liquidity-risk-monitoring-tools.pdf).
+- Board of Governors of the Federal Reserve System. 2020. "Federal Reserve Issues FOMC Statement." Press release, March 15. [Online](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm).
 - Borio, Claudio, Robert N. McCauley, Patrick McGuire, and Vladyslav Sushko. 2016. "Covered Interest Parity Lost: Understanding the Cross-Currency Basis." *BIS Quarterly Review*, September. [Online](https://www.bis.org/publ/qtrpdf/r_qt1609e.htm).
+- Brunnermeier, Markus K., and Lasse Heje Pedersen. 2009. "Market Liquidity and Funding Liquidity." *The Review of Financial Studies* 22 (6): 2201–2238. [DOI](https://doi.org/10.1093/rfs/hhn098), [NBER working paper](https://www.nber.org/papers/w12939).
 - Drelichman, Mauricio, and Hans-Joachim Voth. 2011. "Lending to the Borrower from Hell: Debt and Default in the Age of Philip II." *The Economic Journal* 121 (557): 1205–1227. [DOI](https://doi.org/10.1111/j.1468-0297.2011.02442.x).
+- Farag, Marc, Damian Harland, and Dan Nixon. 2013. "Bank Capital and Liquidity." *Bank of England Quarterly Bulletin* 53 (3): 201–215. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2013/bank-capital-and-liquidity.pdf).
+- Gungor, Sermin, and Jun Yang. 2017. "Has Liquidity in Canadian Government Bond Markets Deteriorated?" Staff Analytical Note 2017-10, Bank of Canada. [Online](https://www.bankofcanada.ca/2017/08/staff-analytical-note-2017-10/).
 - Hicks, John. 1969. *A Theory of Economic History*. Clarendon Press. [Internet Archive](https://archive.org/details/theoryofeconomic00hick).
 - Hicks, John. 1989. *A Market Theory of Money*. Clarendon Press. [Oxford Academic](https://academic.oup.com/book/9948), [Internet Archive](https://archive.org/details/markettheoryofmo0000hick).
 - Hunt, Edwin S. 1990. "A New Look at the Dealings of the Bardi and Peruzzi with Edward III." *The Journal of Economic History* 50 (1): 149–162. [Online](https://www.cambridge.org/core/journals/journal-of-economic-history/article/new-look-at-the-dealings-of-the-bardi-and-peruzzi-with-edward-iii/2AD04842FACDAE9D0A660EDCD72EC097).
+- Keynes, John Maynard. 1930. *A Treatise on Money*. Vol. 2, *The Applied Theory of Money*. Macmillan. [Internet Archive](https://archive.org/details/in.ernet.dli.2015.45481).
 - Kohn, Meir. 1999. "Bills of Exchange and the Money Market to 1600." Working Paper 99-04, Department of Economics, Dartmouth College. [PDF](https://bpb-us-e1.wpmucdn.com/sites.dartmouth.edu/dist/6/1163/files/2017/03/99-04.pdf).
+- McLeay, Michael, Amar Radia, and Ryland Thomas. 2014. "Money Creation in the Modern Economy." *Bank of England Quarterly Bulletin* 54 (1): 14–27. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf).
+- McLeay, Michael, Amar Radia, and Ryland Thomas. 2014. "Money in the Modern Economy: An Introduction." *Bank of England Quarterly Bulletin* 54 (1): 4–13. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-in-the-modern-economy-an-introduction.pdf).
 - Munro, John H. "The Medieval Bill of Exchange." Department of Economics, University of Toronto. [Online](https://www.economics.utoronto.ca/munro5/BILLEXCH.htm).
 - North, Douglass C., and Barry R. Weingast. 1989. "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *The Journal of Economic History* 49 (4): 803–832. [PDF](https://cdn.vanderbilt.edu/vu-my/wp-content/uploads/sites/138/2016/12/14091657/NorthWeingast-1989-Constitutions-and-Commitment.pdf).
 - Quinn, Stephen, and William Roberds. 2005. "The Big Problem of Large Bills: The Bank of Amsterdam and the Origins of Central Banking." Working Paper 2005-16, Federal Reserve Bank of Atlanta. [PDF](https://fraser.stlouisfed.org/files/docs/historical/frbatl/wp/frbatl_wp_2005-16.pdf).
+- Shleifer, Andrei, and Robert Vishny. 2011. "Fire Sales in Finance and Macroeconomics." *Journal of Economic Perspectives* 25 (1): 29–48. [DOI](https://doi.org/10.1257/jep.25.1.29), [NBER working paper](https://www.nber.org/papers/w16642).
 - Stray, Jonathan. 2016. "The Origin of Banking." [Online](https://jonathanstray.com/the-origin-of-banking).
 - Sussman, Nathan, and Yishay Yafeh. 2004. "Constitutions and Commitment: Evidence on the Relation between Institutions and the Cost of Capital." CEPR Discussion Paper 4404. [Online](https://cepr.org/publications/dp4404).
 - Wikipedia. "Accepting House." [Online](https://en.wikipedia.org/wiki/Accepting_house).
