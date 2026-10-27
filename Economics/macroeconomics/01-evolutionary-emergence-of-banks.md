@@ -128,6 +128,18 @@ Capital and liquid assets protect against two different risks.
 - **Solvency.** Capital absorbs the losses on loans. When the losses exceed the capital, the debts of the bank exceed its assets, and the bank is insolvent.
 - **Liquidity.** Liquid assets pay the withdrawals. A solvent bank can still fail if it cannot pay its debts when they come due.
 
+**Bills and Advances**
+
+The two assets differ in what stands behind the debt. A bill finances goods that already exist. A trader who sells goods on credit draws a bill on the buyer, and the bill comes due after a short time, often 30, 60, or 90 days. In that time the buyer sells the goods, and the money from the sale pays the bill, so the debt cancels itself. An advance can finance wealth that does not exist yet, such as a forge, a mine, or the improvement of land. The borrower repays it from the future profits of the project, which come only after many years, if they come at all. So the bill is short and easy to sell, and the advance stays fixed until it is due.
+
+The idea that a bank is safe if it discounts only such bills is the real bills doctrine. Adam Smith compares a bank that discounts only "a real bill of exchange, drawn by a real creditor upon a real debtor" to a pond with an inflow equal to its outflow, so "the pond keeps always equally, or very near equally full". The same bank must not lend the fixed capital of a firm, because its returns come only "after a period of many years, a period by far too distant to suit the conveniency of a bank".
+
+The doctrine has three main critiques.
+
+- **No limit on money.** The value of the bills rises with prices. When banks create money against bills, prices rise, the bills grow, and banks create more money, so the doctrine sets no limit on money or on prices. Henry Thornton made this point in 1802.
+- **Several bills on the same goods.** The same goods can pass through several traders, and each sale can create a new bill, so the bills can exceed the goods.
+- **Credit without savings.** For the Austrian School, a bank that discounts a bill with a new deposit creates money that no one saved, as with an advance. The bill is safer for the bank, but it does not prevent the boom and the bust.
+
 **Creation of Bank Money**
 
 Deposits become money in two ways. A transferable receipt for a deposit can pay a debt, as a banknote does, and an order of the depositor to the bank can pay a debt, as a check does. When the bank lends, it can credit the borrower with a deposit and keep its coin, so "from the point of view of the rest of the economy, the bank has 'created' money". On the balance sheet of the bank, a loan of 100 adds an advance of 100 to the assets and a deposit of 100 to the liabilities, so both sides grow and the reserve of coin does not change. The debt of the bank, the firm at the center of the widest circle of trust, becomes the money of the market.
@@ -194,6 +206,7 @@ Loans to customers are on no list, so they do not count.
 ## Resources
 
 - Bagehot, Walter. 1873. *Lombard Street: A Description of the Money Market*. Henry S. King & Co. [Project Gutenberg](https://www.gutenberg.org/ebooks/4359).
+- Bagus, Philipp. 2024. *Full Reserve Banking versus the Real Bills Doctrine*. Mises Institute. [Online](https://mises.org/library/book/full-reserve-banking-versus-real-bills-doctrine), [chapter 3](https://mises.org/online-book/full-reserve-banking/3-critiques-traditional-real-bills-doctrine).
 - Bank of England Museum. "Why Was the Bank of England Founded?" [Online](https://www.bankofengland.co.uk/museum/online-collections/blog/why-was-the-bank-of-england-founded).
 - Basel Committee on Banking Supervision. 2013. *Basel III: The Liquidity Coverage Ratio and Liquidity Risk Monitoring Tools*. Bank for International Settlements, January. [PDF](https://www.bis.org/publications/201301-standards-basel-iii-liquidity-coverage-ratio-and-liquidity-risk-monitoring-tools.pdf).
 - Board of Governors of the Federal Reserve System. 2020. "Federal Reserve Issues FOMC Statement." Press release, March 15. [Online](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm).
@@ -204,6 +217,7 @@ Loans to customers are on no list, so they do not count.
 - Gungor, Sermin, and Jun Yang. 2017. "Has Liquidity in Canadian Government Bond Markets Deteriorated?" Staff Analytical Note 2017-10, Bank of Canada. [Online](https://www.bankofcanada.ca/2017/08/staff-analytical-note-2017-10/).
 - Hicks, John. 1969. *A Theory of Economic History*. Clarendon Press. [Internet Archive](https://archive.org/details/theoryofeconomic00hick).
 - Hicks, John. 1989. *A Market Theory of Money*. Clarendon Press. [Oxford Academic](https://academic.oup.com/book/9948), [Internet Archive](https://archive.org/details/markettheoryofmo0000hick).
+- Humphrey, Thomas M. 1982. "The Real Bills Doctrine." *Federal Reserve Bank of Richmond Economic Review* 68 (5): 3–13. [PDF](https://www.richmondfed.org/-/media/RichmondFedOrg/publications/research/economic_review/1982/pdf/er680501.pdf).
 - Hunt, Edwin S. 1990. "A New Look at the Dealings of the Bardi and Peruzzi with Edward III." *The Journal of Economic History* 50 (1): 149–162. [Online](https://www.cambridge.org/core/journals/journal-of-economic-history/article/new-look-at-the-dealings-of-the-bardi-and-peruzzi-with-edward-iii/2AD04842FACDAE9D0A660EDCD72EC097).
 - Keynes, John Maynard. 1930. *A Treatise on Money*. Vol. 2, *The Applied Theory of Money*. Macmillan. [Internet Archive](https://archive.org/details/in.ernet.dli.2015.45481).
 - Kohn, Meir. 1999. "Bills of Exchange and the Money Market to 1600." Working Paper 99-04, Department of Economics, Dartmouth College. [PDF](https://bpb-us-e1.wpmucdn.com/sites.dartmouth.edu/dist/6/1163/files/2017/03/99-04.pdf).
@@ -213,6 +227,7 @@ Loans to customers are on no list, so they do not count.
 - North, Douglass C., and Barry R. Weingast. 1989. "Constitutions and Commitment: The Evolution of Institutions Governing Public Choice in Seventeenth-Century England." *The Journal of Economic History* 49 (4): 803–832. [PDF](https://cdn.vanderbilt.edu/vu-my/wp-content/uploads/sites/138/2016/12/14091657/NorthWeingast-1989-Constitutions-and-Commitment.pdf).
 - Quinn, Stephen, and William Roberds. 2005. "The Big Problem of Large Bills: The Bank of Amsterdam and the Origins of Central Banking." Working Paper 2005-16, Federal Reserve Bank of Atlanta. [PDF](https://fraser.stlouisfed.org/files/docs/historical/frbatl/wp/frbatl_wp_2005-16.pdf).
 - Shleifer, Andrei, and Robert Vishny. 2011. "Fire Sales in Finance and Macroeconomics." *Journal of Economic Perspectives* 25 (1): 29–48. [DOI](https://doi.org/10.1257/jep.25.1.29), [NBER working paper](https://www.nber.org/papers/w16642).
+- Smith, Adam. 1776. *An Inquiry into the Nature and Causes of the Wealth of Nations*. Book II, chapter 2. W. Strahan and T. Cadell. [Project Gutenberg](https://www.gutenberg.org/ebooks/3300).
 - Stray, Jonathan. 2016. "The Origin of Banking." [Online](https://jonathanstray.com/the-origin-of-banking).
 - Sussman, Nathan, and Yishay Yafeh. 2004. "Constitutions and Commitment: Evidence on the Relation between Institutions and the Cost of Capital." CEPR Discussion Paper 4404. [Online](https://cepr.org/publications/dp4404).
 - Wikipedia. "Accepting House." [Online](https://en.wikipedia.org/wiki/Accepting_house).
@@ -223,3 +238,4 @@ Loans to customers are on no list, so they do not count.
 - Wikipedia. "Great Stop of the Exchequer." [Online](https://en.wikipedia.org/wiki/Great_Stop_of_the_Exchequer).
 - Wikipedia. "Jakob Fugger." [Online](https://en.wikipedia.org/wiki/Jakob_Fugger).
 - Wikipedia. "John Hicks." [Online](https://en.wikipedia.org/wiki/John_Hicks).
+- Wikipedia. "Real Bills Doctrine." [Online](https://en.wikipedia.org/wiki/Real_bills_doctrine).
