@@ -130,7 +130,7 @@ Capital and liquid assets protect against two different risks.
 
 **Creation of Bank Money**
 
-Deposits become money in two ways. A transferable receipt for a deposit can pay a debt, as a banknote does, and an order of the depositor to the bank can pay a debt, as a check does. When the bank lends, it can credit the borrower with a deposit and keep its coin, so "from the point of view of the rest of the economy, the bank has 'created' money". The debt of the bank, the firm at the center of the widest circle of trust, becomes the money of the market.
+Deposits become money in two ways. A transferable receipt for a deposit can pay a debt, as a banknote does, and an order of the depositor to the bank can pay a debt, as a check does. When the bank lends, it can credit the borrower with a deposit and keep its coin, so "from the point of view of the rest of the economy, the bank has 'created' money". On the balance sheet of the bank, a loan of 100 adds an advance of 100 to the assets and a deposit of 100 to the liabilities, so both sides grow and the reserve of coin does not change. The debt of the bank, the firm at the center of the widest circle of trust, becomes the money of the market.
 
 Bank money thus comes from debt. A loan creates two debts at once, the debt of the borrower to the bank and the new deposit, which is a debt of the bank to the borrower. The loan comes first and creates the deposit, so the bank does not lend out the savings of its depositors. The repayment of the loan cancels both debts, so it destroys money. In the United Kingdom in 2014, 97% of the money that the public held was bank deposits, and only 3% was currency.
 
