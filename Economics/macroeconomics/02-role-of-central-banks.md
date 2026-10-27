@@ -102,7 +102,25 @@ In the Great Depression, no Canadian bank failed, while about 9,000 US banks sus
 
 ## Central Banks in Normal Times
 
-In normal times, the classical central bank did very little.
+In normal times, the classical central bank did very little beyond serving as the bank of the other banks.
+
+**Bank of the Banks**
+
+The customers of each bank pay the customers of other banks, so the banks owe each other money every day. To pay these debts, the banks do two things.
+
+1. **Clearing.** They calculate what each bank owes to the others and what the others owe to it. With multilateral netting in a clearing house, each bank keeps only one net position against all the others.
+2. **Settlement.** They pay the net positions with a settlement asset.
+
+The settlement asset became lighter and safer over time. In the mid-17th century, a bag of silver coins worth £100 weighed more than 14 kilograms. Between 1694 and the 1770s, the London bankers moved from coin to Bank of England notes, and from 1854 they settled their clearing balances by transfers across their accounts at the Bank of England. No coin or note moved, only two entries in the books of the Bank. Central bank money also removes the risk that a private settlement agent fails.
+
+Today, each bank has its own account at the central bank, and the balance of this account is the reserves of the bank. A real-time gross settlement (RTGS) system moves these balances one payment at a time, with immediate finality.
+
+| Area | RTGS system | Account of the bank |
+| --- | --- | --- |
+| Euro area | T2, which replaced TARGET2 in March 2023 | Account at a central bank of the Eurosystem |
+| United States | Fedwire Funds Service | Master account at a Federal Reserve Bank |
+
+T2 moves a value close to the annual GDP of the euro area every eight days. Unlike a net settlement system, RTGS cannot unwind payments when a bank fails to settle. But gross settlement needs more liquidity during the day, so many central banks give intraday credit to banks.
 
 **Bank Rate as a Ceiling**
 
@@ -209,13 +227,16 @@ A central bank can also organize a private rescue, as J. P. Morgan did in 1907.
 - Board of Governors of the Federal Reserve System. "Who Owns the Federal Reserve?" [Online](https://www.federalreserve.gov/faqs/about_14986.htm).
 - Bordo, Michael D., Angela Redish, and Hugh Rockoff. 2015. "Why Didn't Canada Have a Banking Crisis in 2008 (or in 1930, or 1907, or ...)?" *The Economic History Review* 68 (1): 218–243. [DOI](https://doi.org/10.1111/1468-0289.665), [NBER working paper](https://www.nber.org/papers/w17312).
 - Cannon, James G. 1910. *Clearing Houses*. National Monetary Commission. Government Printing Office. [Internet Archive](https://archive.org/details/clearinghouses00cann).
+- Committee on Payment and Settlement Systems. 1997. *Real-Time Gross Settlement Systems*. Bank for International Settlements, March. [PDF](https://www.bis.org/publications/real-time-gross-settlement-systems.pdf).
 - Davies, Phil. "The Federal Reserve's Role During WWI." Federal Reserve History. [Online](https://www.federalreservehistory.org/essays/feds-role-during-wwi).
 - Diamond, Douglas W., and Philip H. Dybvig. 1983. "Bank Runs, Deposit Insurance, and Liquidity." *Journal of Political Economy* 91 (3): 401–419. [DOI](https://doi.org/10.1086/261155), [reprint](https://www.minneapolisfed.org/research/qr/qr2412.pdf).
 - Domanski, Dietrich, Richhild Moessner, and William Nelson. 2014. "Central Banks as Lender of Last Resort: Experiences during the 2007–2010 Crisis and Lessons for the Future." Finance and Economics Discussion Series 2014-110, Federal Reserve Board. [PDF](https://www.federalreserve.gov/econresdata/feds/2014/files/2014110pap.pdf).
 - ECB Banking Supervision. 2020. "ECB Banking Supervision Provides Temporary Capital and Operational Relief in Reaction to Coronavirus." Press release, March 12. [Online](https://www.bankingsupervision.europa.eu/press/pr/date/2020/html/ssm.pr200312~43351ac3ac.en.html).
 - *Encyclopædia Britannica*. 1911. "Morgan, John Pierpont." 11th ed. [Wikisource](https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Morgan,_John_Pierpont).
+- European Central Bank. "T2." [Online](https://www.ecb.europa.eu/paym/target/t2/html/index.en.html).
 - FDIC. "FDIC 90 Years." [Online](https://www.fdic.gov/90years).
 - Federal Reserve Bank of St. Louis. "Number of Banks in the United States (X02NOB)." FRED, from *Banking and Monetary Statistics, 1914–1941*. [Online](https://fred.stlouisfed.org/series/X02NOB).
+- Federal Reserve Financial Services. "Fedwire Funds Service." [Online](https://www.frbservices.org/financial-services/wires).
 - Feinman, Joshua N. 1993. "Reserve Requirements: History, Current Practice, and Potential Reform." *Federal Reserve Bulletin* 79 (6): 569–589. [PDF](https://www.federalreserve.gov/monetarypolicy/0693lead.pdf).
 - Fleming, Michael, and Weiling Liu. "Near Failure of Long-Term Capital Management." Federal Reserve History. [Online](https://www.federalreservehistory.org/essays/ltcm-near-failure).
 - Ghizoni, Sandra Kollen. 2013. "Reserve Banks Open for Business." Federal Reserve History. [Online](https://www.federalreservehistory.org/essays/reserve-banks-open).
