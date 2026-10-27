@@ -111,7 +111,39 @@ $$P = \frac{360}{n}(100 - Y)$$
 - $Y$ is the cash price, the price that the buyer pays for a face value of 100.
 - $n$ is the remaining life of the bill, in calendar days.
 
-The term $100 - Y$ is the interest that the holder earns until maturity. The factor $\frac{360}{n}$ converts this interest for $n$ days into an interest for 360 days. For example, when the cash price of a 90-day Treasury bill is 99, the quoted price is $P = \frac{360}{90}(100 - 99) = 4$.
+The term $100 - Y$ is the interest that the holder earns until maturity. The factor $\frac{360}{n}$ converts this interest for $n$ days into an interest for 360 days.
+
+**Example**
+
+A Treasury bill has a face value of 100 and a remaining life of 90 days. The buyer pays a cash price of 99.
+
+1. The holder pays 99 today and receives 100 in 90 days. The interest earned over the 90 days is $100 - 99 = 1$, that is 1% of the face value.
+2. A period of 360 days contains $\frac{360}{90} = 4$ periods of 90 days.
+3. The interest for 360 days is therefore $1\% \times 4 = 4\%$ of the face value.
+
+The formula does the same steps in one line.
+
+$$P = \frac{360}{90}(100 - 99) = 4 \times 1 = 4$$
+
+Thus the market quotes the bill at 4, but the buyer pays 99. The calculation also works in the opposite direction. From a quote of 4, the interest for 90 days is $4 \times \frac{90}{360} = 1$, so the cash price is $Y = 100 - 1 = 99$.
+
+**Why the quote is annualized**
+
+The discount $100 - Y$ depends on two things, the interest rate and the remaining life of the bill. A long bill has a large discount, and a short bill has a small discount, also when the two bills pay the same rate. The table shows two bills that pay the same rate.
+
+|   Bill   | Cash price $Y$ | Discount $100 - Y$ | Quoted price $P$ |
+| :------: | :------------: | :----------------: | :--------------: |
+| 30 days  |     99.667     |       0.333        |        4         |
+| 180 days |     98.000     |       2.000        |        4         |
+
+The discounts of 0.333 and 2 do not show that the two bills pay the same rate. The quoted prices are both 4, so the comparison is immediate. The annualization gives two more advantages.
+
+- The quote stays stable over time. The discount of a bill decreases each day, because the bill comes nearer to maturity. If the rates do not change, the annualized quote does not change.
+- The quote is comparable with other rates. Deposits, loans and the other money market rates are also annual rates, so a trader can compare a bill with these instruments.
+
+**Why 360 days and not 365**
+
+The year of 360 days is an old convention of the money market. The number 360 has many divisors (2, 3, 4, 5, 6, 8, 9, 10, 12 and more), so it divides easily into months and quarters. This made the calculations by hand easier before computers. U.S. Treasury bills and many other money market instruments still use this convention.
 
 ## Macaulay Duration
 
