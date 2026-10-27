@@ -191,6 +191,13 @@ $$F_0 e^{yT} = (S_0 + U) e^{rT} \qquad F_0 = S_0 e^{(r + u - y)T}$$
 
 A high $y$ means that users expect shortages and value the commodity in hand. For investment assets $y = 0$.
 
+> [!NOTE]
+> **Gold and copper**
+>
+> Gold is an investment asset. Many investors hold it only as a store of value, so arbitrage works in both directions. If $F_0 > (S_0 + U) e^{rT}$, traders buy gold spot, store it, and sell futures. If $F_0 < (S_0 + U) e^{rT}$, holders sell their gold spot, invest the cash, and buy futures, so they get their gold back at $T$ for less. The two trades fix $F_0$ at exactly $(S_0 + U) e^{rT}$, which depends only on observable variables.
+>
+> Copper is a consumption asset. Most holders are users who need the metal for production, so they do not sell their inventory to buy futures when futures are cheap. Only the first trade works, and only the upper bound $F_0 \le (S_0 + U) e^{rT}$ holds. The shortfall below this bound is the convenience yield $y$. Nobody can observe $y$ directly, so it is implied from futures prices and not used to calculate them.
+
 ## Cost of Carry
 
 The cost of carry $c$ is the storage cost plus the interest paid to finance the asset, minus the income earned on it, all per annum with continuous compounding. It summarizes all the previous cases in two formulas. For an investment asset
