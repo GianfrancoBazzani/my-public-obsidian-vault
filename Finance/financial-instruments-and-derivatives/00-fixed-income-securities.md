@@ -351,6 +351,31 @@ The change in price for a change in yield is then
 
 $$\Delta P \approx -D_{Money} \times \Delta y$$
 
+## DV01
+
+The DV01 (dollar value of an 01) is the change in the value of a security, with its sign, when its yield rises by one basis point (0.01%, or 0.0001). A long position loses value when the yield rises, so its DV01 is negative. Some texts change the sign, so that a long position has a positive DV01.
+
+With $\Delta y = 0.0001$, the money duration formula gives the DV01 of a position.
+
+$$DV01 = -D_{Money} \times \frac{N}{100} \times 0.0001 = -D_{Mod} \times \frac{P}{100} \times N \times 0.0001$$
+
+- $N$ is the face value of the position.
+- $P$ is the full (dirty) price per 100 of face value, so $\frac{P}{100} \times N$ is the value of the position.
+
+The money duration gives the change in price for a change in yield of 1 (100%), far larger than any real market move. One basis point is a realistic move, so risk reports often state the interest rate risk as a DV01.
+
+**Example**
+
+For the bond above, with a price of 103.630 and $D_{Mod}=3.5853$, the money duration and the DV01 per 100 of face value ($N = 100$) are
+
+$$D_{Money} = 3.5853 \times 103.630 = 371.54 \qquad DV01 = -371.54 \times \frac{100}{100} \times 0.0001 = -0.03715$$
+
+The repricing at 3.99% and 4.01% gives the same value. A position with a face value of $N = 10{,}000{,}000$ has a DV01 of
+
+$$DV01 = -3.5853 \times \frac{103.630}{100} \times 10{,}000{,}000 \times 0.0001 = -3{,}715$$
+
+If the yield rises by 10 basis points, the value of the position changes by about $10 \times (-3{,}715) = -37{,}150$ (-37,067 exactly, because of the convexity).
+
 ## Convexity
 
 As we saw, the modified duration is a linear approximation. If the change in the yield is large, this approximation becomes unreliable, because the price curve is convex, not a straight line. Convexity is the second-order term that corrects this error.
