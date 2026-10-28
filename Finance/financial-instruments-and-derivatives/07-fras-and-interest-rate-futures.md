@@ -10,14 +10,6 @@ As OTC contracts, FRAs can have any notional, dates, and reference rate. Most us
 
 An $A \times B$ FRA covers the period from month $A$ to month $B$. For example, a $3 \times 6$ FRA fixes the 3-month rate that starts in 3 months, so $\tau \approx 0.25$.
 
-### FRA Rate
-
-The FRA rate is the forward rate $F$ of the reference rate for $[t_1, t_2]$, with simple compounding (see [Interest Rate Curves](02-interest-rates-curves.md)). It is the no-arbitrage rate of today's curve, not a forecast of the future rate.
-
-$$F = \frac{1}{\tau} \left[ \frac{DF(t_1)}{DF(t_2)} - 1 \right]$$
-
-In this formula, $\tau$ is the year fraction from $t_1$ to $t_2$ in the day count of the reference rate (ACT/360 for EURIBOR). At the start, the parties set $R_K = F$, so the FRA is worth zero.
-
 ### Settlement
 
 The reference rate $R$ fixes two business days before $t_1$ for EURIBOR, and the FRA settles in cash at $t_1$. The difference in interest is due at $t_2$, so the settlement discounts it to $t_1$ at $R$.
@@ -28,13 +20,11 @@ A positive amount goes from the seller to the buyer, and a negative amount from 
 
 ### Valuation
 
-After the start, $R_K$ stays fixed while $F$ moves with the curve, so the FRA gains or loses value. The value assumes that $R$ will equal $F$ and discounts the difference in interest from $t_2$.
+After the trade date, $R_K$ stays fixed while $F$ moves with the curve, so the FRA gains or loses value. The value assumes that $R$ will equal $F$ and discounts the difference in interest from $t_2$.
 
 $$V_{buyer} = N \tau (F - R_K) DF(t_2) \qquad V_{seller} = -V_{buyer}$$
 
 Since the credit crisis of 2007, the discount factors in $F$ come from a separate curve of the reference rate, and for a collateralized FRA $DF(t_2)$ comes from the OIS curve (see [Interest Rates](01-interest-rates.md)). The two curves differ because EURIBOR includes a premium for the credit and liquidity risk of banks.
-
-
 
 ## Liquidity Preference Theory
 
