@@ -1,31 +1,38 @@
 # FRAs and Interest Rate Futures
 
-## Forward Rates Agreements
+## Forward Rate Agreements
 
-A forward rate agreement (FRA) is an over-the-counter contract in which two parties agree today on a fixed interest rate to be applied to a notional principal for a single specified period in the future. At settlement, usually at the start of that period, they exchange only the net difference between the fixed rate and the floating reference rate (such as SOFR or EURIBOR), applied to the notional and discounted. The notional itself is never exchanged. An FRA is valued using today's yield curve: first, the forward rate for the contract period is derived from current discount factors as F = (P(T₁)/P(T₂) − 1)/τ, where τ is the length of the period. Then, assuming this forward rate will be realized, the value for the party receiving the fixed rate R_K is V = N × (R_K − F) × τ × P(T₂), with the sign reversed for the fixed-rate payer. The forward rate is not simply the market's expectation of future rates but the arbitrage-free rate implied by today's curve, which is why an FRA has zero value at inception (when R_K = F) and gains or loses value as interest rates move.
+A forward rate agreement (FRA) is an over-the-counter contract that fixes today an interest rate $R_K$ on a notional $N$ for one future period $[t_1, t_2]$ of $\tau$ years. The floating side is a term reference rate that fixes at the start of the period, such as 3-month EURIBOR. An overnight rate such as SOFR does not fit, because its compounded value is known only at the end of the period (see [Interest Rates](01-interest-rates.md)). The parties never exchange the notional, only the difference in interest, discounted to $t_1$. The buyer pays $R_K$ and gains if rates rise. The seller receives $R_K$ and gains if rates fall.
 
-Because FRAs are OTC contracts, the two parties can customize all the terms, such as the notional, the dates, and the reference rate. In practice, most FRAs use standard terms, such as common periods ($3 \times 6$, $6 \times 12$) and standard legal documentation, because standard contracts are easier to price, hedge, and close.
+As OTC contracts, FRAs can have any notional, dates, and reference rate. Most use standard periods such as $3 \times 6$ and $6 \times 12$ and standard documentation (FRABBA terms, ISDA definitions), because standard contracts are easier to price, hedge, and close.
 
 ### Notation
 
-An FRA $A \times B$ covers the period that starts in $A$ months and ends in $B$ months. For example, a $3 \times 6$ FRA fixes the interest rate for the 3-month period that starts in 3 months, so $\tau = 0.25$.
+An $A \times B$ FRA covers the period from month $A$ to month $B$. For example, a $3 \times 6$ FRA fixes the 3-month rate that starts in 3 months, so $\tau \approx 0.25$.
 
 ### FRA Rate
 
-The FRA rate is the forward rate for the period $[t_1, t_2]$, which comes from the discount factors of today.
+The FRA rate is the forward rate $F$ of the reference rate for $[t_1, t_2]$, with simple compounding (see [Interest Rate Curves](02-interest-rates-curves.md)). It is the no-arbitrage rate of today's curve, not a forecast of the future rate.
 
-$$F_{FRA}(t_1, t_2) = \frac{1}{\tau} \left[ \frac{DF(t_1)}{DF(t_2)} - 1 \right]$$
+$$F = \frac{1}{\tau} \left[ \frac{DF(t_1)}{DF(t_2)} - 1 \right]$$
 
-In this formula, $\tau = t_2 - t_1$ is the length of the period in years.
+In this formula, $\tau$ is the year fraction from $t_1$ to $t_2$ in the day count of the reference rate (ACT/360 for EURIBOR). At the start, the parties set $R_K = F$, so the FRA is worth zero.
 
 ### Settlement
 
-The FRA settles at $t_1$, when the reference rate fixes. The interest for the period is paid at $t_2$, so the settlement discounts the difference in interest from $t_2$ back to $t_1$ with the reference rate that fixes at $t_1$.
+The reference rate $R$ fixes two business days before $t_1$ for EURIBOR, and the FRA settles in cash at $t_1$. The difference in interest is due at $t_2$, so the settlement discounts it to $t_1$ at $R$.
 
-$$\text{Settlement} = \frac{N \times \tau \times (R_{fixing} - F_{FRA})}{1 + \tau \times R_{fixing}}$$
+$$\text{Settlement}_{buyer} = \frac{N \tau (R - R_K)}{1 + \tau R}$$
 
-In this formula, $N$ is the notional and $R_{fixing}$ is the reference rate that fixes at $t_1$. If the settlement is positive, the buyer of the FRA, who pays the fixed rate, receives it from the seller. If the settlement is negative, the buyer pays it to the seller.
+A positive amount goes from the seller to the buyer, and a negative amount from the buyer to the seller.
 
+### Valuation
+
+After the start, $R_K$ stays fixed while $F$ moves with the curve, so the FRA gains or loses value. The value assumes that $R$ will equal $F$ and discounts the difference in interest from $t_2$.
+
+$$V_{buyer} = N \tau (F - R_K) DF(t_2) \qquad V_{seller} = -V_{buyer}$$
+
+Since the credit crisis of 2007, the discount factors in $F$ come from a separate curve of the reference rate, and for a collateralized FRA $DF(t_2)$ comes from the OIS curve (see [Interest Rates](01-interest-rates.md)). The two curves differ because EURIBOR includes a premium for the credit and liquidity risk of banks.
 
 
 
