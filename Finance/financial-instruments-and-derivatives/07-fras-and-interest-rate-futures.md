@@ -44,25 +44,49 @@ In this section we describe contracts that are traded in the United States. None
 
 ### Treasury Bond Futures
 
-*Ultra-T Futures*
+Treasury bond and Treasury note futures settle by the delivery of a Treasury security. The party with the short position chooses which security to deliver from a basket of eligible bonds or notes. The remaining maturity of a security is measured from the first day of the delivery month.
 
-Started in 2010, any govetment bod with a maturity over 25 years can be delvered by the party with the short position under the terms of this contract
+*Ultra T-Bond Futures*
+
+Under the terms of this contract, which started in 2010, the party with the short position can deliver any government bond with a remaining maturity of at least 25 years. The face value of one contract is \$100,000.
 
 *T-Bond Futures*
 
-In the T-bond futures contract, any government bond that has a maturity between 15 and 25 years can be delivered.
+In the T-bond futures contract, any government bond that has a remaining maturity of at least 15 years and less than 25 years can be delivered. The face value of one contract is \$100,000.
 
-*10,5,2-year Treasury Notes futures*
+*10-, 5- and 2-Year Treasury Note Futures*
 
-Any note with maturiety between 61/2 and 10 years can be delivered.
+| Contract | Face value | Remaining maturity of the note | Original maturity of the note |
+| -------- | ---------- | ------------------------------ | ----------------------------- |
+| 10-year  | \$100,000  | 6.5 to 10 years                | Any                           |
+| 5-year   | \$100,000  | At least 4 years 2 months      | At most 5 years 3 months      |
+| 2-year   | \$200,000  | 1 year 9 months to 2 years     | At most 5 years 3 months      |
 
-*30-Day Fed Funds Rate futures*
+For the 2-year contract, the upper limit of 2 years is measured from the last day of the delivery month. The exchange also lists 3-year and Ultra 10-year Treasury note futures.
 
-The 30-day Fed Funds Rate contract has a settlement price equial to 100 minus the arithmetic average of the freadl funs rate during the contract month.
+**Fed Funds Futures**
+
+The 30-day Fed Funds futures contract has a settlement price equal to 100 minus the arithmetic average of the daily effective federal funds rate during the contract month. The contract settles in cash on the first business day after the end of the month. Its notional is \$5 million for one month, so one basis point is worth $5{,}000{,}000 \times 0.0001 / 12 = \$41.67$. The market uses these futures to infer the expected path of the policy rate of the Federal Reserve.
+
+**Quotes**
+
+Ultra T-bond futures and Treasury bond futures contracts are quoted in dollar per $100 face value. This is similar to the way the bonds are quoted in the spot market. for example 179-20 means 179 20/32 or 179.625. The settlmement price oft h10-year Tresury note futres contract 
+
+**Conversion Factors**
+
+TODO
+
+**Cheapest-to-Deliver Bond**
+
+TODO
+
+**Determining the Futures Price**
+
+TODO
 
 ### Eurodollar and SOFR Futures
 
-
+TODO
 
 ## Liquidity Preference Theory
 
@@ -73,3 +97,11 @@ Explain what liquidity preference theory and expectations theory imply about for
 **Liquidity preference theory:** Investors demand a premium for holding riskier long-term bonds, so the forward rate equals the expected future spot rate plus a liquidity premium. Forward rates therefore overstate expected future spot rates. This is why the curve usually slopes upward even when rates are expected to stay flat.
 
 **Example:** With a 1-year spot of 4% and a 2-year spot of 5%, the forward rate is about 6%. Expectations theory says the market expects next year's rate to be 6%. Liquidity preference theory, with a 1% premium, says it expects about 5%.
+
+## References
+
+- CME Group, [Understand Treasuries Contract Specifications](https://www.cmegroup.com/education/courses/introduction-to-treasuries/understand-treasuries-contract-specifications.html).
+- CME Group, [Calculating U.S. Treasury Futures Conversion Factors](https://www.cmegroup.com/articles/2024/calculating-us-treasury-futures-conversion-factors.html).
+- CME Group, [30 Day Federal Funds Futures Contract Specs](https://www.cmegroup.com/trading/interest-rates/stir/30-day-federal-fund_contractSpecs_futures.html).
+- CME Group, [CBOT Rulebook, Chapter 22, 30-Day Federal Fund Futures](https://www.cmegroup.com/rulebook/CBOT/III/22.pdf).
+- Alternative Reference Rates Committee, [An Updated User's Guide to SOFR](https://www.newyorkfed.org/medialibrary/Microsites/arrc/files/2021/users-guide-to-sofr2021-update.pdf).
