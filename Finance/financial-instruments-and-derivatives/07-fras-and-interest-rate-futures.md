@@ -2,29 +2,39 @@
 
 ## Forward Rate Agreements
 
-A forward rate agreement (FRA) is an over-the-counter contract that fixes today an interest rate $R_K$ on a notional $N$ for one future period $[t_1, t_2]$ of $\tau$ years. The floating side is a term reference rate that fixes at the start of the period, such as 3-month EURIBOR. An overnight rate such as SOFR does not fit, because its compounded value is known only at the end of the period (see [Interest Rates](01-interest-rates.md)). The parties never exchange the notional, only the difference in interest, discounted to $t_1$. The buyer pays $R_K$ and gains if rates rise. The seller receives $R_K$ and gains if rates fall.
+A forward rate agreement (FRA) is an over-the-counter agreement to exchange a fixed rate $R_K$ for a reference rate that the market will observe in the future. Both rates apply to a principal $L$ for the period from $t_1$ to $t_2$, of $\tau = t_2 - t_1$ years, but the principal is not exchanged. The reference rate was usually LIBOR. After its phase-out, FRAs use rates such as three-month SOFR or SONIA (see [Interest Rates](01-interest-rates.md)).
+
+An FRA locks in a future rate. A trader who will receive SOFR on a principal in a future period receives a fixed rate and pays SOFR in an FRA. A trader who will pay SOFR does the opposite.
 
 As OTC contracts, FRAs can have any notional, dates, and reference rate. Most use standard periods such as $3 \times 6$ and $6 \times 12$ and standard documentation (FRABBA terms, ISDA definitions), because standard contracts are easier to price, hedge, and close.
 
-### Notation
+### Payoff
 
-An $A \times B$ FRA covers the period from month $A$ to month $B$. For example, a $3 \times 6$ FRA fixes the 3-month rate that starts in 3 months, so $\tau \approx 0.25$.
+If $R_M$ is the reference rate that the market observes for the period, the party that receives the fixed rate gets the following amount at $t_2$. A negative amount goes to the other party.
 
-### Settlement
+$$\text{Payoff}_{\text{receive fixed}} = L \tau (R_K - R_M)$$
 
-The reference rate $R$ fixes two business days before $t_1$ for EURIBOR, and the FRA settles in cash at $t_1$. The difference in interest is due at $t_2$, so the settlement discounts it to $t_1$ at $R$.
+**Example.** An FRA exchanges 3% for three-month LIBOR from year 2 to year 2.25 on a principal of \$100 million, with quarterly compounding. LIBOR proves to be 3.5%, so the party that pays 3% and receives LIBOR gets
 
-$$\text{Settlement}_{buyer} = \frac{N \tau (R - R_K)}{1 + \tau R}$$
+$$100{,}000{,}000 \times (0.035 - 0.030) \times 0.25 = \$125{,}000$$
 
-A positive amount goes from the seller to the buyer, and a negative amount from the buyer to the seller.
+at 2.25 years. In practice, LIBOR is known at year 2, so the payment is made at 2 years and is $125{,}000 / (1 + 0.035 \times 0.25) = \$123{,}916$.
 
 ### Valuation
 
-After the trade date, $R_K$ stays fixed while $F$ moves with the curve, so the FRA gains or loses value. The value assumes that $R$ will equal $F$ and discounts the difference in interest from $t_2$.
+When an FRA is set up, $R_K$ is normally the forward rate $R_F$ of the reference rate for the period (see [Interest Rate Curves](02-interest-rates-curves.md)), so the FRA is worth zero. Later $R_F$ changes. A new FRA at $R_F$ is worth zero, and for the party that receives the fixed rate it differs from the old FRA only by $L \tau (R_K - R_F)$ at $t_2$. The old FRA is thus worth the present value of this amount.
 
-$$V_{buyer} = N \tau (F - R_K) DF(t_2) \qquad V_{seller} = -V_{buyer}$$
+$$V_{\text{receive fixed}} = L \tau (R_K - R_F) DF(t_2) \qquad V_{\text{pay fixed}} = L \tau (R_F - R_K) DF(t_2)$$
 
-Since the credit crisis of 2007, the discount factors in $F$ come from a separate curve of the reference rate, and for a collateralized FRA $DF(t_2)$ comes from the OIS curve (see [Interest Rates](01-interest-rates.md)). The two curves differ because EURIBOR includes a premium for the credit and liquidity risk of banks.
+An FRA can thus be valued if we assume that the reference rate will equal today's forward rate $R_F$. $R_K$ and $R_F$ use the compounding of the period.
+
+### Backward Looking vs Forward Looking
+
+A forward-looking rate is fixed at the start of its period. LIBOR, now phased out (see [Interest Rates](01-interest-rates.md)), was such a rate, and EURIBOR still is. In an FRA on LIBOR, $R_M$ was known at $t_1$, so the FRA settled at $t_1$ with the payoff discounted from $t_2$ to $t_1$ at $R_M$.
+
+A backward-looking rate is known only at the end of its period. SOFR is an overnight rate, so the FRA uses SOFR compounded day by day over the period, from actual overnight repo transactions. $R_M$ is thus known only at $t_2$, and the FRA pays the payoff at $t_2$ with no discount. Term SOFR, a forward-looking rate derived from SOFR futures, can restore the old structure, but US market guidance limits its use in derivatives to hedges of Term SOFR loans.
+
+![Timeline of the payment of an FRA on LIBOR and on SOFR](Attachments/fra-libor-vs-sofr-timeline.svg)
 
 ## Liquidity Preference Theory
 

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<rect width="760" height="330" fill="white"/>
+<defs>
+  <marker id="pay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#d9480f"/>
+  </marker>
+</defs>
+
+<!-- ===== LIBOR: forward looking ===== -->
+<text x="20" y="28" font-weight="bold">LIBOR (forward looking, phased out)</text>
+
+<line x1="80" y1="120" x2="640" y2="120" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="108" x2="80" y2="132" stroke="#333" stroke-width="2"/>
+<line x1="320" y1="108" x2="320" y2="132" stroke="#333" stroke-width="2"/>
+<line x1="640" y1="108" x2="640" y2="132" stroke="#333" stroke-width="2"/>
+
+<!-- rate known for the whole period -->
+<rect x="322" y="100" width="316" height="10" fill="#1f4fd8" fill-opacity="0.25"/>
+<text x="480" y="92" text-anchor="middle" fill="#1f4fd8">R<tspan font-size="11" dy="3">M</tspan><tspan dy="-3"> known for the whole period</tspan></text>
+<circle cx="320" cy="120" r="6" fill="#1f4fd8"/>
+
+<!-- payment at t1 -->
+<line x1="320" y1="114" x2="320" y2="48" stroke="#d9480f" stroke-width="2.5" marker-end="url(#pay)"/>
+<text x="310" y="60" text-anchor="end" fill="#d9480f">payment at t<tspan font-size="11" dy="3">1</tspan><tspan dy="-3">, discounted at R</tspan><tspan font-size="11" dy="3">M</tspan></text>
+
+<text x="80" y="152" text-anchor="middle">t<tspan font-size="11" dy="3">0</tspan></text>
+<text x="320" y="152" text-anchor="middle">t<tspan font-size="11" dy="3">1</tspan></text>
+<text x="640" y="152" text-anchor="middle">t<tspan font-size="11" dy="3">2</tspan></text>
+<text x="80" y="172" text-anchor="middle" font-size="12" fill="#555">trade</text>
+<text x="320" y="172" text-anchor="middle" font-size="12" fill="#555">fixing and payment</text>
+<text x="640" y="172" text-anchor="middle" font-size="12" fill="#555">end of period</text>
+
+<!-- ===== SOFR: backward looking ===== -->
+<text x="20" y="200" font-weight="bold">SOFR (backward looking)</text>
+
+<line x1="80" y1="275" x2="640" y2="275" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="263" x2="80" y2="287" stroke="#333" stroke-width="2"/>
+<line x1="320" y1="263" x2="320" y2="287" stroke="#333" stroke-width="2"/>
+<line x1="640" y1="263" x2="640" y2="287" stroke="#333" stroke-width="2"/>
+
+<!-- daily fixings -->
+<g stroke="#1f4fd8" stroke-width="1.5">
+  <line x1="336" y1="275" x2="336" y2="265"/><line x1="352" y1="275" x2="352" y2="265"/>
+  <line x1="368" y1="275" x2="368" y2="265"/><line x1="384" y1="275" x2="384" y2="265"/>
+  <line x1="400" y1="275" x2="400" y2="265"/><line x1="416" y1="275" x2="416" y2="265"/>
+  <line x1="432" y1="275" x2="432" y2="265"/><line x1="448" y1="275" x2="448" y2="265"/>
+  <line x1="464" y1="275" x2="464" y2="265"/><line x1="480" y1="275" x2="480" y2="265"/>
+  <line x1="496" y1="275" x2="496" y2="265"/><line x1="512" y1="275" x2="512" y2="265"/>
+  <line x1="528" y1="275" x2="528" y2="265"/><line x1="544" y1="275" x2="544" y2="265"/>
+  <line x1="560" y1="275" x2="560" y2="265"/><line x1="576" y1="275" x2="576" y2="265"/>
+  <line x1="592" y1="275" x2="592" y2="265"/><line x1="608" y1="275" x2="608" y2="265"/>
+  <line x1="624" y1="275" x2="624" y2="265"/>
+</g>
+<text x="460" y="252" text-anchor="middle" fill="#1f4fd8">daily SOFR, compounded</text>
+<circle cx="640" cy="275" r="6" fill="#1f4fd8"/>
+
+<!-- payment at t2 -->
+<line x1="640" y1="269" x2="640" y2="205" stroke="#d9480f" stroke-width="2.5" marker-end="url(#pay)"/>
+<text x="650" y="222" fill="#d9480f">payment</text>
+<text x="650" y="240" fill="#d9480f">at t<tspan font-size="11" dy="3">2</tspan></text>
+
+<text x="80" y="307" text-anchor="middle">t<tspan font-size="11" dy="3">0</tspan></text>
+<text x="320" y="307" text-anchor="middle">t<tspan font-size="11" dy="3">1</tspan></text>
+<text x="640" y="307" text-anchor="middle">t<tspan font-size="11" dy="3">2</tspan></text>
+<text x="80" y="325" text-anchor="middle" font-size="12" fill="#555">trade</text>
+<text x="320" y="325" text-anchor="middle" font-size="12" fill="#555">start of period</text>
+<text x="640" y="325" text-anchor="middle" font-size="12" fill="#555">R<tspan font-size="9" dy="2">M</tspan><tspan dy="-2"> known, payment</tspan></text>
+</svg>
