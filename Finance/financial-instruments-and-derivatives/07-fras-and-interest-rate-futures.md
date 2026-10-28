@@ -36,6 +36,34 @@ A backward-looking rate is known only at the end of its period. SOFR is an overn
 
 ![Timeline of the payment of an FRA on LIBOR and on SOFR](Attachments/fra-libor-vs-sofr-timeline.svg)
 
+## Interest Rates Futures
+
+Futures of interest rates are standarized contracts that allow to fix interest rates today for a specific future period. They trade on organized exchanges, and investors buy and sell them through brokers.
+
+In this section we describe contracts that are traded in the United States. Nonetheless, many of the other interest rate futures contracts throughout the world have been modeled on these contracts.
+
+### Treasury Bond Futures
+
+*Ultra-T Futures*
+
+Started in 2010, any govetment bod with a maturity over 25 years can be delvered by the party with the short position under the terms of this contract
+
+*T-Bond Futures*
+
+In the T-bond futures contract, any government bond that has a maturity between 15 and 25 years can be delivered.
+
+*10,5,2-year Treasury Notes futures*
+
+Any note with maturiety between 61/2 and 10 years can be delivered.
+
+*30-Day Fed Funds Rate futures*
+
+The 30-day Fed Funds Rate contract has a settlement price equial to 100 minus the arithmetic average of the freadl funs rate during the contract month.
+
+### Eurodollar and SOFR Futures
+
+
+
 ## Liquidity Preference Theory
 
 Explain what liquidity preference theory and expectations theory imply about forward rates and expected future rates.
