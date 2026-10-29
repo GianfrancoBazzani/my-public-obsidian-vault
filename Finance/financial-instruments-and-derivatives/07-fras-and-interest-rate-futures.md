@@ -162,11 +162,15 @@ A eurodollar is a U.S. dollar deposit in a bank outside the United States. Eurod
 
 They no longer trade. Before USD LIBOR ended on June 30, 2023, CME converted the open Eurodollar futures and options with an expiry from September 2023, about 7.5 million contracts at the close of April 14, 2023, into 3-month SOFR futures and options. The May and June 2023 contracts traded until expiry, and the June contract, settled on the LIBOR fixing of June 19, 2023, was the last.
 
+**SOFR Futures**
+
+The 1-month SOFR futures contract is designed to be as similar as possible to the federal funds rate futures contract. The settlement at the end of a contract month equals 100 minus the arithmetic average of SOFR 1-day rates during the month.
+
+A 1-month SOFR contract is designed to hedge a \$5000000 position. In this respect, it is similar to the federal funds rate contract. When the rate implied by contracts changes by 1 basis point, the gain or loss per contract is \$41.67. This is consistent with the size, because 1 basis point on \$5000000 for 1 month (1/12 of a year) is worth $5000000 \times 0.0001 \times \frac{1}{12} = 41.67$, in the same way as the \$25 of the 3-month contract is $1000000 \times 0.0001 \times \frac{1}{4}$. Contracts trade for the 14 months following the current month.
+
+The 3-month SOFR futures contract is designed to be as similar as possible to the Eurodollar futures contract. The settlement is on the third Wednesday of a month. It equals 100 minus the result of compounding the 1-day SOFR rates over the previous 3 months. The delivery month is 3 months later. The settlement price equals $100 - R$, where $R$ is the rate obtained by compounding the 1-day SOFR rates observed. 3-month SOFR futures trade for the contract months of March, June, September, and December. The contract is designed to hedge a \$1 million position, similarly to the Eurodollar. When the quote changes by 1 basis point, the gain or loss per contract is \$25. 3-month SOFR futures and Eurodollar futures contracts are therefore structurally very similar. The main difference is that the Eurodollar futures contract is settled at the beginning (forward-looking), whereas the 3-month SOFR futures contract is settled at the end (backward-looking).
+
 3-month SOFR futures keep the quote and the \$25 per basis point, but settle on daily SOFR compounded over the 3-month period, known only at its end, instead of a LIBOR fixing known at its start (see [Backward Looking vs Forward Looking](#backward-looking-vs-forward-looking)).
-
-**SOFT Futures**
-
-
 
 ## Liquidity Preference Theory
 
