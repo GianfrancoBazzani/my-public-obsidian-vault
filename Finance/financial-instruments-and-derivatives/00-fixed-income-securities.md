@@ -135,6 +135,10 @@ In general, for a face value of 100, the relation between the quoted price and t
 
 $$P = \frac{360}{n}(100 - Y)$$
 
+or equivalently
+
+$$Y = 100 - \frac{n}{360}P$$
+
 - $P$ is the quoted price, that is the discount rate in percent.
 - $Y$ is the cash price, the price that the buyer pays for a face value of 100.
 - $n$ is the remaining life of the bill, in calendar days.
