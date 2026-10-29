@@ -189,6 +189,8 @@ One reason for the convexity adjustment is the daily settlement, which favors th
 
 In both cases the effect is positive for the short side and negative for the long side. Traders in FRAs are not affected, because an FRA pays once and does not have day-to-day flows. The long side of a futures accepts its disadvantage only at a lower futures price, so the futures rate is higher than the forward rate and $c$ is positive.
 
+Eurodollar futures had a second reason. They settled at the start of the period to which the rate applied, whereas an FRA pays the same amount at the end of the period, or its present value at the start (see [Payoff](#payoff)). Early payment is worth more when rates are high, which is when the short side gains, and less when rates are low, which is when the long side gains. This also favors the short side and increases $c$. The 3-month SOFR futures settles at the end of its period, like an FRA on SOFR, so this reason does not apply to it.
+
 ### Zero Curves
 
 Futures contracts give estimates of the forward rates, after the convexity adjustment and the conversion to continuous compounding. With the forward rate equation for continuous compounding (see [Interest Rate Curves](02-interest-rates-curves.md#forward-rates)), each forward rate $F$ from $T_1$ to $T_2$ extends a known zero rate $R_1$ at $T_1$ to the zero rate $R_2$ at $T_2$.
