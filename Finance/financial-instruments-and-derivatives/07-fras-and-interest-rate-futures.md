@@ -106,11 +106,27 @@ The interest rate for a 3-month period is $\sqrt{1.03} - 1$, or 1.4889%, so disc
 
 ![Timeline of the conversion factor of a bond that is 3 months into a coupon period](Attachments/conversion-factor-3-month-offset.svg)
 
-
-
 **Cheapest-to-Deliver Bond**
 
-TODO
+At any given time during the delivery month, there are many bonds that can be delivered in bond futures contracts. These vary widely as far as coupon and maturity are concerned. The party with the short position can choose which of the available bonds is "cheapest" to deliver. Because the party with the short position receives
+
+(Most recent settlement price X conversion factor) + Accrued interest 
+
+and the cost of purchasing a bond is 
+
+Quoted bond price + Accrued interest
+
+the cheapest-to-deliver bond is the one which
+
+Quoted bond price - (Most recent settlement price X conversion factor)
+
+is the least. Once the party with the short position has decided to deliver, it can determine the cheapest-to-deliver bond by examining each of the deliverable bonds in turn.
+
+When bond yields are in excess of 6%, the conversion factor system tends to favor the delivery of low-coupon long-maturity bonds. When yields are less than 6%, the system tends to favor the delivery of high-coupon short-maturity bonds. Also, when the yield curve is upward-sloping, there is a tendency for bonds with a short time to maturity to be delivered.
+
+**Wild Card Play**
+
+In addition to the cheapest-to-deliver bond option, the party iwth a short poistion has an option known as the wild card play.
 
 **Determining the Futures Price**
 
