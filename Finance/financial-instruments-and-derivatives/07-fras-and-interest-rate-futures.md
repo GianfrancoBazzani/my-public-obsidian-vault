@@ -40,7 +40,9 @@ A backward-looking rate is known only at the end of its period. SOFR is an overn
 
 Futures of interest rates are standarized contracts that allow to fix interest rates today for a specific future period. They trade on organized exchanges, and investors buy and sell them through brokers.
 
-TODO draw a drawing with the key dates in a future contract and the daily settlmeent and soo on
+Like all futures, they settle daily at the settlement price, through a margin account with an initial and a maintenance margin (see [Futures and Forwards](04-futures-and-forwards.md)), while a forward pays only at maturity. With constant interest rates this timing has no effect, and futures and forward prices are equal. For interest rate futures, the daily flows depend on the same rates at which they are invested or financed. The long side of a futures quoted at 100 minus the rate loses when rates rise, so it finances losses at high rates and invests gains at low rates, which makes the futures rate a little higher than the forward rate. The gap is negligible for short maturities but not for long ones, which need a convexity adjustment (see [Convexity Adjustment](#convexity-adjustment)). Until then, we price interest rate futures like forwards.
+
+![Futures and spot prices up to the last trading day, and the daily settlement of a long position](Attachments/futures-daily-settlement-timeline.svg)
 
 In this section we describe contracts that are traded in the United States. Nonetheless, many of the other interest rate futures contracts throughout the world have been modeled on these contracts.
 
@@ -169,6 +171,41 @@ The 1-month SOFR futures contract is designed to be as similar as possible to th
 $$5000000 \times 0.0001 \times \frac{1}{12} = \$41.67$$
 
 The 3-month SOFR futures contract is designed to be as similar as possible to the Eurodollar futures contract, with a \$1 million position, \$25 per basis point, and contract months of March, June, September, and December. The reference period starts on the third Wednesday of the contract month and ends on the third Wednesday 3 months later, when the contract settles at $100 - R$, where $R$ is the rate obtained by compounding the 1-day SOFR rates over the period. The main difference is that the Eurodollar futures settled on a LIBOR fixing known at the start of the period (forward-looking), whereas the 3-month SOFR futures settles on a rate known only at its end (backward-looking) (see [Backward Looking vs Forward Looking](#backward-looking-vs-forward-looking)).
+
+### Convexity Adjustment
+
+While previously we supposed that forward and futures pricing are very similar, when contracts last longer (as a rule of thumb, 2 years) the convexity effect makes the difference between futures and FRAs distinguishable. The convexity adjustment $c$ is made so that
+
+$$\text{Forward rate} = \text{Futures rate} - c$$
+
+One reason for the convexity adjustment is the daily settlement, which favors the short side of a futures compared to the same contract in an FRA. The futures price is 100 minus the rate, so the short side gains when rates increase and the long side gains when rates decrease.
+
+- When rates increase, the short side gains and invests the profits at higher interest, which is a positive effect, and the long side loses and finances the debt at higher interest, which is a negative effect.
+- When rates decrease, the long side gains but invests the profits at lower interest, which is a negative effect, and the short side loses but finances the debt at lower interest, which is a positive effect.
+
+In both cases the effect is positive for the short side and negative for the long side. Traders in FRAs are not affected, because an FRA pays once and does not have day-to-day flows. The long side of a futures accepts its disadvantage only at a lower futures price, so the futures rate is higher than the forward rate and $c$ is positive.
+
+### Zero Curves
+
+Futures contracts give estimates of the forward rates, after the convexity adjustment and the conversion to continuous compounding. With the forward rate equation for continuous compounding (see [Interest Rate Curves](02-interest-rates-curves.md#forward-rates)), each forward rate $F$ from $T_1$ to $T_2$ extends a known zero rate $R_1$ at $T_1$ to the zero rate $R_2$ at $T_2$.
+
+$$R_2 = \frac{F (T_2 - T_1) + R_1 T_1}{T_2}$$
+
+The same equation bootstraps LIBOR or SOFR zero curves, one futures contract after the other.
+
+**Example, LIBOR.** The 300-day LIBOR zero rate, interpolated between the 6-month and 12-month rates, is 3.10% with continuous compounding. Eurodollar futures quotes give a forward rate of 3.60% with continuous compounding for the 90-day period that starts in 300 days, which extends the zero curve to the next contract maturity in 391 days.
+
+$$R_{391} = \frac{0.036 \times 91 + 0.031 \times 300}{391} = 0.03216 = 3.216\%$$
+
+Each further forward rate extends the curve for a further three months. The rate of the Eurodollar futures is a 90-day rate, but the bootstrap applies it to the 91 days between the maturities of the contracts, so that the periods join without gaps.
+
+**Example, SOFR.** In October, the current 3-month SOFR futures has 2 months to its December delivery date, so 1 month of its reference period has passed. The overnight rates of that month, already observed, compound to 2% per year, and the futures quote gives 2.5% per year for the whole 3-month period, both with continuous compounding. The zero rate $R$ for the next 2 months must combine with the observed month to give the rate of the whole period.
+
+$$0.02 \times \frac{1}{12} + R \times \frac{2}{12} = 0.025 \times \frac{3}{12}$$
+
+$$R = \frac{0.025 \times 3 - 0.02 \times 1}{2} = 0.0275 = 2.75\%$$
+
+![Timeline of the SOFR example, with the observed and implied rates of the current contract, its settlement, and the 2-month zero rate from today](Attachments/sofr-futures-bootstrap-timeline.svg)
 
 ## Liquidity Preference Theory
 

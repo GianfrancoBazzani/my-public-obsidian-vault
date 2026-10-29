@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="790" height="320" viewBox="0 0 790 320" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<rect width="790" height="320" fill="white"/>
+<defs>
+  <marker id="pay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#d9480f"/>
+  </marker>
+</defs>
+
+<!-- vertical guides: Sep 80, Oct 250, Dec 590 (1 month = 170 px) -->
+<g stroke="#ccc" stroke-dasharray="3 3">
+  <line x1="80" y1="40" x2="80" y2="215"/>
+  <line x1="250" y1="40" x2="250" y2="215"/>
+  <line x1="590" y1="40" x2="590" y2="215"/>
+</g>
+
+<!-- ===== current contract: Sep to Dec ===== -->
+<text x="20" y="28" font-weight="bold">Current contract, delivery in December</text>
+<rect x="80" y="62" width="170" height="20" fill="#1f4fd8" fill-opacity="0.55"/>
+<rect x="250" y="62" width="340" height="20" fill="#1f4fd8" fill-opacity="0.15" stroke="#1f4fd8" stroke-dasharray="4 3"/>
+<g stroke="white" stroke-width="1.2">
+  <line x1="88" y1="62" x2="88" y2="82"/><line x1="96" y1="62" x2="96" y2="82"/>
+  <line x1="104" y1="62" x2="104" y2="82"/><line x1="112" y1="62" x2="112" y2="82"/>
+  <line x1="120" y1="62" x2="120" y2="82"/><line x1="128" y1="62" x2="128" y2="82"/>
+  <line x1="136" y1="62" x2="136" y2="82"/><line x1="144" y1="62" x2="144" y2="82"/>
+  <line x1="152" y1="62" x2="152" y2="82"/><line x1="160" y1="62" x2="160" y2="82"/>
+  <line x1="168" y1="62" x2="168" y2="82"/><line x1="176" y1="62" x2="176" y2="82"/>
+  <line x1="184" y1="62" x2="184" y2="82"/><line x1="192" y1="62" x2="192" y2="82"/>
+  <line x1="200" y1="62" x2="200" y2="82"/><line x1="208" y1="62" x2="208" y2="82"/>
+  <line x1="216" y1="62" x2="216" y2="82"/><line x1="224" y1="62" x2="224" y2="82"/>
+  <line x1="232" y1="62" x2="232" y2="82"/><line x1="240" y1="62" x2="240" y2="82"/>
+</g>
+<text x="165" y="55" text-anchor="middle" font-size="13" fill="#1f4fd8">observed, 2%</text>
+<text x="420" y="55" text-anchor="middle" font-size="13" fill="#1f4fd8">not observed yet, R = 2.75%</text>
+<text x="335" y="102" text-anchor="middle" font-size="13" fill="#333">futures quote, 2.5% for the whole 3 months</text>
+
+<!-- payment in December -->
+<line x1="590" y1="82" x2="590" y2="44" stroke="#d9480f" stroke-width="2.5" marker-end="url(#pay)"/>
+<text x="600" y="56" font-size="13" fill="#d9480f">settles in December at</text>
+<text x="600" y="72" font-size="13" fill="#d9480f">100 − compounded SOFR</text>
+
+<!-- ===== zero rate from today ===== -->
+<text x="20" y="150" font-weight="bold">Zero rate from today</text>
+<g stroke="#1f4fd8" stroke-width="2">
+  <line x1="250" y1="185" x2="590" y2="185"/>
+  <line x1="250" y1="178" x2="250" y2="192"/><line x1="590" y1="178" x2="590" y2="192"/>
+</g>
+<rect x="350" y="167" width="140" height="15" fill="white"/>
+<text x="420" y="179" text-anchor="middle" font-size="13" fill="#1f4fd8">R(2 months) = 2.75%</text>
+
+<!-- ===== time axis ===== -->
+<line x1="80" y1="225" x2="590" y2="225" stroke="#333" stroke-width="2"/>
+<g stroke="#333" stroke-width="2">
+  <line x1="80" y1="215" x2="80" y2="235"/>
+  <line x1="250" y1="215" x2="250" y2="235"/>
+  <line x1="590" y1="215" x2="590" y2="235"/>
+</g>
+<circle cx="250" cy="225" r="6" fill="#1f4fd8"/>
+<text x="80" y="255" text-anchor="middle">September</text>
+<text x="250" y="255" text-anchor="middle">October</text>
+<text x="590" y="255" text-anchor="middle">December</text>
+<text x="80" y="272" text-anchor="middle" font-size="12" fill="#555">period starts</text>
+<text x="250" y="272" text-anchor="middle" font-size="12" fill="#555">today</text>
+<text x="590" y="272" text-anchor="middle" font-size="12" fill="#555">settlement</text>
+
+<!-- equation -->
+<text x="335" y="305" text-anchor="middle" font-size="14" fill="#333">0.02 × 1/12 + R × 2/12 = 0.025 × 3/12, so R = 2.75%</text>
+</svg>

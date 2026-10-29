@@ -158,7 +158,7 @@ When no liquid futures contract matures later than the expiration of the hedge, 
 
 The result is a long-dated futures contract created by trading a series of short-dated contracts.
 
-### TODO ADD DURATION BASE HHEDGING STRATEGIES
+### TODO ADD DURATION BASE HEDGING STRATEGIES HUll 6.4
 
 
-### TODO ADD HEDGING PROTFIOLOS OF ASSETS AND LIABILITIES
+### TODO ADD HEDGING PROTFILIOS OF ASSETS AND LIABILITIES 6.5
