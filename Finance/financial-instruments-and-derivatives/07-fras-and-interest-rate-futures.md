@@ -156,7 +156,17 @@ $$F_0 = (S_0 - I) e^{rT}$$
 
 ### Eurodollar and SOFR Futures
 
-TODO
+**Eurodollar**
+
+A eurodollar is a U.S. dollar deposit in a bank outside the United States. Eurodollar futures were on three-month (90-day) USD LIBOR, the interbank rate on these deposits, with a principal of \$1 million and a quote of 100 minus the rate, so one basis point is worth \$25 ($1000000 \times 0.0001 \times 0.25$). They settled in cash at 100 minus the LIBOR fixing of the last trading day, the second London business day before the third Wednesday of the contract month.
+
+They no longer trade. Before USD LIBOR ended on June 30, 2023, CME converted the open Eurodollar futures and options with an expiry from September 2023, about 7.5 million contracts at the close of April 14, 2023, into 3-month SOFR futures and options. The May and June 2023 contracts traded until expiry, and the June contract, settled on the LIBOR fixing of June 19, 2023, was the last.
+
+3-month SOFR futures keep the quote and the \$25 per basis point, but settle on daily SOFR compounded over the 3-month period, known only at its end, instead of a LIBOR fixing known at its start (see [Backward Looking vs Forward Looking](#backward-looking-vs-forward-looking)).
+
+**SOFT Futures**
+
+
 
 ## Liquidity Preference Theory
 
