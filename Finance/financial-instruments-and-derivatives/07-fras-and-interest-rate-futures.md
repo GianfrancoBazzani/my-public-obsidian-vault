@@ -209,8 +209,6 @@ $$R = \frac{0.025 \times 3 - 0.02 \times 1}{2} = 0.0275 = 2.75\%$$
 
 ## Liquidity Preference Theory
 
-Explain what liquidity preference theory and expectations theory imply about forward rates and expected future rates.
-
 **Expectations theory:** Investors care only about expected returns, so the forward rate equals the expected future spot rate. Forward rates are unbiased predictors, and the yield curve's slope reflects only expected rate changes. An upward slope means rates are expected to rise.
 
 **Liquidity preference theory:** Investors demand a premium for holding riskier long-term bonds, so the forward rate equals the expected future spot rate plus a liquidity premium. Forward rates therefore overstate expected future spot rates. This is why the curve usually slopes upward even when rates are expected to stay flat.

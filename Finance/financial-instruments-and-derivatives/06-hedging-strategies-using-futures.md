@@ -158,7 +158,33 @@ When no liquid futures contract matures later than the expiration of the hedge, 
 
 The result is a long-dated futures contract created by trading a series of short-dated contracts.
 
-### TODO ADD DURATION BASE HEDGING STRATEGIES HUll 6.4
+## Duration-Based Hedging Strategies Using Interest Rate Futures
 
+Interest rate futures can hedge the yield of a bond portfolio at a future time. If the forward yields change by the same $\Delta y$ for all maturities, which is a parallel shift of the yield curve, then
 
-### TODO ADD HEDGING PROTFILIOS OF ASSETS AND LIABILITIES 6.5
+$$\Delta P \approx -P D_P \Delta y \qquad \Delta V_F \approx -V_F D_F \Delta y$$
+
+- $P$ is the forward value of the portfolio at the maturity of the hedge, in practice usually its value today.
+- $D_P$ is the modified duration (see [Fixed Income Securities](00-fixed-income-securities.md#modified-duration)) of the portfolio at the maturity of the hedge.
+- $V_F$ is the price of one futures contract.
+- $D_F$ is the modified duration of the asset underlying the futures at the maturity of the futures.
+
+For a short position in $N$ contracts, the hedged position does not change for any $\Delta y$ when
+
+$$\Delta P - N \Delta V_F \approx -(P D_P - N V_F D_F) \Delta y = 0 \quad \Rightarrow \quad N^* = \frac{P D_P}{V_F D_F}$$
+
+This is the **duration-based hedge ratio**, or **price sensitivity hedge ratio**. Its numerator and denominator are the money durations of the portfolio and of one contract (see [Fixed Income Securities](00-fixed-income-securities.md#money-duration-or-dollar-duration)), so the hedged position has zero money duration. It is also the tailed minimum variance hedge $N^* = \hat h V_A / V_F$ (see [Impact of Daily Settlement](#impact-of-daily-settlement)) with $V_A = P$, because one parallel shift makes the percentage changes $-D_P \Delta y$ and $-D_F \Delta y$ perfectly correlated, so $\hat h = D_P / D_F$. The hedge is first order, so it works well only for small parallel shifts of the yield curve.
+
+With Treasury bond or note futures, the delivered bond is unknown, so $D_F$ is the duration of the bond that the hedger expects, when the hedge starts, to be cheapest to deliver (see [FRAs and Interest Rate Futures](07-fras-and-interest-rate-futures.md#treasury-bond-futures)). If rates later move so that another bond looks cheapest, the hedger must adjust the hedge, which can then perform worse than expected.
+
+Interest rate futures prices move opposite to rates, because they follow bond prices or are 100 minus a rate. A hedger who loses when rates fall therefore goes long futures, and one who loses when rates rise goes short (see [Short/Long Hedges](#shortlong-hedges)).
+
+The hedger picks the contract whose underlying asset has the duration closest to that of the hedged asset. Thus 3-month SOFR futures, which replaced Eurodollar futures in 2023 (see [FRAs and Interest Rate Futures](07-fras-and-interest-rate-futures.md#eurodollar-and-sofr-futures)), hedge short-term rates, and Ultra T-bond, T-bond, and Treasury note futures hedge longer-term rates.
+
+For example, a fund manager with \$10 million of government bonds ($D_P = 6.80$ years) loses if rates rise and hedges with T-bond futures. The futures price is 93-02, or 93.0625 per \$100 of face value, so a contract on \$100,000 has $V_F = 93{,}062.50$, and the expected cheapest-to-deliver bond has $D_F = 9.20$ years. Then $N^* = (10{,}000{,}000 \times 6.80) / (93{,}062.50 \times 9.20) = 79.42$, so the manager sells 79 contracts.
+
+### Hedging Portfolios of Assets and Liabilities
+
+Financial institutions hedge interest rate risk with **duration matching**, or **portfolio immunization**, which makes the average duration of their assets equal to that of their liabilities. The liabilities act as short positions in bonds, so after a small parallel shift of the yield curve the gain (loss) on the assets offsets the loss (gain) on the liabilities.
+
+Duration matching does not protect against nonparallel shifts of the zero curve. Short-term rates are usually more volatile than long-term rates and not perfectly correlated with them, and sometimes the two move in opposite directions. Duration matching is therefore only a first step, and institutions use other tools to manage their interest rate exposure.
