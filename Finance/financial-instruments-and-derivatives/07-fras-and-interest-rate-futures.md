@@ -126,9 +126,8 @@ The party with the short position finds it by computing this value for each deli
 
 This value is the **gross basis** of the bond, which is the bond futures version of the basis (see [Hedging Strategies Using Futures](06-hedging-strategies-using-futures.md)). Before delivery it uses the current futures price, which becomes the most recent settlement price at delivery. The conversion factor puts the futures price on the scale of each bond.
 
-the cheapest-to-deliver bond is the one which
+$$\text{Gross basis} = \text{Quoted bond price} - (\text{Futures price} \times \text{Conversion factor})$$
 
-Quoted bond price - (Most recent settlement price X conversion factor)
 At delivery, arbitrage pushes the gross basis of the cheapest-to-deliver bond to about zero, so the futures price converges to its quoted price divided by its conversion factor. The other deliverable bonds keep a positive gross basis.
 
 Before delivery, the gross basis also contains the carry until delivery, which is the coupon income minus the repo cost to finance the bond. The **net basis** removes it.
@@ -143,13 +142,17 @@ When yields are above 6%, the conversion factors favor the delivery of low-coupo
 
 **Wild Card Play**
 
-In addition to the cheapest-to-deliver bond option, the party iwth a short poistion has an option known as the wild card play.
+In addition to the cheapest-to-deliver bond option, the party with the short position has an option known as the wild card play. Treasury futures settle at 2:00 p.m. Chicago time, but Treasury bonds keep trading in the spot market after that. The party with the short position can give its notice of intention to deliver until 6:00 p.m. (8:00 p.m. in older rules), and the invoice still uses the 2:00 p.m. settlement price of that day.
+
+If bond prices fall after 2:00 p.m., the party with the short position gives notice, buys the cheapest-to-deliver bond at the lower price, and delivers it at the higher invoice price. If they do not fall, it waits and can play again on a later day of the delivery month. For example, with a settlement price of 120 and a conversion factor of 1, a fall of the bond price to 119 by 5:00 p.m. gives a profit of 1 per \$100 of face value.
+
+This option has value only for the party with the short position, so the futures price is lower than it would be without it.
 
 **Determining the Futures Price**
 
-TODO
+An exact theoretical futures price for the Treasury bond contract is difficult to determine, because the options of the party with the short position on the timing of delivery and on the choice of the bond that it delivers cannot easily be valued. However, if we assume that both the cheapest-to-deliver bond and the delivery date are known, the Treasury bond futures is a futures contract on a traded security that provides known income, so the no-arbitrage price of an asset with known income applies (see [Futures and Forwards Pricing](05-futures-and-forwards-pricing.md)).
 
-
+$$F_0 = (S_0 - I) e^{rT}$$
 
 ### Eurodollar and SOFR Futures
 
@@ -164,8 +167,3 @@ Explain what liquidity preference theory and expectations theory imply about for
 **Liquidity preference theory:** Investors demand a premium for holding riskier long-term bonds, so the forward rate equals the expected future spot rate plus a liquidity premium. Forward rates therefore overstate expected future spot rates. This is why the curve usually slopes upward even when rates are expected to stay flat.
 
 **Example:** With a 1-year spot of 4% and a 2-year spot of 5%, the forward rate is about 6%. Expectations theory says the market expects next year's rate to be 6%. Liquidity preference theory, with a 1% premium, says it expects about 5%.
-
-## References
-
-- Hull, J. C. *Options, Futures, and Other Derivatives*, chapter on interest rate futures.
-- CME Group, [Get to Know Treasuries CTD](https://www.cmegroup.com/education/courses/introduction-to-treasuries/get-to-know-treasuries-ctd).
