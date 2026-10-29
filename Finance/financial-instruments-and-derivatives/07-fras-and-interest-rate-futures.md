@@ -40,7 +40,7 @@ A backward-looking rate is known only at the end of its period. SOFR is an overn
 
 Futures of interest rates are standarized contracts that allow to fix interest rates today for a specific future period. They trade on organized exchanges, and investors buy and sell them through brokers.
 
-Like all futures, they settle daily at the settlement price, through a margin account with an initial and a maintenance margin (see [Futures and Forwards](04-futures-and-forwards.md)), while a forward pays only at maturity. With constant interest rates this timing has no effect, and futures and forward prices are equal. For interest rate futures, the daily flows depend on the same rates at which they are invested or financed. The long side of a futures quoted at 100 minus the rate loses when rates rise, so it finances losses at high rates and invests gains at low rates, which makes the futures rate a little higher than the forward rate. The gap is negligible for short maturities but not for long ones, which need a convexity adjustment (see [Convexity Adjustment](#convexity-adjustment)). Until then, we price interest rate futures like forwards.
+Like all futures, they settle daily at the settlement price, through a margin account with an initial and a maintenance margin (see [Futures and Forwards](04-futures-and-forwards.md)), while a forward pays only at maturity. With constant interest rates this timing has no effect, and futures and forward prices are equal. For interest rate futures, the daily flows depend on the same rates at which they are invested or financed. The price of an interest rate futures falls when rates rise, so the long side finances losses at high rates and invests gains at low rates, which makes the futures price a little lower than the forward price. The gap is negligible for short maturities but not for long ones, which need a convexity adjustment (see [Convexity Adjustment](#convexity-adjustment)). Until then, we price interest rate futures like forwards.
 
 ![Futures and spot prices up to the last trading day, and the daily settlement of a long position](Attachments/futures-daily-settlement-timeline.svg)
 
@@ -172,13 +172,17 @@ $$5000000 \times 0.0001 \times \frac{1}{12} = \$41.67$$
 
 The 3-month SOFR futures contract is designed to be as similar as possible to the Eurodollar futures contract, with a \$1 million position, \$25 per basis point, and contract months of March, June, September, and December. The reference period starts on the third Wednesday of the contract month and ends on the third Wednesday 3 months later, when the contract settles at $100 - R$, where $R$ is the rate obtained by compounding the 1-day SOFR rates over the period. The main difference is that the Eurodollar futures settled on a LIBOR fixing known at the start of the period (forward-looking), whereas the 3-month SOFR futures settles on a rate known only at its end (backward-looking) (see [Backward Looking vs Forward Looking](#backward-looking-vs-forward-looking)).
 
+**Long and Short Positions**
+
+The price of these futures is 100 minus the rate, so it falls when the rate rises. The short side gains when the rate rises and the long side gains when it falls, like an FRA in which the short side pays the fixed rate and the long side receives it. A borrower who will pay the rate in a future period hedges with a short position, and an investor who will receive it hedges with a long position. For example, a rise of 10 basis points in the rate of a 3-month SOFR futures gives the short side \$250 ($10 \times 25$) per contract and the long side a loss of the same amount.
+
 ### Convexity Adjustment
 
 While previously we supposed that forward and futures pricing are very similar, when contracts last longer (as a rule of thumb, 2 years) the convexity effect makes the difference between futures and FRAs distinguishable. The convexity adjustment $c$ is made so that
 
 $$\text{Forward rate} = \text{Futures rate} - c$$
 
-One reason for the convexity adjustment is the daily settlement, which favors the short side of a futures compared to the same contract in an FRA. The futures price is 100 minus the rate, so the short side gains when rates increase and the long side gains when rates decrease.
+One reason for the convexity adjustment is the daily settlement, which favors the short side of a futures compared to the same contract in an FRA. The short side gains when rates increase and the long side gains when rates decrease (see [Eurodollar and SOFR Futures](#eurodollar-and-sofr-futures)).
 
 - When rates increase, the short side gains and invests the profits at higher interest, which is a positive effect, and the long side loses and finances the debt at higher interest, which is a negative effect.
 - When rates decrease, the long side gains but invests the profits at lower interest, which is a negative effect, and the short side loses but finances the debt at lower interest, which is a positive effect.
