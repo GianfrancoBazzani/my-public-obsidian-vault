@@ -40,6 +40,8 @@ A backward-looking rate is known only at the end of its period. SOFR is an overn
 
 Futures of interest rates are standarized contracts that allow to fix interest rates today for a specific future period. They trade on organized exchanges, and investors buy and sell them through brokers.
 
+TODO draw a drawing with the key dates in a future contract and the daily settlmeent and soo on
+
 In this section we describe contracts that are traded in the United States. Nonetheless, many of the other interest rate futures contracts throughout the world have been modeled on these contracts.
 
 ### Treasury Bond Futures
@@ -76,7 +78,35 @@ The 10-year Treasury note futures contract is quoted to the nearest half of a th
 
 **Conversion Factors**
 
-TODO
+When a particular bond is delivered in a CME Group bond futures contract, a parameter known as its conversion factor defines the price that the party with the short position receives for the bond. The applicable quoted price for the bond delivered is the product of the conversion factor and the most recent settlement price of the futures contract. Taking accrued interest into account, the cash received for each \$100 face value of the bond delivered is
+
+$$(\text{Most recent settlement price} \times \text{Conversion factor}) + \text{Accrued interest}$$
+
+Let's illustrate this with the following example. Each contract is for the delivery of \$100,000 face value of bonds. Suppose that the most recent settlement price is 120-00, the conversion factor for the bond delivered is 1.38, and the accrued interest on this bond at the time of delivery is \$3 per \$100 face value. The cash received by the party with the short position (and paid by the party with the long position) is then
+
+$$(1.3800 \times 120.00) + 3.00 = \$168.60$$
+
+per \$100 face value. A party with the short position in one contract would deliver bonds with a face value of \$100,000 and receive \$168,600.
+
+The conversion factor for a bond is set equal to the quoted price the bond would have per dollar of principal on the first day of the delivery month on the assumption that the interest rate for all maturities equals 6% per annum (with semiannual compounding). If needed, the bond maturity and the times to the coupon payment dates are rounded down to the nearest 3 months for the purposes of the calculation. This practice enables the exchange to produce comprehensive tables. If, after rounding, the bond lasts for an exact number of 6-month periods, the first coupon is assumed to be paid in 6 months. If, after rounding, the bond does not last for an exact number of 6-month periods, the first coupon is assumed to be paid after 3 months and accrued interest is subtracted. In the case of the 2-year and 5-year note futures contracts, a similar calculation is used to determine the conversion factor, except that the time to maturity is rounded down to the nearest month.
+
+**Example 1, a whole number of 6-month periods.** Consider a 10% coupon bond with 20 years and 2 months to maturity that is deliverable in the T-bond futures contract. For the calculation of the conversion factor, the bond is assumed to have exactly 20 years to maturity, which is a whole number of 6-month periods. The first coupon payment is thus assumed to be made after 6 months, and the next ones at 6-month intervals until the end of the 20 years, when the principal is paid. With a face value of \$100 and a discount rate of 6% per annum with semiannual compounding (3% per 6 months), the value of the bond is
+
+$$\sum_{i=1}^{40} \frac{5}{1.03^i} + \frac{100}{1.03^{40}} = \$146.23$$
+
+Dividing by the face value gives a conversion factor of 1.4623.
+
+![Timeline of the conversion factor of a bond with a whole number of 6-month periods](Attachments/conversion-factor-whole-periods.svg)
+
+**Example 2, not a whole number of 6-month periods.** Consider an 8% coupon bond with 18 years and 4 months to maturity. For the calculation of the conversion factor, the bond is assumed to have exactly 18 years and 3 months to maturity, which is not a whole number of 6-month periods, so the first coupon is assumed to be paid after 3 months. Discounting all the payments back to a point 3 months from the first day of the delivery month, at 6% per annum with semiannual compounding, gives
+
+$$4 + \sum_{i=1}^{36} \frac{4}{1.03^i} + \frac{100}{1.03^{36}} = \$125.8323$$
+
+The interest rate for a 3-month period is $\sqrt{1.03} - 1$, or 1.4889%, so discounting back to the first day of the delivery month gives $125.8323 / 1.014889 = \$123.99$. The bond is 3 months into a 6-month coupon period, so the accrued interest is half of the coupon of 4, which is 2.0. Subtracting it gives \$121.99, and the conversion factor is therefore 1.2199.
+
+![Timeline of the conversion factor of a bond that is 3 months into a coupon period](Attachments/conversion-factor-3-month-offset.svg)
+
+
 
 **Cheapest-to-Deliver Bond**
 
@@ -85,6 +115,8 @@ TODO
 **Determining the Futures Price**
 
 TODO
+
+
 
 ### Eurodollar and SOFR Futures
 

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<rect width="760" height="350" fill="white"/>
+<defs>
+  <marker id="cpn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1f4fd8"/>
+  </marker>
+  <marker id="disc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#d9480f"/>
+  </marker>
+</defs>
+
+<text x="20" y="28" font-weight="bold">10% coupon bond with 20 years and 2 months to maturity</text>
+<text x="20" y="48" font-size="13" fill="#555">Rounded down to 20 years, which is a whole number of 6-month periods,</text>
+<text x="20" y="65" font-size="13" fill="#555">so the first coupon is assumed after 6 months</text>
+
+<!-- axis with a break -->
+<line x1="160" y1="200" x2="345" y2="200" stroke="#333" stroke-width="2"/>
+<line x1="395" y1="200" x2="620" y2="200" stroke="#333" stroke-width="2"/>
+<line x1="341" y1="208" x2="349" y2="192" stroke="#333" stroke-width="2"/>
+<line x1="391" y1="208" x2="399" y2="192" stroke="#333" stroke-width="2"/>
+<text x="370" y="205" text-anchor="middle" fill="#333">…</text>
+
+<!-- ticks -->
+<g stroke="#333" stroke-width="2">
+  <line x1="160" y1="192" x2="160" y2="208"/>
+  <line x1="230" y1="192" x2="230" y2="208"/>
+  <line x1="300" y1="192" x2="300" y2="208"/>
+  <line x1="440" y1="192" x2="440" y2="208"/>
+  <line x1="510" y1="192" x2="510" y2="208"/>
+  <line x1="580" y1="192" x2="580" y2="208"/>
+</g>
+
+<!-- actual maturity -->
+<line x1="603" y1="175" x2="603" y2="215" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="612" y="182" font-size="12" fill="#777">actual 20y 2m</text>
+
+<!-- coupons -->
+<g stroke="#1f4fd8" stroke-width="2.5">
+  <line x1="230" y1="197" x2="230" y2="158" marker-end="url(#cpn)"/>
+  <line x1="300" y1="197" x2="300" y2="158" marker-end="url(#cpn)"/>
+  <line x1="440" y1="197" x2="440" y2="158" marker-end="url(#cpn)"/>
+  <line x1="510" y1="197" x2="510" y2="158" marker-end="url(#cpn)"/>
+  <line x1="580" y1="197" x2="580" y2="108" marker-end="url(#cpn)"/>
+</g>
+<g fill="#1f4fd8" text-anchor="middle">
+  <text x="230" y="148">5</text>
+  <text x="300" y="148">5</text>
+  <text x="440" y="148">5</text>
+  <text x="510" y="148">5</text>
+  <text x="580" y="98">5 + 100</text>
+</g>
+
+<circle cx="160" cy="200" r="6" fill="#d9480f"/>
+
+<!-- time labels -->
+<g text-anchor="middle">
+  <text x="160" y="226">0</text>
+  <text x="230" y="226">6m</text>
+  <text x="300" y="226">1y</text>
+  <text x="440" y="226">19y</text>
+  <text x="510" y="226">19y 6m</text>
+  <text x="580" y="226">20y</text>
+</g>
+<text x="160" y="243" text-anchor="middle" font-size="12" fill="#555">first day of delivery month</text>
+<text x="580" y="243" text-anchor="middle" font-size="12" fill="#555">rounded maturity</text>
+
+<!-- discounting -->
+<path d="M575,255 Q370,300 166,255" fill="none" stroke="#d9480f" stroke-width="2.5" marker-end="url(#disc)"/>
+<text x="370" y="270" text-anchor="middle" font-size="13" fill="#d9480f">discount at 3% per 6 months</text>
+
+<g font-size="13">
+  <text x="20" y="315">Discount the 40 coupons of 5 and the principal of 100 to the first day of the delivery month.</text>
+  <text x="20" y="335">The value is 146.23 per 100 of face value, so the conversion factor is 1.4623.</text>
+</g>
+</svg>

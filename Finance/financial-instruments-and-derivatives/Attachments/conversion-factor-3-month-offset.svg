@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<rect width="760" height="400" fill="white"/>
+<defs>
+  <marker id="cpn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1f4fd8"/>
+  </marker>
+  <marker id="disc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#d9480f"/>
+  </marker>
+</defs>
+
+<text x="20" y="28" font-weight="bold">8% coupon bond with 18 years and 4 months to maturity</text>
+<text x="20" y="48" font-size="13" fill="#555">Rounded down to 18 years and 3 months, which is not a whole number of 6-month periods,</text>
+<text x="20" y="65" font-size="13" fill="#555">so the first coupon is assumed after 3 months and the accrued interest is subtracted</text>
+
+<!-- accrued interest since the assumed last coupon -->
+<rect x="110" y="189" width="50" height="10" fill="#d9480f" fill-opacity="0.25"/>
+<text x="135" y="180" text-anchor="middle" font-size="12" fill="#d9480f">accrued 2.0</text>
+
+<!-- axis with a break -->
+<line x1="110" y1="200" x2="160" y2="200" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="160" y1="200" x2="350" y2="200" stroke="#333" stroke-width="2"/>
+<line x1="400" y1="200" x2="640" y2="200" stroke="#333" stroke-width="2"/>
+<line x1="346" y1="208" x2="354" y2="192" stroke="#333" stroke-width="2"/>
+<line x1="396" y1="208" x2="404" y2="192" stroke="#333" stroke-width="2"/>
+<text x="375" y="205" text-anchor="middle" fill="#333">…</text>
+
+<!-- ticks -->
+<line x1="110" y1="192" x2="110" y2="208" stroke="#999" stroke-width="2"/>
+<g stroke="#333" stroke-width="2">
+  <line x1="160" y1="192" x2="160" y2="208"/>
+  <line x1="210" y1="192" x2="210" y2="208"/>
+  <line x1="310" y1="192" x2="310" y2="208"/>
+  <line x1="500" y1="192" x2="500" y2="208"/>
+  <line x1="600" y1="192" x2="600" y2="208"/>
+</g>
+
+<!-- actual maturity -->
+<line x1="617" y1="175" x2="617" y2="215" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="626" y="182" font-size="12" fill="#777">actual 18y 4m</text>
+
+<!-- coupons -->
+<g stroke="#1f4fd8" stroke-width="2.5">
+  <line x1="210" y1="197" x2="210" y2="158" marker-end="url(#cpn)"/>
+  <line x1="310" y1="197" x2="310" y2="158" marker-end="url(#cpn)"/>
+  <line x1="500" y1="197" x2="500" y2="158" marker-end="url(#cpn)"/>
+  <line x1="600" y1="197" x2="600" y2="108" marker-end="url(#cpn)"/>
+</g>
+<g fill="#1f4fd8" text-anchor="middle">
+  <text x="210" y="148">4</text>
+  <text x="310" y="148">4</text>
+  <text x="500" y="148">4</text>
+  <text x="600" y="98">4 + 100</text>
+</g>
+
+<circle cx="160" cy="200" r="6" fill="#d9480f"/>
+
+<!-- time labels -->
+<g text-anchor="middle">
+  <text x="110" y="226" fill="#777">−3m</text>
+  <text x="160" y="226">0</text>
+  <text x="210" y="226">3m</text>
+  <text x="310" y="226">9m</text>
+  <text x="500" y="226">17y 9m</text>
+  <text x="600" y="226">18y 3m</text>
+</g>
+<text x="160" y="243" text-anchor="middle" font-size="12" fill="#555">first day of delivery month</text>
+<text x="600" y="243" text-anchor="middle" font-size="12" fill="#555">rounded maturity</text>
+
+<!-- step 1: discount to 3 months -->
+<path d="M595,262 Q405,312 216,262" fill="none" stroke="#d9480f" stroke-width="2.5" marker-end="url(#disc)"/>
+<text x="405" y="318" text-anchor="middle" font-size="13" fill="#d9480f">1. discount at 3% per 6 months</text>
+<!-- step 2: discount 3 months to today -->
+<path d="M205,262 Q185,290 166,262" fill="none" stroke="#d9480f" stroke-width="2.5" marker-end="url(#disc)"/>
+<text x="185" y="300" text-anchor="middle" font-size="13" fill="#d9480f">2.</text>
+
+<g font-size="13">
+  <text x="20" y="350">1. The value of all the payments 3 months from now, including the coupon at 3 months, is 125.8323.</text>
+  <text x="20" y="370">2. The 3-month rate is √1.03 − 1 = 1.4889%, so the value today is 125.8323 / 1.014889 = 123.99.</text>
+  <text x="20" y="390">3. Subtract the accrued interest of 2.0 to get 121.99, so the conversion factor is 1.2199.</text>
+</g>
+</svg>
