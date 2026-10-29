@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="700" viewBox="0 0 760 700" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<rect width="760" height="700" fill="white"/>
+<text x="20" y="28" font-weight="bold">Why the cheapest-to-deliver bond depends on the level of yields</text>
+<text x="20" y="48" font-size="13" fill="#555">Gross basis = quoted bond price − (futures price × conversion factor), per $100 of face value, at delivery.</text>
+<text x="20" y="65" font-size="13" fill="#555">The futures price converges so that the cheapest-to-deliver bond has a gross basis of zero.</text>
+<rect x="110" y="95" width="290" height="270" fill="#d9480f" opacity="0.06"/>
+<rect x="400" y="95" width="290" height="270" fill="#1f4fd8" opacity="0.06"/>
+<line x1="110" y1="326.4" x2="690" y2="326.4" stroke="#e5e5e5"/>
+<text x="102" y="331.4" text-anchor="end" font-size="12" fill="#555">0</text>
+<line x1="110" y1="287.9" x2="690" y2="287.9" stroke="#e5e5e5"/>
+<text x="102" y="292.9" text-anchor="end" font-size="12" fill="#555">5</text>
+<line x1="110" y1="249.3" x2="690" y2="249.3" stroke="#e5e5e5"/>
+<text x="102" y="254.3" text-anchor="end" font-size="12" fill="#555">10</text>
+<line x1="110" y1="210.7" x2="690" y2="210.7" stroke="#e5e5e5"/>
+<text x="102" y="215.7" text-anchor="end" font-size="12" fill="#555">15</text>
+<line x1="110" y1="172.1" x2="690" y2="172.1" stroke="#e5e5e5"/>
+<text x="102" y="177.1" text-anchor="end" font-size="12" fill="#555">20</text>
+<line x1="110" y1="133.6" x2="690" y2="133.6" stroke="#e5e5e5"/>
+<text x="102" y="138.6" text-anchor="end" font-size="12" fill="#555">25</text>
+<line x1="110" y1="95.0" x2="690" y2="95.0" stroke="#e5e5e5"/>
+<text x="102" y="100.0" text-anchor="end" font-size="12" fill="#555">30</text>
+<text x="110.0" y="385" text-anchor="middle" font-size="12" fill="#555">3%</text>
+<text x="206.7" y="385" text-anchor="middle" font-size="12" fill="#555">4%</text>
+<text x="303.3" y="385" text-anchor="middle" font-size="12" fill="#555">5%</text>
+<text x="400.0" y="385" text-anchor="middle" font-size="12" fill="#555">6%</text>
+<text x="496.7" y="385" text-anchor="middle" font-size="12" fill="#555">7%</text>
+<text x="593.3" y="385" text-anchor="middle" font-size="12" fill="#555">8%</text>
+<text x="690.0" y="385" text-anchor="middle" font-size="12" fill="#555">9%</text>
+<line x1="110" y1="365" x2="690" y2="365" stroke="#333" stroke-width="2"/>
+<line x1="110" y1="95" x2="110" y2="365" stroke="#333" stroke-width="2"/>
+<text x="400.0" y="407" text-anchor="middle" font-size="13" fill="#333">Bond yield (flat yield curve)</text>
+<text x="30" y="230.0" text-anchor="middle" font-size="13" fill="#333" transform="rotate(-90 30 230.0)">Gross basis at delivery</text>
+<line x1="400.0" y1="95" x2="400.0" y2="365" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/>
+<polyline points="110.0,126.9 114.8,131.8 119.7,136.6 124.5,141.4 129.3,146.1 134.2,150.8 139.0,155.4 143.8,159.9 148.7,164.3 153.5,168.7 158.3,173.1 163.2,177.3 168.0,181.5 172.8,185.7 177.7,189.8 182.5,193.8 187.3,197.8 192.2,201.7 197.0,205.6 201.8,209.4 206.7,213.2 211.5,216.9 216.3,220.5 221.2,224.1 226.0,227.7 230.8,231.2 235.7,234.6 240.5,238.0 245.3,241.4 250.2,244.7 255.0,247.9 259.8,251.1 264.7,254.3 269.5,257.4 274.3,260.5 279.2,263.5 284.0,266.5 288.8,269.5 293.7,272.4 298.5,275.2 303.3,278.0 308.2,280.8 313.0,283.6 317.8,286.2 322.7,288.9 327.5,291.5 332.3,294.1 337.2,296.6 342.0,299.1 346.8,301.6 351.7,304.0 356.5,306.4 361.3,308.8 366.2,311.1 371.0,313.4 375.8,315.7 380.7,317.9 385.5,320.1 390.3,322.2 395.2,324.3 400.0,326.4 404.8,326.4 409.7,326.4 414.5,326.4 419.3,326.4 424.2,326.4 429.0,326.4 433.8,326.4 438.7,326.4 443.5,326.4 448.3,326.4 453.2,326.4 458.0,326.4 462.8,326.4 467.7,326.4 472.5,326.4 477.3,326.4 482.2,326.4 487.0,326.4 491.8,326.4 496.7,326.4 501.5,326.4 506.3,326.4 511.2,326.4 516.0,326.4 520.8,326.4 525.7,326.4 530.5,326.4 535.3,326.4 540.2,326.4 545.0,326.4 549.8,326.4 554.7,326.4 559.5,326.4 564.3,326.4 569.2,326.4 574.0,326.4 578.8,326.4 583.7,326.4 588.5,326.4 593.3,326.4 598.2,326.4 603.0,326.4 607.8,326.4 612.7,326.4 617.5,326.4 622.3,326.4 627.2,326.4 632.0,326.4 636.8,326.4 641.7,326.4 646.5,326.4 651.3,326.4 656.2,326.4 661.0,326.4 665.8,326.4 670.7,326.4 675.5,326.4 680.3,326.4 685.2,326.4 690.0,326.4" fill="none" stroke="#1f4fd8" stroke-width="3"/>
+<polyline points="110.0,326.4 114.8,326.4 119.7,326.4 124.5,326.4 129.3,326.4 134.2,326.4 139.0,326.4 143.8,326.4 148.7,326.4 153.5,326.4 158.3,326.4 163.2,326.4 168.0,326.4 172.8,326.4 177.7,326.4 182.5,326.4 187.3,326.4 192.2,326.4 197.0,326.4 201.8,326.4 206.7,326.4 211.5,326.4 216.3,326.4 221.2,326.4 226.0,326.4 230.8,326.4 235.7,326.4 240.5,326.4 245.3,326.4 250.2,326.4 255.0,326.4 259.8,326.4 264.7,326.4 269.5,326.4 274.3,326.4 279.2,326.4 284.0,326.4 288.8,326.4 293.7,326.4 298.5,326.4 303.3,326.4 308.2,326.4 313.0,326.4 317.8,326.4 322.7,326.4 327.5,326.4 332.3,326.4 337.2,326.4 342.0,326.4 346.8,326.4 351.7,326.4 356.5,326.4 361.3,326.4 366.2,326.4 371.0,326.4 375.8,326.4 380.7,326.4 385.5,326.4 390.3,326.4 395.2,326.4 400.0,326.4 404.8,322.8 409.7,319.3 414.5,315.8 419.3,312.4 424.2,309.0 429.0,305.7 433.8,302.4 438.7,299.1 443.5,296.0 448.3,292.8 453.2,289.8 458.0,286.7 462.8,283.7 467.7,280.8 472.5,277.9 477.3,275.1 482.2,272.2 487.0,269.5 491.8,266.8 496.7,264.1 501.5,261.5 506.3,258.9 511.2,256.3 516.0,253.8 520.8,251.4 525.7,248.9 530.5,246.5 535.3,244.2 540.2,241.9 545.0,239.6 549.8,237.4 554.7,235.2 559.5,233.0 564.3,230.9 569.2,228.8 574.0,226.7 578.8,224.7 583.7,222.7 588.5,220.8 593.3,218.9 598.2,217.0 603.0,215.1 607.8,213.3 612.7,211.5 617.5,209.7 622.3,208.0 627.2,206.3 632.0,204.6 636.8,203.0 641.7,201.4 646.5,199.8 651.3,198.2 656.2,196.7 661.0,195.2 665.8,193.7 670.7,192.3 675.5,190.8 680.3,189.4 685.2,188.1 690.0,186.7" fill="none" stroke="#d9480f" stroke-width="3"/>
+<circle cx="400.0" cy="326.4" r="5" fill="#333"/>
+<text x="400.0" y="350.4" text-anchor="middle" font-size="12" fill="#333">both zero at 6%</text>
+<line x1="440" y1="113" x2="470" y2="113" stroke="#1f4fd8" stroke-width="3"/><text x="478" y="118" font-size="13">4% coupon, 25 years (long duration)</text>
+<line x1="440" y1="135" x2="470" y2="135" stroke="#d9480f" stroke-width="3"/><text x="478" y="140" font-size="13">10% coupon, 10 years (short duration)</text>
+<text x="294" y="156.7142857142857" text-anchor="middle" font-size="13" fill="#d9480f" font-weight="bold">Below 6%</text>
+<text x="294" y="174.7142857142857" text-anchor="middle" font-size="12" fill="#d9480f">high-coupon short bond is cheapest</text>
+<text x="545" y="156.7142857142857" text-anchor="middle" font-size="13" fill="#1f4fd8" font-weight="bold">Above 6%</text>
+<text x="545" y="174.7142857142857" text-anchor="middle" font-size="12" fill="#1f4fd8">low-coupon long bond is cheapest</text>
+<text x="20" y="460" font-weight="bold">Effect of the slope of the yield curve</text>
+<text x="20" y="480" font-size="13" fill="#555">Conversion factors assume a flat curve. The bonds with the higher yields have lower prices, so they are cheaper to deliver.</text>
+<text x="50" y="505" font-size="13" font-weight="bold">Upward-sloping</text>
+<line x1="50" y1="640" x2="340" y2="640" stroke="#333" stroke-width="2"/>
+<line x1="50" y1="515" x2="50" y2="640" stroke="#333" stroke-width="2"/>
+<text x="195.0" y="658" text-anchor="middle" font-size="12" fill="#555">Maturity</text>
+<text x="42" y="577.5" text-anchor="middle" font-size="12" fill="#555" transform="rotate(-90 42 577.5)">Yield</text>
+<line x1="50" y1="577.5" x2="340" y2="577.5" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="340" y="571.5" text-anchor="end" font-size="11" fill="#777">flat curve</text>
+<polyline points="60.0,625.0 66.8,618.5 73.5,612.9 80.2,607.8 87.0,603.3 93.8,599.1 100.5,595.3 107.2,591.8 114.0,588.5 120.8,585.5 127.5,582.6 134.2,579.9 141.0,577.4 147.8,575.0 154.5,572.7 161.2,570.5 168.0,568.4 174.8,566.4 181.5,564.5 188.2,562.7 195.0,560.9 201.8,559.2 208.5,557.5 215.2,556.0 222.0,554.4 228.8,552.9 235.5,551.5 242.2,550.1 249.0,548.7 255.8,547.4 262.5,546.2 269.2,544.9 276.0,543.7 282.8,542.5 289.5,541.4 296.2,540.2 303.0,539.1 309.8,538.1 316.5,537.0 323.2,536.0 330.0,535.0" fill="none" stroke="#1f4fd8" stroke-width="3"/>
+<circle cx="114.0" cy="588.5" r="5" fill="#333"/><circle cx="303.0" cy="539.1" r="5" fill="#333"/>
+<text x="114.0" y="608.5" text-anchor="middle" font-size="11">short</text>
+<text x="303.0" y="529.1" text-anchor="middle" font-size="11">long</text>
+<text x="50" y="672" font-size="12" fill="#1f4fd8">Long bonds yield more,</text>
+<text x="50" y="690" font-size="12" fill="#1f4fd8">so long bonds tend to be delivered</text>
+<text x="430" y="505" font-size="13" font-weight="bold">Downward-sloping</text>
+<line x1="430" y1="640" x2="720" y2="640" stroke="#333" stroke-width="2"/>
+<line x1="430" y1="515" x2="430" y2="640" stroke="#333" stroke-width="2"/>
+<text x="575.0" y="658" text-anchor="middle" font-size="12" fill="#555">Maturity</text>
+<text x="422" y="577.5" text-anchor="middle" font-size="12" fill="#555" transform="rotate(-90 422 577.5)">Yield</text>
+<line x1="430" y1="577.5" x2="720" y2="577.5" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="720" y="571.5" text-anchor="end" font-size="11" fill="#777">flat curve</text>
+<polyline points="440.0,530.0 446.8,536.5 453.5,542.1 460.2,547.2 467.0,551.7 473.8,555.9 480.5,559.7 487.2,563.2 494.0,566.5 500.8,569.5 507.5,572.4 514.2,575.1 521.0,577.6 527.8,580.0 534.5,582.3 541.2,584.5 548.0,586.6 554.8,588.6 561.5,590.5 568.2,592.3 575.0,594.1 581.8,595.8 588.5,597.5 595.2,599.0 602.0,600.6 608.8,602.1 615.5,603.5 622.2,604.9 629.0,606.3 635.8,607.6 642.5,608.8 649.2,610.1 656.0,611.3 662.8,612.5 669.5,613.6 676.2,614.8 683.0,615.9 689.8,616.9 696.5,618.0 703.2,619.0 710.0,620.0" fill="none" stroke="#d9480f" stroke-width="3"/>
+<circle cx="494.0" cy="566.5" r="5" fill="#333"/><circle cx="683.0" cy="615.9" r="5" fill="#333"/>
+<text x="494.0" y="556.5" text-anchor="middle" font-size="11">short</text>
+<text x="683.0" y="635.9" text-anchor="middle" font-size="11">long</text>
+<text x="430" y="672" font-size="12" fill="#d9480f">Short bonds yield more,</text>
+<text x="430" y="690" font-size="12" fill="#d9480f">so short bonds tend to be delivered</text>
+</svg>

@@ -108,21 +108,38 @@ The interest rate for a 3-month period is $\sqrt{1.03} - 1$, or 1.4889%, so disc
 
 **Cheapest-to-Deliver Bond**
 
-At any given time during the delivery month, there are many bonds that can be delivered in bond futures contracts. These vary widely as far as coupon and maturity are concerned. The party with the short position can choose which of the available bonds is "cheapest" to deliver. Because the party with the short position receives
+During the delivery month, many bonds with different coupons and maturities are deliverable, and the party with the short position chooses which one to deliver. For each bond, it receives
 
-(Most recent settlement price X conversion factor) + Accrued interest 
+$$(\text{Most recent settlement price} \times \text{Conversion factor}) + \text{Accrued interest}$$
 
-and the cost of purchasing a bond is 
+and pays the following amount to buy the bond.
 
-Quoted bond price + Accrued interest
+$$\text{Quoted bond price} + \text{Accrued interest}$$
+
+The accrued interest cancels, so the cheapest-to-deliver bond is the one with the lowest value of
+
+$$\text{Quoted bond price} - (\text{Most recent settlement price} \times \text{Conversion factor})$$
+
+The party with the short position finds it by computing this value for each deliverable bond.
+
+**Basis**
+
+This value is the **gross basis** of the bond, which is the bond futures version of the basis (see [Hedging Strategies Using Futures](06-hedging-strategies-using-futures.md)). Before delivery it uses the current futures price, which becomes the most recent settlement price at delivery. The conversion factor puts the futures price on the scale of each bond.
 
 the cheapest-to-deliver bond is the one which
 
 Quoted bond price - (Most recent settlement price X conversion factor)
+At delivery, arbitrage pushes the gross basis of the cheapest-to-deliver bond to about zero, so the futures price converges to its quoted price divided by its conversion factor. The other deliverable bonds keep a positive gross basis.
 
-is the least. Once the party with the short position has decided to deliver, it can determine the cheapest-to-deliver bond by examining each of the deliverable bonds in turn.
+Before delivery, the gross basis also contains the carry until delivery, which is the coupon income minus the repo cost to finance the bond. The **net basis** removes it.
 
-When bond yields are in excess of 6%, the conversion factor system tends to favor the delivery of low-coupon long-maturity bonds. When yields are less than 6%, the system tends to favor the delivery of high-coupon short-maturity bonds. Also, when the yield curve is upward-sloping, there is a tendency for bonds with a short time to maturity to be delivered.
+$$\text{Net basis} = \text{Gross basis} - (\text{Coupon income} - \text{Repo financing cost})$$
+
+The cheapest-to-deliver bond is usually the one with the lowest net basis.
+
+When yields are above 6%, the conversion factors favor the delivery of low-coupon long-maturity bonds. When yields are below 6%, they favor high-coupon short-maturity bonds. An upward-sloping yield curve favors bonds with a long time to maturity, and a downward-sloping one favors bonds with a short time to maturity.
+
+![Gross basis at delivery against yield for a long-duration and a short-duration bond, and the effect of the slope of the yield curve](Attachments/cheapest-to-deliver-yields.svg)
 
 **Wild Card Play**
 
@@ -147,3 +164,8 @@ Explain what liquidity preference theory and expectations theory imply about for
 **Liquidity preference theory:** Investors demand a premium for holding riskier long-term bonds, so the forward rate equals the expected future spot rate plus a liquidity premium. Forward rates therefore overstate expected future spot rates. This is why the curve usually slopes upward even when rates are expected to stay flat.
 
 **Example:** With a 1-year spot of 4% and a 2-year spot of 5%, the forward rate is about 6%. Expectations theory says the market expects next year's rate to be 6%. Liquidity preference theory, with a 1% premium, says it expects about 5%.
+
+## References
+
+- Hull, J. C. *Options, Futures, and Other Derivatives*, chapter on interest rate futures.
+- CME Group, [Get to Know Treasuries CTD](https://www.cmegroup.com/education/courses/introduction-to-treasuries/get-to-know-treasuries-ctd).
