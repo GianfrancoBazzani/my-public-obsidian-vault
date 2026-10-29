@@ -69,6 +69,10 @@ $$
 
 $F_1$ is known when the hedge starts, so the only uncertainty is the final basis $b_2$, which is the basis risk. If the hedge is closed out at maturity, $b_2 = 0$ and the effective price is $F_1$. A higher $b_2$ helps the short hedger and a lower $b_2$ helps the long hedger, as in the table above. For example, with $S_1 = 2.50$, $F_1 = 2.20$, $S_2 = 2.00$, and $F_2 = 1.90$, the basis weakens from 0.30 to 0.10 and the effective price is $2.20 + 0.10 = 2.30$.
 
+The chart shows this example. The basis is known at $t_1$ and converges to zero at $T$, but a hedge closed out at $t_2$ before the last trading day gets one value from a range of possible values of $b_2$.
+
+![Spot and futures prices of a hedge closed out before the last trading day, and the range of possible values of the basis at the close-out](Attachments/basis-risk-early-close-out.svg)
+
 Backwardation does not by itself favor a long hedger. The hedger locks in a price near $F_1$, which is below today's spot price $S_1$, but the alternative to the hedge is to buy at $S_2$, not at $S_1$. The result depends on how the basis changes, not on its sign at the start.
 
 ## Cross hedging
@@ -153,3 +157,8 @@ When no liquid futures contract matures later than the expiration of the hedge, 
 3. The hedger continues in the same way until the end of the hedge.
 
 The result is a long-dated futures contract created by trading a series of short-dated contracts.
+
+### TODO ADD DURATION BASE HHEDGING STRATEGIES
+
+
+### TODO ADD HEDGING PROTFIOLOS OF ASSETS AND LIABILITIES

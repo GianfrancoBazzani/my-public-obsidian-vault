@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<rect width="760" height="470" fill="white"/>
+<text x="20" y="28" font-weight="bold">Spot price and futures price</text>
+<line x1="90" y1="210.0" x2="610" y2="210.0" stroke="#eee"/>
+<text x="82" y="215.0" text-anchor="end" font-size="12" fill="#555">1.80</text>
+<line x1="90" y1="170.0" x2="610" y2="170.0" stroke="#eee"/>
+<text x="82" y="175.0" text-anchor="end" font-size="12" fill="#555">2.00</text>
+<line x1="90" y1="130.0" x2="610" y2="130.0" stroke="#eee"/>
+<text x="82" y="135.0" text-anchor="end" font-size="12" fill="#555">2.20</text>
+<line x1="90" y1="90.0" x2="610" y2="90.0" stroke="#eee"/>
+<text x="82" y="95.0" text-anchor="end" font-size="12" fill="#555">2.40</text>
+<line x1="90" y1="50.0" x2="610" y2="50.0" stroke="#eee"/>
+<text x="82" y="55.0" text-anchor="end" font-size="12" fill="#555">2.60</text>
+<path d="M90.0,70.0 L103.0,70.6 L116.0,62.9 L129.0,69.2 L142.0,65.2 L155.0,70.7 L168.0,76.3 L181.0,67.7 L194.0,69.1 L207.0,73.6 L220.0,68.2 L233.0,67.2 L246.0,72.3 L259.0,72.8 L272.0,87.0 L285.0,87.3 L298.0,98.5 L311.0,110.9 L324.0,125.0 L337.0,134.8 L350.0,143.5 L363.0,144.5 L376.0,150.8 L389.0,153.0 L402.0,166.3 L415.0,167.7 L428.0,170.0" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6 4"/>
+<path d="M90.0,130.0 L103.0,130.8 L116.0,123.6 L129.0,131.6 L142.0,126.1 L155.0,129.5 L168.0,132.8 L181.0,121.0 L194.0,121.4 L207.0,123.2 L220.0,119.6 L233.0,113.2 L246.0,114.9 L259.0,112.3 L272.0,120.6 L285.0,124.6 L298.0,129.2 L311.0,140.0 L324.0,152.1 L337.0,165.0 L350.0,168.1 L363.0,170.9 L376.0,174.6 L389.0,175.6 L402.0,186.4 L415.0,188.5 L428.0,190.0" fill="none" stroke="#1f4fd8" stroke-width="2.5"/>
+<path d="M428.0,170.0 L441.0,168.8 L454.0,162.5 L467.0,164.9 L480.0,161.6 L493.0,176.5 L506.0,174.5 L519.0,183.8 L532.0,191.2 L545.0,182.0 L558.0,194.2 L571.0,184.1 L584.0,179.7 L597.0,180.0 L610.0,178.0" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.45"/>
+<path d="M428.0,190.0 L441.0,184.9 L454.0,176.6 L467.0,178.0 L480.0,176.7 L493.0,185.0 L506.0,184.3 L519.0,193.8 L532.0,198.6 L545.0,188.3 L558.0,197.8 L571.0,189.3 L584.0,183.6 L597.0,181.7 L610.0,178.0" fill="none" stroke="#1f4fd8" stroke-width="2" opacity="0.35"/>
+<circle cx="610" cy="178.0" r="5" fill="#1f4fd8" opacity="0.5"/>
+<text x="620" y="183.0" fill="#1f4fd8" opacity="0.7">F = S</text>
+<text x="155" y="59" fill="#666">spot price S</text>
+<text x="155" y="153" fill="#1f4fd8">futures price F</text>
+<line x1="90.0" y1="70.0" x2="90.0" y2="130.0" stroke="#d9480f" stroke-width="2.5"/>
+<line x1="84.0" y1="70.0" x2="96.0" y2="70.0" stroke="#d9480f" stroke-width="2.5"/>
+<line x1="84.0" y1="130.0" x2="96.0" y2="130.0" stroke="#d9480f" stroke-width="2.5"/>
+<text x="102.0" y="105.0" text-anchor="start" fill="#d9480f">b<tspan font-size="11" dy="3">1</tspan><tspan dy="-3"> = 0.30</tspan></text>
+<line x1="428.0" y1="170.0" x2="428.0" y2="190.0" stroke="#d9480f" stroke-width="2.5"/>
+<line x1="422.0" y1="170.0" x2="434.0" y2="170.0" stroke="#d9480f" stroke-width="2.5"/>
+<line x1="422.0" y1="190.0" x2="434.0" y2="190.0" stroke="#d9480f" stroke-width="2.5"/>
+<text x="418.0" y="204.0" text-anchor="end" fill="#d9480f">b<tspan font-size="11" dy="3">2</tspan><tspan dy="-3"> = 0.10</tspan></text>
+<text x="20" y="262" font-weight="bold">Basis b = S − F, and the range of its possible values</text>
+<line x1="90" y1="395.5" x2="610" y2="395.5" stroke="#333" stroke-width="1.5"/>
+<text x="82" y="400.5" text-anchor="end" font-size="12" fill="#555">0.00</text>
+<line x1="90" y1="346.4" x2="610" y2="346.4" stroke="#eee" stroke-width="1"/>
+<text x="82" y="351.4" text-anchor="end" font-size="12" fill="#555">0.20</text>
+<line x1="90" y1="297.3" x2="610" y2="297.3" stroke="#eee" stroke-width="1"/>
+<text x="82" y="302.3" text-anchor="end" font-size="12" fill="#555">0.40</text>
+<path d="M90.0,321.8 L103.0,312.2 L116.0,309.5 L129.0,307.9 L142.0,307.1 L155.0,306.7 L168.0,306.6 L181.0,306.7 L194.0,307.1 L207.0,307.6 L220.0,308.3 L233.0,309.2 L246.0,310.2 L259.0,311.3 L272.0,312.5 L285.0,313.8 L298.0,315.2 L311.0,316.7 L324.0,318.3 L337.0,320.0 L350.0,321.8 L363.0,323.7 L376.0,325.7 L389.0,327.8 L402.0,329.9 L415.0,332.2 L428.0,334.6 L441.0,337.0 L454.0,339.6 L467.0,342.3 L480.0,345.2 L493.0,348.1 L506.0,351.3 L519.0,354.6 L532.0,358.1 L545.0,361.9 L558.0,366.0 L571.0,370.5 L584.0,375.7 L597.0,382.1 L610.0,395.5 L610.0,395.5 L597.0,405.1 L584.0,407.8 L571.0,409.3 L558.0,410.2 L545.0,410.6 L532.0,410.7 L519.0,410.5 L506.0,410.2 L493.0,409.6 L480.0,408.9 L467.0,408.1 L454.0,407.1 L441.0,406.0 L428.0,404.8 L415.0,403.5 L402.0,402.1 L389.0,400.6 L376.0,399.0 L363.0,397.2 L350.0,395.5 L337.0,393.6 L324.0,391.6 L311.0,389.5 L298.0,387.3 L285.0,385.1 L272.0,382.7 L259.0,380.2 L246.0,377.7 L233.0,374.9 L220.0,372.1 L207.0,369.1 L194.0,366.0 L181.0,362.7 L168.0,359.2 L155.0,355.4 L142.0,351.3 L129.0,346.7 L116.0,341.5 L103.0,335.2 L90.0,321.8 Z" fill="#1f4fd8" fill-opacity="0.12"/>
+<path d="M90.0,321.8 L103.0,321.5 L116.0,321.0 L129.0,318.9 L142.0,320.6 L155.0,323.4 L168.0,326.2 L181.0,330.1 L194.0,331.3 L207.0,334.6 L220.0,332.5 L233.0,339.0 L246.0,343.2 L259.0,347.1 L272.0,354.3 L285.0,349.7 L298.0,357.8 L311.0,359.6 L324.0,362.2 L337.0,358.4 L350.0,365.2 L363.0,363.1 L376.0,366.3 L389.0,367.8 L402.0,370.8 L415.0,369.9 L428.0,370.9" fill="none" stroke="#d9480f" stroke-width="2.5"/>
+<path d="M428.0,370.9 L441.0,375.8 L454.0,378.1 L467.0,379.4 L480.0,377.0 L493.0,385.0 L506.0,383.3 L519.0,383.1 L532.0,386.4 L545.0,387.8 L558.0,391.0 L571.0,389.1 L584.0,390.7 L597.0,393.3 L610.0,395.5" fill="none" stroke="#d9480f" stroke-width="2" opacity="0.35"/>
+<line x1="428.0" y1="334.6" x2="428.0" y2="404.8" stroke="#1f4fd8" stroke-width="2"/>
+<line x1="422.0" y1="334.6" x2="434.0" y2="334.6" stroke="#1f4fd8" stroke-width="2"/>
+<line x1="422.0" y1="404.8" x2="434.0" y2="404.8" stroke="#1f4fd8" stroke-width="2"/>
+<text x="440.0" y="336.6" font-size="13" fill="#1f4fd8">possible values of b<tspan font-size="10" dy="3">2</tspan></text>
+<text x="440.0" y="352.6" font-size="13" fill="#1f4fd8">= basis risk</text>
+<circle cx="90.0" cy="321.8" r="5" fill="#d9480f"/>
+<circle cx="428.0" cy="370.9" r="5" fill="#d9480f"/>
+<circle cx="610.0" cy="395.5" r="5" fill="#d9480f" opacity="0.5"/>
+<text x="116" y="312" font-size="13" fill="#d9480f">b<tspan font-size="10" dy="3">1</tspan><tspan dy="-3"> known</tspan></text>
+<line x1="90.0" y1="50" x2="90.0" y2="420" stroke="#bbb" stroke-dasharray="3 3"/>
+<text x="90.0" y="442" text-anchor="middle">t<tspan font-size="11" dy="3">1</tspan></text>
+<text x="90.0" y="460" text-anchor="middle" font-size="12" fill="#555">hedge opens</text>
+<line x1="428.0" y1="50" x2="428.0" y2="420" stroke="#bbb" stroke-dasharray="3 3"/>
+<text x="428.0" y="442" text-anchor="middle">t<tspan font-size="11" dy="3">2</tspan></text>
+<text x="428.0" y="460" text-anchor="middle" font-size="12" fill="#555">hedge closed out</text>
+<line x1="610.0" y1="50" x2="610.0" y2="420" stroke="#bbb" stroke-dasharray="3 3"/>
+<text x="610.0" y="442" text-anchor="middle">T</text>
+<text x="610.0" y="460" text-anchor="middle" font-size="12" fill="#555">last trading day</text>
+</svg>
