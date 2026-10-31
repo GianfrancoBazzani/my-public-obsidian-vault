@@ -151,6 +151,18 @@ With continuous compounding ($m \to \infty$), the forward rate is
 
 $$f(t_1, t_2) = \frac{r(t_2) t_2 - r(t_1) t_1}{t_2 - t_1}$$
 
+**With discount factors**
+
+One unit invested today grows to $\frac{1}{DF(t)}$ at $t$ (see [Zero rates](#zero-rates)), so the growth from $t_1$ to $t_2$ at the forward rate is the ratio $\frac{DF(t_1)}{DF(t_2)}$. Money-market rates and FRAs use simple interest over the period of $\tau = t_2 - t_1$ years, which gives
+
+$$1 + \tau f(t_1, t_2) = \frac{DF(t_1)}{DF(t_2)} \implies f(t_1, t_2) = \frac{1}{\tau} \left( \frac{DF(t_1)}{DF(t_2)} - 1 \right)$$
+
+With $m$ compounding periods per year and with continuous compounding, the same ratio gives
+
+$$f(t_1, t_2) = m \left[ \left( \frac{DF(t_1)}{DF(t_2)} \right)^{\frac{1}{m (t_2 - t_1)}} - 1 \right] \qquad f(t_1, t_2) = \frac{\ln DF(t_1) - \ln DF(t_2)}{t_2 - t_1}$$
+
+These are the formulas of the zero rates above, with each zero rate replaced by its discount factor.
+
 **Example** 
 
 We define different interest rates for different tenors:
@@ -164,6 +176,8 @@ With annual compounding:
 Forward 1y1y: $f(1,2) = \frac{(1 + 0.04)^{2}}{(1 + 0.03)} - 1 = 0.0501$ (5.01 %)
 
 Forward 2y1y: $f(2,3) = \frac{(1 + 0.045)^{3}}{(1 + 0.04)^2}  - 1 = 0.0551$ (5.51 %)
+
+The discount factors give the same result. With $DF(1) = \frac{1}{1.03} = 0.9709$ and $DF(2) = \frac{1}{1.04^2} = 0.9246$, the forward 1y1y is $f(1,2) = \frac{0.9709}{0.9246} - 1 = 0.0501$ (5.01 %).
 
 If the same zero rates use continuous compounding:
 
