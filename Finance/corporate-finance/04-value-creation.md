@@ -48,6 +48,19 @@ The revenue is recorded when the company sells, not when the customers pay. The 
 
 The revenue shows the size of the business, but it does not show how much of it the company keeps. A company can increase its revenue with lower prices and earn less.
 
+### COGS
+
+The **COGS** (*cost of goods sold*) is the cost to produce or buy the products that the company sells in a period. It includes the raw materials, the direct labor and the factory overhead (e.g. the energy and the depreciation of the machines). It does not include the costs to sell the products, the administration, the research, the interest and the taxes.
+
+$$\text{Gross profit} = \text{Revenue} - COGS$$
+
+- The **gross profit** is what remains to pay for all the other costs.
+- The **gross margin**, $\frac{\text{Gross profit}}{\text{Revenue}}$, is the part of each unit of revenue that the company keeps after the cost of its products.
+
+Like the revenue, the COGS is recorded when the company sells. The costs of the products not yet sold stay in the inventory, which is a part of the working capital.
+
+The COGS does not follow the split of the EBITDA into variable and fixed costs. It contains most of the variable costs $v_t q_t$, but also fixed production costs and the depreciation of the production assets. The EBITDA adds back this depreciation with the rest of the $D\&A$.
+
 ### EBITDA
 
 The **EBITDA** (*earnings before interest, taxes, depreciation and amortization*) is the operating result of the company before the depreciation and the amortization. It is the first profit in the table of [Operating Decisions](01-operating-decisions.md), after the variable and the fixed cash costs.
@@ -256,6 +269,7 @@ Links last checked: 24 October 2026.
 - Wikipedia. "Contribution Margin." [Online article](https://en.wikipedia.org/wiki/Contribution_margin).
 - Wikipedia. "Control Premium." [Online article](https://en.wikipedia.org/wiki/Control_premium).
 - Wikipedia. "Cost of Capital." [Online article](https://en.wikipedia.org/wiki/Cost_of_capital).
+- Wikipedia. "Cost of Goods Sold." [Online article](https://en.wikipedia.org/wiki/Cost_of_goods_sold).
 - Wikipedia. "Earnings Before Interest, Taxes, Depreciation and Amortization." [Online article](https://en.wikipedia.org/wiki/Earnings_before_interest,_taxes,_depreciation_and_amortization).
 - Wikipedia. "Economic Value Added." [Online article](https://en.wikipedia.org/wiki/Economic_value_added).
 - Wikipedia. "Economies of Scale." [Online article](https://en.wikipedia.org/wiki/Economies_of_scale).
