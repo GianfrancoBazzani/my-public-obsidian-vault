@@ -180,19 +180,25 @@ The curves come from a 30-year swap with annual payments on a flat curve, and th
 
 ## Inflation Swaps
 
-An inflation swap is an over-the-counter derivative in which one leg pays a fixed rate and the other leg pays the realized inflation of a price index over the same period. With $I(t)$ the value of the index at time $t$, the inflation from $t$ to $T$ is $I(T)/I(t) - 1$. The inflation receiver, also called the buyer of inflation protection, pays the fixed rate and receives the inflation, so it gains when inflation is higher than the fixed rate. The other party is the inflation payer. The market sets the fixed rate so that the swap has a zero value at the start, so there is no payment at inception, and the parties never exchange the notional.
+An inflation swap is an over-the-counter derivative that exchanges a fixed rate for the realized inflation of a price index, which is $I(T)/I(t) - 1$ from $t$ to $T$ with $I(t)$ the index at $t$. The inflation receiver, also called the buyer of inflation protection, pays the fixed rate and gains when inflation is higher than it, and the other party is the inflation payer. The fixed rate gives the swap a zero value at the start, so there is no payment at inception, and the parties never exchange the notional.
 
-Each market uses a consumer price index (CPI) that is not seasonally adjusted. EUR swaps use the euro area Harmonised Index of Consumer Prices excluding tobacco (HICPxT). USD swaps use the US Consumer Price Index for All Urban Consumers (CPI-U), which also indexes the Treasury Inflation-Protected Securities (TIPS). About 99% of GBP swaps use the UK Retail Prices Index (RPI). The index of a month is published some weeks later, so $I(t)$ is the index of an earlier month. This lag is usually three months for EUR and USD swaps and two months for GBP swaps.
+Each market uses a consumer price index (CPI) that is not seasonally adjusted. The index of a month is published some weeks later, so $I(t)$ is the index of an earlier month.
+
+| Currency | Index | Usual lag |
+|---|---|---|
+| EUR | Euro area Harmonised Index of Consumer Prices excluding tobacco (HICPxT) | 3 months |
+| USD | US Consumer Price Index for All Urban Consumers (CPI-U), which also indexes the Treasury Inflation-Protected Securities (TIPS) | 3 months |
+| GBP | UK Retail Prices Index (RPI), for about 99% of swaps | 2 months |
 
 ### Zero-Coupon Inflation Swap
 
-A zero-coupon inflation swap, the most common inflation swap, has a single payment at the maturity $T$, in years
+The most common inflation swap, the zero-coupon swap, has a single payment at the maturity $T$, in years
 
 $$\text{Inflation leg} = L \left[ \frac{I(T)}{I(0)} - 1 \right] \qquad \text{Fixed leg} = L [(1 + K)^T - 1]$$
 
-where $L$ is the notional and $K$ is the fixed rate, compounded annually. The legs are netted, so the inflation receiver gets $L [I(T)/I(0) - (1 + K)^T]$, which is negative when inflation is less than $K$ per year. The market quotes $K$, the inflation swap rate, which is also called the breakeven inflation rate because the net payment is zero when the index grows by $K$ per year.
+where $L$ is the notional and $K$ is the fixed rate, compounded annually. The inflation receiver gets the net payment $L [I(T)/I(0) - (1 + K)^T]$, which is zero when the index grows by $K$ per year and negative below it, so the quoted $K$, the inflation swap rate, is also called the breakeven inflation rate.
 
-For example, a pension fund receives inflation on a 5-year swap with a notional of USD 10 million and a fixed rate of 2.5%, and the index is 300 at the start. The fixed leg at maturity is $10{,}000{,}000 \times (1.025^5 - 1) = 1{,}314{,}082$.
+For example, a pension fund receives inflation on a 5-year swap with a notional of USD 10 million, a fixed rate of 2.5%, and an index of 300 at the start, so the fixed leg at maturity is $10{,}000{,}000 \times (1.025^5 - 1) = 1{,}314{,}082$.
 
 | Index at maturity | Inflation per year | Inflation leg | Net payment to the inflation receiver |
 |---|---|---|---|
@@ -201,46 +207,48 @@ For example, a pension fund receives inflation on a 5-year swap with a notional 
 | 330.00 | 1.92% | 1,000,000 | −314,082 |
 | 297.00 | −0.20% | −100,000 | −1,414,082 |
 
-The forward CPI $I(t,T)$ is the expected value at $t$ of $I(T)$ under the forward measure of $T$. At any date $t$, the value of the swap for the inflation receiver is
+With the forward CPI $I(t,T)$, the expected value at $t$ of $I(T)$ under the forward measure of $T$, the value of the swap for the inflation receiver at any date $t$ needs no model of rates or inflation
 
 $$V = L P(t,T) \left[ \frac{I(t,T)}{I(0)} - (1 + K)^T \right]$$
 
-The value needs only the forward CPI and the discount factor, not a model of rates or inflation. A new swap has a zero value, so each quote $K_T$ gives the forward CPI $I(0,T) = I(0)(1 + K_T)^T$, and the quotes of all maturities build the inflation curve. They also give the real discount factor $P_R(0,T) = P(0,T)(1 + K_T)^T$, which is the price today of a zero-coupon bond that pays $I(T)/I(0)$ at $T$. With the annually compounded nominal and real zero rates $y_T$ and $r_T$, this is the Fisher equation $1 + y_T = (1 + r_T)(1 + K_T)$.
+A new swap has a zero value, so each quote $K_T$ gives the forward CPI and the real discount factor, which is the price today of a zero-coupon bond that pays $I(T)/I(0)$ at $T$, and the quotes of all maturities build the inflation curve
+
+$$I(0,T) = I(0)(1 + K_T)^T \qquad P_R(0,T) = P(0,T)(1 + K_T)^T$$
+
+With the annually compounded nominal and real zero rates $y_T$ and $r_T$, this is the Fisher equation $1 + y_T = (1 + r_T)(1 + K_T)$.
 
 ### Year-on-Year Inflation Swap
 
-A year-on-year inflation swap pays the inflation of each period, usually one year. On each payment date $t_k$, the legs are
+A year-on-year inflation swap pays the inflation of each period, usually one year, so on each payment date $t_k$ the legs are
 
 $$\text{Inflation leg} = L \delta_k \left[ \frac{I(t_k)}{I(t_{k-1})} - 1 \right] \qquad \text{Fixed leg} = L \delta_k K$$
 
-where $\delta_k$ is the accrual fraction of the period from $t_{k-1}$ to $t_k$, and $t_0 = 0$. As for a vanilla swap, the fixed rate that gives a zero value is a weighted average of the forward rates of the periods, which here are the forward year-on-year inflation rates $Y_k$
+where $\delta_k$ is the accrual fraction from $t_{k-1}$ to $t_k$, and $t_0 = 0$. As for a vanilla swap, the fixed rate that gives a zero value is a weighted average of the forward rates, here the forward year-on-year inflation rates $Y_k$ under the forward measure $E^{t_k}$ of each payment date
 
 $$K = \frac{\sum_k \delta_k P(0,t_k) Y_k}{\sum_k \delta_k P(0,t_k)} \qquad 1 + Y_k = E^{t_k}\left[ \frac{I(t_k)}{I(t_{k-1})} \right]$$
 
-where $E^{t_k}$ is the expected value under the forward measure of the payment date $t_k$.
-
-The ratio of the forward CPIs $I(0,t_k)/I(0,t_{k-1})$ is not equal to $1 + Y_k$. The forward CPI of $t_{k-1}$ is the expected index under the forward measure of $t_{k-1}$, not of $t_k$, and the expected value of a ratio is not the ratio of the expected values. When each forward CPI is lognormal under the forward measure of its date, a market model gives approximately
+$1 + Y_k$ is not the ratio of the forward CPIs $I(0,t_k)/I(0,t_{k-1})$, because the forward CPI of $t_{k-1}$ is an expected value under the forward measure of $t_{k-1}$, not of $t_k$, and the expected value of a ratio is not the ratio of the expected values. When each forward CPI is lognormal under the forward measure of its date, a market model gives approximately
 
 $$1 + Y_k \approx \frac{I(0,t_k)}{I(0,t_{k-1})} e^{D_k}$$
 
-where the convexity adjustment $D_k$ depends on the volatilities of the two forward CPIs and of the nominal forward rate of the period, on the correlation between the two forward CPIs, and on the correlation between the forward CPI of $t_{k-1}$ and that nominal forward rate. $D_k$ is zero for the first period, because $I(t_0) = I(0)$ is known, and its size grows with $t_{k-1}$. So, unlike a zero-coupon swap, a year-on-year swap needs a model, such as the Jarrow-Yildirim model or a market model, as a CMS does (see [Constant Maturity Swaps](#constant-maturity-swaps)).
+where the convexity adjustment $D_k$ depends on the volatilities of the two forward CPIs and of the nominal forward rate of the period, and on the correlations of the forward CPI of $t_{k-1}$ with the forward CPI of $t_k$ and with that nominal rate. $D_k$ is zero for the first period, where $I(t_0) = I(0)$ is known, and its size grows with $t_{k-1}$, so unlike a zero-coupon swap, a year-on-year swap needs a model, such as the Jarrow-Yildirim model or a market model, as a CMS does (see [Constant Maturity Swaps](#constant-maturity-swaps)).
 
-A year-on-year cap or floor is a series of options on the inflation of each period, with a caplet payoff of $L \delta_k \max(I(t_k)/I(t_{k-1}) - 1 - \kappa, 0)$ for a strike $\kappa$ (see [Interest Rate Caps and Floors](#interest-rate-caps-and-floors)). Inflation-linked notes often floor the inflation of each period at zero to keep their coupons positive, so they contain a year-on-year floor with a zero strike.
+A year-on-year cap or floor is a series of options on the inflation of each period, with a caplet payoff of $L \delta_k \max(I(t_k)/I(t_{k-1}) - 1 - \kappa, 0)$ for a strike $\kappa$ (see [Interest Rate Caps and Floors](#interest-rate-caps-and-floors)). Inflation-linked notes often floor the inflation of each period at zero to keep their coupons positive, which is a year-on-year floor with a zero strike.
 
 ### Breakeven Inflation
 
-The forward inflation between two maturities comes from the zero-coupon swap rates, as a forward rate comes from zero rates. The 5y5y rate, which is the average inflation over the five years that start in five years, is
+As a forward rate comes from zero rates, the forward inflation between two maturities comes from the zero-coupon swap rates. The 5y5y rate, the average inflation over the five years that start in five years, is
 
 $$F_{5y5y} = \left[ \frac{(1 + K_{10})^{10}}{(1 + K_5)^5} \right]^{1/5} - 1$$
 
 For example, $K_5 = 2.3\%$ and $K_{10} = 2.4\%$ give $F_{5y5y} = 2.50\%$. Because it excludes the inflation of the next five years, the 5y5y rate is a widely used measure of longer-term inflation expectations.
 
-The breakeven inflation rate is not a pure forecast of inflation. It also contains an inflation risk premium, which compensates for the uncertainty of future inflation and can be negative, and a liquidity premium. In the euro area, most of the fall of the 5y5y rate from 2014 to 2016 came from the risk premium, not from lower expectations.
+The breakeven inflation rate is not a pure forecast of inflation, because it also contains a liquidity premium and an inflation risk premium, which compensates for the uncertainty of future inflation and can be negative. Most of the fall of the euro area 5y5y rate from 2014 to 2016 came from the risk premium, not from lower expectations.
 
-Breakeven inflation also comes from bonds, as the yield of a nominal government bond minus the yield of an inflation-linked bond with the same maturity. Without frictions, the two measures are equal. In practice, the US swap rate is almost always higher than the TIPS breakeven, by more than 100 bp during the 2008 financial crisis. In the euro area, bond breakevens also contain liquidity effects that change over time and risk premia of each country, so the swap rate is the cleaner measure.
+The bond breakeven is the yield of a nominal government bond minus the yield of an inflation-linked bond with the same maturity, and without frictions it is equal to the swap rate. In practice, the US swap rate is almost always higher than the TIPS breakeven, by more than 100 bp during the 2008 financial crisis. In the euro area, bond breakevens also contain liquidity effects that change over time and the risk premia of each country, so the swap rate is the cleaner measure.
 
 ### Uses of Inflation Swaps
 
-- **Inflation hedge.** Pension funds and insurers, with liabilities that rise with inflation, receive inflation. Utilities and infrastructure companies, with revenues that rise with inflation, pay inflation. Unlike an inflation-linked bond, a swap can match the maturity and the notional of the exposure.
+- **Inflation hedge.** Pension funds and insurers, with liabilities that rise with inflation, receive inflation, and utilities and infrastructure companies, with revenues that rise with inflation, pay it. Unlike an inflation-linked bond, a swap can match the maturity and the notional of the exposure.
 - **Trades on inflation expectations.** An investor that expects inflation higher than the breakeven rate receives inflation, and one that expects lower inflation pays it. Other trades take a position on the slope of the curve, such as 5-year against 10-year swaps. In the UK, hedge funds trade mostly maturities of three years or less.
-- **Asset-liability management.** A pension fund that holds nominal bonds but pays pensions indexed to inflation receives inflation and pays the fixed rate. The inflation sensitivity of its assets then matches that of its liabilities, without a sale of the bonds. In the UK, pension funds and liability-driven investment (LDI) funds are the main buyers of inflation protection, mostly for maturities of more than 10 years, and dealer banks are large net sellers.
+- **Asset-liability management.** A pension fund that holds nominal bonds but pays pensions indexed to inflation receives inflation and pays the fixed rate, so the inflation sensitivity of its assets matches that of its liabilities without a sale of the bonds. In the UK, pension funds and liability-driven investment (LDI) funds are the main buyers of inflation protection, mostly for maturities of more than 10 years, and dealer banks are large net sellers.
