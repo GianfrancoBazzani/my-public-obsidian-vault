@@ -90,6 +90,47 @@ For example, a loan of USD 10 million with quarterly resets has a cap rate of 3%
 
 An investor that receives the floating rate uses the opposite collar, which is a long floor and a short cap.
 
+### Put-Call Parity for Caps and Floors
+
+The put-call parity relationship between the prices of caps and floors is
+
+$$V_{\text{cap}} = V_{\text{floor}} + V_{\text{swap}}$$
+
+In this relationship, the cap and the floor have the same strike rate $R_K$. The swap is an agreement to receive a floating rate $R$ and pay a fixed rate $R_K$, with no exchange of payments on the first reset date. All three instruments have the same life and the same frequency of payments.
+
+To see that the result is true, consider a long position in the cap combined with a short position in the floor. The cap provides a cash flow of $R - R_K$ for periods when $R$ is greater than $R_K$. The short floor provides a cash flow of $-(R_K - R) = R - R_K$ for periods when $R$ is less than $R_K$. There is therefore a cash flow of $R - R_K$ in all circumstances. This is the cash flow on the swap. It follows that the value of the cap minus the value of the floor must equal the value of the swap.
+
+### Valuation of Caps and Floors
+
+Each caplet and floorlet covers one period from $t_k$ to $t_{k+1}$. The reference interest rate of the period is observed at $t_k$, and the payoff is paid at $t_{k+1}$
+
+$$\text{Caplet payoff} = L \delta_k \max(R_k - R_K, 0) \qquad \text{Floorlet payoff} = L \delta_k \max(R_K - R_k, 0)$$
+
+where
+
+- $L$ is the notional principal.
+- $\delta_k = t_{k+1} - t_k$ is the accrual fraction of the period, in years.
+- $R_k$ is the reference interest rate for the period, observed at $t_k$.
+- $R_K$ is the cap rate or the floor rate.
+
+The rate of the first period is known when the cap or floor starts, so there is usually no caplet or floorlet for that period.
+
+Black's model assumes that each $R_k$ is lognormal and gives the values today as
+
+$$V_{\text{caplet}} = L \delta_k P(0, t_{k+1}) [F_k N(d_1) - R_K N(d_2)] \qquad V_{\text{floorlet}} = L \delta_k P(0, t_{k+1}) [R_K N(-d_2) - F_k N(-d_1)]$$
+
+$$d_1 = \frac{\ln(F_k/R_K) + \sigma_k^2 t_k/2}{\sigma_k \sqrt{t_k}} \qquad d_2 = d_1 - \sigma_k \sqrt{t_k}$$
+
+where
+
+- $F_k$ is the forward rate today for the period from $t_k$ to $t_{k+1}$.
+- $\sigma_k$ is the volatility of $F_k$, so $\sigma_k \sqrt{t_k}$ is the standard deviation of $\ln R_k$.
+- $P(0, t_{k+1})$ is the discount factor to the payment date $t_{k+1}$, not to the expiry $t_k$.
+
+The value of a cap or a floor is the sum of the values of its caplets or floorlets. The market quotes a cap or a floor with one flat volatility, which is the single $\sigma$ that gives its price when it is used for all of its caplets or floorlets. As for swaptions, the market uses the normal or the shifted lognormal model when rates are near or below zero.
+
+Because $\max(R_k - R_K, 0) - \max(R_K - R_k, 0) = R_k - R_K$, a long cap and a short floor with the same strike rate $R_K$ are equal to a payer swap with the fixed rate $R_K$. So a collar with $R_C = R_F$ is a payer swap, and the cap and the floor have the same price only when $R_K$ is equal to the forward swap rate.
+
 ## SABR model
 
 ## Constant Maturity Swaps
