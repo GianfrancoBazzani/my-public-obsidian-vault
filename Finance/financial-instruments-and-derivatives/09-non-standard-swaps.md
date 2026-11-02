@@ -62,13 +62,33 @@ to reduce the effective reference interest rate for the quarter to 3% per annum.
 
 ### Floors
 
-An interest rate floor is a series of put option on interest rates.
+An interest rate floor is a series of put options on interest rates, called floorlets. It can be understood by considering the same floating-rate note, but from the side of the investor that holds the note and receives its interest.
 
-TODO Add a small numerical example and explain
+Interest rate floors provide protection against falls in the interest rate below a strike rate, called the floor rate $R_K$. An investor that receives interest on the note and holds a floor receives at least $R_K$ in each period.
 
-Interest rate floors provides protection against interest rates drops below a strike price.
+For example, an investor buys a five-year floating-rate note with a principal of USD 10 million and enters into a floor with a notional principal of USD 10 million and a floor rate of 2% per annum. The effective reference interest rate that determines the interest that the investor receives is then never less than 2% per annum. If the reference interest rate for a quarter is more than 2%, the floor gives no payoff for that quarter. If the rate is less than 2%, the payoff brings the effective reference interest rate up to 2% per annum. For example, if the reference interest rate for a quarter is 1.5% per annum, the floor gives a payoff at the end of the quarter of
+
+$$10{,}000{,}000 \times 0.25 \times (0.02 - 0.015) = 12{,}500$$
+
+to increase the effective reference interest rate for the quarter to 2% per annum.
 
 ### Collar
+
+A collar guarantees that the interest rate on an underlying floating-rate note always lies between two levels. It combines a long cap and a short floor, usually with the price of the cap initially equal to the price of the floor, so the collar costs nothing to enter.
+
+This collar suits a borrower that pays the floating rate and wants to hedge the loan at no initial cost, but, unlike with a payer swap, still pay the market rate between the two levels. The long cap protects against rises in rates and the premium of the short floor pays for it, but the borrower gives up the gain from rates below the floor rate. With a reference rate $R$, a cap rate $R_C$, and a floor rate $R_F < R_C$, the effective rate in each period always lies between $R_F$ and $R_C$
+
+$$R_{\text{eff}} = R - \max(R - R_C, 0) + \max(R_F - R, 0)$$
+
+For example, a loan of USD 10 million with quarterly resets has a cap rate of 3% and a floor rate of 2%.
+
+| Reference rate | Cap payoff to the borrower | Floor payoff by the borrower to the floor holder | Effective rate |
+|---|---|---|---|
+| 3.5% | 12,500 | 0 | 3% (cap rate) |
+| 2.5% | 0 | 0 | 2.5% (market rate) |
+| 1.5% | 0 | 12,500 | 2% (floor rate) |
+
+An investor that receives the floating rate uses the opposite collar, which is a long floor and a short cap.
 
 ## SABR model
 
