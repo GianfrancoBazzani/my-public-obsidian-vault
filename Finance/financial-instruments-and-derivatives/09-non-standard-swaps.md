@@ -1,6 +1,6 @@
 # Non-standard Swaps
 
-## Swaptions
+## European Swaptions
 
 Swap options, or swaptions, are options on interest rate swaps and are another popular type of interest rate option. They give the holder the right to enter into a certain interest rate swap at a certain time in the future. The swaptions below are European, so the holder can exercise them only on one date, the expiry date.
 
@@ -15,13 +15,20 @@ The market calls the first a payer swaption and the second a receiver swaption.
 
 The market quotes a swaption as the option tenor followed by the tenor of the underlying swap. For example, a 2Y5Y payer is a 2-year option to enter a 5-year payer swap.
 
-At exercise, the payoffs of the two swaptions are
+After exercise, a swaption gives a cash flow on each payment date of the underlying swap. The payoffs on each payment date are
 
-$$\text{Payer payoff} = \max(S - K, 0) \times \text{Annuity}$$
+$$\text{Payer payoff} = \frac{L}{m} \max(s_T - s_K, 0)$$
 
-$$\text{Receiver payoff} = \max(K - S, 0) \times \text{Annuity}$$
+$$\text{Receiver payoff} = \frac{L}{m} \max(s_K - s_T, 0)$$
 
-where $S$ is the swap rate at expiry, $K$ is the strike (the fixed rate of the swaption), and the annuity is the notional times the sum of the accrual fractions times the discount factors of the underlying swap.
+where
+
+- $L$ is the principal (notional) of the underlying swap.
+- $m$ is the number of payments per year of the swap, so $L/m$ is the principal times the accrual fraction of one period.
+- $s_T$ is the swap rate at the expiry $T$ of the swaption, which is the fixed rate of a new swap at that date.
+- $s_K$ is the strike swap rate, which is the fixed rate that the holder pays (payer) or receives (receiver) after exercise.
+
+The holder receives this payoff $mn$ times, once per period of an $n$-year swap. Discounted to the expiry and added, these cash flows equal $\max(s_T - s_K, 0)$ (payer) or $\max(s_K - s_T, 0)$ (receiver) times the annuity of the swap.
 
 A use case of swaptions is to provide companies with a guarantee that the fixed rate of interest they will pay on a loan at some future time will not exceed some level. They are an alternative to forward swaps. Forward swaps involve no up-front cost but have the disadvantage of obligating the company to enter into a swap agreement. With a swaption, the company is able to benefit from favorable interest rate movements while acquiring protection from unfavorable interest rate movements.
 
