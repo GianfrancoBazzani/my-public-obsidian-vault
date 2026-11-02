@@ -15,6 +15,10 @@ The market calls the first a payer swaption and the second a receiver swaption.
 
 The market quotes a swaption as the option tenor followed by the tenor of the underlying swap. For example, a 2Y5Y payer is a 2-year option to enter a 5-year payer swap.
 
+The holder receives this payoff $mn$ times, once per period of an $n$-year swap. Discounted to the expiry and added, these cash flows equal $\max(s_T - s_K, 0)$ (payer) or $\max(s_K - s_T, 0)$ (receiver) times the annuity of the swap.
+
+A use case of swaptions is to provide companies with a guarantee that the fixed rate of interest they will pay on a loan at some future time will not exceed some level. They are an alternative to forward swaps. Forward swaps involve no up-front cost but have the disadvantage of obligating the company to enter into a swap agreement. With a swaption, the company is able to benefit from favorable interest rate movements while acquiring protection from unfavorable interest rate movements.
+
 After exercise, a swaption gives a cash flow on each payment date of the underlying swap. The payoffs on each payment date are
 
 $$\text{Payer payoff} = \frac{L}{m} \max(s_T - s_K, 0)$$
@@ -28,9 +32,6 @@ where
 - $s_T$ is the swap rate at the expiry $T$ of the swaption, which is the fixed rate of a new swap at that date.
 - $s_K$ is the strike swap rate, which is the fixed rate that the holder pays (payer) or receives (receiver) after exercise.
 
-The holder receives this payoff $mn$ times, once per period of an $n$-year swap. Discounted to the expiry and added, these cash flows equal $\max(s_T - s_K, 0)$ (payer) or $\max(s_K - s_T, 0)$ (receiver) times the annuity of the swap.
-
-A use case of swaptions is to provide companies with a guarantee that the fixed rate of interest they will pay on a loan at some future time will not exceed some level. They are an alternative to forward swaps. Forward swaps involve no up-front cost but have the disadvantage of obligating the company to enter into a swap agreement. With a swaption, the company is able to benefit from favorable interest rate movements while acquiring protection from unfavorable interest rate movements.
 
 
 ## Caps and Floors
