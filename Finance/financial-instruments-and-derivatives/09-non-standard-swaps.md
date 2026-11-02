@@ -150,42 +150,26 @@ $\beta$ and $\rho$ set the slope (skew) of the smile, and $\nu$ sets its curvatu
 
 ## Constant Maturity Swaps
 
-A CMS has one leg that pays a swap rate with a fixed tenor, for example the 10-year swap rate. On each reset date $t_i$, the contract takes the 10-year swap rate of that day. The reference swap always has the same tenor of 10 years, so the name is "constant maturity". The other leg pays a fixed rate or a floating rate, for example SOFR. The CMS leg pays $L \tau_i s_i$ at $t_{i+1}$, where $s_i$ is the swap rate at $t_i$ and $\tau_i = t_{i+1} - t_i$.
+A constant maturity swap (CMS) exchanges on each payment date a swap rate with a fixed tenor (for example 10 years) for a fixed rate or a floating rate such as SOFR. On each reset date $t_k$, the CMS leg takes the swap rate $s_{t_k}$ of a new standard swap with the same tenor, hence the name constant maturity, and pays $L \delta_k s_{t_k}$ at $t_{k+1}$, where $L$ is the principal and $\delta_k = t_{k+1} - t_k$.
 
-The swap rate is the fixed rate that gives a zero value to a new standard swap with the reference tenor. It is the par rate $K_{par}$ in 08-swaps.md, but here the reference swap starts on the future fixing date $T_0$. Today, the market knows only the forward swap rate:
+On a reset date $T$, the swap rate $s_T$ is the par rate $K_{par}$ of the new swap (see [Swaps](08-swaps.md)). Before $T$, only the forward swap rate is known, which is the par rate today of the swap that starts at $T$. With the annuity $A_0$ and the payment dates $T_1, \dots, T_{mn}$ defined for swaptions (see [European Swaptions](#european-swaptions)), it is
 
-$$s_F = \frac{P(0,T_0) - P(0,T_n)}{A_0} \qquad A_0 = \sum_{j=1}^{n} \tau_j P(0,T_j)$$
+$$s_F = \frac{P(0,T) - P(0,T_{mn})}{A_0}$$
 
-$T_1, \dots, T_n$ are the payment dates of the fixed leg of the reference swap, for example 10 annual dates.
-$A_0$ is the annuity of the reference swap.
-For $T_0 = 0$, $P(0,0) = 1$, and the formula gives $K_{par}$.
+For $T = 0$, $P(0,0) = 1$ and $s_F = K_{par}$. For a swap on EURIBOR, the numerator is the value of the floating leg, with the forward rates from the EURIBOR curve and the discount factors from the €STR curve. For an OIS swap on SOFR or €STR, the same curve gives both, so the formula applies.
 
-For a swap on EURIBOR, the numerator is the value of the floating leg, $\sum_k \tau_k P(0,T_k) F_k$. The forward rates $F_k$ come from the EURIBOR curve, and the discount factors come from the €STR curve. For an OIS swap on SOFR or €STR, one curve gives both, so the first formula applies.
+The value of a CMS payment fixed at $T = t_k$ and paid at $T_p = t_{k+1}$ depends on the expected swap rate under the forward measure of $T_p$, which is not $s_F$. A vanilla swap pays each floating rate at the end of its period, its natural payment date, so under the forward measure of that date the expected rate is the forward rate. The natural payment of a swap rate is an annuity on all the payment dates of the fixed leg, so $s_F$ is the expected value under the annuity measure, with $A_t$ as the numeraire. A CMS pays the swap rate only once, and the change of measure gives
 
+$$E^{T_p}[s_T] = \frac{A_0}{P(0,T_p)} E^{A}\left[s_T \frac{P(T,T_p)}{A_T}\right]$$
 
-For one CMS period, the fixing date is $T_0 = t_i$ and the payment date is $T_p = t_{i+1}$. To value the payment, you need the expected swap rate under the forward measure of $T_p$. The forward swap rate $s_F$ is not this expected value:
+When the swap rate rises, $A_T$ falls and the ratio $P(T,T_p)/A_T$ rises, so the expected swap rate is higher than $s_F$, and the difference is the convexity adjustment. Bond convexity gives the same result. If the swap rate is the yield of a bond, the expected bond price under the forward measure is the forward bond price, and because the price is a convex function of the yield, the expected yield is higher than the forward yield (Jensen's inequality).
 
-A vanilla swap pays the floating rate of a period at the end of that period. This is the natural payment of that rate, so the expected rate is the forward rate $F_k$.
-The natural payment of a swap rate is an annuity, because a swap pays its fixed rate on all $n$ dates of its fixed leg. Thus $s_F$ is the expected value under the annuity measure, with $A_t$ as the numeraire.
-A CMS pays the swap rate only once, on one date. This difference causes the adjustment.
-
-The change of measure gives
-
-$$E^{T_p}[s_{T_0}] = \frac{A_0}{P(0,T_p)} E^{A}\left[s_{T_0} \frac{P(T_0,T_p)}{A_{T_0}}\right]$$
-
-If the swap rate increases, the annuity $A_{T_0}$ decreases, and the ratio $P(T_0,T_p)/A_{T_0}$ increases. The ratio and the swap rate move together, so the expected swap rate is higher than $s_F$.
-
-Hull gets the same result from bond convexity. Think of the swap rate as the yield of a bond. Under the forward measure, the expected bond price is equal to the forward bond price. The price is a convex function of the yield, so the expected yield is higher than the forward yield (Jensen's inequality).
-
-The same result follows from the payoffs at the fixing date. The payoff of a payer swap that starts on the fixing date is a concave function of the swap rate, because its annuity falls when the rate rises, so it gains less than a straight line when rates rise and loses more when rates fall. A CMS that receives the swap rate and pays a fixed rate has a linear payoff. When each contract has the fixed rate that gives it a zero value today, both have an expected payoff of zero under the forward measure of the fixing date. The swap payoff is zero at the forward swap rate, and the CMS payoff is zero at the expected swap rate, which is higher because the swap payoff is concave. The CMS payoff is higher than the swap payoff when the rate moves far from the forward in either direction, and the higher fixed rate of the CMS offsets these larger payoffs. The gap between the two rates is the convexity adjustment.
+The payoffs at the fixing date show the same result. A payer swap that starts on the fixing date has a payoff that is a concave function of the swap rate, because its annuity falls when the rate rises, and a CMS that receives the swap rate and pays a fixed rate has a linear payoff. When each contract has the fixed rate that gives it a zero value today, both have an expected payoff of zero under the forward measure of the fixing date. The swap payoff is zero at the forward swap rate, and the CMS payoff is zero at the expected swap rate, which is higher because the swap payoff is concave. The CMS payoff is higher than the swap payoff when the rate moves far from the forward in either direction, and the higher fixed rate of the CMS offsets these larger payoffs.
 
 ![Payoff of a vanilla payer swap and of a CMS against the swap rate at the fixing date, with the forward swap rate, the expected swap rate, and the convexity adjustment](Attachments/cms-vs-vanilla-swap-payoff.svg)
 
-The curves come from a 30-year swap with annual payments on a flat curve. The CMS has the same slope as the swap at the forward and pays on the fixing date.
+The curves come from a 30-year swap with annual payments on a flat curve, and the CMS has the same slope as the swap at the forward and pays on the fixing date.
 
 
 
 ## Inflation Swaps
-
-
-TODO European swaption Chapter 29
