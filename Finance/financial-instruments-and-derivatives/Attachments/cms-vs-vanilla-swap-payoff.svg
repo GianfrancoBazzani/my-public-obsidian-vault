@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="405" viewBox="0 0 640 405" font-family="Helvetica, Arial, sans-serif" font-size="13" role="img">
+<title>Payoff of a vanilla payer swap (concave) and of a CMS (linear) against the swap rate at the fixing date. Both have the same expected payoff, which the swap reaches at the forward swap rate and the CMS at the expected swap rate. The gap between the two rates is the convexity adjustment.</title>
+<rect width="640" height="405" fill="white"/>
+<defs>
+<marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#555"/></marker>
+<marker id="ae" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#222"/></marker>
+<marker id="as" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,1 L0,5 L10,9 z" fill="#222"/></marker>
+</defs>
+<line x1="100" y1="345" x2="590" y2="345" stroke="#555" stroke-width="1.5" marker-end="url(#ax)"/>
+<line x1="100" y1="345" x2="100" y2="24" stroke="#555" stroke-width="1.5" marker-end="url(#ax)"/>
+<text x="100" y="15" text-anchor="middle">Payoff</text>
+<text x="330" y="389" text-anchor="middle">Swap rate at the fixing date</text>
+<line x1="100" y1="166.16" x2="570" y2="166.16" stroke="#555" stroke-dasharray="2 4"/>
+<text x="92" y="170.16" text-anchor="end">E[Payoff]</text>
+<line x1="289.41" y1="345" x2="289.41" y2="166.16" stroke="#555" stroke-dasharray="5 4"/>
+<line x1="345.97" y1="345" x2="345.97" y2="166.16" stroke="#555" stroke-dasharray="5 4"/>
+<text x="292.41" y="364" text-anchor="end">Forward</text>
+<text x="342.97" y="364" text-anchor="start">E[Swap rate]</text>
+<line x1="290.41" y1="216.16" x2="344.97" y2="216.16" stroke="#222" stroke-width="1.2" marker-start="url(#as)" marker-end="url(#ae)"/>
+<text x="353.97" y="220.16" text-anchor="start">Convexity adjustment</text>
+<g fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="100.00,326.70 102.71,323.22 105.41,319.79 108.12,316.40 110.82,313.06 113.53,309.77 116.24,306.51 118.94,303.31 121.65,300.14 124.35,297.01 127.06,293.93 129.76,290.89 132.47,287.89 135.18,284.92 137.88,282.00 140.59,279.11 143.29,276.27 146.00,273.46 148.71,270.68 151.41,267.94 154.12,265.24 156.82,262.58 159.53,259.94 162.24,257.35 164.94,254.78 167.65,252.25 170.35,249.75 173.06,247.29 175.76,244.86 178.47,242.45 181.18,240.08 183.88,237.74 186.59,235.43 189.29,233.15 192.00,230.90 194.71,228.67 197.41,226.48 200.12,224.31 202.82,222.17 205.53,220.06 208.24,217.97 210.94,215.91 213.65,213.88 216.35,211.87 219.06,209.89 221.76,207.93 224.47,206.00 227.18,204.09 229.88,202.21 232.59,200.34 235.29,198.51 238.00,196.69 240.71,194.90 243.41,193.13 246.12,191.38 248.82,189.65 251.53,187.95 254.24,186.27 256.94,184.60 259.65,182.96 262.35,181.34 265.06,179.73 267.76,178.15 270.47,176.59 273.18,175.04 275.88,173.52 278.59,172.01 281.29,170.52 284.00,169.05 286.71,167.60 289.41,166.16 292.12,164.74 294.82,163.34 297.53,161.96 300.24,160.59 302.94,159.24 305.65,157.90 308.35,156.58 311.06,155.28 313.76,153.99 316.47,152.72 319.18,151.46 321.88,150.22 324.59,148.99 327.29,147.78 330.00,146.58 332.71,145.39 335.41,144.22 338.12,143.07 340.82,141.92 343.53,140.79 346.24,139.67 348.94,138.57 351.65,137.48 354.35,136.40 357.06,135.33 359.76,134.28 362.47,133.24 365.18,132.21 367.88,131.19 370.59,130.18 373.29,129.19 376.00,128.20 378.71,127.23 381.41,126.27 384.12,125.32 386.82,124.38 389.53,123.45 392.24,122.53 394.94,121.63 397.65,120.73 400.35,119.84 403.06,118.96 405.76,118.09 408.47,117.24 411.18,116.39 413.88,115.55 416.59,114.72 419.29,113.90 422.00,113.09 424.71,112.28 427.41,111.49 430.12,110.70 432.82,109.93 435.53,109.16 438.24,108.40 440.94,107.65 443.65,106.91 446.35,106.17 449.06,105.44 451.76,104.72 454.47,104.01 457.18,103.31 459.88,102.61 462.59,101.92 465.29,101.24 468.00,100.57 470.71,99.90 473.41,99.24 476.12,98.59 478.82,97.94 481.53,97.30 484.24,96.67 486.94,96.05 489.65,95.43 492.35,94.81 495.06,94.21 497.76,93.61 500.47,93.01 503.18,92.43 505.88,91.85 508.59,91.27 511.29,90.70 514.00,90.14 516.71,89.58 519.41,89.03 522.12,88.48 524.82,87.94 527.53,87.40 530.24,86.87 532.94,86.35 535.65,85.83 538.35,85.32 541.06,84.81 543.76,84.30 546.47,83.81 549.18,83.31 551.88,82.82 554.59,82.34 557.29,81.86 560.00,81.39" stroke="#4a5fd0"/>
+<polyline points="100.00,295.86 560.00,53.30" stroke="#d9772a"/>
+</g>
+<circle cx="289.41" cy="166.16" r="3.5" fill="#4a5fd0" stroke="white" stroke-width="1.5"/>
+<circle cx="345.97" cy="166.16" r="3.5" fill="#d9772a" stroke="white" stroke-width="1.5"/>
+<line x1="551.88" y1="59.58" x2="551.88" y2="80.82" stroke="#222" stroke-width="1.2" marker-start="url(#as)" marker-end="url(#ae)"/>
+<text x="561.88" y="74.20" text-anchor="start">Difference</text>
+<line x1="105.95" y1="294.73" x2="105.95" y2="317.11" stroke="#222" stroke-width="1.2" marker-start="url(#as)" marker-end="url(#ae)"/>
+<text x="113.95" y="335.11" text-anchor="start">Difference</text>
+<text x="311.88" y="138.22" text-anchor="end" fill="#4a5fd0">Vanilla swap (concave)</text>
+<text x="440.12" y="139.79" text-anchor="start" fill="#d9772a">CMS (linear)</text>
+</svg>
