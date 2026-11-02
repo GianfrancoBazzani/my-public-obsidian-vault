@@ -46,9 +46,29 @@ Black's model needs positive rates. For rates near or below zero, the market use
 
 
 
-## Caps and Floors
+## Interest Rate Caps and Floors
 
-TODO Hull Chapter 34
+### Caps
+
+An interest rate cap is a series of call options on interest rates, called caplets. It can be understood by considering a floating-rate note where the interest rate is reset every three months. The interest rate of each three-month period is based on a three-month reference interest rate, applicable to the period, that is observed in the market.
+
+Interest rate caps provide protection against rises in the interest rate above a strike rate, called the cap rate $R_K$. A borrower that pays interest on the note and holds a cap pays at most $R_K$ in each period.
+
+For example, a company borrows USD 10 million for five years with the floating-rate note and enters into a cap with a notional principal of USD 10 million and a cap rate of 3% per annum. The effective reference interest rate that determines the loan interest payments is then never more than 3% per annum. If the reference interest rate for a quarter is less than 3%, the cap gives no payoff for that quarter. If the rate is more than 3%, the payoff brings the effective reference interest rate down to 3% per annum. For example, if the reference interest rate for a quarter is 3.5% per annum, the cap gives a payoff at the end of the quarter of
+
+$$10{,}000{,}000 \times 0.25 \times (0.035 - 0.03) = 12{,}500$$
+
+to reduce the effective reference interest rate for the quarter to 3% per annum.
+
+### Floors
+
+An interest rate floor is a series of put option on interest rates.
+
+TODO Add a small numerical example and explain
+
+Interest rate floors provides protection against interest rates drops below a strike price.
+
+### Collar
 
 ## SABR model
 
