@@ -32,6 +32,33 @@ where
 
 The holder receives this payoff $mn$ times, once per period of an $n$-year swap. Discounted to the expiry and added, these cash flows equal $\max(s_T - s_K, 0)$ (payer) or $\max(s_K - s_T, 0)$ (receiver) times the annuity of the swap.
 
+The payment dates of the swap are $T_1, T_2, \dots, T_{mn}$, in years from today, with $T_i \approx T + i/m$. For a payer swaption, each cash flow is the payoff of a call option on $s_T$ with strike price $s_K$. A cap is a portfolio of options on interest rates, but a swaption is a single option on the swap rate with repeated payoffs.
+
+The standard market model (Black's model) gives the value of a payer swaption as
+
+$$V_{\text{payer}} = \sum_{i=1}^{mn} \frac{L}{m} P(0, T_i) [s_F N(d_1) - s_K N(d_2)]$$
+
+and the value of a receiver swaption as
+
+$$V_{\text{receiver}} = \sum_{i=1}^{mn} \frac{L}{m} P(0, T_i) [s_K N(-d_2) - s_F N(-d_1)]$$
+
+with
+
+$$d_1 = \frac{\ln(s_F/s_K) + \sigma^2 T/2}{\sigma \sqrt{T}}$$
+
+$$d_2 = \frac{\ln(s_F/s_K) - \sigma^2 T/2}{\sigma \sqrt{T}} = d_1 - \sigma \sqrt{T}$$
+
+where
+
+- $s_F$ is the forward swap rate at time zero, which is the fixed rate that gives a zero value today to the swap that starts at $T$.
+- $\sigma$ is the volatility of the forward swap rate, so $\sigma \sqrt{T}$ is the standard deviation of $\ln s_T$.
+- $P(0, T_i)$ is the discount factor from today to the payment date $T_i$.
+- $N(\cdot)$ is the cumulative distribution function of the standard normal distribution.
+
+The sum $\sum_{i=1}^{mn} \frac{L}{m} P(0, T_i)$ is the annuity of the forward swap today, so the value of a payer swaption is the annuity times $[s_F N(d_1) - s_K N(d_2)]$.
+
+
+
 ## Caps and Floors
 
 TODO Hull Chapter 34
