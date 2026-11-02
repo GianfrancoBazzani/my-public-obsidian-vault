@@ -150,7 +150,9 @@ $\beta$ and $\rho$ set the slope (skew) of the smile, and $\nu$ sets its curvatu
 
 ## Constant Maturity Swaps
 
-A constant maturity swap (CMS) exchanges on each payment date a swap rate with a fixed tenor (for example 10 years) for a fixed rate or a floating rate such as SOFR. On each reset date $t_k$, the CMS leg takes the swap rate $s_{t_k}$ of a new standard swap with the same tenor, hence the name constant maturity, and pays $L \delta_k s_{t_k}$ at $t_{k+1}$, where $L$ is the principal and $\delta_k = t_{k+1} - t_k$.
+A constant maturity swap (CMS) exchanges on each payment date a swap rate with a fixed tenor (for example 10 years) for a fixed rate or a floating rate such as SOFR. On each reset date $t_k$, the CMS leg takes the swap rate $s_{t_k}$ of a new standard swap with the same tenor, hence the name constant maturity, and pays $L \delta_k s_{t_k}$ at $t_{k+1}$, where $L$ is the principal and $\delta_k = t_{k+1} - t_k$. For a CMS that receives the swap rate and pays a fixed rate $K$, the net payment of each period is
+
+$$\text{CMS payoff} = L \delta_k (s_{t_k} - K)$$
 
 On a reset date $T$, the swap rate $s_T$ is the par rate $K_{par}$ of the new swap (see [Swaps](08-swaps.md)). Before $T$, only the forward swap rate is known, which is the par rate today of the swap that starts at $T$. With the annuity $A_0$ and the payment dates $T_1, \dots, T_{mn}$ defined for swaptions (see [European Swaptions](#european-swaptions)), it is
 
@@ -163,6 +165,12 @@ The value of a CMS payment fixed at $T = t_k$ and paid at $T_p = t_{k+1}$ depend
 $$E^{T_p}[s_T] = \frac{A_0}{P(0,T_p)} E^{A}\left[s_T \frac{P(T,T_p)}{A_T}\right]$$
 
 When the swap rate rises, $A_T$ falls and the ratio $P(T,T_p)/A_T$ rises, so the expected swap rate is higher than $s_F$, and the difference is the convexity adjustment. Bond convexity gives the same result. If the swap rate is the yield of a bond, the expected bond price under the forward measure is the forward bond price, and because the price is a convex function of the yield, the expected yield is higher than the forward yield (Jensen's inequality).
+
+With the modified duration $D_{mod}$ and the convexity $C$ of this bond at the yield $s_F$, and the volatility $\sigma$ of the forward swap rate, the expected swap rate for a payment on the fixing date is approximately
+
+$$E^{T}[s_T] \approx s_F + \frac{1}{2} s_F^2 \sigma^2 T \frac{C}{D_{mod}}$$
+
+The ratio $C/D_{mod}$ is close to $D_{mod}$ (10.2 against 8.5 for a 10-year par bond at 3%), so with the normal volatility $\sigma_N = s_F \sigma$, a simpler approximation is $E^{T}[s_T] \approx s_F + \frac{1}{2} \sigma_N^2 T D_{mod}$. The adjustment increases with the volatility, the time to the reset date, and the tenor of the swap rate. A payment at $T_p$ after $T$ needs an additional timing adjustment, which is usually small and negative.
 
 The payoffs at the fixing date show the same result. A payer swap that starts on the fixing date has a payoff that is a concave function of the swap rate, because its annuity falls when the rate rises, and a CMS that receives the swap rate and pays a fixed rate has a linear payoff. When each contract has the fixed rate that gives it a zero value today, both have an expected payoff of zero under the forward measure of the fixing date. The swap payoff is zero at the forward swap rate, and the CMS payoff is zero at the expected swap rate, which is higher because the swap payoff is concave. The CMS payoff is higher than the swap payoff when the rate moves far from the forward in either direction, and the higher fixed rate of the CMS offsets these larger payoffs.
 
