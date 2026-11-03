@@ -23,7 +23,7 @@ Reserves are central bank money that commercial banks hold in their accounts at 
 - Reserve requirements, the minimum share of deposits that regulation obliges banks to hold as reserves, are small or absent. The UK has none, the US cut them to zero from 26 March 2020, and the euro area requires 1% of short-term liabilities, mainly customer deposits.
 - Banks cannot lend reserves to the public, because only banks hold reserve accounts at the central bank.
 
-## Money Creation
+## Money Creation and Destruction
 
 Broad money is the total money held by households and companies. It consists of bank deposits, which are IOUs from commercial banks, and currency, which is mostly IOUs from the central bank. Deposits are the vast majority of broad money, and commercial banks create most of them.
 
@@ -33,7 +33,14 @@ Commercial banks create money when they lend. A bank that grants a mortgage does
 
 The new deposits may lead banks to want, or by regulation need, more reserves to meet withdrawals and payments to other banks. In normal times the central bank supplies these reserves on demand, in exchange for other assets that banks hold, so the total quantity of reserves does not directly limit lending or deposit creation.
 
+Just as a new loan creates money, the repayment of a loan destroys it, because the bank removes the deposit from the borrower's account. Lending and repayment are the main ways that money is created and destroyed, but not the only ones. Deposits also appear or disappear whenever the banking sector (including the central bank) buys or sells existing assets with households or, more often, with companies or the government.
+
+- **Government bonds.** Banks hold government bonds as liquid assets that they can quickly sell for central bank money, for example if depositors withdraw large amounts of currency. When banks buy bonds from the non-bank private sector, they credit the sellers with new deposits. When they sell bonds to it, the buyers pay with deposits and that money disappears. Central bank asset purchases, known as quantitative easing (QE), have a similar effect.
+- **Long-term debt and equity.** Besides deposits, banks keep some capital and long-term debt to limit risks and meet regulatory requirements. These 'non-deposit' liabilities are longer-term investments by households and companies, and they cannot be exchanged for currency as easily as deposits, so they make the bank more resilient. When banks issue them to non-bank financial companies, the buyers pay with deposits. Deposit (money) liabilities of the banking sector fall and its non-deposit liabilities rise.
+
 ## Limits on Money Creation
+
+
 
 ### Bank Limits
 
@@ -45,6 +52,7 @@ The new deposits may lead banks to want, or by regulation need, more reserves to
 
 - Board of Governors of the Federal Reserve System. 2026. "Money Stock Measures - H.6 Release." 27 October 2026. [Online](https://www.federalreserve.gov/releases/h6/20261027/).
 - Board of Governors of the Federal Reserve System. "Reserve Requirements." [Online](https://www.federalreserve.gov/monetarypolicy/reservereq.htm).
+- Deutsche Bundesbank. 2017. "The Role of Banks, Non-banks and the Central Bank in the Money Creation Process." *Monthly Report* April 2017: 13–33. [PDF](https://www.bundesbank.de/resource/blob/654284/df66c4444d065a7f519e2ab0c476df58/mL/2017-04-money-creation-process-data.pdf).
 - European Central Bank. 2026. "Monetary Developments in the Euro Area: September 2026." Press release, 27 October 2026. [PDF](https://www.bancaditalia.it/media/bce-comunicati/documenti/2026/ecb.md2609.pdf).
 - European Central Bank. "What Are Minimum Reserve Requirements?" [Online](https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/minimum_reserve_req.en.html).
 - Federal Reserve Bank of St. Louis. "Currency Component of M1 (CURRSL)" and "M2 (M2SL)." FRED. [Online](https://fred.stlouisfed.org/graph/?id=CURRSL,M2SL).
