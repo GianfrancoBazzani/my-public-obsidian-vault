@@ -76,8 +76,12 @@ As a bank lends more, its average expected loss per loan is likely to rise, so e
 
 #### Regulation
 
+Market forces alone do not always make banks protect themselves enough against liquidity and credit risk. Prudential regulation therefore sets minimum capital and liquidity positions, which act as an extra brake on lending and so on money creation. Basel III sets the international minimums, and national authorities can add more.
 
-
+- **Capital requirements.** Capital, mostly shares and retained earnings, absorbs losses before depositors suffer them. Banks must hold capital in proportion to their assets weighted by risk, so riskier loans need more of it, and a bank that falls into the buffers above the minimum must restrict dividends, buybacks and bonuses. Each new loan therefore needs extra capital, which costs more than deposits.
+- **Leverage ratio.** Banks must also hold capital in proportion to all their exposures, whatever their risk. This backstop limits total lending even when risk weights are low.
+- **Liquidity Coverage Ratio (LCR).** Banks must hold enough high-quality liquid assets, such as reserves and government bonds, to cover their net outflows during a month of stress. New loans create deposits that can leave, so the bank must hold more of these assets, which earn less than loans.
+- **Net Stable Funding Ratio (NSFR).** Banks must fund long-term assets, such as long-term loans, with funding that stays over the next year, such as capital, term deposits and stable retail deposits. This funding costs more than instant-access deposits, so each long-term loan costs the bank more.
 
 ### Behaviour of Holders
 
@@ -85,6 +89,9 @@ As a bank lends more, its average expected loss per loan is likely to rise, so e
 
 ## References
 
+- Basel Committee on Banking Supervision. 2013. "Basel III: The Liquidity Coverage Ratio and Liquidity Risk Monitoring Tools." January 2013. [Online](https://www.bis.org/publ/bcbs238.htm).
+- Basel Committee on Banking Supervision. 2014. "Basel III: The Net Stable Funding Ratio." October 2014. [Online](https://www.bis.org/bcbs/publ/d295.htm).
+- Basel Committee on Banking Supervision. "The Basel Framework." Chapters RBC20, RBC30, LEV20 and NSF20. [Online](https://www.bis.org/basel_framework/).
 - Board of Governors of the Federal Reserve System. 2026. "Money Stock Measures - H.6 Release." 27 October 2026. [Online](https://www.federalreserve.gov/releases/h6/20261027/).
 - Board of Governors of the Federal Reserve System. "Reserve Requirements." [Online](https://www.federalreserve.gov/monetarypolicy/reservereq.htm).
 - Button, Richard, Silvia Pezzini, and Neil Rossiter. 2010. "Understanding the Price of New Lending to Households." *Bank of England Quarterly Bulletin* 2010 Q3: 172–182. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2010/understanding-the-price-of-new-lending-to-households.pdf).
