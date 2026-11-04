@@ -90,6 +90,28 @@ The public also limits money creation, because it may not want to hold all the n
 - **Reflux.** The receivers use the money to repay their own bank loans, so the money is destroyed as fast as it was created. For example, a first-time buyer takes a mortgage to buy a house from an elderly person, who repays their own mortgage and moves in with family. The balance sheets of consumers return to their position before the loan, and there need be no further effect on the economy.
 - **Hot potato.** Assets and debts vary widely across people, so the money often goes to those without loans to repay, for example a seller with no mortgage or a company that already has enough liquid assets. They then hold more money than they want, so they spend the excess on goods and services, or, for a company, on higher-yielding assets. The money is not destroyed, so it passes from holder to holder, each of whom may spend more. Other things equal, this raises inflationary pressure.
 
+### The Bank Lending Survey
+
+The euro area bank lending survey (BLS) measures both limits, the willingness of banks to lend and the wish of the public to borrow. The Eurosystem launched it in 2003 to track lending conditions and monetary policy transmission. Each quarter, senior loan officers at about 160 banks in all euro area countries report how lending changed over the past three months and how they expect it to change over the next three. Results appear usually in January, April, July and October, separately for loans to firms, housing loans and consumer credit, and each national central bank publishes the results for its country.
+
+- **Credit standards.** Internal guidelines and loan approval criteria (the supply side), with factors such as risk perceptions, risk tolerance, funding costs, balance sheet constraints and competition.
+- **Terms and conditions.** Terms actually agreed in loan contracts, such as margins, fees, collateral, size and maturity.
+- **Rejection rate.** Share of loan applications rejected.
+- **Loan demand.** Demand from households and companies (the demand side), with factors such as interest rates, fixed investment, consumer confidence and housing market prospects.
+- **Ad hoc questions.** Topical questions, such as access to funding, the effect of the ECB asset portfolio, non-performing loans or new technologies.
+
+Answers are qualitative, so results are net percentages. For standards, this is the share of banks that tightened (considerably or somewhat) minus the share that eased, and for demand, the share reporting an increase minus the share reporting a decrease. A positive value thus means net tightening or a net rise in demand. Replies track actual loan growth and lending rates closely.
+
+Changes in standards and demand signal lending changes before loan data show them. For loans to firms, changes in standards lead loan growth by 5–6 quarters, because banks set standards before they negotiate loans, and changes in demand lead by about 3 quarters, with a higher correlation. For housing loans the order reverses, with demand leading by 3–4 quarters and standards by only about 2. The Fed (Senior Loan Officer Opinion Survey) and the Bank of England (Credit Conditions Survey) run similar quarterly surveys.
+
+For example, the October 2026 round (159 banks, 100% response) shows both limits after a rate rise. Higher risk perceptions and lower risk tolerance tightened standards, and the general level of interest rates mainly drove lower demand in all segments. Terms tightened and rejections rose for all borrowers. Access to retail funding fell the most since the series began in 2011.
+
+| Segment | Standards, Q3 2026 | Demand, Q3 2026 | Expected demand, Q4 2026 |
+| --- | --- | --- | --- |
+| Loans to firms | +9% (expected +5%) | −6% (expected +4%) | −1% |
+| Housing loans | 0% | −27% (Q2 −15%) | −36% |
+| Consumer credit and other lending | +14% | −2% | −14% |
+
 ### Monetary Policy and QE
 
 Monetary policy is the ultimate limit on money creation. The Bank of England, the ECB and the Fed all aim for 2% consumer price inflation over the medium to longer run. The UK government sets the target of the Bank of England, while the ECB and the Fed set their own. Over some periods, measures of money have grown at a rate similar to nominal spending, which sets inflationary pressure in the medium term. A policy that meets the inflation target should therefore also give a stable rate of credit and money creation.
@@ -130,26 +152,32 @@ In the UK, the first £200 billion of purchases (March 2009 to January 2010, abo
 
 ## References
 
+- Bank of England. 2026. "Credit Conditions Survey - 2026 Q2." [Online](https://www.bankofengland.co.uk/credit-conditions-survey/2026/2026-q2).
 - Bank of England. "Monetary Policy." [Online](https://www.bankofengland.co.uk/monetary-policy).
 - Basel Committee on Banking Supervision. 2013. "Basel III: The Liquidity Coverage Ratio and Liquidity Risk Monitoring Tools." January 2013. [Online](https://www.bis.org/publ/bcbs238.htm).
 - Basel Committee on Banking Supervision. 2014. "Basel III: The Net Stable Funding Ratio." October 2014. [Online](https://www.bis.org/bcbs/publ/d295.htm).
 - Basel Committee on Banking Supervision. "The Basel Framework." Chapters RBC20, RBC30, LEV20 and NSF20. [Online](https://www.bis.org/basel_framework/).
 - Board of Governors of the Federal Reserve System. 2026. "Money Stock Measures - H.6 Release." 27 October 2026. [Online](https://www.federalreserve.gov/releases/h6/20261027/).
 - Board of Governors of the Federal Reserve System. "Reserve Requirements." [Online](https://www.federalreserve.gov/monetarypolicy/reservereq.htm).
+- Board of Governors of the Federal Reserve System. "Senior Loan Officer Opinion Survey on Bank Lending Practices." [Online](https://www.federalreserve.gov/data/sloos.htm).
 - Board of Governors of the Federal Reserve System. "Why Does the Federal Reserve Aim for Inflation of 2 Percent Over the Longer Run?" [Online](https://www.federalreserve.gov/faqs/economy_14400.htm).
 - Bridges, Jonathan, and Ryland Thomas. 2012. "The Impact of QE on the UK Economy — Some Supportive Monetarist Arithmetic." Staff Working Paper No. 442, Bank of England. [Online](https://ideas.repec.org/p/boe/boeewp/0442.html).
 - Burr, Natalie, and Tim Willems. 2024. "About a Rate of (General) Interest: How Monetary Policy Transmits." *Bank of England Quarterly Bulletin*, 12 July 2024. [Online](https://www.bankofengland.co.uk/quarterly-bulletin/2024/2024/about-a-rate-of-general-interest-how-monetary-policy-transmits).
 - Button, Richard, Silvia Pezzini, and Neil Rossiter. 2010. "Understanding the Price of New Lending to Households." *Bank of England Quarterly Bulletin* 2010 Q3: 172–182. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2010/understanding-the-price-of-new-lending-to-households.pdf).
 - Deutsche Bundesbank. 2017. "The Role of Banks, Non-banks and the Central Bank in the Money Creation Process." *Monthly Report* April 2017: 13–33. [PDF](https://www.bundesbank.de/resource/blob/654284/df66c4444d065a7f519e2ab0c476df58/mL/2017-04-money-creation-process-data.pdf).
 - European Central Bank. 2026. "Monetary Developments in the Euro Area: September 2026." Press release, 27 October 2026. [PDF](https://www.bancaditalia.it/media/bce-comunicati/documenti/2026/ecb.md2609.pdf).
+- European Central Bank. 2026. "October 2026 Euro Area Bank Lending Survey." Press release, 27 October 2026. [PDF](https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/ComunicadosBCE/NotasInformativasBCE/26/presbce2026-143en.pdf).
+- European Central Bank. "The Euro Area Bank Lending Survey." [Online](https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/index.en.html).
 - European Central Bank. "Monetary Policy Strategy." [Online](https://www.ecb.europa.eu/mopo/strategy/html/index.en.html).
 - European Central Bank. "Transmission Mechanism of Monetary Policy." [Online](https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html).
 - European Central Bank. "What Are Minimum Reserve Requirements?" [Online](https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/minimum_reserve_req.en.html).
 - Federal Reserve Bank of St. Louis. "Currency Component of M1 (CURRSL)" and "M2 (M2SL)." FRED. [Online](https://fred.stlouisfed.org/graph/?id=CURRSL,M2SL).
+- Huennekes, Franziska, and Petra Köhler-Ulbrich. 2022. "What Information Does the Euro Area Bank Lending Survey Provide on Future Loan Developments?" *Economic Bulletin* Issue 8/2022, European Central Bank. [Online](https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ecb.ebbox202208_07~5f7ba986d9.en.html).
 - Jakab, Zoltan, and Michael Kumhof. 2015. "Banks Are Not Intermediaries of Loanable Funds — and Why This Matters." Staff Working Paper No. 529, Bank of England. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2015/banks-are-not-intermediaries-of-loanable-funds-and-why-this-matters.pdf).
 - Joyce, Michael, Matthew Tong, and Robert Woods. 2011. "The United Kingdom's Quantitative Easing Policy: Design, Operation and Impact." *Bank of England Quarterly Bulletin* 2011 Q3: 200–212. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2011/the-uks-quantitative-easing-policy-design-operation-and-impact.pdf).
 - Kang-Landsberg, Alena, Stephan Luck, and Matthew Plosser. 2023. "Deposit Betas: Up, Up, and Away?" *Liberty Street Economics*, Federal Reserve Bank of New York, 11 April 2023. [Online](https://libertystreeteconomics.newyorkfed.org/2023/04/deposit-betas-up-up-and-away/).
 - Keating, Thomas, and Marco Macchiavelli. 2018. "Interest on Reserves and Arbitrage in Post-Crisis Money Markets." *FEDS Notes*, Board of Governors of the Federal Reserve System, 1 March 2018. [Online](https://www.federalreserve.gov/econres/notes/feds-notes/interest-on-reserves-and-arbitrage-in-post-crisis-money-markets-20180301.html).
+- Köhler-Ulbrich, Petra, Maria Dimou, Lorenzo Ferrante, and Conor Parle. 2023. "Happy Anniversary, BLS – 20 Years of the Euro Area Bank Lending Survey." *Economic Bulletin* Issue 7/2023, European Central Bank. [Online](https://www.ecb.europa.eu/press/economic-bulletin/articles/2023/html/ecb.ebart202307_01~55be241424.en.html).
 - Lavoie, Marc. 1999. "The Credit-Led Supply of Deposits and the Demand for Money: Kaldor's Reflux Mechanism as Previously Endorsed by Joan Robinson." *Cambridge Journal of Economics* 23 (1): 103–113. [Online](https://ideas.repec.org/a/oup/cambje/v23y1999i1p103-13.html).
 - McLeay, Michael, Amar Radia, and Ryland Thomas. 2014. "Money Creation in the Modern Economy." *Bank of England Quarterly Bulletin* 2014 Q1: 14–27. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf).
 - Tobin, James. 1963. "Commercial Banks as Creators of 'Money'." Cowles Foundation Discussion Paper No. 159, Yale University. [Online](https://elischolar.library.yale.edu/cowles-discussion-paper-series/388/).
