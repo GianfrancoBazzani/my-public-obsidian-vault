@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="410" viewBox="0 0 960 410" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<title>The hierarchy of money and credit as a pyramid under a gold standard, and its change in expansion and contraction</title>
+<defs>
+<marker id="arrow-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+</marker>
+<marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#2b8a3e"/>
+</marker>
+</defs>
+<rect width="960" height="410" fill="white"/>
+<line x1="480" y1="45" x2="480" y2="395" stroke="#dee2e6" stroke-width="1.5"/>
+
+<text x="20" y="30" font-size="15" font-weight="bold" fill="#333">The hierarchy under a gold standard</text>
+<line x1="28" y1="330" x2="28" y2="86" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-dark)"/>
+<text x="28" y="72" text-anchor="middle" fill="#555">money</text>
+<text x="28" y="350" text-anchor="middle" fill="#555">credit</text>
+<polygon points="210,80 50,330 370,330" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<line x1="210" y1="80" x2="210" y2="330" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="181.2" y1="125" x2="238.8" y2="125" stroke="#868e96" stroke-width="1.5"/>
+<line x1="136.4" y1="195" x2="283.6" y2="195" stroke="#868e96" stroke-width="1.5"/>
+<line x1="91.6" y1="265" x2="328.4" y2="265" stroke="#868e96" stroke-width="1.5"/>
+<line x1="40" y1="330" x2="380" y2="330" stroke="#333" stroke-width="1.5"/>
+<g text-anchor="middle" fill="#333" stroke="#f1f3f5" stroke-width="5" stroke-linejoin="round" paint-order="stroke">
+<text x="210" y="114">Gold</text>
+<text x="210" y="166">Currency</text>
+<text x="210" y="236">Deposits</text>
+<text x="210" y="303">Securities</text>
+</g>
+<text x="240" y="100" font-size="12" fill="#555">no one's liability</text>
+<g stroke="#adb5bd" stroke-width="1">
+<line x1="267" y1="162" x2="376" y2="162"/>
+<line x1="312" y1="232" x2="376" y2="232"/>
+<line x1="355" y1="299" x2="376" y2="299"/>
+</g>
+<g font-size="12" fill="#555">
+<text x="381" y="166">Central bank</text>
+<text x="381" y="236">Banking system</text>
+<text x="381" y="303">Private sector</text>
+</g>
+<text x="130" y="350" text-anchor="middle" fill="#555">← liabilities</text>
+<text x="210" y="350" text-anchor="middle" fill="#555">0</text>
+<text x="290" y="350" text-anchor="middle" fill="#555">assets →</text>
+<text x="20" y="378" font-size="12" fill="#555">Every layer below gold is a liability of its issuer and an asset</text>
+<text x="20" y="394" font-size="12" fill="#555">of its holder, so net credit at each layer is zero.</text>
+
+<text x="500" y="30" font-size="15" font-weight="bold" fill="#333">Expansion and contraction</text>
+<line x1="506" y1="330" x2="506" y2="86" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-dark)"/>
+<text x="506" y="72" text-anchor="middle" fill="#555">money</text>
+<text x="506" y="350" text-anchor="middle" fill="#555">credit</text>
+<polygon points="720,80 520,330 920,330" fill="#2b8a3e" fill-opacity="0.08" stroke="#2b8a3e" stroke-width="2"/>
+<polygon points="720,80 620,330 820,330" fill="none" stroke="#868e96" stroke-width="2" stroke-dasharray="7 4"/>
+<line x1="720" y1="80" x2="720" y2="330" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="515" y1="330" x2="935" y2="330" stroke="#333" stroke-width="1.5"/>
+<line x1="630" y1="300" x2="548" y2="300" stroke="#2b8a3e" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="588" y="292" text-anchor="middle" font-size="12" fill="#2b8a3e">quantity</text>
+<line x1="820" y1="324" x2="820" y2="214" stroke="#2b8a3e" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="834" y="207" font-size="12" fill="#2b8a3e">moneyness</text>
+<text x="615" y="350" text-anchor="middle" fill="#555">← liabilities</text>
+<text x="720" y="350" text-anchor="middle" fill="#555">0</text>
+<text x="825" y="350" text-anchor="middle" fill="#555">assets →</text>
+<line x1="500" y1="374" x2="530" y2="374" stroke="#2b8a3e" stroke-width="2"/>
+<text x="538" y="378" font-size="12" fill="#555">Expansion — credit grows and the hierarchy flattens</text>
+<line x1="500" y1="390" x2="530" y2="390" stroke="#868e96" stroke-width="2" stroke-dasharray="7 4"/>
+<text x="538" y="394" font-size="12" fill="#555">Contraction — credit shrinks and the hierarchy steepens</text>
+</svg>
