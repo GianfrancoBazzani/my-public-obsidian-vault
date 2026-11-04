@@ -17,26 +17,26 @@
 <text x="28" y="350" text-anchor="middle" fill="#555">credit</text>
 <polygon points="210,80 50,330 370,330" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
 <line x1="210" y1="80" x2="210" y2="330" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4 4"/>
-<line x1="181.2" y1="125" x2="238.8" y2="125" stroke="#868e96" stroke-width="1.5"/>
-<line x1="136.4" y1="195" x2="283.6" y2="195" stroke="#868e96" stroke-width="1.5"/>
-<line x1="91.6" y1="265" x2="328.4" y2="265" stroke="#868e96" stroke-width="1.5"/>
+<line x1="158.8" y1="160" x2="261.2" y2="160" stroke="#868e96" stroke-width="1.5"/>
+<line x1="104.4" y1="245" x2="315.6" y2="245" stroke="#868e96" stroke-width="1.5"/>
 <line x1="40" y1="330" x2="380" y2="330" stroke="#333" stroke-width="1.5"/>
+<circle cx="210" cy="80" r="5" fill="#333"/>
+<text x="222" y="84" fill="#333">Gold</text>
+<text x="257" y="84" font-size="12" fill="#555">no one's liability, a point at 0</text>
 <g text-anchor="middle" fill="#333" stroke="#f1f3f5" stroke-width="5" stroke-linejoin="round" paint-order="stroke">
-<text x="210" y="114">Gold</text>
-<text x="210" y="166">Currency</text>
-<text x="210" y="236">Deposits</text>
-<text x="210" y="303">Securities</text>
+<text x="210" y="138">Currency</text>
+<text x="210" y="210">Deposits</text>
+<text x="210" y="295">Securities</text>
 </g>
-<text x="240" y="100" font-size="12" fill="#555">no one's liability</text>
 <g stroke="#adb5bd" stroke-width="1">
-<line x1="267" y1="162" x2="376" y2="162"/>
-<line x1="312" y1="232" x2="376" y2="232"/>
-<line x1="355" y1="299" x2="376" y2="299"/>
+<line x1="245" y1="134" x2="376" y2="134"/>
+<line x1="291" y1="206" x2="376" y2="206"/>
+<line x1="345" y1="291" x2="376" y2="291"/>
 </g>
 <g font-size="12" fill="#555">
-<text x="381" y="166">Central bank</text>
-<text x="381" y="236">Banking system</text>
-<text x="381" y="303">Private sector</text>
+<text x="381" y="138">Central bank</text>
+<text x="381" y="210">Banking system</text>
+<text x="381" y="295">Private sector</text>
 </g>
 <text x="130" y="350" text-anchor="middle" fill="#555">← liabilities</text>
 <text x="210" y="350" text-anchor="middle" fill="#555">0</text>
@@ -51,6 +51,8 @@
 <polygon points="720,80 520,330 920,330" fill="#2b8a3e" fill-opacity="0.08" stroke="#2b8a3e" stroke-width="2"/>
 <polygon points="720,80 620,330 820,330" fill="none" stroke="#868e96" stroke-width="2" stroke-dasharray="7 4"/>
 <line x1="720" y1="80" x2="720" y2="330" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4 4"/>
+<circle cx="720" cy="80" r="5" fill="#333"/>
+<text x="732" y="84" fill="#333">Gold</text>
 <line x1="515" y1="330" x2="935" y2="330" stroke="#333" stroke-width="1.5"/>
 <line x1="630" y1="300" x2="548" y2="300" stroke="#2b8a3e" stroke-width="2" marker-end="url(#arrow-green)"/>
 <text x="588" y="292" text-anchor="middle" font-size="12" fill="#2b8a3e">quantity</text>
