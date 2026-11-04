@@ -59,6 +59,20 @@ A bank grows its business mainly by lending more. When it does, competition sque
 
 Both effects lower the profit on an extra loan, so an individual bank cannot lend without end. Each new loan needs new funding, or the bank soon runs out of reserves to meet its outflows. Other banks also lend, so deposits keep moving between banks, and each bank competes for them with higher rates on savings accounts. It can also borrow from other banks or issue other liabilities, at least for a while. If it keeps cutting loan rates and raising deposit rates, the spread closes and extra lending stops being profitable. This limit is weaker when all banks lend more at the same time, because each bank also gains deposits from the loans of the others.
 
+Each new loan also carries two main risks that the bank must manage, and both limit how much it lends.
+
+**Liquidity risk** is the risk that a bank cannot pay large withdrawals. Loans run for months or years, but customers can withdraw instant-access deposits, such as current accounts, at any time, so a bank funded only by these could not repay a large outflow. Banks therefore match new loans with stable deposits, which customers are unlikely or unable to withdraw in large amounts, such as deposits fixed for a term, and they hold liquid assets, such as reserves and government bonds, to cover outflows. Savers want a higher rate for the inconvenience of a term deposit, so this funding costs more and limits how much banks wish to lend.
+
+**Credit risk** is the risk that borrowers cannot repay their loans. The loan rate includes a charge for it in two parts.
+
+- **Expected loss.** The average credit loss that the bank expects, which is the product of the probability of default, the share of the loan lost in default and the amount owed at default. It is larger when collateral is weak or absent, for example for unsecured loans or mortgages with a high loan-to-value ratio.
+- **Capital charge.** The cost of the capital that the bank holds to absorb unexpected losses, which are losses above the expected loss.
+
+As a bank lends more, its average expected loss per loan is likely to rise, so each extra loan earns less. This further limits how much the bank can profitably lend, and so how much money it creates.
+
+
+
+
 ### Behaviour of Holders
 
 ### Monetary Policy and QE
@@ -67,6 +81,7 @@ Both effects lower the profit on an extra loan, so an individual bank cannot len
 
 - Board of Governors of the Federal Reserve System. 2026. "Money Stock Measures - H.6 Release." 27 October 2026. [Online](https://www.federalreserve.gov/releases/h6/20261027/).
 - Board of Governors of the Federal Reserve System. "Reserve Requirements." [Online](https://www.federalreserve.gov/monetarypolicy/reservereq.htm).
+- Button, Richard, Silvia Pezzini, and Neil Rossiter. 2010. "Understanding the Price of New Lending to Households." *Bank of England Quarterly Bulletin* 2010 Q3: 172–182. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2010/understanding-the-price-of-new-lending-to-households.pdf).
 - Deutsche Bundesbank. 2017. "The Role of Banks, Non-banks and the Central Bank in the Money Creation Process." *Monthly Report* April 2017: 13–33. [PDF](https://www.bundesbank.de/resource/blob/654284/df66c4444d065a7f519e2ab0c476df58/mL/2017-04-money-creation-process-data.pdf).
 - European Central Bank. 2026. "Monetary Developments in the Euro Area: September 2026." Press release, 27 October 2026. [PDF](https://www.bancaditalia.it/media/bce-comunicati/documenti/2026/ecb.md2609.pdf).
 - European Central Bank. "What Are Minimum Reserve Requirements?" [Online](https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/minimum_reserve_req.en.html).
