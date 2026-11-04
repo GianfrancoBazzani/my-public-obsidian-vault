@@ -42,11 +42,13 @@ Just as a new loan creates money, the repayment of a loan destroys it, because t
 
 Commercial banks create money when they lend, but not without limit. James Tobin (1963) wrote that "neither individually nor collectively do commercial banks possess a widow's cruse", the biblical jar of oil that refills itself without end. The public must want to hold the new deposits, and this depends on lending opportunities and interest rates. The price of a loan, which is the interest rate plus any fees, sets how much households and companies want to borrow. Many factors affect this price, not least the monetary policy of the central bank, which moves the level of interest rates in the economy.
 
-### Bank Limits Due Market Forces
+### Limits on Bank Lending
 
 Banks are businesses that must lend profitably in a competitive market and manage the risk of each loan. A bank earns interest on its assets, such as loans, and usually pays interest on its liabilities, such as savings accounts. The spread between the two covers its operating costs and gives its profit.
 
-Both rates follow the central bank's policy rate. Banks settle payments with one another in reserves, which only the central bank supplies, so it sets their price, usually the interest rate that it pays on reserves. Any bank can earn this rate without risk, so it is the opportunity cost of every other use of its funds. Interbank rates therefore stay close to the policy rate, and loan rates sit above it by a margin for risk, term and operating costs.
+#### Competition Between Banks
+
+Loan and deposit rates both follow the central bank's policy rate. Banks settle payments with one another in reserves, which only the central bank supplies, so it sets their price, usually the interest rate that it pays on reserves. Any bank can earn this rate without risk, so it is the opportunity cost of every other use of its funds. Interbank rates therefore stay close to the policy rate, and loan rates sit above it by a margin for risk, term and operating costs.
 
 Deposit rates follow the policy rate too, because savers can earn close to it elsewhere. Savers can move their deposits, with the reserves, to a bank or fund that pays more. A bank that lends cheaply cannot afford such deposit rates, so it soon has to raise its loan rates or lose funding. If its loan rate were below the deposit rate of another bank, a customer could borrow from it, deposit the money at the other bank and keep the difference with little risk. Each such loan moves deposits and reserves to the bank that pays more, until the cheap lender raises its rates. Credit checks, fees and loan limits make this arbitrage hard in practice, but the pressure remains.
 
@@ -59,6 +61,8 @@ A bank grows its business mainly by lending more. When it does, competition sque
 
 Both effects lower the profit on an extra loan, so an individual bank cannot lend without end. Each new loan needs new funding, or the bank soon runs out of reserves to meet its outflows. Other banks also lend, so deposits keep moving between banks, and each bank competes for them with higher rates on savings accounts. It can also borrow from other banks or issue other liabilities, at least for a while. If it keeps cutting loan rates and raising deposit rates, the spread closes and extra lending stops being profitable. This limit is weaker when all banks lend more at the same time, because each bank also gains deposits from the loans of the others.
 
+#### Risk Management
+
 Each new loan also carries two main risks that the bank must manage, and both limit how much it lends.
 
 **Liquidity risk** is the risk that a bank cannot pay large withdrawals. Loans run for months or years, but customers can withdraw instant-access deposits, such as current accounts, at any time, so a bank funded only by these could not repay a large outflow. Banks therefore match new loans with stable deposits, which customers are unlikely or unable to withdraw in large amounts, such as deposits fixed for a term, and they hold liquid assets, such as reserves and government bonds, to cover outflows. Savers want a higher rate for the inconvenience of a term deposit, so this funding costs more and limits how much banks wish to lend.
@@ -69,6 +73,8 @@ Each new loan also carries two main risks that the bank must manage, and both li
 - **Capital charge.** The cost of the capital that the bank holds to absorb unexpected losses, which are losses above the expected loss.
 
 As a bank lends more, its average expected loss per loan is likely to rise, so each extra loan earns less. This further limits how much the bank can profitably lend, and so how much money it creates.
+
+#### Regulation
 
 
 
