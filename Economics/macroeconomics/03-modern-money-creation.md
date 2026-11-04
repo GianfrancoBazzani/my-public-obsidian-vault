@@ -40,9 +40,22 @@ Just as a new loan creates money, the repayment of a loan destroys it, because t
 
 ## Limits on Money Creation
 
+Commercial banks create money when they lend, but not without limit. James Tobin (1963) wrote that "neither individually nor collectively do commercial banks possess a widow's cruse", the biblical jar of oil that refills itself without end. The public must want to hold the new deposits, and this depends on lending opportunities and interest rates. The price of a loan, which is the interest rate plus any fees, sets how much households and companies want to borrow. Many factors affect this price, not least the monetary policy of the central bank, which moves the level of interest rates in the economy. Three main sets of constraints limit how much money banks can create.
 
+### Bank Limits Due Market Forces
 
-### Bank Limits
+Banks are businesses that must lend profitably in a competitive market and manage the risk of each loan. A bank earns interest on its assets, such as loans, and usually pays interest on its liabilities, such as savings accounts. The spread between the two covers its operating costs and gives its profit.
+
+Both rates follow the central bank's policy rate. Banks settle payments with one another in reserves, and only the central bank can supply them, so it can set their price, which is the interest rate that it pays on reserves. A bank does not lend to other banks for less than it earns on its reserves, so interbank rates stay close to the policy rate. These rates then pass to rates in other markets and at other maturities, including the rates that banks pay on deposits and charge on loans. A rise in the policy rate thus raises the funding costs and loan rates of banks, and households and companies borrow less. For this reason monetary policy is the ultimate constraint on money creation.
+
+When a bank wants to lend more, competition squeezes the spread in two ways.
+
+- **Lower loan rates.** To attract more borrowers, the bank usually has to cut its loan rates relative to its competitors, so it earns less on each loan.
+- **Lost deposits.** The borrower spends the new deposit, and the payee more likely than not banks elsewhere. The bank settles the payment in reserves and must replace them, for example by paying more on savings accounts, so its funding costs rise.
+
+Both effects lower the profit on an extra loan and so limit how much an individual bank lends. 
+
+A bank therefore cannot lend without end. Each new loan needs new funding, or the bank soon runs out of reserves and cannot meet its outflows. Other banks are also lending, so new deposits keep moving between banks, and each bank competes for them with higher rates on savings accounts. It can also borrow from other banks or issue other liabilities, at least for a while. If a bank keeps cutting loan rates to find borrowers and raising deposit rates to keep funds, the spread closes and extra lending stops being profitable. This limit is weaker when all banks lend more at the same time, because each bank also gains deposits from the loans of the others.
 
 ### Behaviour of Holders
 
