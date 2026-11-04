@@ -83,24 +83,44 @@ Market forces alone do not always make banks protect themselves enough against l
 - **Liquidity Coverage Ratio (LCR).** Banks must hold enough high-quality liquid assets, such as reserves and government bonds, to cover their net outflows during a month of stress. New loans create deposits that can leave, so the bank must hold more of these assets, which earn less than loans.
 - **Net Stable Funding Ratio (NSFR).** Banks must fund long-term assets, such as long-term loans, with funding that stays over the next year, such as capital, term deposits and stable retail deposits. This funding costs more than instant-access deposits, so each long-term loan costs the bank more.
 
-### Behaviour of Holders
+### Behaviour of Households and Companies
+
+The public also limits money creation, because it may not want to hold all the new deposits relative to other assets, such as property or shares. Borrowers take loans to spend, so they pass the new deposits on quickly. The response of the households and companies that receive the money then sets the stock of money, and can affect spending and inflation. Two outcomes are possible.
+
+- **Reflux.** The receivers use the money to repay their own bank loans, so the money is destroyed as fast as it was created. For example, a first-time buyer takes a mortgage to buy a house from an elderly person, who repays their own mortgage and moves in with family. The balance sheets of consumers return to their position before the loan, and there need be no further effect on the economy.
+- **Hot potato.** Assets and debts vary widely across people, so the money often goes to those without loans to repay, for example a seller with no mortgage or a company that already has enough liquid assets. They then hold more money than they want, so they spend the excess on goods and services, or, for a company, on higher-yielding assets. The money is not destroyed, so it passes from holder to holder, each of whom may spend more. Other things equal, this raises inflationary pressure.
 
 ### Monetary Policy and QE
 
+Monetary policy is the ultimate limit on money creation. The Bank of England, the ECB and the Fed all aim for 2% consumer price inflation over the medium to longer run. The UK government sets the target of the Bank of England, while the ECB and the Fed set their own. Over some periods, measures of money have grown at a rate similar to nominal spending, which sets inflationary pressure in the medium term. A policy that meets the inflation target should therefore also give a stable rate of credit and money creation.
+
+In normal times, central banks implement policy through short-term interest rates, specifically the rate that they pay on the reserves of commercial banks. This works because the central bank is the only supplier of central bank money, which banks need as the final means of settlement between them. The rate on reserves sets the rate at which banks lend to one another in money markets, and from there it moves the rates on loans and deposits across markets and maturities. Through this price of credit, monetary policy affects the creation of broad money.
+
+Central banks set the price of reserves, not their quantity, and supply base money (reserves and currency) on demand, for payments between banks and for the currency that customers withdraw. Demand for base money is therefore more a consequence than a cause of lending. Banks lend when they see profitable opportunities, and one factor in the profit is the cost of their funds, which follows the policy rate closely.
+
+The money multiplier therefore works in reverse. A looser policy lowers loan rates and raises the volume of loans, which increases broad money. More broad money and more spending then lead banks and their customers to demand more reserves and currency.
+
+
+
 ## References
 
+- Bank of England. "Monetary Policy." [Online](https://www.bankofengland.co.uk/monetary-policy).
 - Basel Committee on Banking Supervision. 2013. "Basel III: The Liquidity Coverage Ratio and Liquidity Risk Monitoring Tools." January 2013. [Online](https://www.bis.org/publ/bcbs238.htm).
 - Basel Committee on Banking Supervision. 2014. "Basel III: The Net Stable Funding Ratio." October 2014. [Online](https://www.bis.org/bcbs/publ/d295.htm).
 - Basel Committee on Banking Supervision. "The Basel Framework." Chapters RBC20, RBC30, LEV20 and NSF20. [Online](https://www.bis.org/basel_framework/).
 - Board of Governors of the Federal Reserve System. 2026. "Money Stock Measures - H.6 Release." 27 October 2026. [Online](https://www.federalreserve.gov/releases/h6/20261027/).
 - Board of Governors of the Federal Reserve System. "Reserve Requirements." [Online](https://www.federalreserve.gov/monetarypolicy/reservereq.htm).
+- Board of Governors of the Federal Reserve System. "Why Does the Federal Reserve Aim for Inflation of 2 Percent Over the Longer Run?" [Online](https://www.federalreserve.gov/faqs/economy_14400.htm).
+- Bridges, Jonathan, and Ryland Thomas. 2012. "The Impact of QE on the UK Economy — Some Supportive Monetarist Arithmetic." Staff Working Paper No. 442, Bank of England. [Online](https://ideas.repec.org/p/boe/boeewp/0442.html).
 - Button, Richard, Silvia Pezzini, and Neil Rossiter. 2010. "Understanding the Price of New Lending to Households." *Bank of England Quarterly Bulletin* 2010 Q3: 172–182. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2010/understanding-the-price-of-new-lending-to-households.pdf).
 - Deutsche Bundesbank. 2017. "The Role of Banks, Non-banks and the Central Bank in the Money Creation Process." *Monthly Report* April 2017: 13–33. [PDF](https://www.bundesbank.de/resource/blob/654284/df66c4444d065a7f519e2ab0c476df58/mL/2017-04-money-creation-process-data.pdf).
 - European Central Bank. 2026. "Monetary Developments in the Euro Area: September 2026." Press release, 27 October 2026. [PDF](https://www.bancaditalia.it/media/bce-comunicati/documenti/2026/ecb.md2609.pdf).
+- European Central Bank. "Monetary Policy Strategy." [Online](https://www.ecb.europa.eu/mopo/strategy/html/index.en.html).
 - European Central Bank. "What Are Minimum Reserve Requirements?" [Online](https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/minimum_reserve_req.en.html).
 - Federal Reserve Bank of St. Louis. "Currency Component of M1 (CURRSL)" and "M2 (M2SL)." FRED. [Online](https://fred.stlouisfed.org/graph/?id=CURRSL,M2SL).
 - Jakab, Zoltan, and Michael Kumhof. 2015. "Banks Are Not Intermediaries of Loanable Funds — and Why This Matters." Staff Working Paper No. 529, Bank of England. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2015/banks-are-not-intermediaries-of-loanable-funds-and-why-this-matters.pdf).
 - Kang-Landsberg, Alena, Stephan Luck, and Matthew Plosser. 2023. "Deposit Betas: Up, Up, and Away?" *Liberty Street Economics*, Federal Reserve Bank of New York, 11 April 2023. [Online](https://libertystreeteconomics.newyorkfed.org/2023/04/deposit-betas-up-up-and-away/).
 - Keating, Thomas, and Marco Macchiavelli. 2018. "Interest on Reserves and Arbitrage in Post-Crisis Money Markets." *FEDS Notes*, Board of Governors of the Federal Reserve System, 1 March 2018. [Online](https://www.federalreserve.gov/econres/notes/feds-notes/interest-on-reserves-and-arbitrage-in-post-crisis-money-markets-20180301.html).
+- Lavoie, Marc. 1999. "The Credit-Led Supply of Deposits and the Demand for Money: Kaldor's Reflux Mechanism as Previously Endorsed by Joan Robinson." *Cambridge Journal of Economics* 23 (1): 103–113. [Online](https://ideas.repec.org/a/oup/cambje/v23y1999i1p103-13.html).
 - McLeay, Michael, Amar Radia, and Ryland Thomas. 2014. "Money Creation in the Modern Economy." *Bank of England Quarterly Bulletin* 2014 Q1: 14–27. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf).
 - Tobin, James. 1963. "Commercial Banks as Creators of 'Money'." Cowles Foundation Discussion Paper No. 159, Yale University. [Online](https://elischolar.library.yale.edu/cowles-discussion-paper-series/388/).
