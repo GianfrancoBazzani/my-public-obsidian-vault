@@ -100,7 +100,33 @@ Central banks set the price of reserves, not their quantity, and supply base mon
 
 The money multiplier therefore works in reverse. A looser policy lowers loan rates and raises the volume of loans, which increases broad money. More broad money and more spending then lead banks and their customers to demand more reserves and currency.
 
+#### Effects of a Rate Change
 
+A rise in the policy rate works through several channels.
+
+- **Broad money.** Banks raise loan rates, so households and companies take fewer new loans. Repayments of existing loans keep destroying money, so if new lending falls below repayments, broad money shrinks. Higher rates also raise default risk and cut bank profits and capital, so banks approve fewer loans, especially to riskier borrowers.
+- **Saving and spending.** Saving pays more and borrowing costs more, so households delay consumption. Borrowers cut spending by more than savers raise it out of higher interest income, so total spending falls, and more so when debt is high.
+- **Investment.** Fewer projects earn more than the higher cost of funds, so companies invest less.
+- **Asset prices and wealth.** A higher discount rate lowers the present value of future cash flows, so bond, share and house prices fall. Households feel poorer, and lower collateral values make borrowing harder.
+- **Exchange rate.** Investors move funds into the currency, so it appreciates. Imports become cheaper, which lowers inflation directly, and exports become dearer, which cuts demand.
+- **Expectations.** A credible rise lowers inflation expectations, which restrains price and wage setting.
+
+Lower demand then raises unemployment and lowers inflation. Financial variables react within months, but real activity and prices take longer. In the UK from 1997 to 2019, an unexpected 1 percentage point rise lowered the price level by 0.3% at its peak after one year and real GDP by about 1.3% after about two years, and raised unemployment by 0.5 points after about 1.5 years.
+
+A cut works in reverse, with more loans, more broad money, more spending and, after a lag, higher inflation. The effects are not always symmetric. Near the lower bound, deposit rates cannot fall much further, so more cuts squeeze bank profits and can weaken lending. Rate changes may also have less effect in recessions, although the evidence is mixed.
+
+#### Quantitative Easing (QE)
+
+QE is the purchase of assets, mainly government bonds, by the central bank, paid for with newly created reserves. Central banks choose it when the policy rate is at its effective lower bound and money creation is still too weak to meet the inflation target. Far below zero, banks would swap reserves for currency, which pays zero, so the central bank could no longer steer the economy through the price of reserves. Like a rate cut, QE loosens policy, but it acts on the quantity of money instead of its price.
+
+The central bank buys mainly from non-bank financial companies, such as pension funds and insurers. These have no reserve accounts, so their commercial bank acts as intermediary. It credits the seller with new deposits, and the central bank credits the bank with an equal amount of new reserves. QE therefore creates broad money (deposits) and base money (reserves) at the same time.
+
+- **Misconception 1, "QE gives banks free money".** Banks earn interest on the new reserves, but they also owe the seller an equal new deposit, on which they usually pay interest. Both rates depend on the policy rate, so the bank is only an intermediary and the reserves are a by-product.
+- **Misconception 2, "QE works by multiplying reserves into loans".** Banks cannot lend reserves to the public, and extra reserves do not by themselves change the incentive to lend. QE could raise lending, by cutting bank funding costs or boosting activity, or lower it, if companies issue bonds or shares to repay bank loans. Neither effect is central, because QE bypasses the banks and aims at private spending directly.
+
+QE works through the new broad money. The sellers now hold more money than they want, so they buy higher-yielding assets, such as corporate bonds and shares, and each seller passes the excess on (the hot potato effect). Asset prices rise and yields fall until investors are willing to hold the extra money. Lower yields cut borrowing costs for companies and households, and higher asset prices raise wealth, so spending rises. QE can also signal that rates will stay low, improve the functioning of dysfunctional markets and lift confidence.
+
+In the UK, the first £200 billion of purchases (March 2009 to January 2010, about 14% of annual GDP) lowered gilt yields by about 100 basis points and raised broad money by about 8%. Estimates suggest that it raised real GDP by 1.5–2% and inflation by 0.75–1.5 percentage points, although these figures are highly uncertain. Quantitative tightening (QT), which sells the bonds or lets them mature without reinvestment, reverses the process.
 
 ## References
 
@@ -112,13 +138,16 @@ The money multiplier therefore works in reverse. A looser policy lowers loan rat
 - Board of Governors of the Federal Reserve System. "Reserve Requirements." [Online](https://www.federalreserve.gov/monetarypolicy/reservereq.htm).
 - Board of Governors of the Federal Reserve System. "Why Does the Federal Reserve Aim for Inflation of 2 Percent Over the Longer Run?" [Online](https://www.federalreserve.gov/faqs/economy_14400.htm).
 - Bridges, Jonathan, and Ryland Thomas. 2012. "The Impact of QE on the UK Economy — Some Supportive Monetarist Arithmetic." Staff Working Paper No. 442, Bank of England. [Online](https://ideas.repec.org/p/boe/boeewp/0442.html).
+- Burr, Natalie, and Tim Willems. 2024. "About a Rate of (General) Interest: How Monetary Policy Transmits." *Bank of England Quarterly Bulletin*, 12 July 2024. [Online](https://www.bankofengland.co.uk/quarterly-bulletin/2024/2024/about-a-rate-of-general-interest-how-monetary-policy-transmits).
 - Button, Richard, Silvia Pezzini, and Neil Rossiter. 2010. "Understanding the Price of New Lending to Households." *Bank of England Quarterly Bulletin* 2010 Q3: 172–182. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2010/understanding-the-price-of-new-lending-to-households.pdf).
 - Deutsche Bundesbank. 2017. "The Role of Banks, Non-banks and the Central Bank in the Money Creation Process." *Monthly Report* April 2017: 13–33. [PDF](https://www.bundesbank.de/resource/blob/654284/df66c4444d065a7f519e2ab0c476df58/mL/2017-04-money-creation-process-data.pdf).
 - European Central Bank. 2026. "Monetary Developments in the Euro Area: September 2026." Press release, 27 October 2026. [PDF](https://www.bancaditalia.it/media/bce-comunicati/documenti/2026/ecb.md2609.pdf).
 - European Central Bank. "Monetary Policy Strategy." [Online](https://www.ecb.europa.eu/mopo/strategy/html/index.en.html).
+- European Central Bank. "Transmission Mechanism of Monetary Policy." [Online](https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html).
 - European Central Bank. "What Are Minimum Reserve Requirements?" [Online](https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/minimum_reserve_req.en.html).
 - Federal Reserve Bank of St. Louis. "Currency Component of M1 (CURRSL)" and "M2 (M2SL)." FRED. [Online](https://fred.stlouisfed.org/graph/?id=CURRSL,M2SL).
 - Jakab, Zoltan, and Michael Kumhof. 2015. "Banks Are Not Intermediaries of Loanable Funds — and Why This Matters." Staff Working Paper No. 529, Bank of England. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2015/banks-are-not-intermediaries-of-loanable-funds-and-why-this-matters.pdf).
+- Joyce, Michael, Matthew Tong, and Robert Woods. 2011. "The United Kingdom's Quantitative Easing Policy: Design, Operation and Impact." *Bank of England Quarterly Bulletin* 2011 Q3: 200–212. [PDF](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2011/the-uks-quantitative-easing-policy-design-operation-and-impact.pdf).
 - Kang-Landsberg, Alena, Stephan Luck, and Matthew Plosser. 2023. "Deposit Betas: Up, Up, and Away?" *Liberty Street Economics*, Federal Reserve Bank of New York, 11 April 2023. [Online](https://libertystreeteconomics.newyorkfed.org/2023/04/deposit-betas-up-up-and-away/).
 - Keating, Thomas, and Marco Macchiavelli. 2018. "Interest on Reserves and Arbitrage in Post-Crisis Money Markets." *FEDS Notes*, Board of Governors of the Federal Reserve System, 1 March 2018. [Online](https://www.federalreserve.gov/econres/notes/feds-notes/interest-on-reserves-and-arbitrage-in-post-crisis-money-markets-20180301.html).
 - Lavoie, Marc. 1999. "The Credit-Led Supply of Deposits and the Demand for Money: Kaldor's Reflux Mechanism as Previously Endorsed by Joan Robinson." *Cambridge Journal of Economics* 23 (1): 103–113. [Online](https://ideas.repec.org/a/oup/cambje/v23y1999i1p103-13.html).
