@@ -104,3 +104,71 @@ The bootstrap goes from the shortest maturity to the longest.
 2. Each longer quote gives one new $DF$ from the ones already known.
 3. Quotes do not cover every payment date (e.g. only 2-year and 5-year swaps with quarterly payments). Between quoted maturities, assume a shape such as linear zero rates and solve iteratively for the zero rate that prices each bond at par.
 4. Each $DF$ gives the zero rate $r(t) = -\ln DF(t) / t$ (continuous compounding).
+
+### IRS as Two Bonds
+
+If we add and subtract the notional at $t_n$ to each leg, the two extra terms cancel, and each leg becomes a bond.
+
+$$V_{\text{payer}} = \underbrace{\left[ PV_{\text{float}} + L DF(t_n) \right]}_{\text{floating-rate bond} = L} - \underbrace{\left[ PV_{\text{fixed}} + L DF(t_n) \right]}_{\text{bond with coupon } R_K}$$
+
+The payer is thus long a floating-rate bond and short a fixed-rate bond with coupon $R_K$, both with the principal $L$ and the maturity $t_n$. The receiver has the opposite position.
+
+#### Floating-Rate Bond
+
+On a reset date, the telescoping sum above gives $L \left[ 1 - DF(t_n) \right] + L DF(t_n) = L$. The floating-rate bond is thus worth its principal at all levels of rates, because its next coupon rises and falls with the market rate.
+
+This result is exact only on a reset date. If today is between the reset dates $t_{i-1}$ and $t_i$, the rate $R_i$ of period $i$ was already fixed on $t_{i-1}$. On $t_i$, the bond pays the coupon $L \tau_i R_i$, and the remaining bond is worth $L$ because $t_i$ is a reset date. Today the bond is worth that total discounted from $t_i$.
+
+$$PV_{\text{float}} + L DF(t_n) = L (1 + \tau_i R_i) DF(t_i)$$
+
+The bond thus behaves like a zero-coupon bond that matures on the next reset date $t_i$. Its duration is the time to $t_i$, which is a few months and not years. Its DV01 is small but not zero, and it goes back to zero on each reset date.
+
+The direct consequence is that $DV01_{\text{float}} \approx 0$. All the rate sensitivity of the swap comes from the fixed-rate bond, and the payer has it with the opposite sign because the payer is short that bond. The payer thus has a **short duration position**, close to the short sale of a fixed-rate bond with the same maturity.
+
+#### Value Through Time
+
+1. **At the start.** $R_K$ is set at the par swap rate, so the fixed-rate bond is a par bond worth $L$, and the swap is worth zero.
+2. **After the start.** The floating-rate bond returns to $L$ on each reset date, but the price of the fixed-rate bond moves with rates. If rates rise, the fixed-rate bond falls below $L$, and the payer gains because the payer is short that bond. If rates fall, the fixed-rate bond rises above $L$, and the payer loses.
+3. **Toward maturity.** Each payment date removes one period from the annuity $A$, so fewer periods remain to multiply the rate difference $R_{\text{par}} - R_K$. The same move of rates thus has less effect on a shorter swap, and each net payment converts part of the value into cash.
+4. **At maturity.** The two bonds repay $L$, and the value of the swap is zero again.
+
+### Greeks
+
+The Greeks measure how the value of a swap changes when one market factor (such as the level or the volatility of rates) changes and the others stay constant. They are the base of risk management, because a desk adds them over all its positions to know its net exposure, size its hedges, and set risk limits. For an IRS, the two main Greeks are the DV01 and the convexity.
+
+#### DV01
+
+$$DV01 = \Delta V \text{ for a move of } +1 \text{ bp in the curve}$$
+
+The DV01 is the **change in value** of the position in currency, with its sign, as for a bond (see [Fixed Income Securities](00-fixed-income-securities.md#dv01)). A **payer swap** gains when rates rise, so its DV01 is **positive**. A receiver swap has a negative DV01, like a long fixed-rate bond.
+
+From $V_{\text{payer}} = L A (R_{\text{par}} - R_K)$, a move of $R_{\text{par}}$ changes the value through the rate difference and the annuity.
+
+$$\frac{dV_{\text{payer}}}{dR_{\text{par}}} = L A + L (R_{\text{par}} - R_K) \frac{dA}{dR_{\text{par}}}$$
+
+For a swap at par, $R_{\text{par}} = R_K$, so the second term is zero, and $DV01 \approx L A \times 0.0001$. A 30-year swap with annual payments, a notional of EUR 100 million, and a flat curve at 4.30% has $A = 16.68$, so its DV01 is about EUR 166,800 per basis point. To hedge a fixed-rate bond portfolio, an investor enters a payer swap whose DV01 has the same size as the DV01 of the portfolio and the opposite sign.
+
+#### Convexity
+
+The DV01 is a linear approximation, so it is accurate only for small moves of rates. The **convexity** is the curvature of the value that the DV01 line does not capture. With the second-order term, the change in value for a move of $\Delta y$ basis points is
+
+$$\Delta V \approx DV01 \times \Delta y + \frac{1}{2} \Gamma (\Delta y)^2$$
+
+where $\Gamma$ is the change of the DV01 for a move of 1 bp.
+
+The positive convexity is good for the **receiver**, and the payer has a negative convexity. A fixed-rate bond has a positive convexity, so its price falls by less when rates rise than it rises when rates fall by the same amount (see [Fixed Income Securities](00-fixed-income-securities.md#convexity)). The convexity of the floating-rate bond is almost zero, for the same reason as its DV01. The receiver is long the fixed-rate bond and thus has its positive convexity, and the payer is short the bond and has a negative convexity.
+
+The swap formula shows the same result. The payer receives $L A (R_{\text{par}} - R_K)$, and the annuity $A$ falls when rates rise. The gains of the payer are thus multiplied by a smaller annuity, and its losses by a larger one.
+
+For the payer, the difference from the DV01 line is **negative in the two directions**. The payer **loses more** than the line when rates fall and **gains less** when they rise. If rates can move up or down by the same amount, the average result is about $\frac{1}{2} \Gamma (\Delta y)^2$, which is negative for the payer and increases with the size of the moves. A rise in volatility thus hurts the payer and helps the receiver. The convexity increases quickly with maturity, so it is large for long swaps and small for short ones.
+
+![P&L of a 30-year payer swap and receiver swap against the swap rate, with the DV01 linear approximation](Attachments/swap-payer-vs-receiver-convexity.svg)
+
+The chart uses a 30-year swap with annual payments, a notional of EUR 100 million, a fixed rate of 4.30%, and a flat curve. The swap starts at par, so its value at 4.30% is zero.
+
+| Rate move | DV01 line | Value of the payer | Effect of the convexity |
+|---|---|---|---|
+| +200 bp (6.30%) | +EUR 33.4 million | +EUR 26.7 million | −EUR 6.7 million |
+| −200 bp (2.30%) | −EUR 33.4 million | −EUR 43.0 million | −EUR 9.6 million |
+
+The annuity falls to 13.33 at 6.30% and rises to 21.50 at 2.30%, which explains the difference. The average of the two scenarios is −EUR 8.2 million for the payer, although the average move of rates is zero. The receiver has the same values with the opposite sign, so the curvature is good for it in the two directions.
