@@ -9,6 +9,8 @@
 ## Agents & Agentic Systems
 
 - how to build a production grade ai agent: https://x.com/rohit4verse/status/2022709729450201391?s=46
+- Principles of Building AI Agents (Sam Bhagwat, Mastra, book) — LLM fundamentals, prompt engineering, tool calling, memory, workflows, RAG, multi-agent systems, observability, evals, and deployment: https://mastra.ai/books/principles-of-building-ai-agents
+- Patterns of Building AI Agents (Sam Bhagwat, Mastra, book) — from prototype to production with agent design patterns, context management, evaluation workflows, and security (guardrails, sandboxing, access controls): https://mastra.ai/books/patterns-of-building-ai-agents
 
 
 ## Claude Code User Guides
