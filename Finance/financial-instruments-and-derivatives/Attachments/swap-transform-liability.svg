@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="290" viewBox="0 0 820 290" font-family="Helvetica, Arial, sans-serif" font-size="15" role="img">
+<title>Company A pays floating + 0.1% to its lenders, pays 3% to the dealer and receives floating, so it pays a net 3.1%. Company B pays 3.2% to its lenders, pays floating to the dealer and receives 2.97%, so it pays a net floating + 0.23%. The dealer keeps 0.03%.</title>
+<rect width="820" height="290" fill="white"/>
+<defs>
+  <marker id="fx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f4fd8"/></marker>
+  <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d9480f"/></marker>
+</defs>
+
+<text x="20" y="29" font-weight="bold">Transform a liability</text>
+<line x1="560" y1="24" x2="590" y2="24" stroke="#1f4fd8" stroke-width="2.5"/>
+<text x="598" y="29" font-size="13">fixed rate</text>
+<line x1="680" y1="24" x2="710" y2="24" stroke="#d9480f" stroke-width="2.5"/>
+<text x="718" y="29" font-size="13">floating rate</text>
+
+<!-- outside lenders -->
+<rect x="85" y="56" width="130" height="44" rx="4" fill="white" stroke="#888" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="150" y="83" text-anchor="middle">Lenders</text>
+<rect x="605" y="56" width="130" height="44" rx="4" fill="white" stroke="#888" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="670" y="83" text-anchor="middle">Lenders</text>
+
+<!-- loan payments -->
+<line x1="150" y1="178" x2="150" y2="103" stroke="#d9480f" stroke-width="2.2" marker-end="url(#fl)"/>
+<text x="162" y="145" font-size="14" fill="#d9480f">floating + 0.1%</text>
+<line x1="670" y1="178" x2="670" y2="103" stroke="#1f4fd8" stroke-width="2.2" marker-end="url(#fx)"/>
+<text x="658" y="145" font-size="14" text-anchor="end" fill="#1f4fd8">3.2%</text>
+
+<!-- swap parties -->
+<rect x="80" y="180" width="140" height="56" rx="4" fill="#f5f5f5" stroke="#333" stroke-width="1.5"/>
+<text x="150" y="205" text-anchor="middle" font-weight="bold">Company A</text>
+<text x="150" y="225" text-anchor="middle" font-size="13" fill="#555">payer</text>
+<rect x="350" y="180" width="120" height="56" rx="4" fill="#f5f5f5" stroke="#333" stroke-width="1.5"/>
+<text x="410" y="213" text-anchor="middle" font-weight="bold">Dealer</text>
+<rect x="600" y="180" width="140" height="56" rx="4" fill="#f5f5f5" stroke="#333" stroke-width="1.5"/>
+<text x="670" y="205" text-anchor="middle" font-weight="bold">Company B</text>
+<text x="670" y="225" text-anchor="middle" font-size="13" fill="#555">receiver</text>
+
+<!-- swap payments -->
+<line x1="223" y1="198" x2="347" y2="198" stroke="#1f4fd8" stroke-width="2.2" marker-end="url(#fx)"/>
+<text x="285" y="190" font-size="14" text-anchor="middle" fill="#1f4fd8">3%</text>
+<line x1="347" y1="220" x2="223" y2="220" stroke="#d9480f" stroke-width="2.2" marker-end="url(#fl)"/>
+<text x="285" y="240" font-size="14" text-anchor="middle" fill="#d9480f">floating</text>
+<line x1="473" y1="198" x2="597" y2="198" stroke="#1f4fd8" stroke-width="2.2" marker-end="url(#fx)"/>
+<text x="535" y="190" font-size="14" text-anchor="middle" fill="#1f4fd8">2.97%</text>
+<line x1="597" y1="220" x2="473" y2="220" stroke="#d9480f" stroke-width="2.2" marker-end="url(#fl)"/>
+<text x="535" y="240" font-size="14" text-anchor="middle" fill="#d9480f">floating</text>
+
+<!-- net results -->
+<text x="150" y="272" text-anchor="middle" font-weight="bold" fill="#1f4fd8">pays 3.1% net</text>
+<text x="410" y="258" text-anchor="middle" font-size="13" fill="#555">keeps 0.03%</text>
+<text x="670" y="272" text-anchor="middle" font-weight="bold" fill="#d9480f">pays floating + 0.23% net</text>
+</svg>
