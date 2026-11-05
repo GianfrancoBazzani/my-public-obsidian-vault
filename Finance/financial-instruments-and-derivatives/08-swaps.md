@@ -146,29 +146,27 @@ From $V_{\text{payer}} = L A (R_{\text{par}} - R_K)$, a move of $R_{\text{par}}$
 
 $$\frac{dV_{\text{payer}}}{dR_{\text{par}}} = L A + L (R_{\text{par}} - R_K) \frac{dA}{dR_{\text{par}}}$$
 
-For a swap at par, $R_{\text{par}} = R_K$, so the second term is zero, and $DV01 \approx L A \times 0.0001$. A 30-year swap with annual payments, a notional of EUR 100 million, and a flat curve at 4.30% has $A = 16.68$, so its DV01 is about EUR 166,800 per basis point. To hedge a fixed-rate bond portfolio, an investor enters a payer swap whose DV01 has the same size as the DV01 of the portfolio and the opposite sign.
+At par ($R_{\text{par}} = R_K$) the second term is zero, so $DV01 \approx L A \times 0.0001$. For a 30-year swap with annual payments, a notional of EUR 100 million, and a flat curve at 4.30%, $A = 16.68$ and the DV01 is about EUR 166,800 per bp. To hedge a fixed-rate bond portfolio, an investor enters a payer swap whose DV01 has the same size as that of the portfolio and the opposite sign.
 
 #### Convexity
 
-The DV01 is a linear approximation, so it is accurate only for small moves of rates. The **convexity** is the curvature of the value that the DV01 line does not capture. With the second-order term, the change in value for a move of $\Delta y$ basis points is
+The DV01 is a linear approximation, accurate only for small moves of rates. The **convexity** is the curvature of the value that the DV01 line does not capture. With the second-order term, the change in value for a move of $\Delta y$ basis points is
 
 $$\Delta V \approx DV01 \times \Delta y + \frac{1}{2} \Gamma (\Delta y)^2$$
 
 where $\Gamma$ is the change of the DV01 for a move of 1 bp.
 
-The positive convexity is good for the **receiver**, and the payer has a negative convexity. A fixed-rate bond has a positive convexity, so its price falls by less when rates rise than it rises when rates fall by the same amount (see [Fixed Income Securities](00-fixed-income-securities.md#convexity)). The convexity of the floating-rate bond is almost zero, for the same reason as its DV01. The receiver is long the fixed-rate bond and thus has its positive convexity, and the payer is short the bond and has a negative convexity.
+A fixed-rate bond has a positive convexity, so its price falls by less when rates rise than it rises when rates fall by the same amount (see [Fixed Income Securities](00-fixed-income-securities.md#convexity)). The floating-rate bond has almost zero convexity, for the same reason as its DV01. The **receiver** is long the fixed-rate bond and thus has a positive convexity, and the **payer** is short it and has a negative convexity. The swap formula shows the same result. In $L A (R_{\text{par}} - R_K)$, the annuity $A$ falls when rates rise, so the gains of the payer are multiplied by a smaller annuity and its losses by a larger one.
 
-The swap formula shows the same result. The payer receives $L A (R_{\text{par}} - R_K)$, and the annuity $A$ falls when rates rise. The gains of the payer are thus multiplied by a smaller annuity, and its losses by a larger one.
-
-For the payer, the difference from the DV01 line is **negative in the two directions**. The payer **loses more** than the line when rates fall and **gains less** when they rise. If rates can move up or down by the same amount, the average result is about $\frac{1}{2} \Gamma (\Delta y)^2$, which is negative for the payer and increases with the size of the moves. A rise in volatility thus hurts the payer and helps the receiver. The convexity increases quickly with maturity, so it is large for long swaps and small for short ones.
+For the payer, the difference from the DV01 line is thus **negative in the two directions**. It **loses more** than the line when rates fall and **gains less** when they rise. If rates can move up or down by the same amount, the average result is about $\frac{1}{2} \Gamma (\Delta y)^2$, negative for the payer and larger for larger moves. A rise in volatility thus hurts the payer and helps the receiver. The convexity increases quickly with maturity, so it is large for long swaps and small for short ones.
 
 ![P&L of a 30-year payer swap and receiver swap against the swap rate, with the DV01 linear approximation](Attachments/swap-payer-vs-receiver-convexity.svg)
 
-The chart uses a 30-year swap with annual payments, a notional of EUR 100 million, a fixed rate of 4.30%, and a flat curve. The swap starts at par, so its value at 4.30% is zero.
+The chart uses the same swap, with a fixed rate of 4.30%. It starts at par, so its value at 4.30% is zero.
 
 | Rate move | DV01 line | Value of the payer | Effect of the convexity |
 |---|---|---|---|
 | +200 bp (6.30%) | +EUR 33.4 million | +EUR 26.7 million | −EUR 6.7 million |
 | −200 bp (2.30%) | −EUR 33.4 million | −EUR 43.0 million | −EUR 9.6 million |
 
-The annuity falls to 13.33 at 6.30% and rises to 21.50 at 2.30%, which explains the difference. The average of the two scenarios is −EUR 8.2 million for the payer, although the average move of rates is zero. The receiver has the same values with the opposite sign, so the curvature is good for it in the two directions.
+The annuity falls to 13.33 at 6.30% and rises to 21.50 at 2.30%, which explains the difference. Although the average move of rates is zero, the average result for the payer is −EUR 8.2 million. The receiver has the same values with the opposite sign, so the curvature helps it in the two directions.
