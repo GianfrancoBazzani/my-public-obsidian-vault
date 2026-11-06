@@ -243,4 +243,35 @@ $$DV01_{\text{basis}} \approx L A_{3M} \times 0.0001$$
 
 It is an approximation, because in practice the €STR curve can move with the basis. If instead the 12M forward curve moves by 1 bp, the change is $L A_{12M} \times 0.0001$, with $A_{12M} = \sum_j \tau_j DF(t_j)$, a little smaller because the annual payments come later.
 
+## Cross Currency Swaps (CCS)
 
+A cross-currency swap (CCS) exchanges interest in one currency for interest in another, usually every quarter and for more than one year. Unlike in an IRS, the two principals are in different currencies and do not cancel, so they are exchanged at the start at the spot rate and exchanged back at maturity. A CCS thus converts a loan or an asset from one currency into another. A foreign exchange (FX) swap also exchanges and repays two principals, but it is short-term, has no periodic interest payments, and repays at the forward rate.
+
+The types differ by the rate of each leg.
+
+- **Floating for floating (basis).** This is the cross-currency basis swap, the interbank standard. The USD leg usually pays SOFR flat, and the other leg pays its own floating rate plus the basis. A negative basis means that dollars borrowed through the swap cost more than in the cash market.
+- **Fixed for floating and fixed for fixed.** The first is a common variant and the second a less common one. A dealer replicates them with a basis swap and one IRS for each fixed leg.
+
+![Cash flows of a EUR/USD cross-currency swap at the start, each quarter, and at maturity](Attachments/ccs-cash-flows.svg)
+
+### Risks of a Floating-for-Floating CCS
+
+- **FX delta.** The largest risk. The principals are exchanged back at maturity at the initial spot rate, so their value moves with the spot rate.
+- **Basis DV01.** The risk that the market basis moves away from the contract basis $b$, as for a basis swap.
+- **Rate DV01.** Small but not zero, because both legs float and each one behaves like a zero-coupon bond to its next reset date.
+
+### Valuation of CCS
+
+Each leg is valued in its own currency, and a single conversion at the spot rate gives the value of the swap. The payer pays the domestic leg and receives the foreign leg, and the receiver has the opposite position. In the domestic currency, their values are
+
+$$V_{\text{payer}} = S_0 V_{\text{For}} - V_{\text{Dom}} \qquad V_{\text{receiver}} = V_{\text{Dom}} - S_0 V_{\text{For}}$$
+
+where $V_{\text{Dom}}$ is the present value of the domestic leg in the domestic currency, $V_{\text{For}}$ is the present value of the foreign leg in the foreign currency, and $S_0$ is the spot rate in units of domestic currency per unit of foreign currency. Each present value is the sum of the coupons and the final principal of the leg, discounted to today.
+
+The spot rate **multiplies** the foreign leg to convert it into the domestic currency. Each leg is discounted with the curve of **its own** currency. In a swap with EUR as the domestic currency and USD as the foreign currency, the EUR leg uses the €STR curve, the USD leg uses the SOFR curve, and $S_0$ is the number of euros per dollar, the inverse of the EUR/USD quote.
+
+#### Standard Convention for the Basis
+
+By market convention, the **USD leg pays its overnight rate flat**, with no spread. The full spread goes on the **non-USD leg**, which pays its own floating rate $+ b$. Here $b$ is the *cross-currency basis*. The spread is never split between the two legs.
+
+For example, in a EUR/USD CCS, the USD leg pays SOFR flat and the EUR leg pays €STR $+ b$. The basis $b$ is usually negative for the euro, so with $b = -25$ bp the EUR leg pays €STR $- 0.25\%$.
