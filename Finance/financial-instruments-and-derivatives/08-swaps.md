@@ -275,3 +275,41 @@ The spot rate **multiplies** the foreign leg to convert it into the domestic cur
 By market convention, the **USD leg pays its overnight rate flat**, with no spread. The full spread goes on the **non-USD leg**, which pays its own floating rate $+ b$. Here $b$ is the *cross-currency basis*. The spread is never split between the two legs.
 
 For example, in a EUR/USD CCS, the USD leg pays SOFR flat and the EUR leg pays €STR $+ b$. The basis $b$ is usually negative for the euro, so with $b = -25$ bp the EUR leg pays €STR $- 0.25\%$.
+
+#### Valuation of the Two Legs
+
+We present an example of a CCS in which the USD leg pays SOFR flat and the EUR leg pays €STR $+ b$. In the formulas, $R_{\text{USD},i}$ is the SOFR rate of period $i$, $R_{\text{EUR},i}$ is the €STR rate of period $i$, and $\tau_i$ is the year fraction of the period.
+
+**USD leg**
+
+$$PV_{\text{USD}} = \sum_{i=1}^{n} L_{\text{USD}} \tau_i R_{\text{USD},i} DF_{\text{USD}}(t_i) + L_{\text{USD}} DF_{\text{USD}}(t_n)$$
+
+The sum telescopes as in the IRS and is worth $L_{\text{USD}} \left[ 1 - DF_{\text{USD}}(t_n) \right]$. With the principal added, the leg is worth its notional.
+
+$$PV_{\text{USD}} = L_{\text{USD}}$$
+
+**EUR leg**
+
+$$PV_{\text{EUR}} = \sum_{i=1}^{n} L_{\text{EUR}} \tau_i (R_{\text{EUR},i} + b) DF_{\text{EUR}}(t_i) + L_{\text{EUR}} DF_{\text{EUR}}(t_n)$$
+
+The sum splits into a €STR part and a spread part.
+
+$$PV_{\text{EUR}} = \underbrace{\sum_{i=1}^{n} L_{\text{EUR}} \tau_i R_{\text{EUR},i} DF_{\text{EUR}}(t_i)}_{L_{\text{EUR}} \left[ 1 - DF_{\text{EUR}}(t_n) \right]} + \underbrace{L_{\text{EUR}} b \sum_{i=1}^{n} \tau_i DF_{\text{EUR}}(t_i)}_{L_{\text{EUR}} b A_{\text{EUR}}} + L_{\text{EUR}} DF_{\text{EUR}}(t_n)$$
+
+The €STR part telescopes as in the USD leg. The spread part does not, because $b$ is a constant and not a forward rate, so it stays as $b$ times the annuity $A_{\text{EUR}}$ of the EUR leg. The principal then cancels the $- L_{\text{EUR}} DF_{\text{EUR}}(t_n)$ of the €STR part.
+
+$$PV_{\text{EUR}} = L_{\text{EUR}} \left[ 1 - DF_{\text{EUR}}(t_n) \right] + L_{\text{EUR}} b A_{\text{EUR}} + L_{\text{EUR}} DF_{\text{EUR}}(t_n) = L_{\text{EUR}} (1 + b A_{\text{EUR}})$$
+
+**Final Value**
+
+In this example the EUR leg is the domestic leg and the USD leg is the foreign leg, so $V_{\text{Dom}} = PV_{\text{EUR}}$ and $V_{\text{For}} = PV_{\text{USD}}$. The payer pays the EUR leg and receives the USD leg. With the two leg values in the formula of $V_{\text{payer}}$, the value of the swap is
+
+$$V_{\text{payer}} = S_0 PV_{\text{USD}} - PV_{\text{EUR}} = S_0 L_{\text{USD}} - L_{\text{EUR}} (1 + b A_{\text{EUR}})$$
+
+The value then splits into an exchange rate part and a basis part.
+
+$$V_{\text{payer}} = \underbrace{S_0 L_{\text{USD}} - L_{\text{EUR}}}_{\text{exchange rate}} - \underbrace{L_{\text{EUR}} b A_{\text{EUR}}}_{\text{basis}} \qquad V_{\text{receiver}} = - V_{\text{payer}}$$
+
+- **Exchange rate.** The difference between the two principals at today's spot rate. It is zero on the trade date, because the principals are exchanged at the spot rate, and then it moves with $S_0$.
+- **Basis.** The present value of the spread $b$ that the payer pays on the EUR leg. With $b$ negative, the payer pays less than €STR, so this part is positive for the payer.
+
