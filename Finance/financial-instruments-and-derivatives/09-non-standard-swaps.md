@@ -178,6 +178,29 @@ The payoffs at the fixing date show the same result. A payer swap that starts on
 
 The curves come from a 30-year swap with annual payments on a flat curve, and the CMS has the same slope as the swap at the forward and pays on the fixing date.
 
+## Quanto (Differential) Swaps
+
+A quanto swap applies a rate or an index of one currency to a principal in another currency. A differential (diff) swap is the floating-for-floating case. For example, one party pays a USD floating rate and the other a GBP floating rate, both on GBP 10 million and both in GBP, so each period settles the net amount
+
+$$\text{Diff swap payoff} = L \delta_k (R^{f}_{t_k} - R^{d}_{t_k} - s)$$
+
+where $L$ is the domestic principal, $R^{f}$ the foreign rate, $R^{d}$ the domestic rate and $s$ a fixed spread. Unlike a cross-currency swap (see [Swaps](08-swaps.md)), all payments are in one currency, so there is no exchange of principals and no FX risk on the cash flows. A quanto equity swap replaces the foreign rate with the return of a foreign index, for example the Nikkei paid in USD.
+
+End users take a view on the spread between two countries' rates, or get foreign rate or equity exposure, without FX risk, also when a mandate allows only domestic-currency assets. For the dealer, the foreign leg is a foreign-currency principal that changes with the exchange rate, so the risks of the rate and of the FX cannot be hedged separately and the hedge depends on their correlation.
+
+To value the swap, discount on the domestic curve, but replace each foreign forward rate $F_k$ with its quanto-adjusted value. With lognormal rate and FX, the drift of the foreign rate under the domestic measure changes by $-\rho \sigma_F \sigma_X$, which gives
+
+$$\hat F_k = F_k e^{-\rho \sigma_F \sigma_X t_k} \approx F_k (1 - \rho \sigma_F \sigma_X t_k)$$
+
+where
+
+- $X$ is the exchange rate in units of domestic currency for one unit of foreign currency.
+- $\sigma_F$ and $\sigma_X$ are the volatilities of the forward rate and of $X$.
+- $\rho$ is the correlation between the forward rate and $X$.
+- $t_k$ is the fixing time.
+
+If $\rho > 0$, a high foreign rate comes with a strong foreign currency. A payment on a foreign principal gains from both, but the quanto payment does not, so its forward rate is lower. With $F_k = 4\%$, $\sigma_F = 20\%$, $\sigma_X = 10\%$, $\rho = 0.3$ and $t_k = 5$, the adjustment is $4\% \times 0.3 \times 0.2 \times 0.1 \times 5 = 0.12\%$, or 12 bp.
+
 ## Inflation Swaps
 
 An inflation swap is an over-the-counter derivative that exchanges a fixed rate for the realized inflation of a price index, which is $I(T)/I(t) - 1$ from $t$ to $T$ with $I(t)$ the index at $t$. The inflation receiver, also called the buyer of inflation protection, pays the fixed rate and gains when inflation is higher than it, and the other party is the inflation payer. The fixed rate gives the swap a zero value at the start, so there is no payment at inception, and the parties never exchange the notional.
