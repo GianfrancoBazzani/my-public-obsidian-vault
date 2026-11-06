@@ -417,3 +417,42 @@ A fixed-rate security carries interest rate risk and credit risk. The asset swap
 - **Negative basis trade.** The basis is the CDS spread minus the ASW spread. If it is negative, buy the security, swap it, and buy CDS protection to earn the difference with little net credit risk. The trade is not risk-free. The bond needs funding, the basis can go more negative and cause mark-to-market losses, and the bond and the CDS are not perfect substitutes.
 - **Sector rotation.** Compare the average ASW spread of each sector with its history to find cheap or expensive sectors.
 - **Portfolio construction.** Asset-swapped securities give a duration-neutral portfolio whose main exposure is credit.
+
+## Market Conventions
+
+### Day Count Issues
+
+Each leg has its own day count convention (see [Day Count Conventions](00-fixed-income-securities.md#day-count-conventions)), which sets its payments. The earlier examples ignore it, so their numbers are only approximate.
+
+Floating rates such as SOFR, €STR and EURIBOR use ACT/360, so a payment is $L R n / 360$, where $L$ is the principal, $R$ the rate and $n$ the actual days in the accrual period. At 2.2% on USD 100 million over the 92 days from 8 March to 8 June 2022, the floating payment is
+
+$$100{,}000{,}000 \times 0.022 \times \frac{92}{360} = \$562{,}222$$
+
+Fixed legs usually use 30/360, ACT/365 or ACT/360. USD SOFR swaps pay both legs annually on ACT/360. Legacy USD LIBOR swaps paid the fixed leg semi-annually on 30/360 against quarterly 3M LIBOR on ACT/360.
+
+- **Rates are not directly comparable.** If one leg uses a 360-day year and the other a 365-day year, the ACT/360 rate pays 365/360 times its quoted rate over a full year.
+- **Fixed payments can change.** Under 30/360, each regular period pays the same fixed amount. Under ACT/365 or ACT/360, the amount changes with the days in the period.
+
+The valuations in this note ignore day counts for simplicity.
+
+### Confirmations
+
+In a bilateral swap, the two parties sign a **confirmation**, which records the terms of the trade, such as dates, notional, rates, day counts and business day convention. The standard documents of the International Swaps and Derivatives Association (ISDA) keep it short.
+
+- **ISDA Master Agreement.** A preprinted form (1992 or 2002 version) for all OTC derivatives between two parties. It defines events of default, termination events and close-out netting, which terminates all trades after a default and nets their values into one amount.
+- **Schedule.** The elections and amendments of the parties. It prevails over the printed form.
+- **Confirmation.** One for each trade. It states that the Master Agreement applies, and it prevails over the Master Agreement for that trade.
+- **Credit Support Annex (CSA).** Optional collateral terms, such as eligible assets, thresholds and haircuts.
+
+The Master Agreement and all confirmations form a single agreement, which supports close-out netting. Since 2013 in the U.S. and June 2016 in the EU, most standard IRS between financial firms (fixed-for-floating, basis and OIS in the major currencies, and FRAs) must clear through a central counterparty (CCP) such as LCH SwapClear, which becomes the counterparty of each side.
+
+The confirmation also names a holiday calendar, for example the U.S. calendar for USD or TARGET for EUR. If a payment date is not a business day, the business day convention moves it.
+
+| Convention | Payment date |
+| --- | --- |
+| Following | Next business day. |
+| Modified following | Next business day, unless it falls in the next month, then the previous business day. |
+| Preceding | Previous business day. |
+| Modified preceding | Previous business day, unless it falls in the previous month, then the next business day. |
+
+Modified following is the usual default for interest rate products, because it keeps each payment in its scheduled month for month-end accounting.
