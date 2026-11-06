@@ -336,7 +336,6 @@ The final value discounts the EUR leg on the €STR curve, which sets the market
 | The rate curves move and $A_{\text{EUR}}$ changes by $\Delta A_{\text{EUR}}$ | $L_{\text{EUR}} (b^* - b) \Delta A_{\text{EUR}}$ |
 | The market basis changes by $\Delta b^*$ | $L_{\text{EUR}} A_{\text{EUR}} \Delta b^*$ |
 
-- **The exchange rate row** is the real risk, because of the principals.
 - **Exchange rate.** The main risk, because of the principals.
 - **Rates.** Close to zero, because both legs float. The USD leg stays at its notional, and the EUR leg moves only through the annuity times the small spread $b^* - b$.
 - **Basis.** The basis DV01, $L_{\text{EUR}} A_{\text{EUR}} \times 0.0001$ for $\Delta b^* = +1$ bp. If the basis becomes more negative, the payer, who still pays $b$, loses and the receiver gains.
