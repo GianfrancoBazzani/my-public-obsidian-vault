@@ -193,7 +193,7 @@ The same swaps also change the type of rate that an asset earns.
 
 ## Basis Swaps
 
-A basis swap is an interest rate swap in which both legs pay a floating rate, each pegged to a different index. The swap reduces basis risk, which occurs when cash flows depend on factors that are not perfectly correlated, for example floating-rate assets and liabilities that are pegged to different indexes.
+A basis swap is an interest rate swap in which both legs pay a floating rate, each pegged to a different index or tenor. The swap reduces basis risk, which occurs when cash flows depend on factors that are not perfectly correlated, for example floating-rate assets and liabilities that are pegged to different indexes.
 
 **Example**
 
