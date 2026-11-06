@@ -206,17 +206,26 @@ A bank has a floating-rate asset indexed to 12-month EURIBOR and a floating-rate
 
 The 3-month rate rises by 25 bp and the 12-month rate by only 10 bp, so the net interest income of the bank falls. To reduce this risk, the bank enters a basis swap in which it receives 3-month EURIBOR plus the basis $b$ and pays 12-month EURIBOR. The swap cancels the two indexes, and the bank keeps a margin equal to $b$.
 
+> [!NOTE]
+> **Why EURIBOR tenors have basis risk and €STR tenors do not**
+>
+> EURIBOR is the rate at which banks lend to each other without collateral for a fixed term. A lender that commits for 12 months carries the credit and liquidity risk of the borrower for longer than a lender that renews a 3-month loan each quarter and can stop. The 12-month EURIBOR thus includes a larger premium than the 3-month EURIBOR, and the gap between them changes with the stress in the interbank market. €STR is an overnight rate with almost no credit risk, and the 3-month and 12-month €STR rates only compound the same daily fixings. Over the same year, four consecutive 3-month periods give the same interest as one 12-month period, so the two tenors have almost no basis.
+
 ### Valuation
 
-The basis $b$ appears in the formula as a fixed term of the contract. The basis risk, appears through the two different forward curves, one for each leg. For the bank, which receives 3M EURIBOR $+ b$ and pays 12M EURIBOR, the value of the swap is
+The basis $b$ appears in the formula as a fixed term of the contract. The basis risk appears through the two different forward curves, one for each leg. As in an IRS, the payer pays the leg with the fixed term, here 3M EURIBOR $+ b$, and receives 12M EURIBOR. The value of the swap for the payer is
 
-$$V = L \sum_{i} \tau_i (F^{3M}_i + b) DF(t_i) - L \sum_{j} \tau_j F^{12M}_j DF(t_j)$$
+$$V_{\text{payer}} = L \sum_{j} \tau_j F^{12M}_j DF(t_j) - L \sum_{i} \tau_i (F^{3M}_i + b) DF(t_i)$$
 
 - $F^{3M}_i$ comes from the 3M EURIBOR forward curve. The sum has one term for each quarter.
 - $F^{12M}_j$ comes from the 12M EURIBOR forward curve. The sum has one term for each year.
 - $DF$ comes from the €STR curve for both legs.
 
-> [!NOTE]
-> **Why EURIBOR tenors have basis risk and €STR tenors do not**
->
-> EURIBOR is the rate at which banks lend to each other without collateral for a fixed term. A lender that commits for 12 months carries the credit and liquidity risk of the borrower for longer than a lender that renews a 3-month loan each quarter and can stop. The 12-month EURIBOR thus includes a larger premium than the 3-month EURIBOR, and the gap between them changes with the stress in the interbank market. €STR is an overnight rate with almost no credit risk, and the 3-month and 12-month €STR rates only compound the same daily fixings. Over the same year, four consecutive 3-month periods give the same interest as one 12-month period, so the two tenors have almost no basis.
+The par basis $b^*$ is the basis that gives a new swap a value of zero, and $A_{3M} = \sum_i \tau_i DF(t_i)$ is the annuity of the 3M leg.
+
+$$b^* = \frac{\sum_j \tau_j F^{12M}_j DF(t_j) - \sum_i \tau_i F^{3M}_i DF(t_i)}{A_{3M}}$$
+
+$$V_{\text{payer}} = L A_{3M} (b^* - b) \qquad V_{\text{receiver}} = L A_{3M} (b - b^*)$$
+
+On the trade date, $b = b^*$ and the swap is worth zero. After that date, $b$ stays fixed, but the forward curves move and change $b^*$, so the value of the swap changes. The values have the same form as $V_{\text{payer}} = L A (R_{\text{par}} - R_K)$ for an IRS, with $b$ in place of $R_K$.
+
