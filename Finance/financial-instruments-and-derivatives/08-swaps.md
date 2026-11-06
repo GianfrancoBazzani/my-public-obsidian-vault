@@ -393,3 +393,28 @@ With this $P_{\text{swap}}$ in the formula for $s$, the spread splits into two p
 $$s = (C - R_{\text{par}}) - \frac{P - 100}{100 A}$$
 
 The first part is the coupon advantage over the swap rate. The second part spreads the premium (or the discount) of the price over the life of the swap, because the investor gets back only 100 at maturity. In a market value asset swap, the floating leg has notional $P$, so its spread is $s \times 100 / P$.
+
+### Asset Swap Applications
+
+**Why this is interesting**
+
+A fixed-rate security carries interest rate risk and credit risk. The asset swap passes the rate risk to the swap counterparty and leaves the investor with the credit risk of the issuer, so the position behaves like a floating-rate note of the same issuer.
+
+- **Pure credit view.** The investor takes a view only on the credit of the issuer. Rate moves have little effect.
+- **Comparable numbers.** The ASW spread puts every fixed-income security on one scale, the spread over the swap curve. The formula removes price and coupon effects, so a 3-year bond at 98 compares with a 7-year bond at 105.
+- **Access to fixed-rate supply.** Most corporate bonds are fixed-rate, but many investors need floating cash flows. The asset swap converts one into the other.
+- **Floating-rate funding.** A bank with floating funding locks the margin between "floating + ASW spread" and its funding cost.
+
+**When this is not interesting**
+
+- **The investor wants duration.** The swap removes the price gain from a fall in rates.
+- **High costs.** The swap bid-offer, collateral, and counterparty risk can consume a small ASW spread.
+- **Embedded options.** A callable or puttable bond has uncertain cash flows, which a standard asset swap does not hedge well.
+- **Stable rates.** With low rate uncertainty, the duration hedge is worth little and the swap only adds cost.
+
+**Practical applications**
+
+- **Relative value.** Among issuers with the same maturity, a wider ASW spread pays more per unit of credit risk.
+- **Negative basis trade.** The basis is the CDS spread minus the ASW spread. If it is negative, buy the security, swap it, and buy CDS protection to earn the difference with little net credit risk. The trade is not risk-free, because the bond needs funding and the basis can stay negative for a long time.
+- **Sector rotation.** Compare the average ASW spread of each sector with its history to find cheap or expensive sectors.
+- **Portfolio construction.** Asset-swapped securities give a duration-neutral portfolio with credit exposure only.
