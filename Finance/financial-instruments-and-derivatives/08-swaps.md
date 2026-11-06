@@ -372,8 +372,24 @@ The ASW spread $s$ is the spread that gives the swap a value of $P - 100$ for th
 
 $$V_{\text{payer}} = \underbrace{100 \left[ 1 - DF(t_n) \right] - 100 C A}_{\text{payer swap at } C} + \underbrace{100 s A}_{\text{spread}}$$
 
-The investor pays 100 for a security worth $P$, so it gets $P - 100$ for free at the start. The spread part balances the value of the swap to $100 - P$, which takes this amount back. With $P_{\text{swap}} = 100 C A + 100 DF(t_n)$, this condition gives the spread.
+The investor pays 100 for a security worth $P$, so it gets $P - 100$ for free at the start. The spread part balances the value of the swap to $100 - P$, which takes this amount back. This condition gives the spread.
 
-$$100 \left[ 1 - DF(t_n) \right] - 100 C A + 100 s A = 100 - P \implies s = \frac{P_{\text{swap}} - P}{100 A}$$
+$$100 \left[ 1 - DF(t_n) \right] - 100 C A + 100 s A = 100 - P$$
 
-With the same curve, $P_{\text{swap}} = 100 + 100 (C - R_{\text{par}}) A$, so the spread splits into two parts.
+The 100 on each side cancels, and the coupons plus the principal discounted on the swap curve give $P_{\text{swap}}$.
+
+$$100 s A = \underbrace{100 C A + 100 DF(t_n)}_{P_{\text{swap}}} - P \implies s = \frac{P_{\text{swap}} - P}{100 A}$$
+
+To split the spread, compare the security with a bond that pays the par swap rate $R_{\text{par}}$, which is the market swap rate today. On the swap curve, this bond is worth exactly its principal of 100, because $R_{\text{par}} = \left[ 1 - DF(t_n) \right] / A$.
+
+$$100 R_{\text{par}} A + 100 DF(t_n) = 100$$
+
+The security pays the same principal but the coupon $C$ instead of $R_{\text{par}}$. It is thus worth 100 plus the extra coupon $C - R_{\text{par}}$, discounted at each date.
+
+$$P_{\text{swap}} = 100 + 100 (C - R_{\text{par}}) A$$
+
+With this $P_{\text{swap}}$ in the formula for $s$, the spread splits into two parts.
+
+$$s = (C - R_{\text{par}}) - \frac{P - 100}{100 A}$$
+
+The first part is the coupon advantage over the swap rate. The second part spreads the premium (or the discount) of the price over the life of the swap, because the investor gets back only 100 at maturity. In a market value asset swap, the floating leg has notional $P$, so its spread is $s \times 100 / P$.
