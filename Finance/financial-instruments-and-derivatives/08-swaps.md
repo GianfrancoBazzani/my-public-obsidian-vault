@@ -233,7 +233,14 @@ On the trade date, $b = b^*$ and the swap is worth zero. After that date, $b$ st
 
 Both legs float, so a 1 bp rise of all rates changes them by almost the same amount and the DV01 of the swap is close to zero, far below the $L A \times 0.0001$ of an IRS with the same notional. It is not zero, because each leg behaves like a zero-coupon bond to its next reset date, at most 3 months away for the 3M leg and up to 12 months for the 12M leg. The main risk is thus the basis DV01, the change in value for a move of +1 bp in $b^*$, positive for the payer.
 
+From $V_{\text{payer}} = L A_{3M} (b^* - b)$, a move of $b^*$ changes the value through the basis difference and the annuity.
+
+$$\frac{dV_{\text{payer}}}{db^*} = L A_{3M} + L (b^* - b) \frac{dA_{3M}}{db^*}$$
+
+At par ($b^* = b$) the second term is zero. It is also zero if only $b^*$ moves, because the €STR curve, and thus $A_{3M}$, stays fixed.
+
 $$DV01_{\text{basis}} \approx L A_{3M} \times 0.0001$$
 
-It is an approximation, because it assumes that only $b^*$ moves while the €STR curve, and thus $A_{3M}$, stays fixed. If instead the 12M forward curve moves by 1 bp, the change is $L A_{12M} \times 0.0001$, with $A_{12M} = \sum_j \tau_j DF(t_j)$, a little smaller because the annual payments come later.
+It is an approximation, because in practice the €STR curve can move with the basis. If instead the 12M forward curve moves by 1 bp, the change is $L A_{12M} \times 0.0001$, with $A_{12M} = \sum_j \tau_j DF(t_j)$, a little smaller because the annual payments come later.
+
 
