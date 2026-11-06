@@ -349,7 +349,7 @@ The two forms differ in what happens to the principals between the start and mat
 - **Constant notional (non-MTM).** The principals are exchanged at $S_K$ at the start and exchanged back in the same amounts at maturity, as in the example above. The FX part $L_{\text{USD}} (S_0 - S_K)$ thus grows with the move of the spot rate since the trade date and is settled only at maturity. End users who hedge a loan or a bond use this form, because the principals match the cash flows of the debt, and hedge accounting usually needs it.
 - **Mark-to-market (resettable) notional.** The EUR notional stays constant and the USD notional resets at the start of each period to $L_{\text{EUR}} / S_i$, with $S_i$ the FX rate fixed two business days before. The difference from the previous USD notional is paid in USD on the reset date. The FX part is thus settled at each reset, so the FX exposure covers one period only and the value stays close to zero. This keeps the counterparty credit exposure small, so the interbank market trades and quotes the cross-currency basis on this form.
 
-## Asset Swaps
+## Asset Swaps (ASW)
 
 An asset swap is a strategy that combines the purchase of a fixed-coupon security with the entry into an Interest Rate Swap (IRS). The investor pays the fixed coupons to the swap counterparty and receives floating payments in exchange. The swap transforms the fixed cash flows of the security into floating cash flows. 
 
