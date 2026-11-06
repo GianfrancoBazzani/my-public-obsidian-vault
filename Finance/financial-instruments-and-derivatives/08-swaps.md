@@ -366,3 +366,14 @@ The two forms differ in the price that the investor pays.
 - **Par asset swap (standard).** The investor pays 100, whatever the market price $P$ of the security is, and gets 100 back at maturity. The difference $P - 100$ is a loan between the two parties, repaid during the life of the swap through the spread.
 - **Market value asset swap.** The investor pays $P$, so no value moves at the start. The floating leg has notional $P$ instead of 100.
 
+### Asset Swap Spread
+
+The ASW spread $s$ is the spread that gives the swap a value of $P - 100$ for the dealer, which offsets the price difference that the investor gets at the start. The investor is the payer of the swap, because it pays the fixed rate, which is the coupon $C$ of the security. The value of the swap for the investor is thus the payer value of an IRS with $R_K = C$ and $L = 100$, plus the value of the spread that the investor receives.
+
+$$V_{\text{payer}} = \underbrace{100 \left[ 1 - DF(t_n) \right] - 100 C A}_{\text{payer swap at } C} + \underbrace{100 s A}_{\text{spread}}$$
+
+The investor pays 100 for a security worth $P$, so it gets $P - 100$ for free at the start. The spread part balances the value of the swap to $100 - P$, which takes this amount back. With $P_{\text{swap}} = 100 C A + 100 DF(t_n)$, this condition gives the spread.
+
+$$100 \left[ 1 - DF(t_n) \right] - 100 C A + 100 s A = 100 - P \implies s = \frac{P_{\text{swap}} - P}{100 A}$$
+
+With the same curve, $P_{\text{swap}} = 100 + 100 (C - R_{\text{par}}) A$, so the spread splits into two parts.
