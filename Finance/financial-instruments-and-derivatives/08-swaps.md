@@ -326,7 +326,7 @@ $$P\&L_{FX} = S_0 L_{\text{USD}} - L_{\text{EUR}} = L_{\text{USD}} (S_0 - S_K) =
 
 It is the EUR notional times the relative move of the spot rate since the trade date, and most of the value of the swap.
 
-In $V_{\text{payer}} = S_0 L_{\text{USD}} - L_{\text{EUR}} (1 + b A_{\text{EUR}})$, only the first term depends on $S_0$. The derivative gives the sensitivity, $dV_{\text{payer}} / dS_0 = L_{\text{USD}}$, and the change of value $\Delta V_{\text{payer}} \approx L_{\text{USD}} \Delta S_0$. In general this is an approximation around the current point, because the derivative is the slope for an infinitesimal move.
+In $V_{\text{payer}} = S_0 L_{\text{USD}} - L_{\text{EUR}} (1 + b A_{\text{EUR}})$, only the first term depends on $S_0$. The derivative gives the sensitivity, $dV_{\text{payer}} / dS_0 = L_{\text{USD}}$, and the change of value $\Delta V_{\text{payer}} \approx L_{\text{USD}} \Delta S_0$. In general this is an approximation around the current point, because the derivative is the slope for an infinitesimal move. Here the value is linear in $S_0$, so the change is exact.
 
 ### Effect of Each Risk
 
