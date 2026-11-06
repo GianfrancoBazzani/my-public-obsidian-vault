@@ -201,6 +201,26 @@ where
 
 If $\rho > 0$, a high foreign rate comes with a strong foreign currency. A payment on a foreign principal gains from both, but the quanto payment does not, so its forward rate is lower. With $F_k = 4\%$, $\sigma_F = 20\%$, $\sigma_X = 10\%$, $\rho = 0.3$ and $t_k = 5$, the adjustment is $4\% \times 0.3 \times 0.2 \times 0.1 \times 5 = 0.12\%$, or 12 bp.
 
+## Commodity Swaps
+
+A commodity swap exchanges a fixed price for the market (floating) price of a commodity on a notional quantity $Q_k$ in each period, for example 100,000 barrels of crude oil per month. It is OTC and cash-settled, so there is no physical delivery, and each period settles the net amount. For the payer of the fixed price $K$, which is the buyer of the commodity, the payment at $t_k$ is
+
+$$\text{Payoff} = Q_k (\bar S_k - K)$$
+
+where $\bar S_k$ is usually the arithmetic average of the daily prices in the period, for example the front-month WTI futures settlements of each business day in the calendar month. The average matches a consumer that buys every day.
+
+- **Consumers** (airlines, shipping, utilities) pay fixed to lock in a purchase price.
+- **Producers** (oil and mining companies, farmers) receive fixed to lock in a selling price.
+- **Investors** take commodity exposure in a commodity-for-interest swap, which pays the return of a commodity or an index against SOFR or a fixed rate on a cash notional.
+
+The hedge has two costs. The consumer loses the gain from a fall in prices, because the swap payment offsets the cheaper purchase. If the swap index differs from the price that the hedger pays, for example a heating oil swap for jet fuel, the gap is basis risk, which a basis swap on the difference can remove.
+
+A commodity swap is a strip of forward contracts with one delivery price $K$. Each leg is valued with the forward price $F_k$ of the average from the futures curve and the discount factor $P(0,t_k)$, so the swap price that gives a zero value at the start is
+
+$$K = \frac{\sum_k Q_k P(0,t_k) F_k}{\sum_k Q_k P(0,t_k)}$$
+
+It is the average of the forward prices weighted by quantity and discount factor, so the curve shape sets it. With equal quantities, forwards of USD 80, 78 and 76 per barrel, and discount factors 0.996, 0.992 and 0.988, the 3-month swap price is USD 78.01. In this backwardated curve, the consumer pays less than the forward in the first month and more in the last. At a later date $t$, with the new forward prices, the payer of the fixed price has the value $\sum_k Q_k P(t,t_k) (F_k - K)$.
+
 ## Inflation Swaps
 
 An inflation swap is an over-the-counter derivative that exchanges a fixed rate for the realized inflation of a price index, which is $I(T)/I(t) - 1$ from $t$ to $T$ with $I(t)$ the index at $t$. The inflation receiver, also called the buyer of inflation protection, pays the fixed rate and gains when inflation is higher than it, and the other party is the inflation payer. The fixed rate gives the swap a zero value at the start, so there is no payment at inception, and the parties never exchange the notional.
