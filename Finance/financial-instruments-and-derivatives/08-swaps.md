@@ -330,7 +330,7 @@ In $V_{\text{payer}} = S_0 L_{\text{USD}} - L_{\text{EUR}} (1 + b A_{\text{EUR}}
 
 ### Effect of Each Risk
 
-The final value discounts the EUR leg on the €STR curve, which sets the market basis $b^*$ to zero. In general, the basis part is $L_{\text{EUR}} A_{\text{EUR}} (b^* - b)$, as for a basis swap, and is zero on the trade date, when $b = b^*$.
+The table gives the approximate sensitivity of $V_{\text{payer}}$ to each risk, with $b^*$ as the market basis.
 
 | Change | Effect on $V_{\text{payer}}$ |
 |---|---|
