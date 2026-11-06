@@ -14,7 +14,7 @@ The principal of an IRS is never exchanged, which is why it is called notional. 
 
 Each side is named after the fixed leg. The **payer** pays fixed and receives floating, gains when rates rise, and lets a floating-rate borrower fix its cost. The **receiver** receives fixed and pays floating, gains when rates fall, and lets a fixed-rate borrower float its debt.
 
-### Valuation
+### Valuation of IRS
 
 An IRS is equivalent to a portfolio of FRAs, one for each payment date, where each FRA exchanges the fixed rate $R_K$ for the floating rate of its period (see [FRAs and Interest Rate Futures](07-fras-and-interest-rate-futures.md)). Each FRA is valued by assuming that its forward rate $R_{F,i}$ is realized and by discounting the resulting cash flow, so the swap value is the sum of the FRA values.
 
@@ -211,7 +211,7 @@ The 3-month rate rises by 25 bp and the 12-month rate by only 10 bp, so the net 
 >
 > EURIBOR is the rate at which banks lend to each other without collateral for a fixed term. A lender that commits for 12 months carries the credit and liquidity risk of the borrower for longer than a lender that renews a 3-month loan each quarter and can stop. The 12-month EURIBOR thus includes a larger premium than the 3-month EURIBOR, and the gap between them changes with the stress in the interbank market. €STR is an overnight rate with almost no credit risk, and the 3-month and 12-month €STR rates only compound the same daily fixings. Over the same year, four consecutive 3-month periods give the same interest as one 12-month period, so the two tenors have almost no basis.
 
-### Valuation
+### Valuation of Basis Swaps
 
 The basis $b$ appears in the formula as a fixed term of the contract. The basis risk appears through the two different forward curves, one for each leg. As in an IRS, the payer pays the leg with the fixed term, here 3M EURIBOR $+ b$, and receives 12M EURIBOR. The value of the swap for the payer is
 
@@ -228,4 +228,12 @@ $$b^* = \frac{\sum_j \tau_j F^{12M}_j DF(t_j) - \sum_i \tau_i F^{3M}_i DF(t_i)}{
 $$V_{\text{payer}} = L A_{3M} (b^* - b) \qquad V_{\text{receiver}} = L A_{3M} (b - b^*)$$
 
 On the trade date, $b = b^*$ and the swap is worth zero. After that date, $b$ stays fixed, but the forward curves move and change $b^*$, so the value of the swap changes. The values have the same form as $V_{\text{payer}} = L A (R_{\text{par}} - R_K)$ for an IRS, with $b$ in place of $R_K$.
+
+### Basis DV01
+
+Both legs float, so a 1 bp rise of all rates changes them by almost the same amount and the DV01 of the swap is close to zero, far below the $L A \times 0.0001$ of an IRS with the same notional. It is not zero, because each leg behaves like a zero-coupon bond to its next reset date, at most 3 months away for the 3M leg and up to 12 months for the 12M leg. The main risk is thus the basis DV01, the change in value for a move of +1 bp in $b^*$, positive for the payer.
+
+$$DV01_{\text{basis}} \approx L A_{3M} \times 0.0001$$
+
+It is an approximation, because it assumes that only $b^*$ moves while the €STR curve, and thus $A_{3M}$, stays fixed. If instead the 12M forward curve moves by 1 bp, the change is $L A_{12M} \times 0.0001$, with $A_{12M} = \sum_j \tau_j DF(t_j)$, a little smaller because the annual payments come later.
 
