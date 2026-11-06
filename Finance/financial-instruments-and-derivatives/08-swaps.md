@@ -313,3 +313,31 @@ $$V_{\text{payer}} = \underbrace{S_0 L_{\text{USD}} - L_{\text{EUR}}}_{\text{exc
 - **Exchange rate.** The difference between the two principals at today's spot rate. It is zero on the trade date, because the principals are exchanged at the spot rate, and then it moves with $S_0$.
 - **Basis.** The present value of the spread $b$ that the payer pays on the EUR leg. With $b$ negative, the payer pays less than €STR, so this part is positive for the payer.
 
+### P&L from Exchange Rate
+
+The payer receives the USD leg, worth $L_{\text{USD}}$, and pays the EUR leg, worth about $L_{\text{EUR}}$. The payer is thus **long $L_{\text{USD}}$ and short $L_{\text{EUR}}$**, like a forward purchase of dollars against euros. In euros, the USD leg is worth $S_0 L_{\text{USD}}$, so the value of the position depends on $S_0$.
+
+- If the euro depreciates ($S_0$ rises), each dollar is worth more euros, and the value rises.
+- If the euro appreciates ($S_0$ falls), each dollar is worth fewer euros, and the value falls.
+
+On the trade date, the two parties exchange the principals at the spot rate of that day, $S_K$, so $L_{\text{EUR}} = S_K L_{\text{USD}}$. At maturity, they exchange back the same principals. The exchange rate part of the value is then:
+
+$$P\&L_{FX} = S_0 L_{\text{USD}} - L_{\text{EUR}} = L_{\text{USD}} (S_0 - S_K) = L_{\text{EUR}} \left( \frac{S_0}{S_K} - 1 \right)$$
+
+It is the EUR notional times the relative move of the spot rate since the trade date. This part is most of the value of the swap.
+
+The sensitivity to the spot rate is $dV_{\text{payer}} / dS_0 = L_{\text{USD}}$. A relative move of 1% in $S_0$ thus changes the value by $S_0 L_{\text{USD}} \times 1\%$, the EUR value of the USD leg times 1%. The value is linear in $S_0$. The market quotes EUR/USD as $1/S_0$, and in that quote the effect is not symmetric, because the value depends on the inverse of the quote.
+
+**Effect of each risk**
+
+The formula of the final value discounts the EUR leg on the €STR curve, so it sets the market basis $b^*$ to zero. With a market basis, the basis part becomes $L_{\text{EUR}} A_{\text{EUR}} (b^* - b)$, as for a basis swap, and it is zero on the trade date, when $b = b^*$.
+
+| Change | Effect on $V_{\text{payer}}$ |
+|---|---|
+| $S_0$ changes by $\Delta S_0$ | $L_{\text{USD}} \Delta S_0$ |
+| The rate curves move and $A_{\text{EUR}}$ changes by $\Delta A_{\text{EUR}}$ | $L_{\text{EUR}} (b^* - b) \Delta A_{\text{EUR}}$ |
+| The market basis changes by $\Delta b^*$ | $L_{\text{EUR}} A_{\text{EUR}} \Delta b^*$ |
+
+- **The exchange rate row** is the real risk, because of the principals.
+- **The rate row** is close to zero, because both legs float. The USD leg is worth its notional with any curve. The EUR leg changes only through the annuity that multiplies the small spread $b^* - b$.
+- **The basis row** is the basis DV01, $L_{\text{EUR}} A_{\text{EUR}} \times 0.0001$ for $\Delta b^* = +1$ bp. If the basis becomes more negative, the payer still pays only $b$ and loses, and the receiver gains.
