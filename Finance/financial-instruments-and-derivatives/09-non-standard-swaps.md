@@ -221,6 +221,39 @@ $$K = \frac{\sum_k Q_k P(0,t_k) F_k}{\sum_k Q_k P(0,t_k)}$$
 
 It is the average of the forward prices weighted by quantity and discount factor, so the curve shape sets it. With equal quantities, forwards of USD 80, 78 and 76 per barrel, and discount factors 0.996, 0.992 and 0.988, the 3-month swap price is USD 78.01. In this backwardated curve, the consumer pays less than the forward in the first month and more in the last. At a later date $t$, with the new forward prices, the payer of the fixed price has the value $\sum_k Q_k P(t,t_k) (F_k - K)$.
 
+## Volatility and Variance Swaps
+
+A volatility swap is a forward contract on the realized volatility $\sigma_R$ of an asset, and a variance swap is a forward contract on the realized variance $\sigma_R^2$. Nothing is paid at the start and no notional is exchanged. At expiry, the buyer, who is long volatility, receives
+
+$$\text{Vol swap} = N_{vol} (\sigma_R - K_{vol}) \qquad \text{Var swap} = N_{var} (\sigma_R^2 - K_{var})$$
+
+where, from $n$ daily log returns $R_i = \ln(S_i / S_{i-1})$ annualized with $A = 252$, and without subtracting the mean,
+
+$$\sigma_R^2 = \frac{A}{n} \sum_{i=1}^{n} R_i^2$$
+
+The market quotes volatilities in points (20 for 20%). The vega notional $N_{vol}$ is the payment for one volatility point, and a variance swap with $N_{var} = N_{vol} / (2 K_{vol})$ pays about the same amount for one point near the strike, because $\text{d}(\sigma^2)/\text{d}\sigma = 2\sigma$. With $N_{vol} =$ USD 100,000 and a strike of 20, $N_{var} = 2{,}500$.
+
+| Realized volatility | Volatility swap | Variance swap |
+|---|---|---|
+| 25 | $100{,}000 \times 5 = 500{,}000$ | $2{,}500 \times (625 - 400) = 562{,}500$ |
+| 15 | $100{,}000 \times (-5) = -500{,}000$ | $2{,}500 \times (225 - 400) = -437{,}500$ |
+
+The variance swap is convex in volatility, so its buyer gains more and loses less than the buyer of the volatility swap.
+
+Both swaps give pure exposure to volatility, without the delta hedge that an option needs. Traders use them to bet on volatility, to trade realized against implied volatility, and to hedge volatility exposure. Implied variance has historically been higher than realized variance, so a short variance swap earns this variance risk premium most of the time and loses heavily in a crash.
+
+A static strip of out-of-the-money puts and calls, with weights $1/K^2$, and a dynamic futures hedge replicate the variance swap. The weights make the variance exposure of the strip independent of the spot price, and the fair strike, which gives the swap a zero value, is
+
+$$K_{var} = \frac{2 e^{rT}}{T} \left[ \int_0^{F_0} \frac{P(K)}{K^2} \text{d}K + \int_{F_0}^{\infty} \frac{C(K)}{K^2} \text{d}K \right]$$
+
+where $P(K)$ and $C(K)$ are the put and call prices with strike $K$, $F_0$ is the forward price, $r$ the rate and $T$ the maturity. The VIX applies a discrete form of this formula to S&P 500 options with 23 to 37 days to expiry, interpolated to 30 days, so the VIX is approximately the square root of the 30-day variance swap strike.
+
+A volatility swap has no static replication, because volatility is the square root of variance. By Jensen's inequality, its fair strike is below $\sqrt{K_{var}}$, and the difference is a convexity adjustment that increases with the volatility of volatility.
+
+$$K_{vol} \approx \sqrt{K_{var}} - \frac{\text{Var}(\sigma_R^2)}{8 K_{var}^{3/2}}$$
+
+The replication fails in extreme moves, because options at extreme strikes are illiquid and prices can jump. Before 2008, clients bought single-stock variance and sold index variance, so dealers were net short single-stock variance. They had large losses in the 2008 crisis, and the single-stock variance swap market disappeared in 2009. Since then, many variance swaps have a cap on the payoff, and index variance swaps remain the main market.
+
 ## Inflation Swaps
 
 An inflation swap is an over-the-counter derivative that exchanges a fixed rate for the realized inflation of a price index, which is $I(T)/I(t) - 1$ from $t$ to $T$ with $I(t)$ the index at $t$. The inflation receiver, also called the buyer of inflation protection, pays the fixed rate and gains when inflation is higher than it, and the other party is the inflation payer. The fixed rate gives the swap a zero value at the start, so there is no payment at inception, and the parties never exchange the notional.
