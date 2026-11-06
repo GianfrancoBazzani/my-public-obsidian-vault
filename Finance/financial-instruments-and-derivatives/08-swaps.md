@@ -170,3 +170,25 @@ The chart uses the same swap, with a fixed rate of 4.30%. It starts at par, so i
 | −200 bp (2.30%) | −EUR 33.4 million | −EUR 43.0 million | −EUR 9.6 million |
 
 The annuity falls to 13.33 at 6.30% and rises to 21.50 at 2.30%, which explains the difference. Although the average move of rates is zero, the average result for the payer is −EUR 8.2 million. The receiver has the same values with the opposite sign, so the curvature helps it in the two directions.
+
+### Use Cases
+
+Swaps are popular because they have many uses. The uses below apply to any floating reference rate, which the examples call floating. In the examples, company A is the payer of a 3% swap and company B the receiver of a 2.97% swap, both with the same dealer, which keeps the 0.03% difference. Each loan and asset is $100 million, the notional of the swaps, and the loans and the bonds last two years.
+
+#### Transform Liability
+
+- **Floating to fixed.** Company A pays floating + 0.1% (10 bp) on its loan and, in the swap, receives floating and pays 3%, so its loan costs a fixed 3.1%.
+- **Fixed to floating.** Company B pays 3.2% on its loan and, in the swap, pays floating and receives 2.97%, so its loan costs floating + 0.23%.
+
+![Rates paid between the lenders, company A, the dealer, and company B when the swaps transform their loans](Attachments/swap-transform-liability.svg)
+
+#### Transform Asset
+
+The same swaps also change the type of rate that an asset earns.
+
+- **Fixed to floating.** Company A earns 2.7% on its bonds and, in the swap, receives floating and pays 3%, so its bonds earn floating − 0.3%.
+- **Floating to fixed.** Company B earns floating − 0.2% on its investment and, in the swap, pays floating and receives 2.97%, so its investment earns a fixed 2.77%.
+
+![Rates paid between the bonds, company A, the dealer, company B, and its investment when the swaps transform their assets](Attachments/swap-transform-asset.svg)
+
+

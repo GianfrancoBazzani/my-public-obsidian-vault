@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="425" viewBox="0 0 760 425" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<rect width="760" height="425" fill="white"/>
+<text x="20" y="28" font-weight="bold">Futures price and spot price</text>
+<path d="M80.0,114.6 L100.0,118.0 L120.0,111.3 L140.0,114.3 L160.0,118.4 L180.0,130.5 L200.0,133.2 L220.0,118.8 L240.0,113.2 L260.0,99.7 L280.0,96.5 L300.0,91.4 L320.0,88.9 L340.0,110.6 L360.0,99.5 L380.0,92.9 L400.0,86.4 L420.0,108.4 L440.0,131.2 L460.0,142.7 L480.0,148.8 L500.0,144.9 L520.0,145.5 L540.0,138.7 L560.0,147.0" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6 4"/>
+<path d="M80.0,61.2 L100.0,66.4 L120.0,66.3 L140.0,62.0 L160.0,72.9 L180.0,85.0 L200.0,96.3 L220.0,84.2 L240.0,79.5 L260.0,67.5 L280.0,64.5 L300.0,62.5 L320.0,63.9 L340.0,88.7 L360.0,78.8 L380.0,71.3 L400.0,70.2 L420.0,92.9 L440.0,117.7 L460.0,133.3 L480.0,140.1 L500.0,137.6 L520.0,141.9 L540.0,136.6 L560.0,147.0" fill="none" stroke="#1f4fd8" stroke-width="2.5"/>
+<circle cx="560" cy="147.0" r="5" fill="#1f4fd8"/>
+<text x="140" y="50" fill="#1f4fd8">futures price F</text>
+<text x="260" y="134" fill="#666">spot price S</text>
+<text x="572" y="152" fill="#1f4fd8">F = S</text>
+<text x="20" y="200" font-weight="bold">Daily settlement of a long position (variation margin)</text>
+<rect x="94.0" y="285.0" width="12" height="8.4" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="114.0" y="284.8" width="12" height="0.2" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="134.0" y="278.1" width="12" height="6.9" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="154.0" y="285.0" width="12" height="17.6" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="174.0" y="285.0" width="12" height="19.5" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="194.0" y="285.0" width="12" height="18.1" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="214.0" y="265.6" width="12" height="19.4" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="234.0" y="277.5" width="12" height="7.5" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="254.0" y="265.6" width="12" height="19.4" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="274.0" y="280.1" width="12" height="4.9" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="294.0" y="281.9" width="12" height="3.1" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="314.0" y="285.0" width="12" height="2.2" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="334.0" y="285.0" width="12" height="40.0" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="354.0" y="269.0" width="12" height="16.0" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="374.0" y="273.0" width="12" height="12.0" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="394.0" y="283.3" width="12" height="1.7" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="414.0" y="285.0" width="12" height="36.5" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="434.0" y="285.0" width="12" height="39.8" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="454.0" y="285.0" width="12" height="25.2" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="474.0" y="285.0" width="12" height="11.0" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="494.0" y="281.0" width="12" height="4.0" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="514.0" y="285.0" width="12" height="6.8" fill="#d9480f" fill-opacity="0.8"/>
+<rect x="534.0" y="276.5" width="12" height="8.5" fill="#1f4fd8" fill-opacity="0.8"/>
+<rect x="554.0" y="285.0" width="12" height="16.9" fill="#d9480f" fill-opacity="0.8"/>
+<text x="88" y="237" font-size="12" fill="#1f4fd8">gain, paid into the margin account</text>
+<text x="88" y="343" font-size="12" fill="#d9480f">loss, paid out of the margin account</text>
+<line x1="80" y1="285" x2="680" y2="285" stroke="#333" stroke-width="2"/>
+<line x1="560" y1="285" x2="680" y2="285" stroke="#333" stroke-width="2" stroke-dasharray="4 4"/>
+<line x1="80" y1="273" x2="80" y2="297" stroke="#333" stroke-width="2"/>
+<line x1="560" y1="273" x2="560" y2="297" stroke="#333" stroke-width="2"/>
+<line x1="680" y1="273" x2="680" y2="297" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="273" x2="80" y2="45" stroke="#bbb" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="560" y1="273" x2="560" y2="45" stroke="#bbb" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="80" y="367" text-anchor="middle">trade date</text>
+<text x="80" y="385" text-anchor="middle" font-size="12" fill="#555">position opens,</text>
+<text x="80" y="399" text-anchor="middle" font-size="12" fill="#555">initial margin posted</text>
+<text x="320" y="367" text-anchor="middle">each trading day</text>
+<text x="320" y="385" text-anchor="middle" font-size="12" fill="#555">settlement price,</text>
+<text x="320" y="399" text-anchor="middle" font-size="12" fill="#555">gain or loss settled</text>
+<text x="560" y="367" text-anchor="middle">last trading day</text>
+<text x="560" y="385" text-anchor="middle" font-size="12" fill="#555">F converges</text>
+<text x="560" y="399" text-anchor="middle" font-size="12" fill="#555">to S</text>
+<text x="680" y="367" text-anchor="middle">final settlement</text>
+<text x="680" y="385" text-anchor="middle" font-size="12" fill="#555">cash settlement</text>
+<text x="680" y="399" text-anchor="middle" font-size="12" fill="#555">or delivery</text>
+</svg>
