@@ -70,9 +70,9 @@ $$y = 0.0625 \quad (6.25\%)$$
 
 ### Clean and Dirty Prices
 
-For a fixed-income security that pays coupons, we define the **dirty price**, or **full price**, as the price $P_{dirty}$. It is the **cash that the buyer of the bond pays**. Between two coupon dates the times $t$ are not whole years, e.g. 3 months after the last coupon of an annual bond the cash flows arrive at $t = 0.75, 1.75, \dots$
+For a fixed-income security that pays coupons, we define the **dirty price**, or **full price**, as the price $P_{dirty}$. It is the **actual cash amount exchanged between buyer and seller when the bond is bought**. Between two coupon dates the times $t$ are not whole years, e.g. 3 months after the last coupon of an annual bond the cash flows arrive at $t = 0.75, 1.75, \dots$
 
-The **clean price** is the dirty price minus the **accrued interest** ($AI$), the part of the next coupon that the seller earned from the last coupon date to the date of the sale. Thus the accrued interest grows with the time. The buyer pays the clean price plus the accrued interest, i.e. the dirty price, because the buyer receives the full next coupon.
+The **clean price** is the dirty price minus the **accrued interest** ($AI$), the part of the next coupon that the seller earned from the last coupon date to the date of the sale. Thus the accrued interest grows with the time. The cash amount exchanged is the clean price plus the accrued interest, i.e. the dirty price, because the buyer receives the full next coupon. The clean price is only the quote.
 
 $$P_{clean} = P_{dirty} - AI$$
 
