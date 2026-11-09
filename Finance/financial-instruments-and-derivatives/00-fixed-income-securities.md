@@ -497,6 +497,15 @@ $$KRD_i=-\frac{\Delta P/P}{\Delta y_i}$$
 - $\Delta y_i$ is the change in the rate at the maturity $i$, while all the other rates of the curve stay constant.
 - $\Delta P/P$ is the percentage change in the price of the security that this change in the rate produces.
 
+In practice, each key rate duration comes from repricing on a shifted spot curve.
+
+1. Choose the key rates $k_1 < \dots < k_n$ (e.g. 2, 5, 10, 30 years) and compute $P_0$ on the spot curve.
+2. For each $k_i$, start from the original curve and apply a triangular shift of $\Delta y$ (usually 1 bp). It is flat at $\Delta y$ before $k_1$ for the first key rate and after $k_n$ for the last.
+
+3. Reprice with the curve shifted up ($P_{+}$) and down ($P_{-}$), which needs $2n+1$ prices in total.
+
+$$KRD_i=\frac{P_{-}-P_{+}}{2 P_0 \Delta y}$$
+
 The key rate durations of a security add up to its modified duration. If all the rates move by the same amount $\Delta y$, the sum of the effects of each key rate is the effect of a parallel shift, so
 
 $$\sum_{i} KRD_i = D_{Mod}$$
