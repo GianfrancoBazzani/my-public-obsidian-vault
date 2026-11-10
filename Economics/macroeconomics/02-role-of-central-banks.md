@@ -124,7 +124,7 @@ T2 moves a value close to the annual GDP of the euro area every eight days. Unli
 
 **Bank Rate as a Ceiling**
 
-The Bank of England set its discount rate, the Bank rate, usually well above the market rate. The market came to the Bank only when the market rate rose to the Bank rate, so the Bank rate was a ceiling.
+The Bank of England set its discount rate, the Bank rate, usually well above the market rate. In normal times, banks and bill brokers discounted their bills more cheaply in the market, so the high rate kept them from using the Bank to finance their business. The Bank was the last resort, the place to go when the market had no more cash. When the market rate rose to the Bank rate, borrowers went to the Bank instead, so the market rate rarely rose above it and the Bank rate was a ceiling.
 
 The Bank discounted only prime bills, which had no doubt of payment. This protected the value of its notes and their convertibility into gold. The Bank did not plan to sell these bills in a crisis, because a central bank that sells assets in a crisis does the opposite of its job. For the same reason, it kept a large reserve.
 
