@@ -181,6 +181,16 @@ The table leaves out entries, so the sheets do not balance. The main asset of a 
 
 National accounts use the same rule, so each IOU is a financial liability for one sector and a financial asset for another. The only exception in the 2008 SNA and the BPM6 is the gold bullion that monetary authorities hold as a reserve asset, which by convention is a financial asset with no corresponding liability, "unlike any other financial assets". Other gold bullion is a nonfinancial asset.
 
+> [!NOTE]
+> **A Top Asset That Is Someone's Liability**
+>
+> The top asset is stable only if it is no one's liability. If an issuer owes it, the issuer can destroy it at once, for all holders or for one, by a refusal to pay. Gold has no issuer, so no decision of a debtor can cancel it, and its holders bear only the risk of its price. The dollar, at the top of the international system, is a liability of the Federal Reserve and of the US Treasury, and the United States has used both powers.
+>
+> - **For all holders.** On 15 August 1971, the United States stopped the conversion of dollars into gold for foreign governments and central banks. It called the stop temporary but never ended it.
+> - **For one holder.** After the invasion of Ukraine in February 2022, Western countries froze about $300 billion of the reserves of the Bank of Russia, about half of its reserves. The Bank still owns them but cannot use them.
+>
+> Gold that a central bank keeps with a foreign custodian carries the same risk, because the central bank then holds a claim on the custodian. The SDR does not escape the problem either, because each member records its SDR allocations as a long-term debt liability.
+
 **Outside and Inside Money**
 
 Gurley and Shaw (1960) separated outside money, which is fiat money or money backed by an asset that is not in zero net supply within the private sector, such as gold, from inside money, which is backed by private credit and so nets to zero within the private sector. The class of an asset depends on the group that is consolidated. Gurley and Shaw consolidated only the private sector, so fiat currency looked like outside money, and in the United Kingdom base money is still called outside money. Mehrling consolidates the whole economy, and even the world economy, so currency becomes inside money too, and only gold stays outside.
@@ -259,12 +269,14 @@ For Mehrling the hierarchy and its motion are inherent, because they come from t
 - Board of Governors of the Federal Reserve System. "Is U.S. Currency Still Backed by Gold?" [Online](https://www.federalreserve.gov/faqs/currency_12770.htm).
 - Bondone, Carlos A. 2006. "Teoría de la relatividad económica." *Revista Libertas* 13 (45), October. Instituto Universitario ESEADE. [PDF](https://www.eseade.edu.ar/wp-content/uploads/2016/08/Bondone-Teoria-de-la-relatividad-economica-Carlos-Bondone.pdf).
 - Bondone, Carlos A. 2012. *Teoría de la moneda (crisis de las teorías monetarias-financieras)*. Buenos Aires, February.
+- Fabrichnaya, Elena, and Guy Faulconbridge. 2023. "Factbox: What and Where Are Russia's $300 Billion in Reserves Frozen in the West?" Reuters, December 28. [Online](https://uk.investing.com/news/forex-news/factboxwhat-and-where-are-russias-300-billion-in-reserves-frozen-in-the-west-3282218).
 - Ghizoni, Sandra Kollen. 2013. "Nixon Ends Convertibility of U.S. Dollars to Gold and Announces Wage/Price Controls." Federal Reserve History. [Online](https://www.federalreservehistory.org/essays/gold-convertibility-ends).
 - Goodhart, Charles, and Meinhard Jensen. 2015. "Currency School versus Banking School: An Ongoing Confrontation." *Economic Thought* 4 (2): 20–31. [LSE Research Online](https://researchonline.lse.ac.uk/id/eprint/64068/).
 - Gurley, John G., and Edward S. Shaw. 1960. *Money in a Theory of Finance*. Brookings Institution. [Internet Archive](https://archive.org/details/moneyintheoryoff0000gurl).
 - Hicks, John. 1989. *A Market Theory of Money*. Clarendon Press. [Oxford Academic](https://academic.oup.com/book/9948), [Internet Archive](https://archive.org/details/markettheoryofmo0000hick).
 - Huerta de Soto, Jesús. 2020. *Money, Bank Credit, and Economic Cycles*. 4th ed. Translated by Melinda A. Stroup. Ludwig von Mises Institute. [PDF](https://cdn.mises.org/money_bank_credit_and_economic_cycles_4th_edition.pdf).
 - International Monetary Fund. "Special Drawing Rights (SDR)." Factsheet. [Online](https://www.imf.org/en/About/Factsheets/Sheets/2023/special-drawing-rights-sdr).
+- International Monetary Fund. 2021. "Guidance Note for Fund Staff on the Treatment and Use of SDR Allocations." Policy Paper No. 2021/059. [Online](https://www.imf.org/en/Publications/Policy-Papers/Issues/2021/08/19/Guidance-Note-for-Fund-Staff-on-the-Treatment-and-Use-of-SDR-Allocations-464319).
 - International Monetary Fund, Statistics Department. 2017. "International Reserves and Foreign Currency Liquidity Data Template — Clarification on the Recording of Gold Under Other Foreign Currency Assets." [PDF](https://www.imf.org/external/bopage/pdf/Clarification.pdf).
 - Jevons, William Stanley. 1875. *Money and the Mechanism of Exchange*. Chapter 3. Henry S. King & Co. [Online edition](https://www.econlib.org/library/YPDBooks/Jevons/jvnMME.html?chapter_num=4).
 - Lagos, Ricardo. 2006. "Inside and Outside Money." Staff Report 374, Federal Reserve Bank of Minneapolis. [EconPapers](https://econpapers.repec.org/RePEc:fip:fedmsr:374).
