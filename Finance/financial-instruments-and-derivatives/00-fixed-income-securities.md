@@ -384,9 +384,26 @@ If the yield rises by 10 basis points, the value of the position changes by abou
 
 As we saw, the modified duration is a linear approximation. If the change in the yield is large, this approximation becomes unreliable, because the price curve is convex, not a straight line. Convexity is the second-order term that corrects this error.
 
-The convexity measures the curvature of the price-yield curve. It improves the approximation by adding a second-order term to the formula. The convexity is the second derivative of the price with respect to the yield, divided by the price.
+The convexity measures the curvature of the price-yield curve. It improves the approximation by adding a second-order term to the formula. The convexity is the second derivative of the price with respect to the yield, divided by the price. For a security with $m$ cash flows per year, the formula is
 
-$$C=\frac{1}{P}\frac{d^2P}{dy^2}=\frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1) \cdot CF_t}{(1+y)^{t+2}}$$
+$$C=\frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2}=\frac{1}{P}\sum_{k=1}^{N} \frac{t_k \left(t_k+\frac{1}{m}\right) \cdot CF_{t_k}}{\left(1+\frac{y}{m}\right)^{m t_k+2}}$$
+
+- $m$ is the compounding frequency, the number of cash flows per year.
+- $t_k = k/m$ is the time of the $k$-th cash flow, in years.
+- $N = m T$ is the number of cash flows, and $T$ is the maturity in years.
+- $CF_{t_k}$ is the cash flow paid at time $t_k$.
+- $P$ is the price of the security.
+- $y$ is the yield to maturity, quoted as a nominal annual rate with $m$ compounding periods per year.
+
+In the particular case of one cash flow per year ($m = 1$), the times are whole years ($t_k = k$), and the formula becomes
+
+$$C=\frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1) \cdot CF_t}{(1+y)^{t+2}}$$
+
+With continuous compounding ($m \to \infty$), the term $\frac{1}{m}$ and the term $\frac{y}{m}$ go to zero, and the convexity is the present-value weighted average of the squared times
+
+$$C=\frac{1}{P}\sum_{k=1}^{N} t_k^2 \cdot CF_{t_k} e^{-y t_k}$$
+
+For a zero-coupon bond with maturity $T$, the formula gives $C = \frac{T \left(T + \frac{1}{m}\right)}{\left(1+\frac{y}{m}\right)^2}$, which is $\frac{T(T+1)}{(1+y)^2}$ for $m = 1$ and $T^2$ with continuous compounding.
 
 With this term, the second-order approximation of the price change is
 
@@ -404,6 +421,14 @@ The effect of the convexity is small for small changes in the interest rates. It
 We continue with the bond above, with $D_{Mod}=3.59$ and $y=4$%. With annual compounding, the convexity of the bond is
 
 $$C=\frac{1}{103.630}\left[\frac{1 \cdot 2 \cdot 5}{1.04^{3}} + \frac{2 \cdot 3 \cdot 5}{1.04^{4}} + \frac{3 \cdot 4 \cdot 5}{1.04^{5}} + \frac{4 \cdot 5 \cdot 105}{1.04^{6}}\right]=\frac{1743.510}{103.630}=16.82$$
+
+With semiannual cash flows ($m = 2$), the same bond has a price of 103.663, and the convexity is
+
+$$C=\frac{1}{103.663}\left[\sum_{k=1}^{7} \frac{\frac{k}{2}\left(\frac{k}{2}+\frac{1}{2}\right) \cdot 2.5}{1.02^{k+2}} + \frac{4 \cdot 4.5 \cdot 102.5}{1.02^{10}}\right]=\frac{1604.091}{103.663}=15.47$$
+
+If the yield of 4% uses continuous compounding, the convexity is $C=\frac{1494.779}{103.329}=14.47$ for the annual bond and $C=\frac{1475.777}{103.512}=14.26$ for the semiannual bond. The convexity falls when $m$ rises, because the term $t_k \left(t_k + \frac{1}{m}\right)$ falls towards $t_k^2$.
+
+The rest of the example uses the annual bond.
 
 The exact change is the price of the bond at the new yield divided by the price of 103.630, minus 1.
 
@@ -457,6 +482,18 @@ $$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \sum_{t=1}^{n} \frac{t(t+1) CF_t}{(1+y)^
 Therefore, the convexity is
 
 $$C = \frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \frac{1}{P}\sum_{t=1}^{n} \frac{t(t+1) CF_t}{(1+y)^{t+2}}$$
+
+With $m$ cash flows per year, the same steps with $u = 1 + \frac{y}{m}$ give $\frac{\mathrm{d} u}{\mathrm{d} y} = \frac{1}{m}$. The first derivative is $-\sum_{k=1}^{N} t_k CF_{t_k} u^{-(m t_k+1)}$. The power rule gives the factor $-(m t_k + 1)$, and the chain rule gives the factor $\frac{1}{m}$, so the product is $-\left(t_k + \frac{1}{m}\right)$.
+
+$$\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \sum_{k=1}^{N} (-t_k) CF_{t_k} \big(-(m t_k + 1)\big) u^{-(m t_k+2)} \frac{1}{m} = \sum_{k=1}^{N} \frac{t_k \left(t_k + \frac{1}{m}\right) CF_{t_k}}{\left(1+\frac{y}{m}\right)^{m t_k+2}}$$
+
+We divide by $P$.
+
+$$C = \frac{1}{P}\frac{\mathrm{d}^2P}{\mathrm{d}y^2} = \frac{1}{P}\sum_{k=1}^{N} \frac{t_k \left(t_k+\frac{1}{m}\right) \cdot CF_{t_k}}{\left(1+\frac{y}{m}\right)^{m t_k+2}}$$
+
+With continuous compounding, the second derivative of $e^{-y t_k}$ is $t_k^2 e^{-y t_k}$, so no factor remains.
+
+$$C = \frac{1}{P}\sum_{k=1}^{N} t_k^2 \cdot CF_{t_k} e^{-y t_k}$$
 
 Every term of the sum is positive, because $t$, $CF_t$, and $(1+y)$ are positive. This is the reason why the convexity of a fixed-income security with fixed positive cash flows is always positive.
 
