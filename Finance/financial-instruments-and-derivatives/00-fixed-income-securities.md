@@ -349,32 +349,32 @@ $$\frac{1}{P} \frac{\mathrm{d} P }{\mathrm{d} y} = \frac{1}{P} \sum_{k=1}^{N} -t
 
 The money duration, or dollar duration, is the modified duration multiplied by the full value of the position. The modified duration gives the sensitivity as a percentage of the value. The money duration gives the same sensitivity as an amount of currency.
 
-$$D_{Money} = D_{Mod} \times \frac{P}{100} \times N$$
+$$D_{Money} = D_{Mod} \times \frac{P}{100} \times F$$
 
-- $N$ is the face value of the position.
-- $P$ is the full (dirty) price per 100 of face value, so $\frac{P}{100} \times N$ is the full value of the position.
+- $F$ is the face value of the position.
+- $P$ is the full (dirty) price per 100 of face value, so $\frac{P}{100} \times F$ is the full value of the position.
 
-For 100 of face value ($N = 100$), the formula becomes $D_{Money} = D_{Mod} \times P$. The change in the value $V$ of the position for a change in yield is then
+For 100 of face value ($F = 100$), the formula becomes $D_{Money} = D_{Mod} \times P$. The change in the value $V$ of the position for a change in yield is then
 
 $$\Delta V \approx -D_{Money} \times \Delta y$$
 
 ## DV01
 
-The DV01 (dollar value of an 01) is the change in the value of a security, with its sign, when its yield rises by one basis point (0.01%, or 0.0001). A long position loses value when the yield rises, so its DV01 is negative. Some texts change the sign, so that a long position has a positive DV01.
+The DV01 (dollar value of an 01) is the change in the value of a position, with its sign, when its yield rises by one basis point (0.01%, or 0.0001). A long position loses value when the yield rises, so its DV01 is negative. Some texts change the sign, so that a long position has a positive DV01.
 
 With $\Delta y = 0.0001$, the money duration formula gives the DV01 of a position.
 
-$$DV01 = -D_{Money} \times 0.0001 = -D_{Mod} \times \frac{P}{100} \times N \times 0.0001$$
+$$DV01 = -D_{Money} \times 0.0001 = -D_{Mod} \times \frac{P}{100} \times F \times 0.0001$$
 
 The money duration gives the change in value for a change in yield of 1 (100%), far larger than any real market move. One basis point is a realistic move, so risk reports often state the interest rate risk as a DV01.
 
 **Example**
 
-For the bond above, with a price of 103.630 and $D_{Mod}=3.5853$, the money duration and the DV01 per 100 of face value ($N = 100$) are
+For the bond above, with a price of 103.630 and $D_{Mod}=3.5853$, the money duration and the DV01 per 100 of face value ($F = 100$) are
 
 $$D_{Money} = 3.5853 \times \frac{103.630}{100} \times 100 = 371.54 \qquad DV01 = -371.54 \times 0.0001 = -0.03715$$
 
-The repricing at 3.99% and 4.01% gives the same value. A position with a face value of $N = 10{,}000{,}000$ has a money duration and a DV01 of
+The repricing at 3.99% and 4.01% gives the same value. A position with a face value of $F = 10{,}000{,}000$ has a money duration and a DV01 of
 
 $$D_{Money} = 3.5853 \times \frac{103.630}{100} \times 10{,}000{,}000 = 37{,}154{,}000 \qquad DV01 = -37{,}154{,}000 \times 0.0001 = -3{,}715$$
 
