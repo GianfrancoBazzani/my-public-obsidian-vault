@@ -358,6 +358,10 @@ For 100 of face value ($F = 100$), the formula becomes $D_{Money} = D_{Mod} \tim
 
 $$\Delta V \approx -D_{Money} \times \Delta y$$
 
+The money duration is an amount of currency, so the money duration of a portfolio is the sum of those of its positions. The modified duration is a percentage, so it does not add, and that of the portfolio is the average weighted by value (see [Duration and Convexity of a Portfolio](#duration-and-convexity-of-a-portfolio)).
+
+$$D_{Money}^{Port} = \sum_i D_{Money,i}$$
+
 ## DV01
 
 The DV01 (dollar value of an 01) is the change in the value of a position, with its sign, when its yield rises by one basis point (0.01%, or 0.0001). A long position loses value when the yield rises, so its DV01 is negative. Some texts change the sign, so that a long position has a positive DV01.
@@ -367,6 +371,10 @@ With $\Delta y = 0.0001$, the money duration formula gives the DV01 of a positio
 $$DV01 = -D_{Money} \times 0.0001 = -D_{Mod} \times \frac{P}{100} \times F \times 0.0001$$
 
 The money duration gives the change in value for a change in yield of 1 (100%), far larger than any real market move. One basis point is a realistic move, so risk reports often state the interest rate risk as a DV01.
+
+For the same reason, the DV01 of a portfolio is the sum of the DV01s of its positions, each with its sign.
+
+$$DV01^{Port} = \sum_i DV01_i$$
 
 **Example**
 
