@@ -40,7 +40,17 @@ $$PV_{\text{float}} = \sum_{i=1}^{n} L \tau_i R_{F,i} DF(t_i)$$
 
 The forward rate of period $i$ is defined so that an investment until $t_{i-1}$, reinvested at $R_{F,i}$ until $t_i$, gives the same result as an investment until $t_i$ (see [Interest Rate Curves](02-interest-rates-curves.md)).
 
-$$1 + \tau_i R_{F,i} = \frac{DF(t_{i-1})}{DF(t_i)} \implies \tau_i R_{F,i} DF(t_i) = DF(t_{i-1}) - DF(t_i)$$
+One unit invested today grows to $\frac{1}{DF(t)}$ at $t$, so the two investments are equal when
+
+$$\frac{1}{DF(t_{i-1})} \left( 1 + \tau_i R_{F,i} \right) = \frac{1}{DF(t_i)}$$
+
+We multiply the two sides by $DF(t_{i-1})$ and then subtract 1.
+
+$$1 + \tau_i R_{F,i} = \frac{DF(t_{i-1})}{DF(t_i)} \implies \tau_i R_{F,i} = \frac{DF(t_{i-1})}{DF(t_i)} - 1 = \frac{DF(t_{i-1}) - DF(t_i)}{DF(t_i)}$$
+
+We multiply the two sides by $DF(t_i)$, which gives the term of the sum in $PV_{\text{float}}$.
+
+$$\tau_i R_{F,i} DF(t_i) = DF(t_{i-1}) - DF(t_i)$$
 
 If we substitute this equality into $PV_{\text{float}}$, the sum telescopes.
 
