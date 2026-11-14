@@ -4,7 +4,7 @@ A swap is an OTC agreement between two companies to exchange future cash flows. 
 
 ## Vanilla Interest Rate Swaps (IRS)
 
-An interest rate swap is a swap where interest at a predetermined fixed rate, applied to a certain principal, is exchanged for interest at a floating reference rate, applied to the same principal, with regular exchanges begin made for an agreed period of time. An IRS has two legs, and each leg is one side’s stream of payments.
+An interest rate swap is a swap where interest at a predetermined fixed rate, applied to a certain principal, is exchanged for interest at a floating reference rate, applied to the same principal, with regular exchanges being made for an agreed period of time. An IRS has two legs, and each leg is one side’s stream of payments.
 
 For example, a swap negotiated in the past might exchange 3% interest on a $100 million principal for three-month LIBOR on the same principal, every three months for five years.
 
@@ -231,23 +231,23 @@ $$V_{\text{payer}} = L \sum_{j} \tau_j F^{12M}_j DF(t_j) - L \sum_{i} \tau_i (F^
 - $F^{12M}_j$ comes from the 12M EURIBOR forward curve. The sum has one term for each year.
 - $DF$ comes from the €STR curve for both legs.
 
-The par basis $b^*$ is the basis that gives a new swap a value of zero, and $A_{3M} = \sum_i \tau_i DF(t_i)$ is the annuity of the 3M leg.
+The par basis $b^\ast$ is the basis that gives a new swap a value of zero, and $A_{3M} = \sum_i \tau_i DF(t_i)$ is the annuity of the 3M leg.
 
-$$b^* = \frac{\sum_j \tau_j F^{12M}_j DF(t_j) - \sum_i \tau_i F^{3M}_i DF(t_i)}{A_{3M}}$$
+$$b^\ast = \frac{\sum_j \tau_j F^{12M}_j DF(t_j) - \sum_i \tau_i F^{3M}_i DF(t_i)}{A_{3M}}$$
 
-$$V_{\text{payer}} = L A_{3M} (b^* - b) \qquad V_{\text{receiver}} = L A_{3M} (b - b^*)$$
+$$V_{\text{payer}} = L A_{3M} (b^\ast - b) \qquad V_{\text{receiver}} = L A_{3M} (b - b^\ast)$$
 
-On the trade date, $b = b^*$ and the swap is worth zero. After that date, $b$ stays fixed, but the forward curves move and change $b^*$, so the value of the swap changes. The values have the same form as $V_{\text{payer}} = L A (R_{\text{par}} - R_K)$ for an IRS, with $b$ in place of $R_K$.
+On the trade date, $b = b^\ast$ and the swap is worth zero. After that date, $b$ stays fixed, but the forward curves move and change $b^\ast$, so the value of the swap changes. The values have the same form as $V_{\text{payer}} = L A (R_{\text{par}} - R_K)$ for an IRS, with $b$ in place of $R_K$.
 
 ### Basis DV01
 
-Both legs float, so a 1 bp rise of all rates changes them by almost the same amount and the DV01 of the swap is close to zero, far below the $L A \times 0.0001$ of an IRS with the same notional. It is not zero, because each leg behaves like a zero-coupon bond to its next reset date, at most 3 months away for the 3M leg and up to 12 months for the 12M leg. The main risk is thus the basis DV01, the change in value for a move of +1 bp in $b^*$, positive for the payer.
+Both legs float, so a 1 bp rise of all rates changes them by almost the same amount and the DV01 of the swap is close to zero, far below the $L A \times 0.0001$ of an IRS with the same notional. It is not zero, because each leg behaves like a zero-coupon bond to its next reset date, at most 3 months away for the 3M leg and up to 12 months for the 12M leg. The main risk is thus the basis DV01, the change in value for a move of +1 bp in $b^\ast$, positive for the payer.
 
-From $V_{\text{payer}} = L A_{3M} (b^* - b)$, a move of $b^*$ changes the value through the basis difference and the annuity.
+From $V_{\text{payer}} = L A_{3M} (b^\ast - b)$, a move of $b^\ast$ changes the value through the basis difference and the annuity.
 
-$$\frac{dV_{\text{payer}}}{db^*} = L A_{3M} + L (b^* - b) \frac{dA_{3M}}{db^*}$$
+$$\frac{dV_{\text{payer}}}{db^\ast} = L A_{3M} + L (b^\ast - b) \frac{dA_{3M}}{db^\ast}$$
 
-At par ($b^* = b$) the second term is zero. It is also zero if only $b^*$ moves, because the €STR curve, and thus $A_{3M}$, stays fixed.
+At par ($b^\ast = b$) the second term is zero. It is also zero if only $b^\ast$ moves, because the €STR curve, and thus $A_{3M}$, stays fixed.
 
 $$DV01_{\text{basis}} \approx L A_{3M} \times 0.0001$$
 
@@ -267,7 +267,7 @@ The types differ by the rate of each leg.
 ### Risks of a Floating-for-Floating CCS
 
 - **FX delta.** The largest risk. The principals are exchanged back at maturity at the initial spot rate, so their value moves with the spot rate.
-- **Basis DV01.** The risk that the market basis moves away from the contract basis $b$, as for a basis swap.
+- **Basis DV01.** The risk that the market basis moves away from the locked basis $b$ of the contract, as for a basis swap.
 - **Rate DV01.** Small but not zero, because both legs float and each one behaves like a zero-coupon bond to its next reset date.
 
 ### Valuation of CCS
@@ -278,13 +278,18 @@ $$V_{\text{payer}} = S_0 V_{\text{For}} - V_{\text{Dom}} \qquad V_{\text{receive
 
 where $V_{\text{Dom}}$ is the present value of the domestic leg in the domestic currency, $V_{\text{For}}$ is the present value of the foreign leg in the foreign currency, and $S_0$ is the spot rate in units of domestic currency per unit of foreign currency. Each present value is the sum of the coupons and the final principal of the leg, discounted to today.
 
-The spot rate **multiplies** the foreign leg to convert it into the domestic currency. Each leg is discounted with the curve of **its own** currency. In a swap with EUR as the domestic currency and USD as the foreign currency, the EUR leg uses the €STR curve, the USD leg uses the SOFR curve, and $S_0$ is the number of euros per dollar, the inverse of the EUR/USD quote.
+The spot rate **multiplies** the foreign leg to convert it into the domestic currency. Each leg is discounted with a curve of **its own** currency. In a swap with EUR as the domestic currency and USD as the foreign currency, the EUR leg uses the €STR curve adjusted for the basis (see [Valuation of the Two Legs](#valuation-of-the-two-legs)), the USD leg uses the SOFR curve, and $S_0$ is the number of euros per dollar, the inverse of the EUR/USD quote.
 
 #### Standard Convention for the Basis
 
 By market convention, the **USD leg pays its overnight rate flat**, with no spread. The full spread goes on the **non-USD leg**, which pays its own floating rate $+ b$. Here $b$ is the *cross-currency basis*. The spread is never split between the two legs.
 
 For example, in a EUR/USD CCS, the USD leg pays SOFR flat and the EUR leg pays €STR $+ b$. The basis $b$ is usually negative for the euro, so with $b = -25$ bp the EUR leg pays €STR $- 0.25\%$.
+
+#### Locked Basis vs Market Basis
+
+- **Locked basis $b$.** The spread written in the contract. It is set equal to the market basis on the trade date, stays fixed until maturity, and is the only spread in the cash flows.
+- **Market basis $b^\ast$.** The spread that a new swap with the same remaining maturity pays today, which makes a new EUR leg worth exactly its notional. It moves every day with the demand for dollars and changes the value of the swap, not its cash flows.
 
 #### Valuation of the Two Legs
 
@@ -302,37 +307,40 @@ $$PV_{\text{USD}} = L_{\text{USD}}$$
 
 $$PV_{\text{EUR}} = \sum_{i=1}^{n} L_{\text{EUR}} \tau_i (R_{\text{EUR},i} + b) DF_{\text{EUR}}(t_i) + L_{\text{EUR}} DF_{\text{EUR}}(t_n)$$
 
-The sum splits into a €STR part and a spread part.
+Unlike the USD leg, a flat €STR leg is not worth its notional. Under USD collateral, the EUR cash flows are discounted on a curve implied by the FX forwards and the SOFR curve, which contains the basis, while the coupons follow the €STR curve. The sum thus does not telescope for €STR alone, and the leg is worth its notional only with €STR $+ b^\ast$, the coupon of a new swap. The coupon splits into a market part and a fixed gap.
 
-$$PV_{\text{EUR}} = \underbrace{\sum_{i=1}^{n} L_{\text{EUR}} \tau_i R_{\text{EUR},i} DF_{\text{EUR}}(t_i)}_{L_{\text{EUR}} \left[ 1 - DF_{\text{EUR}}(t_n) \right]} + \underbrace{L_{\text{EUR}} b \sum_{i=1}^{n} \tau_i DF_{\text{EUR}}(t_i)}_{L_{\text{EUR}} b A_{\text{EUR}}} + L_{\text{EUR}} DF_{\text{EUR}}(t_n)$$
+$$R_{\text{EUR},i} + b = (R_{\text{EUR},i} + b^\ast) + (b - b^\ast)$$
 
-The €STR part telescopes as in the USD leg. The spread part does not, because $b$ is a constant and not a forward rate, so it stays as $b$ times the annuity $A_{\text{EUR}}$ of the EUR leg. The principal then cancels the $- L_{\text{EUR}} DF_{\text{EUR}}(t_n)$ of the €STR part.
+The EUR discount curve grows at €STR plus the basis. If the basis of each period equals $b^\ast$ (a flat basis curve), one unit invested until $t_{i-1}$ and reinvested at €STR $+ b^\ast$ until $t_i$ gives the same result as an investment until $t_i$.
 
-$$PV_{\text{EUR}} = L_{\text{EUR}} \left[ 1 - DF_{\text{EUR}}(t_n) \right] + L_{\text{EUR}} b A_{\text{EUR}} + L_{\text{EUR}} DF_{\text{EUR}}(t_n) = L_{\text{EUR}} (1 + b A_{\text{EUR}})$$
+$$\frac{1}{DF_{\text{EUR}}(t_{i-1})} \left[ 1 + \tau_i (R_{\text{EUR},i} + b^\ast) \right] = \frac{1}{DF_{\text{EUR}}(t_i)}$$
+
+As for the floating leg of an IRS, we multiply the two sides by $DF_{\text{EUR}}(t_{i-1}) DF_{\text{EUR}}(t_i)$ and subtract $DF_{\text{EUR}}(t_i)$.
+
+$$\tau_i (R_{\text{EUR},i} + b^\ast) DF_{\text{EUR}}(t_i) = DF_{\text{EUR}}(t_{i-1}) - DF_{\text{EUR}}(t_i)$$
+
+The sum of the market part thus telescopes to $L_{\text{EUR}} \left[ 1 - DF_{\text{EUR}}(t_n) \right]$, and with the principal it is worth $L_{\text{EUR}}$.
+
+$$PV_{\text{EUR}} = \underbrace{\sum_{i=1}^{n} L_{\text{EUR}} \tau_i (R_{\text{EUR},i} + b^\ast) DF_{\text{EUR}}(t_i) + L_{\text{EUR}} DF_{\text{EUR}}(t_n)}_{L_{\text{EUR}}} + \underbrace{L_{\text{EUR}} (b - b^\ast) \sum_{i=1}^{n} \tau_i DF_{\text{EUR}}(t_i)}_{L_{\text{EUR}} (b - b^\ast) A_{\text{EUR}}}$$
+
+The first part is the leg at the market basis, worth its notional by the telescoping sum above. The gap $b - b^\ast$ is a constant and not a forward rate, so it stays as the gap times the annuity $A_{\text{EUR}}$ of the EUR leg.
+
+$$PV_{\text{EUR}} = L_{\text{EUR}} \left[ 1 + (b - b^\ast) A_{\text{EUR}} \right]$$
+
+With a market basis of zero, the flat €STR leg telescopes to par as in the USD leg, and the value reduces to $L_{\text{EUR}} (1 + b A_{\text{EUR}})$.
 
 **Final Value**
 
 In this example the EUR leg is the domestic leg and the USD leg is the foreign leg, so $V_{\text{Dom}} = PV_{\text{EUR}}$ and $V_{\text{For}} = PV_{\text{USD}}$. The payer pays the EUR leg and receives the USD leg. With the two leg values in the formula of $V_{\text{payer}}$, the value of the swap is
 
-$$V_{\text{payer}} = S_0 PV_{\text{USD}} - PV_{\text{EUR}} = S_0 L_{\text{USD}} - L_{\text{EUR}} (1 + b A_{\text{EUR}})$$
+$$V_{\text{payer}} = S_0 PV_{\text{USD}} - PV_{\text{EUR}} = S_0 L_{\text{USD}} - L_{\text{EUR}} \left[ 1 + (b - b^\ast) A_{\text{EUR}} \right]$$
 
 The value then splits into an exchange rate part and a basis part.
 
-$$V_{\text{payer}} = \underbrace{S_0 L_{\text{USD}} - L_{\text{EUR}}}_{\text{exchange rate}} - \underbrace{L_{\text{EUR}} b A_{\text{EUR}}}_{\text{basis}} \qquad V_{\text{receiver}} = - V_{\text{payer}}$$
+$$V_{\text{payer}} = \underbrace{S_0 L_{\text{USD}} - L_{\text{EUR}}}_{\text{exchange rate}} + \underbrace{L_{\text{EUR}} A_{\text{EUR}} (b^\ast - b)}_{\text{basis}} \qquad V_{\text{receiver}} = - V_{\text{payer}}$$
 
 - **Exchange rate.** The difference between the two principals at today's spot rate. It is zero on the trade date, because the principals are exchanged at the spot rate, and then it moves with $S_0$.
-- **Basis.** The present value of the spread $b$ that the payer pays on the EUR leg. With $b$ negative, the payer pays less than €STR, so this part is positive for the payer.
-
-#### Locked Basis vs Market Basis
-
-- **Locked basis $b$.** The spread written in the contract. It is set equal to the market basis on the trade date and stays fixed until maturity.
-- **Market basis $b^*$.** The spread that a new swap with the same remaining maturity pays today. It moves every day with the demand for dollars.
-
-The value $L_{\text{EUR}} (1 + b A_{\text{EUR}})$ assumes that a flat €STR leg is worth par against a flat SOFR leg, which holds only if the market basis is zero. In general, $b^*$ is the spread that makes the EUR leg worth par, so the flat €STR leg is worth $L_{\text{EUR}} (1 - b^* A_{\text{EUR}})$ and the spread $b$ adds $L_{\text{EUR}} b A_{\text{EUR}}$.
-
-$$PV_{\text{EUR}} = L_{\text{EUR}} \left[ 1 + (b - b^*) A_{\text{EUR}} \right] \qquad V_{\text{payer}} = \underbrace{S_0 L_{\text{USD}} - L_{\text{EUR}}}_{\text{exchange rate}} + \underbrace{L_{\text{EUR}} A_{\text{EUR}} (b^* - b)}_{\text{basis}}$$
-
-On the trade date $b = b^*$, so the basis part is zero. After that date only the gap $b - b^*$ has a value, with the same form as for a basis swap (see [Valuation of Basis Swaps](#valuation-of-basis-swaps)). If $b^*$ rises above $b$, the payer pays a lower spread than a new swap and gains. If $b^*$ falls below $b$, the payer loses.
+- **Basis.** The present value of the gap between the locked basis and the market basis. It is zero on the trade date, because $b = b^\ast$, and then has the same form as for a basis swap (see [Valuation of Basis Swaps](#valuation-of-basis-swaps)). If $b^\ast$ rises above $b$, the payer pays a lower spread than a new swap and gains. If $b^\ast$ falls below $b$, the payer loses.
 
 **Example**
 
@@ -340,7 +348,7 @@ A swap has $L_{\text{EUR}} = 60{,}000{,}000$, $A_{\text{EUR}} = 3.7939$, a locke
 
 $$PV_{\text{EUR}} = 60{,}000{,}000 \times (1 + 0.0025 \times 3.7939) = 60{,}569{,}085$$
 
-The receiver of the EUR leg gains EUR 569,085, and the payer loses the same amount.
+From the basis part, the receiver of the EUR leg gains EUR 569,085, and the payer loses the same amount.
 
 ### P&L from Exchange Rate
 
@@ -349,27 +357,27 @@ The payer receives the USD leg, worth $L_{\text{USD}}$, and pays the EUR leg, wo
 - If the euro depreciates ($S_0$ rises), the value rises.
 - If the euro appreciates ($S_0$ falls), the value falls.
 
-The principals are exchanged at the spot rate of the trade date $S_K$, so $L_{\text{EUR}} = S_K L_{\text{USD}}$, and the same principals are exchanged back at maturity. The exchange rate part of the value is then:
+The principals are exchanged at the spot rate of the trade date $S_K$, so $L_{\text{EUR}} = S_K L_{\text{USD}}$, and the same principals are exchanged back at maturity. The exchange rate part of the value is then
 
 $$P\&L_{FX} = S_0 L_{\text{USD}} - L_{\text{EUR}} = L_{\text{USD}} (S_0 - S_K) = L_{\text{EUR}} \left( \frac{S_0}{S_K} - 1 \right)$$
 
 It is the EUR notional times the relative move of the spot rate since the trade date, and most of the value of the swap.
 
-In $V_{\text{payer}} = S_0 L_{\text{USD}} - L_{\text{EUR}} (1 + b A_{\text{EUR}})$, only the first term depends on $S_0$. The derivative gives the sensitivity, $dV_{\text{payer}} / dS_0 = L_{\text{USD}}$, and the change of value $\Delta V_{\text{payer}} \approx L_{\text{USD}} \Delta S_0$. In general this is an approximation around the current point, because the derivative is the slope for an infinitesimal move. Here the value is linear in $S_0$, so the change is exact.
+In $V_{\text{payer}} = S_0 L_{\text{USD}} - L_{\text{EUR}} \left[ 1 + (b - b^\ast) A_{\text{EUR}} \right]$, only the first term depends on $S_0$. The derivative gives the sensitivity, $dV_{\text{payer}} / dS_0 = L_{\text{USD}}$, and the change of value $\Delta V_{\text{payer}} \approx L_{\text{USD}} \Delta S_0$. In general this is an approximation around the current point, because the derivative is the slope for an infinitesimal move. Here the value is linear in $S_0$, so the change is exact.
 
 ### Effect of Each Risk
 
-The table gives the approximate sensitivity of $V_{\text{payer}}$ to each risk, with $b^*$ as the market basis.
+The table gives the approximate sensitivity of $V_{\text{payer}}$ to each risk, with $b^\ast$ as the market basis.
 
 | Change | Effect on $V_{\text{payer}}$ |
 |---|---|
 | $S_0$ changes by $\Delta S_0$ | $L_{\text{USD}} \Delta S_0$ |
-| The rate curves move and $A_{\text{EUR}}$ changes by $\Delta A_{\text{EUR}}$ | $L_{\text{EUR}} (b^* - b) \Delta A_{\text{EUR}}$ |
-| The market basis changes by $\Delta b^*$ | $L_{\text{EUR}} A_{\text{EUR}} \Delta b^*$ |
+| The rate curves move and $A_{\text{EUR}}$ changes by $\Delta A_{\text{EUR}}$ | $L_{\text{EUR}} (b^\ast - b) \Delta A_{\text{EUR}}$ |
+| The market basis changes by $\Delta b^\ast$ | $L_{\text{EUR}} A_{\text{EUR}} \Delta b^\ast$ |
 
 - **Exchange rate.** The main risk, because of the principals.
-- **Rates.** Close to zero, because both legs float. The USD leg stays at its notional, and the EUR leg moves only through the annuity times the small spread $b^* - b$.
-- **Basis.** The basis DV01, $L_{\text{EUR}} A_{\text{EUR}} \times 0.0001$ for $\Delta b^* = +1$ bp. If the basis becomes more negative, the payer, who still pays $b$, loses and the receiver gains.
+- **Rates.** Close to zero, because both legs float. The USD leg stays at its notional, and the EUR leg moves only through the annuity times the small spread $b^\ast - b$.
+- **Basis.** The basis DV01, $L_{\text{EUR}} A_{\text{EUR}} \times 0.0001$ for $\Delta b^\ast = +1$ bp. If the basis becomes more negative, the payer, who still pays $b$, loses and the receiver gains.
 
 ### Constant vs Resettable Notional CCS
 
