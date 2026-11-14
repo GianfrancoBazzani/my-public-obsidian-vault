@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "skills": {
+    "socratic-tutor": {
+      "source": "janestreet/agent_skills",
+      "sourceType": "github",
+      "skillPath": "socratic-tutor/SKILL.md",
+      "computedHash": "a472e23a8edf96c9a28b6e4ddb07ccab849a223231b05068dd9d276991776fc4"
+    }
+  }
+}
