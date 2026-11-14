@@ -323,6 +323,25 @@ $$V_{\text{payer}} = \underbrace{S_0 L_{\text{USD}} - L_{\text{EUR}}}_{\text{exc
 - **Exchange rate.** The difference between the two principals at today's spot rate. It is zero on the trade date, because the principals are exchanged at the spot rate, and then it moves with $S_0$.
 - **Basis.** The present value of the spread $b$ that the payer pays on the EUR leg. With $b$ negative, the payer pays less than €STR, so this part is positive for the payer.
 
+#### Locked Basis vs Market Basis
+
+- **Locked basis $b$.** The spread written in the contract. It is set equal to the market basis on the trade date and stays fixed until maturity.
+- **Market basis $b^*$.** The spread that a new swap with the same remaining maturity pays today. It moves every day with the demand for dollars.
+
+The value $L_{\text{EUR}} (1 + b A_{\text{EUR}})$ assumes that a flat €STR leg is worth par against a flat SOFR leg, which holds only if the market basis is zero. In general, $b^*$ is the spread that makes the EUR leg worth par, so the flat €STR leg is worth $L_{\text{EUR}} (1 - b^* A_{\text{EUR}})$ and the spread $b$ adds $L_{\text{EUR}} b A_{\text{EUR}}$.
+
+$$PV_{\text{EUR}} = L_{\text{EUR}} \left[ 1 + (b - b^*) A_{\text{EUR}} \right] \qquad V_{\text{payer}} = \underbrace{S_0 L_{\text{USD}} - L_{\text{EUR}}}_{\text{exchange rate}} + \underbrace{L_{\text{EUR}} A_{\text{EUR}} (b^* - b)}_{\text{basis}}$$
+
+On the trade date $b = b^*$, so the basis part is zero. After that date only the gap $b - b^*$ has a value, with the same form as for a basis swap (see [Valuation of Basis Swaps](#valuation-of-basis-swaps)). If $b^*$ rises above $b$, the payer pays a lower spread than a new swap and gains. If $b^*$ falls below $b$, the payer loses.
+
+**Example**
+
+A swap has $L_{\text{EUR}} = 60{,}000{,}000$, $A_{\text{EUR}} = 3.7939$, a locked basis of −20 bp, and a market basis of −45 bp. The EUR leg pays €STR − 20 bp, which is 25 bp more than a new swap.
+
+$$PV_{\text{EUR}} = 60{,}000{,}000 \times (1 + 0.0025 \times 3.7939) = 60{,}569{,}085$$
+
+The receiver of the EUR leg gains EUR 569,085, and the payer loses the same amount.
+
 ### P&L from Exchange Rate
 
 The payer receives the USD leg, worth $L_{\text{USD}}$, and pays the EUR leg, worth about $L_{\text{EUR}}$, so it is **long $L_{\text{USD}}$ and short $L_{\text{EUR}}$**, like a forward purchase of dollars against euros. In euros, the USD leg is worth $S_0 L_{\text{USD}}$.
