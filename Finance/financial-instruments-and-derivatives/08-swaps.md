@@ -270,6 +270,24 @@ The types differ by the rate of each leg.
 - **Basis DV01.** The risk that the market basis moves away from the locked basis $b$ of the contract, as for a basis swap.
 - **Rate DV01.** Small but not zero, because both legs float and each one behaves like a zero-coupon bond to its next reset date.
 
+### Risks of a Fixed-for-Fixed CCS
+
+The replication by the dealer gives the risks. A payer that pays EUR fixed and receives USD fixed holds three swaps, whose floating legs cancel.
+
+- **Floating-for-floating CCS.** It pays €STR $+ b$ and receives SOFR, so the EUR fixed rate of the CCS includes the basis.
+- **EUR payer IRS.** It receives €STR and pays the EUR fixed rate.
+- **USD receiver IRS.** It receives the USD fixed rate and pays SOFR.
+
+The risks are thus those of the basis swap plus those of the two IRSs.
+
+- **FX delta.** Still the largest risk. It applies to the full USD leg, coupons and principal, so $dV_{\text{payer}} / dS_0$ is the present value $PV_{\text{USD}}$ of the USD fixed leg, which moves with USD rates, and not $L_{\text{USD}}$.
+- **Basis DV01.** The same as for the floating-for-floating CCS, because the basis swap is part of the position.
+- **Rate DV01 in two currencies.** Each fixed leg is a fixed-rate bond in its own currency (see [IRS as Two Bonds](#irs-as-two-bonds)). The payer is short the EUR bond, so its EUR DV01 is positive, about $L_{\text{EUR}} A_{\text{EUR}} \times 0.0001$. It is long the USD bond, so its USD DV01 is negative, about $-L_{\text{USD}} A_{\text{USD}} \times 0.0001$ in USD.
+
+The two rate DV01s have opposite signs and similar sizes, but they are on two different curves. They cancel only if the €STR curve and the SOFR curve move by the same amount. The payer gains if EUR rates rise more than USD rates, and loses if USD rates rise more than EUR rates.
+
+A floating-for-floating CCS is thus mainly an FX position. A fixed-for-fixed CCS is an FX position and a rate position on two curves at the same time. The two structures also carry the basis risk.
+
 ### Valuation of CCS
 
 Each leg is valued in its own currency, and a single conversion at the spot rate gives the value of the swap. The payer pays the domestic leg and receives the foreign leg, and the receiver has the opposite position. In the domestic currency, their values are
