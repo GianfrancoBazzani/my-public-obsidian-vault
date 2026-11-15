@@ -201,6 +201,38 @@ The same swaps also change the type of rate that an asset earns.
 
 ![Rates paid between the bonds, company A, the dealer, company B, and its investment when the swaps transform their assets](Attachments/swap-transform-asset.svg)
 
+#### Lower Borrowing Costs
+
+Two companies with different credit ratings can use a swap to lower the cost of their debt. Each company has a **comparative advantage** in one of the two markets, fixed-rate or floating-rate debt. If each company wants the other market, it borrows where it has the advantage, and the swap converts the loan into the type that it wants.
+
+In each market, the spread is the difference between the rates of the two companies. The better-rated company has the comparative advantage where its advantage is larger, and the other company where its disadvantage is smaller. The two companies share the gain.
+
+$$\text{gain} = \left| (F_A - F_B) - (s_A - s_B) \right|$$
+
+Here $F$ is the fixed rate and $s$ the margin over the floating rate. If the two spreads are equal, there is no gain.
+
+| | Fixed rate | Floating rate |
+|---|---|---|
+| Company A (BBB) | 5.2% | floating + 1.0% |
+| Company B (AAA) | 4.0% | floating + 0.3% |
+| Spread | 1.2% | 0.7% |
+
+B pays less in the two markets (absolute advantage). A pays 1.2% more in fixed and 0.7% more in floating, so it has the comparative advantage in floating. B pays 1.2% less in fixed and 0.7% less in floating, so it has the comparative advantage in fixed. The gain is 1.2% − 0.7% = 0.5%.
+
+A wants fixed and B wants floating. Without a swap, A pays 5.2% and B floating + 0.3%. The two companies trade a 3.95% swap directly, without a dealer.
+
+1. A borrows at floating + 1.0%, and B at a fixed 4.0%.
+2. A pays a fixed 3.95% to B, and B pays floating to A.
+3. A pays (floating + 1.0%) + 3.95% − floating = 4.95% and saves 0.25%.
+4. B pays 4.0% + floating − 3.95% = floating + 0.05% and saves 0.25%.
+
+The companies negotiate the share. A dealer between them keeps a part (e.g. 0.04%, which leaves 0.46% to share).
+
+> [!WARNING]
+> **The gain is often not free**
+>
+> A floating-rate lender can raise the margin at each reset if the rating of the borrower falls, but a fixed-rate lender cannot change the rate until maturity. The default probability of a lower-rated company also rises faster with the term, so its spread is larger on long fixed-rate debt than on short floating-rate debt. The 4.95% of A is thus fixed only while its margin stays at 1.0%, and part of the saving pays A for this risk. In an efficient market, arbitrage would remove a true gain.
+
 ## Basis Swaps
 
 A basis swap is an interest rate swap in which both legs pay a floating rate, each pegged to a different index or tenor. The swap reduces basis risk, which occurs when cash flows depend on factors that are not perfectly correlated, for example floating-rate assets and liabilities that are pegged to different indexes.
