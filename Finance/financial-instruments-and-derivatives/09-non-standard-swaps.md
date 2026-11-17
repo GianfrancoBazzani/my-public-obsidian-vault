@@ -13,7 +13,7 @@ A swap is equivalent to the exchange of a fixed-rate bond for a floating-rate bo
 
 The market names a swaption by the expiry of the option followed by the tenor of the swap. For example, a 2Y5Y payer is a 2-year option to enter a 5-year payer swap that starts in 2 years.
 
-A company that will take a floating-rate loan and swap it to fixed can buy a payer swaption to set a maximum on that fixed rate. A forward swap locks in the fixed rate with no up-front cost, but it obliges the company to enter the swap. The swaption costs a premium, but if rates fall, the company lets it expire and enters a swap at the lower market rate.
+A company that will take a floating-rate loan and swap it to fixed can buy a payer swaption to set a maximum on that fixed rate. A forward swap (see [Swaps](08-swaps.md#forward-swaps)) locks in the fixed rate with no up-front cost, but it obliges the company to enter the swap. The swaption costs a premium, but if rates fall, the company lets it expire and enters a swap at the lower market rate.
 
 Compared with a new swap at the market rate, which has the same floating leg, the payoff of a swaption on each payment date of the swap is
 
@@ -38,7 +38,7 @@ $$d_1 = \frac{\ln(s_F/s_K) + \sigma^2 T/2}{\sigma \sqrt{T}} \qquad d_2 = d_1 - \
 
 where
 
-- $s_F$ is the forward swap rate, which is the fixed rate that gives a zero value today to the swap that starts at $T$.
+- $s_F$ is the forward swap rate, which is the fixed rate that gives a zero value today to the swap that starts at $T$ (see [Swaps](08-swaps.md#forward-swaps)).
 - $\sigma$ is the volatility of the forward swap rate, so $\sigma \sqrt{T}$ is the standard deviation of $\ln s_T$.
 - $N(\cdot)$ is the cumulative distribution function of the standard normal distribution.
 

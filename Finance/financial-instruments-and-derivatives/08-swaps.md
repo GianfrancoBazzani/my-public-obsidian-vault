@@ -92,6 +92,20 @@ $$R_{\text{par}} = \frac{1 - DF(t_n)}{A} = \frac{1 - DF(t_n)}{\sum_{i=1}^{n} \ta
 
 This is the same formula as the par yield of a bond (see [Interest Rate Curves](02-interest-rates-curves.md)). The par swap rate is thus the coupon of a fixed-rate bond that is worth its principal. After the start, $R_{\text{par}}$ changes with the curve while $R_K$ stays fixed. The payer gains when $R_{\text{par}}$ rises above $R_K$, and the receiver gains when it falls below $R_K$.
 
+### Forward Swaps
+
+A **forward swap** (or forward-start swap) is an IRS that is agreed today but starts at a future date $T$. A company that will borrow at a floating rate from $T$ can thus fix the rate of that loan today, with no up-front cost.
+
+Only the floating leg changes. The telescoping sum stops at $t_0 = T$, so $DF(T)$ replaces 1. The annuity $A$ keeps its formula, with the payment dates $t_1, \dots, t_n$ after $T$.
+
+$$PV_{\text{float}} = L \left[ DF(T) - DF(t_n) \right]$$
+
+The **forward swap rate** $s_F$ is the value of $R_K$ that makes the forward swap worth zero today, so it is the par rate of the swap that starts at $T$. For $T = 0$, $s_F = R_{\text{par}}$.
+
+$$s_F = \frac{DF(T) - DF(t_n)}{A} \qquad V_{\text{payer}} = L A (s_F - R_K)$$
+
+On the trade date, $R_K = s_F$ and the swap is worth zero. After that date, $R_K$ stays fixed, but $s_F$ changes each day with the curve. The payer gains when $s_F$ rises above $R_K$, and the receiver gains when it falls below $R_K$.
+
 ### Zero Curve
 
 The discount factors $DF(t_i)$ in the formulas above come from the zero curve (see [Interest Rate Curves](02-interest-rates-curves.md)). The market does not quote zero rates directly. It quotes instruments such as OIS rates and swap rates, and the zero curve is **bootstrapped** from these quotes.
