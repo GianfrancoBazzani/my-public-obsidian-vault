@@ -293,11 +293,11 @@ The carry trade relies on the systematic failure of uncovered interest rate pari
 - The account gets a daily credit or debit from the interest rate differential.
 - Typical leverage is 10:1 to 50:1 for retail traders and 100:1 or more for institutional traders.
 
-The carry over a number of days is
+The carry over a number of days is the interest of the target currency minus the interest of the funding currency. Each rate uses the day count of its own currency, with a year of $B$ days.
 
-$$\text{Carry} = \text{Notional} \times \frac{(r_{target} - r_{funding}) \times \text{Days}}{360}$$
+$$\text{Carry} = \text{Notional} \times \left( \frac{r_{target} \times \text{Days}}{B_{target}} - \frac{r_{funding} \times \text{Days}}{B_{funding}} \right)$$
 
-With Days = 1, this is the daily carry. Most currencies use a 360-day year, but some, such as GBP, AUD, and NZD, use 365.
+$B$ is 360 for most currencies, such as USD, EUR, and CHF, and 365 for some, such as GBP, AUD, NZD, CAD, and JPY. With Days = 1, this is the daily carry. Only if the two currencies use the same $B$ does the formula become $\text{Notional} \times (r_{target} - r_{funding}) \times \text{Days} / B$.
 
 *2. FX forward outright.* The trader buys the target currency forward. The high-yield currency trades at a forward discount, so the forward rate already contains the carry. If the spot rate does not move, the trader gains the difference between the spot and the forward rate at maturity, which is the interest rate differential.
 
