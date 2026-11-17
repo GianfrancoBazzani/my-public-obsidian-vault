@@ -200,7 +200,11 @@ Start with 1 EUR today and compare the USD that each path gives in 90 days.
 1. **Deposit the EUR, then convert forward.** The EUR deposit grows to $1 + r_{EUR} \tau$ EUR, and the forward converts it into $(1 + r_{EUR} \tau) F$ USD.
 2. **Convert at spot, then deposit the USD.** The spot converts 1 EUR into $S$ USD, and the USD deposit grows to $S (1 + r_{USD} \tau)$ USD.
 
-No arbitrage makes the two amounts equal, which gives covered interest rate parity.
+No arbitrage makes the two amounts equal. This condition is **covered interest rate parity (CIP)**.
+
+$$(1 + r_{EUR} \tau) F = S (1 + r_{USD} \tau)$$
+
+CIP is the rule. The value of $F$ that solves it is the **CIP forward rate**, or **fair forward price**.
 
 $$F = S \times \frac{1 + r_{USD} \tau}{1 + r_{EUR} \tau}$$
 
@@ -208,7 +212,7 @@ With the inputs of the case,
 
 $$F = 1.0850 \times \frac{1 + 0.0525 \times 0.25}{1 + 0.0350 \times 0.25} = 1.0850 \times \frac{1.013125}{1.00875} = 1.0897$$
 
-Both paths give 1.0992 USD for each EUR. The forward points are $F - S = +47$ pips. The USD rate is higher than the EUR rate, so the EUR trades at a forward premium ($F > S$). The higher interest on the USD deposit is offset by a worse exchange rate at maturity.
+Both paths give 1.0992 USD for each EUR. The **forward points** (or swap points) are the difference $F - S$ in pips, and the market quotes the forward as the spot rate plus these points. Here $F - S = 1.0897 - 1.0850 = +47$ pips. The USD rate is higher than the EUR rate, so the EUR trades at a forward premium ($F > S$). The higher interest on the USD deposit is offset by a worse exchange rate at maturity.
 
 **The no-arbitrage diagram**
 
@@ -231,7 +235,7 @@ Both paths are risk-free, so they must end with the same amount of EUR.
 
 $$1.00875 = \frac{1.09924}{F} \quad \Rightarrow \quad F = 1.0850 \times \frac{1.013125}{1.00875} = 1.0897$$
 
-If the market forward differs from 1.0897, a trader can lock in a profit with zero cost today and no risk.
+If the market forward differs from the fair forward price of 1.0897, a trader can lock in a profit with zero cost today and no risk.
 
 - **Market forward above 1.0897.** The direct path gives more EUR. The trader borrows USD, converts them to EUR at spot, deposits the EUR, and sells the EUR forward at $F$. At $T$, the USD from the forward are more than the USD loan to repay.
 - **Market forward below 1.0897.** The covered path gives more EUR. The trader borrows EUR, converts them to USD at spot, deposits the USD, and sells the USD forward at $F$. At $T$, the EUR from the forward are more than the EUR loan to repay.
@@ -314,7 +318,7 @@ Disadvantages
 - **Forward leg.** Do the opposite trade at a future date.
 - **Result.** The two legs cancel the exchange rate risk.
 
-The FX swap alone does not earn the carry. While the trader holds the target currency, the deposit earns the high rate, but the forward leg gives back the interest rate differential through the forward points. By covered interest rate parity, the two amounts cancel. The net gain is only the deviation from covered parity (the cross-currency basis). In practice, the FX swap is a funding tool. Brokers use tom-next FX swaps to roll over spot positions every day, and traders use FX swaps to fund or extend a carry position.
+The FX swap alone does not earn the carry. While the trader holds the target currency, the deposit earns the high rate, but the forward leg gives back the interest rate differential through the forward points. By covered interest rate parity, the two amounts cancel. The net gain is only the deviation from covered parity, which is the gap between the market forward and the fair forward price (the cross-currency basis). In practice, the FX swap is a funding tool. Brokers use tom-next FX swaps to roll over spot positions every day, and traders use FX swaps to fund or extend a carry position.
 
 **Example of an AUD/JPY carry trade**
 
