@@ -1,3 +1,5 @@
+<!-- TODO Review this note  -->
+
 # FX Trading
 
 ## The foreign exchange market
