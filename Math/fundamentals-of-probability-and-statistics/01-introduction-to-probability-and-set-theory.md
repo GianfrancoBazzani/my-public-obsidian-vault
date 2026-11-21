@@ -15,6 +15,41 @@ Sometimes we can also assign a probability to each of the possible results, but 
 - If we can assign a probability to each result, we have a situation of **risk**.
 - If we cannot, we have a situation of complete **uncertainty**.
 
+### Probability Model
+
+A **probability model** is a mathematical description of an aleatory experiment. We can build one only in a situation of risk. The model replaces the unknown transformation law of the black box with two elements:
+
+1. The **sample space $\Omega$**, which is the set of all the possible outcomes (see [Sample Space](#sample-space)).
+2. The **probability law $P$**, which gives a number $P(A)$ to each event $A \subseteq \Omega$ (see [Events](#events)). This number tells how probable it is that $A$ occurs.
+
+The probability law must obey the axioms of probability (see [Axioms of Probability](#axioms-of-probability)). The formal name of this structure is a **probability space** $(\Omega, \mathcal{F}, P)$, where $\mathcal{F}$ is the collection of events.
+
+**Example:** For a fair die, $\Omega = \lbrace 1, 2, 3, 4, 5, 6 \rbrace$ and $P(\lbrace \omega_i \rbrace) = 1/6$ for each outcome. Thus $P(\text{even}) = P(\lbrace 2, 4, 6 \rbrace) = 3/6 = 1/2$.
+
+One experiment can have more than one model. We select the sample space and the law that agree with the objective of the analysis.
+
+### Axioms of Probability
+
+Andrey Kolmogorov gave three axioms for the probability law $P$ in 1933 (see [Mathematics](#mathematics)). All the other rules of probability are consequences of these three axioms.
+
+**Axiom 1 (Non-negativity):** The probability of each event $A$ is not negative.
+
+$$P(A) \ge 0$$
+
+**Axiom 2 (Normalization):** The probability of the certain event is one.
+
+$$P(\Omega) = 1$$
+
+Each trial gives exactly one outcome in $\Omega$, so $\Omega$ always occurs.
+
+**Axiom 3 (Additivity):** If $A_1, A_2, \ldots$ is a sequence of incompatible events ($A_i \cap A_j = \emptyset$ for $i \neq j$), the probability of their union is the sum of their probabilities.
+
+$$P\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} P(A_i)$$
+
+For two incompatible events $A$ and $B$, this axiom gives $P(A \cup B) = P(A) + P(B)$.
+
+**Example:** For a fair die, each outcome has the probability $1/6 \ge 0$ (axiom 1). The events $\lbrace 2, 4, 6 \rbrace$ and $\lbrace 1, 3, 5 \rbrace$ are incompatible, so the probability of their union is $1/2 + 1/2 = 1$ (axiom 3). Their union is $\Omega$, and $P(\Omega) = 1$ (axiom 2).
+
 ### History and Philosophy of Randomness
 
 Randomness is not only a mathematical tool. It is also a philosophy, because it changes how we think about nature.
@@ -413,3 +448,7 @@ The same idea is the base of **Monte Carlo simulation**. In Buffon's needle prob
 
 Probability is a different way to approach a problem. Some problems also have a deterministic solution, but in many cases that solution is much more difficult to find. For example, an integral can have no antiderivative that we can write, or it can have many variables. In these cases, an exact calculation can be very difficult or not possible. A probabilistic method only needs many random trials and a count of the results, and it gives an approximation that becomes better with more trials.
 
+
+## References
+
+- Bertsekas, D. P., & Tsitsiklis, J. N. (2008). *Introduction to Probability* (2nd ed.). Athena Scientific. Section 1.2, "Probabilistic Models".
