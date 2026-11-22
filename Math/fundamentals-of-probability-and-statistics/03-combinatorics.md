@@ -278,3 +278,137 @@ $$
 Thus $Q$ decreases by $2y \geq 2$ at each step, so $Q$ is a monovariant. It always decreases by an even number, so its parity is an invariant, and $Q$ stays odd. A board with only the number $2$ has $Q = 2$, which is even. So the process can never end with only $2$. $\blacksquare$
 
 The same argument shows that, if one number stays at the end, it is odd. The process can also stop earlier with equal numbers only, because the rule needs $x > y$. For $n = 5$, the board starts with $1, 2, \dots, 10$ and $Q_1 = 55$.
+
+## 3.6 Inclusion-Exclusion Principle
+
+### 3.6.1 Statement
+
+The **inclusion-exclusion principle** counts the elements of a union of finite sets that can overlap. The sum of the sizes of the sets counts each element of an intersection more than once, so the formula subtracts the intersections of two sets, adds the intersections of three sets, and continues with alternating signs. Abraham de Moivre knew the formula in 1718, it first appears in a paper of Daniel da Silva in 1854, and J. J. Sylvester gave its complement form in 1883.
+
+**Two sets.** The elements of $A \cap B$ are in $A$ and in $B$, so $|A| + |B|$ counts them two times.
+
+$$
+|A \cup B| = |A| + |B| - |A \cap B|
+$$
+
+**Three sets.** An element of $A \cap B \cap C$ is counted $3$ times by the sets, subtracted $3$ times by the pairs, and added $1$ time by the triple, so it is counted $3 - 3 + 1 = 1$ time.
+
+$$
+|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|
+$$
+
+**Four sets.** The formula has $\binom{4}{1} = 4$ single sets, $\binom{4}{2} = 6$ pairs, $\binom{4}{3} = 4$ triples, and $\binom{4}{4} = 1$ intersection of all four sets. An element of $A \cap B \cap C \cap D$ is counted $4 - 6 + 4 - 1 = 1$ time.
+
+$$
+\begin{aligned}
+|A \cup B \cup C \cup D| = {} & |A| + |B| + |C| + |D| \\
+& - |A \cap B| - |A \cap C| - |A \cap D| - |B \cap C| - |B \cap D| - |C \cap D| \\
+& + |A \cap B \cap C| + |A \cap B \cap D| + |A \cap C \cap D| + |B \cap C \cap D| \\
+& - |A \cap B \cap C \cap D|
+\end{aligned}
+$$
+
+**$n$ sets.** For the finite sets $A_1, \dots, A_n$,
+
+$$
+\left| \bigcup_{i=1}^{n} A_i \right| = \sum_{i} |A_i| - \sum_{i < j} |A_i \cap A_j| + \sum_{i < j < l} |A_i \cap A_j \cap A_l| - \dots + (-1)^{n+1} |A_1 \cap \dots \cap A_n|
+$$
+
+which is the sum over all the nonempty sets of indices $J \subseteq \lbrace 1, \dots, n \rbrace$.
+
+$$
+\left| \bigcup_{i=1}^{n} A_i \right| = \sum_{\emptyset \neq J \subseteq \lbrace 1, \dots, n \rbrace} (-1)^{|J| + 1} \left| \bigcap_{j \in J} A_j \right|
+$$
+
+**Complement form.** If all the sets are in a universe $U$, De Morgan's laws (see [1 Introduction to Probability and Set Theory](01-introduction-to-probability-and-set-theory.md)) give the number of elements in none of the sets.
+
+$$
+\left| \bigcap_{i=1}^{n} A_i^c \right| = |U| - \left| \bigcup_{i=1}^{n} A_i \right|
+$$
+
+**Probability form.** The formula is also true for probabilities, with $P$ in place of $|\cdot|$. For equally likely outcomes, it follows from the division of each term by $|\Omega|$.
+
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+
+For incompatible events, $P(A \cap B) = 0$, and the formula becomes the axiom $P(A \cup B) = P(A) + P(B)$.
+
+**Examples**
+
+**Divisible by 2, 3, or 5:** how many integers from $1$ to $100$ are divisible by $2$, $3$, or $5$?
+
+- **We want to find** $|A_2 \cup A_3 \cup A_5|$.
+- **The sets** are $A_d$, the multiples of $d$ from $1$ to $100$, with $|A_d| = \lfloor 100/d \rfloor$.
+
+The numbers $2$, $3$, and $5$ have no common factor, so a number is a multiple of $2$ and of $3$ only if it is a multiple of $6$, and $A_2 \cap A_3 = A_6$. In the same way, $A_2 \cap A_5 = A_{10}$, $A_3 \cap A_5 = A_{15}$, and $A_2 \cap A_3 \cap A_5 = A_{30}$.
+
+$$
+|A_2 \cup A_3 \cup A_5| = 50 + 33 + 20 - 16 - 10 - 6 + 3 = 74
+$$
+
+So $74$ integers are divisible by $2$, $3$, or $5$, and $100 - 74 = 26$ are not divisible by any of them.
+
+**Application letters:** a candidate sends five application letters to five investment banks, $B_1, \dots, B_5$, and each letter has a label with the name of its bank. The younger brother of the candidate changes the labels at random as a joke. What is the probability that all five letters go to the wrong banks?
+
+- **We want to find** the probability that all five letters go to the wrong banks.
+- **The sets** are the events $E_i$, which means that the letter for $B_i$ goes to $B_i$, for $i = 1, \dots, 5$.
+
+$P\left( \bigcup E_i \right)$ is the probability that at least one letter goes to the correct bank, so $1 - P\left( \bigcup E_i \right)$ is the probability that all the letters go to the wrong banks. The probability form for five events gives
+
+$$
+\begin{aligned}
+P\left( \bigcup_{i=1}^{5} E_i \right) = {} & \sum_{i} P(E_i) - \sum_{i < j} P(E_i \cap E_j) + \sum_{i < j < k} P(E_i \cap E_j \cap E_k) \\
+& - \sum_{i < j < k < l} P(E_i \cap E_j \cap E_k \cap E_l) + P\left( \bigcap_{i=1}^{5} E_i \right)
+\end{aligned}
+$$
+
+All the terms of one sum have the same probability, so each sum is the number of its terms multiplied by the probability of one term. The probability of one term comes from the labels that are still available. The number of terms with $r$ letters is $\binom{5}{r} = \frac{5!}{r! (5 - r)!}$, which is the number of ways to choose $r$ of the $5$ letters.
+
+**One letter**
+
+- **One term.** The label of $B_i$ goes to one of the $5$ letters, so $P(E_i) = \frac{1}{5} = \frac{4!}{5!}$.
+- **Number of terms.** $\binom{5}{1} = 5$.
+- **Sum.** $\sum_{i} P(E_i) = 5 \times \frac{1}{5} = 1 = \frac{1}{1!}$.
+
+**Two letters**
+
+- **One term.** If the letter for $B_i$ is correct, $4$ labels stay for the letter for $B_j$, so $P(E_i \cap E_j) = \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} = \frac{3!}{5!}$.
+- **Number of terms.** $\binom{5}{2} = 10$.
+- **Sum.** The factors $5!$ and $3!$ cancel.
+
+$$
+\sum_{i < j} P(E_i \cap E_j) = \binom{5}{2} \times \frac{3!}{5!} = \frac{5!}{2! \times 3!} \times \frac{3!}{5!} = \frac{1}{2!} = \frac{1}{2}
+$$
+
+**Three letters**
+
+- **One term.** After two correct letters, $3$ labels stay for the third letter, so $P(E_i \cap E_j \cap E_k) = \frac{1}{5} \times \frac{1}{4} \times \frac{1}{3} = \frac{1}{60} = \frac{2!}{5!}$.
+- **Number of terms.** $\binom{5}{3} = 10$.
+- **Sum.** $\sum_{i < j < k} P(E_i \cap E_j \cap E_k) = 10 \times \frac{1}{60} = \frac{1}{3!} = \frac{1}{6}$.
+
+**Four letters**
+
+- **One term.** After three correct letters, $2$ labels stay for the fourth letter, so $P(E_i \cap E_j \cap E_k \cap E_l) = \frac{1}{5} \times \frac{1}{4} \times \frac{1}{3} \times \frac{1}{2} = \frac{1}{120} = \frac{1!}{5!}$.
+- **Number of terms.** $\binom{5}{4} = 5$.
+- **Sum.** $\sum_{i < j < k < l} P(E_i \cap E_j \cap E_k \cap E_l) = 5 \times \frac{1}{120} = \frac{1}{4!} = \frac{1}{24}$.
+
+**Five letters**
+
+- **One term.** After four correct letters, only $1$ label stays, and it goes to the fifth letter, so $P\left( \bigcap_{i=1}^{5} E_i \right) = \frac{1}{5} \times \frac{1}{4} \times \frac{1}{3} \times \frac{1}{2} \times \frac{1}{1} = \frac{1}{120} = \frac{0!}{5!}$.
+- **Number of terms.** $\binom{5}{5} = 1$.
+- **Sum.** $P\left( \bigcap_{i=1}^{5} E_i \right) = \frac{1}{5!} = \frac{1}{120}$.
+
+In general, the sum for $r$ letters is $\binom{5}{r} \frac{(5 - r)!}{5!} = \frac{1}{r!}$. So
+
+$$
+P\left( \bigcup_{i=1}^{5} E_i \right) = \frac{1}{1!} - \frac{1}{2!} + \frac{1}{3!} - \frac{1}{4!} + \frac{1}{5!} = 1 - \frac{1}{2} + \frac{1}{6} - \frac{1}{24} + \frac{1}{120} = \frac{19}{30}
+$$
+
+and the probability that all five letters go to the wrong banks is
+
+$$
+1 - P\left( \bigcup_{i=1}^{5} E_i \right) = 1 - \frac{19}{30} = \frac{11}{30} \approx 0.367
+$$
+
+So $44$ of the $5! = 120$ orders send each letter to a wrong bank. A permutation in which no element stays in its own position is a **derangement**. For $n$ letters, the probability is $\sum_{r=0}^{n} (-1)^r / r!$, which tends to $1/e \approx 0.3679$ as $n$ increases.
