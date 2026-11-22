@@ -52,59 +52,71 @@ which is a contradiction. $\blacksquare$
 
 **Handshakes:** in a group of $n > 1$ people who shake hands among themselves, at least two people have the same number of handshakes. Each person has between $0$ and $n - 1$ handshakes ($n$ values), but $0$ and $n - 1$ cannot both occur, because a person with $n - 1$ handshakes shakes hands with everyone. So the $n$ people go into at most $n - 1$ boxes.
 
+## 3.3 Diophantine Approximation
 
-**Example:** for $\alpha = \sqrt{2}$ and $N = 5$, the boxes have length $0.2$.
+**Diophantine approximation** studies how well rational numbers $p/q$ approximate a real number $a$. The name comes from Diophantus of Alexandria, who studied equations with integer solutions. For every $q \geq 1$, the nearest multiple of $1/q$ gives $|a - p/q| \leq 1/(2q)$, and the question is how much smaller the error can be for a small $q$.
 
-| $k$ | $k\sqrt{2}$ | $\lfloor k\sqrt{2} \rfloor$ | $\lbrace k\sqrt{2} \rbrace$ | Box |
+### 3.3.1 Problem
+
+**Problem:** given an irrational number $a \in \mathbb{I}$, for every $\varepsilon > 0$ there are $p \in \mathbb{Z}$ and $q \in \mathbb{N}$ with
+
+$$
+\left| a - \frac{p}{q} \right| \leq \varepsilon
+$$
+
+So we can approximate every irrational number by rational numbers as closely as we want. Decimal truncation already gives this, but the pigeonhole principle gives a much smaller error for the same denominator $q$.
+
+### 3.3.2 Solution with the Pigeonhole Principle
+
+**Step 1.** For any $n \geq 1$, consider the $n + 1$ multiples of $a$.
+
+$$
+0, \ a, \ 2a, \ 3a, \ \dots, \ na
+$$
+
+**Step 2.** Split each multiple into its integer part $\lfloor ka \rfloor$, the largest integer $\leq ka$, and its fractional part $\lbrace ka \rbrace$.
+
+$$
+\lfloor ka \rfloor + \lbrace ka \rbrace = ka \qquad k = 0, 1, \dots, n
+$$
+
+This gives $n + 1$ fractional parts in the interval $[0, 1)$.
+
+**Step 3.** Divide $[0, 1)$ into $n$ subintervals of length $1/n$.
+
+$$
+I_j = \left[ \frac{j - 1}{n}, \frac{j}{n} \right) \qquad j = 1, \dots, n
+$$
+
+There are $n + 1$ fractional parts (the pigeons) and $n$ subintervals (the pigeonholes), so two of them, $\lbrace k_1 a \rbrace$ and $\lbrace k_2 a \rbrace$ with $k_1 < k_2$, are in the same subinterval $I_j$, and $|\lbrace k_2 a \rbrace - \lbrace k_1 a \rbrace| < 1/n$.
+
+**Step 4.** Subtract the two multiples. With $q = k_2 - k_1$ and $p = \lfloor k_2 a \rfloor - \lfloor k_1 a \rfloor$, the integer parts cancel.
+
+$$
+|qa - p| = |\lbrace k_2 a \rbrace - \lbrace k_1 a \rbrace| < \frac{1}{n} \qquad 1 \leq q \leq n
+$$
+
+**Step 5.** Divide by $q$.
+
+$$
+\left| a - \frac{p}{q} \right| < \frac{1}{qn} \leq \frac{1}{n}
+$$
+
+For a given $\varepsilon$, take $n \geq 1/\varepsilon$, and the error is less than $\varepsilon$. $\blacksquare$
+
+**Example:** for $a = \sqrt{2}$ and $n = 5$, the subintervals have length $0.2$.
+
+| $k$ | $k\sqrt{2}$ | $\lfloor k\sqrt{2} \rfloor$ | $\lbrace k\sqrt{2} \rbrace$ | Subinterval |
 | --- | --- | --- | --- | --- |
-| 0 | 0 | 0 | 0 | $[0, 0.2)$ |
-| 1 | 1.4142 | 1 | 0.4142 | $[0.4, 0.6)$ |
-| 2 | 2.8284 | 2 | 0.8284 | $[0.8, 1)$ |
-| 3 | 4.2426 | 4 | 0.2426 | $[0.2, 0.4)$ |
-| 4 | 5.6569 | 5 | 0.6569 | $[0.6, 0.8)$ |
-| 5 | 7.0711 | 7 | 0.0711 | $[0, 0.2)$ |
+| 0 | 0 | 0 | 0 | $I_1 = [0, 0.2)$ |
+| 1 | 1.4142 | 1 | 0.4142 | $I_3 = [0.4, 0.6)$ |
+| 2 | 2.8284 | 2 | 0.8284 | $I_5 = [0.8, 1)$ |
+| 3 | 4.2426 | 4 | 0.2426 | $I_2 = [0.2, 0.4)$ |
+| 4 | 5.6569 | 5 | 0.6569 | $I_4 = [0.6, 0.8)$ |
+| 5 | 7.0711 | 7 | 0.0711 | $I_1 = [0, 0.2)$ |
 
-The multiples for $k = 0$ and $k = 5$ share the box $[0, 0.2)$, so $q = 5$ and $p = 7$.
+The multiples for $k_1 = 0$ and $k_2 = 5$ share the subinterval $I_1$, so $q = 5$ and $p = 7$.
 
 $$
 |5\sqrt{2} - 7| \approx 0.0711 < \frac{1}{5} \qquad \left| \sqrt{2} - \frac{7}{5} \right| \approx 0.0142 < \frac{1}{25}
 $$
-
-### 3.3.3 Dirichlet's Approximation Theorem
-
-The solution never uses that $\alpha$ is irrational, and $q \leq N$ gives $1/(qN) \leq 1/q^2$. So for every real number $\alpha$ and every integer $N \geq 1$, there are integers $p$ and $q$ with $1 \leq q \leq N$ and
-
-$$
-|q\alpha - p| < \frac{1}{N} \qquad \text{so} \qquad \left| \alpha - \frac{p}{q} \right| < \frac{1}{qN} \leq \frac{1}{q^2}
-$$
-
-This is **Dirichlet's approximation theorem**, which Dirichlet proved around 1842 with the pigeonhole principle.
-
-### 3.3.4 Irrational and Rational Numbers
-
-If $\alpha$ is irrational, there are infinitely many fractions $p/q$ with $|\alpha - p/q| < 1/q^2$.
-
-**Proof**
-
-Suppose that there are only finitely many, $p_1/q_1, \dots, p_r/q_r$ in lowest terms. Because $\alpha$ is irrational, each $|q_i\alpha - p_i| > 0$, so we can take $N$ with $1/N < |q_i\alpha - p_i|$ for every $i$. Dirichlet's theorem gives $p/q$ with $|\alpha - p/q| < 1/q^2$ and $|q\alpha - p| < 1/N$. If $p/q = p_i/q_i$, then $(p, q) = c(p_i, q_i)$ for an integer $c \geq 1$, and $|q\alpha - p| = c|q_i\alpha - p_i| > 1/N$. So $p/q$ is a new fraction, which is a contradiction. $\blacksquare$
-
-If $\alpha = a/b$ is rational, then for every $p/q \neq a/b$
-
-$$
-\left| \frac{a}{b} - \frac{p}{q} \right| = \frac{|aq - bp|}{bq} \geq \frac{1}{bq}
-$$
-
-so $|\alpha - p/q| < 1/q^2$ needs $q < b$, and only finitely many fractions satisfy it.
-
-### 3.3.5 Examples and Limits
-
-**Example:** for $\pi = 3.14159\dots$, the fractions $22/7$ and $355/113$ satisfy the bound.
-
-$$
-\left| \pi - \frac{22}{7} \right| \approx 1.26 \times 10^{-3} < \frac{1}{7^2} \approx 2.04 \times 10^{-2} \qquad \left| \pi - \frac{355}{113} \right| \approx 2.67 \times 10^{-7} < \frac{1}{113^2} \approx 7.83 \times 10^{-5}
-$$
-
-The bound $1/q^2$ is almost the best possible.
-
-- **Constant:** Hurwitz proved in 1891 that every irrational $\alpha$ has infinitely many fractions with $|\alpha - p/q| < 1/(\sqrt{5} q^2)$. For the golden ratio $\varphi = (1 + \sqrt{5})/2$, no constant larger than $\sqrt{5}$ works.
-- **Exponent:** Roth proved in 1955 that, for an irrational algebraic number $\alpha$ and every $\varepsilon > 0$, only finitely many fractions satisfy $|\alpha - p/q| < 1/q^{2 + \varepsilon}$. He received the Fields Medal in 1958 for this result.
