@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="430" viewBox="0 0 560 430" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1f2937">
+<title>Triangle ACD with B the midpoint of CD and AB the median. Apollonius's theorem gives AB squared equal to the mean of AC squared and AD squared minus BC squared, so AC or AD is longer than AB</title>
+<rect width="560" height="430" fill="white"/>
+
+<text x="280" y="30" font-size="17" font-weight="bold" text-anchor="middle">Apollonius's theorem for the median AB</text>
+
+<!-- A (230,90), C (80,300), D (480,300), B (280,300) the midpoint of CD -->
+<!-- CD, with midpoint B -->
+<line x1="80" y1="300" x2="480" y2="300" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Equal halves BC and BD -->
+<g stroke="#6b7280" stroke-width="2">
+  <line x1="180" y1="292" x2="180" y2="308"/>
+  <line x1="380" y1="292" x2="380" y2="308"/>
+</g>
+<!-- Sides AC and AD -->
+<g stroke="#374151" stroke-width="3" stroke-linecap="round">
+  <line x1="230" y1="90" x2="80" y2="300"/>
+  <line x1="230" y1="90" x2="480" y2="300"/>
+</g>
+<!-- Median AB, the supposed longest segment -->
+<line x1="230" y1="90" x2="280" y2="300" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
+
+<g fill="#1f2937">
+  <circle cx="230" cy="90" r="6"/>
+  <circle cx="80" cy="300" r="6"/>
+  <circle cx="480" cy="300" r="6"/>
+  <circle cx="280" cy="300" r="6"/>
+</g>
+<g font-style="italic" font-size="18">
+  <text x="223" y="76">A</text>
+  <text x="58" y="320">C</text>
+  <text x="490" y="320">D</text>
+  <text x="274" y="326">B</text>
+</g>
+
+<!-- Formulas -->
+<g font-size="16">
+  <text x="208" y="370" text-anchor="end">|AB|² =</text>
+  <text x="270" y="356" text-anchor="middle">|AC|² + |AD|²</text>
+  <line x1="216" y1="364" x2="324" y2="364" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="270" y="383" text-anchor="middle">2</text>
+  <text x="332" y="370">− |BC|²</text>
+  <text x="280" y="410" text-anchor="middle">|BC| &gt; 0, so |AC| &gt; |AB| or |AD| &gt; |AB|</text>
+</g>
+
+<!-- Legend -->
+<g font-size="14">
+  <line x1="340" y1="120" x2="370" y2="120" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="378" y="125">AB, the longest</text>
+  <text x="378" y="143">segment (supposed)</text>
+  <line x1="340" y1="168" x2="370" y2="168" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="378" y="173">CD, with midpoint B</text>
+</g>
+</svg>

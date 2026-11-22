@@ -122,3 +122,76 @@ The multiples for $k_1 = 0$ and $k_2 = 5$ share the subinterval $I_1$, so $q = 5
 $$
 |5\sqrt{2} - 7| \approx 0.0711 < \frac{1}{5} \qquad \left| \sqrt{2} - \frac{7}{5} \right| \approx 0.0142 < \frac{1}{25}
 $$
+
+## 3.4 Extremal Principle
+
+### 3.4.1 Statement
+
+The **extremal principle** looks at the objects with an extreme property, such as the smallest or the largest element of a set, the shortest total length, or the minimum area. It has two uses.
+
+1. **Existence.** To prove that a mathematical structure with given properties exists, take the smallest or the largest possible structure and show that it has the properties.
+2. **Non-existence.** To prove that a structure cannot exist, assume by contradiction that it exists and take the largest (or smallest) one. Then build from it a structure that is even larger (or smaller), which is a contradiction.
+
+The extreme structure must exist before the proof can use it. A finite nonempty set of real numbers always has a minimum and a maximum, and the **well-ordering principle** states that every nonempty set of nonnegative integers has a least element. An infinite set of real numbers can have no extreme element, for example the interval $(0, 1)$ has no minimum and no maximum.
+
+### 3.4.2 Existence Examples
+
+**Prime divisor:** every integer $n \geq 2$ has a prime divisor.
+
+- **We want to prove** that a prime divisor of $n$ exists.
+- **We suppose** that the smallest divisor $d > 1$ of $n$ is not prime.
+- **The extreme** is the smallest divisor $d > 1$ of $n$.
+
+The divisors of $n$ greater than $1$ form a nonempty set, because $n$ is one of them. The set can contain many divisors, but only one of them is the smallest, and we call it $d$. If $d$ is not prime, then $d$ has a divisor $e$ with $1 < e < d$, and $e$ also divides $n$. So $e$ is a divisor in the set that is smaller than $d$, which contradicts the choice of $d$ as the smallest. So $d$ is prime. $\blacksquare$
+
+**Red and blue points:** the plane contains $n$ red points and $n$ blue points, with no three points on one line. Then $n$ segments that do not cross can join each red point to a different blue point.
+
+- **We want to prove** that a pairing of the red and blue points without crossing segments exists.
+- **We suppose** that two segments of the pairing with the smallest total length cross.
+- **The extreme** is the pairing with the smallest total length.
+
+There are $n!$ ways to pair the points, a finite number, so one pairing has the smallest total length. If two segments $R_1 B_1$ and $R_2 B_2$ of this pairing cross at a point $X$, the triangle inequality gives
+
+$$
+|R_1 B_2| + |R_2 B_1| < |R_1 X| + |X B_2| + |R_2 X| + |X B_1| = |R_1 B_1| + |R_2 B_2|
+$$
+
+![Two crossing segments R1B1 and R2B2 meet at X, and the swapped segments R1B2 and R2B1 are shorter than the paths through X](Attachments/red-blue-swap-triangle-inequality.svg)
+
+The inequality is strict because no three of the points are on one line. So the pairing with $R_1 B_2$ and $R_2 B_1$ is shorter, which contradicts the choice of the shortest pairing. $\blacksquare$
+
+In short, we want to prove that a way to pair the red and blue points without crossings always exists. There are only $n!$ pairings, so one pairing has the smallest total length. We suppose that this shortest pairing has two crossing segments. The swap of the partners of these two segments gives, by the triangle inequality, a pairing that is shorter than the shortest pairing, even if it has other crossings, and this is not possible. So the supposition is false, and the shortest pairing itself is the pairing without crossings.
+
+### 3.4.3 Non-existence Examples
+
+**Irrationality of $\sqrt{2}$:** the number $\sqrt{2}$ is irrational.
+
+- **We want to prove** that a fraction $p/q$ with positive integers $p$ and $q$ that is equal to $\sqrt{2}$ cannot exist.
+- **We suppose** by contradiction that such a fraction exists.
+- **The extreme** is the fraction $p/q$ equal to $\sqrt{2}$ with the smallest denominator $q$.
+
+Take the fraction $\sqrt{2} = p/q$ with the smallest denominator $q$. Because $1 < \sqrt{2} < 2$, we have $q < p < 2q$, so $0 < p - q < q$. Because $p^2 = 2q^2$, we have $(2q - p) q = 2q^2 - pq = p^2 - pq = (p - q) p$, so
+
+$$
+\sqrt{2} = \frac{p}{q} = \frac{2q - p}{p - q}
+$$
+
+This fraction has the denominator $p - q < q$, which contradicts the choice of the smallest denominator. $\blacksquare$
+
+**Midpoints:** let $S$ be a set of points in the plane such that each point of $S$ is the midpoint of two other points of $S$. Then $S$ is infinite.
+
+- **We want to prove** that a finite nonempty set with this property cannot exist, which is the same as $S$ infinite.
+- **We suppose** by contradiction that $S$ is finite and nonempty.
+- **The extreme** is the longest segment $AB$ between two points of $S$.
+
+There are finitely many pairs of points, so one segment $AB$ with $A, B \in S$ has the largest length. Because $B$ is in $S$, $B$ is the midpoint of a segment $CD$ with $C, D \in S$ and $C \neq D$. Apollonius's theorem for the median $AB$ of the triangle $ACD$ gives
+
+$$
+|AB|^2 = \frac{|AC|^2 + |AD|^2}{2} - |BC|^2 < \frac{|AC|^2 + |AD|^2}{2}
+$$
+
+because $|BC| = |CD|/2 > 0$. The formula also holds if $A$ is on the line $CD$, because it is the parallelogram law for the vectors $B - A$ and $C - B$. So $|AB|^2$ is less than the mean of $|AC|^2$ and $|AD|^2$, and the larger of the two is greater than $|AB|^2$. So $|AC| > |AB|$ or $|AD| > |AB|$, which contradicts the choice of $AB$ as the longest segment. $\blacksquare$
+
+![Triangle ACD with B the midpoint of CD and the median AB, with Apollonius's theorem and the result that AC or AD is longer than AB](Attachments/midpoints-apollonius-median.svg)
+
+In short, we want to prove that a set of points where each point is the midpoint of two other points cannot be finite. We suppose that it is finite, so it has a longest segment $AB$. The point $B$ is the midpoint of a segment $CD$, so $C$ and $D$ are on opposite sides of $B$, and Apollonius's theorem shows that $AC$ or $AD$ is longer than $AB$. So $AB$ is not the longest segment, the supposition is false, and the set is infinite.
