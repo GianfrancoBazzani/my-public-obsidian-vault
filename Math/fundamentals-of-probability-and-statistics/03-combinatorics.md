@@ -252,9 +252,29 @@ In the red and blue points example, each swap decreases the total length, so a p
 **Only 2 on the board:** let $n$ be odd, and write the numbers $1, 2, \dots, 2n$ on a board. At each step, we choose two numbers $x > y$, erase them, and write $|x - y| = x - y$. Can the process end with only the number $2$ on the board?
 
 - **We want to prove** that the process can never end with only the number $2$.
-- **The monovariant** is the sum $T$ of the numbers on the board.
-- **The invariant** is the parity of $T$.
+- **The monovariant** is the sum $Q$ of the numbers on the board.
+- **The invariant** is the parity of $Q$.
 
-Each new number $x - y$ is at least $1$, so all the numbers stay positive and $y \geq 1$. Each step removes $x + y$ and adds $x - y$, so $T$ decreases by $2y \geq 2$. Thus $T$ is a monovariant, but it always changes by an even number, so its parity is an invariant. At the start, $T = 1 + 2 + \dots + 2n = n(2n + 1)$, which is the product of two odd numbers, so $T$ is odd. A board with only the number $2$ has $T = 2$, which is even. So the process can never end with only $2$. $\blacksquare$
+At the start, the board contains the first $2n$ positive integers. Gauss's formula gives the sum of the first $k$ positive integers.
 
-The same argument shows that, if one number stays at the end, it is odd. The process can also stop earlier with equal numbers only, because the rule needs $x > y$. For $n = 5$, the board starts with $1, 2, \dots, 10$ and $T = 55$.
+$$
+\sum_{i=1}^{k} i = \frac{k(k + 1)}{2}
+$$
+
+With $k = 2n$, the sum at the start is
+
+$$
+Q_1 = \sum_{i=1}^{2n} i = \frac{2n(2n + 1)}{2} = n(2n + 1)
+$$
+
+Both $n$ and $2n + 1$ are odd, so $Q_1$ is odd.
+
+Each new number $x - y$ is at least $1$, so all the numbers stay positive and $y \geq 1$. Each step removes $x$ and $y$ and adds $x - y$, so the sum after the step is
+
+$$
+Q_{i+1} = Q_i - x - y + (x - y) = Q_i - 2y
+$$
+
+Thus $Q$ decreases by $2y \geq 2$ at each step, so $Q$ is a monovariant. It always decreases by an even number, so its parity is an invariant, and $Q$ stays odd. A board with only the number $2$ has $Q = 2$, which is even. So the process can never end with only $2$. $\blacksquare$
+
+The same argument shows that, if one number stays at the end, it is odd. The process can also stop earlier with equal numbers only, because the rule needs $x > y$. For $n = 5$, the board starts with $1, 2, \dots, 10$ and $Q_1 = 55$.
