@@ -195,3 +195,49 @@ because $|BC| = |CD|/2 > 0$. The formula also holds if $A$ is on the line $CD$, 
 ![Triangle ACD with B the midpoint of CD and the median AB, with Apollonius's theorem and the result that AC or AD is longer than AB](Attachments/midpoints-apollonius-median.svg)
 
 In short, we want to prove that a set of points where each point is the midpoint of two other points cannot be finite. We suppose that it is finite, so it has a longest segment $AB$. The point $B$ is the midpoint of a segment $CD$, so $C$ and $D$ are on opposite sides of $B$, and Apollonius's theorem shows that $AC$ or $AD$ is longer than $AB$. So $AB$ is not the longest segment, the supposition is false, and the set is infinite.
+## 3.5 Invariance Principle
+
+### 3.5.1 Statement
+
+A process goes through the stages $S_1, S_2, \dots, S_k$, and at each stage it has a value, so the values form the sequence $V_1, V_2, \dots, V_k$. We want to know the final value $V_k$ in advance, or the values that $V_k$ can take, without a calculation of all the stages.
+
+The **invariance principle** finds a quantity $Q$ that no step of the process changes, which is an **invariant**.
+
+$$
+Q_1 = Q_2 = \dots = Q_k
+$$
+
+The invariant gives information about $V_k$ in three common ways.
+
+1. **Final value.** If $Q$ depends on the state in a known way, the value $Q_1$ at the start gives $V_k$ at the end.
+2. **Possible values.** If $Q$ is a property of the state, such as a parity, then the final state has the same property as the start.
+3. **Impossibility.** If a target state has a value of $Q$ different from $Q_1$, the process can never reach it.
+
+The usual invariants are the parity of a number, a sum or a product, a remainder modulo $m$, and a count of colors. The proof checks one general step, because the invariant must not change for each allowed step. If the process allows several types of step, the invariant must not change for each type.
+
+A **monovariant** is a quantity that changes in one direction only, so it always increases or always decreases. A process with a monovariant can never come back to an earlier state, so it must stop if it has only finitely many states. In the red and blue points example, each swap decreases the total length, so a process of repeated swaps must stop at a pairing without crossings.
+
+### 3.5.2 Examples
+
+**Sum minus one:** the numbers $1, 2, \dots, 20$ are on a board. At each step, we erase two numbers $a$ and $b$ and write $a + b - 1$. After 19 steps, one number stays.
+
+- **We want to find** the last number on the board.
+- **The invariant** is $Q = (\text{sum of the numbers}) - (\text{count of the numbers})$, which is the sum of $x - 1$ over all the numbers $x$ on the board.
+
+Each step decreases the sum by $1$ and the count by $1$, so $Q$ does not change. At the start, $Q = 210 - 20 = 190$. At the end, one number $x$ stays, so $Q = x - 1$. Thus $x - 1 = 190$, and the last number is $191$ for each order of the steps.
+
+**Difference parity:** the numbers $1, 2, \dots, 10$ are on a board. At each step, we erase two numbers $a$ and $b$ and write $|a - b|$. After 9 steps, one number stays.
+
+- **We want to find** the possible values of the last number.
+- **The invariant** is the parity of the sum of the numbers on the board.
+
+The numbers $a + b$ and $|a - b|$ differ by $2 \min(a, b)$, so they have the same parity, and no step changes the parity of the sum. At the start, the sum is $55$, which is odd. So the last number is odd for each order of the steps, and it can never be $0$.
+
+**Mutilated chessboard:** remove two opposite corners of an $8 \times 8$ chessboard. Then 31 dominoes cannot cover the 62 squares that stay. Max Black stated this problem in 1946.
+
+- **We want to prove** that a cover of the 62 squares with 31 dominoes cannot exist.
+- **The invariant** is the difference between the number of white squares and the number of black squares that the dominoes cover, as we put the dominoes one at a time.
+
+Each domino covers one white square and one black square, so the difference stays $0$. Two opposite corners have the same color, so 32 squares of one color and 30 squares of the other color stay. A full cover needs a difference of $2$, which the invariant does not allow. $\blacksquare$
+
+The converse is also true. If we remove two squares of different colors, the 62 squares that stay always have a cover with 31 dominoes (Gomory's theorem).
