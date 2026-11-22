@@ -42,7 +42,7 @@ which is a contradiction. $\blacksquare$
 
 **Example:** with 12 birth months, at least $\lceil 100/12 \rceil = 9$ of 100 people share a birth month.
 
-### 3.2.3 Examples
+**Examples**
 
 **Birthdays:** with 366 possible birthdays (February 29 included), at least two of 367 people share a birthday. This certainty needs 367 people, but the probability of a shared birthday is already above 50% with 23 people (the birthday problem).
 
@@ -134,7 +134,7 @@ The **extremal principle** looks at the objects with an extreme property, such a
 
 The extreme structure must exist before the proof can use it. A finite nonempty set of real numbers always has a minimum and a maximum, and the **well-ordering principle** states that every nonempty set of nonnegative integers has a least element. An infinite set of real numbers can have no extreme element, for example the interval $(0, 1)$ has no minimum and no maximum.
 
-### 3.4.2 Existence Examples
+**Existence examples**
 
 **Prime divisor:** every integer $n \geq 2$ has a prime divisor.
 
@@ -162,7 +162,7 @@ The inequality is strict because no three of the points are on one line. So the 
 
 In short, we want to prove that a way to pair the red and blue points without crossings always exists. There are only $n!$ pairings, so one pairing has the smallest total length. We suppose that this shortest pairing has two crossing segments. The swap of the partners of these two segments gives, by the triangle inequality, a pairing that is shorter than the shortest pairing, even if it has other crossings, and this is not possible. So the supposition is false, and the shortest pairing itself is the pairing without crossings.
 
-### 3.4.3 Non-existence Examples
+**Non-existence examples**
 
 **Irrationality of $\sqrt{2}$:** the number $\sqrt{2}$ is irrational.
 
@@ -215,9 +215,7 @@ The invariant gives information about $V_k$ in three common ways.
 
 The usual invariants are the parity of a number, a sum or a product, a remainder modulo $m$, and a count of colors. The proof checks one general step, because the invariant must not change for each allowed step. If the process allows several types of step, the invariant must not change for each type.
 
-A **monovariant** is a quantity that changes in one direction only, so it always increases or always decreases. A process with a monovariant can never come back to an earlier state, so it must stop if it has only finitely many states. In the red and blue points example, each swap decreases the total length, so a process of repeated swaps must stop at a pairing without crossings.
-
-### 3.5.2 Examples
+**Examples**
 
 **Sum minus one:** the numbers $1, 2, \dots, 20$ are on a board. At each step, we erase two numbers $a$ and $b$ and write $a + b - 1$. After 19 steps, one number stays.
 
@@ -225,13 +223,6 @@ A **monovariant** is a quantity that changes in one direction only, so it always
 - **The invariant** is $Q = (\text{sum of the numbers}) - (\text{count of the numbers})$, which is the sum of $x - 1$ over all the numbers $x$ on the board.
 
 Each step decreases the sum by $1$ and the count by $1$, so $Q$ does not change. At the start, $Q = 210 - 20 = 190$. At the end, one number $x$ stays, so $Q = x - 1$. Thus $x - 1 = 190$, and the last number is $191$ for each order of the steps.
-
-**Difference parity:** the numbers $1, 2, \dots, 10$ are on a board. At each step, we erase two numbers $a$ and $b$ and write $|a - b|$. After 9 steps, one number stays.
-
-- **We want to find** the possible values of the last number.
-- **The invariant** is the parity of the sum of the numbers on the board.
-
-The numbers $a + b$ and $|a - b|$ differ by $2 \min(a, b)$, so they have the same parity, and no step changes the parity of the sum. At the start, the sum is $55$, which is odd. So the last number is odd for each order of the steps, and it can never be $0$.
 
 **Mutilated chessboard:** remove two opposite corners of an $8 \times 8$ chessboard. Then 31 dominoes cannot cover the 62 squares that stay. Max Black stated this problem in 1946.
 
@@ -241,3 +232,29 @@ The numbers $a + b$ and $|a - b|$ differ by $2 \min(a, b)$, so they have the sam
 Each domino covers one white square and one black square, so the difference stays $0$. Two opposite corners have the same color, so 32 squares of one color and 30 squares of the other color stay. A full cover needs a difference of $2$, which the invariant does not allow. $\blacksquare$
 
 The converse is also true. If we remove two squares of different colors, the 62 squares that stay always have a cover with 31 dominoes (Gomory's theorem).
+
+### 3.5.2 Monovariants
+
+The quantity $Q$ can also change, but in one direction only, so it always increases or always decreases. Then $Q$ is a **monovariant**, also called a **semi-invariant**.
+
+$$
+Q_1 > Q_2 > \dots > Q_k \qquad \text{or} \qquad Q_1 < Q_2 < \dots < Q_k
+$$
+
+A monovariant gives information about the process in three common ways.
+
+1. **No return.** A strict monovariant never takes the same value two times, so the process can never come back to an earlier state.
+2. **End of the process.** If the monovariant is a positive integer that always decreases, the process stops after fewer than $Q_1$ steps. If the process has only finitely many states, it also stops.
+3. **Impossibility.** If the monovariant always decreases, the process can never reach a state with a value of $Q$ larger than the current value.
+
+In the red and blue points example, each swap decreases the total length, so a process of repeated swaps must stop at a pairing without crossings.
+
+**Only 2 on the board:** let $n$ be odd, and write the numbers $1, 2, \dots, 2n$ on a board. At each step, we choose two numbers $x > y$, erase them, and write $|x - y| = x - y$. Can the process end with only the number $2$ on the board?
+
+- **We want to prove** that the process can never end with only the number $2$.
+- **The monovariant** is the sum $T$ of the numbers on the board.
+- **The invariant** is the parity of $T$.
+
+Each new number $x - y$ is at least $1$, so all the numbers stay positive and $y \geq 1$. Each step removes $x + y$ and adds $x - y$, so $T$ decreases by $2y \geq 2$. Thus $T$ is a monovariant, but it always changes by an even number, so its parity is an invariant. At the start, $T = 1 + 2 + \dots + 2n = n(2n + 1)$, which is the product of two odd numbers, so $T$ is odd. A board with only the number $2$ has $T = 2$, which is even. So the process can never end with only $2$. $\blacksquare$
+
+The same argument shows that, if one number stays at the end, it is odd. The process can also stop earlier with equal numbers only, because the rule needs $x > y$. For $n = 5$, the board starts with $1, 2, \dots, 10$ and $T = 55$.
