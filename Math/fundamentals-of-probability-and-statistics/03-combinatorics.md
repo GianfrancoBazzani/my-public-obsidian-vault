@@ -96,6 +96,8 @@ $$
 |qa - p| = |\lbrace k_2 a \rbrace - \lbrace k_1 a \rbrace| < \frac{1}{n} \qquad 1 \leq q \leq n
 $$
 
+Each multiple is an integer plus a fractional part. When we subtract $k_1 a$ from $k_2 a$, the two integer parts give the integer $p$, and the two fractional parts give a small remainder. So $qa = p + (\lbrace k_2 a \rbrace - \lbrace k_1 a \rbrace)$, which means that $qa$ is less than $1/n$ from the integer $p$. Because $k_1 < k_2$ and both are between $0$ and $n$, $q$ is between $1$ and $n$.
+
 **Step 5.** Divide by $q$.
 
 $$
