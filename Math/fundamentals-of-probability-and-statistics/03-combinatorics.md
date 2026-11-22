@@ -412,3 +412,133 @@ $$
 $$
 
 So $44$ of the $5! = 120$ orders send each letter to a wrong bank. A permutation in which no element stays in its own position is a **derangement**. For $n$ letters, the probability is $\sum_{r=0}^{n} (-1)^r / r!$, which tends to $1/e \approx 0.3679$ as $n$ increases.
+
+## 3.7 Counting Principle
+
+### 3.7.1 Addition Principle
+
+The **addition principle**, also called the **rule of sum**, counts the elements of a union of sets that do not overlap. Let $A_1, \dots, A_n$ be finite sets with the sizes $m_1, \dots, m_n$. If the sets are pairwise disjoint, which means that $A_i \cap A_j = \emptyset$ for all $i \neq j$, then
+
+$$
+|A_1 \cup \dots \cup A_n| = \sum_{j=1}^{n} m_j
+$$
+
+So if a task has $n$ types of option that exclude each other, and type $j$ has $m_j$ options, the task has $m_1 + \dots + m_n$ options. The principle is the "or" rule of counting.
+
+The addition principle is the inclusion-exclusion principle with all the intersections empty, and the axiom $P(A \cup B) = P(A) + P(B)$ for incompatible events is the same rule for probabilities. If the sets overlap, the sum counts the elements of the intersections more than once, and the inclusion-exclusion principle is necessary.
+
+### 3.7.2 Product Principle
+
+If $n$ successive choices have $m_i$ possible results each, $i \in \lbrace 1, \dots, n \rbrace$, then the number of possible joint results is
+
+$$
+\prod_{i=1}^{n} m_i = m_1 \times m_2 \times \dots \times m_n
+$$
+
+The number $m_i$ must not depend on the earlier choices, but the options themselves can.
+
+**Example:** what is the probability of a $6$ and heads when we throw a die and a coin at the same time? The product principle gives $6 \times 2 = 12$ equally likely joint results, and only heads with a $6$ is the result that we want, so
+
+$$
+P = \frac{1}{12}
+$$
+
+## 3.8 Variations
+
+Let $X$ be a set with $n$ elements, and let $k \in \mathbb{N}$. A **variation** of size $k$, also called a **$k$-permutation**, is an ordered selection of $k$ elements of $X$, so the order in which we choose the elements is important.
+
+**With repetition.** Each of the $k$ positions can take any of the $n$ elements, so the product principle gives
+
+$$
+n \times n \times \dots \times n = n^k
+$$
+
+**Without repetition.** Each position has one element fewer than the position before it, so for $k \leq n$ the product principle gives
+
+$$
+n \times (n - 1) \times \dots \times (n - k + 1) = \frac{n!}{(n - k)!}
+$$
+
+Here $n! = n \times (n - 1) \times \dots \times 1$ is the factorial of $n$, with $0! = 1$.
+
+**Example:** how many four-digit numbers have four different digits? A number cannot start with $0$, so the first digit has $9$ options. The second digit can be $0$, but it cannot be the first digit, so it has $10 - 1 = 9$ options. The third digit has $8$ options and the fourth has $7$, so
+
+$$
+9 \times 9 \times 8 \times 7 = 4536
+$$
+
+**Example:** how many three-digit numbers can we make with the digits $1, 3, 5, 7, 9$ if a digit can repeat, and what is the sum of all these numbers? The digits can repeat, so there are $5 \times 5 \times 5 = 125$ numbers. To find the sum, take one position at a time.
+
+- **Units.** If we fix the units digit, for example $9$, the other two positions give $5 \times 5 \times 1 = 25$ numbers. This is true for each of the $5$ digits, so the units digits add to $25 \times (9 + 7 + 5 + 3 + 1) = 25 \times 25 = 625$.
+- **Tens.** The same argument gives $625$, but a tens digit has $10$ times its value, so the tens digits add $625 \times 10$.
+- **Hundreds.** In the same way, the hundreds digits add $625 \times 100$.
+
+$$
+625 \times 100 + 625 \times 10 + 625 = 69375
+$$
+
+## 3.9 Permutations
+
+Let $X$ be a set with $n$ elements, and let $k = n$. An **ordinary permutation** of $X$ is an order of all the $n$ elements of $X$, so the order of the elements is important. The number of ordinary permutations is
+
+$$
+n! = n \times (n - 1) \times (n - 2) \times \dots \times 2 \times 1
+$$
+
+This is the number of variations without repetition with $k = n$, because $\frac{n!}{(n - n)!} = \frac{n!}{0!} = n!$.
+
+A **permutation with repetition**, or **multiset permutation**, is an order of $n$ elements in $k$ groups of sizes $n_1, n_2, \dots, n_k$, with $n = n_1 + \dots + n_k$, where all the copies in a group are identical. The number of these permutations is
+
+$$
+\binom{n}{n_1, n_2, \dots, n_k} = \frac{n!}{n_1! n_2! \cdots n_k!}
+$$
+
+The $n!$ orders count each permutation $n_1! n_2! \cdots n_k!$ times, because an exchange of identical copies gives the same order. The number $\binom{n}{n_1, n_2, \dots, n_k}$ is the **multinomial coefficient**. In an ordinary permutation, all the elements are different, so $n_1 = \dots = n_k = 1$ and the formula gives $n!$.
+
+**Example:** how many words can we make with the letters of the word BANANA? The answer is not $6! = 720$, because the three letters A (in the positions 2, 4, and 6) are identical, and the two letters N (in the positions 3 and 5) are also identical. For example, $6!$ counts two different orders when the first A or the second A is in the first position, but the two orders give the same word, so not all the $720$ orders are different words. BANANA has $3$ A, $2$ N, and $1$ B, so the number of words is
+
+$$
+\binom{6}{3, 2, 1} = \frac{6!}{3! \times 2! \times 1!} = \frac{720}{12} = 60
+$$
+
+The formula discards $720 - 60 = 660$ orders.
+
+## 3.10 Combinations
+
+Let $X$ be a set with $n$ elements, and let $k \in \mathbb{N}$. A **combination** of size $k$ is a selection of $k$ elements of $X$, so the order of the elements is not important.
+
+**Without repetition.** For $k \leq n$, the number of groups of $k$ different elements is the **binomial coefficient**
+
+$$
+\binom{n}{k} = \frac{n!}{k! (n - k)!}
+$$
+
+Each combination gives $k!$ variations without repetition, one for each order of its elements, so $\binom{n}{k}$ is the number of variations $\frac{n!}{(n - k)!}$ divided by $k!$.
+
+**With repetition.** If an element can repeat, the number of groups of $k$ elements is
+
+$$
+\binom{n + k - 1}{k}
+$$
+
+A group is a row of $k$ stars, one for each chosen element, and $n - 1$ bars that separate the $n$ types of element, so we choose the positions of the $k$ stars in a row of $n + k - 1$ symbols.
+
+**Poker hands:** in poker, each player gets $5$ of the $52$ cards. The cards have $13$ values, $2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A$, and $4$ suits, which are hearts, diamonds, clubs, and spades. The order of the cards in a hand is not important, so there are $\binom{52}{5} = 2598960$ equally likely hands.
+
+**a) Four of a kind**, four of the five cards with the same value. The first card fixes the value, so it has $13$ options. The second, third, and fourth cards must have the same value in the other suits, so each has $1$ option. The fifth card can be any of the other $52 - 4 = 48$ cards, so
+
+$$
+P(\text{four of a kind}) = \frac{13 \times 1 \times 1 \times 1 \times 48}{\binom{52}{5}} = \frac{624}{2598960} \approx 0.00024
+$$
+
+**b) Full house**, three cards with one value and two cards with another value. The value of the three cards has $13$ options, and their suits have $\binom{4}{3}$ options. The value of the two cards has $12$ options, because it must be different, and their suits have $\binom{4}{2}$ options. The two values have different roles, so their order is important, and we multiply $13 \times 12$. So
+
+$$
+P(\text{full house}) = \frac{13 \times \binom{4}{3} \times 12 \times \binom{4}{2}}{\binom{52}{5}} = \frac{3744}{2598960} \approx 0.00144
+$$
+
+**c) Two pairs**, two cards with one value, two cards with another value, and one card with a third value. The two values of the pairs have the same role, so their order is not important, and they have $\binom{13}{2}$ options. The suits of each pair have $\binom{4}{2}$ options. The last card cannot have the values of the two pairs, so $2 \times 4 = 8$ cards are not possible, and it has $52 - 8 = 44$ options. So
+
+$$
+P(\text{two pairs}) = \frac{\binom{13}{2} \times \binom{4}{2} \times \binom{4}{2} \times 44}{\binom{52}{5}} = \frac{123552}{2598960} \approx 0.0475
+$$
