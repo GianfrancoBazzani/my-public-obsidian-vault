@@ -141,3 +141,42 @@ $$
 $$
 
 The proof of this law for a finite number of sets (see [1 Introduction to Probability and Set Theory](01-introduction-to-probability-and-set-theory.md)) also works for a countable number of sets. Each $A_n^c$ is in $\Sigma$, because $\Sigma$ is closed under complements. Then $\bigcup_n A_n^c \in \Sigma$, because $\Sigma$ is closed under countable unions, and its complement $\bigcap_n A_n$ is in $\Sigma$, because $\Sigma$ is closed under complements. $\blacksquare$
+
+### 4.3.3 Examples of σ-Algebras
+
+**Example 1. Power set and trivial σ-algebras**
+
+Let $\Omega = \lbrace a, b, c \rbrace$. The **power set σ-algebra** on $\Omega$ is the class $\mathcal{P}(\Omega)$ of all the $2^3 = 8$ subsets of $\Omega$.
+
+$$
+\Sigma_1 = \lbrace \emptyset, \lbrace a \rbrace, \lbrace b \rbrace, \lbrace c \rbrace, \lbrace a, b \rbrace, \lbrace a, c \rbrace, \lbrace b, c \rbrace, \lbrace a, b, c \rbrace = \Omega \rbrace
+$$
+
+It is a σ-algebra, because the complements and the unions of subsets of $\Omega$ are also subsets of $\Omega$. It is the largest σ-algebra on $\Omega$, because every σ-algebra on $\Omega$ is a class of subsets of $\Omega$.
+
+The **trivial σ-algebra** on $\Omega$ is
+
+$$
+\Sigma_2 = \lbrace \emptyset, \Omega \rbrace
+$$
+
+It is a σ-algebra, because $\emptyset^c = \Omega$, $\Omega^c = \emptyset$, and each union of these two sets is $\emptyset$ or $\Omega$. It is the smallest σ-algebra on $\Omega$, because every σ-algebra contains $\Omega$ and $\emptyset$.
+
+**Example 2. Uncountable set**
+
+Let $\Omega$ be an uncountable set, such as $\mathbb{R}$, and let
+
+$$
+C = \lbrace A \subseteq \Omega : A \text{ or } A^c \text{ is countable} \rbrace
+$$
+
+where countable means finite or countably infinite. For example, for $\Omega = \mathbb{R}$, the sets $\mathbb{Q}$ and $\mathbb{R} \setminus \lbrace 0 \rbrace$ are in $C$, but $[0, 1]$ is not, because $[0, 1]$ and its complement are both uncountable. We check whether $C$ is a σ-algebra.
+
+- **$\Omega \in C$.** The complement $\Omega^c = \emptyset$ is countable, so $\Omega \in C$ and $C$ is non-empty.
+- **Closed under complements.** Let $A \in C$. Then $A^c \in C$ if $A^c$ or $(A^c)^c = A$ is countable. Since $A \in C$, one of $A$ and $A^c$ is countable, so $A^c \in C$.
+- **Closed under countable unions.** Let $\lbrace A_n \rbrace_{n \in \mathbb{N}}$ be a sequence of sets of $C$. We show that $\bigcup_n A_n \in C$.
+  - If every $A_n$ is countable, then $\bigcup_n A_n$ is countable, because a countable union of countable sets is countable. So $\bigcup_n A_n \in C$.
+  - If every $A_n^c$ is countable, then $\left( \bigcup_n A_n \right)^c = \bigcap_n A_n^c \subseteq A_i^c$ for any $i$. A subset of the countable set $A_i^c$ is countable, so $\bigcup_n A_n \in C$.
+  - If some $A_n$ are countable and the others have a countable complement, let $I \neq \emptyset$ be the set of the indices of the countable $A_n$. Let $A_I = \bigcup_{n \in I} A_n$ and $A_{\mathbb{N} \setminus I} = \bigcup_{n \notin I} A_n$, so that $\bigcup_n A_n = A_I \cup A_{\mathbb{N} \setminus I}$. This union contains $A_{\mathbb{N} \setminus I}$, and $A \subseteq B$ implies $B^c \subseteq A^c$, so $\left( \bigcup_n A_n \right)^c \subseteq A_{\mathbb{N} \setminus I}^c$. The set $A_{\mathbb{N} \setminus I}^c = \bigcap_{n \notin I} A_n^c$ is a subset of the countable set $A_j^c$ for any $j \notin I$, so it is countable. Thus $\left( \bigcup_n A_n \right)^c$ is countable, and $\bigcup_n A_n \in C$.
+
+$C$ is non-empty and closed under complements and countable unions, so $C$ is a σ-algebra.
