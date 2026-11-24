@@ -231,3 +231,219 @@ $$
 $$
 
 Two sets have the same **cardinality**, or number of elements, if a bijection between them exists. The cardinality of $\beta(\mathbb{R})$ is equal to the cardinality of $\mathbb{R}$. By Cantor's theorem, a set has a smaller cardinality than its power set, so the cardinality of $\mathcal{P}(\mathbb{R})$ is larger. Thus $\beta(\mathbb{R}) \neq \mathcal{P}(\mathbb{R})$, and not every subset of $\mathbb{R}$ is a Borel set.
+
+## 4.4 The Probability Measure
+
+When $\Omega$ is countable, we can give a probability to every set of $\mathcal{P}(\Omega)$. For example, for a fair die, each set $A \subseteq \Omega$ has the probability $P(A) = \frac{\text{number of elements of } A}{6}$.
+
+When $\Omega$ is uncountable, such as $\mathbb{R}$, problems start, because no function gives a consistent value to every subset of $\mathbb{R}$. Thus we measure only the sets of a σ-algebra, and in particular of the Borel σ-algebra $\beta(\mathbb{R})$. A σ-algebra is closed under the usual set operations, finite or countable, such as complements, unions, and intersections. Thus these operations on sets that we can measure give sets that we can measure.
+
+### 4.4.1 Measurable Space
+
+A **measurable space** is a pair $(\Omega, \Sigma)$, where $\Sigma$ is a σ-algebra on $\Omega$. If $\Sigma$ is a σ-algebra of events, the pair is also a **probabilizable space**, because we can give it a probability. A measurable space has no measure yet. When we add a probability measure $P$, we get the probability space $(\Omega, \Sigma, P)$.
+
+For example, $(\mathbb{R}, \beta(\mathbb{R}))$ is a measurable space, and so is $(\Omega, \mathcal{P}(\Omega))$ for a die.
+
+### 4.4.2 Kolmogorov Axioms
+
+After the class of sets on which we can give probabilities, the last element is the tool that gives them, which is the probability measure.
+
+Let $(\Omega, \Sigma)$ be a measurable space. A **probability measure** is a function $P : \Sigma \to [0, 1]$ with three properties.
+
+1. **Non-negativity.** $P(A) \geq 0$ for all $A \in \Sigma$.
+2. **σ-additivity.** If $\lbrace A_n \rbrace_{n \in \mathbb{N}} \subseteq \Sigma$ are pairwise disjoint, that is, $A_i \cap A_j = \emptyset$ for $i \neq j$, then
+
+$$
+P\left(\bigcup_{n \in \mathbb{N}} A_n\right) = \sum_{n \in \mathbb{N}} P(A_n)
+$$
+
+3. **Normalization.** $P(\Omega) = 1$.
+
+These are the axioms of Kolmogorov (see [1 Introduction to Probability and Set Theory](01-introduction-to-probability-and-set-theory.md)), with the σ-algebra $\Sigma$ as the class of events. σ-additivity is the countable additivity of the length $\lambda$, and $P(\Omega) = 1$ makes the total probability equal to $1$.
+
+### 4.4.3 Probability Space
+
+A **probability space** is a triple $(\Omega, \Sigma, P)$, where $(\Omega, \Sigma)$ is a measurable space and $P$ is a probability measure on $\Sigma$. For $A \in \Sigma$, $P(A)$ is the probability of the event $A$.
+
+For example, for a fair die, $(\Omega, \mathcal{P}(\Omega), P)$ with $\Omega = \lbrace 1, 2, 3, 4, 5, 6 \rbrace$ and $P(A) = \frac{\text{number of elements of } A}{6}$ is a probability space. The event "odd" has the probability $P(\lbrace 1, 3, 5 \rbrace) = \frac{3}{6} = \frac{1}{2}$.
+
+Two properties follow from the axioms. Let $(\Omega, \Sigma, P)$ be a probability space and let $A, B \in \Sigma$.
+
+**Probability of a difference**
+
+$$
+P(A \setminus B) = P(A) - P(A \cap B)
+$$
+
+In particular, if $B \subseteq A$, then $A \cap B = B$ and
+
+$$
+P(A \setminus B) = P(A) - P(B)
+$$
+
+**Proof**
+
+First, $P(\emptyset) = 0$. The sets $A_n = \emptyset$ are pairwise disjoint, so σ-additivity gives $P(\emptyset) = \sum_{n} P(\emptyset)$, and this sum is finite only if $P(\emptyset) = 0$.
+
+The sets $A \setminus B$ and $A \cap B$ are disjoint, and their union is $A$. σ-additivity with $A_1 = A \setminus B$, $A_2 = A \cap B$, and $A_n = \emptyset$ for $n \geq 3$ gives
+
+$$
+P(A) = P(A \setminus B) + P(A \cap B)
+$$
+
+We subtract $P(A \cap B)$ from both sides. $\blacksquare$
+
+**Probability of the complement**
+
+$$
+P(A^c) = 1 - P(A)
+$$
+
+**Proof**
+
+The sets $A$ and $A^c$ are disjoint, and their union is $\Omega$. σ-additivity with $A_1 = A$, $A_2 = A^c$, and $A_n = \emptyset$ for $n \geq 3$, together with $P(\emptyset) = 0$ and $P(\Omega) = 1$, gives
+
+$$
+1 = P(\Omega) = P(A) + P(A^c)
+$$
+
+We subtract $P(A)$ from both sides. $\blacksquare$
+
+### 4.4.4 Inclusion-Exclusion Principle
+
+Let $(\Omega, \Sigma, P)$ be a probability space and let $A_1, A_2, \dots, A_n \in \Sigma$. For two events,
+
+$$
+P(A_1 \cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)
+$$
+
+The sum $P(A_1) + P(A_2)$ counts the intersection $A_1 \cap A_2$ two times, so the formula subtracts it one time. For $n$ events, the **inclusion-exclusion principle** is
+
+$$
+\begin{aligned}
+P\left(\bigcup_{i=1}^{n} A_i\right) = & \sum_{i=1}^{n} P(A_i) - \sum_{1 \leq i < j \leq n} P(A_i \cap A_j) \\
+& + \sum_{1 \leq i < j < k \leq n} P(A_i \cap A_j \cap A_k) - \dots + (-1)^{n-1} P\left(\bigcap_{i=1}^{n} A_i\right)
+\end{aligned}
+$$
+
+It is the same formula as the inclusion-exclusion principle for the number of elements of a union (see [3 Combinatorics](03-combinatorics.md)), with probabilities in place of numbers of elements.
+
+For example, for a fair die, let $A_1 = \lbrace 1, 3, 5 \rbrace$ be the event "odd" and $A_2 = \lbrace 4, 5, 6 \rbrace$ the event "greater than 3". Then $A_1 \cap A_2 = \lbrace 5 \rbrace$ and
+
+$$
+P(A_1 \cup A_2) = \frac{1}{2} + \frac{1}{2} - \frac{1}{6} = \frac{5}{6}
+$$
+
+which is the probability of $A_1 \cup A_2 = \lbrace 1, 3, 4, 5, 6 \rbrace$.
+
+### 4.4.5 Continuity of the Probability Measure
+
+Let $(\Omega, \Sigma, P)$ be a probability space and let $\lbrace A_n \rbrace_{n \in \mathbb{N}}$ be a sequence of events of $\Sigma$, with the limits of sequences of sets (see [2 Sequences of Sets](02-sequences-of-sets.md)).
+
+**Monotone sequences**
+
+If $\lbrace A_n \rbrace$ is increasing or decreasing, then
+
+$$
+P\left(\lim_{n \to \infty} A_n\right) = \lim_{n \to \infty} P(A_n)
+$$
+
+This is the continuity of the length $\lambda$ for increasing sequences, now for probabilities and also for decreasing sequences.
+
+**General sequences**
+
+For any sequence,
+
+$$
+P\left(\liminf_{n \to \infty} A_n\right) \leq \liminf_{n \to \infty} P(A_n) \leq \limsup_{n \to \infty} P(A_n) \leq P\left(\limsup_{n \to \infty} A_n\right)
+$$
+
+Thus, if $\lbrace A_n \rbrace$ converges, then the two outer terms are equal, and $P(\lim A_n) = \lim P(A_n)$.
+
+
+### 4.4.6 Characterization of σ-Additivity
+
+Let $(\Omega, \Sigma)$ be a measurable space and let $P : \Sigma \to \mathbb{R}^+$ be a **finitely additive** measure, that is, $P(A \cup B) = P(A) + P(B)$ for disjoint $A, B \in \Sigma$. Each of the two continuity properties below makes $P$ σ-additive.
+
+1. **Continuity for increasing sequences.** If $P(A) = \lim_{n \to \infty} P(A_n)$ for every increasing sequence $\lbrace A_n \rbrace_{n \in \mathbb{N}} \subseteq \Sigma$ with $A = \bigcup_{n \in \mathbb{N}} A_n$, then $P$ is σ-additive.
+2. **Continuity at the empty set.** If $\lim_{n \to \infty} P(A_n) = 0$ for every decreasing sequence $\lbrace A_n \rbrace_{n \in \mathbb{N}} \subseteq \Sigma$ with $\bigcap_{n \in \mathbb{N}} A_n = \emptyset$, then $P$ is σ-additive.
+
+**Proof**
+
+Let $\lbrace A_n \rbrace_{n \in \mathbb{N}} \subseteq \Sigma$ be pairwise disjoint and let $A = \bigcup_{n=1}^{\infty} A_n$. We must show that $P(A) = \sum_{n=1}^{\infty} P(A_n)$.
+
+1. The finite unions $\bigcup_{n=1}^{m} A_n$ increase to $A$. Continuity, and then finite additivity, give
+
+$$
+P(A) = \lim_{m \to \infty} P\left(\bigcup_{n=1}^{m} A_n\right) = \lim_{m \to \infty} \sum_{n=1}^{m} P(A_n) = \sum_{n=1}^{\infty} P(A_n)
+$$
+
+Continuity changes the probability of the limit $A$ into the limit of the probabilities of the finite unions. Each finite union is a union of disjoint sets, so finite additivity writes its probability as the finite sum $\sum_{n=1}^{m} P(A_n)$. The limit of these finite sums is, by definition, the infinite sum.
+
+2. The sets $A \setminus \bigcup_{n=1}^{m} A_n$ decrease to $\emptyset$. $A$ is the disjoint union of $\bigcup_{n=1}^{m} A_n$ and this set, so finite additivity and continuity at the empty set give
+
+$$
+0 = \lim_{m \to \infty} P\left(A \setminus \bigcup_{n=1}^{m} A_n\right) = \lim_{m \to \infty} \left(P(A) - \sum_{n=1}^{m} P(A_n)\right) = P(A) - \sum_{n=1}^{\infty} P(A_n)
+$$
+
+Finite additivity writes $P\left(A \setminus \bigcup_{n=1}^{m} A_n\right)$ as $P(A)$ minus the finite sum $\sum_{n=1}^{m} P(A_n)$. The limit of these finite sums is the infinite sum, and this limit exists because the limit of the left side is $0$.
+
+$\blacksquare$
+
+Thus σ-additivity is finite additivity together with continuity. The length $\lambda$ has the same property, where additivity and continuity for increasing sequences together give countable additivity.
+
+**Alternative characterization**
+
+A finitely additive measure $P : \Sigma \to \mathbb{R}^+$ is σ-additive if and only if, for every sequence $\lbrace A_n \rbrace_{n \in \mathbb{N}} \subseteq \Sigma$,
+
+$$
+P\left(\bigcup_{n \in \mathbb{N}} A_n\right) \leq \sum_{n=1}^{\infty} P(A_n)
+$$
+
+This inequality is **σ-subadditivity**. The sets $A_n$ do not have to be disjoint, and the sum can be larger than the probability of the union, because it counts the overlaps more than one time.
+
+## 4.5 Borel-Cantelli Lemmas
+
+The **Borel-Cantelli lemmas** answer one main question. What is the probability of the superior limit of a sequence of events $\lbrace A_n \rbrace_{n \in \mathbb{N}}$?
+
+$$
+\limsup_{n \to \infty} A_n = \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} A_n
+$$
+
+By the definition of the superior limit (see [2 Sequences of Sets](02-sequences-of-sets.md)), an outcome is in $\limsup A_n$ if and only if it is in infinitely many $A_n$. Thus $P(\limsup A_n)$ is the probability that the events $A_n$ occur again and again, that is, infinitely many times. For example, if $A_n$ is the event "toss $n$ of a coin gives heads", then $\limsup A_n$ is the event "infinitely many tosses give heads".
+
+### 4.5.1 First Borel-Cantelli Lemma
+
+Let $\lbrace A_n \rbrace_{n \in \mathbb{N}}$ be a sequence of events in a probability space $(\Omega, \Sigma, P)$. If
+
+$$
+\sum_{n=1}^{\infty} P(A_n) < \infty
+$$
+
+then
+
+$$
+P\left(\limsup_{n \to \infty} A_n\right) = 0
+$$
+
+If the probabilities of the events have a finite sum, then with probability $1$ only finitely many of the events occur. The lemma does not need independent events.
+
+For example, let $A_n$ be the event "the first $n$ tosses of a fair coin give heads". Then $\sum_{n=1}^{\infty} P(A_n) = \sum_{n=1}^{\infty} \left(\frac{1}{2}\right)^n = 1 < \infty$, so $P(\limsup A_n) = 0$. Here $\limsup A_n$ is the event "all the tosses give heads".
+
+### 4.5.2 Second Borel-Cantelli Lemma
+
+If the events $A_n$ are independent and
+
+$$
+\sum_{n=1}^{\infty} P(A_n) = \infty
+$$
+
+then
+
+$$
+P\left(\limsup_{n \to \infty} A_n\right) = 1
+$$
+
+If the events are independent and the probabilities have an infinite sum, then with probability $1$ infinitely many of the events occur. Without independence, this lemma is not always true.
+
+For example, let $A_n$ be the event "toss $n$ of a fair coin gives heads". The tosses are independent and $\sum_{n=1}^{\infty} P(A_n) = \sum_{n=1}^{\infty} \frac{1}{2} = \infty$, so infinitely many tosses give heads with probability $1$.
