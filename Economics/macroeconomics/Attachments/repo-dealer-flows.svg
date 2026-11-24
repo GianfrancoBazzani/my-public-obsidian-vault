@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>A dealer uses a repo to finance a bond that it buys from a client, and a reverse repo to borrow a bond that it sells to a client</title>
+<defs>
+<marker id="arrow-cash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b8a3e"/></marker>
+<marker id="arrow-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker>
+</defs>
+<rect width="960" height="520" fill="white"/>
+<text x="30" y="38" font-size="16" font-weight="bold" fill="#333">Repo to finance a purchase</text>
+<rect x="30" y="78" width="180" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="120" y="112" text-anchor="middle" font-weight="bold" fill="#333">Client</text>
+<text x="120" y="134" text-anchor="middle" fill="#555">sells a bond</text>
+<rect x="390" y="78" width="180" height="80" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="480" y="112" text-anchor="middle" font-weight="bold" fill="#333">Dealer</text>
+<text x="480" y="134" text-anchor="middle" fill="#555">buys the bond</text>
+<rect x="750" y="78" width="180" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="840" y="112" text-anchor="middle" font-weight="bold" fill="#333">Money market fund</text>
+<text x="840" y="134" text-anchor="middle" fill="#555">has cash to invest</text>
+<line x1="212" y1="100" x2="386" y2="100" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="300" y="91" text-anchor="middle" fill="#1971c2">Bond</text>
+<line x1="388" y1="138" x2="214" y2="138" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="300" y="158" text-anchor="middle" fill="#2b8a3e">Cash</text>
+<line x1="572" y1="100" x2="746" y2="100" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="660" y="91" text-anchor="middle" fill="#1971c2">Bond as collateral</text>
+<line x1="748" y1="138" x2="574" y2="138" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="660" y="158" text-anchor="middle" fill="#2b8a3e">Cash loan</text>
+<text x="300" y="194" text-anchor="middle" fill="#555">Outright purchase</text>
+<text x="660" y="194" text-anchor="middle" fill="#555">Repo for the dealer,</text>
+<text x="660" y="212" text-anchor="middle" fill="#555">reverse repo for the fund</text>
+<line x1="30" y1="240" x2="930" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
+<text x="30" y="278" font-size="16" font-weight="bold" fill="#333">Reverse repo to make a delivery</text>
+<rect x="30" y="318" width="180" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="120" y="352" text-anchor="middle" font-weight="bold" fill="#333">Holder of the bond</text>
+<text x="120" y="374" text-anchor="middle" fill="#555">lends the bond</text>
+<rect x="390" y="318" width="180" height="80" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="480" y="352" text-anchor="middle" font-weight="bold" fill="#333">Dealer</text>
+<text x="480" y="374" text-anchor="middle" fill="#555">does not hold the bond</text>
+<rect x="750" y="318" width="180" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="840" y="352" text-anchor="middle" font-weight="bold" fill="#333">Client</text>
+<text x="840" y="374" text-anchor="middle" fill="#555">buys the bond</text>
+<line x1="212" y1="340" x2="386" y2="340" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="300" y="331" text-anchor="middle" fill="#1971c2">Bond</text>
+<line x1="388" y1="378" x2="214" y2="378" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="300" y="398" text-anchor="middle" fill="#2b8a3e">Cash as collateral</text>
+<line x1="572" y1="340" x2="746" y2="340" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="660" y="331" text-anchor="middle" fill="#1971c2">Bond</text>
+<line x1="748" y1="378" x2="574" y2="378" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="660" y="398" text-anchor="middle" fill="#2b8a3e">Cash</text>
+<text x="300" y="434" text-anchor="middle" fill="#555">Reverse repo for the dealer,</text>
+<text x="300" y="452" text-anchor="middle" fill="#555">repo for the holder</text>
+<text x="660" y="434" text-anchor="middle" fill="#555">Outright sale</text>
+<line x1="30" y1="484" x2="70" y2="484" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="80" y="489" fill="#333">Cash</text>
+<line x1="140" y1="484" x2="180" y2="484" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="190" y="489" fill="#333">Securities</text>
+<text x="30" y="512" fill="#555">The arrows show the start of each trade. When a repo ends, the flows reverse and the cash returns with interest.</text>
+</svg>
