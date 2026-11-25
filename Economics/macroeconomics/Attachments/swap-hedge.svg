@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>A bank that holds a fixed-rate bond and funds it with commercial paper pays fixed and receives SOFR in a swap with a dealer, and the dealer offsets the swap with another client</title>
+<defs>
+<marker id="arrow-fixed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker>
+<marker id="arrow-float" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker>
+</defs>
+<rect width="960" height="470" fill="white"/>
+<rect x="30" y="70" width="180" height="70" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="120" y="100" text-anchor="middle" font-weight="bold" fill="#333">Bond</text>
+<text x="120" y="122" text-anchor="middle" fill="#555">asset of the bank</text>
+<rect x="390" y="70" width="180" height="70" rx="6" fill="#e7f5ff" stroke="#1971c2" stroke-width="2"/>
+<text x="480" y="100" text-anchor="middle" font-weight="bold" fill="#333">Bank</text>
+<text x="480" y="122" text-anchor="middle" fill="#555">keeps the margin</text>
+<rect x="750" y="70" width="180" height="70" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="840" y="100" text-anchor="middle" font-weight="bold" fill="#333">CP investors</text>
+<text x="840" y="122" text-anchor="middle" fill="#555">renew each month</text>
+<rect x="390" y="250" width="180" height="70" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="480" y="280" text-anchor="middle" font-weight="bold" fill="#333">Dealer</text>
+<text x="480" y="302" text-anchor="middle" fill="#555">market maker</text>
+<rect x="750" y="250" width="180" height="70" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="840" y="280" text-anchor="middle" font-weight="bold" fill="#333">Other client</text>
+<text x="840" y="302" text-anchor="middle" fill="#555">or another dealer</text>
+<line x1="212" y1="105" x2="386" y2="105" stroke="#e8590c" stroke-width="2.5" marker-end="url(#arrow-fixed)"/>
+<text x="299" y="96" text-anchor="middle" fill="#e8590c">5% fixed coupon</text>
+<line x1="572" y1="105" x2="746" y2="105" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-float)"/>
+<text x="659" y="96" text-anchor="middle" fill="#1971c2">SOFR + 0.2%</text>
+<line x1="455" y1="142" x2="455" y2="246" stroke="#e8590c" stroke-width="2.5" marker-end="url(#arrow-fixed)"/>
+<text x="445" y="200" text-anchor="end" fill="#e8590c">4% fixed</text>
+<line x1="505" y1="248" x2="505" y2="144" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-float)"/>
+<text x="515" y="200" fill="#1971c2">SOFR</text>
+<line x1="572" y1="270" x2="746" y2="270" stroke="#e8590c" stroke-width="2.5" marker-end="url(#arrow-fixed)"/>
+<text x="659" y="261" text-anchor="middle" fill="#e8590c">4% fixed</text>
+<line x1="748" y1="302" x2="574" y2="302" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-float)"/>
+<text x="659" y="322" text-anchor="middle" fill="#1971c2">SOFR</text>
+<text x="30" y="372" fill="#333">The two SOFR flows of the bank cancel, so it keeps 5% − 4% − 0.2% = 0.8% for any level of SOFR.</text>
+<text x="30" y="396" fill="#333">The dealer offsets its swap with the opposite swap, as in a matched book.</text>
+<line x1="30" y1="440" x2="70" y2="440" stroke="#e8590c" stroke-width="2.5" marker-end="url(#arrow-fixed)"/>
+<text x="80" y="445" fill="#333">Fixed rate</text>
+<line x1="180" y1="440" x2="220" y2="440" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-float)"/>
+<text x="230" y="445" fill="#333">Floating rate</text>
+</svg>

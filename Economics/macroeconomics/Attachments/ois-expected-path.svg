@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>When the overnight rate is expected to rise, the receiver of the fixed rate of an OIS gains at first and loses later, and at the start the two have the same present value</title>
+<defs>
+<marker id="arrow-axis" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker>
+</defs>
+<rect width="960" height="470" fill="white"/>
+<line x1="90" y1="34" x2="130" y2="34" stroke="#1971c2" stroke-width="3"/>
+<text x="140" y="39" fill="#333">Expected overnight rate</text>
+<line x1="380" y1="34" x2="420" y2="34" stroke="#e8590c" stroke-width="3"/>
+<text x="430" y="39" fill="#333">Fixed rate of the OIS (swap rate)</text>
+<polygon points="90,240 495,240 90,340" fill="#d3f9d8"/>
+<polygon points="495,240 900,240 900,140" fill="#ffe3e3"/>
+<line x1="90" y1="390" x2="910" y2="390" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow-axis)"/>
+<line x1="90" y1="390" x2="90" y2="70" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow-axis)"/>
+<text x="90" y="62" text-anchor="middle" fill="#333">Rate</text>
+<text x="918" y="395" fill="#333">Time</text>
+<line x1="900" y1="140" x2="900" y2="390" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="90" y="412" text-anchor="middle" fill="#555">Start</text>
+<text x="900" y="412" text-anchor="middle" fill="#555">End</text>
+<line x1="90" y1="240" x2="900" y2="240" stroke="#e8590c" stroke-width="3"/>
+<line x1="90" y1="340" x2="900" y2="140" stroke="#1971c2" stroke-width="3"/>
+<text x="190" y="268" text-anchor="middle" fill="#2b8a3e">The receiver of the</text>
+<text x="190" y="286" text-anchor="middle" fill="#2b8a3e">fixed rate gains</text>
+<text x="800" y="205" text-anchor="middle" fill="#c92a2a">The receiver of the</text>
+<text x="800" y="223" text-anchor="middle" fill="#c92a2a">fixed rate loses</text>
+<text x="30" y="446" fill="#555">At the start, the gains and the losses have the same present value, so the swap is worth zero.</text>
+</svg>
