@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>A dealer with a matched book funds a reverse repo with client A through a repo of the same bonds with client B, and the book stops being matched when the two trades end on different days</title>
+<defs>
+<marker id="arrow-cash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b8a3e"/></marker>
+<marker id="arrow-sec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker>
+<pattern id="gap" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff5f5"/><line x1="0" y1="0" x2="0" y2="8" stroke="#e03131" stroke-width="3"/></pattern>
+</defs>
+<rect width="960" height="560" fill="white"/>
+<text x="30" y="38" font-size="16" font-weight="bold" fill="#333">Matched book</text>
+<rect x="30" y="78" width="180" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="120" y="112" text-anchor="middle" font-weight="bold" fill="#333">Client A</text>
+<text x="120" y="134" text-anchor="middle" fill="#555">has bonds, needs cash</text>
+<rect x="390" y="78" width="180" height="80" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="480" y="112" text-anchor="middle" font-weight="bold" fill="#333">Dealer</text>
+<text x="480" y="134" text-anchor="middle" fill="#555">re-uses the bonds</text>
+<rect x="750" y="78" width="180" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="840" y="112" text-anchor="middle" font-weight="bold" fill="#333">Client B</text>
+<text x="840" y="134" text-anchor="middle" fill="#555">has cash to invest</text>
+<line x1="212" y1="100" x2="386" y2="100" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="300" y="91" text-anchor="middle" fill="#1971c2">Bonds as collateral</text>
+<line x1="388" y1="138" x2="214" y2="138" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="300" y="158" text-anchor="middle" fill="#2b8a3e">Cash loan at 3.8%</text>
+<line x1="572" y1="100" x2="746" y2="100" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="660" y="91" text-anchor="middle" fill="#1971c2">Same bonds as collateral</text>
+<line x1="748" y1="138" x2="574" y2="138" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="660" y="158" text-anchor="middle" fill="#2b8a3e">Cash loan at 3.6%</text>
+<text x="300" y="194" text-anchor="middle" fill="#555">Reverse repo for the dealer,</text>
+<text x="300" y="212" text-anchor="middle" fill="#555">repo for A</text>
+<text x="660" y="194" text-anchor="middle" fill="#555">Repo for the dealer,</text>
+<text x="660" y="212" text-anchor="middle" fill="#555">reverse repo for B</text>
+<line x1="30" y1="240" x2="930" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
+<text x="30" y="278" font-size="16" font-weight="bold" fill="#333">Unmatched book: the two trades end on different days</text>
+<line x1="260" y1="300" x2="260" y2="440" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4,4"/>
+<line x1="350" y1="300" x2="350" y2="440" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4,4"/>
+<line x1="890" y1="300" x2="890" y2="440" stroke="#adb5bd" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="20" y="342" fill="#333">Reverse repo with A</text>
+<rect x="260" y="322" width="90" height="30" rx="4" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="20" y="402" fill="#333">Repo with B</text>
+<rect x="260" y="382" width="630" height="30" rx="4" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<rect x="350" y="322" width="540" height="30" rx="4" fill="url(#gap)" stroke="#e03131" stroke-width="1.5"/>
+<rect x="455" y="326" width="330" height="22" rx="3" fill="white"/>
+<text x="620" y="342" text-anchor="middle" font-weight="bold" fill="#c92a2a">A wants its bonds back, but B holds them</text>
+<line x1="260" y1="440" x2="900" y2="440" stroke="#495057" stroke-width="1.5"/>
+<text x="260" y="462" text-anchor="middle" fill="#555">Day 0</text>
+<text x="350" y="462" text-anchor="middle" fill="#555">Day 1</text>
+<text x="890" y="462" text-anchor="middle" fill="#555">Day 7</text>
+<text x="30" y="492" fill="#555">To return the bonds to A on day 1, the dealer must convince A to renew the reverse repo,</text>
+<text x="30" y="512" fill="#555">borrow the bonds from another holder in a new reverse repo, or buy them in the market.</text>
+<line x1="30" y1="540" x2="70" y2="540" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="80" y="545" fill="#333">Cash</text>
+<line x1="140" y1="540" x2="180" y2="540" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-sec)"/>
+<text x="190" y="545" fill="#333">Securities</text>
+</svg>
