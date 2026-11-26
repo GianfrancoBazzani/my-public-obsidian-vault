@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>A dealer stands between risk portfolio managers and cash portfolio managers; in funding and margining bonds go to the cash side and cash comes back, and in shorting the flows reverse</title>
+<defs>
+<marker id="arrow-cash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b8a3e"/></marker>
+<marker id="arrow-bond" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker>
+</defs>
+<rect width="960" height="560" fill="white"/>
+<text x="140" y="22" text-anchor="middle" font-size="13" fill="#868e96">RISK PORTFOLIO MANAGER</text>
+<text x="820" y="22" text-anchor="middle" font-size="13" fill="#868e96">CASH PORTFOLIO MANAGER</text>
+
+<text x="30" y="50" font-size="16" font-weight="bold" fill="#333">Funding</text>
+<rect x="30" y="62" width="220" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="140" y="92" text-anchor="middle" font-weight="bold" fill="#333">Mortgage REIT</text>
+<text x="140" y="114" text-anchor="middle" fill="#555">buys MBS with cash</text>
+<text x="140" y="132" text-anchor="middle" fill="#555">that it borrows</text>
+<rect x="370" y="62" width="220" height="80" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="480" y="96" text-anchor="middle" font-weight="bold" fill="#333">Dealer</text>
+<text x="480" y="118" text-anchor="middle" fill="#555">pledges the MBS again</text>
+<rect x="710" y="62" width="220" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="820" y="96" text-anchor="middle" font-weight="bold" fill="#333">Money market fund</text>
+<text x="820" y="118" text-anchor="middle" fill="#555">lends cash in repo</text>
+<line x1="252" y1="86" x2="366" y2="86" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-bond)"/>
+<text x="310" y="77" text-anchor="middle" fill="#1971c2">MBS</text>
+<line x1="368" y1="120" x2="254" y2="120" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="310" y="140" text-anchor="middle" fill="#2b8a3e">Cash</text>
+<line x1="592" y1="86" x2="706" y2="86" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-bond)"/>
+<text x="650" y="77" text-anchor="middle" fill="#1971c2">MBS</text>
+<line x1="708" y1="120" x2="594" y2="120" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="650" y="140" text-anchor="middle" fill="#2b8a3e">Cash</text>
+
+<line x1="30" y1="172" x2="930" y2="172" stroke="#dee2e6" stroke-width="1.5"/>
+
+<text x="30" y="210" font-size="16" font-weight="bold" fill="#333">Shorting</text>
+<rect x="30" y="222" width="220" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="140" y="252" text-anchor="middle" font-weight="bold" fill="#333">Hedge fund</text>
+<text x="140" y="274" text-anchor="middle" fill="#555">borrows the bond and</text>
+<text x="140" y="292" text-anchor="middle" fill="#555">sells it short</text>
+<rect x="370" y="222" width="220" height="80" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="480" y="256" text-anchor="middle" font-weight="bold" fill="#333">Dealer</text>
+<text x="480" y="278" text-anchor="middle" fill="#555">borrows the bond</text>
+<rect x="710" y="222" width="220" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="820" y="252" text-anchor="middle" font-weight="bold" fill="#333">Corporate bond ETF</text>
+<text x="820" y="274" text-anchor="middle" fill="#555">lends the bond and</text>
+<text x="820" y="292" text-anchor="middle" fill="#555">reinvests the cash</text>
+<line x1="368" y1="246" x2="254" y2="246" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-bond)"/>
+<text x="310" y="237" text-anchor="middle" fill="#1971c2">Bond</text>
+<line x1="252" y1="280" x2="366" y2="280" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="310" y="300" text-anchor="middle" fill="#2b8a3e">Cash collateral</text>
+<line x1="708" y1="246" x2="594" y2="246" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-bond)"/>
+<text x="650" y="237" text-anchor="middle" fill="#1971c2">Bond</text>
+<line x1="592" y1="280" x2="706" y2="280" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="650" y="300" text-anchor="middle" fill="#2b8a3e">Cash collateral</text>
+
+<line x1="30" y1="332" x2="930" y2="332" stroke="#dee2e6" stroke-width="1.5"/>
+
+<text x="30" y="370" font-size="16" font-weight="bold" fill="#333">Margining</text>
+<rect x="30" y="382" width="220" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="140" y="412" text-anchor="middle" font-weight="bold" fill="#333">Bond fund</text>
+<text x="140" y="434" text-anchor="middle" fill="#555">needs cash for margin</text>
+<text x="140" y="452" text-anchor="middle" fill="#555">on its swaps</text>
+<rect x="370" y="382" width="220" height="80" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="480" y="416" text-anchor="middle" font-weight="bold" fill="#333">Dealer</text>
+<text x="480" y="438" text-anchor="middle" fill="#555">pledges the bonds again</text>
+<rect x="710" y="382" width="220" height="80" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="820" y="416" text-anchor="middle" font-weight="bold" fill="#333">Money market fund</text>
+<text x="820" y="438" text-anchor="middle" fill="#555">lends cash in repo</text>
+<line x1="252" y1="406" x2="366" y2="406" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-bond)"/>
+<text x="310" y="397" text-anchor="middle" fill="#1971c2">Bonds</text>
+<line x1="368" y1="440" x2="254" y2="440" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="310" y="460" text-anchor="middle" fill="#2b8a3e">Cash</text>
+<line x1="592" y1="406" x2="706" y2="406" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-bond)"/>
+<text x="650" y="397" text-anchor="middle" fill="#1971c2">Bonds</text>
+<line x1="708" y1="440" x2="594" y2="440" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="650" y="460" text-anchor="middle" fill="#2b8a3e">Cash</text>
+
+<line x1="30" y1="520" x2="70" y2="520" stroke="#1971c2" stroke-width="2.5" marker-end="url(#arrow-bond)"/>
+<text x="80" y="525" fill="#333">Bonds</text>
+<line x1="160" y1="520" x2="200" y2="520" stroke="#2b8a3e" stroke-width="2.5" marker-end="url(#arrow-cash)"/>
+<text x="210" y="525" fill="#333">Cash</text>
+</svg>
