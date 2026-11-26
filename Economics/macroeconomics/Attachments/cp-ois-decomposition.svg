@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>The CP–OIS spread is the premium of bank paper over the Treasury bill plus the spread between the bill and OIS, so it turns negative when the convenience premium of the bill is larger than the premium of bank paper over the bill</title>
+<defs>
+<marker id="arrow-axis" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker>
+<marker id="head-cp" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker>
+<marker id="head-bill" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2b8a3e"/></marker>
+</defs>
+<rect width="960" height="520" fill="white"/>
+<line x1="40" y1="34" x2="80" y2="34" stroke="#e8590c" stroke-width="3" stroke-dasharray="8,5"/>
+<text x="90" y="39" fill="#333">Three-month OIS rate</text>
+<line x1="300" y1="34" x2="340" y2="34" stroke="#1971c2" stroke-width="3"/>
+<text x="350" y="39" fill="#333">Three-month bank CP rate</text>
+<line x1="590" y1="34" x2="630" y2="34" stroke="#2b8a3e" stroke-width="3"/>
+<text x="640" y="39" fill="#333">Three-month Treasury bill yield</text>
+<line x1="40" y1="66" x2="80" y2="66" stroke="#1971c2" stroke-width="2" marker-start="url(#head-cp)" marker-end="url(#head-cp)"/>
+<text x="90" y="71" fill="#333">CP − bill, the premium of bank paper over the bill</text>
+<line x1="590" y1="66" x2="630" y2="66" stroke="#2b8a3e" stroke-width="2" marker-start="url(#head-bill)" marker-end="url(#head-bill)"/>
+<text x="640" y="71" fill="#333">Bill − OIS, the convenience premium</text>
+<line x1="340" y1="96" x2="340" y2="470" stroke="#dee2e6" stroke-width="1.5"/>
+<line x1="640" y1="96" x2="640" y2="470" stroke="#dee2e6" stroke-width="1.5"/>
+<line x1="40" y1="410" x2="40" y2="130" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow-axis)"/>
+<text x="40" y="120" text-anchor="middle" fill="#333">Rate</text>
+<text x="190" y="110" text-anchor="middle" font-weight="bold" fill="#333">Normal times</text>
+<text x="490" y="110" text-anchor="middle" font-weight="bold" fill="#333">Flight to safety</text>
+<text x="790" y="110" text-anchor="middle" font-weight="bold" fill="#333">Abundant cash, scarce bills</text>
+<line x1="120" y1="238" x2="230" y2="238" stroke="#1971c2" stroke-width="3"/>
+<line x1="120" y1="270" x2="230" y2="270" stroke="#e8590c" stroke-width="3" stroke-dasharray="8,5"/>
+<line x1="120" y1="302" x2="230" y2="302" stroke="#2b8a3e" stroke-width="3"/>
+<text x="110" y="243" text-anchor="end" fill="#1971c2">CP</text>
+<text x="110" y="275" text-anchor="end" fill="#e8590c">OIS</text>
+<text x="110" y="307" text-anchor="end" fill="#2b8a3e">Bill</text>
+<line x1="260" y1="238" x2="260" y2="302" stroke="#1971c2" stroke-width="2" marker-start="url(#head-cp)" marker-end="url(#head-cp)"/>
+<line x1="290" y1="270" x2="290" y2="302" stroke="#2b8a3e" stroke-width="2" marker-start="url(#head-bill)" marker-end="url(#head-bill)"/>
+<line x1="420" y1="152" x2="530" y2="152" stroke="#1971c2" stroke-width="3"/>
+<line x1="420" y1="270" x2="530" y2="270" stroke="#e8590c" stroke-width="3" stroke-dasharray="8,5"/>
+<line x1="420" y1="372" x2="530" y2="372" stroke="#2b8a3e" stroke-width="3"/>
+<text x="410" y="157" text-anchor="end" fill="#1971c2">CP</text>
+<text x="410" y="275" text-anchor="end" fill="#e8590c">OIS</text>
+<text x="410" y="377" text-anchor="end" fill="#2b8a3e">Bill</text>
+<line x1="560" y1="152" x2="560" y2="372" stroke="#1971c2" stroke-width="2" marker-start="url(#head-cp)" marker-end="url(#head-cp)"/>
+<line x1="590" y1="270" x2="590" y2="372" stroke="#2b8a3e" stroke-width="2" marker-start="url(#head-bill)" marker-end="url(#head-bill)"/>
+<line x1="720" y1="270" x2="830" y2="270" stroke="#e8590c" stroke-width="3" stroke-dasharray="8,5"/>
+<line x1="720" y1="304" x2="830" y2="304" stroke="#1971c2" stroke-width="3"/>
+<line x1="720" y1="372" x2="830" y2="372" stroke="#2b8a3e" stroke-width="3"/>
+<text x="710" y="275" text-anchor="end" fill="#e8590c">OIS</text>
+<text x="710" y="309" text-anchor="end" fill="#1971c2">CP</text>
+<text x="710" y="377" text-anchor="end" fill="#2b8a3e">Bill</text>
+<line x1="860" y1="304" x2="860" y2="372" stroke="#1971c2" stroke-width="2" marker-start="url(#head-cp)" marker-end="url(#head-cp)"/>
+<line x1="890" y1="270" x2="890" y2="372" stroke="#2b8a3e" stroke-width="2" marker-start="url(#head-bill)" marker-end="url(#head-bill)"/>
+<text x="190" y="438" text-anchor="middle" font-weight="bold" fill="#333">CP − OIS small and positive</text>
+<text x="190" y="460" text-anchor="middle" fill="#555">Both parts are small</text>
+<text x="490" y="438" text-anchor="middle" font-weight="bold" fill="#333">CP − OIS large and positive</text>
+<text x="490" y="460" text-anchor="middle" fill="#555">Both parts widen</text>
+<text x="790" y="438" text-anchor="middle" font-weight="bold" fill="#c92a2a">CP − OIS negative</text>
+<text x="790" y="460" text-anchor="middle" fill="#555">Bill − OIS outweighs CP − bill</text>
+<text x="480" y="500" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">CP − OIS = (CP − bill) + (bill − OIS)</text>
+</svg>
