@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<title>The dealer model of Treynor applied to dollars: the bid and ask of the dealer fall as its position in dollars grows, between the bid and ask of value-based investors</title>
+<defs>
+<marker id="arrow-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+</marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/>
+</marker>
+<marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/>
+</marker>
+</defs>
+<rect width="800" height="450" fill="white"/>
+
+<text x="20" y="30" font-size="15" font-weight="bold" fill="#333">The price of the dollar and the position of the dealer</text>
+
+<line x1="100" y1="350" x2="100" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-dark)"/>
+<text x="100" y="50" text-anchor="middle" fill="#555">Price of the dollar, in euros</text>
+<line x1="100" y1="350" x2="700" y2="350" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-dark)"/>
+<text x="400" y="400" text-anchor="middle" fill="#555">Position of the dealer in dollars</text>
+
+<g stroke="#adb5bd" stroke-width="1" stroke-dasharray="3 4">
+<line x1="150" y1="80" x2="150" y2="350"/>
+<line x1="400" y1="80" x2="400" y2="350"/>
+<line x1="650" y1="80" x2="650" y2="350"/>
+</g>
+<g text-anchor="middle" font-size="12" fill="#555">
+<text x="150" y="368">Short limit</text>
+<text x="400" y="368">0</text>
+<text x="650" y="368">Long limit</text>
+<text x="230" y="386">← owes dollars</text>
+<text x="570" y="386">holds dollars →</text>
+</g>
+
+<g stroke="#e8590c" stroke-width="2" stroke-dasharray="8 5">
+<line x1="110" y1="100" x2="690" y2="100"/>
+<line x1="110" y1="300" x2="690" y2="300"/>
+</g>
+<g font-size="12" fill="#e8590c">
+<text x="660" y="92">Value-based ask</text>
+<text x="660" y="318">Value-based bid</text>
+</g>
+
+<g stroke="#1971c2" stroke-width="2.5">
+<line x1="150" y1="100" x2="650" y2="240"/>
+<line x1="150" y1="160" x2="650" y2="300"/>
+</g>
+<g font-size="12" fill="#1971c2" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke">
+<text x="500" y="186">Dealer ask</text>
+<text x="300" y="234">Dealer bid</text>
+</g>
+
+<line x1="400" y1="174" x2="400" y2="226" stroke="#1971c2" stroke-width="1.5" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)"/>
+<text x="408" y="204" font-size="12" fill="#1971c2" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Inside spread</text>
+
+<line x1="680" y1="104" x2="680" y2="296" stroke="#e8590c" stroke-width="1.5" marker-start="url(#arrow-orange)" marker-end="url(#arrow-orange)"/>
+<text x="688" y="204" font-size="12" fill="#e8590c">Outside spread</text>
+
+<circle cx="150" cy="100" r="5" fill="#333"/>
+<circle cx="650" cy="300" r="5" fill="#333"/>
+
+<line x1="370" y1="140" x2="232" y2="101" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-dark)"/>
+<g font-size="12" fill="#333">
+<text x="300" y="72" text-anchor="middle">Importers buy dollars, so the dealer</text>
+<text x="300" y="86" text-anchor="middle">goes short and raises its prices</text>
+</g>
+
+<g font-size="12" fill="#555">
+<text x="20" y="428">At each limit, the quotes of the dealer reach those of the value-based investors,</text>
+<text x="20" y="443">who take the position that the dealer can no longer hold.</text>
+</g>
+</svg>
